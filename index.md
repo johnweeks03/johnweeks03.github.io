@@ -25,9 +25,11 @@
 
 <h2>Graduate Teaching Assistant Director and Instructional Assistant Professor</h2>
 <h3><a href="https://math.tamu.edu/">Department of Mathematics</a> at <a href="https://tamu.edu/">Texas A&M University</a></h3> 
- 
+<p>Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
 
-<div> 
+<p>I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
+
+<div style="width:625px;"> 
 <div style="float:left;"> 
 <!-- Photograph --> 
 <img src="./photos/jweeks1.jpg" alt="[PHOTO]" 
@@ -51,8 +53,4 @@
 <!-- <td><a href="misc/cv.pdf">John Weeks</a></td> --> 
 </tr> 
 </table>
-<p>Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
-
-<p>I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
 </div> 
-</body>
