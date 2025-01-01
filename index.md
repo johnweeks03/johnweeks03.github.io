@@ -23,7 +23,7 @@
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
-<div class=horizontal-line></div>
+<h2>Graduate Teaching Assistant Director</h2>
 <h2>Instructional Assistant Professor</h2> 
 <h3><a href="https://math.tamu.edu/">Department of Mathematics</a> at <a href="https://tamu.edu/">Texas A&M University</a></h3> 
  
