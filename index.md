@@ -35,10 +35,6 @@
 </div> 
 <div style="float:right;"> 
 <!-- Contact info --> 
-<p> Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
-
-<p> I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
-
 <table> 
 <tr><!-- Office --> 
 <th style="text-align: right">Office:</th> 
