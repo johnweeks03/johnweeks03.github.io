@@ -34,9 +34,6 @@
      style="position:relative;float:left;padding-right:5px;padding-top:5px;width:250px;height:400px"/> 
 </div> 
 <div style="float:right;"> 
-Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.
-
-I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.
 <!-- Contact info --> 
 <table> 
 <tr><!-- Office --> 
@@ -52,5 +49,8 @@ I have been an instructor with Texas A&M since Spring of 2019. My interests incl
 <td><a href="johnweeks_cv.pdf">johnweeks_cv.pdf</a></td> 
 <!-- <td><a href="misc/cv.pdf">John Weeks</a></td> --> 
 </tr> 
-</table> 
+</table>
+<p>Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
+
+<p>I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
 </div> 
