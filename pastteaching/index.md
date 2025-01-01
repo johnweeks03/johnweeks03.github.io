@@ -14,8 +14,16 @@ visibility:hidden;
 
 <!-- ==================== BEGIN YOUR CONTENT HERE ==================== --> 
  
+<h1>Past Teaching and Resources</h1>
+<h2>MATH-140-700 Hands On, Grades Up</h2>
 
-<h1 class="pageTitle">Past Teaching: MATH-142-504 - Spring 2020</h1> 
+<p>Hands-on, Grades Up sessions consist of active-learning structured activities dedicated to selected courses. Just as in athletic programs, the basic premise here is that to achieve success you need to learn by practicing exercises, discussing problems and unraveling the precise meaning of concepts and how they relate to the problems being solved and to applications.</p>
+
+<p>The following hand-outs were administered during the Fall 2024 semester.</p>
+
+<li><a href="2024hogu/202431hogu8.pdf">HOGU 8</a>, <a href="2024hogu/24f140hogu8ans.pdf">HOGU 8 Solutions</a></li>
+
+<h1 class="pageTitle">MATH-142-504 - Spring 2020</h1> 
  
 
 <h3>Important Links</h3> 
