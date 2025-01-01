@@ -14,13 +14,13 @@
 <!-- ==================== BEGIN YOUR CONTENT HERE ==================== --> 
  
 <div class="header">
-    <a href="/index.html" class="menulink">Home</a>&nbsp;&nbsp;
-    <a href="/teaching/index.html" class="menulink">Teaching</a>&nbsp;&nbsp;
-    <a href="/outreach/index.html" class="menulink">Outreach</a>&nbsp;&nbsp;
-    <a href="/service/index.html" class="menulink">Service</a>&nbsp;&nbsp;
-    <a href="/conferences/index.html" class="menulink">Conferences</a>&nbsp;&nbsp;
-    <a href="/contact/index.html" class="menulink">Contact</a>&nbsp;&nbsp;
-    <a href="/links/index.html" class="menulink">Links</a>&nbsp;&nbsp;
+    <a href="/" class="menulink">Home</a>&nbsp;&nbsp;
+    <a href="/teaching/" class="menulink">Teaching</a>&nbsp;&nbsp;
+    <a href="/outreach/" class="menulink">Outreach</a>&nbsp;&nbsp;
+    <a href="/service/" class="menulink">Service</a>&nbsp;&nbsp;
+    <a href="/conferences/" class="menulink">Conferences</a>&nbsp;&nbsp;
+    <a href="/contact/" class="menulink">Contact</a>&nbsp;&nbsp;
+    <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
 <div class=horizontal-line></div>
