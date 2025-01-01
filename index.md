@@ -27,13 +27,16 @@
 <h3><a href="https://math.tamu.edu/">Department of Mathematics</a> at <a href="https://tamu.edu/">Texas A&M University</a></h3> 
  
 
-<div style="width:625px;"> 
+<div style="width:625px; word-wrap: break-word"> 
 <div style="float:left;"> 
 <!-- Photograph --> 
 <img src="./photos/jweeks1.jpg" alt="[PHOTO]" 
      style="position:relative;float:left;padding-right:5px;padding-top:5px;width:250px;height:400px"/> 
 </div> 
 <div style="float:right;"> 
+ <p>Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
+
+<p>I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
 <!-- Contact info --> 
 <table> 
 <tr><!-- Office --> 
@@ -50,7 +53,4 @@
 <!-- <td><a href="misc/cv.pdf">John Weeks</a></td> --> 
 </tr> 
 </table>
-<p>Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
-
-<p>I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
 </div> 
