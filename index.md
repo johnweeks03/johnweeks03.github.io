@@ -39,7 +39,6 @@
 
 <p> I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
 
-
 <table> 
 <tr><!-- Office --> 
 <th style="text-align: right">Office:</th> 
