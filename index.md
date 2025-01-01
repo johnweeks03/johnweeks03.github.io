@@ -18,13 +18,12 @@
     <a href="/teaching/" class="menulink">Teaching</a>&nbsp;&nbsp;
     <a href="/outreach/" class="menulink">Outreach</a>&nbsp;&nbsp;
     <a href="/service/" class="menulink">Service</a>&nbsp;&nbsp;
-    <a href="/conferences/" class="menulink">Conferences</a>&nbsp;&nbsp;
-    <a href="/contact/" class="menulink">Contact</a>&nbsp;&nbsp;
+    <!-- <a href="/conferences/" class="menulink">Conferences</a>&nbsp;&nbsp;
+    <a href="/contact/" class="menulink">Contact</a>&nbsp;&nbsp;-->
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
-<h2>Graduate Teaching Assistant Director</h2>
-<h2>Instructional Assistant Professor</h2> 
+<h2>Graduate Teaching Assistant Director and Instructional Assistant Professor</h2>
 <h3><a href="https://math.tamu.edu/">Department of Mathematics</a> at <a href="https://tamu.edu/">Texas A&M University</a></h3> 
  
 
@@ -36,21 +35,20 @@
 </div> 
 <div style="float:right;"> 
 <!-- Contact info --> 
+<p> Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
+
+<p> I have been an instructor with Texas A&M since Spring of 2019. My interests include online classroom innovation, functional analysis, biking, hiking, and cooking.</p>
+
+
 <table> 
 <tr><!-- Office --> 
 <th style="text-align: right">Office:</th> 
-<td>Blocker 353</td> 
+<td>Blocker Building 353</td> 
 </tr> 
 <tr><!-- Obfuscate your e-mail address to reduce spam --> 
 <th style="text-align: right">E-mail:</th> 
 <td>jweeks03 [AT] tamu [dot] edu</td> 
-</tr> 
-<tr><!-- Office Hours --> 
-<th style="text-align: right;vertical-align:top">Office Hour:</th> 
-<td style="vertical-align: top"> 
-T 3-5pm, R 3-4pm 
-</td> 
-</tr> 
+</tr>
 <tr><!-- Link to your CV --> 
 <th style="text-align: right">CV:</th> 
 <td><a href="johnweeks_cv.pdf">johnweeks_cv.pdf</a></td> 
@@ -58,26 +56,3 @@ T 3-5pm, R 3-4pm
 </tr> 
 </table> 
 </div> 
- 
-
-<!-- Break --> 
-<p><br style="clear: both;"/></p> 
- 
-
-<h3>Teaching</h3> 
-<ul style="margin-top: 2px"> 
-<!-- 
-  Link to your teaching pages. 
-  Create new sub directories mathMMM_2014c and mathNNN_2014a 
-  under your public_html directory for Fall and Spring, 2014, 
-  respectively.  Create index.html files in each directory. 
-  --> 
-<!-- <li><a href="20f142/index.html">MATH-142-504 Fall 2020</a></li> --> 
-<li><a href="pastteaching/">Past Teaching</a></li> 
-</ul> 
- 
-
-<h3>Exam Solutions</h3> 
-<ul style="margin-top: 2px"> 
-<!-- <li><a href="algebra/algebra.pdf">MATH-653/4 Solutions (Updated 6/23/18)</a></li> --> 
-</ul> 
