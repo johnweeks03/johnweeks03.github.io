@@ -13,7 +13,17 @@ visibility:hidden;
  
 
 <!-- ==================== BEGIN YOUR CONTENT HERE ==================== --> 
- 
+ <div class="header">
+    <a href="/" class="menulink">Home</a>&nbsp;&nbsp;
+    <a href="/teaching/" class="menulink">Teaching</a>&nbsp;&nbsp;
+    <a href="/outreach/" class="menulink">Outreach</a>&nbsp;&nbsp;
+    <a href="/service/" class="menulink">Service</a>&nbsp;&nbsp;
+    <a href="/conferences/" class="menulink">Conferences</a>&nbsp;&nbsp;
+    <a href="/contact/" class="menulink">Contact</a>&nbsp;&nbsp;
+    <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
+  </div>
+
+<div class=horizontal-line></div>
 <h1>Past Teaching and Resources</h1>
 <h2>MATH-140 Hands On, Grades Up - Fall 2024</h2>
 
