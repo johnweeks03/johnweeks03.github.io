@@ -23,7 +23,6 @@ visibility:hidden;
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
-<div class=horizontal-line></div>
 <h1>Past Teaching and Resources</h1>
 <h2>MATH-140 Hands On, Grades Up - Fall 2024</h2>
 
