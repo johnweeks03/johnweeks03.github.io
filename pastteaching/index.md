@@ -19,7 +19,7 @@ visibility:hidden;
 
 <p>Hands-on, Grades Up sessions consist of active-learning structured activities dedicated to selected courses. Just as in athletic programs, the basic premise here is that to achieve success you need to learn by practicing exercises, discussing problems and unraveling the precise meaning of concepts and how they relate to the problems being solved and to applications.</p>
 
-<p>The following hand-outs were administered during the Fall 2024 semester.</p>
+<p>The following hand-outs were used during the Fall 2024 semester.</p>
 
 <li><a href="2024hogu/202431hogu8.pdf">HOGU 8</a>, <a href="2024hogu/24f140hogu8ans.pdf">HOGU 8 Solutions</a></li>
 <li><a href="2024hogu/202431hogu7.pdf">HOGU 7</a>, <a href="2024hogu/24f140hogu7ans.pdf">HOGU 7 Solutions</a></li>
