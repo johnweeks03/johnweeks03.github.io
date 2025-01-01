@@ -1,6 +1,5 @@
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-</head> 
- 
+</head>
 
 <body>
 <div class="header">
@@ -12,7 +11,7 @@
     <a href="/contact/" class="menulink">Contact</a>&nbsp;&nbsp;
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
-
+ <p><br style="clear: both;"/></p> 
   
 <li><a href="https://rateyourmusic.com/~greamath">My RateYourMusic Profile</a></li>
 <li><a href="https://www.ewg.org/">Environmental Working Group</a></li>
