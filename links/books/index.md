@@ -30,5 +30,4 @@ I like several more books than these. These books are listed because they change
 <li>John Fraleigh and Neal Brand, <a href="https://search.worldcat.org/title/1124778567">A First Course in Abstract Algebra</a>, and Joe Gallian, <a href="https://search.worldcat.org/title/1376854893">Contemporary Abstract Algebra</a>, which made this subject feel like the most obvious way to categorize the mathematical world.</li>
 <li>Gerald Folland, <a href="https://search.worldcat.org/title/39849337">Real Analysis</a>, and Walter Rudin, <a href="https://search.worldcat.org/title/13093736">Real and Complex Analysis</a>, books whose covers are now falling off when taken out of their place in the center of my library.</li>
 <li>John Conway, <a href="https://search.worldcat.org/title/21195908">A Course in Functional Analysis</a>, the first book I read from cover to cover and worked nearly every example in an attempt to truly understand if I enjoyed what I did. (I do!)</li>
-</body>
 
