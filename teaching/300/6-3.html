@@ -1,0 +1,1368 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Functions</title>
+<!--Generated on Sun Dec 14 18:00:14 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S6" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Functions</h1>
+
+<section id="S6.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">6.3 </span>Injections, Surjections, and Bijections</h2>
+
+<div id="S6.SS3.p1" class="ltx_para">
+<p class="ltx_p">Functions are frequently used in mathematics to define and describe certain relationships between sets and other mathematical objects. In addition, functions can be used to impose certain mathematical structures on sets. In this section, we will study special types of functions that are used to describe these relationships that are called injections and surjections. Before defining these types of functions, we will revisit what the definition of a function tells us and explore certain functions with finite domains.</p>
+</div>
+<section id="S6.SS3.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.1 </span>Beginning Activity 1 (Functions with Finite Domains)</h3>
+
+<div id="S6.SS3.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S6.SS3.SSS1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be sets. Given a function <math id="S6.SS3.SSS1.p1.m3" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>, we know the following:</p>
+</div>
+<div id="S6.SS3.SSS1.p2" class="ltx_para">
+<ul id="S6.I1" class="ltx_itemize">
+<li id="S6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="S6.I1.i1.p1.m1" class="ltx_Math" alttext="x\in A,f(x)\in B" display="inline"><mrow><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>B</mi></mrow></mrow></math>. That is, every element of <math id="S6.I1.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an input for the function <math id="S6.I1.i1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. This could also be stated as follows: For each <math id="S6.I1.i1.p1.m4" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, there exists a <math id="S6.I1.i1.p1.m5" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> such that <math id="S6.I1.i1.p1.m6" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For a given <math id="S6.I1.i2.p1.m1" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, there is exactly one <math id="S6.I1.i2.p1.m2" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> such that <math id="S6.I1.i2.p1.m3" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S6.SS3.SSS1.p3" class="ltx_para">
+<p class="ltx_p">The definition of a function does not require that different inputs produce different outputs. That is, it is possible to have <math id="S6.SS3.SSS1.p3.m1" class="ltx_Math" alttext="x_{1},x_{2}\in A" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>A</mi></mrow></math> with <math id="S6.SS3.SSS1.p3.m2" class="ltx_Math" alttext="x_{1}\neq x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math> and <math id="S6.SS3.SSS1.p3.m3" class="ltx_Math" alttext="f\left(x_{1}\right)=f\left(x_{2}\right)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math>. The arrow diagram for the function <math id="S6.SS3.SSS1.p3.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> in Figure 6.5 illustrates such a function.</p>
+</div>
+<div id="S6.SS3.SSS1.p4" class="ltx_para">
+<p class="ltx_p">Also, the definition of a function does not require that the range of the function must equal the codomain. The range is always a subset of the codomain, but these two sets are not required to be equal. That is, if <math id="S6.SS3.SSS1.p4.m1" class="ltx_Math" alttext="g:A\rightarrow B" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>, then it is possible to have a <math id="S6.SS3.SSS1.p4.m2" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> such that <math id="S6.SS3.SSS1.p4.m3" class="ltx_Math" alttext="g(x)\neq y" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi>y</mi></mrow></math> for all <math id="S6.SS3.SSS1.p4.m4" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>. The arrow diagram for the function <math id="S6.SS3.SSS1.p4.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> in Figure 6.5 illustrates such a function.</p>
+</div>
+<figure id="S6.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig6_3.jpg" id="S6.F1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="299" height="140" alt="Two arrow diagrams. Diagram f maps 1, 2, 3 to a, b, c, d: 1 to a, 2 to a, 3 to b. Diagram g maps 1, 2, 3 to a, b, c, d: 1 to a, 2 to b, 3 to c (d is unmapped).">
+<figcaption class="ltx_caption ltx_centering">Figure 6.5: Arrow Diagram for Two Functions</figcaption>
+</figure>
+<div id="S6.SS3.SSS1.p5" class="ltx_para">
+<p class="ltx_p">Now let <math id="S6.SS3.SSS1.p5.m1" class="ltx_Math" alttext="A=\{1,2,3\},B=\{a,b,c,d\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and <math id="S6.SS3.SSS1.p5.m2" class="ltx_Math" alttext="C=\{s,t\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Define</p>
+</div>
+<div id="S6.SS3.SSS1.p6" class="ltx_para">
+<ul id="S6.I2" class="ltx_itemize">
+<li id="S6.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i1.p1.m1" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> defined by <math id="S6.I2.i1.p1.m2" class="ltx_Math" alttext="f(1)=a,f(2)=b,f(3)=c" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow><mo>,</mo><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>c</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i2.p1.m1" class="ltx_Math" alttext="g:A\rightarrow B" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> defined by <math id="S6.I2.i2.p1.m2" class="ltx_Math" alttext="g(1)=a,g(2)=b,g(3)=a" display="inline"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow><mo>,</mo><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow><mo>,</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i3.p1.m1" class="ltx_Math" alttext="h:A\rightarrow C" display="inline"><mrow><mi>h</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math> defined by <math id="S6.I2.i3.p1.m2" class="ltx_Math" alttext="h(1)=s,h(2)=t,h(3)=s" display="inline"><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>s</mi></mrow><mo>,</mo><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>t</mi></mrow><mo>,</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>s</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S6.SS3.SSS1.p7" class="ltx_para">
+<ol id="S6.I3" class="ltx_enumerate">
+<li id="S6.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Which of these functions satisfy the following property for a function <math id="S6.I3.i1.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> ?</p>
+</div>
+<div id="S6.I3.i1.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I3.i1.p2.m1" class="ltx_Math" alttext="x,y\in\operatorname{dom}(F)" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, if <math id="S6.I3.i1.p2.m2" class="ltx_Math" alttext="x\neq y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math>, then <math id="S6.I3.i1.p2.m3" class="ltx_Math" alttext="F(x)\neq F(y)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Which of these functions satisfy the following property for a function <math id="S6.I3.i2.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> ?</p>
+</div>
+<div id="S6.I3.i2.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I3.i2.p2.m1" class="ltx_Math" alttext="x,y\in\operatorname{dom}(F)" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, if <math id="S6.I3.i2.p2.m2" class="ltx_Math" alttext="F(x)=F(y)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S6.I3.i2.p2.m3" class="ltx_Math" alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Determine the range of each of these functions.</p>
+</div>
+</li>
+<li id="S6.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I3.i4.p1" class="ltx_para">
+<p class="ltx_p">Which of these functions have their range equal to their codomain?</p>
+</div>
+</li>
+<li id="S6.I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S6.I3.i5.p1" class="ltx_para">
+<p class="ltx_p">Which of the these functions satisfy the following property for a function <math id="S6.I3.i5.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> ?</p>
+</div>
+<div id="S6.I3.i5.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I3.i5.p2.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in the codomain of <math id="S6.I3.i5.p2.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, there exists an <math id="S6.I3.i5.p2.m3" class="ltx_Math" alttext="x\in\operatorname{dom}(F)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that <math id="S6.I3.i5.p2.m4" class="ltx_Math" alttext="F(x)=y" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS3.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.2 </span>Beginning Activity 2 (Statements Involving Functions)</h3>
+
+<div id="S6.SS3.SSS2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S6.SS3.SSS2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be nonempty sets and let <math id="S6.SS3.SSS2.p1.m3" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>. In Beginning Activity 1, we determined whether or not certain functions satisfied some specified properties. These properties were written in the form of statements, and we will now examine these statements in more detail.</p>
+</div>
+<div id="S6.SS3.SSS2.p2" class="ltx_para">
+<ol id="S6.I4" class="ltx_enumerate">
+<li id="S6.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Consider the following statement:</p>
+</div>
+<div id="S6.I4.i1.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I4.i1.p2.m1" class="ltx_Math" alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S6.I4.i1.p2.m2" class="ltx_Math" alttext="x\neq y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math>, then <math id="S6.I4.i1.p2.m3" class="ltx_Math" alttext="f(x)\neq f(y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+<ol id="S6.I4.i1.I1" class="ltx_enumerate">
+<li id="S6.I4.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I4.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Write the contrapositive of this conditional statement.</p>
+</div>
+</li>
+<li id="S6.I4.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I4.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Write the negation of this conditional statement.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Now consider the statement:</p>
+</div>
+<div id="S6.I4.i2.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I4.i2.p2.m1" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, there exists an <math id="S6.I4.i2.p2.m2" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S6.I4.i2.p2.m3" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>.
+<br class="ltx_break">Write the negation of this statement.</p>
+</div>
+</li>
+<li id="S6.I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I4.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I4.i3.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S6.I4.i3.p1.m2" class="ltx_Math" alttext="g(x)=5x+3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math>, for all <math id="S6.I4.i3.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Complete the following proofs of the following propositions about the function <math id="S6.I4.i3.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+<div id="S6.I4.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span> 1. For all <math id="S6.I4.i3.p2.m1" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>, if <math id="S6.I4.i3.p2.m2" class="ltx_Math" alttext="g(a)=g(b)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S6.I4.i3.p2.m3" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>.
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Proof</span>. We let <math id="S6.I4.i3.p2.m4" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>, and we assume that <math id="S6.I4.i3.p2.m5" class="ltx_Math" alttext="g(a)=g(b)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and will prove that <math id="S6.I4.i3.p2.m6" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>. Since <math id="S6.I4.i3.p2.m7" class="ltx_Math" alttext="g(a)=g(b)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we know that</p>
+</div>
+<div id="S6.I4.i3.p3" class="ltx_para">
+<table role="presentation" id="S6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex1.m1" class="ltx_Math" alttext="5a+3=5b+3" display="block"><mrow><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I4.i3.p4" class="ltx_para">
+<p class="ltx_p">(Now prove that in this situation, <math id="S6.I4.i3.p4.m1" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>.)</p>
+</div>
+<div id="S6.I4.i3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span> 2. For all <math id="S6.I4.i3.p5.m1" class="ltx_Math" alttext="b\in\mathbb{R}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, there exists an <math id="S6.I4.i3.p5.m2" class="ltx_Math" alttext="a\in\mathbb{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S6.I4.i3.p5.m3" class="ltx_Math" alttext="g(a)=b" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math>.
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Proof</span>. We let <math id="S6.I4.i3.p5.m4" class="ltx_Math" alttext="b\in\mathbb{R}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. We will prove that there exists an <math id="S6.I4.i3.p5.m5" class="ltx_Math" alttext="a\in\mathbb{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S6.I4.i3.p5.m6" class="ltx_Math" alttext="g(a)=b" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math> by constructing such an <math id="S6.I4.i3.p5.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> in <math id="S6.I4.i3.p5.m8" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. In order for this to happen, we need <math id="S6.I4.i3.p5.m9" class="ltx_Math" alttext="g(a)=5a+3=b" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo>=</mo><mi>b</mi></mrow></math>.
+<br class="ltx_break">(Now solve the equation for <math id="S6.I4.i3.p5.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and then show that for this real number <math id="S6.I4.i3.p5.m11" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="S6.I4.i3.p5.m12" class="ltx_Math" alttext="g(a)=b" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math>.)</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS3.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.3 </span>Injections</h3>
+
+<div id="S6.SS3.SSS3.p1" class="ltx_para">
+<p class="ltx_p">In previous sections and in Beginning Activity 1, we have seen examples of functions for which there exist different inputs that produce the same output. Using more formal notation, this means that there are functions <math id="S6.SS3.SSS3.p1.m1" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> for which there exist <math id="S6.SS3.SSS3.p1.m2" class="ltx_Math" alttext="x_{1},x_{2}\in A" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>A</mi></mrow></math> with <math id="S6.SS3.SSS3.p1.m3" class="ltx_Math" alttext="x_{1}\neq x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math> and <math id="S6.SS3.SSS3.p1.m4" class="ltx_Math" alttext="f\left(x_{1}\right)=f\left(x_{2}\right)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math>. The work in the beginning activities was intended to motivate the following definition.
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S6.SS3.SSS3.p1.m5" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> be a function from the set <math id="S6.SS3.SSS3.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S6.SS3.SSS3.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. The function <math id="S6.SS3.SSS3.p1.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is called an <span class="ltx_text ltx_font_bold">injection</span> provided that</p>
+</div>
+<div id="S6.SS3.SSS3.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex2.m1" class="ltx_Math" alttext="\text{ for all }x_{1},x_{2}\in A\text{, if }x_{1}\neq x_{2}\text{, then }f%
+\left(x_{1}\right)\neq f\left(x_{2}\right)\text{. }" display="block"><mrow><mrow><mrow><mtext> for all </mtext><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext>, if </mtext><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>≠</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS3.p3" class="ltx_para">
+<p class="ltx_p">When <math id="S6.SS3.SSS3.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an injection, we also say that <math id="S6.SS3.SSS3.p3.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a <span class="ltx_text ltx_font_bold">one-to-one function</span>, or that <math id="S6.SS3.SSS3.p3.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an <span class="ltx_text ltx_font_bold">injective function</span>.</p>
+</div>
+<div id="S6.SS3.SSS3.p4" class="ltx_para">
+<p class="ltx_p">Notice that the condition that specifies that a function <math id="S6.SS3.SSS3.p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an injection is given in the form of a conditional statement. As we shall see, in proofs, it is usually easier to use the contrapositive of this conditional statement. Although we did not define the term then, we have already written the contrapositive for the conditional statement in the definition of an injection in Part (1) of Beginning Activity 2. In that activity, we also wrote the negation of the definition of an injection. Following is a summary of this work giving the conditions for <math id="S6.SS3.SSS3.p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> being an injection or not being an injection.</p>
+</div>
+<div id="S6.SS3.SSS3.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS3.p5.m1" class="ltx_Math" alttext="\boldsymbol{f}:\boldsymbol{A}\rightarrow\boldsymbol{B}" display="inline"><mrow><mi>𝒇</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>𝑨</mi><mo stretchy="false">→</mo><mi>𝑩</mi></mrow></mrow></math>.
+<br class="ltx_break">"The function <math id="S6.SS3.SSS3.p5.m2" class="ltx_Math" alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math> is an injection" means that</p>
+</div>
+<div id="S6.SS3.SSS3.p6" class="ltx_para">
+<ul id="S6.I5" class="ltx_itemize">
+<li id="S6.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I5.i1.p1.m1" class="ltx_Math" alttext="x_{1},x_{2}\in A" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S6.I5.i1.p1.m2" class="ltx_Math" alttext="x_{1}\neq x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math>, then <math id="S6.I5.i1.p1.m3" class="ltx_Math" alttext="f\left(x_{1}\right)\neq f\left(x_{2}\right)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math>; or</p>
+</div>
+</li>
+<li id="S6.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I5.i2.p1.m1" class="ltx_Math" alttext="x_{1},x_{2}\in A" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S6.I5.i2.p1.m2" class="ltx_Math" alttext="f\left(x_{1}\right)=f\left(x_{2}\right)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math>, then <math id="S6.I5.i2.p1.m3" class="ltx_Math" alttext="x_{1}=x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math>.
+"The function <math id="S6.I5.i2.p1.m4" class="ltx_Math" alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math> is not an injection" means that</p>
+</div>
+</li>
+<li id="S6.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I5.i3.p1" class="ltx_para">
+<p class="ltx_p">There exist <math id="S6.I5.i3.p1.m1" class="ltx_Math" alttext="x_{1},x_{2}\in A" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S6.I5.i3.p1.m2" class="ltx_Math" alttext="x_{1}\neq x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math> and <math id="S6.I5.i3.p1.m3" class="ltx_Math" alttext="f\left(x_{1}\right)=f\left(x_{2}\right)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S6.SS3.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.4 </span>Progress Check 6.10 (Working with the Definition of an Injection)</h3>
+
+<div id="S6.SS3.SSS4.p1" class="ltx_para">
+<p class="ltx_p">Now that we have defined what it means for a function to be an injection, we can see that in Part (3) of Beginning Activity 2, we proved that the function <math id="S6.SS3.SSS4.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> is an injection, where <math id="S6.SS3.SSS4.p1.m2" class="ltx_Math" alttext="g(x)=5x+3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math> for all <math id="S6.SS3.SSS4.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Use the definition (or its negation) to determine whether or not the following functions are injections.</p>
+</div>
+<div id="S6.SS3.SSS4.p2" class="ltx_para">
+<ol id="S6.I6" class="ltx_enumerate">
+<li id="S6.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I6.i1.p1.m1" class="ltx_Math" alttext="k:A\rightarrow B" display="inline"><mrow><mi>k</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>, where <math id="S6.I6.i1.p1.m2" class="ltx_Math" alttext="A=\{a,b,c\},B=\{1,2,3,4\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and <math id="S6.I6.i1.p1.m3" class="ltx_Math" alttext="k(a)=4,k(b)=1" display="inline"><mrow><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow><mo>,</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></mrow></math>, and <math id="S6.I6.i1.p1.m4" class="ltx_Math" alttext="k(c)=3" display="inline"><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I6.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I6.i2.p1.m1" class="ltx_Math" alttext="f:A\rightarrow C" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math>, where <math id="S6.I6.i2.p1.m2" class="ltx_Math" alttext="A=\{a,b,c\},C=\{1,2,3\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and <math id="S6.I6.i2.p1.m3" class="ltx_Math" alttext="f(a)=2,f(b)=3" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></mrow></math>, and <math id="S6.I6.i2.p1.m4" class="ltx_Math" alttext="f(c)=2" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I6.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I6.i3.p1.m1" class="ltx_Math" alttext="F:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> defined by <math id="S6.I6.i3.p1.m2" class="ltx_Math" alttext="F(m)=3m+2" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math> for all <math id="S6.I6.i3.p1.m3" class="ltx_Math" alttext="m\in\mathbb{Z}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow></math></p>
+</div>
+</li>
+<li id="S6.I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I6.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I6.i4.p1.m1" class="ltx_Math" alttext="h:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>h</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I6.i4.p1.m2" class="ltx_Math" alttext="h(x)=x^{2}-3x" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> for all <math id="S6.I6.i4.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math></p>
+</div>
+</li>
+<li id="S6.I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S6.I6.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I6.i5.p1.m1" class="ltx_Math" alttext="R_{5}=\{0,1,2,3,4\}" display="inline"><mrow><msub><mi>R</mi><mn>5</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S6.I6.i5.p1.m2" class="ltx_Math" alttext="s:R_{5}\rightarrow R_{5}" display="inline"><mrow><mi>s</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>R</mi><mn>5</mn></msub><mo stretchy="false">→</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></mrow></math> defined by <math id="S6.I6.i5.p1.m3" class="ltx_Math" alttext="s(x)=x^{3}(\bmod 5)" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S6.I6.i5.p1.m4" class="ltx_Math" alttext="x\in R_{5}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS3.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.5 </span>Surjections</h3>
+
+<div id="S6.SS3.SSS5.p1" class="ltx_para">
+<p class="ltx_p">In previous sections and in Beginning Activity 1, we have seen that there exist functions <math id="S6.SS3.SSS5.p1.m1" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> for which range <math id="S6.SS3.SSS5.p1.m2" class="ltx_Math" alttext="(f)=B" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>B</mi></mrow></math>. This means that every element of <math id="S6.SS3.SSS5.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is an output of the function <math id="S6.SS3.SSS5.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> for some input from the set <math id="S6.SS3.SSS5.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Using quantifiers, this means that for every <math id="S6.SS3.SSS5.p1.m6" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, there exists an <math id="S6.SS3.SSS5.p1.m7" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S6.SS3.SSS5.p1.m8" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>. One of the objectives of the beginning activities was to motivate the following definition.</p>
+</div>
+<div id="S6.SS3.SSS5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S6.SS3.SSS5.p2.m1" class="ltx_Math" alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> be a function from the set <math id="S6.SS3.SSS5.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S6.SS3.SSS5.p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. The function <math id="S6.SS3.SSS5.p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is called a <span class="ltx_text ltx_font_bold">surjection</span> provided that the range of <math id="S6.SS3.SSS5.p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> equals the codomain of <math id="S6.SS3.SSS5.p2.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. This means that
+<br class="ltx_break">for every <math id="S6.SS3.SSS5.p2.m7" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, there exists an <math id="S6.SS3.SSS5.p2.m8" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S6.SS3.SSS5.p2.m9" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>.
+<br class="ltx_break">When <math id="S6.SS3.SSS5.p2.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection, we also say that <math id="S6.SS3.SSS5.p2.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an <span class="ltx_text ltx_font_bold">onto function</span> or that <math id="S6.SS3.SSS5.p2.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> maps <math id="S6.SS3.SSS5.p2.m13" class="ltx_Math" alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> onto <math id="S6.SS3.SSS5.p2.m14" class="ltx_Math" alttext="\boldsymbol{B}" display="inline"><mi>𝑩</mi></math>. We also say that <math id="S6.SS3.SSS5.p2.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a <span class="ltx_text ltx_font_bold">surjective function</span>.</p>
+</div>
+<div id="S6.SS3.SSS5.p3" class="ltx_para">
+<p class="ltx_p">One of the conditions that specifies that a function <math id="S6.SS3.SSS5.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection is given in the form of a universally quantified statement, which is the primary statement used in proving a function is (or is not) a surjection. Although we did not define the term then, we have already written the negation for the statement defining a surjection in Part (2) of Beginning Activity 2. We now summarize the conditions for <math id="S6.SS3.SSS5.p3.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> being a surjection or not being a surjection.</p>
+</div>
+<div id="S6.SS3.SSS5.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS5.p4.m1" class="ltx_Math" alttext="\boldsymbol{f}:\boldsymbol{A}\rightarrow\boldsymbol{B}" display="inline"><mrow><mi>𝒇</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>𝑨</mi><mo stretchy="false">→</mo><mi>𝑩</mi></mrow></mrow></math>.
+<br class="ltx_break">"The function <math id="S6.SS3.SSS5.p4.m2" class="ltx_Math" alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math> is a surjection" means that</p>
+</div>
+<div id="S6.SS3.SSS5.p5" class="ltx_para">
+<ul id="S6.I7" class="ltx_itemize">
+<li id="S6.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I7.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I7.i1.p1.m1" class="ltx_Math" alttext="\operatorname{range}(f)=\operatorname{codom}(f)=B" display="inline"><mrow><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>codom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>B</mi></mrow></math>; or</p>
+</div>
+</li>
+<li id="S6.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I7.i2.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="S6.I7.i2.p1.m1" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, there exists an <math id="S6.I7.i2.p1.m2" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S6.I7.i2.p1.m3" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>.
+<br class="ltx_break">"The function <math id="S6.I7.i2.p1.m4" class="ltx_Math" alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math> is not a surjection" means that</p>
+</div>
+</li>
+<li id="S6.I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I7.i3.p1" class="ltx_para">
+<p class="ltx_p">range <math id="S6.I7.i3.p1.m1" class="ltx_Math" alttext="(f)\neq\operatorname{codom}(f)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mi>codom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>; or</p>
+</div>
+</li>
+<li id="S6.I7.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I7.i4.p1" class="ltx_para">
+<p class="ltx_p">There exists a <math id="S6.I7.i4.p1.m1" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> such that for all <math id="S6.I7.i4.p1.m2" class="ltx_Math" alttext="x\in A,f(x)\neq y" display="inline"><mrow><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi>y</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S6.SS3.SSS5.p6" class="ltx_para">
+<p class="ltx_p">One other important type of function is when a function is both an injection and surjection. This type of function is called a bijection.</p>
+</div>
+<div id="S6.SS3.SSS5.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A <span class="ltx_text ltx_font_bold">bijection</span> is a function that is both an injection and a surjection. If the function <math id="S6.SS3.SSS5.p7.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a bijection, we also say that <math id="S6.SS3.SSS5.p7.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_bold">one-to-one and onto</span> and that <math id="S6.SS3.SSS5.p7.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a <span class="ltx_text ltx_font_bold">bijective function</span>.</p>
+</div>
+</section>
+<section id="S6.SS3.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.6 </span>Progress Check 6.11 (Working with the Definition of a Surjection)</h3>
+
+<div id="S6.SS3.SSS6.p1" class="ltx_para">
+<p class="ltx_p">Now that we have defined what it means for a function to be a surjection, we can see that in Part (3) of Beginning Activity 2, we proved that the function <math id="S6.SS3.SSS6.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> is a surjection, where <math id="S6.SS3.SSS6.p1.m2" class="ltx_Math" alttext="g(x)=5x+3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math> for all <math id="S6.SS3.SSS6.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Determine whether or not the following functions are surjections.</p>
+</div>
+<div id="S6.SS3.SSS6.p2" class="ltx_para">
+<ol id="S6.I8" class="ltx_enumerate">
+<li id="S6.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I8.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i1.p1.m1" class="ltx_Math" alttext="k:A\rightarrow B" display="inline"><mrow><mi>k</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>, where <math id="S6.I8.i1.p1.m2" class="ltx_Math" alttext="A=\{a,b,c\},B=\{1,2,3,4\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and <math id="S6.I8.i1.p1.m3" class="ltx_Math" alttext="k(a)=4,k(b)=1" display="inline"><mrow><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow><mo>,</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></mrow></math>, and <math id="S6.I8.i1.p1.m4" class="ltx_Math" alttext="k(c)=3" display="inline"><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I8.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i2.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I8.i2.p1.m2" class="ltx_Math" alttext="f(x)=3x+2" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math> for all <math id="S6.I8.i2.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I8.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i3.p1.m1" class="ltx_Math" alttext="F:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> defined by <math id="S6.I8.i3.p1.m2" class="ltx_Math" alttext="F(m)=3m+2" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math> for all <math id="S6.I8.i3.p1.m3" class="ltx_Math" alttext="m\in\mathbb{Z}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I8.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i4.p1.m1" class="ltx_Math" alttext="s:R_{5}\rightarrow R_{5}" display="inline"><mrow><mi>s</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>R</mi><mn>5</mn></msub><mo stretchy="false">→</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></mrow></math> defined by <math id="S6.I8.i4.p1.m2" class="ltx_Math" alttext="s(x)=x^{3}(\bmod 5)" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S6.I8.i4.p1.m3" class="ltx_Math" alttext="x\in R_{5}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS3.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.7 </span>The Importance of the Domain and Codomain</h3>
+
+<div id="S6.SS3.SSS7.p1" class="ltx_para">
+<p class="ltx_p">The functions in the next two examples will illustrate why the domain and the codomain of a function are just as important as the rule defining the outputs of a function when we need to determine if the function is a surjection.</p>
+</div>
+<div id="S6.SS3.SSS7.p2" class="ltx_para">
+<p class="ltx_p">An Important Lesson. In Examples 6.12 and 6.13, the same mathematical formula was used to determine the outputs for the functions. However, one function was not a surjection and the other one was a surjection. This illustrates the important fact that whether a function is surjective depends not only on the formula that defines the output of the function but also on the domain and codomain of the function.</p>
+</div>
+<div id="S6.SS3.SSS7.p3" class="ltx_para">
+<p class="ltx_p">The next example will show that whether or not a function is an injection also depends on the domain of the function.</p>
+</div>
+</section>
+<section id="S6.SS3.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.8 </span>Example 6.14 (A Function that Is an Injection but Is Not a Surjection)</h3>
+
+<div id="S6.SS3.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS8.p1.m1" class="ltx_Math" alttext="\mathbb{Z}^{*}=\{x\in\mathbb{Z}\mid x\geq 0\}=\mathbb{N}\cup\{0\}" display="inline"><mrow><msup><mi>ℤ</mi><mo>∗</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mi>ℕ</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. Define <math id="S6.SS3.SSS8.p1.m2" class="ltx_Math" alttext="g:\mathbb{Z}^{*}\rightarrow\mathbb{N}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>ℤ</mi><mo>∗</mo></msup><mo stretchy="false">→</mo><mi>ℕ</mi></mrow></mrow></math> by <math id="S6.SS3.SSS8.p1.m3" class="ltx_Math" alttext="g(x)=x^{2}+1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow></math>. (Notice that this is the same formula used in Examples 6.12 and 6.13.) Following is a table of values for some inputs for the function <math id="S6.SS3.SSS8.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+<div id="S6.SS3.SSS8.p2" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r"><math id="S6.SS3.SSS8.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="S6.SS3.SSS8.m2" class="ltx_Math" alttext="g(x)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0</td>
+<td class="ltx_td ltx_align_center ltx_border_t">1</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_center ltx_border_t">2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2</td>
+<td class="ltx_td ltx_align_center ltx_border_t">5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_center ltx_border_t">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">4</td>
+<td class="ltx_td ltx_align_center ltx_border_t">17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">5</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_t">26</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS8.p3" class="ltx_para">
+<p class="ltx_p">Notice that the codomain is <math id="S6.SS3.SSS8.p3.m1" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>, and the table of values suggests that some natural numbers are not outputs of this function. So it appears that the function <math id="S6.SS3.SSS8.p3.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is not a surjection.</p>
+</div>
+<div id="S6.SS3.SSS8.p4" class="ltx_para">
+<p class="ltx_p">To prove that <math id="S6.SS3.SSS8.p4.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is not a surjection, pick an element of <math id="S6.SS3.SSS8.p4.m2" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> that does not appear to be in the range. We will use 3, and we will use a proof by contradiction to prove that there is no <math id="S6.SS3.SSS8.p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in the domain (<math id="S6.SS3.SSS8.p4.m4" class="ltx_Math" alttext="\mathbb{Z}^{*}" display="inline"><msup><mi>ℤ</mi><mo>∗</mo></msup></math>) such that <math id="S6.SS3.SSS8.p4.m5" class="ltx_Math" alttext="g(x)=3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. So we assume that there exists an <math id="S6.SS3.SSS8.p4.m6" class="ltx_Math" alttext="x\in\mathbb{Z}^{*}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math> with <math id="S6.SS3.SSS8.p4.m7" class="ltx_Math" alttext="g(x)=3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. Then</p>
+</div>
+<div id="S6.SS3.SSS8.p5" class="ltx_para">
+<table role="presentation" id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex3.m1" class="ltx_Math" alttext="\displaystyle x^{2}+1" display="inline"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex3.m2" class="ltx_Math" alttext="\displaystyle=3" display="inline"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex4.m1" class="ltx_Math" alttext="\displaystyle x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex4.m2" class="ltx_Math" alttext="\displaystyle=2" display="inline"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex5.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\pm\sqrt{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS8.p6" class="ltx_para">
+<p class="ltx_p">But this is not possible since <math id="S6.SS3.SSS8.p6.m1" class="ltx_Math" alttext="\sqrt{2}\notin\mathbb{Z}^{*}" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>∉</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math>. Therefore, there is no <math id="S6.SS3.SSS8.p6.m2" class="ltx_Math" alttext="x\in\mathbb{Z}^{*}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math> with <math id="S6.SS3.SSS8.p6.m3" class="ltx_Math" alttext="g(x)=3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. This means that for every <math id="S6.SS3.SSS8.p6.m4" class="ltx_Math" alttext="x\in\mathbb{Z}^{*},g(x)\neq 3" display="inline"><mrow><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow><mo>,</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>3</mn></mrow></mrow></math>. Therefore, 3 is not in the range of <math id="S6.SS3.SSS8.p6.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, and hence <math id="S6.SS3.SSS8.p6.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is not a surjection.</p>
+</div>
+<div id="S6.SS3.SSS8.p7" class="ltx_para">
+<p class="ltx_p">The table of values suggests that different inputs produce different outputs, and hence that <math id="S6.SS3.SSS8.p7.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is an injection. To prove that <math id="S6.SS3.SSS8.p7.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is an injection, assume that <math id="S6.SS3.SSS8.p7.m3" class="ltx_Math" alttext="s,t\in\mathbb{Z}^{*}" display="inline"><mrow><mrow><mi>s</mi><mo>,</mo><mi>t</mi></mrow><mo>∈</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math>
+<br class="ltx_break">(the domain) with <math id="S6.SS3.SSS8.p7.m4" class="ltx_Math" alttext="g(s)=g(t)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then</p>
+</div>
+<div id="S6.SS3.SSS8.p8" class="ltx_para">
+<table role="presentation" id="S6.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex6.m1" class="ltx_Math" alttext="\displaystyle s^{2}+1" display="inline"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex6.m2" class="ltx_Math" alttext="\displaystyle=t^{2}+1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex7.m1" class="ltx_Math" alttext="\displaystyle s^{2}" display="inline"><msup><mi>s</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex7.m2" class="ltx_Math" alttext="\displaystyle=t^{2}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS8.p9" class="ltx_para">
+<p class="ltx_p">Since <math id="S6.SS3.SSS8.p9.m1" class="ltx_Math" alttext="s,t\in\mathbb{Z}^{*}" display="inline"><mrow><mrow><mi>s</mi><mo>,</mo><mi>t</mi></mrow><mo>∈</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math>, we know that <math id="S6.SS3.SSS8.p9.m2" class="ltx_Math" alttext="s\geq 0" display="inline"><mrow><mi>s</mi><mo>≥</mo><mn>0</mn></mrow></math> and <math id="S6.SS3.SSS8.p9.m3" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math>. So the preceding equation implies that <math id="S6.SS3.SSS8.p9.m4" class="ltx_Math" alttext="s=t" display="inline"><mrow><mi>s</mi><mo>=</mo><mi>t</mi></mrow></math>. Hence, <math id="S6.SS3.SSS8.p9.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is an injection.</p>
+</div>
+<div id="S6.SS3.SSS8.p10" class="ltx_para">
+<p class="ltx_p">An Important Lesson. The functions in the three preceding examples all used the same formula to determine the outputs. The functions in Examples 6.12 and 6.13 are not injections but the function in Example 6.14 is an injection. This illustrates the important fact that whether a function is injective not only depends on the formula that defines the output of the function but also on the domain of the function.</p>
+</div>
+</section>
+<section id="S6.SS3.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.9 </span>Progress Check 6.15 (The Importance of the Domain and Codomain)</h3>
+
+<div id="S6.SS3.SSS9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS9.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{+}=\{y\in\mathbb{R}\mid y&gt;0\}" display="inline"><mrow><msup><mi>ℝ</mi><mo>+</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Define</p>
+</div>
+<div id="S6.SS3.SSS9.p2" class="ltx_para">
+<table role="presentation" id="S6.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex8.m1" class="ltx_math_unparsed" alttext="\displaystyle f:\mathbb{R}\rightarrow\mathbb{R}\text{ by }f(x)=e^{-x},\text{ %
+for each }x\in\mathbb{R},\text{ and }" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi><mtext> by </mtext><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup><mo>,</mo><mtext> for each </mtext><mi>x</mi><mo>∈</mo><mi>ℝ</mi><mo>,</mo><mtext> and</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex9.m1" class="ltx_math_unparsed" alttext="\displaystyle g:\mathbb{R}\rightarrow\mathbb{R}^{+}\text{by }g(x)=e^{-x},\text%
+{ for each }x\in\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mi>ℝ</mi><mo stretchy="false">→</mo><msup><mi>ℝ</mi><mo>+</mo></msup><mtext>by </mtext><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup><mo>,</mo><mtext> for each </mtext><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS9.p3" class="ltx_para">
+<p class="ltx_p">Determine if each of these functions is an injection or a surjection. Justify your conclusions. Note: Before writing proofs, it might be helpful to draw the graph of <math id="S6.SS3.SSS9.p3.m1" class="ltx_Math" alttext="y=e^{-x}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></math>. A reasonable graph can be obtained using <math id="S6.SS3.SSS9.p3.m2" class="ltx_Math" alttext="-3\leq x\leq 3" display="inline"><mrow><mrow><mo>−</mo><mn>3</mn></mrow><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>3</mn></mrow></math> and <math id="S6.SS3.SSS9.p3.m3" class="ltx_Math" alttext="-2\leq y\leq 10" display="inline"><mrow><mrow><mo>−</mo><mn>2</mn></mrow><mo>≤</mo><mi>y</mi><mo>≤</mo><mn>10</mn></mrow></math>. Please keep in mind that the graph does not prove any conclusion, but may help us arrive at the correct conclusions, which will still need proof.</p>
+</div>
+</section>
+<section id="S6.SS3.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.10 </span>Working with a Function of Two Variables</h3>
+
+<div id="S6.SS3.SSS10.p1" class="ltx_para">
+<p class="ltx_p">It takes time and practice to become efficient at working with the formal definitions of injection and surjection. As we have seen, all parts of a function are important (the domain, the codomain, and the rule for determining outputs). This is especially true for functions of two variables.</p>
+</div>
+<div id="S6.SS3.SSS10.p2" class="ltx_para">
+<p class="ltx_p">For example, we define <math id="S6.SS3.SSS10.p2.m1" class="ltx_Math" alttext="f:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></mrow></math> by</p>
+</div>
+<div id="S6.SS3.SSS10.p3" class="ltx_para">
+<table role="presentation" id="S6.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex10.m1" class="ltx_Math" alttext="f(a,b)=(2a+b,a-b)\text{ for all }(a,b)\in\mathbb{R}\times\mathbb{R}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> for all </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p4" class="ltx_para">
+<p class="ltx_p">Notice that both the domain and the codomain of this function are the set <math id="S6.SS3.SSS10.p4.m1" class="ltx_Math" alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>. Thus, the inputs and the outputs of this function are ordered pairs of real numbers. For example,</p>
+</div>
+<div id="S6.SS3.SSS10.p5" class="ltx_para">
+<table role="presentation" id="S6.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex11.m1" class="ltx_Math" alttext="f(1,1)=(3,0)\quad\text{ and }\quad f(-1,2)=(0,-3)" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p6" class="ltx_para">
+<p class="ltx_p">To explore whether or not <math id="S6.SS3.SSS10.p6.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an injection, we assume that <math id="S6.SS3.SSS10.p6.m2" class="ltx_Math" alttext="(a,b)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="S6.SS3.SSS10.p6.m3" class="ltx_Math" alttext="(c,d)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, and <math id="S6.SS3.SSS10.p6.m4" class="ltx_Math" alttext="f(a,b)=f(c,d)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This means that</p>
+</div>
+<div id="S6.SS3.SSS10.p7" class="ltx_para">
+<table role="presentation" id="S6.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex12.m1" class="ltx_Math" alttext="(2a+b,a-b)=(2c+d,c-d)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>+</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>−</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p8" class="ltx_para">
+<p class="ltx_p">Since this equation is an equality of ordered pairs, we see that</p>
+</div>
+<div id="S6.SS3.SSS10.p9" class="ltx_para">
+<table role="presentation" id="S6.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex13.m1" class="ltx_Math" alttext="\displaystyle 2a+b" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex13.m2" class="ltx_Math" alttext="\displaystyle=2c+d,\text{ and }" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>+</mo><mi>d</mi></mrow><mo>,</mo><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex14.m1" class="ltx_Math" alttext="\displaystyle a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex14.m2" class="ltx_Math" alttext="\displaystyle=c-d" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>c</mi><mo>−</mo><mi>d</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p10" class="ltx_para">
+<p class="ltx_p">By adding the corresponding sides of the two equations in this system, we obtain <math id="S6.SS3.SSS10.p10.m1" class="ltx_Math" alttext="3a=3c" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>c</mi></mrow></mrow></math> and hence, <math id="S6.SS3.SSS10.p10.m2" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math>. Substituting <math id="S6.SS3.SSS10.p10.m3" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math> into either equation in the system give us <math id="S6.SS3.SSS10.p10.m4" class="ltx_Math" alttext="b=d" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi></mrow></math>. Since <math id="S6.SS3.SSS10.p10.m5" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math> and <math id="S6.SS3.SSS10.p10.m6" class="ltx_Math" alttext="b=d" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi></mrow></math>, we conclude that</p>
+</div>
+<div id="S6.SS3.SSS10.p11" class="ltx_para">
+<table role="presentation" id="S6.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex15.m1" class="ltx_Math" alttext="(a,b)=(c,d)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p12" class="ltx_para">
+<p class="ltx_p">Hence, we have shown that if <math id="S6.SS3.SSS10.p12.m1" class="ltx_Math" alttext="f(a,b)=f(c,d)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S6.SS3.SSS10.p12.m2" class="ltx_Math" alttext="(a,b)=(c,d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Therefore, <math id="S6.SS3.SSS10.p12.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an injection.</p>
+</div>
+<div id="S6.SS3.SSS10.p13" class="ltx_para">
+<p class="ltx_p">Now, to determine if <math id="S6.SS3.SSS10.p13.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection, we let <math id="S6.SS3.SSS10.p13.m2" class="ltx_Math" alttext="(r,s)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, where <math id="S6.SS3.SSS10.p13.m3" class="ltx_Math" alttext="(r,s)" display="inline"><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></math> is considered to be an arbitrary element of the codomain of the function <math id="S6.SS3.SSS10.p13.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Can we find an ordered pair <math id="S6.SS3.SSS10.p13.m5" class="ltx_Math" alttext="(a,b)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math> such that <math id="S6.SS3.SSS10.p13.m6" class="ltx_Math" alttext="f(a,b)=(r,s)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>? Working backward, we see that in order to do this, we need</p>
+</div>
+<div id="S6.SS3.SSS10.p14" class="ltx_para">
+<table role="presentation" id="S6.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex16.m1" class="ltx_Math" alttext="(2a+b,a-b)=(r,s)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p15" class="ltx_para">
+<p class="ltx_p">That is, we need</p>
+</div>
+<div id="S6.SS3.SSS10.p16" class="ltx_para">
+<table role="presentation" id="S6.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex17.m1" class="ltx_Math" alttext="2a+b=r\quad\text{ and }\quad a-b=s." display="block"><mrow><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>r</mi><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>=</mo><mi>s</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p17" class="ltx_para">
+<p class="ltx_p">Solving this system for <math id="S6.SS3.SSS10.p17.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S6.SS3.SSS10.p17.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> yields</p>
+</div>
+<div id="S6.SS3.SSS10.p18" class="ltx_para">
+<table role="presentation" id="S6.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex18.m1" class="ltx_Math" alttext="a=\frac{r+s}{3}\text{ and }b=\frac{r-2s}{3}" display="block"><mrow><mi>a</mi><mo>=</mo><mrow><mfrac><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mn>3</mn></mfrac><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mfrac><mrow><mi>r</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mn>3</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p19" class="ltx_para">
+<p class="ltx_p">Since <math id="S6.SS3.SSS10.p19.m1" class="ltx_Math" alttext="r,s\in\mathbb{R}" display="inline"><mrow><mrow><mi>r</mi><mo>,</mo><mi>s</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>, we can conclude that <math id="S6.SS3.SSS10.p19.m2" class="ltx_Math" alttext="a\in\mathbb{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S6.SS3.SSS10.p19.m3" class="ltx_Math" alttext="b\in\mathbb{R}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and hence that <math id="S6.SS3.SSS10.p19.m4" class="ltx_Math" alttext="(a,b)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S6.SS3.SSS10.p20" class="ltx_para">
+<p class="ltx_p">We now need to verify that for these values of <math id="S6.SS3.SSS10.p20.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S6.SS3.SSS10.p20.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, we get <math id="S6.SS3.SSS10.p20.m3" class="ltx_Math" alttext="f(a,b)=(r,s)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>. So</p>
+</div>
+<div id="S6.SS3.SSS10.p21" class="ltx_para">
+<table role="presentation" id="S6.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex19.m1" class="ltx_Math" alttext="\displaystyle f(a,b)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex19.m2" class="ltx_Math" alttext="\displaystyle=f\left(\frac{r+s}{3},\frac{r-2s}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mn>3</mn></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true"><mfrac><mrow><mi>r</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex20.m1" class="ltx_Math" alttext="\displaystyle=\left(2\left(\frac{r+s}{3}\right)+\frac{r-2s}{3},\frac{r+s}{3}-%
+\frac{r-2s}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>r</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mn>3</mn></mfrac></mstyle></mrow><mo>,</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mn>3</mn></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mi>r</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mn>3</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex21.m1" class="ltx_Math" alttext="\displaystyle=\left(\frac{2r+2s+r-2s}{3},\frac{r+s-r+2s}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mi>r</mi></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mn>3</mn></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mo>−</mo><mi>r</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex22.m1" class="ltx_Math" alttext="\displaystyle=(r,s)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS3.SSS10.p22" class="ltx_para">
+<p class="ltx_p">This proves that for all <math id="S6.SS3.SSS10.p22.m1" class="ltx_Math" alttext="(r,s)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, there exists <math id="S6.SS3.SSS10.p22.m2" class="ltx_Math" alttext="(a,b)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math> such that <math id="S6.SS3.SSS10.p22.m3" class="ltx_Math" alttext="f(a,b)=(r,s)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Hence, the function <math id="S6.SS3.SSS10.p22.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection. Since <math id="S6.SS3.SSS10.p22.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is both an injection and a surjection, it is a bijection.</p>
+</div>
+</section>
+<section id="S6.SS3.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.11 </span>Progress Check 6.16 (A Function of Two Variables)</h3>
+
+<div id="S6.SS3.SSS11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS3.SSS11.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S6.SS3.SSS11.p1.m2" class="ltx_Math" alttext="g(x,y)=2x+y" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow></mrow></math>, for all <math id="S6.SS3.SSS11.p1.m3" class="ltx_Math" alttext="(x,y)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>.
+<br class="ltx_break">Note: Be careful! One major difference between this function and the previous example is that for the function <math id="S6.SS3.SSS11.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, the codomain is <math id="S6.SS3.SSS11.p1.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, not <math id="S6.SS3.SSS11.p1.m6" class="ltx_Math" alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>. It is a good idea to begin by computing several outputs for several inputs (and remember that the inputs are ordered pairs).</p>
+</div>
+<div id="S6.SS3.SSS11.p2" class="ltx_para">
+<ol id="S6.I9" class="ltx_enumerate">
+<li id="S6.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">Notice that the ordered pair <math id="S6.I9.i1.p1.m1" class="ltx_Math" alttext="(1,0)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>. That is, <math id="S6.I9.i1.p1.m2" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> is in the domain of <math id="S6.I9.i1.p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. Also notice that <math id="S6.I9.i1.p1.m4" class="ltx_Math" alttext="g(1,0)=2" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>. Is it possible to find another ordered pair <math id="S6.I9.i1.p1.m5" class="ltx_Math" alttext="(a,b)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math> such that <math id="S6.I9.i1.p1.m6" class="ltx_Math" alttext="g(a,b)=2" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math> ?</p>
+</div>
+</li>
+<li id="S6.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I9.i2.p1.m1" class="ltx_Math" alttext="z\in\mathbb{R}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then <math id="S6.I9.i2.p1.m2" class="ltx_Math" alttext="(0,z)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math> and so <math id="S6.I9.i2.p1.m3" class="ltx_Math" alttext="(0,z)\in\operatorname{dom}(g)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Now determine <math id="S6.I9.i2.p1.m4" class="ltx_Math" alttext="g(0,z)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I9.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I9.i3.p1.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> an injection? Is the function <math id="S6.I9.i3.p1.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS3.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.12 </span>Exercises 6.3</h3>
+
+<div id="S6.SS3.SSS12.p1" class="ltx_para">
+<ol id="S6.I10" class="ltx_enumerate">
+<li id="S6.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I10.i1.p1" class="ltx_para">
+<ol id="S6.I10.i1.I1" class="ltx_enumerate">
+<li id="S6.I10.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Draw an arrow diagram that represents a function that is an injection but is not a surjection.</p>
+</div>
+</li>
+<li id="S6.I10.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Draw an arrow diagram that represents a function that is an injection and is a surjection.</p>
+</div>
+</li>
+<li id="S6.I10.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I10.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Draw an arrow diagram that represents a function that is not an injection and is not a surjection.</p>
+</div>
+</li>
+<li id="S6.I10.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I10.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Draw an arrow diagram that represents a function that is not an injection but is a surjection.</p>
+</div>
+</li>
+<li id="S6.I10.i1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S6.I10.i1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Draw an arrow diagram that represents a function that is not a bijection.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">We know <math id="S6.I10.i2.p1.m1" class="ltx_Math" alttext="R_{5}=\{0,1,2,3,4\}" display="inline"><mrow><msub><mi>R</mi><mn>5</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S6.I10.i2.p1.m2" class="ltx_Math" alttext="R_{6}=\{0,1,2,3,4,5\}" display="inline"><mrow><msub><mi>R</mi><mn>6</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">}</mo></mrow></mrow></math>. For each of the following functions, determine if the function is an injection and determine if the function is a surjection. Justify all conclusions.</p>
+<ol id="S6.I10.i2.I1" class="ltx_enumerate">
+<li id="S6.I10.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i2.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S6.I10.i2.I1.i1.p1.m2" class="ltx_Math" alttext="f:R_{5}\rightarrow R_{5}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>R</mi><mn>5</mn></msub><mo stretchy="false">→</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></mrow></math> by <math id="S6.I10.i2.I1.i1.p1.m3" class="ltx_Math" alttext="f(x)=x^{2}+4(\bmod 5)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, for all <math id="S6.I10.i2.I1.i1.p1.m4" class="ltx_Math" alttext="x\in R_{5}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></math></p>
+</div>
+</li>
+<li id="S6.I10.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i2.I1.i2.p1.m1" class="ltx_Math" alttext="g:R_{6}\rightarrow R_{6}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>R</mi><mn>6</mn></msub><mo stretchy="false">→</mo><msub><mi>R</mi><mn>6</mn></msub></mrow></mrow></math> by <math id="S6.I10.i2.I1.i2.p1.m2" class="ltx_Math" alttext="g(x)=x^{2}+4(\bmod 6)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, for all <math id="S6.I10.i2.I1.i2.p1.m3" class="ltx_Math" alttext="x\in R_{6}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>R</mi><mn>6</mn></msub></mrow></math></p>
+</div>
+</li>
+<li id="S6.I10.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I10.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i2.I1.i3.p1.m1" class="ltx_Math" alttext="F:R_{5}\rightarrow R_{5}" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>R</mi><mn>5</mn></msub><mo stretchy="false">→</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></mrow></math> by <math id="S6.I10.i2.I1.i3.p1.m2" class="ltx_Math" alttext="F(x)=x^{3}+4(\bmod 5)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>4</mn></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, for all <math id="S6.I10.i2.I1.i3.p1.m3" class="ltx_Math" alttext="x\in R_{5}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>R</mi><mn>5</mn></msub></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I10.i3.p1" class="ltx_para">
+<p class="ltx_p">For each of the following functions, determine if the function is an injection and determine if the function is a surjection. Justify all conclusions.</p>
+<ol id="S6.I10.i3.I1" class="ltx_enumerate">
+<li id="S6.I10.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S6.I10.i3.I1.i1.p1.m2" class="ltx_Math" alttext="f:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i1.p1.m3" class="ltx_Math" alttext="f(x)=3x+1" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, for all <math id="S6.I10.i3.I1.i1.p1.m4" class="ltx_Math" alttext="x\in\mathbb{Z}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i2.p1.m1" class="ltx_Math" alttext="F:\mathbb{Q}\rightarrow\mathbb{Q}" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℚ</mi><mo stretchy="false">→</mo><mi>ℚ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i2.p1.m2" class="ltx_Math" alttext="F(x)=3x+1" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, for all <math id="S6.I10.i3.I1.i2.p1.m3" class="ltx_Math" alttext="x\in\mathbb{Q}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I10.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i3.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i3.p1.m2" class="ltx_Math" alttext="g(x)=x^{3}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>, for all <math id="S6.I10.i3.I1.i3.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I10.i3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i4.p1.m1" class="ltx_Math" alttext="G:\mathbb{Q}\rightarrow\mathbb{Q}" display="inline"><mrow><mi>G</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℚ</mi><mo stretchy="false">→</mo><mi>ℚ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i4.p1.m2" class="ltx_Math" alttext="G(x)=x^{3}" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>, for all <math id="S6.I10.i3.I1.i4.p1.m3" class="ltx_Math" alttext="x\in\mathbb{Q}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S6.I10.i3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i5.p1.m1" class="ltx_Math" alttext="k:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>k</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i5.p1.m2" class="ltx_Math" alttext="k(x)=e^{-x^{2}}" display="inline"><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>, for all <math id="S6.I10.i3.I1.i5.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S6.I10.i3.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i6.p1.m1" class="ltx_Math" alttext="K:\mathbb{R}^{*}\rightarrow\mathbb{R}" display="inline"><mrow><mi>K</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>ℝ</mi><mo>∗</mo></msup><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i6.p1.m2" class="ltx_Math" alttext="K(x)=e^{-x^{2}}" display="inline"><mrow><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>, for all <math id="S6.I10.i3.I1.i6.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}^{*}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></math>.</p>
+</div>
+<div id="S6.I10.i3.I1.i6.p2" class="ltx_para">
+<p class="ltx_p">Note: <math id="S6.I10.i3.I1.i6.p2.m1" class="ltx_Math" alttext="\mathbb{R}^{*}=\{x\in\mathbb{R}\mid x\geq 0\}" display="inline"><mrow><msup><mi>ℝ</mi><mo>∗</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S6.I10.i3.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i7.p1.m1" class="ltx_Math" alttext="K_{1}:\mathbb{R}^{*}\rightarrow T" display="inline"><mrow><msub><mi>K</mi><mn>1</mn></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>ℝ</mi><mo>∗</mo></msup><mo stretchy="false">→</mo><mi>T</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i7.p1.m2" class="ltx_Math" alttext="K_{1}(x)=e^{-x^{2}}" display="inline"><mrow><mrow><msub><mi>K</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>, for all <math id="S6.I10.i3.I1.i7.p1.m3" class="ltx_Math" alttext="x\in\mathbb{R}^{*}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></math>, where <math id="S6.I10.i3.I1.i7.p1.m4" class="ltx_Math" alttext="T=\{y\in\mathbb{R}\mid 0&lt;y\leq 1\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mn>0</mn><mo>&lt;</mo><mi>y</mi><mo>≤</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S6.I10.i3.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i8.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S6.I10.i3.I1.i8.p1.m2" class="ltx_Math" alttext="h:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>h</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i8.p1.m3" class="ltx_Math" alttext="h(x)=\frac{2x}{x^{2}+4}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow></mfrac></mrow></math>, for all <math id="S6.I10.i3.I1.i8.p1.m4" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i3.I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S6.I10.i3.I1.i9.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i3.I1.i9.p1.m1" class="ltx_Math" alttext="H:\{x\in\mathbb{R}\mid x\geq 0\}\rightarrow\left\{y\in\mathbb{R}\mid\,0\leq y%
+\leq\frac{1}{2}\right\}" display="inline"><mrow><mi>H</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">→</mo><mrow><mo>{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mn> 0</mn><mo>≤</mo><mi>y</mi><mo>≤</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>}</mo></mrow></mrow></mrow></math> defined by <math id="S6.I10.i3.I1.i9.p1.m2" class="ltx_Math" alttext="H(x)=\frac{2x}{x^{2}+4}" display="inline"><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow></mfrac></mrow></math>, for all <math id="S6.I10.i3.I1.i9.p1.m3" class="ltx_Math" alttext="x\in\{x\in\mathbb{R}\mid x\geq 0\}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I10.i4.p1" class="ltx_para">
+<p class="ltx_p">For each of the following functions, determine if the function is a bijection. Justify all conclusions.</p>
+<ol id="S6.I10.i4.I1" class="ltx_enumerate">
+<li id="S6.I10.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i4.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S6.I10.i4.I1.i1.p1.m2" class="ltx_Math" alttext="F:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I10.i4.I1.i1.p1.m3" class="ltx_Math" alttext="F(x)=5x+3" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math>, for all <math id="S6.I10.i4.I1.i1.p1.m4" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i4.I1.i2.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S6.I10.i4.I1.i2.p1.m2" class="ltx_Math" alttext="G:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>G</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> defined by <math id="S6.I10.i4.I1.i2.p1.m3" class="ltx_Math" alttext="G(x)=5x+3" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math>, for all <math id="S6.I10.i4.I1.i2.p1.m4" class="ltx_Math" alttext="x\in\mathbb{Z}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I10.i4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i4.I1.i3.p1.m1" class="ltx_Math" alttext="f:(\mathbb{R}-\{4\})\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ℝ</mi><mo>−</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.I10.i4.I1.i3.p1.m2" class="ltx_Math" alttext="f(x)=\frac{3x}{x-4}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac></mrow></math>, for all <math id="S6.I10.i4.I1.i3.p1.m3" class="ltx_Math" alttext="x\in(\mathbb{R}-\{4\})" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ℝ</mi><mo>−</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I10.i4.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I10.i4.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i4.I1.i4.p1.m1" class="ltx_Math" alttext="g:(\mathbb{R}-\{4\})\rightarrow(\mathbb{R}-\{3\})" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ℝ</mi><mo>−</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ℝ</mi><mo>−</mo><mrow><mo stretchy="false">{</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> defined by <math id="S6.I10.i4.I1.i4.p1.m2" class="ltx_Math" alttext="g(x)=\frac{3x}{x-4}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac></mrow></math>, for all <math id="S6.I10.i4.I1.i4.p1.m3" class="ltx_Math" alttext="x\in(\mathbb{R}-\{4\})" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ℝ</mi><mo>−</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S6.I10.i5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i5.p1.m1" class="ltx_Math" alttext="s:\mathbb{N}\rightarrow\mathbb{N}" display="inline"><mrow><mi>s</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℕ</mi><mo stretchy="false">→</mo><mi>ℕ</mi></mrow></mrow></math>, where for each <math id="S6.I10.i5.p1.m2" class="ltx_Math" alttext="n\in\mathbb{N},s(n)" display="inline"><mrow><mi>n</mi><mo>∈</mo><mrow><mi>ℕ</mi><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is the sum of the distinct natural number divisors of <math id="S6.I10.i5.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. This is the sum of the divisors function that was introduced in Beginning Activity 2 from <a href="https://johnweeks03.github.io/teaching/300/6-1.html">Section 6.1.</a> Is <math id="S6.I10.i5.p1.m4" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> an injection? Is <math id="S6.I10.i5.p1.m5" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S6.I10.i6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i6.p1.m1" class="ltx_Math" alttext="d:\mathbb{N}\rightarrow\mathbb{N}" display="inline"><mrow><mi>d</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℕ</mi><mo stretchy="false">→</mo><mi>ℕ</mi></mrow></mrow></math>, where <math id="S6.I10.i6.p1.m2" class="ltx_Math" alttext="d(n)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of natural number divisors of <math id="S6.I10.i6.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. This is the number of divisors function introduced in Exercise (6) from <a href="https://johnweeks03.github.io/teaching/300/6-1.html">Section 6.1.</a>. Is the function <math id="S6.I10.i6.p1.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> an injection? Is the function <math id="S6.I10.i6.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S6.I10.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i7.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> In Beginning Activity 2 from <a href="https://johnweeks03.github.io/teaching/300/6-1.html">Section 6.1.</a>, we introduced the birthday function. Is the birthday function an injection? Is it a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S6.I10.i8.p1" class="ltx_para">
+<ol id="S6.I10.i8.I1" class="ltx_enumerate">
+<li id="S6.I10.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i8.I1.i1.p1.m1" class="ltx_Math" alttext="f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> be defined by <math id="S6.I10.i8.I1.i1.p1.m2" class="ltx_Math" alttext="f(m,n)=2m+n" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mi>n</mi></mrow></mrow></math>. Is the function <math id="S6.I10.i8.I1.i1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> an injection? Is the function <math id="S6.I10.i8.I1.i1.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i8.I1.i2.p1.m1" class="ltx_Math" alttext="g:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> be defined by <math id="S6.I10.i8.I1.i2.p1.m2" class="ltx_Math" alttext="g(m,n)=6m+3n" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>6</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></mrow></math>. Is the function <math id="S6.I10.i8.I1.i2.p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> an injection? Is the function <math id="S6.I10.i8.I1.i2.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S6.I10.i9.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I10.i9.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+<ol id="S6.I10.i9.I1" class="ltx_enumerate">
+<li id="S6.I10.i9.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i9.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i9.I1.i1.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></mrow></math> be defined by <math id="S6.I10.i9.I1.i1.p1.m2" class="ltx_Math" alttext="f(x,y)=(2x,x+y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Is the function <math id="S6.I10.i9.I1.i1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> an injection? Is the function <math id="S6.I10.i9.I1.i1.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i9.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i9.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i9.I1.i2.p1.m1" class="ltx_Math" alttext="g:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow><mo stretchy="false">→</mo><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow></mrow></mrow></math> be defined by <math id="S6.I10.i9.I1.i2.p1.m2" class="ltx_Math" alttext="g(x,y)=(2x,x+y)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Is the function <math id="S6.I10.i9.I1.i2.p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> an injection? Is the function <math id="S6.I10.i9.I1.i2.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S6.I10.i10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i10.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be the function defined by <math id="S6.I10.i10.p1.m2" class="ltx_Math" alttext="f(x,y)=-x^{2}y+3y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math>, for all <math id="S6.I10.i10.p1.m3" class="ltx_Math" alttext="(x,y)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>. Is the function <math id="S6.I10.i10.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> an injection? Is the function <math id="S6.I10.i10.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S6.I10.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i11.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be the function defined by <math id="S6.I10.i11.p1.m2" class="ltx_Math" alttext="g(x,y)=\left(x^{3}+2\right)\sin y" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>y</mi></mrow></mrow></mrow></math>, for all <math id="S6.I10.i11.p1.m3" class="ltx_Math" alttext="(x,y)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>. Is the function <math id="S6.I10.i11.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> an injection? Is the function <math id="S6.I10.i11.p1.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S6.I10.i12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i12.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a nonempty set. The identity function on the set <math id="S6.I10.i12.p1.m2" class="ltx_Math" alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math>, denoted by <math id="S6.I10.i12.p1.m3" class="ltx_Math" alttext="I_{A}" display="inline"><msub><mi>I</mi><mi>A</mi></msub></math>, is the function <math id="S6.I10.i12.p1.m4" class="ltx_Math" alttext="I_{A}:A\rightarrow A" display="inline"><mrow><msub><mi>I</mi><mi>A</mi></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>A</mi></mrow></mrow></math> defined by <math id="S6.I10.i12.p1.m5" class="ltx_Math" alttext="I_{A}(x)=x" display="inline"><mrow><mrow><msub><mi>I</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math> for every <math id="S6.I10.i12.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="S6.I10.i12.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Is <math id="S6.I10.i12.p1.m8" class="ltx_Math" alttext="I_{A}" display="inline"><msub><mi>I</mi><mi>A</mi></msub></math> an injection? Is <math id="S6.I10.i12.p1.m9" class="ltx_Math" alttext="I_{A}" display="inline"><msub><mi>I</mi><mi>A</mi></msub></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S6.I10.i13.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i13.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S6.I10.i13.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be two nonempty sets. Define</p>
+</div>
+<div id="S6.I10.i13.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex23.m1" class="ltx_Math" alttext="p_{1}:A\times B\rightarrow A\text{ by }p_{1}(a,b)=a" display="block"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">→</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> by </mtext><mo>⁢</mo><msub><mi>p</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i13.p3" class="ltx_para">
+<p class="ltx_p">for every <math id="S6.I10.i13.p3.m1" class="ltx_Math" alttext="(a,b)\in A\times B" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>. This is the first projection function introduced in Exercise (5) in <a href="https://johnweeks03.github.io/teaching/300/6-2.html">Section 6.2.</a>.</p>
+<ol id="S6.I10.i13.I1" class="ltx_enumerate">
+<li id="S6.I10.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I10.i13.I1.i1.p1.m1" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math> a surjection? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S6.I10.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S6.I10.i13.I1.i2.p1.m1" class="ltx_Math" alttext="B=\{b\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>, is the function <math id="S6.I10.i13.I1.i2.p1.m2" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math> an injection? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S6.I10.i13.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I10.i13.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Under what condition(s) is the function <math id="S6.I10.i13.I1.i3.p1.m1" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math> not an injection? Make a conjecture and prove it.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S6.I10.i14.p1" class="ltx_para">
+<p class="ltx_p">Define <math id="S6.I10.i14.p1.m1" class="ltx_Math" alttext="f:\mathbb{N}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℕ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> as follows: For each <math id="S6.I10.i14.p1.m2" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>,</p>
+</div>
+<div id="S6.I10.i14.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex24.m1" class="ltx_Math" alttext="f(n)=\frac{1+(-1)^{n}(2n-1)}{4}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mn>4</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i14.p3" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I10.i14.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> an injection? Is the function <math id="S6.I10.i14.p3.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+<div id="S6.I10.i14.p4" class="ltx_para">
+<p class="ltx_p">Suggestions. Start by calculating several outputs for the function before you attempt to write a proof. In exploring whether or not the function is an injection, it might be a good idea to use cases based on whether the inputs are even or odd. In exploring whether <math id="S6.I10.i14.p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection, consider using cases based on whether the output is positive or less than or equal to zero.</p>
+</div>
+</li>
+<li id="S6.I10.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="S6.I10.i15.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i15.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> be the set of all real functions that are continuous on the closed interval <math id="S6.I10.i15.p1.m2" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>. Define the function <math id="S6.I10.i15.p1.m3" class="ltx_Math" alttext="A:C\rightarrow\mathbb{R}" display="inline"><mrow><mi>A</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>C</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> as follows: For each <math id="S6.I10.i15.p1.m4" class="ltx_Math" alttext="f\in C" display="inline"><mrow><mi>f</mi><mo>∈</mo><mi>C</mi></mrow></math>,</p>
+</div>
+<div id="S6.I10.i15.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex25.m1" class="ltx_Math" alttext="A(f)=\int_{0}^{1}f(x)dx" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo lspace="0em">⁢</mo><mrow><mo rspace="0em">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i15.p3" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I10.i15.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> an injection? Is it a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I10.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="S6.I10.i16.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I10.i16.p1.m1" class="ltx_math_unparsed" alttext="A=\{(m,n)\mid m\in\mathbb{Z},n\in\mathbb{Z}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo lspace="0em" rspace="0.167em">∣</mo><mi>m</mi><mo>∈</mo><mi>ℤ</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></mrow></math>, and <math id="S6.I10.i16.p1.m2" class="ltx_math_unparsed" alttext="n\neq 0\}" display="inline"><mrow><mi>n</mi><mo>≠</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>. Define <math id="S6.I10.i16.p1.m3" class="ltx_Math" alttext="f:A\rightarrow\mathbb{Q}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>ℚ</mi></mrow></mrow></math> as follows:</p>
+</div>
+<div id="S6.I10.i16.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex26.m1" class="ltx_Math" alttext="\text{ For each }(m,n)\in A,f(m,n)=\frac{m+n}{n}\text{. }" display="block"><mrow><mrow><mrow><mtext> For each </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow><mi>n</mi></mfrac><mo>⁢</mo><mtext>. </mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i16.p3" class="ltx_para">
+<ol id="S6.I10.i16.I1" class="ltx_enumerate">
+<li id="S6.I10.i16.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i16.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I10.i16.I1.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> an injection? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S6.I10.i16.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i16.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I10.i16.I1.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a surjection? Justify your conclusion.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I10.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="S6.I10.i17.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of proofs.</span> See the instructions for Exercise (19) from <a href="https://johnweeks03.github.io/teaching/300/3-1.html">Section 3.1.</a></p>
+<ol id="S6.I10.i17.I1" class="ltx_enumerate">
+<li id="S6.I10.i17.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I10.i17.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. The function <math id="S6.I10.i17.I1.i1.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></mrow></math> defined by <math id="S6.I10.i17.I1.i1.p1.m2" class="ltx_Math" alttext="f(x,y)=(2x+y,x-y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is an injection.</p>
+</div>
+<div id="S6.I10.i17.I1.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. For each <math id="S6.I10.i17.I1.i1.p2.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> and <math id="S6.I10.i17.I1.i1.p2.m2" class="ltx_Math" alttext="(c,d)" display="inline"><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></math> in <math id="S6.I10.i17.I1.i1.p2.m3" class="ltx_Math" alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>, if <math id="S6.I10.i17.I1.i1.p2.m4" class="ltx_Math" alttext="f(a,b)=f(c,d)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then</p>
+</div>
+<div id="S6.I10.i17.I1.i1.p3" class="ltx_para">
+<table role="presentation" id="S6.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex27.m1" class="ltx_Math" alttext="(2a+b,a-b)=(2c+d,c-d)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>+</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>−</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i17.I1.i1.p4" class="ltx_para">
+<p class="ltx_p">We will use systems of equations to prove that <math id="S6.I10.i17.I1.i1.p4.m1" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math> and <math id="S6.I10.i17.I1.i1.p4.m2" class="ltx_Math" alttext="b=d" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi></mrow></math>.</p>
+</div>
+<div id="S6.I10.i17.I1.i1.p5" class="ltx_para">
+<table role="presentation" id="S6.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex28.m1" class="ltx_Math" alttext="\displaystyle 2a+b" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex28.m2" class="ltx_Math" alttext="\displaystyle=2c+d" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>+</mo><mi>d</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex29.m1" class="ltx_Math" alttext="\displaystyle a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex29.m2" class="ltx_Math" alttext="\displaystyle=c-d" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>c</mi><mo>−</mo><mi>d</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex30.m1" class="ltx_Math" alttext="\displaystyle 3a" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>a</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex30.m2" class="ltx_Math" alttext="\displaystyle=3c" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>c</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex31.m1" class="ltx_Math" alttext="\displaystyle a" display="inline"><mi>a</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex31.m2" class="ltx_Math" alttext="\displaystyle=c" display="inline"><mrow><mi></mi><mo>=</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i17.I1.i1.p6" class="ltx_para">
+<p class="ltx_p">Since <math id="S6.I10.i17.I1.i1.p6.m1" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math>, we see that</p>
+</div>
+<div id="S6.I10.i17.I1.i1.p7" class="ltx_para">
+<table role="presentation" id="S6.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex32.m1" class="ltx_Math" alttext="(2c+b,c-b)=(2c+d,c-d)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>+</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>−</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i17.I1.i1.p8" class="ltx_para">
+<p class="ltx_p">So <math id="S6.I10.i17.I1.i1.p8.m1" class="ltx_Math" alttext="b=d" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi></mrow></math>. Therefore, we have proved that the function <math id="S6.I10.i17.I1.i1.p8.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an injection.</p>
+</div>
+</li>
+<li id="S6.I10.i17.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I10.i17.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. The function <math id="S6.I10.i17.I1.i2.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow><mo stretchy="false">→</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></mrow></math> defined by <math id="S6.I10.i17.I1.i2.p1.m2" class="ltx_Math" alttext="f(x,y)=(2x+y,x-y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is a surjection.</p>
+</div>
+<div id="S6.I10.i17.I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We need to find an ordered pair such that <math id="S6.I10.i17.I1.i2.p2.m1" class="ltx_Math" alttext="f(x,y)=(a,b)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> for each <math id="S6.I10.i17.I1.i2.p2.m2" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> in <math id="S6.I10.i17.I1.i2.p2.m3" class="ltx_Math" alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>. That is, we need <math id="S6.I10.i17.I1.i2.p2.m4" class="ltx_Math" alttext="(2x+y,x-y)=(a,b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>, or</p>
+</div>
+<div id="S6.I10.i17.I1.i2.p3" class="ltx_para">
+<table role="presentation" id="S6.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex33.m1" class="ltx_Math" alttext="2x+y=a\quad\text{ and }\quad x-y=b." display="block"><mrow><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>a</mi><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>=</mo><mi>b</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i17.I1.i2.p4" class="ltx_para">
+<p class="ltx_p">Treating these two equations as a system of equations and solving for <math id="S6.I10.i17.I1.i2.p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S6.I10.i17.I1.i2.p4.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, we find that</p>
+</div>
+<div id="S6.I10.i17.I1.i2.p5" class="ltx_para">
+<table role="presentation" id="S6.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex34.m1" class="ltx_Math" alttext="x=\frac{a+b}{3}\quad\text{ and }\quad y=\frac{a-2b}{3}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>3</mn></mfrac><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mi>a</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mn>3</mn></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i17.I1.i2.p6" class="ltx_para">
+<p class="ltx_p">Hence, <math id="S6.I10.i17.I1.i2.p6.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S6.I10.i17.I1.i2.p6.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are real numbers, <math id="S6.I10.i17.I1.i2.p6.m3" class="ltx_Math" alttext="(x,y)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, and</p>
+</div>
+<div id="S6.I10.i17.I1.i2.p7" class="ltx_para">
+<table role="presentation" id="S6.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex35.m1" class="ltx_Math" alttext="\displaystyle f(x,y)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex35.m2" class="ltx_Math" alttext="\displaystyle=f\left(\frac{a+b}{3},\frac{a-2b}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>3</mn></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true"><mfrac><mrow><mi>a</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex36.m1" class="ltx_Math" alttext="\displaystyle=\left(2\left(\frac{a+b}{3}\right)+\frac{a-2b}{3},\frac{a+b}{3}-%
+\frac{a-2b}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>a</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mn>3</mn></mfrac></mstyle></mrow><mo>,</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>3</mn></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mi>a</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mn>3</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex37.m1" class="ltx_Math" alttext="\displaystyle=\left(\frac{2a+2b+a-2b}{3},\frac{a+b-a+2b}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mi>a</mi></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mn>3</mn></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>−</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex38.m1" class="ltx_Math" alttext="\displaystyle=\left(\frac{3a}{3},\frac{3b}{3}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>a</mi></mrow><mn>3</mn></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>b</mi></mrow><mn>3</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex39"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex39.m1" class="ltx_Math" alttext="\displaystyle=(a,b)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I10.i17.I1.i2.p8" class="ltx_para">
+<p class="ltx_p">Therefore, we have proved that for every <math id="S6.I10.i17.I1.i2.p8.m1" class="ltx_Math" alttext="(a,b)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, there exists an <math id="S6.I10.i17.I1.i2.p8.m2" class="ltx_Math" alttext="(x,y)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math> such that <math id="S6.I10.i17.I1.i2.p8.m3" class="ltx_Math" alttext="f(x,y)=(a,b)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>. This proves that the function <math id="S6.I10.i17.I1.i2.p8.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection. <math id="S6.I10.i17.I1.i2.p8.m5" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS3.SSS13" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.3.13 </span>Explorations and Activities</h3>
+
+<div id="S6.SS3.SSS13.p1" class="ltx_para">
+<ol id="S6.I11" class="ltx_enumerate">
+<li id="S6.I11.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="S6.I11.i18.p1" class="ltx_para">
+<p class="ltx_p">Piecewise Defined Functions. We often say that a function is a piecewise defined function if it has different rules for determining the output for different parts of its domain. For example, we can define a function <math id="S6.I11.i18.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> by giving a rule for calculating <math id="S6.I11.i18.p1.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> when <math id="S6.I11.i18.p1.m3" class="ltx_Math" alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math> and giving a rule for calculating <math id="S6.I11.i18.p1.m4" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> when <math id="S6.I11.i18.p1.m5" class="ltx_Math" alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math> as follows:</p>
+</div>
+<div id="S6.I11.i18.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex40.m1" class="ltx_Math" alttext="f(x)=\begin{cases}x^{2}+1,&amp;\text{ if }x\geq 0;\\
+x-1&amp;\text{ if }x&lt;0.\end{cases}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>≥</mo><mn>0</mn></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I11.i18.p3" class="ltx_para">
+<ol id="S6.I11.i18.I1" class="ltx_enumerate">
+<li id="S6.I11.i18.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I11.i18.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Sketch a graph of the function <math id="S6.I11.i18.I1.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Is the function <math id="S6.I11.i18.I1.i1.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> an injection? Is the function <math id="S6.I11.i18.I1.i1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+<div id="S6.I11.i18.I1.i1.p2" class="ltx_para">
+<p class="ltx_p">For each of the following functions, determine if the function is an injection and determine if the function is a surjection. Justify all conclusions.</p>
+</div>
+</li>
+<li id="S6.I11.i18.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I11.i18.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I11.i18.I1.i2.p1.m1" class="ltx_Math" alttext="g:[0,1]\rightarrow(0,1)" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math> by <math id="S6.I11.i18.I1.i2.p1.m2" class="ltx_Math" alttext="g(x)=\begin{cases}0.8,&amp;\text{ if }x=0;\\
+0.5x,&amp;\text{ if }0&lt;x&lt;1;\\
+0.6&amp;\text{ if }x=1.\end{cases}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>0.8</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mn>0.5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mn>0</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mn>0.6</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I11.i18.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I11.i18.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I11.i18.I1.i3.p1.m1" class="ltx_Math" alttext="h:\mathbb{Z}\rightarrow\{0,1\}" display="inline"><mrow><mi>h</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math> by
+<math id="S6.I11.i18.I1.i3.p1.m2" class="ltx_Math" alttext="h(x)=\begin{cases}0,&amp;\text{ if }x\text{ is even; }\\
+1,&amp;\text{ if }x\text{ is odd. }\end{cases}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mtext> is even; </mtext></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>1</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mtext> is odd. </mtext></mrow></mtd></mtr></mtable></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I11.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">19.</span> 
+<div id="S6.I11.i19.p1" class="ltx_para">
+<p class="ltx_p">Functions Whose Domain is <math id="S6.I11.i19.p1.m1" class="ltx_Math" alttext="\mathcal{M}_{2}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Let <math id="S6.I11.i19.p1.m2" class="ltx_Math" alttext="\mathcal{M}_{2}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> represent the set of all 2 by 2 matrices over <math id="S6.I11.i19.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+<ol id="S6.I11.i19.I1" class="ltx_enumerate">
+<li id="S6.I11.i19.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I11.i19.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Define det: <math id="S6.I11.i19.I1.i1.p1.m1" class="ltx_Math" alttext="\mathcal{M}_{2}(\mathbb{R})\rightarrow\mathbb{R}" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></math> by</p>
+</div>
+<div id="S6.I11.i19.I1.i1.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex41.m1" class="ltx_Math" alttext="\operatorname{det}\left[\begin{array}[]{ll}a&amp;b\\
+c&amp;d\end{array}\right]=ad-bc." display="block"><mrow><mrow><mrow><mi>det</mi><mo>⁡</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi>a</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>b</mi></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mi>c</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I11.i19.I1.i1.p3" class="ltx_para">
+<p class="ltx_p">This is the determinant function introduced in Exercise (9) from <a href="https://johnweeks03.github.io/teaching/300/6-2.html">Section 6.2.</a>. Is the determinant function an injection? Is the determinant function a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I11.i19.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I11.i19.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Define tran: <math id="S6.I11.i19.I1.i2.p1.m1" class="ltx_Math" alttext="\mathcal{M}_{2}(\mathbb{R})\rightarrow\mathcal{M}_{2}(\mathbb{R})" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> by</p>
+</div>
+<div id="S6.I11.i19.I1.i2.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex42.m1" class="ltx_Math" alttext="\operatorname{tran}\left[\begin{array}[]{ll}a&amp;b\\
+c&amp;d\end{array}\right]=A^{T}=\left[\begin{array}[]{ll}a&amp;c\\
+b&amp;d\end{array}\right]." display="block"><mrow><mrow><mrow><mi>tran</mi><mo>⁡</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi>a</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>b</mi></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mi>c</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><msup><mi>A</mi><mi>T</mi></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi>a</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>c</mi></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mi>b</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I11.i19.I1.i2.p3" class="ltx_para">
+<p class="ltx_p">This is the transpose function introduced in Exercise (10) from <a href="https://johnweeks03.github.io/teaching/300/6-2.html">Section 6.2.</a>. Is the transpose function an injection? Is the transpose function a surjection? Justify your conclusions.</p>
+</div>
+</li>
+<li id="S6.I11.i19.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I11.i19.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Define <math id="S6.I11.i19.I1.i3.p1.m1" class="ltx_Math" alttext="F:\mathcal{M}_{2}(\mathbb{R})\rightarrow\mathbb{R}" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> by</p>
+</div>
+<div id="S6.I11.i19.I1.i3.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex43.m1" class="ltx_Math" alttext="F\left[\begin{array}[]{ll}a&amp;b\\
+c&amp;d\end{array}\right]=a^{2}+d^{2}-b^{2}-c^{2}" display="block"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi>a</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>b</mi></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mi>c</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I11.i19.I1.i3.p3" class="ltx_para">
+<p class="ltx_p">Is the function <math id="S6.I11.i19.I1.i3.p3.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> an injection? Is the function <math id="S6.I11.i19.I1.i3.p3.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> a surjection? Justify your conclusions.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
