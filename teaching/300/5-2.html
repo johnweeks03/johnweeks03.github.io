@@ -1,0 +1,1114 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Set Theory</title>
+<!--Generated on Sun Dec 14 17:05:35 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S5" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Set Theory</h1>
+
+<section id="S5.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2 </span>Proving Set Relationships</h2>
+
+<section id="S5.SS2.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.1 </span>Beginning Activity 1 (Working with Two Specific Sets)</h3>
+
+<div id="S5.SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS2.SSS1.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> be the set of all integers that are multiples of 6, and let <math id="S5.SS2.SSS1.p1.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> be the set of all even integers.</p>
+</div>
+<div id="S5.SS2.SSS1.p2" class="ltx_para">
+<ol id="S5.I1" class="ltx_enumerate">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">List at least four different positive elements of <math id="S5.I1.i1.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> and at least four different negative elements of <math id="S5.I1.i1.p1.m2" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. Are all of these integers even?</p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the sets <math id="S5.I1.i2.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> and <math id="S5.I1.i2.p1.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>. (See <a href="https://johnweeks03.github.io/teaching/300/2-3.html">Section 2.3</a> for a review of the roster method.) Does there appear to be any relationship between these two sets? That is, does it appear that the sets are equal or that one set is a subset of the other set?</p>
+</div>
+</li>
+<li id="S5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Use set builder notation to specify the sets <math id="S5.I1.i3.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> and <math id="S5.I1.i3.p1.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>. (See <a href="https://johnweeks03.github.io/teaching/300/2-3.html">Section 2.3</a> for a review of the set builder notation.)</p>
+</div>
+</li>
+<li id="S5.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Using appropriate definitions, describe what it means to say that an integer <math id="S5.I1.i4.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is a multiple of 6 and what it means to say that an integer <math id="S5.I1.i4.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> is even.</p>
+</div>
+</li>
+<li id="S5.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">In order to prove that <math id="S5.I1.i5.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is a subset of <math id="S5.I1.i5.p1.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>, we need to prove that for each integer <math id="S5.I1.i5.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>, if <math id="S5.I1.i5.p1.m4" class="ltx_Math" data-alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>, then <math id="S5.I1.i5.p1.m5" class="ltx_Math" data-alttext="x\in T" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS2.SSS1.p3" class="ltx_para">
+<p class="ltx_p">Complete the know-show table in Table 5.1 for the proposition that <math id="S5.SS2.SSS1.p3.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is a subset of <math id="S5.SS2.SSS1.p3.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+<div id="S5.SS2.SSS1.p4" class="ltx_para">
+<p class="ltx_p">This table is in the form of a proof method called the choose-an-element method. This method is frequently used when we encounter a universal quantifier in a statement in the backward process. (In this case, this is Step <math id="S5.SS2.SSS1.p4.m1" class="ltx_Math" data-alttext="Q1" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mn>1</mn></mrow></math>.) The key is that we have to prove something about all elements in <math id="S5.SS2.SSS1.p4.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. We can then add something to the forward process by choosing an arbitrary element from the set <math id="S5.SS2.SSS1.p4.m3" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. (This is done in Step P1.) This does not mean that we can choose a specific element of <math id="S5.SS2.SSS1.p4.m4" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. Rather, we must give the arbitrary element a name and use only the properties it has by being a member of the set <math id="S5.SS2.SSS1.p4.m5" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. In this case, the element is a multiple of 6 .</p>
+</div>
+<figure id="S5.T1" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Know</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Reason</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.T1.m1" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<table class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<math id="S5.T1.m2" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is the set of all integers that are multiples of 6.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<math id="S5.T1.m3" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is the set of all even integers.</td>
+</tr>
+</table>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hypothesis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">P1</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Let <math id="S5.T1.m4" class="ltx_Math" data-alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>.</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Choose an arbitrary element of <math id="S5.T1.m5" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">P2</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.T1.m6" class="ltx_Math" data-alttext="(\exists m\in\mathbb{Z})(x=6m)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>m</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>=</mo><mrow><mn>6</mn><mo>⁢</mo><mi>m</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Definition of "multiple"</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.T1.m7" class="ltx_Math" data-alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.T1.m8" class="ltx_Math" data-alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.T1.m9" class="ltx_Math" data-alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Q2</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S5.T1.m10" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is an element of <math id="S5.T1.m11" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>.</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S5.T1.m12" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is even</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.T1.m13" class="ltx_Math" data-alttext="Q1" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.T1.m14" class="ltx_Math" data-alttext="(\forall x\in\mathbb{Z})[(x\in S)\rightarrow(x\in T)]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∈</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Step <math id="S5.T1.m15" class="ltx_Math" data-alttext="P1" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mn>1</mn></mrow></math> and Step Q2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.T1.m16" class="ltx_Math" data-alttext="Q" display="inline"><mi>Q</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S5.T1.m17" class="ltx_Math" data-alttext="S\subseteq T" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow></math>.</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Definition of "subset"</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Show</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Reason</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption ltx_centering">Table 5.1: Know-show table for Beginning Activity 1</figcaption>
+</figure>
+</section>
+<section id="S5.SS2.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.2 </span>Beginning Activity 2 (Working with Venn Diagrams)</h3>
+
+<div id="S5.SS2.SSS2.p1" class="ltx_para">
+<ol id="S5.I2" class="ltx_enumerate">
+<li id="S5.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Draw a Venn diagram for two sets, <math id="S5.I2.i1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I2.i1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, with the assumption that <math id="S5.I2.i1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is a subset of <math id="S5.I2.i1.p1.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. On this Venn diagram, lightly shade the area corresponding to <math id="S5.I2.i1.p1.m5" class="ltx_Math" data-alttext="A^{c}" display="inline"><msup><mi>A</mi><mi>c</mi></msup></math>. Then, determine the region on the Venn diagram that corresponds to <math id="S5.I2.i1.p1.m6" class="ltx_Math" data-alttext="B^{c}" display="inline"><msup><mi>B</mi><mi>c</mi></msup></math>. What appears to be the relationship between <math id="S5.I2.i1.p1.m7" class="ltx_Math" data-alttext="A^{c}" display="inline"><msup><mi>A</mi><mi>c</mi></msup></math> and <math id="S5.I2.i1.p1.m8" class="ltx_Math" data-alttext="B^{c}" display="inline"><msup><mi>B</mi><mi>c</mi></msup></math>? Explain.</p>
+</div>
+</li>
+<li id="S5.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Draw a general Venn diagram for two sets, <math id="S5.I2.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I2.i2.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. First determine the region that corresponds to the set <math id="S5.I2.i2.p1.m3" class="ltx_Math" data-alttext="A-B" display="inline"><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow></math> and then, on the Venn diagram, shade the region corresponding to <math id="S5.I2.i2.p1.m4" class="ltx_Math" data-alttext="A-(A-B)" display="inline"><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and shade the region corresponding to <math id="S5.I2.i2.p1.m5" class="ltx_Math" data-alttext="A\cap B" display="inline"><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></math>. What appears to be the relationship between these two sets? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS2.SSS2.p2" class="ltx_para">
+<p class="ltx_p">In this section, we will learn how to prove certain relationships about sets. Two of the most basic types of relationships between sets are the equality relation and the subset relation. So if we are asked a question of the form, "How are the sets <math id="S5.SS2.SSS2.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS2.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> related?", we can answer the question if we can prove that the two sets are equal or that one set is a subset of the other set. There are other ways to answer this, but we will concentrate on these two for now. This is similar to asking a question about how two real numbers are related. Two real numbers can be related by the fact that they are equal or by the fact that one number is less than the other number.</p>
+</div>
+</section>
+<section id="S5.SS2.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.3 </span>The Choose-an-Element Method</h3>
+
+<div id="S5.SS2.SSS3.p1" class="ltx_para">
+<p class="ltx_p">The method of proof we will use in this section can be called the choose-anelement method. This method was introduced in Beginning Activity 1. This method is frequently used when we encounter a universal quantifier in a statement in the backward process. This statement often has the form</p>
+</div>
+<div id="S5.SS2.SSS3.p2" class="ltx_para">
+<p class="ltx_p">For each element with a given property, something happens.</p>
+</div>
+<div id="S5.SS2.SSS3.p3" class="ltx_para">
+<p class="ltx_p">Since most statements with a universal quantifier can be expressed in the form of a conditional statement, this statement could have the following equivalent form:</p>
+</div>
+<div id="S5.SS2.SSS3.p4" class="ltx_para">
+<p class="ltx_p">If an element has a given property, then something happens.</p>
+</div>
+<div id="S5.SS2.SSS3.p5" class="ltx_para">
+<p class="ltx_p">We will illustrate this with the proposition from Beginning Activity 1. This proposition can be stated as follows:
+<br class="ltx_break">there exists an integer <math id="S5.SS2.SSS3.p5.m1" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that</p>
+</div>
+<div id="S5.SS2.SSS3.p6" class="ltx_para">
+<table role="presentation" id="S5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex1.m1" class="ltx_Math" data-alttext="x=6m." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mn>6</mn><mo>⁢</mo><mi>m</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS3.p7" class="ltx_para">
+<p class="ltx_p">Since <math id="S5.SS2.SSS3.p7.m1" class="ltx_Math" data-alttext="6=2\cdot 3" display="inline"><mrow><mn>6</mn><mo>=</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn></mrow></mrow></math>, this equation can be written in the form</p>
+</div>
+<div id="S5.SS2.SSS3.p8" class="ltx_para">
+<table role="presentation" id="S5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex2.m1" class="ltx_Math" data-alttext="x=2(3m)." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS3.p9" class="ltx_para">
+<p class="ltx_p">By closure properties of the integers, <math id="S5.SS2.SSS3.p9.m1" class="ltx_Math" data-alttext="3m" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>m</mi></mrow></math> is an integer. Hence, this last equation proves that <math id="S5.SS2.SSS3.p9.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> must be even. Therefore, we have shown that if <math id="S5.SS2.SSS3.p9.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is an element of <math id="S5.SS2.SSS3.p9.m4" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>, then <math id="S5.SS2.SSS3.p9.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is an element of <math id="S5.SS2.SSS3.p9.m6" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>, and hence that <math id="S5.SS2.SSS3.p9.m7" class="ltx_Math" data-alttext="S\subseteq T" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS3.p10" class="ltx_para">
+<p class="ltx_p">Having proved that <math id="S5.SS2.SSS3.p10.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is a subset of <math id="S5.SS2.SSS3.p10.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>, we can now ask if <math id="S5.SS2.SSS3.p10.m3" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is actually equal to <math id="S5.SS2.SSS3.p10.m4" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>. The work we did in Beginning Activity 1 can help us answer this question. In that activity, we should have found several elements that are in <math id="S5.SS2.SSS3.p10.m5" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> but not in <math id="S5.SS2.SSS3.p10.m6" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. For example, the integer 2 is in <math id="S5.SS2.SSS3.p10.m7" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> since 2 is even but <math id="S5.SS2.SSS3.p10.m8" class="ltx_Math" data-alttext="2\notin S" display="inline"><mrow><mn>2</mn><mo>∉</mo><mi>S</mi></mrow></math> since 2 is not a multiple of 6. Therefore, <math id="S5.SS2.SSS3.p10.m9" class="ltx_Math" data-alttext="S\neq T" display="inline"><mrow><mi>S</mi><mo>≠</mo><mi>T</mi></mrow></math> and we can also conclude that <math id="S5.SS2.SSS3.p10.m10" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is a proper subset of <math id="S5.SS2.SSS3.p10.m11" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+<div id="S5.SS2.SSS3.p11" class="ltx_para">
+<p class="ltx_p">One reason we do this in a "two-step" process is that it is much easier to work with the subset relation than the proper subset relation. The subset relation is defined by a conditional statement and most of our work in mathematics deals with proving conditional statements. In addition, the proper subset relation is a conjunction of two statements (<math id="S5.SS2.SSS3.p11.m1" class="ltx_Math" data-alttext="S\subseteq T" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow></math> and <math id="S5.SS2.SSS3.p11.m2" class="ltx_Math" data-alttext="S\neq T" display="inline"><mrow><mi>S</mi><mo>≠</mo><mi>T</mi></mrow></math>) and so it is natural to deal with the two parts of the conjunction separately.</p>
+</div>
+</section>
+<section id="S5.SS2.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.4 </span>Progress Check 5.8 (Subsets and Set Equality)</h3>
+
+<div id="S5.SS2.SSS4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS2.SSS4.p1.m1" class="ltx_math_unparsed" data-alttext="A=\{x\in\mathbb{Z}\mid x" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo lspace="0em" rspace="0.167em">∣</mo><mi>x</mi></mrow></mrow></math> is a multiple of 9<math id="S5.SS2.SSS4.p1.m2" class="ltx_Math" data-alttext="\}" display="inline"><mo stretchy="false">}</mo></math> and let <math id="S5.SS2.SSS4.p1.m3" class="ltx_math_unparsed" data-alttext="B=\{x\in\mathbb{Z}\mid x" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo lspace="0em" rspace="0.167em">∣</mo><mi>x</mi></mrow></mrow></math> is a multiple of 3<math id="S5.SS2.SSS4.p1.m4" class="ltx_Math" data-alttext="\}" display="inline"><mo stretchy="false">}</mo></math>.</p>
+</div>
+<div id="S5.SS2.SSS4.p2" class="ltx_para">
+<ol id="S5.I3" class="ltx_enumerate">
+<li id="S5.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the set <math id="S5.I3.i1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> a subset of <math id="S5.I3.i1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S5.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the set <math id="S5.I3.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> equal to the set <math id="S5.I3.i2.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>? Justify your conclusion.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS2.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.5 </span>Progress Check 5.9 (Using the Choose-an-Element Method)</h3>
+
+<div id="S5.SS2.SSS5.p1" class="ltx_para">
+<p class="ltx_p">The Venn diagram in Beginning Activity 2 suggests that the following proposition is true.</p>
+</div>
+<div id="Prop_5.10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 5.10.</span> Let <math id="S5.SS2.SSS5.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS5.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of the universal set <math id="S5.SS2.SSS5.p2.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. If <math id="S5.SS2.SSS5.p2.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.SS2.SSS5.p2.m5" class="ltx_Math" data-alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS5.p3" class="ltx_para">
+<ol id="S5.I4" class="ltx_enumerate">
+<li id="S5.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">The conclusion of the conditional statement is <math id="S5.I4.i1.p1.m1" class="ltx_Math" data-alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>. Explain why we should try the choose-an-element method to prove this proposition.</p>
+</div>
+</li>
+<li id="S5.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Complete the following know-show table for this proposition and explain exactly where the choose-an-element method is used.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS2.SSS5.p4" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Know</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Reason</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m1" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m2" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hypothesis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m3" class="ltx_Math" data-alttext="P1" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Let <math id="S5.SS2.SSS5.m4" class="ltx_Math" data-alttext="x\in B^{c}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></math>.</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Choose an arbitrary element of <math id="S5.SS2.SSS5.m5" class="ltx_Math" data-alttext="B^{c}" display="inline"><msup><mi>B</mi><mi>c</mi></msup></math>.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">P2</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">(<math id="S5.SS2.SSS5.m6" class="ltx_Math" data-alttext="\forall t\in U" display="inline"><mrow><mrow><mo rspace="0.167em">∀</mo><mi>t</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math>)(If <math id="S5.SS2.SSS5.m7" class="ltx_Math" data-alttext="t\in A" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>A</mi></mrow></math>, then <math id="S5.SS2.SSS5.m8" class="ltx_Math" data-alttext="t\in B" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>B</mi></mrow></math>).</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Definition of "subset"</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m9" class="ltx_Math" data-alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m10" class="ltx_Math" data-alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m11" class="ltx_Math" data-alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Q1</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">(<math id="S5.SS2.SSS5.m12" class="ltx_math_unparsed" data-alttext="\forall t\in U)" display="inline"><mrow><mo rspace="0.167em">∀</mo><mi>t</mi><mo>∈</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></math> (If <math id="S5.SS2.SSS5.m13" class="ltx_Math" data-alttext="t\in B^{c}" display="inline"><mrow><mi>t</mi><mo>∈</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></math>, then <math id="S5.SS2.SSS5.m14" class="ltx_Math" data-alttext="t\in A^{c}" display="inline"><mrow><mi>t</mi><mo>∈</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>).</td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m15" class="ltx_Math" data-alttext="Q" display="inline"><mi>Q</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS2.SSS5.m16" class="ltx_Math" data-alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Definition of "subset"</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Show</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Reason</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S5.SS2.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.6 </span>Proving Set Equality</h3>
+
+<div id="S5.SS2.SSS6.p1" class="ltx_para">
+<p class="ltx_p">One way to prove that two sets are equal is to use <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Theorem 5.2</a> and prove each of the two sets is a subset of the other set. In particular, let <math id="S5.SS2.SSS6.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS6.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. Theorem 5.2 states that <math id="S5.SS2.SSS6.p1.m3" class="ltx_Math" data-alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math> if and only if <math id="S5.SS2.SSS6.p1.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S5.SS2.SSS6.p1.m5" class="ltx_Math" data-alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS6.p2" class="ltx_para">
+<p class="ltx_p">In Beginning Activity 2, we created a Venn diagram that indicated that <math id="S5.SS2.SSS6.p2.m1" class="ltx_Math" data-alttext="A-(A-B)=A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>. Following is a proof of this result. Notice where the choose-an-element method is used in each case.</p>
+</div>
+<div id="Prop_5.11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 5.11.</span> Let <math id="S5.SS2.SSS6.p3.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS6.p3.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. Then <math id="S5.SS2.SSS6.p3.m3" class="ltx_Math" data-alttext="A-(A-B)=A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS6.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S5.SS2.SSS6.p4.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS6.p4.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. We will prove that <math id="S5.SS2.SSS6.p4.m3" class="ltx_Math" data-alttext="A-(A-B)=A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math> by proving that <math id="S5.SS2.SSS6.p4.m4" class="ltx_Math" data-alttext="A-(A-B)\subseteq A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math> and that <math id="S5.SS2.SSS6.p4.m5" class="ltx_Math" data-alttext="A\cap B\subseteq A-(A-B)" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS6.p5" class="ltx_para">
+<p class="ltx_p">First, let <math id="S5.SS2.SSS6.p5.m1" class="ltx_Math" data-alttext="x\in A-(A-B)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This means that</p>
+</div>
+<div id="S5.SS2.SSS6.p6" class="ltx_para">
+<table role="presentation" id="S5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex3.m1" class="ltx_Math" data-alttext="x\in A\text{ and }x\notin(A-B)." display="block"><mrow><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∉</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS6.p7" class="ltx_para">
+<p class="ltx_p">We know that an element is in (<math id="S5.SS2.SSS6.p7.m1" class="ltx_Math" data-alttext="A-B" display="inline"><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow></math>) if and only if it is in <math id="S5.SS2.SSS6.p7.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and not in <math id="S5.SS2.SSS6.p7.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. Since <math id="S5.SS2.SSS6.p7.m4" class="ltx_Math" data-alttext="x\notin(A-B)" display="inline"><mrow><mi>x</mi><mo>∉</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, we conclude that <math id="S5.SS2.SSS6.p7.m5" class="ltx_Math" data-alttext="x\notin A" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>A</mi></mrow></math> or <math id="S5.SS2.SSS6.p7.m6" class="ltx_Math" data-alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>. However, we also know that <math id="S5.SS2.SSS6.p7.m7" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and so we conclude that <math id="S5.SS2.SSS6.p7.m8" class="ltx_Math" data-alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>. This proves that</p>
+</div>
+<div id="S5.SS2.SSS6.p8" class="ltx_para">
+<table role="presentation" id="S5.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex4.m1" class="ltx_Math" data-alttext="x\in A\text{ and }x\in B." display="block"><mrow><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS6.p9" class="ltx_para">
+<p class="ltx_p">This means that <math id="S5.SS2.SSS6.p9.m1" class="ltx_Math" data-alttext="x\in A\cap B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>, and hence we have proved that <math id="S5.SS2.SSS6.p9.m2" class="ltx_Math" data-alttext="A-(A-B)\subseteq A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS6.p10" class="ltx_para">
+<p class="ltx_p">Now choose <math id="S5.SS2.SSS6.p10.m1" class="ltx_Math" data-alttext="y\in A\cap B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>. This means that</p>
+</div>
+<div id="S5.SS2.SSS6.p11" class="ltx_para">
+<table role="presentation" id="S5.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex5.m1" class="ltx_Math" data-alttext="y\in A\text{ and }y\in B." display="block"><mrow><mrow><mi>y</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS6.p12" class="ltx_para">
+<p class="ltx_p">We note that <math id="S5.SS2.SSS6.p12.m1" class="ltx_Math" data-alttext="y\in(A-B)" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> if and only if <math id="S5.SS2.SSS6.p12.m2" class="ltx_Math" data-alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS2.SSS6.p12.m3" class="ltx_Math" data-alttext="y\notin B" display="inline"><mrow><mi>y</mi><mo>∉</mo><mi>B</mi></mrow></math> and hence, <math id="S5.SS2.SSS6.p12.m4" class="ltx_Math" data-alttext="y\notin(A-B)" display="inline"><mrow><mi>y</mi><mo>∉</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> if and only if <math id="S5.SS2.SSS6.p12.m5" class="ltx_Math" data-alttext="y\notin A" display="inline"><mrow><mi>y</mi><mo>∉</mo><mi>A</mi></mrow></math> or <math id="S5.SS2.SSS6.p12.m6" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>. Since we have proved that <math id="S5.SS2.SSS6.p12.m7" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, we conclude that <math id="S5.SS2.SSS6.p12.m8" class="ltx_Math" data-alttext="y\notin(A-B)" display="inline"><mrow><mi>y</mi><mo>∉</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and hence, we have established that <math id="S5.SS2.SSS6.p12.m9" class="ltx_Math" data-alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS2.SSS6.p12.m10" class="ltx_Math" data-alttext="y\notin(A-B)" display="inline"><mrow><mi>y</mi><mo>∉</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. This proves that if <math id="S5.SS2.SSS6.p12.m11" class="ltx_Math" data-alttext="y\in A\cap B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>, then <math id="S5.SS2.SSS6.p12.m12" class="ltx_Math" data-alttext="y\in A-(A-B)" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and hence, <math id="S5.SS2.SSS6.p12.m13" class="ltx_Math" data-alttext="A\cap B\subseteq A-(A-B)" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS6.p13" class="ltx_para">
+<p class="ltx_p">Since we have proved that <math id="S5.SS2.SSS6.p13.m1" class="ltx_Math" data-alttext="A-(A-B)\subseteq A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math> and <math id="S5.SS2.SSS6.p13.m2" class="ltx_Math" data-alttext="A\cap B\subseteq A-(A-B)" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we conclude that <math id="S5.SS2.SSS6.p13.m3" class="ltx_Math" data-alttext="A-(A-B)=A\cap B" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S5.SS2.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.7 </span>Progress Check 5.12 (Set Equality)</h3>
+
+<div id="S5.SS2.SSS7.p1" class="ltx_para">
+<p class="ltx_p">Prove the following proposition. To do so, prove each set is a subset of the other set by using the choose-an-element method.</p>
+</div>
+<div id="Prop_5.13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 5.13.</span> Let <math id="S5.SS2.SSS7.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS7.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. Then <math id="S5.SS2.SSS7.p2.m3" class="ltx_Math" data-alttext="A-B=A\cap B^{c}" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S5.SS2.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.8 </span>Disjoint Sets</h3>
+
+<div id="S5.SS2.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Earlier in this section, we discussed the concept of set equality and the relation of one set being a subset of another set. There are other possible relationships between two sets; one is that the sets are disjoint. Basically, two sets are disjoint if and only if they have nothing in common. We express this formally in the following definition.</p>
+</div>
+<div id="S5.SS2.SSS8.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S5.SS2.SSS8.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS8.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of the universal set <math id="S5.SS2.SSS8.p2.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. The sets <math id="S5.SS2.SSS8.p2.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS8.p2.m5" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> are said to be <span class="ltx_text ltx_font_bold">disjoint</span> provided that <math id="S5.SS2.SSS8.p2.m6" class="ltx_Math" data-alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS8.p3" class="ltx_para">
+<p class="ltx_p">For example, the Venn diagram in Figure 5.5 shows two sets <math id="S5.SS2.SSS8.p3.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS8.p3.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> with <math id="S5.SS2.SSS8.p3.m3" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>. The shaded region is the region that represents <math id="S5.SS2.SSS8.p3.m4" class="ltx_Math" data-alttext="B^{c}" display="inline"><msup><mi>B</mi><mi>c</mi></msup></math>. From the Venn diagram, it appears that <math id="S5.SS2.SSS8.p3.m5" class="ltx_Math" data-alttext="A\cap B^{c}=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. This means that <math id="S5.SS2.SSS8.p3.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS8.p3.m7" class="ltx_Math" data-alttext="B^{c}" display="inline"><msup><mi>B</mi><mi>c</mi></msup></math> are disjoint. The preceding example suggests that the following proposition is true:</p>
+</div>
+<div id="S5.SS2.SSS8.p4" class="ltx_para">
+<table role="presentation" id="S5.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex6.m1" class="ltx_Math" data-alttext="\text{ If }A\subseteq B\text{, then }A\cap B^{c}=\emptyset\text{. }" display="block"><mrow><mrow><mtext> If </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>⊆</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mrow><mi mathvariant="normal">∅</mi><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS8.p5" class="ltx_para">
+<p class="ltx_p">If we would like to prove this proposition, a reasonable "backward question" is, "How do we prove that a set (namely <math id="S5.SS2.SSS8.p5.m1" class="ltx_Math" data-alttext="A\cap B^{c}" display="inline"><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></math>) is equal to the empty set?"</p>
+</div>
+<figure id="S5.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig5_1.jpg" id="S5.F1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="200" height="147" alt="Venn diagram with A contained in B">
+<figcaption class="ltx_caption ltx_centering">Figure 5.5: Venn Diagram with <math id="S5.F1.m2" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math></figcaption>
+</figure>
+<div id="S5.SS2.SSS8.p6" class="ltx_para">
+<p class="ltx_p">This question seems difficult to answer since how do we prove that a set is empty? This is an instance where proving the contrapositive or using a proof by contradiction could be reasonable approaches. To illustrate these methods, let us assume the proposition we are trying to prove is of the following form:</p>
+</div>
+<div id="S5.SS2.SSS8.p7" class="ltx_para">
+<table role="presentation" id="S5.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex7.m1" class="ltx_Math" data-alttext="\text{ If }P\text{, then }T=\emptyset\text{. }" display="block"><mrow><mrow><mtext> If </mtext><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mi>T</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">∅</mi><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS8.p8" class="ltx_para">
+<p class="ltx_p">If we choose to prove the contrapositive or use a proof by contradiction, we will assume that <math id="S5.SS2.SSS8.p8.m1" class="ltx_Math" data-alttext="T\neq\emptyset" display="inline"><mrow><mi>T</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. These methods can be outlined as follows:</p>
+</div>
+<div id="S5.SS2.SSS8.p9" class="ltx_para">
+<ul id="S5.I5" class="ltx_itemize">
+<li id="S5.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">The contrapositive of "If <math id="S5.I5.i1.p1.m1" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math>, then <math id="S5.I5.i1.p1.m2" class="ltx_Math" data-alttext="T=\emptyset" display="inline"><mrow><mi>T</mi><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>" is, "If <math id="S5.I5.i1.p1.m3" class="ltx_Math" data-alttext="T\neq\emptyset" display="inline"><mrow><mi>T</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, then <math id="S5.I5.i1.p1.m4" class="ltx_Math" data-alttext="\neg P" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></math>." So in this case, we would assume <math id="S5.I5.i1.p1.m5" class="ltx_Math" data-alttext="T\neq\emptyset" display="inline"><mrow><mi>T</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> and try to prove <math id="S5.I5.i1.p1.m6" class="ltx_Math" data-alttext="\neg P" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">Using a proof by contradiction, we would assume <math id="S5.I5.i2.p1.m1" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math> and assume that <math id="S5.I5.i2.p1.m2" class="ltx_Math" data-alttext="T\neq\emptyset" display="inline"><mrow><mi>T</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. From these two assumptions, we would attempt to derive a contradiction.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS2.SSS8.p10" class="ltx_para">
+<p class="ltx_p">One advantage of these methods is that when we assume that <math id="S5.SS2.SSS8.p10.m1" class="ltx_Math" data-alttext="T\neq\emptyset" display="inline"><mrow><mi>T</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, then we know that there exists an element in the set <math id="S5.SS2.SSS8.p10.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>. We can then use that element in the rest of the proof. We will prove one of the conditional statements for Proposition 5.14 by proving its contrapositive. The proof of the other conditional statement associated with Proposition 5.14 is Exercise (10).</p>
+</div>
+<div id="Prop_5.14" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 5.14.</span> Let <math id="S5.SS2.SSS8.p11.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS8.p11.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. Then <math id="S5.SS2.SSS8.p11.m3" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> if and only if <math id="S5.SS2.SSS8.p11.m4" class="ltx_Math" data-alttext="A\cap B^{c}=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS8.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S5.SS2.SSS8.p12.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS2.SSS8.p12.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. We will first prove that if <math id="S5.SS2.SSS8.p12.m3" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.SS2.SSS8.p12.m4" class="ltx_Math" data-alttext="A\cap B^{c}=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, by proving its contrapositive. That is, we will prove</p>
+</div>
+<div id="S5.SS2.SSS8.p13" class="ltx_para">
+<table role="presentation" id="S5.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex8.m1" class="ltx_Math" data-alttext="\text{ If }A\cap B^{c}\neq\emptyset\text{, then }A\nsubseteq B\text{. }" display="block"><mrow><mrow><mrow><mtext> If </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>≠</mo><mrow><mi mathvariant="normal">∅</mi><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>⊈</mo><mrow><mi>B</mi><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS8.p14" class="ltx_para">
+<p class="ltx_p">So assume that <math id="S5.SS2.SSS8.p14.m1" class="ltx_Math" data-alttext="A\cap B^{c}\neq\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. We will prove that <math id="S5.SS2.SSS8.p14.m2" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math> by proving that there must exist an element <math id="S5.SS2.SSS8.p14.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S5.SS2.SSS8.p14.m4" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS2.SSS8.p14.m5" class="ltx_Math" data-alttext="x\notin B" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS8.p15" class="ltx_para">
+<p class="ltx_p">Since <math id="S5.SS2.SSS8.p15.m1" class="ltx_Math" data-alttext="A\cap B^{c}\neq\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, there exists an element <math id="S5.SS2.SSS8.p15.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> that is in <math id="S5.SS2.SSS8.p15.m3" class="ltx_Math" data-alttext="A\cap B^{c}" display="inline"><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></math>. This means that</p>
+</div>
+<div id="S5.SS2.SSS8.p16" class="ltx_para">
+<table role="presentation" id="S5.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex9.m1" class="ltx_Math" data-alttext="x\in A\text{ and }x\in B^{c}." display="block"><mrow><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS8.p17" class="ltx_para">
+<p class="ltx_p">Now, the fact that <math id="S5.SS2.SSS8.p17.m1" class="ltx_Math" data-alttext="x\in B^{c}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></math> means that <math id="S5.SS2.SSS8.p17.m2" class="ltx_Math" data-alttext="x\notin B" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>B</mi></mrow></math>. Hence, we can conclude that</p>
+</div>
+<div id="S5.SS2.SSS8.p18" class="ltx_para">
+<table role="presentation" id="S5.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex10.m1" class="ltx_Math" data-alttext="x\in A\text{ and }x\notin B." display="block"><mrow><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∉</mo><mi>B</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS2.SSS8.p19" class="ltx_para">
+<p class="ltx_p">This means that <math id="S5.SS2.SSS8.p19.m1" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math>, and hence, we have proved that if <math id="S5.SS2.SSS8.p19.m2" class="ltx_Math" data-alttext="A\cap B^{c}\neq\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, then <math id="S5.SS2.SSS8.p19.m3" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math>, and therefore, we have proved that if <math id="S5.SS2.SSS8.p19.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.SS2.SSS8.p19.m5" class="ltx_Math" data-alttext="A\cap B^{c}=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS2.SSS8.p20" class="ltx_para">
+<p class="ltx_p">The proof that if <math id="S5.SS2.SSS8.p20.m1" class="ltx_Math" data-alttext="A\cap B^{c}=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, then <math id="S5.SS2.SSS8.p20.m2" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> is Exercise (10).</p>
+</div>
+</section>
+<section id="S5.SS2.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.9 </span>Progress Check 5.15 (Proving Two Sets Are Disjoint)</h3>
+
+<div id="S5.SS2.SSS9.p1" class="ltx_para">
+<p class="ltx_p">It has been noted that it is often possible to prove that two sets are disjoint by using a proof by contradiction. In this case, we assume that the two sets are not disjoint and hence, their intersection is not empty. Use this method to prove that the following two sets are disjoint.</p>
+</div>
+<div id="S5.SS2.SSS9.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex11.m1" class="ltx_Math" data-alttext="A=\{x\in\mathbb{Z}\mid x\equiv 3(\bmod 12)\}\quad\text{ and }\quad B=\{y\in%
+\mathbb{Z}\mid y\equiv 2(\bmod 8)\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>3</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>12</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S5.SS2.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.10 </span>A Final Comment</h3>
+
+<div id="S5.SS2.SSS10.p1" class="ltx_para">
+<p class="ltx_p">We have used the choose-an-element method to prove <a href="#Prop_5.7">Propositions 5.7</a>, <a href="#Prop_5.11">5.11</a>, and <a href="#Prop_5.14">5.14</a>. Proofs involving sets that use this method are sometimes referred to as element-chasing proofs. This name is used since the basic method is to choose an arbitrary element from one set and "chase it" until you prove it must be in another set.</p>
+</div>
+</section>
+<section id="S5.SS2.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.11 </span>Exercises for Section 5.2</h3>
+
+<div id="S5.SS2.SSS11.p1" class="ltx_para">
+<ol id="S5.I6" class="ltx_enumerate">
+<li id="S5.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S5.I6.i1.p1.m2" class="ltx_Math" data-alttext="A=\left\{x\in\mathbb{R}\mid x^{2}&lt;4\right\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&lt;</mo><mn>4</mn></mrow><mo>}</mo></mrow></mrow></math> and let <math id="S5.I6.i1.p1.m3" class="ltx_Math" data-alttext="B=\{x\in\mathbb{R}\mid x&lt;2\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>&lt;</mo><mn>2</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S5.I6.i1.I1" class="ltx_enumerate">
+<li id="S5.I6.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S5.I6.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S5.I6.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i2.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i2.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of a universal set <math id="S5.I6.i2.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>.</p>
+<ol id="S5.I6.i2.I1" class="ltx_enumerate">
+<li id="S5.I6.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Draw a Venn diagram with <math id="S5.I6.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i2.I1.i1.p1.m2" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>. Does it appear that <math id="S5.I6.i2.I1.i1.p1.m3" class="ltx_Math" data-alttext="A\subseteq C?" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><mi>C</mi><mo>⁢</mo><mi mathvariant="normal">?</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove the following proposition:</p>
+</div>
+<div id="S5.I6.i2.I1.i2.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex12.m1" class="ltx_Math" data-alttext="\text{ If }A\subseteq B\text{ and }B\subseteq C\text{, then }A\subseteq C\text%
+{. }" display="block"><mrow><mrow><mtext> If </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>C</mi><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>⊆</mo><mrow><mi>C</mi><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.I6.i2.I1.i2.p3" class="ltx_para">
+<p class="ltx_p">Note: This may seem like an obvious result. However, one of the reasons for this exercise is to provide practice at properly writing a proof that one set is a subset of another set. So we should start the proof by assuming that <math id="S5.I6.i2.I1.i2.p3.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i2.I1.i2.p3.m2" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>. Then we should choose an arbitrary element of <math id="S5.I6.i2.I1.i2.p3.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I6.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S5.I6.i3.p1.m2" class="ltx_Math" data-alttext="A=\{x\in\mathbb{Z}\mid x\equiv 7(\bmod 8)\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>7</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.I6.i3.p1.m3" class="ltx_Math" data-alttext="B=\{x\in\mathbb{Z}\mid x\equiv 3(\bmod 4)\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>3</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S5.I6.i3.I1" class="ltx_enumerate">
+<li id="S5.I6.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">List at least five different elements of the set <math id="S5.I6.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and at least five elements of the set <math id="S5.I6.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S5.I6.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+</li>
+<li id="S5.I6.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S5.I6.i3.I1.i3.p1.m1" class="ltx_Math" data-alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I6.i4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i4.p1.m1" class="ltx_Math" data-alttext="C=\{x\in\mathbb{Z}\mid x\equiv 7(\bmod 9)\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>7</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.I6.i4.p1.m2" class="ltx_Math" data-alttext="D=\{x\in\mathbb{Z}\mid x\equiv 1(\bmod 3)\}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S5.I6.i4.I1" class="ltx_enumerate">
+<li id="S5.I6.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">List at least five different elements of the set <math id="S5.I6.i4.I1.i1.p1.m1" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> and at least five elements of the set <math id="S5.I6.i4.I1.i1.p1.m2" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S5.I6.i4.I1.i2.p1.m1" class="ltx_Math" data-alttext="C\subseteq D" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>D</mi></mrow></math>? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+</li>
+<li id="S5.I6.i4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S5.I6.i4.I1.i3.p1.m1" class="ltx_Math" data-alttext="D\subseteq C" display="inline"><mrow><mi>D</mi><mo>⊆</mo><mi>C</mi></mrow></math>? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I6.i5.p1" class="ltx_para">
+<p class="ltx_p">In each case, determine if <math id="S5.I6.i5.p1.m1" class="ltx_Math" data-alttext="A\subseteq B,B\subseteq A,A=B" display="inline"><mrow><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><mo>,</mo><mrow><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></mrow></mrow></math>, or <math id="S5.I6.i5.p1.m2" class="ltx_Math" data-alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> or none of these.</p>
+<ol id="S5.I6.i5.I1" class="ltx_enumerate">
+<li id="S5.I6.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i5.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I6.i5.I1.i1.p1.m2" class="ltx_Math" data-alttext="A=\{x\in\mathbb{Z}\mid x\equiv 2(\bmod 3)\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.I6.i5.I1.i1.p1.m3" class="ltx_math_unparsed" data-alttext="B=\{y\in\mathbb{Z}\mid 6" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∈</mo><mi>ℤ</mi><mo lspace="0em" rspace="0.167em">∣</mo><mn>6</mn></mrow></mrow></math> divides <math id="S5.I6.i5.I1.i1.p1.m4" class="ltx_math_unparsed" data-alttext="(2y-4)\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>y</mi><mo>−</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i5.I1.i2.p1.m1" class="ltx_Math" data-alttext="A=\{x\in\mathbb{Z}\mid x\equiv 3(\bmod 4)\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>3</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.I6.i5.I1.i2.p1.m2" class="ltx_math_unparsed" data-alttext="B=\{y\in\mathbb{Z}\mid 3" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∈</mo><mi>ℤ</mi><mo lspace="0em" rspace="0.167em">∣</mo><mn>3</mn></mrow></mrow></math> divides <math id="S5.I6.i5.I1.i2.p1.m3" class="ltx_math_unparsed" data-alttext="(y-2)\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i5.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I6.i5.I1.i3.p1.m2" class="ltx_Math" data-alttext="A=\{x\in\mathbb{Z}\mid x\equiv 1(\bmod 5)\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.I6.i5.I1.i3.p1.m3" class="ltx_Math" data-alttext="B=\{y\in\mathbb{Z}\mid y\equiv 7(\bmod 10)\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>≡</mo><mrow><mn>7</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>10</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I6.i6.p1" class="ltx_para">
+<p class="ltx_p">To prove the following set equalities, it may be necessary to use some of the properties of positive and negative real numbers. For example, it may be necessary to use the facts that:</p>
+</div>
+<div id="S5.I6.i6.p2" class="ltx_para">
+<ul id="S5.I6.i6.I1" class="ltx_itemize">
+<li id="S5.I6.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I6.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The product of two real numbers is positive if and only if the two real numbers are either both positive or both negative.</p>
+</div>
+</li>
+<li id="S5.I6.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I6.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The product of two real numbers is negative if and only if one of the two numbers is positive and the other is negative.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.I6.i6.p3" class="ltx_para">
+<p class="ltx_p">For example, if <math id="S5.I6.i6.p3.m1" class="ltx_Math" data-alttext="x(x-2)&lt;0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, then we can conclude that either (1) <math id="S5.I6.i6.p3.m2" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math> and <math id="S5.I6.i6.p3.m3" class="ltx_Math" data-alttext="x-2&gt;0" display="inline"><mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> or (2) <math id="S5.I6.i6.p3.m4" class="ltx_Math" data-alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S5.I6.i6.p3.m5" class="ltx_Math" data-alttext="x-2&lt;0" display="inline"><mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>. However, in the first case, we must have <math id="S5.I6.i6.p3.m6" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math> and <math id="S5.I6.i6.p3.m7" class="ltx_Math" data-alttext="x&gt;2" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>2</mn></mrow></math>, and this is impossible. Therefore, we conclude that <math id="S5.I6.i6.p3.m8" class="ltx_Math" data-alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S5.I6.i6.p3.m9" class="ltx_Math" data-alttext="x-2&lt;0" display="inline"><mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, which means that <math id="S5.I6.i6.p3.m10" class="ltx_Math" data-alttext="0&lt;x&lt;2" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></mrow></math>.</p>
+</div>
+<div id="S5.I6.i6.p4" class="ltx_para">
+<p class="ltx_p">Use the choose-an-element method to prove each of the following:</p>
+<ol id="S5.I6.i6.I2" class="ltx_enumerate">
+<li id="S5.I6.i6.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i6.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i6.I2.i1.p1.m1" class="ltx_Math" data-alttext="\left\{x\in\mathbb{R}\mid x^{2}-3x-10&lt;0\right\}=\{x\in\mathbb{R}\mid-2&lt;x&lt;5\}" display="inline"><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>10</mn></mrow><mo>&lt;</mo><mn>0</mn></mrow><mo>}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo>−</mo><mn>2</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>5</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i6.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i6.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i6.I2.i2.p1.m1" class="ltx_Math" data-alttext="\left\{x\in\mathbb{R}\mid x^{2}-5x+6&lt;0\right\}=\{x\in\mathbb{R}\mid 2&lt;x&lt;3\}" display="inline"><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mn>6</mn></mrow><mo>&lt;</mo><mn>0</mn></mrow><mo>}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i6.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i6.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i6.I2.i3.p1.m1" class="ltx_Math" data-alttext="\left\{x\in\mathbb{R}\mid x^{2}\geq 4\right\}=\{x\in\mathbb{R}\mid x\leq-2\}%
+\cup\{x\in\mathbb{R}\mid x\geq 2\}" display="inline"><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>≥</mo><mn>4</mn></mrow><mo>}</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≤</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>2</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S5.I6.i7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i7.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i7.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set <math id="S5.I6.i7.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Prove each of the following:</p>
+<ol id="S5.I6.i7.I1" class="ltx_enumerate">
+<li id="S5.I6.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I6.i7.I1.i1.p1.m2" class="ltx_Math" data-alttext="A\cap B\subseteq A" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>⊆</mo><mi>A</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="A\cap A=A" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>A</mi></mrow><mo>=</mo><mi>A</mi></mrow></math>
+<math id="S5.I6.i7.I1.i2.p1.m2" class="ltx_math_unparsed" data-alttext="{}^{\star}(" display="inline"><mmultiscripts><mo stretchy="false">(</mo><mprescripts></mprescripts><mrow></mrow><mo>⋆</mo></mmultiscripts></math> e) <math id="S5.I6.i7.I1.i2.p1.m3" class="ltx_Math" data-alttext="A\cap\emptyset=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi mathvariant="normal">∅</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>
+<math id="S5.I6.i7.I1.i2.p1.m4" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i7.I1.i3.p1.m1" class="ltx_Math" data-alttext="A\subseteq A\cup B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i7.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I6.i7.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i7.I1.i4.p1.m1" class="ltx_Math" data-alttext="A\cup A=A" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>A</mi></mrow><mo>=</mo><mi>A</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i7.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I6.i7.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i7.I1.i5.p1.m1" class="ltx_Math" data-alttext="A\cup\emptyset=A" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi mathvariant="normal">∅</mi></mrow><mo>=</mo><mi>A</mi></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S5.I6.i8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i8.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i8.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set <math id="S5.I6.i8.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. From <a href="#Prop_5.10">Proposition 5.10</a>, we know that if <math id="S5.I6.i8.p1.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.I6.i8.p1.m5" class="ltx_Math" data-alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>. Now prove the following proposition:</p>
+</div>
+<div id="S5.I6.i8.p2" class="ltx_para">
+<p class="ltx_p">For all sets <math id="S5.I6.i8.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i8.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> that are subsets of some universal set <math id="S5.I6.i8.p2.m3" class="ltx_Math" data-alttext="U,A\subseteq B" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>A</mi></mrow><mo>⊆</mo><mi>B</mi></mrow></math> if and only if <math id="S5.I6.i8.p2.m4" class="ltx_Math" data-alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S5.I6.i9.p1" class="ltx_para">
+<p class="ltx_p">Is the following proposition true or false? Justify your conclusion with a proof or a counterexample.</p>
+</div>
+<div id="S5.I6.i9.p2" class="ltx_para">
+<p class="ltx_p">For all sets <math id="S5.I6.i9.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i9.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> that are subsets of some universal set <math id="S5.I6.i9.p2.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>, the sets <math id="S5.I6.i9.p2.m4" class="ltx_Math" data-alttext="A\cap B" display="inline"><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i9.p2.m5" class="ltx_Math" data-alttext="A-B" display="inline"><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow></math> are disjoint.</p>
+</div>
+</li>
+<li id="S5.I6.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S5.I6.i10.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i10.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Complete the proof of <a href="#Prop_5.14">Proposition 5.14</a> by proving the following conditional statement:</p>
+</div>
+<div id="S5.I6.i10.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i10.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i10.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set. If <math id="S5.I6.i10.p2.m3" class="ltx_Math" data-alttext="A\cap B^{c}=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, then <math id="S5.I6.i10.p2.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S5.I6.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i11.p1.m1" class="ltx_Math" data-alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math>, and <math id="S5.I6.i11.p1.m2" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> be subsets of some universal set <math id="S5.I6.i11.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Are the following propositions true or false? Justify your conclusions.</p>
+<ol id="S5.I6.i11.I1" class="ltx_enumerate">
+<li id="S5.I6.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i11.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i11.I1.i1.p1.m2" class="ltx_Math" data-alttext="C\subseteq D" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>D</mi></mrow></math> and <math id="S5.I6.i11.I1.i1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i11.I1.i1.p1.m4" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> are disjoint, then <math id="S5.I6.i11.I1.i1.p1.m5" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> and <math id="S5.I6.i11.I1.i1.p1.m6" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> are disjoint.</p>
+</div>
+</li>
+<li id="S5.I6.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i11.I1.i2.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i11.I1.i2.p1.m2" class="ltx_Math" data-alttext="C\subseteq D" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>D</mi></mrow></math> and <math id="S5.I6.i11.I1.i2.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> and <math id="S5.I6.i11.I1.i2.p1.m4" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> are disjoint, then <math id="S5.I6.i11.I1.i2.p1.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i11.I1.i2.p1.m6" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> are disjoint.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S5.I6.i12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i12.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i12.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of a universal set <math id="S5.I6.i12.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Prove:</p>
+<ol id="S5.I6.i12.I1" class="ltx_enumerate">
+<li id="S5.I6.i12.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="S5.I6.i12.I1.ix1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> (a)</span> 
+<div id="S5.I6.i12.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i12.I1.ix1.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.I6.i12.I1.ix1.p1.m2" class="ltx_Math" data-alttext="A\cap C\subseteq B\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i12.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i12.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i12.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.I6.i12.I1.i1.p1.m2" class="ltx_Math" data-alttext="A\cup C\subseteq B\cup C" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>C</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S5.I6.i13.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i13.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i13.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of a universal set <math id="S5.I6.i13.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Are the following propositions true or false? Justify your conclusions.</p>
+<ol id="S5.I6.i13.I1" class="ltx_enumerate">
+<li id="S5.I6.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i13.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\cap C\subseteq B\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i13.I1.i1.p1.m2" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i13.I1.i2.p1.m1" class="ltx_Math" data-alttext="A\cup C\subseteq B\cup C" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>C</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i13.I1.i2.p1.m2" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i13.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i13.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i13.I1.i3.p1.m1" class="ltx_Math" data-alttext="A\cup C=B\cup C" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i13.I1.i3.p1.m2" class="ltx_Math" data-alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i13.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I6.i13.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i13.I1.i4.p1.m1" class="ltx_Math" data-alttext="A\cap C=B\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i13.I1.i4.p1.m2" class="ltx_Math" data-alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i13.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I6.i13.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I6.i13.I1.i5.p1.m1" class="ltx_Math" data-alttext="A\cup C=B\cup C" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math> and <math id="S5.I6.i13.I1.i5.p1.m2" class="ltx_Math" data-alttext="A\cap C=B\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i13.I1.i5.p1.m3" class="ltx_Math" data-alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S5.I6.i14.p1" class="ltx_para">
+<p class="ltx_p">Prove the following proposition:</p>
+</div>
+<div id="S5.I6.i14.p2" class="ltx_para">
+<p class="ltx_p">For all sets <math id="S5.I6.i14.p2.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i14.p2.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> that are subsets of some universal set, if <math id="S5.I6.i14.p2.m3" class="ltx_Math" data-alttext="A\cap B=A\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math> and <math id="S5.I6.i14.p2.m4" class="ltx_Math" data-alttext="A^{c}\cap B=A^{c}\cap C" display="inline"><mrow><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∩</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i14.p2.m5" class="ltx_Math" data-alttext="B=C" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="S5.I6.i15.p1" class="ltx_para">
+<p class="ltx_p">Are the following biconditional statements true or false? Justify your conclusion. If a biconditional statement is found to be false, you should clearly determine if one of the conditional statements within it is true and provide a proof of this conditional statement.</p>
+<ol id="S5.I6.i15.I1" class="ltx_enumerate">
+<li id="S5.I6.i15.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i15.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i15.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all subsets <math id="S5.I6.i15.I1.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i15.I1.i1.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> of some universal set <math id="S5.I6.i15.I1.i1.p1.m4" class="ltx_Math" data-alttext="U,A\subseteq B" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>A</mi></mrow><mo>⊆</mo><mi>B</mi></mrow></math> if and only if <math id="S5.I6.i15.I1.i1.p1.m5" class="ltx_Math" data-alttext="A\cap B^{c}=\varnothing" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i15.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i15.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i15.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all subsets <math id="S5.I6.i15.I1.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i15.I1.i2.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> of some universal set <math id="S5.I6.i15.I1.i2.p1.m4" class="ltx_Math" data-alttext="U,A\subseteq B" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>A</mi></mrow><mo>⊆</mo><mi>B</mi></mrow></math> if and only if <math id="S5.I6.i15.I1.i2.p1.m5" class="ltx_Math" data-alttext="A\cup B=B" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i15.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i15.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all subsets <math id="S5.I6.i15.I1.i3.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i15.I1.i3.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> of some universal set <math id="S5.I6.i15.I1.i3.p1.m3" class="ltx_Math" data-alttext="U,A\subseteq B" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>A</mi></mrow><mo>⊆</mo><mi>B</mi></mrow></math> if and only if <math id="S5.I6.i15.I1.i3.p1.m4" class="ltx_Math" data-alttext="A\cap B=A" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi>A</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i15.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I6.i15.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For all subsets <math id="S5.I6.i15.I1.i4.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i15.I1.i4.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> of some universal set <math id="S5.I6.i15.I1.i4.p1.m3" class="ltx_Math" data-alttext="U,A\subseteq B\cup C" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>A</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math> if and only if <math id="S5.I6.i15.I1.i4.p1.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> or <math id="S5.I6.i15.I1.i4.p1.m5" class="ltx_Math" data-alttext="A\subseteq C" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i15.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I6.i15.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">For all subsets <math id="S5.I6.i15.I1.i5.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i15.I1.i5.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> of some universal set <math id="S5.I6.i15.I1.i5.p1.m3" class="ltx_Math" data-alttext="U,A\subseteq B\cap C" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>A</mi></mrow><mo>⊆</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math> if and only if <math id="S5.I6.i15.I1.i5.p1.m4" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i15.I1.i5.p1.m5" class="ltx_Math" data-alttext="A\subseteq C" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="S5.I6.i16.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i16.p1.m1" class="ltx_Math" data-alttext="S,T,X" display="inline"><mrow><mi>S</mi><mo>,</mo><mi>T</mi><mo>,</mo><mi>X</mi></mrow></math>, and <math id="S5.I6.i16.p1.m2" class="ltx_Math" data-alttext="Y" display="inline"><mi>Y</mi></math> be subsets of some universal set. Assume that</p>
+<ol id="S5.I6.i16.I1" class="ltx_enumerate">
+<li id="S5.I6.i16.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i16.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i16.I1.i1.p1.m1" class="ltx_Math" data-alttext="S\cup T\subseteq X\cup Y" display="inline"><mrow><mrow><mi>S</mi><mo>∪</mo><mi>T</mi></mrow><mo>⊆</mo><mrow><mi>X</mi><mo>∪</mo><mi>Y</mi></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="S5.I6.i16.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i16.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i16.I1.i2.p1.m1" class="ltx_Math" data-alttext="S\cap T=\emptyset" display="inline"><mrow><mrow><mi>S</mi><mo>∩</mo><mi>T</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>; and</p>
+</div>
+</li>
+<li id="S5.I6.i16.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i16.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i16.I1.i3.p1.m1" class="ltx_Math" data-alttext="X\subseteq S" display="inline"><mrow><mi>X</mi><mo>⊆</mo><mi>S</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<ol id="S5.I6.i16.I2" class="ltx_enumerate">
+<li id="S5.I6.i16.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i16.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Using assumption</p>
+</div>
+</li>
+<li id="S5.I6.i16.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i16.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">, what conclusion(s) can be made if it is known that <math id="S5.I6.i16.I2.i2.p1.m1" class="ltx_Math" data-alttext="a\in T" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>T</mi></mrow></math>?</p>
+</div>
+</li>
+<li id="S5.I6.i16.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i16.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Using assumption (ii), what conclusion(s) can be made if it is known that <math id="S5.I6.i16.I2.i3.p1.m1" class="ltx_Math" data-alttext="a\in T" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>T</mi></mrow></math>?</p>
+</div>
+</li>
+<li id="S5.I6.i16.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I6.i16.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Using all three assumptions, either prove that <math id="S5.I6.i16.I2.i4.p1.m1" class="ltx_Math" data-alttext="T\subseteq Y" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>Y</mi></mrow></math> or explain why it is not possible to do so.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="S5.I6.i17.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of Proofs.</span></p>
+</div>
+<div id="S5.I6.i17.p2" class="ltx_para">
+<p class="ltx_p">See the instructions for Exercise (19) from <a href="https://johnweeks03.github.io/teaching/300/3-1.html">Section 3.1.</a></p>
+<ol id="S5.I6.i17.I1" class="ltx_enumerate">
+<li id="S5.I6.i17.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i17.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i17.I1.i1.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i17.I1.i1.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of some universal set. If <math id="S5.I6.i17.I1.i1.p1.m3" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i17.I1.i1.p1.m4" class="ltx_Math" data-alttext="B\nsubseteq C" display="inline"><mrow><mi>B</mi><mo>⊈</mo><mi>C</mi></mrow></math>, then <math id="S5.I6.i17.I1.i1.p1.m5" class="ltx_Math" data-alttext="A\nsubseteq C" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>C</mi></mrow></math>.</p>
+</div>
+<div id="S5.I6.i17.I1.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We assume that <math id="S5.I6.i17.I1.i1.p2.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i17.I1.i1.p2.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> are subsets of some universal set and that <math id="S5.I6.i17.I1.i1.p2.m3" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i17.I1.i1.p2.m4" class="ltx_Math" data-alttext="B\nsubseteq C" display="inline"><mrow><mi>B</mi><mo>⊈</mo><mi>C</mi></mrow></math>. This means that there exists an element <math id="S5.I6.i17.I1.i1.p2.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in <math id="S5.I6.i17.I1.i1.p2.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is not in <math id="S5.I6.i17.I1.i1.p2.m7" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> and there exists an element <math id="S5.I6.i17.I1.i1.p2.m8" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> that is in <math id="S5.I6.i17.I1.i1.p2.m9" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> and not in <math id="S5.I6.i17.I1.i1.p2.m10" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math>. Therefore, <math id="S5.I6.i17.I1.i1.p2.m11" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.I6.i17.I1.i1.p2.m12" class="ltx_Math" data-alttext="x\notin C" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>C</mi></mrow></math>, and we have proved that <math id="S5.I6.i17.I1.i1.p2.m13" class="ltx_Math" data-alttext="A\nsubseteq C" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i17.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i17.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i17.I1.i2.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i17.I1.i2.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of some universal set. If <math id="S5.I6.i17.I1.i2.p1.m3" class="ltx_Math" data-alttext="A\cap B=A\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i17.I1.i2.p1.m4" class="ltx_Math" data-alttext="B=C" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>C</mi></mrow></math>.</p>
+</div>
+<div id="S5.I6.i17.I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We assume that <math id="S5.I6.i17.I1.i2.p2.m1" class="ltx_Math" data-alttext="A\cap B=A\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math> and will prove that <math id="S5.I6.i17.I1.i2.p2.m2" class="ltx_Math" data-alttext="B=C" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>C</mi></mrow></math>. We will first prove that <math id="S5.I6.i17.I1.i2.p2.m3" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>.</p>
+</div>
+<div id="S5.I6.i17.I1.i2.p3" class="ltx_para">
+<p class="ltx_p">So let <math id="S5.I6.i17.I1.i2.p3.m1" class="ltx_Math" data-alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>. If <math id="S5.I6.i17.I1.i2.p3.m2" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, then <math id="S5.I6.i17.I1.i2.p3.m3" class="ltx_Math" data-alttext="x\in A\cap B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>, and hence, <math id="S5.I6.i17.I1.i2.p3.m4" class="ltx_Math" data-alttext="x\in A\cap C" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>. From this we can conclude that <math id="S5.I6.i17.I1.i2.p3.m5" class="ltx_Math" data-alttext="x\in C" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow></math>. If <math id="S5.I6.i17.I1.i2.p3.m6" class="ltx_Math" data-alttext="x\notin A" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>A</mi></mrow></math>, then <math id="S5.I6.i17.I1.i2.p3.m7" class="ltx_Math" data-alttext="x\notin A\cap B" display="inline"><mrow><mi>x</mi><mo>∉</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>, and hence, <math id="S5.I6.i17.I1.i2.p3.m8" class="ltx_Math" data-alttext="x\notin A\cap C" display="inline"><mrow><mi>x</mi><mo>∉</mo><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>. However, since <math id="S5.I6.i17.I1.i2.p3.m9" class="ltx_Math" data-alttext="x\notin A" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>A</mi></mrow></math>, we may conclude that <math id="S5.I6.i17.I1.i2.p3.m10" class="ltx_Math" data-alttext="x\in C" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow></math>. Therefore, <math id="S5.I6.i17.I1.i2.p3.m11" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>.
+<br class="ltx_break">The proof that <math id="S5.I6.i17.I1.i2.p3.m12" class="ltx_Math" data-alttext="C\subseteq B" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>B</mi></mrow></math> may be done in a similar manner. Hence, <math id="S5.I6.i17.I1.i2.p3.m13" class="ltx_Math" data-alttext="B=C" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i17.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i17.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i17.I1.i3.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i17.I1.i3.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of some universal set. If <math id="S5.I6.i17.I1.i3.p1.m3" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i17.I1.i3.p1.m4" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>, then <math id="S5.I6.i17.I1.i3.p1.m5" class="ltx_Math" data-alttext="A\nsubseteq C" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>C</mi></mrow></math>.</p>
+</div>
+<div id="S5.I6.i17.I1.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Assume that <math id="S5.I6.i17.I1.i3.p2.m1" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math> and <math id="S5.I6.i17.I1.i3.p2.m2" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>. Since <math id="S5.I6.i17.I1.i3.p2.m3" class="ltx_Math" data-alttext="A\nsubseteq B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math>, there exists an element <math id="S5.I6.i17.I1.i3.p2.m4" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S5.I6.i17.I1.i3.p2.m5" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.I6.i17.I1.i3.p2.m6" class="ltx_Math" data-alttext="x\notin B" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>B</mi></mrow></math>. Since <math id="S5.I6.i17.I1.i3.p2.m7" class="ltx_Math" data-alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>, we may conclude that <math id="S5.I6.i17.I1.i3.p2.m8" class="ltx_Math" data-alttext="x\notin C" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>C</mi></mrow></math>. Hence, <math id="S5.I6.i17.I1.i3.p2.m9" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.I6.i17.I1.i3.p2.m10" class="ltx_Math" data-alttext="x\notin C" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>C</mi></mrow></math>, and we have proved that <math id="S5.I6.i17.I1.i3.p2.m11" class="ltx_Math" data-alttext="A\nsubseteq C" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS2.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.12 </span>Explorations and Activities</h3>
+
+<div id="S5.SS2.SSS12.p1" class="ltx_para">
+<ol id="S5.I7" class="ltx_enumerate">
+<li id="S5.I7.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="S5.I7.i18.p1" class="ltx_para">
+<p class="ltx_p">Using the Choose-an-Element Method in a Different Setting. We have used the choose-an-element method to prove results about sets. This method, however, is a general proof technique and can be used in settings other than set theory. It is often used whenever we encounter a universal quantifier in a statement in the backward process. Consider the following proposition.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Prop_5.16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 5.16.</span> Let <math id="S5.SS2.SSS12.p2.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S5.SS2.SSS12.p2.m2" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> be integers with <math id="S5.SS2.SSS12.p2.m3" class="ltx_Math" data-alttext="t\neq 0" display="inline"><mrow><mi>t</mi><mo>≠</mo><mn>0</mn></mrow></math>. If <math id="S5.SS2.SSS12.p2.m4" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.SS2.SSS12.p2.m5" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S5.SS2.SSS12.p2.m6" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.SS2.SSS12.p2.m7" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, then for all integers <math id="S5.SS2.SSS12.p2.m8" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.SS2.SSS12.p2.m9" class="ltx_Math" data-alttext="y,t" display="inline"><mrow><mi>y</mi><mo>,</mo><mi>t</mi></mrow></math> divides <math id="S5.SS2.SSS12.p2.m10" class="ltx_Math" data-alttext="(ax+by)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+<ol id="S5.I8" class="ltx_enumerate">
+<li id="S5.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">Whenever we encounter a new proposition, it is a good idea to explore the proposition by looking at specific examples. For example, let <math id="S5.I8.i1.p1.m1" class="ltx_Math" data-alttext="a=20,b=12" display="inline"><mrow><mrow><mi>a</mi><mo>=</mo><mn>20</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mn>12</mn></mrow></mrow></math>, and <math id="S5.I8.i1.p1.m2" class="ltx_Math" data-alttext="t=4" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>4</mn></mrow></math>. In this case, <math id="S5.I8.i1.p1.m3" class="ltx_Math" data-alttext="t\mid a" display="inline"><mrow><mi>t</mi><mo>∣</mo><mi>a</mi></mrow></math> and <math id="S5.I8.i1.p1.m4" class="ltx_Math" data-alttext="t\mid b" display="inline"><mrow><mi>t</mi><mo>∣</mo><mi>b</mi></mrow></math>. In each of the following cases, determine the value of <math id="S5.I8.i1.p1.m5" class="ltx_Math" data-alttext="(ax+by)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> and determine if <math id="S5.I8.i1.p1.m6" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.I8.i1.p1.m7" class="ltx_Math" data-alttext="(ax+by)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+<ol id="S5.I8.i1.I1" class="ltx_enumerate">
+<li id="S5.I8.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I8.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="x=1,y=1" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>y</mi><mo>=</mo><mn>1</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I8.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I8.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="x=1,y=-1" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I8.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I8.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="x=2,y=2" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><mi>y</mi><mo>=</mo><mn>2</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I8.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I8.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.I1.i4.p1.m1" class="ltx_Math" data-alttext="x=2,y=-3" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mo>−</mo><mn>3</mn></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I8.i1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I8.i1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.I1.i5.p1.m1" class="ltx_Math" data-alttext="x=-2,y=3" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow><mo>,</mo><mrow><mi>y</mi><mo>=</mo><mn>3</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I8.i1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I8.i1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.I1.i6.p1.m1" class="ltx_Math" data-alttext="x=-2,y=-5" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow><mo>,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mo>−</mo><mn>5</mn></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">Repeat Part (18a) with <math id="S5.I8.i2.p1.m1" class="ltx_Math" data-alttext="a=21,b=-6" display="inline"><mrow><mrow><mi>a</mi><mo>=</mo><mn>21</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mrow><mo>−</mo><mn>6</mn></mrow></mrow></mrow></math>, and <math id="S5.I8.i2.p1.m2" class="ltx_Math" data-alttext="t=3" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>3</mn></mrow></math>.</p>
+</div>
+<div id="S5.I8.i2.p2" class="ltx_para">
+<p class="ltx_p">Notice that the conclusion of the conditional statement in this proposition involves the universal quantifier. So in the backward process, we would have
+<br class="ltx_break"><math id="S5.I8.i2.p2.m1" class="ltx_Math" data-alttext="Q:" display="inline"><mrow><mi>Q</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mi></mi></mrow></math> For all integers <math id="S5.I8.i2.p2.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.I8.i2.p2.m3" class="ltx_Math" data-alttext="y,t" display="inline"><mrow><mi>y</mi><mo>,</mo><mi>t</mi></mrow></math> divides <math id="S5.I8.i2.p2.m4" class="ltx_Math" data-alttext="ax+by" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S5.I8.i2.p3" class="ltx_para">
+<p class="ltx_p">The "elements" in this sentence are the integers <math id="S5.I8.i2.p3.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.I8.i2.p3.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. In this case, these integers have no "given property" other than that they are integers. The "something that happens" is that <math id="S5.I8.i2.p3.m3" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.I8.i2.p3.m4" class="ltx_Math" data-alttext="(ax+by)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math>. This means that in the forward process, we can use the hypothesis of the proposition and choose integers <math id="S5.I8.i2.p3.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.I8.i2.p3.m6" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. That is, in the forward process, we could have
+<br class="ltx_break"><math id="S5.I8.i2.p3.m7" class="ltx_Math" data-alttext="P:a,b" display="inline"><mrow><mi>P</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></mrow></math>, and <math id="S5.I8.i2.p3.m8" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> are integers with <math id="S5.I8.i2.p3.m9" class="ltx_Math" data-alttext="t\neq 0,t" display="inline"><mrow><mi>t</mi><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mi>t</mi></mrow></mrow></math> divides <math id="S5.I8.i2.p3.m10" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S5.I8.i2.p3.m11" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.I8.i2.p3.m12" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+<div id="S5.I8.i2.p4" class="ltx_para">
+<p class="ltx_p">P1: Let <math id="S5.I8.i2.p4.m1" class="ltx_Math" data-alttext="x\in\mathbb{Z}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> and let <math id="S5.I8.i2.p4.m2" class="ltx_Math" data-alttext="y\in\mathbb{Z}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I8.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I8.i3.p1" class="ltx_para">
+<p class="ltx_p">Complete the following proof of Proposition 5.16.</p>
+</div>
+<div id="S5.I8.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S5.I8.i3.p2.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S5.I8.i3.p2.m2" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> be integers with <math id="S5.I8.i3.p2.m3" class="ltx_Math" data-alttext="t\neq 0" display="inline"><mrow><mi>t</mi><mo>≠</mo><mn>0</mn></mrow></math>, and assume that <math id="S5.I8.i3.p2.m4" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.I8.i3.p2.m5" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S5.I8.i3.p2.m6" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.I8.i3.p2.m7" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>. We will prove that for all integers <math id="S5.I8.i3.p2.m8" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.I8.i3.p2.m9" class="ltx_Math" data-alttext="y,t" display="inline"><mrow><mi>y</mi><mo>,</mo><mi>t</mi></mrow></math> divides <math id="S5.I8.i3.p2.m10" class="ltx_Math" data-alttext="(ax+by)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S5.I8.i3.p3" class="ltx_para">
+<p class="ltx_p">So let <math id="S5.I8.i3.p3.m1" class="ltx_Math" data-alttext="x\in\mathbb{Z}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> and let <math id="S5.I8.i3.p3.m2" class="ltx_Math" data-alttext="y\in\mathbb{Z}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>. Since <math id="S5.I8.i3.p3.m3" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> divides <math id="S5.I8.i3.p3.m4" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>, there exists an integer <math id="S5.I8.i3.p3.m5" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that ….</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
