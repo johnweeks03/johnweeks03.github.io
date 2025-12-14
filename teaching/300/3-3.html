@@ -1,0 +1,1272 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3 Constructing and Writing Proofs in Mathematics</title>
+<!--Generated on Sun Dec 14 02:26:12 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Constructing and Writing Proofs in Mathematics</h2>
+
+<section id="S3.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3 </span>Proof by Contradiction</h3>
+
+<section id="S3.SS3.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.1 </span>Beginning Activity 1 (Proof by Contradiction)</h4>
+
+<div id="S3.SS3.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/2-1.html">Section 2.1</a>, we defined a tautology to be a compound statement <math id="S3.SS3.SSS1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> that is true for all possible combinations of truth values of the component statements that are part of <math id="S3.SS3.SSS1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. We also defined contradiction to be a compound statement that is false for all possible combinations of truth values of the component statements that are part of <math id="S3.SS3.SSS1.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+<div id="S3.SS3.SSS1.p2" class="ltx_para">
+<p class="ltx_p">That is, a tautology is necessarily true in all circumstances, and a contradiction is necessarily false in all circumstances.</p>
+</div>
+<div id="S3.SS3.SSS1.p3" class="ltx_para">
+<ol id="S3.I1" class="ltx_enumerate">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use truth tables to explain why (<math id="S3.I1.i1.p1.m1" class="ltx_Math" alttext="P\vee\neg P" display="inline"><mrow><mi>P</mi><mo>∨</mo><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></mrow></math>) is a tautology and (<math id="S3.I1.i1.p1.m2" class="ltx_Math" alttext="P\wedge\neg P" display="inline"><mrow><mi>P</mi><mo>∧</mo><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></mrow></math>) is a contradiction.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS3.SSS1.p4" class="ltx_para">
+<p class="ltx_p">Another method of proof that is frequently used in mathematics is a proof by contradiction. This method is based on the fact that a statement <math id="S3.SS3.SSS1.p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> can only be true or false (and not both). The idea is to prove that the statement <math id="S3.SS3.SSS1.p4.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is true by showing that it cannot be false. This is done by assuming that <math id="S3.SS3.SSS1.p4.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is false and proving that this leads to a contradiction. (The contradiction often has the form <math id="S3.SS3.SSS1.p4.m4" class="ltx_Math" alttext="(R\wedge\neg R)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>∧</mo><mrow><mo rspace="0.167em">¬</mo><mi>R</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, where <math id="S3.SS3.SSS1.p4.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is some statement.) When this happens, we can conclude that the assumption that the statement <math id="S3.SS3.SSS1.p4.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is false is incorrect and hence <math id="S3.SS3.SSS1.p4.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> cannot be false. Since it cannot be false, then <math id="S3.SS3.SSS1.p4.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> must be true.</p>
+</div>
+<div id="S3.SS3.SSS1.p5" class="ltx_para">
+<p class="ltx_p">A logical basis for the contradiction method of proof is the tautology</p>
+</div>
+<div id="S3.SS3.SSS1.p6" class="ltx_para">
+<table id="S3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex1.m1" class="ltx_Math" alttext="[\neg X\rightarrow C]\rightarrow X," display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mrow><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow><mo stretchy="false">→</mo><mi>C</mi></mrow><mo stretchy="false">]</mo></mrow><mo stretchy="false">→</mo><mi>X</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS1.p7" class="ltx_para">
+<p class="ltx_p">where <math id="S3.SS3.SSS1.p7.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a statement and <math id="S3.SS3.SSS1.p7.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a contradiction. The following truth table establishes this tautology.</p>
+</div>
+<div id="S3.SS3.SSS1.p8" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS3.SSS1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S3.SS3.SSS1.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S3.SS3.SSS1.m3" class="ltx_Math" alttext="\neg X" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S3.SS3.SSS1.m4" class="ltx_Math" alttext="\neg X\rightarrow C" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow><mo stretchy="false">→</mo><mi>C</mi></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S3.SS3.SSS1.m5" class="ltx_Math" alttext="(\neg X\rightarrow C)\rightarrow X" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow><mo stretchy="false">→</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>X</mi></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">T</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">F</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">F</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">T</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r">F</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r">F</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r">T</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r">F</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS1.p9" class="ltx_para">
+<p class="ltx_p">This tautology shows that if <math id="S3.SS3.SSS1.p9.m1" class="ltx_Math" alttext="\neg X" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow></math> leads to a contradiction, then <math id="S3.SS3.SSS1.p9.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> must be true. The previous truth table also shows that the statement <math id="S3.SS3.SSS1.p9.m3" class="ltx_Math" alttext="\neg X\rightarrow C" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow><mo stretchy="false">→</mo><mi>C</mi></mrow></math> is logically equivalent to <math id="S3.SS3.SSS1.p9.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. This means that if we have proved that <math id="S3.SS3.SSS1.p9.m5" class="ltx_Math" alttext="\neg X" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow></math> leads to a contradiction, then we have proved statement <math id="S3.SS3.SSS1.p9.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. So if we want to prove a statement <math id="S3.SS3.SSS1.p9.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> using a proof by contradiction, we assume that <math id="S3.SS3.SSS1.p9.m8" class="ltx_Math" alttext="\neg X" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>X</mi></mrow></math> is true and show that this leads to a contradiction.</p>
+</div>
+<div id="S3.SS3.SSS1.p10" class="ltx_para">
+<p class="ltx_p">When we try to prove the conditional statement, "If <math id="S3.SS3.SSS1.p10.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> then <math id="S3.SS3.SSS1.p10.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>" using a proof by contradiction, we must assume that <math id="S3.SS3.SSS1.p10.m3" class="ltx_Math" alttext="P\rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow></math> is false and show that this leads to a contradiction.</p>
+<ol id="S3.I2" class="ltx_enumerate">
+<li id="S3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Use a truth table to show that <math id="S3.I2.i1.p1.m1" class="ltx_Math" alttext="\neg(P\rightarrow Q)" display="inline"><mrow><mo>¬</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is logically equivalent to <math id="S3.I2.i1.p1.m2" class="ltx_Math" alttext="P\wedge\neg Q" display="inline"><mrow><mi>P</mi><mo>∧</mo><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S3.I2.i1.p2" class="ltx_para">
+<p class="ltx_p">The preceding logical equivalency shows that when we assume that <math id="S3.I2.i1.p2.m1" class="ltx_Math" alttext="P\rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow></math> is false, we are assuming that <math id="S3.I2.i1.p2.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is true and <math id="S3.I2.i1.p2.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is false. If we can prove that this leads to a contradiction, then we have shown that <math id="S3.I2.i1.p2.m4" class="ltx_Math" alttext="\neg(P\rightarrow Q)" display="inline"><mrow><mo>¬</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is false and hence that <math id="S3.I2.i1.p2.m5" class="ltx_Math" alttext="P\rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow></math> is true.</p>
+</div>
+</li>
+<li id="S3.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Give a counterexample to show that the following statement is false.</p>
+</div>
+<div id="S3.I2.i2.p2" class="ltx_para">
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\text{ For each real number }x,\frac{1}{x(1-x)}\geq 4\text{. }" display="block"><mrow><mrow><mrow><mtext> For each real number </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>≥</mo><mrow><mn>4</mn><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S3.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">When a statement is false, it is sometimes possible to add an assumption that will yield a true statement. This is usually done by using a conditional statement. So instead of working with the statement in (3), we will work with a related statement that is obtained by adding an assumption (or assumptions) to the hypothesis.</p>
+</div>
+<div id="S3.I2.i3.p2" class="ltx_para">
+<table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex3.m1" class="ltx_Math" alttext="\text{ For each real number }x\text{, if }0&lt;x&lt;1\text{, then }\frac{1}{x(1-x)}%
+\geq 4\text{. }" display="block"><mrow><mrow><mtext> For each real number </mtext><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mtext>, if </mtext><mo>⁢</mo><mn>0</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mrow><mn>1</mn><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>≥</mo><mrow><mn>4</mn><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I2.i3.p3" class="ltx_para">
+<p class="ltx_p">To begin a proof by contradiction for this statement, we need to assume the negation of the statement. To do this, we need to negate the entire statement, including the quantifier. Recall that the negation of a statement with a universal quantifier is a statement that contains an existential quantifier. (See <a href="https://johnweeks03.github.io/teaching/300/2-4.html">Theorem 2.16.</a>) With this in mind, carefully write down all assumptions made at the beginning of a proof by contradiction for this statement.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS3.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.2 </span>Beginning Activity 2 (Constructing a Proof by Contradiction)</h4>
+
+<div id="S3.SS3.SSS2.p1" class="ltx_para">
+<p class="ltx_p">Consider the following proposition:</p>
+</div>
+<div id="S3.SS3.SSS2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition.</span> For all real numbers <math id="S3.SS3.SSS2.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS2.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.SS3.SSS2.p2.m3" class="ltx_Math" alttext="x\neq y,x&gt;0" display="inline"><mrow><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></math>, and <math id="S3.SS3.SSS2.p2.m4" class="ltx_Math" alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S3.SS3.SSS2.p2.m5" class="ltx_Math" alttext="\frac{x}{y}+\frac{y}{x}&gt;2" display="inline"><mrow><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><mo>&gt;</mo><mn>2</mn></mrow></math>.</p>
+</div>
+<div id="S3.SS3.SSS2.p3" class="ltx_para">
+<p class="ltx_p">To start a proof by contradiction, we assume that this statement is false; that is, we assume the negation is true. Because this is a statement with a universal quantifier, we assume that there exist real numbers <math id="S3.SS3.SSS2.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS2.p3.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that <math id="S3.SS3.SSS2.p3.m3" class="ltx_Math" alttext="x\neq y,x&gt;0,y&gt;0" display="inline"><mrow><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow><mo>,</mo><mrow><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></mrow></math> and that <math id="S3.SS3.SSS2.p3.m4" class="ltx_Math" alttext="\frac{x}{y}+\frac{y}{x}\leq 2" display="inline"><mrow><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><mo>≤</mo><mn>2</mn></mrow></math>. (Notice that the negation of the conditional sentence is a conjunction.)</p>
+</div>
+<div id="S3.SS3.SSS2.p4" class="ltx_para">
+<p class="ltx_p">For this proof by contradiction, we will only work with the know column of a know-show table. This is because we do not have a specific goal. The goal is to obtain some contradiction, but we do not know ahead of time what that contradiction will be. Using our assumptions, we can perform algebraic operations on the inequality</p>
+</div>
+<div id="S3.SS3.SSS2.p5" class="ltx_para">
+<table id="S3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex4.m1" class="ltx_Math" alttext="\frac{x}{y}+\frac{y}{x}\leq 2" display="block"><mrow><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><mo>≤</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS2.p6" class="ltx_para">
+<p class="ltx_p">until we obtain a contradiction.</p>
+</div>
+<div id="S3.SS3.SSS2.p7" class="ltx_para">
+<ol id="S3.I3" class="ltx_enumerate">
+<li id="S3.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Try the following algebraic operations on the inequality in (1). First, multiply both sides of the inequality by <math id="S3.I3.i1.p1.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>, which is a positive real number since <math id="S3.I3.i1.p1.m2" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S3.I3.i1.p1.m3" class="ltx_Math" alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Then, subtract <math id="S3.I3.i1.p1.m4" class="ltx_Math" alttext="2xy" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> from both sides of this inequality and finally, factor the left side of the resulting inequality.</p>
+</div>
+</li>
+<li id="S3.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Explain why the last inequality you obtained leads to a contradiction.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS3.SSS2.p8" class="ltx_para">
+<p class="ltx_p">By obtaining a contradiction, we have proved that the proposition cannot be false, and hence, must be true.</p>
+</div>
+</section>
+<section id="S3.SS3.SSS3" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.3 </span>Writing Guidelines: Keep the Reader Informed</h4>
+
+<div id="S3.SS3.SSS3.p1" class="ltx_para">
+<p class="ltx_p">A very important piece of information about a proof is the method of proof to be used. So when we are going to prove a result using the contrapositive or a proof by contradiction, we indicate this at the start of the proof.</p>
+</div>
+<div id="S3.SS3.SSS3.p2" class="ltx_para">
+<ul id="S3.I4" class="ltx_itemize">
+<li id="S3.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">We will prove this result by proving the contrapositive of the statement.</p>
+</div>
+</li>
+<li id="S3.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">We will prove this statement using a proof by contradiction.</p>
+</div>
+</li>
+<li id="S3.I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I4.i3.p1" class="ltx_para">
+<p class="ltx_p">We will use a proof by contradiction.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS3.SSS3.p3" class="ltx_para">
+<p class="ltx_p">We have discussed the logic behind a proof by contradiction in the beginning activities for this section. The basic idea for a proof by contradiction of a proposition is to assume the proposition is false and show that this leads to a contradiction. We can then conclude that the proposition cannot be false, and hence, must be true. When we assume a proposition is false, we are, in effect, assuming that its negation is true. This is one reason why it is so important to be able to write negations of propositions quickly and correctly. We will illustrate the process with the proposition discussed in Beginning Activity 1.</p>
+</div>
+<div id="S3.SS3.SSS3.p4" class="ltx_para">
+<p class="ltx_p"><span id="Prop_3.14" class="ltx_text ltx_font_bold">Proposition</span> 3.14. For each real number <math id="S3.SS3.SSS3.p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, if <math id="S3.SS3.SSS3.p4.m2" class="ltx_Math" alttext="0&lt;x&lt;1" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow></math>, then <math id="S3.SS3.SSS3.p4.m3" class="ltx_Math" alttext="\frac{1}{x(1-x)}\geq 4" display="inline"><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>≥</mo><mn>4</mn></mrow></math>.
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Proof.</span> We will use a proof by contradiction. So we assume that the proposition is false, or that there exists a real number <math id="S3.SS3.SSS3.p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that <math id="S3.SS3.SSS3.p4.m5" class="ltx_Math" alttext="0&lt;x&lt;1" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow></math> and</p>
+</div>
+<div id="S3.SS3.SSS3.p5" class="ltx_para">
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex5.m1" class="ltx_Math" alttext="\frac{1}{x(1-x)}&lt;4" display="block"><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>&lt;</mo><mn>4</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS3.p6" class="ltx_para">
+<p class="ltx_p">We note that since <math id="S3.SS3.SSS3.p6.m1" class="ltx_Math" alttext="0&lt;x&lt;1" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow></math>, we can conclude that <math id="S3.SS3.SSS3.p6.m2" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and that <math id="S3.SS3.SSS3.p6.m3" class="ltx_Math" alttext="(1-x)&gt;0" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. Hence, <math id="S3.SS3.SSS3.p6.m4" class="ltx_Math" alttext="x(1-x)&gt;0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> and if we multiply both sides of inequality (1) by <math id="S3.SS3.SSS3.p6.m5" class="ltx_Math" alttext="x(1-x)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, we obtain</p>
+</div>
+<div id="S3.SS3.SSS3.p7" class="ltx_para">
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="1&lt;4x(1-x)" display="block"><mrow><mn>1</mn><mo>&lt;</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS3.p8" class="ltx_para">
+<p class="ltx_p">We can now use algebra to rewrite the last inequality as follows:</p>
+</div>
+<div id="S3.SS3.SSS3.p9" class="ltx_para">
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex7.m1" class="ltx_Math" alttext="\displaystyle 1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex7.m2" class="ltx_Math" alttext="\displaystyle&lt;4x-4x^{2}" display="inline"><mrow><mi></mi><mo>&lt;</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex8.m1" class="ltx_Math" alttext="\displaystyle 4x^{2}-4x+1" display="inline"><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex8.m2" class="ltx_Math" alttext="\displaystyle&lt;0" display="inline"><mrow><mi></mi><mo>&lt;</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex9.m1" class="ltx_Math" alttext="\displaystyle(2x-1)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex9.m2" class="ltx_Math" alttext="\displaystyle&lt;0" display="inline"><mrow><mi></mi><mo>&lt;</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS3.p10" class="ltx_para">
+<p class="ltx_p">However, <math id="S3.SS3.SSS3.p10.m1" class="ltx_Math" alttext="(2x-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> is a real number and the last inequality says that a real number squared is less than zero. This is a contradiction since the square of any real number
+<br class="ltx_break">must be greater than or equal to zero. Hence, the proposition cannot be false, and we have proved that for each real number <math id="S3.SS3.SSS3.p10.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, if <math id="S3.SS3.SSS3.p10.m3" class="ltx_Math" alttext="0&lt;x&lt;1" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow></math>, then <math id="S3.SS3.SSS3.p10.m4" class="ltx_Math" alttext="\frac{1}{x(1-x)}\geq 4" display="inline"><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>≥</mo><mn>4</mn></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS3.SSS4" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.4 </span>Progress Check 3.15 (Starting a Proof by Contradiction)</h4>
+
+<div id="S3.SS3.SSS4.p1" class="ltx_para">
+<p class="ltx_p">One of the most important parts of a proof by contradiction is the very first part, which is to state the assumptions that will be used in the proof by contradiction. This usually involves writing a clear negation of the proposition to be proven. Review De Morgan’s Laws and the negation of a conditional statement in Section 2.2. (See <a href="https://johnweeks03.github.io/teaching/300/2-2.html#Theorem_2.8">Theorem 2.8.</a>) Also, review <a href="https://johnweeks03.github.io/teaching/300/2-4.html#Theorem_2.16">Theorem 2.16</a> and then write a negation of each of the following statements. (Remember that a real number is "not irrational" means that the real number is rational.)</p>
+</div>
+<div id="S3.SS3.SSS4.p2" class="ltx_para">
+<ol id="S3.I5" class="ltx_enumerate">
+<li id="S3.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">For each real number <math id="S3.I5.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, if <math id="S3.I5.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational, then <math id="S3.I5.i1.p1.m3" class="ltx_Math" alttext="\sqrt[3]{x}" display="inline"><mroot><mi>x</mi><mn>3</mn></mroot></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">For each real number <math id="S3.I5.i2.p1.m1" class="ltx_Math" alttext="x,(x+\sqrt{2})" display="inline"><mrow><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is irrational or <math id="S3.I5.i2.p1.m2" class="ltx_Math" alttext="(-x+\sqrt{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>−</mo><mi>x</mi></mrow><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I5.i3.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I5.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I5.i3.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if 5 divides <math id="S3.I5.i3.p1.m3" class="ltx_Math" alttext="ab" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></math>, then 5 divides <math id="S3.I5.i3.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> or 5 divides <math id="S3.I5.i3.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I5.i4.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I5.i4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I5.i4.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I5.i4.p1.m3" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S3.I5.i4.p1.m4" class="ltx_Math" alttext="b&gt;0" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S3.I5.i4.p1.m5" class="ltx_Math" alttext="\frac{2}{a}+\frac{2}{b}\neq\frac{4}{a+b}" display="inline"><mrow><mrow><mfrac><mn>2</mn><mi>a</mi></mfrac><mo>+</mo><mfrac><mn>2</mn><mi>b</mi></mfrac></mrow><mo>≠</mo><mfrac><mn>4</mn><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mfrac></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS3.SSS5" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.5 </span>Important Note</h4>
+
+<div id="S3.SS3.SSS5.p1" class="ltx_para">
+<p class="ltx_p">A proof by contradiction is often used to prove a conditional statement <math id="S3.SS3.SSS5.p1.m1" class="ltx_Math" alttext="P\rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow></math> when a direct proof has not been found and it is relatively easy to form the negation of the proposition. The advantage of a proof by contradiction is that we have an additional assumption with which to work (since we assume not only <math id="S3.SS3.SSS5.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> but also <math id="S3.SS3.SSS5.p1.m3" class="ltx_Math" alttext="\neg Q" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></math>). The disadvantage is that there is no well-defined goal to work toward. The goal is simply to obtain some contradiction. There usually is no way of telling beforehand what that contradiction will be, so we have to stay alert for a possible absurdity. Thus, when we set up a know-show table for a proof by contradiction, we really only work with the know portion of the table.</p>
+</div>
+</section>
+<section id="S3.SS3.SSS6" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.6 </span>Progress Check 3.16 (Exploration and a Proof by Contradiction)</h4>
+
+<div id="S3.SS3.SSS6.p1" class="ltx_para">
+<p class="ltx_p">Consider the following proposition:
+<br class="ltx_break">For each integer <math id="S3.SS3.SSS6.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if <math id="S3.SS3.SSS6.p1.m2" class="ltx_Math" alttext="n\equiv 2(\bmod 4)" display="inline"><mrow><mi>n</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.SS3.SSS6.p1.m3" class="ltx_Math" alttext="n\not\equiv 3(\bmod 6)" display="inline"><mrow><mi>n</mi><mo>≢</mo><mrow><mn>3</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS3.SSS6.p2" class="ltx_para">
+<ol id="S3.I6" class="ltx_enumerate">
+<li id="S3.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine at least five different integers that are congruent to 2 modulo 4, and determine at least five different integers that are congruent to 3 modulo 6. Are there any integers that are in both of these lists?</p>
+</div>
+</li>
+<li id="S3.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">For this proposition, why does it seem reasonable to try a proof by contradiction?</p>
+</div>
+</li>
+<li id="S3.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I6.i3.p1" class="ltx_para">
+<p class="ltx_p">For this proposition, state clearly the assumptions that need to be made at the beginning of a proof by contradiction, and then use a proof by contradiction to prove this proposition.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS3.SSS7" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.7 </span>Proving that Something Does Not Exist</h4>
+
+<div id="S3.SS3.SSS7.p1" class="ltx_para">
+<p class="ltx_p">In mathematics, we sometimes need to prove that something does not exist or that something is not possible. Instead of trying to construct a direct proof, it is sometimes easier to use a proof by contradiction so that we can assume that the something exists. For example, suppose we want to prove the following proposition:</p>
+</div>
+<div id="S3.SS3.SSS7.p2" class="ltx_para">
+<p class="ltx_p"><span id="Prop_3.17" class="ltx_text ltx_font_bold">Proposition</span> 3.17. For all integers <math id="S3.SS3.SSS7.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS7.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.SS3.SSS7.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS7.p2.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are odd integers, then there does not exist an integer <math id="S3.SS3.SSS7.p2.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> such that <math id="S3.SS3.SSS7.p2.m6" class="ltx_Math" alttext="x^{2}+y^{2}=z^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+<div id="S3.SS3.SSS7.p3" class="ltx_para">
+<p class="ltx_p">Notice that the conclusion involves trying to prove that an integer with a certain property does not exist. If we use a proof by contradiction, we can assume that such an integer <math id="S3.SS3.SSS7.p3.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> exists. This gives us more with which to work.</p>
+</div>
+</section>
+<section id="S3.SS3.SSS8" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.8 </span>Progress Check 3.18 (Completing Proof of Proposition 3.17)</h4>
+
+<div id="S3.SS3.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Complete the following proof of Proposition 3.17:</p>
+</div>
+<div id="S3.SS3.SSS8.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will use a proof by contradiction. So we assume that there exist integers <math id="S3.SS3.SSS8.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS8.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that <math id="S3.SS3.SSS8.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS8.p2.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are odd and there exists an integer <math id="S3.SS3.SSS8.p2.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> such that <math id="S3.SS3.SSS8.p2.m6" class="ltx_Math" alttext="x^{2}+y^{2}=z^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></math>. Since <math id="S3.SS3.SSS8.p2.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS8.p2.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are odd, there exist integers <math id="S3.SS3.SSS8.p2.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS8.p2.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="S3.SS3.SSS8.p2.m11" class="ltx_Math" alttext="x=2m+1" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> and <math id="S3.SS3.SSS8.p2.m12" class="ltx_Math" alttext="y=2n+1" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS3.SSS8.p3" class="ltx_para">
+<ol id="S3.I7" class="ltx_enumerate">
+<li id="S3.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the assumptions that <math id="S3.I7.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I7.i1.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are odd to prove that <math id="S3.I7.i1.p1.m3" class="ltx_Math" alttext="x^{2}+y^{2}" display="inline"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></math> is even and hence, <math id="S3.I7.i1.p1.m4" class="ltx_Math" alttext="z^{2}" display="inline"><msup><mi>z</mi><mn>2</mn></msup></math> is even. (See <a href="https://johnweeks03.github.io/teaching/300/3-2.html#Theorem_3.7">Theorem 3.7</a>.)</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS3.SSS8.p4" class="ltx_para">
+<p class="ltx_p">We can now conclude that <math id="S3.SS3.SSS8.p4.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> is even. (See Theorem 3.7.) So there exists an integer <math id="S3.SS3.SSS8.p4.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> such that <math id="S3.SS3.SSS8.p4.m3" class="ltx_Math" alttext="z=2k" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></mrow></math>. If we substitute for <math id="S3.SS3.SSS8.p4.m4" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math>, and <math id="S3.SS3.SSS8.p4.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> in the equation <math id="S3.SS3.SSS8.p4.m6" class="ltx_Math" alttext="x^{2}+y^{2}=z^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></math>, we obtain</p>
+</div>
+<div id="S3.SS3.SSS8.p5" class="ltx_para">
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="(2m+1)^{2}+(2n+1)^{2}=(2k)^{2}." display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS8.p6" class="ltx_para">
+<ol id="S3.I8" class="ltx_enumerate">
+<li id="S3.I8.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I8.i4.p1" class="ltx_para">
+<p class="ltx_p">Use the previous equation to obtain a contradiction. Hint: One way is to use algebra to obtain an equation where the left side is an odd integer and the right side is an even integer.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS3.SSS9" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.9 </span>Rational and Irrational Numbers</h4>
+
+<div id="S3.SS3.SSS9.p1" class="ltx_para">
+<p class="ltx_p">One of the most important ways to classify real numbers is as a rational number or an irrational number. Following is the definition of rational (and irrational) numbers given in Exercise (9) from Section 3.2.</p>
+</div>
+<div id="S3.SS3.SSS9.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A real number <math id="S3.SS3.SSS9.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is defined to be a <span class="ltx_text ltx_font_bold">rational number</span> provided that there exist integers <math id="S3.SS3.SSS9.p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS9.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> with <math id="S3.SS3.SSS9.p2.m4" class="ltx_Math" alttext="n\neq 0" display="inline"><mrow><mi>n</mi><mo>≠</mo><mn>0</mn></mrow></math> such that <math id="S3.SS3.SSS9.p2.m5" class="ltx_Math" alttext="x=\frac{m}{n}" display="inline"><mrow><mi>x</mi><mo>=</mo><mfrac><mi>m</mi><mi>n</mi></mfrac></mrow></math>. A real number that is not a rational number is called an <span class="ltx_text ltx_font_bold">irrational number</span>.</p>
+</div>
+<div id="S3.SS3.SSS9.p3" class="ltx_para">
+<p class="ltx_p">This may seem like a strange distinction because most people are quite familiar with the rational numbers (fractions) but the irrational numbers seem a bit unusual. However, there are many irrational numbers such as <math id="S3.SS3.SSS9.p3.m1" class="ltx_Math" alttext="\sqrt{2},\sqrt{3},\sqrt[3]{2},\pi" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>,</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><mroot><mn>2</mn><mn>3</mn></mroot><mo>,</mo><mi>π</mi></mrow></math>, and the number <math id="S3.SS3.SSS9.p3.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>. We are discussing these matters now because we will soon prove that <math id="S3.SS3.SSS9.p3.m3" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math> is irrational in <a href="#Theorem_3.20">Theorem 3.20.</a></p>
+</div>
+<div id="S3.SS3.SSS9.p4" class="ltx_para">
+<p class="ltx_p">We use the symbol <math id="S3.SS3.SSS9.p4.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> to stand for the set of rational numbers. There is no standard symbol for the set of irrational numbers. Perhaps one reason for this is because of the closure properties of the rational numbers. We introduced closure properties in <a href="https://johnweeks03.github.io/teaching/300/1-1.html">Section 1.1</a>, and the rational numbers <math id="S3.SS3.SSS9.p4.m2" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> are closed under addition, subtraction, multiplication, and division by nonzero rational numbers. This means that if <math id="S3.SS3.SSS9.p4.m3" class="ltx_Math" alttext="x,y\in\mathbb{Q}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow></math>, then</p>
+</div>
+<div id="S3.SS3.SSS9.p5" class="ltx_para">
+<ul id="S3.I9" class="ltx_itemize">
+<li id="S3.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i1.p1.m1" class="ltx_Math" alttext="x+y,x-y" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mrow></math>, and <math id="S3.I9.i1.p1.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> are in <math id="S3.I9.i1.p1.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>; and</p>
+</div>
+</li>
+<li id="S3.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I9.i2.p1.m1" class="ltx_Math" alttext="y\neq 0" display="inline"><mrow><mi>y</mi><mo>≠</mo><mn>0</mn></mrow></math>, then <math id="S3.I9.i2.p1.m2" class="ltx_Math" alttext="\frac{x}{y}" display="inline"><mfrac><mi>x</mi><mi>y</mi></mfrac></math> is in <math id="S3.I9.i2.p1.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS3.SSS9.p6" class="ltx_para">
+<p class="ltx_p">The basic reasons for these facts are that if we add, subtract, multiply, or divide two fractions, the result is a fraction. One reason we do not have a symbol for the irrational numbers is that the irrational numbers are not closed under these operations. For example, we will prove that <math id="S3.SS3.SSS9.p6.m1" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math> is irrational in <a href="#Theorem_3.20">Theorem 3.20.</a> We then see that</p>
+</div>
+<div id="S3.SS3.SSS9.p7" class="ltx_para">
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="\sqrt{2}\sqrt{2}=2\quad\text{ and }\quad\frac{\sqrt{2}}{\sqrt{2}}=1," display="block"><mrow><mrow><mrow><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow><mo>=</mo><mrow><mn>2</mn><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mfrac><msqrt><mn>2</mn></msqrt><msqrt><mn>2</mn></msqrt></mfrac><mo>=</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS9.p8" class="ltx_para">
+<p class="ltx_p">which shows that the product of irrational numbers can be rational and the quotient of irrational numbers can be rational.</p>
+</div>
+<div id="S3.SS3.SSS9.p9" class="ltx_para">
+<p class="ltx_p">It is also important to realize that every integer is a rational number since any integer can be written as a fraction. For example, we can write <math id="S3.SS3.SSS9.p9.m1" class="ltx_Math" alttext="3=\frac{3}{1}" display="inline"><mrow><mn>3</mn><mo>=</mo><mfrac><mn>3</mn><mn>1</mn></mfrac></mrow></math>. In general, if <math id="S3.SS3.SSS9.p9.m2" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, then <math id="S3.SS3.SSS9.p9.m3" class="ltx_Math" alttext="n=\frac{n}{1}" display="inline"><mrow><mi>n</mi><mo>=</mo><mfrac><mi>n</mi><mn>1</mn></mfrac></mrow></math>, and hence, <math id="S3.SS3.SSS9.p9.m4" class="ltx_Math" alttext="n\in\mathbb{Q}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>.</p>
+</div>
+<div id="S3.SS3.SSS9.p10" class="ltx_para">
+<p class="ltx_p">Because the rational numbers are closed under the standard operations and the definition of an irrational number simply says that the number is not rational, we often use a proof by contradiction to prove that a number is irrational. This is illustrated in the next proposition.</p>
+</div>
+<div id="S3.SS3.SSS9.p11" class="ltx_para">
+<p class="ltx_p"><span id="Prop_3.19" class="ltx_text ltx_font_bold">Proposition</span> 3.19. For all real numbers <math id="S3.SS3.SSS9.p11.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS9.p11.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.SS3.SSS9.p11.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is rational and <math id="S3.SS3.SSS9.p11.m4" class="ltx_Math" alttext="x\neq 0" display="inline"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS3.SSS9.p11.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational, then <math id="S3.SS3.SSS9.p11.m6" class="ltx_Math" alttext="x\cdot y" display="inline"><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>y</mi></mrow></math> is irrational.</p>
+</div>
+<div id="S3.SS3.SSS9.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will use a proof by contradiction. So we assume that there exist real numbers <math id="S3.SS3.SSS9.p12.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS9.p12.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that <math id="S3.SS3.SSS9.p12.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is rational, <math id="S3.SS3.SSS9.p12.m4" class="ltx_Math" alttext="x\neq 0,y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mi>y</mi></mrow></mrow></math> is irrational, and <math id="S3.SS3.SSS9.p12.m5" class="ltx_Math" alttext="x\cdot y" display="inline"><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>y</mi></mrow></math> is rational. Since <math id="S3.SS3.SSS9.p12.m6" class="ltx_Math" alttext="x\neq 0" display="inline"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math>, we can divide by <math id="S3.SS3.SSS9.p12.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and since the rational numbers are closed under division by nonzero rational numbers, we know that <math id="S3.SS3.SSS9.p12.m8" class="ltx_Math" alttext="\frac{1}{x}\in\mathbb{Q}" display="inline"><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>∈</mo><mi>ℚ</mi></mrow></math>. We now know that <math id="S3.SS3.SSS9.p12.m9" class="ltx_Math" alttext="x\cdot y" display="inline"><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>y</mi></mrow></math> and <math id="S3.SS3.SSS9.p12.m10" class="ltx_Math" alttext="\frac{1}{x}" display="inline"><mfrac><mn>1</mn><mi>x</mi></mfrac></math> are rational numbers and since the rational numbers are closed under multiplication, we conclude that</p>
+</div>
+<div id="S3.SS3.SSS9.p13" class="ltx_para">
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="\frac{1}{x}\cdot(xy)\in\mathbb{Q}." display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS9.p14" class="ltx_para">
+<p class="ltx_p">However, <math id="S3.SS3.SSS9.p14.m1" class="ltx_Math" alttext="\frac{1}{x}\cdot(xy)=y" display="inline"><mrow><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math> and hence, <math id="S3.SS3.SSS9.p14.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> must be a rational number. Since a real number cannot be both rational and irrational, this is a contradiction to the assumption that <math id="S3.SS3.SSS9.p14.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational. We have therefore proved that for all real numbers <math id="S3.SS3.SSS9.p14.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS3.SSS9.p14.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.SS3.SSS9.p14.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is rational and <math id="S3.SS3.SSS9.p14.m7" class="ltx_Math" alttext="x\neq 0" display="inline"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS3.SSS9.p14.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational, then <math id="S3.SS3.SSS9.p14.m9" class="ltx_Math" alttext="x\cdot y" display="inline"><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>y</mi></mrow></math> is irrational.</p>
+</div>
+</section>
+<section id="S3.SS3.SSS10" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.10 </span>The Square Root of 2 Is an Irrational Number</h4>
+
+<div id="S3.SS3.SSS10.p1" class="ltx_para">
+<p class="ltx_p">The proof that the square root of 2 is an irrational number is one of the classic proofs in mathematics, and every mathematics student should know this proof. This is why we will be doing some preliminary work with rational numbers and integers before completing the proof. The theorem we will be proving can be stated as follows:</p>
+</div>
+<div id="S3.SS3.SSS10.p2" class="ltx_para">
+<p class="ltx_p"><span id="Theorem_3.20" class="ltx_text ltx_font_bold">Theorem 3.20.</span> If <math id="S3.SS3.SSS10.p2.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a real number such that <math id="S3.SS3.SSS10.p2.m2" class="ltx_Math" alttext="r^{2}=2" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, then <math id="S3.SS3.SSS10.p2.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is an irrational number.</p>
+</div>
+<div id="S3.SS3.SSS10.p3" class="ltx_para">
+<p class="ltx_p">This is stated in the form of a conditional statement, but it basically means that <math id="S3.SS3.SSS10.p3.m1" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math> is irrational (and that <math id="S3.SS3.SSS10.p3.m2" class="ltx_Math" alttext="-\sqrt{2}" display="inline"><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math> is irrational). That is, <math id="S3.SS3.SSS10.p3.m3" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math> cannot be written as a quotient of integers with the denominator not equal to zero.</p>
+</div>
+<div id="S3.SS3.SSS10.p4" class="ltx_para">
+<p class="ltx_p">In order to complete this proof, we need to be able to work with some basic facts that follow about rational numbers and even integers.</p>
+</div>
+<div id="S3.SS3.SSS10.p5" class="ltx_para">
+<ol id="S3.I10" class="ltx_enumerate">
+<li id="S3.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I10.i1.p1" class="ltx_para">
+<p class="ltx_p">Each integer <math id="S3.I10.i1.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a rational number since <math id="S3.I10.i1.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> can be written as <math id="S3.I10.i1.p1.m3" class="ltx_Math" alttext="m=\frac{m}{1}" display="inline"><mrow><mi>m</mi><mo>=</mo><mfrac><mi>m</mi><mn>1</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">Notice that <math id="S3.I10.i2.p1.m1" class="ltx_Math" alttext="\frac{2}{3}=\frac{4}{6}" display="inline"><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>=</mo><mfrac><mn>4</mn><mn>6</mn></mfrac></mrow></math>, since</p>
+</div>
+<div id="S3.I10.i2.p2" class="ltx_para">
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="\frac{4}{6}=\frac{2\cdot 2}{3\cdot 2}=\frac{2}{2}\cdot\frac{2}{3}=\frac{2}{3}" display="block"><mrow><mfrac><mn>4</mn><mn>6</mn></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>2</mn></mrow><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>2</mn><mn>2</mn></mfrac><mo lspace="0.222em" rspace="0.222em">⋅</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I10.i2.p3" class="ltx_para">
+<p class="ltx_p">We can also show that <math id="S3.I10.i2.p3.m1" class="ltx_Math" alttext="\frac{15}{12}=\frac{5}{4},\frac{10}{-8}=\frac{-5}{4}" display="inline"><mrow><mrow><mfrac><mn>15</mn><mn>12</mn></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>4</mn></mfrac></mrow><mo>,</mo><mrow><mfrac><mn>10</mn><mrow><mo>−</mo><mn>8</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>−</mo><mn>5</mn></mrow><mn>4</mn></mfrac></mrow></mrow></math>, and <math id="S3.I10.i2.p3.m2" class="ltx_Math" alttext="\frac{-30}{-16}=\frac{15}{8}" display="inline"><mrow><mfrac><mrow><mo>−</mo><mn>30</mn></mrow><mrow><mo>−</mo><mn>16</mn></mrow></mfrac><mo>=</mo><mfrac><mn>15</mn><mn>8</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Item (2) was included to illustrate the fact that a rational number can be written as a fraction in "lowest terms" with a positive denominator. This means that any rational number can be written as a quotient <math id="S3.SS3.SSS10.p5.m1" class="ltx_Math" alttext="\frac{m}{n}" display="inline"><mfrac><mi>m</mi><mi>n</mi></mfrac></math>, where <math id="S3.SS3.SSS10.p5.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p5.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> are integers, <math id="S3.SS3.SSS10.p5.m4" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, and <math id="S3.SS3.SSS10.p5.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p5.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> have no common factor greater than 1 .</p>
+<ol id="S3.I11" class="ltx_enumerate">
+<li id="S3.I11.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I11.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I11.i5.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an integer and <math id="S3.I11.i5.p1.m2" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> is even, what can be concluded about <math id="S3.I11.i5.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>? Refer to <a href="https://johnweeks03.github.io/teaching/300/3-2.html#Theorem_3.7">Theorem 3.7.</a></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">In a proof by contradiction of a conditional statement <math id="S3.SS3.SSS10.p5.m7" class="ltx_Math" alttext="P\rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>Q</mi></mrow></math>, we assume the negation of this statement or <math id="S3.SS3.SSS10.p5.m8" class="ltx_Math" alttext="P\wedge\neg Q" display="inline"><mrow><mi>P</mi><mo>∧</mo><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></mrow></math>. So in a proof by contradiction of Theorem 3.20, we will assume that <math id="S3.SS3.SSS10.p5.m9" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a real number, <math id="S3.SS3.SSS10.p5.m10" class="ltx_Math" alttext="r^{2}=2" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, and <math id="S3.SS3.SSS10.p5.m11" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is not irrational (that is, <math id="S3.SS3.SSS10.p5.m12" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is rational).</p>
+</div>
+<div id="S3.SS3.SSS10.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 3.20.</span> If <math id="S3.SS3.SSS10.p6.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a real number such that <math id="S3.SS3.SSS10.p6.m2" class="ltx_Math" alttext="r^{2}=2" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, then <math id="S3.SS3.SSS10.p6.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is an irrational number.</p>
+</div>
+<div id="S3.SS3.SSS10.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will use a proof by contradiction. So we assume that the statement of the theorem is false. That is, we assume that
+<br class="ltx_break"><math id="S3.SS3.SSS10.p7.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a real number, <math id="S3.SS3.SSS10.p7.m2" class="ltx_Math" alttext="r^{2}=2" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, and <math id="S3.SS3.SSS10.p7.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a rational number.
+<br class="ltx_break">Since <math id="S3.SS3.SSS10.p7.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a rational number, there exist integers <math id="S3.SS3.SSS10.p7.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p7.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> with <math id="S3.SS3.SSS10.p7.m7" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that</p>
+</div>
+<div id="S3.SS3.SSS10.p8" class="ltx_para">
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="r=\frac{m}{n}" display="block"><mrow><mi>r</mi><mo>=</mo><mfrac><mi>m</mi><mi>n</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS10.p9" class="ltx_para">
+<p class="ltx_p">and <math id="S3.SS3.SSS10.p9.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p9.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> have no common factor greater than 1. We will obtain a contradiction by showing that <math id="S3.SS3.SSS10.p9.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p9.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> must both be even. Squaring both sides of the last equation and using the fact that <math id="S3.SS3.SSS10.p9.m5" class="ltx_Math" alttext="r^{2}=2" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, we obtain</p>
+</div>
+<div id="S3.SS3.SSS10.p10" class="ltx_para">
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex15.m1" class="ltx_Math" alttext="\displaystyle 2" display="inline"><mn>2</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex15.m2" class="ltx_Math" alttext="\displaystyle=\frac{m^{2}}{n^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><msup><mi>m</mi><mn>2</mn></msup><msup><mi>n</mi><mn>2</mn></msup></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex16.m1" class="ltx_Math" alttext="\displaystyle m^{2}" display="inline"><msup><mi>m</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex16.m2" class="ltx_Math" alttext="\displaystyle=2n^{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS10.p11" class="ltx_para">
+<p class="ltx_p">Equation (1) implies that <math id="S3.SS3.SSS10.p11.m1" class="ltx_Math" alttext="m^{2}" display="inline"><msup><mi>m</mi><mn>2</mn></msup></math> is even, and hence, by Theorem 3.7, <math id="S3.SS3.SSS10.p11.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> must be an even integer. This means that there exists an integer <math id="S3.SS3.SSS10.p11.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="S3.SS3.SSS10.p11.m4" class="ltx_Math" alttext="m=2p" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow></mrow></math>. We can now substitute this into equation (1), which gives</p>
+</div>
+<div id="S3.SS3.SSS10.p12" class="ltx_para">
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex17.m1" class="ltx_Math" alttext="\displaystyle(2p)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex17.m2" class="ltx_Math" alttext="\displaystyle=2n^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex18.m1" class="ltx_Math" alttext="\displaystyle 4p^{2}" display="inline"><mrow><mn>4</mn><mo>⁢</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex18.m2" class="ltx_Math" alttext="\displaystyle=2n^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS3.SSS10.p13" class="ltx_para">
+<p class="ltx_p">We can divide both sides of equation (2) by 2 to obtain <math id="S3.SS3.SSS10.p13.m1" class="ltx_Math" alttext="n^{2}=2p^{2}" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mrow></math>. Consequently, <math id="S3.SS3.SSS10.p13.m2" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> is even and we can once again use <a href="https://johnweeks03.github.io/teaching/300/3-2.html">Theorem 3.7</a> to conclude that <math id="S3.SS3.SSS10.p13.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an even integer.</p>
+</div>
+<div id="S3.SS3.SSS10.p14" class="ltx_para">
+<p class="ltx_p">We have now established that both <math id="S3.SS3.SSS10.p14.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p14.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> are even. This means that 2 is a common factor of <math id="S3.SS3.SSS10.p14.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p14.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, which contradicts the assumption that <math id="S3.SS3.SSS10.p14.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS3.SSS10.p14.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> have no common factor greater than 1. Consequently, the statement of the theorem cannot be false, and we have proved that if <math id="S3.SS3.SSS10.p14.m7" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a real number such that <math id="S3.SS3.SSS10.p14.m8" class="ltx_Math" alttext="r^{2}=2" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, then <math id="S3.SS3.SSS10.p14.m9" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is an irrational number.</p>
+</div>
+</section>
+<section id="S3.SS3.SSS11" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.11 </span>Exercises for Section 3.3</h4>
+
+<div id="S3.SS3.SSS11.p1" class="ltx_para">
+<ol id="S3.I12" class="ltx_enumerate">
+<li id="S3.I12.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I12.i1.p1" class="ltx_para">
+<p class="ltx_p">This exercise is intended to provide another rationale as to why a proof by contradiction works.</p>
+</div>
+<div id="S3.I12.i1.p2" class="ltx_para">
+<p class="ltx_p">Suppose that we are trying to prove that a statement <math id="S3.I12.i1.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is true. Instead of proving this statement, assume that we prove that the conditional statement "If <math id="S3.I12.i1.p2.m2" class="ltx_Math" alttext="\neg P" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></math>, then <math id="S3.I12.i1.p2.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>" is true, where <math id="S3.I12.i1.p2.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is some contradiction. Recall that a contradiction is a statement that is always false.</p>
+<ol id="S3.I12.i1.I1" class="ltx_enumerate">
+<li id="S3.I12.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i1.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> In symbols, write a statement that is a disjunction and that is logically equivalent to <math id="S3.I12.i1.I1.i1.p1.m2" class="ltx_Math" alttext="\neg P\rightarrow C" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow><mo stretchy="false">→</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Since we have proven that <math id="S3.I12.i1.I1.i2.p1.m1" class="ltx_Math" alttext="\neg P\rightarrow C" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow><mo stretchy="false">→</mo><mi>C</mi></mrow></math> is true, then the disjunction in Exercise (1a) must also be true. Use this to explain why the statement <math id="S3.I12.i1.I1.i2.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> must be true.</p>
+</div>
+</li>
+<li id="S3.I12.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Now explain why <math id="S3.I12.i1.I1.i3.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> must be true if we prove that the negation of <math id="S3.I12.i1.I1.i3.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> implies a contradiction.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I12.i2.p1" class="ltx_para">
+<p class="ltx_p">Are the following statements true or false? Justify each conclusion.</p>
+<ol id="S3.I12.i2.I1" class="ltx_enumerate">
+<li id="S3.I12.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i2.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I12.i2.I1.i1.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i2.I1.i1.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I12.i2.I1.i1.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is even and <math id="S3.I12.i2.I1.i1.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is odd, then 4 does not divide <math id="S3.I12.i2.I1.i1.p1.m6" class="ltx_Math" alttext="\left(a^{2}+b^{2}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i2.I1.i2.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I12.i2.I1.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i2.I1.i2.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I12.i2.I1.i2.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is even and <math id="S3.I12.i2.I1.i2.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is odd, then 6 does not divide <math id="S3.I12.i2.I1.i2.p1.m6" class="ltx_Math" alttext="\left(a^{2}+b^{2}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I12.i2.I1.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i2.I1.i3.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I12.i2.I1.i3.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is even and <math id="S3.I12.i2.I1.i3.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is odd, then 4 does not divide <math id="S3.I12.i2.I1.i3.p1.m5" class="ltx_Math" alttext="\left(a^{2}+2b^{2}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I12.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i2.I1.i4.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I12.i2.I1.i4.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i2.I1.i4.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I12.i2.I1.i4.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is odd and <math id="S3.I12.i2.I1.i4.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is odd, then 4 divides <math id="S3.I12.i2.I1.i4.p1.m6" class="ltx_Math" alttext="\left(a^{2}+3b^{2}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I12.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i3.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Consider the following statement:
+For each positive real number <math id="S3.I12.i3.p1.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, if <math id="S3.I12.i3.p1.m3" class="ltx_Math" alttext="r^{2}=18" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mn>18</mn></mrow></math>, then <math id="S3.I12.i3.p1.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is irrational.</p>
+<ol id="S3.I12.i3.I1" class="ltx_enumerate">
+<li id="S3.I12.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If you were setting up a proof by contradiction for this statement, what would you assume? Carefully write down all conditions that you would assume.</p>
+</div>
+</li>
+<li id="S3.I12.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Complete a proof by contradiction for this statement.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I12.i4.p1" class="ltx_para">
+<p class="ltx_p">Prove that the cube root of 2 is an irrational number. That is, prove that if <math id="S3.I12.i4.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a real number such that <math id="S3.I12.i4.p1.m2" class="ltx_Math" alttext="r^{3}=2" display="inline"><mrow><msup><mi>r</mi><mn>3</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, then <math id="S3.I12.i4.p1.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is an irrational number.</p>
+</div>
+</li>
+<li id="S3.I12.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I12.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i5.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove the following propositions:</p>
+<ol id="S3.I12.i5.I1" class="ltx_enumerate">
+<li id="S3.I12.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I12.i5.I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i5.I1.i1.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I12.i5.I1.i1.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is rational and <math id="S3.I12.i5.I1.i1.p1.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational, then <math id="S3.I12.i5.I1.i1.p1.m5" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I12.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all nonzero real numbers <math id="S3.I12.i5.I1.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i5.I1.i2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I12.i5.I1.i2.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is rational and <math id="S3.I12.i5.I1.i2.p1.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational, then <math id="S3.I12.i5.I1.i2.p1.m5" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> is irrational.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S3.I12.i6.p1" class="ltx_para">
+<p class="ltx_p">Are the following statements true or false? Justify each conclusion.</p>
+<ol id="S3.I12.i6.I1" class="ltx_enumerate">
+<li id="S3.I12.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i6.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each positive real number <math id="S3.I12.i6.I1.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, if <math id="S3.I12.i6.I1.i1.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational, then <math id="S3.I12.i6.I1.i1.p1.m4" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I12.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each positive real number <math id="S3.I12.i6.I1.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, if <math id="S3.I12.i6.I1.i2.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational, then <math id="S3.I12.i6.I1.i2.p1.m3" class="ltx_Math" alttext="\sqrt{x}" display="inline"><msqrt><mi>x</mi></msqrt></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I12.i6.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i6.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For every pair of real numbers <math id="S3.I12.i6.I1.i3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i6.I1.i3.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I12.i6.I1.i3.p1.m3" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is irrational, then <math id="S3.I12.i6.I1.i3.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational and <math id="S3.I12.i6.I1.i3.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I12.i6.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I12.i6.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For every pair of real numbers <math id="S3.I12.i6.I1.i4.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i6.I1.i4.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I12.i6.I1.i4.p1.m3" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is irrational, then <math id="S3.I12.i6.I1.i4.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational or <math id="S3.I12.i6.I1.i4.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S3.I12.i7.p1" class="ltx_para">
+<ol id="S3.I12.i7.I1" class="ltx_enumerate">
+<li id="S3.I12.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Give an example that shows that the sum of two irrational numbers can be a rational number.</p>
+</div>
+</li>
+<li id="S3.I12.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Now explain why the following proof that <math id="S3.I12.i7.I1.i2.p1.m1" class="ltx_Math" alttext="(\sqrt{2}+\sqrt{5})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></math> is an irrational number is not a valid proof: Since <math id="S3.I12.i7.I1.i2.p1.m2" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math> and <math id="S3.I12.i7.I1.i2.p1.m3" class="ltx_Math" alttext="\sqrt{5}" display="inline"><msqrt><mn>5</mn></msqrt></math> are both irrational numbers, their sum is an irrational number. Therefore, <math id="S3.I12.i7.I1.i2.p1.m4" class="ltx_Math" alttext="(\sqrt{2}+\sqrt{5})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></math> is an irrational number.
+Note: You may even assume that we have proven that <math id="S3.I12.i7.I1.i2.p1.m5" class="ltx_Math" alttext="\sqrt{5}" display="inline"><msqrt><mn>5</mn></msqrt></math> is an irrational number. (We have not proven this.)</p>
+</div>
+</li>
+<li id="S3.I12.i7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the real number <math id="S3.I12.i7.I1.i3.p1.m1" class="ltx_Math" alttext="\sqrt{2}+\sqrt{5}" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><msqrt><mn>5</mn></msqrt></mrow></math> a rational number or an irrational number? Justify your conclusion.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S3.I12.i8.p1" class="ltx_para">
+<ol id="S3.I12.i8.I1" class="ltx_enumerate">
+<li id="S3.I12.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that for each real number <math id="S3.I12.i8.I1.i1.p1.m1" class="ltx_Math" alttext="x,(x+\sqrt{2})" display="inline"><mrow><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is irrational or <math id="S3.I12.i8.I1.i1.p1.m2" class="ltx_Math" alttext="(-x+\sqrt{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>−</mo><mi>x</mi></mrow><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I12.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Generalize the proposition in Part (a) for any irrational number (instead of just <math id="S3.I12.i8.I1.i2.p1.m1" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math>) and then prove the new proposition.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S3.I12.i9.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false?</p>
+</div>
+<div id="S3.I12.i9.p2" class="ltx_para">
+<p class="ltx_p">For all positive real numbers <math id="S3.I12.i9.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i9.p2.m2" class="ltx_Math" alttext="y,\sqrt{x+y}\leq\sqrt{x}+\sqrt{y}" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><msqrt><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></msqrt></mrow><mo>≤</mo><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><msqrt><mi>y</mi></msqrt></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S3.I12.i10.p1" class="ltx_para">
+<p class="ltx_p">Is the following proposition true or false? Justify your conclusion.</p>
+</div>
+<div id="S3.I12.i10.p2" class="ltx_para">
+<p class="ltx_p">For each real number <math id="S3.I12.i10.p2.m1" class="ltx_Math" alttext="x,x(1-x)\leq\frac{1}{4}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S3.I12.i11.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i11.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+<ol id="S3.I12.i11.I1" class="ltx_enumerate">
+<li id="S3.I12.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the base 2 logarithm of <math id="S3.I12.i11.I1.i1.p1.m1" class="ltx_Math" alttext="32,\log_{2}(32)" display="inline"><mrow><mn>32</mn><mo>,</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>32</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, a rational number or an irrational number? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S3.I12.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the base 2 logarithm of <math id="S3.I12.i11.I1.i2.p1.m1" class="ltx_Math" alttext="3,\log_{2}(3)" display="inline"><mrow><mn>3</mn><mo>,</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, a rational number or an irrational number? Justify your conclusion.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S3.I12.i12.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i12.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> In Exercise (15) in Section 3.2, we proved that there exists a real number solution to the equation <math id="S3.I12.i12.p1.m2" class="ltx_Math" alttext="x^{3}-4x^{2}=7" display="inline"><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>7</mn></mrow></math>. Prove that there is no integer <math id="S3.I12.i12.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that <math id="S3.I12.i12.p1.m4" class="ltx_Math" alttext="x^{3}-4x^{2}=7" display="inline"><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>7</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S3.I12.i13.p1" class="ltx_para">
+<p class="ltx_p">Prove each of the following propositions:</p>
+<ol id="S3.I12.i13.I1" class="ltx_enumerate">
+<li id="S3.I12.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i13.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each real number <math id="S3.I12.i13.I1.i1.p1.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, if <math id="S3.I12.i13.I1.i1.p1.m3" class="ltx_Math" alttext="0&lt;\theta&lt;\frac{\pi}{2}" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>θ</mi><mo>&lt;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></math>, then <math id="S3.I12.i13.I1.i1.p1.m4" class="ltx_Math" alttext="[\sin(\theta)+\cos(\theta)]&gt;1" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I12.i13.I1.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i13.I1.i2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I12.i13.I1.i2.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.I12.i13.I1.i2.p1.m4" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math>, then <math id="S3.I12.i13.I1.i2.p1.m5" class="ltx_Math" alttext="\sqrt{a^{2}+b^{2}}\neq a+b" display="inline"><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt><mo>≠</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i13.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i13.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I12.i13.I1.i3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an integer greater than 2, then for all integers <math id="S3.I12.i13.I1.i3.p1.m2" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math> does not divide <math id="S3.I12.i13.I1.i3.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> or <math id="S3.I12.i13.I1.i3.p1.m4" class="ltx_Math" alttext="n+m\neq nm" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow><mo>≠</mo><mrow><mi>n</mi><mo>⁢</mo><mi>m</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i13.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I12.i13.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I12.i13.I1.i4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i13.I1.i4.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I12.i13.I1.i4.p1.m3" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S3.I12.i13.I1.i4.p1.m4" class="ltx_Math" alttext="b&gt;0" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then</p>
+</div>
+<div id="S3.I12.i13.I1.i4.p2" class="ltx_para">
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex19.m1" class="ltx_Math" alttext="\frac{2}{a}+\frac{2}{b}\neq\frac{4}{a+b}" display="block"><mrow><mrow><mfrac><mn>2</mn><mi>a</mi></mfrac><mo>+</mo><mfrac><mn>2</mn><mi>b</mi></mfrac></mrow><mo>≠</mo><mfrac><mn>4</mn><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S3.I12.i14.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I12.i14.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove that there do not exist three consecutive natural numbers such that the cube of the largest is equal to the sum of the cubes of the other two.</p>
+</div>
+</li>
+<li id="S3.I12.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="S3.I12.i15.p1" class="ltx_para">
+<p class="ltx_p">Three natural numbers <math id="S3.I12.i15.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I12.i15.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I12.i15.p1.m3" class="ltx_Math" alttext="a&lt;b&lt;c" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mi>c</mi></mrow></math> are called a Pythagorean triple provided that <math id="S3.I12.i15.p1.m4" class="ltx_Math" alttext="a^{2}+b^{2}=c^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>. For example, the numbers 3, 4, and 5 form a Pythagorean triple, and the numbers 5, 12, and 13 form a Pythagorean triple.</p>
+<ol id="S3.I12.i15.I1" class="ltx_enumerate">
+<li id="S3.I12.i15.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i15.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Verify that if <math id="S3.I12.i15.I1.i1.p1.m1" class="ltx_Math" alttext="a=20,b=21" display="inline"><mrow><mrow><mi>a</mi><mo>=</mo><mn>20</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mn>21</mn></mrow></mrow></math>, and <math id="S3.I12.i15.I1.i1.p1.m2" class="ltx_Math" alttext="c=29" display="inline"><mrow><mi>c</mi><mo>=</mo><mn>29</mn></mrow></math>, then <math id="S3.I12.i15.I1.i1.p1.m3" class="ltx_Math" alttext="a^{2}+b^{2}=c^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>, and hence, 20, 21, and 29 form a Pythagorean triple.</p>
+</div>
+</li>
+<li id="S3.I12.i15.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i15.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine two other Pythagorean triples. That is, find integers <math id="S3.I12.i15.I1.i2.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I12.i15.I1.i2.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that <math id="S3.I12.i15.I1.i2.p1.m3" class="ltx_Math" alttext="a^{2}+b^{2}=c^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i15.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i15.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the following proposition true or false? Justify your conclusion.</p>
+</div>
+<div id="S3.I12.i15.I1.i3.p2" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I12.i15.I1.i3.p2.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I12.i15.I1.i3.p2.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, if <math id="S3.I12.i15.I1.i3.p2.m3" class="ltx_Math" alttext="a^{2}+b^{2}=c^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>, then <math id="S3.I12.i15.I1.i3.p2.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is even or <math id="S3.I12.i15.I1.i3.p2.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is even.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="S3.I12.i16.p1" class="ltx_para">
+<p class="ltx_p">Consider the following proposition: There are no integers <math id="S3.I12.i16.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i16.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> such that <math id="S3.I12.i16.p1.m3" class="ltx_Math" alttext="b^{2}=4a+2" display="inline"><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math>.</p>
+<ol id="S3.I12.i16.I1" class="ltx_enumerate">
+<li id="S3.I12.i16.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i16.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Rewrite this statement in an equivalent form using a universal quantifier by completing the following:</p>
+</div>
+<div id="S3.I12.i16.I1.i1.p2" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I12.i16.I1.i1.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i16.I1.i1.p2.m2" class="ltx_Math" alttext="b,\ldots" display="inline"><mrow><mi>b</mi><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I12.i16.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i16.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove the statement in Part (a).</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I12.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="S3.I12.i17.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false? Justify your conclusion.</p>
+</div>
+<div id="S3.I12.i17.p2" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I12.i17.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> that is greater than 1, if <math id="S3.I12.i17.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is the smallest positive factor of <math id="S3.I12.i17.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> that is greater than 1, then <math id="S3.I12.i17.p2.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is prime.</p>
+</div>
+<div id="S3.I12.i17.p3" class="ltx_para">
+<p class="ltx_p">See Exercise (13) in <a href="https://johnweeks03.github.io/teaching/300/2-4.html">Section 2.4</a> for the definition of a prime number and the definition of a composite number.</p>
+</div>
+</li>
+<li id="S3.I12.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="S3.I12.i18.p1" class="ltx_para">
+<p class="ltx_p">A magic square is a square array of natural numbers whose rows, columns, and diagonals all sum to the same number. For example, the following is a 3 by 3 magic square since the sum of the 3 numbers in each row is equal to 15, the sum of the 3 numbers in each column is equal to 15, and the sum of the 3 numbers in each diagonal is equal to 15 .</p>
+</div>
+<div id="S3.I12.i18.p2" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t">8</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">3</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">4</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">5</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">9</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">6</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">7</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.I12.i18.p3" class="ltx_para">
+<p class="ltx_p">Prove that the following 4 by 4 square cannot be completed to form a magic square.</p>
+</div>
+<div id="S3.I12.i18.p4" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t"></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">1</th>
+<th class="ltx_td ltx_th ltx_th_column ltx_border_r ltx_border_t"></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">2</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">4</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">5</td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">6</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">7</td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">8</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">9</td>
+<td class="ltx_td ltx_border_b ltx_border_r ltx_border_t"></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">10</td>
+<td class="ltx_td ltx_border_b ltx_border_r ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li id="S3.I12.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">19.</span> 
+<div id="S3.I12.i19.p1" class="ltx_para">
+<p class="ltx_p">Using only the digits 1 through 9 one time each, is it possible to construct a 3 by 3 magic square with the digit 3 in the center square? That is, is it possible to construct a magic square of the form</p>
+</div>
+<div id="S3.I12.i19.p2" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t"><math id="S3.I12.i19.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S3.I12.i19.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S3.I12.i19.m3" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.I12.i19.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.I12.i19.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><math id="S3.I12.i19.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><math id="S3.I12.i19.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><math id="S3.I12.i19.m8" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.I12.i19.p3" class="ltx_para">
+<p class="ltx_p">where <math id="S3.I12.i19.p3.m1" class="ltx_Math" alttext="a,b,c,d,e,f,g,h" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>h</mi></mrow></math> are all distinct digits, none of which is equal to 3? Either construct such a magic square or prove that it is not possible.</p>
+</div>
+</li>
+<li id="S3.I12.i20" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">20.</span> 
+<div id="S3.I12.i20.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of proofs.</span> See the instructions for Exercise (19) from <a href="https://johnweeks03.github.io/teaching/300/3-1.html">Section 3.1.</a></p>
+<ol id="S3.I12.i20.I1" class="ltx_enumerate">
+<li id="S3.I12.i20.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I12.i20.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For each real number <math id="S3.I12.i20.I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, if <math id="S3.I12.i20.I1.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational and <math id="S3.I12.i20.I1.i1.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is an integer, then <math id="S3.I12.i20.I1.i1.p1.m4" class="ltx_Math" alttext="mx" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>x</mi></mrow></math> is irrational.</p>
+</div>
+<div id="S3.I12.i20.I1.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We assume that <math id="S3.I12.i20.I1.i1.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a real number and is irrational. This means that for all integers <math id="S3.I12.i20.I1.i1.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I12.i20.I1.i1.p2.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> with <math id="S3.I12.i20.I1.i1.p2.m4" class="ltx_Math" alttext="b\neq 0,x\neq\frac{a}{b}" display="inline"><mrow><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>x</mi><mo>≠</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></mrow></math>. Hence, we may conclude that <math id="S3.I12.i20.I1.i1.p2.m5" class="ltx_Math" alttext="mx\neq\frac{ma}{b}" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>x</mi></mrow><mo>≠</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi></mrow><mi>b</mi></mfrac></mrow></math> and, therefore, <math id="S3.I12.i20.I1.i1.p2.m6" class="ltx_Math" alttext="mx" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>x</mi></mrow></math> is irrational. <math id="S3.I12.i20.I1.i1.p2.m7" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+</li>
+<li id="S3.I12.i20.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I12.i20.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all real numbers <math id="S3.I12.i20.I1.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i20.I1.i2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I12.i20.I1.i2.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational and <math id="S3.I12.i20.I1.i2.p1.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is rational, then <math id="S3.I12.i20.I1.i2.p1.m5" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is irrational.</p>
+</div>
+<div id="S3.I12.i20.I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will use a proof by contradiction. So we assume that the proposition is false, which means that there exist real numbers <math id="S3.I12.i20.I1.i2.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i20.I1.i2.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> where <math id="S3.I12.i20.I1.i2.p2.m3" class="ltx_Math" alttext="x\notin\mathbb{Q},y\in\mathbb{Q}" display="inline"><mrow><mrow><mi>x</mi><mo>∉</mo><mi>ℚ</mi></mrow><mo>,</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℚ</mi></mrow></mrow></math>, and <math id="S3.I12.i20.I1.i2.p2.m4" class="ltx_Math" alttext="x+y\in\mathbb{Q}" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow></math>. Since the rational numbers are closed under subtraction and <math id="S3.I12.i20.I1.i2.p2.m5" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> and <math id="S3.I12.i20.I1.i2.p2.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are rational, we see that</p>
+</div>
+<div id="S3.I12.i20.I1.i2.p3" class="ltx_para">
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="(x+y)-y\in\mathbb{Q}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I12.i20.I1.i2.p4" class="ltx_para">
+<p class="ltx_p">However, <math id="S3.I12.i20.I1.i2.p4.m1" class="ltx_Math" alttext="(x+y)-y=x" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mi>y</mi></mrow><mo>=</mo><mi>x</mi></mrow></math>, and hence we can conclude that <math id="S3.I12.i20.I1.i2.p4.m2" class="ltx_Math" alttext="x\in\mathbb{Q}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>. This is a contradiction to the assumption that <math id="S3.I12.i20.I1.i2.p4.m3" class="ltx_Math" alttext="x\notin\mathbb{Q}" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>ℚ</mi></mrow></math>. Therefore, the proposition is not false, and we have proven that for all real numbers <math id="S3.I12.i20.I1.i2.p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I12.i20.I1.i2.p4.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I12.i20.I1.i2.p4.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational and <math id="S3.I12.i20.I1.i2.p4.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is rational, then <math id="S3.I12.i20.I1.i2.p4.m8" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is irrational.</p>
+</div>
+</li>
+<li id="S3.I12.i20.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I12.i20.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For each real number <math id="S3.I12.i20.I1.i3.p1.m1" class="ltx_Math" alttext="x,x(1-x)\leq\frac{1}{4}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>.</p>
+</div>
+<div id="S3.I12.i20.I1.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. A proof by contradiction will be used. So we assume the proposition is false. This means that there exists a real number <math id="S3.I12.i20.I1.i3.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that <math id="S3.I12.i20.I1.i3.p2.m2" class="ltx_Math" alttext="x(1-x)&gt;\frac{1}{4}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>. If we multiply both sides of this inequality by 4, we obtain <math id="S3.I12.i20.I1.i3.p2.m3" class="ltx_Math" alttext="4x(1-x)&gt;1" display="inline"><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>. However, if we let <math id="S3.I12.i20.I1.i3.p2.m4" class="ltx_Math" alttext="x=3" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>3</mn></mrow></math>, we then see that</p>
+</div>
+<div id="S3.I12.i20.I1.i3.p3" class="ltx_para">
+<table id="S3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex21.m1" class="ltx_Math" alttext="\displaystyle 4x(1-x)" display="inline"><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex21.m2" class="ltx_Math" alttext="\displaystyle&gt;1" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex22.m1" class="ltx_Math" alttext="\displaystyle 4\cdot 3(1-3)" display="inline"><mrow><mrow><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex22.m2" class="ltx_Math" alttext="\displaystyle&gt;1" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex23.m1" class="ltx_Math" alttext="\displaystyle-12" display="inline"><mrow><mo>−</mo><mn>12</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex23.m2" class="ltx_Math" alttext="\displaystyle&gt;1" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I12.i20.I1.i3.p4" class="ltx_para">
+<p class="ltx_p">The last inequality is clearly a contradiction and so we have proved the proposition.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS3.SSS12" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.3.12 </span>Explorations and Activities</h4>
+
+<div id="S3.SS3.SSS12.p1" class="ltx_para">
+<ol id="S3.I13" class="ltx_enumerate">
+<li id="S3.I13.i21" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">21.</span> 
+<div id="S3.I13.i21.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A Proof by Contradiction.</span> Consider the following proposition:</p>
+</div>
+<div id="S3.I13.i21.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. Let <math id="S3.I13.i21.p2.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I13.i21.p2.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be integers. If 3 divides <math id="S3.I13.i21.p2.m3" class="ltx_Math" alttext="a,3" display="inline"><mrow><mi>a</mi><mo>,</mo><mn>3</mn></mrow></math> divides <math id="S3.I13.i21.p2.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, and <math id="S3.I13.i21.p2.m5" class="ltx_Math" alttext="c\equiv 1(\bmod 3)" display="inline"><mrow><mi>c</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then the equation</p>
+</div>
+<div id="S3.I13.i21.p3" class="ltx_para">
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="ax+by=c" display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I13.i21.p4" class="ltx_para">
+<p class="ltx_p">has no solution in which both <math id="S3.I13.i21.p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I13.i21.p4.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are integers.</p>
+</div>
+<div id="S3.I13.i21.p5" class="ltx_para">
+<p class="ltx_p">Complete the following proof of this proposition:</p>
+</div>
+<div id="S3.I13.i21.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. A proof by contradiction will be used. So we assume that the statement is false. That is, we assume that there exist integers <math id="S3.I13.i21.p6.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I13.i21.p6.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that 3 divides both <math id="S3.I13.i21.p6.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I13.i21.p6.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, that <math id="S3.I13.i21.p6.m5" class="ltx_Math" alttext="c\equiv 1(\bmod 3)" display="inline"><mrow><mi>c</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and that the equation</p>
+</div>
+<div id="S3.I13.i21.p7" class="ltx_para">
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex25.m1" class="ltx_Math" alttext="ax+by=c" display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I13.i21.p8" class="ltx_para">
+<p class="ltx_p">has a solution in which both <math id="S3.I13.i21.p8.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I13.i21.p8.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are integers. So there exist integers <math id="S3.I13.i21.p8.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I13.i21.p8.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that</p>
+</div>
+<div id="S3.I13.i21.p9" class="ltx_para">
+<table id="S3.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex26.m1" class="ltx_Math" alttext="am+bn=c." display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>=</mo><mi>c</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I13.i21.p10" class="ltx_para">
+<p class="ltx_p">Hint: Now use the facts that 3 divides <math id="S3.I13.i21.p10.m1" class="ltx_Math" alttext="a,3" display="inline"><mrow><mi>a</mi><mo>,</mo><mn>3</mn></mrow></math> divides <math id="S3.I13.i21.p10.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, and <math id="S3.I13.i21.p10.m3" class="ltx_Math" alttext="c\equiv 1(\bmod 3)" display="inline"><mrow><mi>c</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I13.i22" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">22.</span> 
+<div id="S3.I13.i22.p1" class="ltx_para">
+<p class="ltx_p">Exploring a Quadratic Equation. Consider the following proposition:</p>
+</div>
+<div id="S3.I13.i22.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all integers <math id="S3.I13.i22.p2.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I13.i22.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if <math id="S3.I13.i22.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is odd, then the equation</p>
+</div>
+<div id="S3.I13.i22.p3" class="ltx_para">
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex27.m1" class="ltx_Math" alttext="x^{2}+2mx+2n=0" display="block"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I13.i22.p4" class="ltx_para">
+<p class="ltx_p">has no integer solution for <math id="S3.I13.i22.p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+<ol id="S3.I13.i22.I1" class="ltx_enumerate">
+<li id="S3.I13.i22.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I13.i22.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What are the solutions of the equation when <math id="S3.I13.i22.I1.i1.p1.m1" class="ltx_Math" alttext="m=1" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="S3.I13.i22.I1.i1.p1.m2" class="ltx_Math" alttext="n=-1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>? That is, what are the solutions of the equation <math id="S3.I13.i22.I1.i1.p1.m3" class="ltx_Math" alttext="x^{2}+2x-2=0" display="inline"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>?</p>
+</div>
+</li>
+<li id="S3.I13.i22.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I13.i22.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What are the solutions of the equation when <math id="S3.I13.i22.I1.i2.p1.m1" class="ltx_Math" alttext="m=2" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></math> and <math id="S3.I13.i22.I1.i2.p1.m2" class="ltx_Math" alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>? That is, what are the solutions of the equation <math id="S3.I13.i22.I1.i2.p1.m3" class="ltx_Math" alttext="x^{2}+4x+6=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>6</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>?</p>
+</div>
+</li>
+<li id="S3.I13.i22.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I13.i22.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Solve the resulting quadratic equation for at least two more examples using values of <math id="S3.I13.i22.I1.i3.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I13.i22.I1.i3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> that satisfy the hypothesis of the proposition.</p>
+</div>
+</li>
+<li id="S3.I13.i22.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I13.i22.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For this proposition, why does it seem reasonable to try a proof by contradiction?</p>
+</div>
+</li>
+<li id="S3.I13.i22.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S3.I13.i22.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">For this proposition, state clearly the assumptions that need to be made at the beginning of a proof by contradiction.</p>
+</div>
+</li>
+<li id="S3.I13.i22.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S3.I13.i22.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Use a proof by contradiction to prove this proposition.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div>
+</body>
+</html>
