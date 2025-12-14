@@ -1,0 +1,1687 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Set Theory</title>
+<!--Generated on Sun Dec 14 17:33:27 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S5" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Set Theory</h1>
+
+<section id="S5.SS5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.5 </span>Indexed Families of Sets</h2>
+
+<section id="S5.SS5.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.1 </span>Beginning Activity 1 (The Union and Intersection of a Family of Sets)</h3>
+
+<div id="S5.SS5.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In Section 5.3, we discussed various properties of set operations. We will now focus on the associative properties for set union and set intersection. Notice that the definition of "set union" tells us how to form the union of two sets. It is the associative law that allows us to discuss the union of three sets. Using the associate law, if <math id="S5.SS5.SSS1.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.SS5.SSS1.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> are subsets of some universal set, then we can define <math id="S5.SS5.SSS1.p1.m3" class="ltx_Math" data-alttext="A\cup B\cup C" display="inline"><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></math> to be <math id="S5.SS5.SSS1.p1.m4" class="ltx_Math" data-alttext="(A\cup B)\cup C" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi>C</mi></mrow></math> or <math id="S5.SS5.SSS1.p1.m5" class="ltx_Math" data-alttext="A\cup(B\cup C)" display="inline"><mrow><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. That is,</p>
+</div>
+<div id="S5.SS5.SSS1.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex1.m1" class="ltx_Math" data-alttext="A\cup B\cup C=(A\cup B)\cup C=A\cup(B\cup C)." display="block"><mrow><mrow><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS1.p3" class="ltx_para">
+<p class="ltx_p">For this activity, the universal set is <math id="S5.SS5.SSS1.p3.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> and we will use the following four sets:
+<br class="ltx_break"><math id="S5.SS5.SSS1.p3.m2" class="ltx_Math" data-alttext="A=\{1,2,3,4,5\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">}</mo></mrow></mrow></math>
+<br class="ltx_break"><math id="S5.SS5.SSS1.p3.m3" class="ltx_Math" data-alttext="C=\{3,4,5,6,7\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo stretchy="false">}</mo></mrow></mrow></math>
+<br class="ltx_break"><math id="S5.SS5.SSS1.p3.m4" class="ltx_Math" data-alttext="B=\{2,3,4,5,6\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo stretchy="false">}</mo></mrow></mrow></math>
+<br class="ltx_break"><math id="S5.SS5.SSS1.p3.m5" class="ltx_Math" data-alttext="D=\{4,5,6,7,8\}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>8</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS5.SSS1.p4" class="ltx_para">
+<ol id="S5.I1" class="ltx_enumerate">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the sets <math id="S5.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\cup B\cup C,B\cup C\cup D,A\cap B\cap C" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo>,</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi><mo>∪</mo><mi>D</mi></mrow><mo>,</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>∩</mo><mi>C</mi></mrow></mrow></math>, and <math id="S5.I1.i1.p1.m2" class="ltx_Math" data-alttext="B\cap C\cap D" display="inline"><mrow><mi>B</mi><mo>∩</mo><mi>C</mi><mo>∩</mo><mi>D</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify each of the following sets. In each case, be sure to follow the order specified by the parentheses.</p>
+<ol id="S5.I1.i2.I1" class="ltx_enumerate">
+<li id="S5.I1.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I1.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="(A\cup B\cup C)\cup D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi>D</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I1.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="A\cup(B\cup C\cup D)" display="inline"><mrow><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi><mo>∪</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I1.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="A\cup(B\cup C)\cup D" display="inline"><mrow><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi>D</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I1.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="(A\cup B)\cup(C\cup D)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mo>∪</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I1.i2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i5.p1.m1" class="ltx_Math" data-alttext="(A\cap B\cap C)\cap D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>D</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I1.i2.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i6.p1.m1" class="ltx_Math" data-alttext="A\cap(B\cap C\cap D)" display="inline"><mrow><mi>A</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi><mo>∩</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S5.I1.i2.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i7.p1.m1" class="ltx_Math" data-alttext="A\cap(B\cap C)\cap D" display="inline"><mrow><mi>A</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>D</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I1.i2.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S5.I1.i2.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.I1.i8.p1.m1" class="ltx_Math" data-alttext="(A\cap B)\cap(C\cap D)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mo>∩</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Based on the work in Part (2), does the placement of the parentheses matter when determining the union (or intersection) of these four sets? Does this make it possible to define <math id="S5.I1.i3.p1.m1" class="ltx_Math" data-alttext="A\cup B\cup C\cup D" display="inline"><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi><mo>∪</mo><mi>D</mi></mrow></math> and <math id="S5.I1.i3.p1.m2" class="ltx_Math" data-alttext="A\cap B\cap C\cap D" display="inline"><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>∩</mo><mi>C</mi><mo>∩</mo><mi>D</mi></mrow></math> ?</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS1.p5" class="ltx_para">
+<p class="ltx_p">We have already seen that the elements of a set may themselves be sets. For example, the power set of a set <math id="S5.SS5.SSS1.p5.m1" class="ltx_Math" data-alttext="T,\mathcal{P}(T)" display="inline"><mrow><mi>T</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, is the set of all subsets of <math id="S5.SS5.SSS1.p5.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>. The phrase, "a set of sets" sounds confusing, and so we often use the terms collection and family when we wish to emphasize that the elements of a given set are themselves sets. We would then say that the power set of <math id="S5.SS5.SSS1.p5.m3" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is the family (or collection) of sets that are subsets of <math id="S5.SS5.SSS1.p5.m4" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+<div id="S5.SS5.SSS1.p6" class="ltx_para">
+<p class="ltx_p">One of the purposes of the work we have done so far in this activity was to show that it is possible to define the union and intersection of a family of sets.</p>
+</div>
+<div id="S5.SS5.SSS1.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S5.SS5.SSS1.p7.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a family of sets. The <span class="ltx_text ltx_font_bold">union</span> of <math id="S5.SS5.SSS1.p7.m2" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is defined as the set of all elements that are in at least one of the sets in <math id="S5.SS5.SSS1.p7.m3" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. We write</p>
+</div>
+<div id="S5.SS5.SSS1.p8" class="ltx_para">
+<table role="presentation" id="S5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex2.m1" class="ltx_Math" data-alttext="\bigcup_{X\in\mathfrak{C}}X=\{x\in U\mid x\in X\text{ for some }X\in\mathcal{C}\}" display="block"><mrow><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi>ℭ</mi></mrow></munder><mi>X</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>X</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>X</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS1.p9" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">intersection</span> of <math id="S5.SS5.SSS1.p9.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is defined as the set of all elements that are in all of the sets in <math id="S5.SS5.SSS1.p9.m2" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. That is,</p>
+</div>
+<div id="S5.SS5.SSS1.p10" class="ltx_para">
+<table role="presentation" id="S5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex3.m1" class="ltx_Math" data-alttext="\bigcap_{X\in\mathcal{C}}X=\{x\in U\mid x\in X\text{ for all }X\in\mathcal{C}\}" display="block"><mrow><mrow><munder><mo movablelimits="false">⋂</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></munder><mi>X</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>X</mi><mo>⁢</mo><mtext> for all </mtext><mo>⁢</mo><mi>X</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS1.p11" class="ltx_para">
+<p class="ltx_p">For example, consider the four sets <math id="S5.SS5.SSS1.p11.m1" class="ltx_Math" data-alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math>, and <math id="S5.SS5.SSS1.p11.m2" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> used earlier in this activity and the sets</p>
+</div>
+<div id="S5.SS5.SSS1.p12" class="ltx_para">
+<table role="presentation" id="S5.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex4.m1" class="ltx_Math" data-alttext="S=\{5,6,7,8,9\}\quad\text{ and }\quad T=\{6,7,8,9,10\}." display="block"><mrow><mrow><mrow><mi>S</mi><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>10</mn><mo stretchy="false">}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS1.p13" class="ltx_para">
+<p class="ltx_p">We can then consider the following families of sets: <math id="S5.SS5.SSS1.p13.m1" class="ltx_Math" data-alttext="\mathcal{A}=\{A,B,C,D\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.SS5.SSS1.p13.m2" class="ltx_Math" data-alttext="\mathcal{B}=\{A,B,C,D,S,T\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S5.I2" class="ltx_enumerate">
+<li id="S5.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why</p>
+</div>
+<div id="S5.I2.i1.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex5.m1" class="ltx_Math" data-alttext="\bigcup_{X\in\mathcal{A}}X=A\cup B\cup C\cup D\quad\text{ and }\quad\bigcap_{X%
+\in\mathcal{A}}X=A\cap B\cap C\cap D," display="block"><mrow><mrow><mrow><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></munder><mi>X</mi></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi><mo>∪</mo><mi>D</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><munder><mo movablelimits="false">⋂</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></munder><mi>X</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>∩</mo><mi>C</mi><mo>∩</mo><mi>D</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.I2.i1.p3" class="ltx_para">
+<p class="ltx_p">and use your work in (1), (2), and (3) to determine <math id="S5.I2.i1.p3.m1" class="ltx_Math" data-alttext="\bigcup_{X\in\mathcal{A}}X" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></msub><mi>X</mi></mrow></math> and <math id="S5.I2.i1.p3.m2" class="ltx_Math" data-alttext="\bigcap_{X\in\mathcal{A}}X" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></msub><mi>X</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify <math id="S5.I2.i2.p1.m1" class="ltx_Math" data-alttext="\bigcup_{X\in\mathcal{B}}X" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></msub><mi>X</mi></mrow></math> and <math id="S5.I2.i2.p1.m2" class="ltx_Math" data-alttext="\bigcap_{X\in\mathcal{B}}X" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></msub><mi>X</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the sets <math id="S5.I2.i3.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{X\in\mathcal{A}}X\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></msub><mi>X</mi></mrow><mo>)</mo></mrow><mi>c</mi></msup></math> and <math id="S5.I2.i3.p1.m2" class="ltx_Math" data-alttext="\bigcap_{X\in\mathcal{A}}X^{c}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>X</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></msub><msup><mi>X</mi><mi>c</mi></msup></mrow></math>. Remember that the universal set is <math id="S5.I2.i3.p1.m3" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS5.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.2 </span>Beginning Activity 2 (An Indexed Family of Sets)</h3>
+
+<div id="S5.SS5.SSS2.p1" class="ltx_para">
+<p class="ltx_p">We often use subscripts to identify sets. For example, in Beginning Activity 1, instead of using <math id="S5.SS5.SSS2.p1.m1" class="ltx_Math" data-alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math>, and <math id="S5.SS5.SSS2.p1.m2" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> as the names of the sets, we could have used <math id="S5.SS5.SSS2.p1.m3" class="ltx_Math" data-alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math>, <math id="S5.SS5.SSS2.p1.m4" class="ltx_Math" data-alttext="A_{2},A_{3}" display="inline"><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><msub><mi>A</mi><mn>3</mn></msub></mrow></math>, and <math id="S5.SS5.SSS2.p1.m5" class="ltx_Math" data-alttext="A_{4}" display="inline"><msub><mi>A</mi><mn>4</mn></msub></math>. When we do this, we are using the subscript as an identifying tag, or index, for each set. We can also use this idea to specify an infinite family of sets. For example, for each natural number <math id="S5.SS5.SSS2.p1.m6" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, we define</p>
+</div>
+<div id="S5.SS5.SSS2.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex6.m1" class="ltx_Math" data-alttext="C_{n}=\{n,n+1,n+2,n+3,n+4\}." display="block"><mrow><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>3</mn></mrow><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS2.p3" class="ltx_para">
+<p class="ltx_p">So if we have a family of sets <math id="S5.SS5.SSS2.p3.m1" class="ltx_Math" data-alttext="\mathcal{C}=\left\{C_{1},C_{2},C_{3},C_{4}\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>C</mi><mn>1</mn></msub><mo>,</mo><msub><mi>C</mi><mn>2</mn></msub><mo>,</mo><msub><mi>C</mi><mn>3</mn></msub><mo>,</mo><msub><mi>C</mi><mn>4</mn></msub><mo>}</mo></mrow></mrow></math>, we use the notation <math id="S5.SS5.SSS2.p3.m2" class="ltx_Math" data-alttext="\bigcup_{j=1}^{4}C_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math> to mean the same thing as <math id="S5.SS5.SSS2.p3.m3" class="ltx_Math" data-alttext="\bigcup_{X\in\mathfrak{C}}X" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi>ℭ</mi></mrow></msub><mi>X</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS5.SSS2.p4" class="ltx_para">
+<ol id="S5.I3" class="ltx_enumerate">
+<li id="S5.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I3.i1.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{4}C_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math> and <math id="S5.I3.i1.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=1}^{4}C_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS2.p5" class="ltx_para">
+<p class="ltx_p">We can see that with the use of subscripts, we do not even have to define the family of sets <math id="S5.SS5.SSS2.p5.m1" class="ltx_Math" data-alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. We can work with the infinite family of sets</p>
+</div>
+<div id="S5.SS5.SSS2.p6" class="ltx_para">
+<table role="presentation" id="S5.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex7.m1" class="ltx_Math" data-alttext="\mathcal{C}^{*}=\left\{A_{n}\mid n\in\mathbb{N}\right\}" display="block"><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>∗</mo></msup><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>n</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS2.p7" class="ltx_para">
+<p class="ltx_p">and use the subscripts to indicate which sets to use in a union or an intersection.</p>
+<ol id="S5.I4" class="ltx_enumerate">
+<li id="S5.I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I4.i4.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify each of the following pairs of sets. The universal set is <math id="S5.I4.i4.p1.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>.</p>
+<ol id="S5.I4.i4.I1" class="ltx_enumerate">
+<li id="S5.I4.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I4.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i4.I1.i1.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{6}C_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>6</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math> and <math id="S5.I4.i4.I1.i1.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=1}^{6}C_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>6</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I4.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i4.I1.i2.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{8}C_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>8</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math> and <math id="S5.I4.i4.I1.i2.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=1}^{8}C_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>8</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I4.i4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i4.I1.i3.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=4}^{8}C_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>4</mn></mrow><mn>8</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math> and <math id="S5.I4.i4.I1.i3.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=4}^{8}C_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>4</mn></mrow><mn>8</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i4.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I4.i4.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i4.I1.i4.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{j=1}^{4}C_{j}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msubsup><mo lspace="0em">⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></msubsup><msub><mi>C</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></math> and <math id="S5.I4.i4.I1.i4.p1.m2" class="ltx_Math" data-alttext="\bigcup_{j=1}^{4}C_{j}^{c}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></msubsup><msubsup><mi>C</mi><mi>j</mi><mi>c</mi></msubsup></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS5.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.3 </span>The Union and Intersection of an Indexed Family of Sets</h3>
+
+<div id="S5.SS5.SSS3.p1" class="ltx_para">
+<p class="ltx_p">One of the purposes of the beginning activities was to show that we often encounter situations in which more than two sets are involved, and it is possible to define the union and intersection of more than two sets. In Beginning Activity 2, we also saw that it is often convenient to "index" the sets in a family of sets. In particular, if <math id="S5.SS5.SSS3.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is a natural number and <math id="S5.SS5.SSS3.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{1},A_{2},\ldots,A_{n}\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>A</mi><mi>n</mi></msub><mo>}</mo></mrow></mrow></math> is a family of <math id="S5.SS5.SSS3.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> sets, then the union of these <math id="S5.SS5.SSS3.p1.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> sets, denoted by <math id="S5.SS5.SSS3.p1.m5" class="ltx_Math" data-alttext="A_{1}\cup A_{2}\cup\cdots\cup A_{n}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub><mo>∪</mo><mi mathvariant="normal">⋯</mi><mo>∪</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math> or <math id="S5.SS5.SSS3.p1.m6" class="ltx_Math" data-alttext="\bigcup_{j=1}^{n}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math>, is defined as</p>
+</div>
+<div id="S5.SS5.SSS3.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex8.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{n}A_{j}=\left\{x\in U\mid x\in A_{j},\text{ for some }j\text{ %
+with }1\leq j\leq n\right\}." display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>,</mo><mrow><mrow><mtext> for some </mtext><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mtext> with </mtext><mo>⁢</mo><mn>1</mn></mrow><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS3.p3" class="ltx_para">
+<p class="ltx_p">We can also define the intersection of these <math id="S5.SS5.SSS3.p3.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> sets, denoted by <math id="S5.SS5.SSS3.p3.m2" class="ltx_Math" data-alttext="A_{1}\cap A_{2}\cap\cdots\cap A_{n}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>A</mi><mn>2</mn></msub><mo>∩</mo><mi mathvariant="normal">⋯</mi><mo>∩</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math> or <math id="S5.SS5.SSS3.p3.m3" class="ltx_Math" data-alttext="\bigcap_{j=1}^{n}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math>, as</p>
+</div>
+<div id="S5.SS5.SSS3.p4" class="ltx_para">
+<table role="presentation" id="S5.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex9.m1" class="ltx_Math" data-alttext="\bigcap_{j=1}^{n}A_{j}=\left\{x\in U\mid x\in A_{j},\text{ for all }j\text{ %
+with }1\leq j\leq n\right\}." display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>,</mo><mrow><mrow><mtext> for all </mtext><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mtext> with </mtext><mo>⁢</mo><mn>1</mn></mrow><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS3.p5" class="ltx_para">
+<p class="ltx_p">We can also extend this idea to define the union and intersection of a family that consists of infinitely many sets. So if <math id="S5.SS5.SSS3.p5.m1" class="ltx_Math" data-alttext="\mathcal{B}=\left\{B_{1},B_{2},\ldots,B_{n},\ldots\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><msub><mi>B</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>B</mi><mi>n</mi></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>}</mo></mrow></mrow></math>, then</p>
+</div>
+<div id="S5.SS5.SSS3.p6" class="ltx_para">
+<table role="presentation" id="S5.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex10.m1" class="ltx_Math" data-alttext="\displaystyle\bigcup_{j=1}^{\infty}B_{j}=\left\{x\in U\mid x\in B_{j},\text{ %
+for some }j\text{ with }j\geq 1\right\},\text{ and }" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>B</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>x</mi><mo>∈</mo><msub><mi>B</mi><mi>j</mi></msub></mrow><mo>,</mo><mrow><mrow><mtext> for some </mtext><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mtext> with </mtext><mo>⁢</mo><mi>j</mi></mrow><mo>≥</mo><mn>1</mn></mrow></mrow><mo>}</mo></mrow><mo>,</mo><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex11.m1" class="ltx_Math" data-alttext="\displaystyle\bigcap_{j=1}^{\infty}B_{j}=\left\{x\in U\mid x\in B_{j},\text{ %
+for all }j\text{ with }j\geq 1\right\}" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>B</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>x</mi><mo>∈</mo><msub><mi>B</mi><mi>j</mi></msub></mrow><mo>,</mo><mrow><mrow><mtext> for all </mtext><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mtext> with </mtext><mo>⁢</mo><mi>j</mi></mrow><mo>≥</mo><mn>1</mn></mrow></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S5.SS5.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.4 </span>Progress Check 5.26 (An Infinite Family of Sets)</h3>
+
+<div id="S5.SS5.SSS4.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S5.SS5.SSS4.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S5.SS5.SSS4.p1.m2" class="ltx_Math" data-alttext="A_{n}=\left\{1,n,n^{2}\right\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo>{</mo><mn>1</mn><mo>,</mo><mi>n</mi><mo>,</mo><msup><mi>n</mi><mn>2</mn></msup><mo>}</mo></mrow></mrow></math>. For example,</p>
+</div>
+<div id="S5.SS5.SSS4.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex12.m1" class="ltx_Math" data-alttext="A_{1}=\{1\}\quad A_{2}=\{1,2,4\},\quad A_{3}=\{1,3,9\}" display="block"><mrow><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS4.p3" class="ltx_para">
+<p class="ltx_p">and</p>
+</div>
+<div id="S5.SS5.SSS4.p4" class="ltx_para">
+<table role="presentation" id="S5.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex13.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{3}A_{j}=\{1,2,3,4,9\},\quad\bigcap_{j=1}^{3}A_{j}=\{1\}" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow></mrow><mo rspace="1.000em">,</mo><mrow><mrow><munderover><mo movablelimits="false">⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS4.p5" class="ltx_para">
+<p class="ltx_p">Determine each of the following sets:</p>
+</div>
+<div id="S5.SS5.SSS4.p6" class="ltx_para">
+<ol id="S5.I5" class="ltx_enumerate">
+<li id="S5.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i1.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{6}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>6</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I5.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i2.p1.m1" class="ltx_Math" data-alttext="\bigcap_{j=1}^{6}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>6</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I5.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i3.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=3}^{6}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mn>6</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I5.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i4.p1.m1" class="ltx_Math" data-alttext="\bigcap_{j=3}^{6}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mn>6</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I5.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i5.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{\infty}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I5.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i6.p1.m1" class="ltx_Math" data-alttext="\bigcap_{j=1}^{\infty}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS4.p7" class="ltx_para">
+<p class="ltx_p">In all of the examples we have studied so far, we have used <math id="S5.SS5.SSS4.p7.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> or a subset of <math id="S5.SS5.SSS4.p7.m2" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> to index or label the sets in a family of sets. We can use other sets to index or label sets in a family of sets. For example, for each real number <math id="S5.SS5.SSS4.p7.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>, we can define <math id="S5.SS5.SSS4.p7.m4" class="ltx_Math" data-alttext="B_{x}" display="inline"><msub><mi>B</mi><mi>x</mi></msub></math> to be the closed interval <math id="S5.SS5.SSS4.p7.m5" class="ltx_Math" data-alttext="[x,x+2]" display="inline"><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">]</mo></mrow></math>. That is,</p>
+</div>
+<div id="S5.SS5.SSS4.p8" class="ltx_para">
+<table role="presentation" id="S5.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex14.m1" class="ltx_Math" data-alttext="B_{x}=\{y\in\mathbb{R}\mid x\leq y\leq x+2\}" display="block"><mrow><msub><mi>B</mi><mi>x</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≤</mo><mi>y</mi><mo>≤</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS4.p9" class="ltx_para">
+<p class="ltx_p">So we make the following definition. In this definition, <math id="S5.SS5.SSS4.p9.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is the uppercase Greek letter lambda and <math id="S5.SS5.SSS4.p9.m2" class="ltx_Math" data-alttext="\alpha" display="inline"><mi>α</mi></math> is the lowercase Greek letter alpha.</p>
+</div>
+<div id="S5.SS5.SSS4.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S5.SS5.SSS4.p10.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty set and suppose that for each <math id="S5.SS5.SSS4.p10.m2" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>, there is a corresponding set <math id="S5.SS5.SSS4.p10.m3" class="ltx_Math" data-alttext="A_{\alpha}" display="inline"><msub><mi>A</mi><mi>α</mi></msub></math>. The family of sets <math id="S5.SS5.SSS4.p10.m4" class="ltx_Math" data-alttext="\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></math> is called an <span class="ltx_text ltx_font_bold">indexed family of sets indexed by</span> <math id="S5.SS5.SSS4.p10.m5" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>. Each <math id="S5.SS5.SSS4.p10.m6" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math> is called an <span class="ltx_text ltx_font_bold">index</span> and <math id="S5.SS5.SSS4.p10.m7" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is called an <span class="ltx_text ltx_font_bold">indexing set</span>.</p>
+</div>
+</section>
+<section id="S5.SS5.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.5 </span>Progress Check 5.27 (Indexed Families of Sets)</h3>
+
+<div id="S5.SS5.SSS5.p1" class="ltx_para">
+<p class="ltx_p">In each of the indexed families of sets that we seen so far, if the indices were different, then the sets were different. That is, if <math id="S5.SS5.SSS5.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is an indexing set for the family of sets <math id="S5.SS5.SSS5.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math>, then if <math id="S5.SS5.SSS5.p1.m3" class="ltx_Math" data-alttext="\alpha,\beta\in\Lambda" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math> and <math id="S5.SS5.SSS5.p1.m4" class="ltx_Math" data-alttext="\alpha\neq\beta" display="inline"><mrow><mi>α</mi><mo>≠</mo><mi>β</mi></mrow></math>, then <math id="S5.SS5.SSS5.p1.m5" class="ltx_Math" data-alttext="A_{\alpha}\neq A_{\beta}" display="inline"><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>≠</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>. (Note: The letter <math id="S5.SS5.SSS5.p1.m6" class="ltx_Math" data-alttext="\beta" display="inline"><mi>β</mi></math> is the Greek lowercase beta.)</p>
+</div>
+<div id="S5.SS5.SSS5.p2" class="ltx_para">
+<ol id="S5.I6" class="ltx_enumerate">
+<li id="S5.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i1.p1.m1" class="ltx_Math" data-alttext="\Lambda=\{1,2,3,4\}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math>, and for each <math id="S5.I6.i1.p1.m2" class="ltx_Math" data-alttext="n\in\Lambda" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>, let <math id="S5.I6.i1.p1.m3" class="ltx_Math" data-alttext="A_{n}=\{2n+6,16-2n\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>6</mn></mrow><mo>,</mo><mrow><mn>16</mn><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and let <math id="S5.I6.i1.p1.m4" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{1},A_{2},A_{3},A_{4}\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><msub><mi>A</mi><mn>3</mn></msub><mo>,</mo><msub><mi>A</mi><mn>4</mn></msub><mo>}</mo></mrow></mrow></math>. Determine <math id="S5.I6.i1.p1.m5" class="ltx_Math" data-alttext="A_{1},A_{2},A_{3}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><msub><mi>A</mi><mn>3</mn></msub></mrow></math>, and <math id="S5.I6.i1.p1.m6" class="ltx_Math" data-alttext="A_{4}" display="inline"><msub><mi>A</mi><mn>4</mn></msub></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false for the indexed family <math id="S5.I6.i2.p1.m1" class="ltx_Math" data-alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> in (1)?</p>
+</div>
+<div id="S5.I6.i2.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S5.I6.i2.p2.m1" class="ltx_Math" data-alttext="m,n\in\Lambda" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>, if <math id="S5.I6.i2.p2.m2" class="ltx_Math" data-alttext="m\neq n" display="inline"><mrow><mi>m</mi><mo>≠</mo><mi>n</mi></mrow></math>, then <math id="S5.I6.i2.p2.m3" class="ltx_Math" data-alttext="A_{m}\neq A_{n}" display="inline"><mrow><msub><mi>A</mi><mi>m</mi></msub><mo>≠</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I6.i3.p1" class="ltx_para">
+<p class="ltx_p">Now let <math id="S5.I6.i3.p1.m1" class="ltx_Math" data-alttext="\Lambda=\mathbb{R}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mi>ℝ</mi></mrow></math>. For each <math id="S5.I6.i3.p1.m2" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, define <math id="S5.I6.i3.p1.m3" class="ltx_Math" data-alttext="B_{x}=\left\{0,x^{2},x^{4}\right\}" display="inline"><mrow><msub><mi>B</mi><mi>x</mi></msub><mo>=</mo><mrow><mo>{</mo><mn>0</mn><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup><mo>,</mo><msup><mi>x</mi><mn>4</mn></msup><mo>}</mo></mrow></mrow></math>. Is the following statement true for the indexed family of sets <math id="S5.I6.i3.p1.m4" class="ltx_Math" data-alttext="\mathcal{B}=\left\{B_{x}\mid x\in\mathbb{R}\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>B</mi><mi>x</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math> ?</p>
+</div>
+<div id="S5.I6.i3.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S5.I6.i3.p2.m1" class="ltx_Math" data-alttext="x,y\in\mathbb{R}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>, if <math id="S5.I6.i3.p2.m2" class="ltx_Math" data-alttext="x\neq y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math>, then <math id="S5.I6.i3.p2.m3" class="ltx_Math" data-alttext="B_{x}\neq B_{y}" display="inline"><mrow><msub><mi>B</mi><mi>x</mi></msub><mo>≠</mo><msub><mi>B</mi><mi>y</mi></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">We now restate the definitions of the union and intersection of a family of sets for an indexed family of sets.</p>
+</div>
+<div id="S5.SS5.SSS5.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S5.SS5.SSS5.p3.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.SS5.SSS5.p3.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets. The <span class="ltx_text ltx_font_bold">union</span> over <math id="S5.SS5.SSS5.p3.m3" class="ltx_Math" data-alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is defined as the set of all elements that are in at least one of sets <math id="S5.SS5.SSS5.p3.m4" class="ltx_Math" data-alttext="A_{\alpha}" display="inline"><msub><mi>A</mi><mi>α</mi></msub></math>, where <math id="S5.SS5.SSS5.p3.m5" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>. We write</p>
+</div>
+<div id="S5.SS5.SSS5.p4" class="ltx_para">
+<table role="presentation" id="S5.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex15.m1" class="ltx_Math" data-alttext="\bigcup_{\alpha\in\Lambda}A_{\alpha}=\left\{x\in U\mid\text{ there exists an }%
+\alpha\in\Lambda\text{ with }x\in A_{\alpha}\right\}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mtext> there exists an </mtext><mo>⁢</mo><mi>α</mi></mrow><mo>∈</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mtext> with </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS5.p5" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">intersection</span> over <math id="S5.SS5.SSS5.p5.m1" class="ltx_Math" data-alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is the set of all elements that are in all of the sets <math id="S5.SS5.SSS5.p5.m2" class="ltx_Math" data-alttext="A_{\alpha}" display="inline"><msub><mi>A</mi><mi>α</mi></msub></math> for each <math id="S5.SS5.SSS5.p5.m3" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>. That is,</p>
+</div>
+<div id="S5.SS5.SSS5.p6" class="ltx_para">
+<table role="presentation" id="S5.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex16.m1" class="ltx_Math" data-alttext="\bigcap_{\alpha\in\Lambda}A_{\alpha}=\left\{x\in U\mid\text{ for all }\alpha%
+\in\Lambda,x\in A_{\alpha}\right\}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mrow><mtext> for all </mtext><mo>⁢</mo><mi>α</mi></mrow><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S5.SS5.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.6 </span>Example 5.28 (A Family of Sets Indexed by the Positive Real Numbers)</h3>
+
+<div id="S5.SS5.SSS6.p1" class="ltx_para">
+<p class="ltx_p">For each positive real number <math id="S5.SS5.SSS6.p1.m1" class="ltx_Math" data-alttext="\alpha" display="inline"><mi>α</mi></math>, let <math id="S5.SS5.SSS6.p1.m2" class="ltx_Math" data-alttext="A_{\alpha}" display="inline"><msub><mi>A</mi><mi>α</mi></msub></math> be the interval <math id="S5.SS5.SSS6.p1.m3" class="ltx_Math" data-alttext="(-1,\alpha]" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi>α</mi><mo stretchy="false">]</mo></mrow></math>. That is,</p>
+</div>
+<div id="S5.SS5.SSS6.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex17.m1" class="ltx_Math" data-alttext="A_{\alpha}=\{x\in\mathbb{R}\mid-1&lt;x\leq\alpha\}." display="block"><mrow><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mi>α</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS6.p3" class="ltx_para">
+<p class="ltx_p">If we let <math id="S5.SS5.SSS6.p3.m1" class="ltx_Math" data-alttext="\mathbb{R}^{+}" display="inline"><msup><mi>ℝ</mi><mo>+</mo></msup></math>be the set of positive real numbers, then we have a family of sets indexed by <math id="S5.SS5.SSS6.p3.m2" class="ltx_Math" data-alttext="\mathbb{R}^{+}" display="inline"><msup><mi>ℝ</mi><mo>+</mo></msup></math>. We will first determine the union of this family of sets. Notice that for each <math id="S5.SS5.SSS6.p3.m3" class="ltx_Math" data-alttext="\alpha\in\mathbb{R}^{+},\alpha\in A_{\alpha}" display="inline"><mrow><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow><mo>,</mo><mrow><mi>α</mi><mo>∈</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math>, and if <math id="S5.SS5.SSS6.p3.m4" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> is a real number with <math id="S5.SS5.SSS6.p3.m5" class="ltx_Math" data-alttext="-1&lt;y\leq 0" display="inline"><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>y</mi><mo>≤</mo><mn>0</mn></mrow></math>, then <math id="S5.SS5.SSS6.p3.m6" class="ltx_Math" data-alttext="y\in A_{\alpha}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></math>. Also notice that if <math id="S5.SS5.SSS6.p3.m7" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S5.SS5.SSS6.p3.m8" class="ltx_Math" data-alttext="y&lt;-1" display="inline"><mrow><mi>y</mi><mo>&lt;</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>, then for each <math id="S5.SS5.SSS6.p3.m9" class="ltx_Math" data-alttext="\alpha\in\mathbb{R}^{+},y\notin A_{\alpha}" display="inline"><mrow><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow><mo>,</mo><mrow><mi>y</mi><mo>∉</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math>. With these observations, we conclude that</p>
+</div>
+<div id="S5.SS5.SSS6.p4" class="ltx_para">
+<table role="presentation" id="S5.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex18.m1" class="ltx_Math" data-alttext="\bigcup_{\alpha\in\mathbb{R}^{+}}A_{\alpha}=(-1,\infty)=\{x\in\mathbb{R}\mid-1%
+&lt;x\}" display="block"><mrow><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS6.p5" class="ltx_para">
+<p class="ltx_p">To determine the intersection of this family, notice that</p>
+</div>
+<div id="S5.SS5.SSS6.p6" class="ltx_para">
+<ul id="S5.I7" class="ltx_itemize">
+<li id="S5.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">if <math id="S5.I7.i1.p1.m1" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S5.I7.i1.p1.m2" class="ltx_Math" data-alttext="y&lt;-1" display="inline"><mrow><mi>y</mi><mo>&lt;</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>, then for each <math id="S5.I7.i1.p1.m3" class="ltx_Math" data-alttext="\alpha\in\mathbb{R}^{+},y\notin A_{\alpha}" display="inline"><mrow><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow><mo>,</mo><mrow><mi>y</mi><mo>∉</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="S5.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I7.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="S5.I7.i2.p1.m1" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S5.I7.i2.p1.m2" class="ltx_Math" data-alttext="-1&lt;y\leq 0" display="inline"><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>y</mi><mo>≤</mo><mn>0</mn></mrow></math>, then <math id="S5.I7.i2.p1.m3" class="ltx_Math" data-alttext="y\in A_{\alpha}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></math> for each <math id="S5.I7.i2.p1.m4" class="ltx_Math" data-alttext="\alpha\in\mathbb{R}^{+}" display="inline"><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></math>; and</p>
+</div>
+</li>
+<li id="S5.I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I7.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="S5.I7.i3.p1.m1" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S5.I7.i3.p1.m2" class="ltx_Math" data-alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then if we let <math id="S5.I7.i3.p1.m3" class="ltx_Math" data-alttext="\beta=\frac{y}{2},y&gt;\beta" display="inline"><mrow><mrow><mi>β</mi><mo>=</mo><mfrac><mi>y</mi><mn>2</mn></mfrac></mrow><mo>,</mo><mrow><mi>y</mi><mo>&gt;</mo><mi>β</mi></mrow></mrow></math> and <math id="S5.I7.i3.p1.m4" class="ltx_Math" data-alttext="y\notin A_{\beta}" display="inline"><mrow><mi>y</mi><mo>∉</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS5.SSS6.p7" class="ltx_para">
+<p class="ltx_p">From these observations, we conclude that</p>
+</div>
+<div id="S5.SS5.SSS6.p8" class="ltx_para">
+<table role="presentation" id="S5.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex19.m1" class="ltx_Math" data-alttext="\bigcap_{\alpha\in\mathbb{R}^{+}}A_{\alpha}=(-1,0]=\{x\in\mathbb{R}\mid-1&lt;x%
+\leq 0\}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">⋂</mo><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S5.SS5.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.7 </span>Progress Check 5.29 (A Continuation of Example 5.28)</h3>
+
+<div id="S5.SS5.SSS7.p1" class="ltx_para">
+<p class="ltx_p">Using the family of sets from Example 5.28, for each <math id="S5.SS5.SSS7.p1.m1" class="ltx_Math" data-alttext="\alpha\in\mathbb{R}^{+}" display="inline"><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></math>, we see that</p>
+</div>
+<div id="S5.SS5.SSS7.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex20.m1" class="ltx_Math" data-alttext="A_{\alpha}^{c}=(-\infty,-1]\cup(\alpha,\infty)." display="block"><mrow><mrow><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS7.p3" class="ltx_para">
+<p class="ltx_p">Use the results from Example 5.28 to help determine each of the following sets. For each set, use either interval notation or set builder notation.</p>
+</div>
+<div id="S5.SS5.SSS7.p4" class="ltx_para">
+<ol id="S5.I8" class="ltx_enumerate">
+<li id="S5.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I8.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i1.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{\alpha\in\mathbb{R}^{+}}A_{\alpha}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></math></p>
+</div>
+</li>
+<li id="S5.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I8.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i2.p1.m1" class="ltx_Math" data-alttext="\bigcap_{\alpha\in\mathbb{R}^{+}}A_{\alpha}^{c}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></math></p>
+</div>
+</li>
+<li id="S5.I8.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I8.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i3.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\mathbb{R}^{+}}A_{\alpha}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></math></p>
+</div>
+</li>
+<li id="S5.I8.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I8.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I8.i4.p1.m1" class="ltx_Math" data-alttext="\bigcup_{\alpha\in\mathbb{R}^{+}}A_{\alpha}^{c}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS5.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.8 </span>Properties of Union and Intersection</h3>
+
+<div id="S5.SS5.SSS8.p1" class="ltx_para">
+<p class="ltx_p">In Theorem 5.30, we will prove some properties of set operations for indexed families of sets. Some of these properties are direct extensions of corresponding properties for two sets. For example, we have already proved De Morgan’s Laws for two sets in <a href="https://johnweeks03.github.io/teaching/300/5-3.html#Theorem5_20">Theorem 5.20.</a> The work in the beginning activities and Progress Check 5.29 suggests that we should get similar results using set operations with an indexed family of sets. For example, in Beginning Activity 2, we saw that</p>
+</div>
+<div id="S5.SS5.SSS8.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex21.m1" class="ltx_Math" data-alttext="\left(\bigcap_{j=1}^{4}A_{j}\right)^{c}=\bigcup_{j=1}^{4}A_{j}^{c}." display="block"><mrow><mrow><msup><mrow><mo>(</mo><mrow><munderover><mo lspace="0em" movablelimits="false">⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></munderover><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></munderover><msubsup><mi>A</mi><mi>j</mi><mi>c</mi></msubsup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Theorem_5.30" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5.30.</span> Let <math id="S5.SS5.SSS8.p3.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.SS5.SSS8.p3.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets, each of which is a subset of some universal set <math id="S5.SS5.SSS8.p3.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Then</p>
+</div>
+<div id="S5.SS5.SSS8.p4" class="ltx_para">
+<ol id="S5.I9" class="ltx_enumerate">
+<li id="S5.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S5.I9.i1.p1.m1" class="ltx_Math" data-alttext="\beta\in\Lambda,\bigcap_{\alpha\in\Lambda}A_{\alpha}\subseteq A_{\beta}" display="inline"><mrow><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo rspace="0em">,</mo><mrow><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>⊆</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S5.I9.i2.p1.m1" class="ltx_Math" data-alttext="\beta\in\Lambda,A_{\beta}\subseteq\bigcup_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>,</mo><mrow><msub><mi>A</mi><mi>β</mi></msub><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I9.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I9.i3.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)^{c}=\bigcup_{\alpha\in%
+\Lambda}A_{\alpha}^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I9.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I9.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I9.i4.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)^{c}=\bigcap_{\alpha\in%
+\Lambda}A_{\alpha}^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS8.p5" class="ltx_para">
+<p class="ltx_p">Parts (3) and (4) are known as De Morgan’s Laws.</p>
+</div>
+<div id="S5.SS5.SSS8.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will prove Parts (1) and (3). The proofs of Parts (2) and (4) are included in Exercise (4). So we let <math id="S5.SS5.SSS8.p6.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.SS5.SSS8.p6.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets. To prove Part (1), we let <math id="S5.SS5.SSS8.p6.m3" class="ltx_Math" data-alttext="\beta\in\Lambda" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math> and note that if <math id="S5.SS5.SSS8.p6.m4" class="ltx_Math" data-alttext="x\in\bigcap_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mi>x</mi><mo rspace="0.111em">∈</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math>, then <math id="S5.SS5.SSS8.p6.m5" class="ltx_Math" data-alttext="x\in A_{\alpha}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></math>, for all <math id="S5.SS5.SSS8.p6.m6" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>. Since <math id="S5.SS5.SSS8.p6.m7" class="ltx_Math" data-alttext="\beta" display="inline"><mi>β</mi></math> is one element in <math id="S5.SS5.SSS8.p6.m8" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>, we may conclude that <math id="S5.SS5.SSS8.p6.m9" class="ltx_Math" data-alttext="x\in A_{\beta}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>. This proves that <math id="S5.SS5.SSS8.p6.m10" class="ltx_Math" data-alttext="\bigcap_{\alpha\in\Lambda}A_{\alpha}\subseteq A_{\beta}" display="inline"><mrow><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>⊆</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>.</p>
+</div>
+<div id="S5.SS5.SSS8.p7" class="ltx_para">
+<p class="ltx_p">To prove Part (3), we will prove that each set is a subset of the other set. We first let <math id="S5.SS5.SSS8.p7.m1" class="ltx_Math" data-alttext="x\in\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)^{c}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></mrow></math>. This means that <math id="S5.SS5.SSS8.p7.m2" class="ltx_Math" data-alttext="x\notin\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)" display="inline"><mrow><mi>x</mi><mo>∉</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></math>, and this means that
+<br class="ltx_break">there exists a <math id="S5.SS5.SSS8.p7.m3" class="ltx_Math" data-alttext="\beta\in\Lambda" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math> such that <math id="S5.SS5.SSS8.p7.m4" class="ltx_Math" data-alttext="x\notin A_{\beta}" display="inline"><mrow><mi>x</mi><mo>∉</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>.
+<br class="ltx_break">Hence, <math id="S5.SS5.SSS8.p7.m5" class="ltx_Math" data-alttext="x\in A_{\beta}^{c}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msubsup><mi>A</mi><mi>β</mi><mi>c</mi></msubsup></mrow></math>, which implies that <math id="S5.SS5.SSS8.p7.m6" class="ltx_Math" data-alttext="x\in\bigcup_{\alpha\in\Lambda}A_{\alpha}^{c}" display="inline"><mrow><mi>x</mi><mo rspace="0.111em">∈</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math>. Therefore, we have proved that</p>
+</div>
+<div id="S5.SS5.SSS8.p8" class="ltx_para">
+<table role="presentation" id="S5.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex22.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)^{c}\subseteq\bigcup_{\alpha%
+\in\Lambda}A_{\alpha}^{c}" display="block"><mrow><msup><mrow><mo>(</mo><mrow><munder><mo lspace="0em" movablelimits="false">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">⊆</mo><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></munder><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS8.p9" class="ltx_para">
+<p class="ltx_p">We now let <math id="S5.SS5.SSS8.p9.m1" class="ltx_Math" data-alttext="y\in\bigcup_{\alpha\in\Lambda}A_{\alpha}^{c}" display="inline"><mrow><mi>y</mi><mo rspace="0.111em">∈</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math>. This means that there exists a <math id="S5.SS5.SSS8.p9.m2" class="ltx_Math" data-alttext="\beta\in\Lambda" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math> such that <math id="S5.SS5.SSS8.p9.m3" class="ltx_Math" data-alttext="y\in A_{\beta}^{c}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msubsup><mi>A</mi><mi>β</mi><mi>c</mi></msubsup></mrow></math> or <math id="S5.SS5.SSS8.p9.m4" class="ltx_Math" data-alttext="y\notin A_{\beta}" display="inline"><mrow><mi>y</mi><mo>∉</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>. However, since <math id="S5.SS5.SSS8.p9.m5" class="ltx_Math" data-alttext="y\notin A_{\beta}" display="inline"><mrow><mi>y</mi><mo>∉</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>, we may conclude that <math id="S5.SS5.SSS8.p9.m6" class="ltx_Math" data-alttext="y\notin\bigcap_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mi>y</mi><mo rspace="0.111em">∉</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math> and, hence, <math id="S5.SS5.SSS8.p9.m7" class="ltx_Math" data-alttext="y\in\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)^{c}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></mrow></math>. This proves that</p>
+</div>
+<div id="S5.SS5.SSS8.p10" class="ltx_para">
+<table role="presentation" id="S5.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex23.m1" class="ltx_Math" data-alttext="\bigcup_{\alpha\in\Lambda}A_{\alpha}^{c}\subseteq\left(\bigcap_{\alpha\in%
+\Lambda}A_{\alpha}\right)^{c}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></munder><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow><mo>⊆</mo><msup><mrow><mo>(</mo><mrow><munder><mo lspace="0em" movablelimits="false">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS8.p11" class="ltx_para">
+<p class="ltx_p">Using the results in (1) and (2), we have proved that <math id="S5.SS5.SSS8.p11.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)^{c}=\bigcup_{\alpha\in%
+\Lambda}A_{\alpha}^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math>.
+<br class="ltx_break">Many of the other properties of set operations are also true for indexed families of sets. Theorem 5.31 states the distributive laws for set operations.</p>
+</div>
+<div id="Theorem_5.31" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5.31.</span> Let <math id="S5.SS5.SSS8.p12.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set, let <math id="S5.SS5.SSS8.p12.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets, and let <math id="S5.SS5.SSS8.p12.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be a set. Then</p>
+</div>
+<div id="S5.SS5.SSS8.p13" class="ltx_para">
+<ol id="S5.I10" class="ltx_enumerate">
+<li id="S5.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I10.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I10.i1.p1.m1" class="ltx_Math" data-alttext="B\cap\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcup_{\alpha\in%
+\Lambda}\left(B\cap A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>∩</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="S5.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I10.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I10.i2.p1.m1" class="ltx_Math" data-alttext="B\cup\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcap_{\alpha\in%
+\Lambda}\left(B\cup A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>∪</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>∪</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS8.p14" class="ltx_para">
+<p class="ltx_p">The proof of Theorem 5.31 is Exercise (5).</p>
+</div>
+</section>
+<section id="S5.SS5.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.9 </span>Pairwise Disjoint Families of Sets</h3>
+
+<div id="S5.SS5.SSS9.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/5-2.html">Section 5.2</a>, we defined two sets <math id="S5.SS5.SSS9.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS5.SSS9.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> to be disjoint provided that <math id="S5.SS5.SSS9.p1.m3" class="ltx_Math" data-alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. In a similar manner, if <math id="S5.SS5.SSS9.p1.m4" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is a nonempty indexing set and <math id="S5.SS5.SSS9.p1.m5" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> is an indexed family of sets, we can say that this indexed family of sets is disjoint
+<br class="ltx_break">provided that <math id="S5.SS5.SSS9.p1.m6" class="ltx_Math" data-alttext="\bigcap_{\alpha\in\Lambda}A_{\alpha}=\varnothing" display="inline"><mrow><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. However, we can use the concept of two disjoint sets to define a somewhat more interesting type of "disjointness" for an indexed family of sets.</p>
+</div>
+<div id="S5.SS5.SSS9.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S5.SS5.SSS9.p2.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set, and let <math id="S5.SS5.SSS9.p2.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets. We say that <math id="S5.SS5.SSS9.p2.m3" class="ltx_Math" data-alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is <span class="ltx_text ltx_font_bold">pairwise disjoint</span> provided that for all <math id="S5.SS5.SSS9.p2.m4" class="ltx_Math" data-alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="S5.SS5.SSS9.p2.m5" class="ltx_Math" data-alttext="\beta" display="inline"><mi>β</mi></math> in <math id="S5.SS5.SSS9.p2.m6" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>, if <math id="S5.SS5.SSS9.p2.m7" class="ltx_Math" data-alttext="A_{\alpha}\neq A_{\beta}" display="inline"><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>≠</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></math>, then <math id="S5.SS5.SSS9.p2.m8" class="ltx_Math" data-alttext="A_{\alpha}\cap A_{\beta}=\emptyset" display="inline"><mrow><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>β</mi></msub></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S5.SS5.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.10 </span>Progress Check 5.32 (Disjoint Families of Sets)</h3>
+
+<div id="S5.SS5.SSS10.p1" class="ltx_para">
+<p class="ltx_p">Figure 5.7 shows two families of sets,</p>
+</div>
+<div id="S5.SS5.SSS10.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex24.m1" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{1},A_{2},A_{3},A_{4}\right\}\text{ and }\mathcal{B}=%
+\left\{B_{1},B_{2},B_{3},B_{4}\right\}." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mrow><mo>{</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><msub><mi>A</mi><mn>3</mn></msub><mo>,</mo><msub><mi>A</mi><mn>4</mn></msub><mo>}</mo></mrow><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow><mo>=</mo><mrow><mo>{</mo><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><msub><mi>B</mi><mn>2</mn></msub><mo>,</mo><msub><mi>B</mi><mn>3</mn></msub><mo>,</mo><msub><mi>B</mi><mn>4</mn></msub><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<figure id="S5.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig5_5_1.jpg" id="S5.F1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="200" height="80" alt="Two panels. Left: Four circles labeled A1 through A4, all separated with no overlaps. Right: Four circles labeled B1 through B4 arranged in a chain. B1 overlaps B2, B2 overlaps B3, and B3 overlaps B4. B1 and B4 do not touch.">
+<figcaption class="ltx_caption ltx_centering">Figure 5.7: Two Families of Indexed Sets</figcaption>
+</figure>
+<div id="S5.SS5.SSS10.p3" class="ltx_para">
+<ol id="S5.I11" class="ltx_enumerate">
+<li id="S5.I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I11.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the family of sets <math id="S5.I11.i1.p1.m1" class="ltx_Math" data-alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> a disjoint family of sets? A pairwise disjoint family of sets?</p>
+</div>
+</li>
+<li id="S5.I11.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I11.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the family of sets <math id="S5.I11.i2.p1.m1" class="ltx_Math" data-alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> a disjoint family of sets? A pairwise disjoint family of sets?</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS10.p4" class="ltx_para">
+<p class="ltx_p">Now let the universal set be <math id="S5.SS5.SSS10.p4.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. For each <math id="S5.SS5.SSS10.p4.m2" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, let <math id="S5.SS5.SSS10.p4.m3" class="ltx_Math" data-alttext="C_{n}=(n,\infty)" display="inline"><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and let <math id="S5.SS5.SSS10.p4.m4" class="ltx_Math" data-alttext="\mathcal{C}=\left\{C_{n}\mid n\in\mathbb{N}\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>C</mi><mi>n</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>}</mo></mrow></mrow></math>.</p>
+<ol id="S5.I12" class="ltx_enumerate">
+<li id="S5.I12.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I12.i5.p1" class="ltx_para">
+<p class="ltx_p">Is the family of sets <math id="S5.I12.i5.p1.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> a disjoint family of sets? A pairwise disjoint family of sets?</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS5.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.11 </span>Exercises for Section 5.5</h3>
+
+<div id="S5.SS5.SSS11.p1" class="ltx_para">
+<ol id="S5.I13" class="ltx_enumerate">
+<li id="S5.I13.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I13.i1.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S5.I13.i1.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S5.I13.i1.p1.m2" class="ltx_Math" data-alttext="A_{n}=\{n,n+1,n+2,n+3\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Use the roster method to specify each of the following sets:</p>
+<ol id="S5.I13.i1.I1" class="ltx_enumerate">
+<li id="S5.I13.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i1.I1.i1.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=1}^{3}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{3}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I13.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="\bigcap_{j=3}^{7}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mn>7</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I13.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i1.I1.i4.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=3}^{7}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mn>7</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I13.i1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i1.I1.i5.p1.m1" class="ltx_Math" data-alttext="A_{9}\cap\left(\bigcup_{j=3}^{7}A_{j}\right)" display="inline"><mrow><msub><mi>A</mi><mn>9</mn></msub><mo>∩</mo><mrow><mo>(</mo><mrow><msubsup><mo lspace="0em">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mn>7</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I13.i1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i1.I1.i6.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=3}^{7}\left(A_{9}\cap A_{j}\right)" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mn>7</mn></msubsup><mrow><mo lspace="0em">(</mo><mrow><msub><mi>A</mi><mn>9</mn></msub><mo>∩</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I13.i2.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S5.I13.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S5.I13.i2.p1.m2" class="ltx_Math" data-alttext="A_{n}=\{k\in\mathbb{N}\mid k\geq n\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>k</mi><mo>≥</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Assuming the universal set is <math id="S5.I13.i2.p1.m3" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>, use the roster method or set builder notation to specify each of the following sets:</p>
+<ol id="S5.I13.i2.I1" class="ltx_enumerate">
+<li id="S5.I13.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i2.I1.i1.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=1}^{5}A_{j}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{j=1}^{5}A_{j}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msubsup><mo lspace="0em">⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I13.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i2.I1.i3.p1.m2" class="ltx_Math" data-alttext="\bigcap_{j=1}^{5}A_{j}^{c}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></msubsup><msubsup><mi>A</mi><mi>j</mi><mi>c</mi></msubsup></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I13.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i2.I1.i4.p1.m2" class="ltx_Math" data-alttext="\bigcup_{j=1}^{5}A_{j}^{c}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></msubsup><msubsup><mi>A</mi><mi>j</mi><mi>c</mi></msubsup></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I13.i2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i5.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j=1}^{5}A_{j}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I13.i2.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i6.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i2.I1.i6.p1.m2" class="ltx_Math" data-alttext="\left(\bigcup_{j=1}^{5}A_{j}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msubsup><mo lspace="0em">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></msubsup><msub><mi>A</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S5.I13.i2.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i7.p1.m1" class="ltx_Math" data-alttext="\bigcap_{j\in\mathbb{N}}A_{j}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>j</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i2.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S5.I13.i2.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i2.I1.i8.p1.m1" class="ltx_Math" data-alttext="\bigcup_{j\in\mathbb{N}}A_{j}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>j</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>A</mi><mi>j</mi></msub></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I13.i3.p1" class="ltx_para">
+<p class="ltx_p">For each positive real number <math id="S5.I13.i3.p1.m1" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math>, define <math id="S5.I13.i3.p1.m2" class="ltx_Math" data-alttext="T_{r}" display="inline"><msub><mi>T</mi><mi>r</mi></msub></math> to be the closed interval <math id="S5.I13.i3.p1.m3" class="ltx_Math" data-alttext="\left[-r^{2},r^{2}\right]" display="inline"><mrow><mo>[</mo><mrow><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>,</mo><msup><mi>r</mi><mn>2</mn></msup><mo>]</mo></mrow></math>. That is,</p>
+</div>
+<div id="S5.I13.i3.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex25.m1" class="ltx_Math" data-alttext="T_{r}=\left\{x\in\mathbb{R}\mid-r^{2}\leq x\leq r^{2}\right\}." display="block"><mrow><mrow><msub><mi>T</mi><mi>r</mi></msub><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>≤</mo><mi>x</mi><mo>≤</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.I13.i3.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I13.i3.p3.m1" class="ltx_Math" data-alttext="\Lambda=\{m\in\mathbb{N}\mid 1\leq m\leq 10\}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mn>1</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><mn>10</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Use either interval notation or set builder notation to specify each of the following sets:</p>
+<ol id="S5.I13.i3.I1" class="ltx_enumerate">
+<li id="S5.I13.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="\bigcup_{k\in\Lambda}T_{k}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>k</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>T</mi><mi>k</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i3.I1.i2.p1.m2" class="ltx_Math" data-alttext="\bigcap_{k\in\Lambda}T_{k}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>k</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>T</mi><mi>k</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I13.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i3.I1.i3.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in\mathbb{R}^{+}}T_{r}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I13.i3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i3.I1.i4.p1.m1" class="ltx_Math" data-alttext="\bigcap_{r\in\mathbb{R}^{+}}T_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I13.i3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i3.I1.i5.p1.m1" class="ltx_Math" data-alttext="\bigcup_{k\in\mathbb{N}}T_{k}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>T</mi><mi>k</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i3.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I13.i3.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i3.I1.i6.p1.m1" class="ltx_Math" data-alttext="\bigcap_{k\in\mathbb{N}}T_{k}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>T</mi><mi>k</mi></msub></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I13.i4.p1" class="ltx_para">
+<p class="ltx_p">Prove Parts (2) and (4) of <a href="#Theorem_5.30">Theorem 5.30.</a> Let <math id="S5.I13.i4.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.I13.i4.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets.</p>
+<ol id="S5.I13.i4.I1" class="ltx_enumerate">
+<li id="S5.I13.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i4.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each <math id="S5.I13.i4.I1.i1.p1.m2" class="ltx_Math" data-alttext="\beta\in\Lambda,A_{\beta}\subseteq\bigcup_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>,</mo><mrow><msub><mi>A</mi><mi>β</mi></msub><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I13.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i4.I1.i2.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)^{c}=\bigcap_{\alpha\in%
+\Lambda}A_{\alpha}^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I13.i5.p1" class="ltx_para">
+<p class="ltx_p">Prove <a href="Theorem_5.31">Theorem 5.31.</a> Let <math id="S5.I13.i5.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set, let <math id="S5.I13.i5.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets, and let <math id="S5.I13.i5.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be a set. Then</p>
+<ol id="S5.I13.i5.I1" class="ltx_enumerate">
+<li id="S5.I13.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i5.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i5.I1.i1.p1.m2" class="ltx_Math" data-alttext="B\cap\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcup_{\alpha\in%
+\Lambda}\left(B\cap A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>∩</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="S5.I13.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i5.I1.i2.p1.m1" class="ltx_Math" data-alttext="B\cup\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcap_{\alpha\in%
+\Lambda}\left(B\cup A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>∪</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>∪</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I13.i6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I13.i6.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> and <math id="S5.I13.i6.p1.m2" class="ltx_Math" data-alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> be nonempty indexing sets. (Note: The letter <math id="S5.I13.i6.p1.m3" class="ltx_Math" data-alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> is the uppercase Greek letter gamma.) Also, let <math id="S5.I13.i6.p1.m4" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> and <math id="S5.I13.i6.p1.m5" class="ltx_Math" data-alttext="\mathcal{B}=\left\{B_{\beta}\mid\beta\in\Gamma\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>B</mi><mi>β</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow><mo>}</mo></mrow></mrow></math> be indexed families of sets. Use the distributive laws in Exercise (5) to:</p>
+<ol id="S5.I13.i6.I1" class="ltx_enumerate">
+<li id="S5.I13.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Write <math id="S5.I13.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)\cap\left(\bigcup_{\beta\in%
+\Gamma}B_{\beta}\right)" display="inline"><mrow><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mo>∩</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow></msub><msub><mi>B</mi><mi>β</mi></msub></mrow><mo>)</mo></mrow></mrow></math> as a union of intersections of two sets.</p>
+</div>
+</li>
+<li id="S5.I13.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Write <math id="S5.I13.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)\cup\left(\bigcap_{\beta\in%
+\Gamma}B_{\beta}\right)" display="inline"><mrow><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mo>∪</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow></msub><msub><mi>B</mi><mi>β</mi></msub></mrow><mo>)</mo></mrow></mrow></math> as an intersection of unions of two sets.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S5.I13.i7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I13.i7.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.I13.i7.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets. Also, assume that <math id="S5.I13.i7.p1.m3" class="ltx_Math" data-alttext="\Gamma\subseteq\Lambda" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⊆</mo><mi mathvariant="normal">Λ</mi></mrow></math> and <math id="S5.I13.i7.p1.m4" class="ltx_Math" data-alttext="\Gamma\neq\emptyset" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. Prove that</p>
+<ol id="S5.I13.i7.I1" class="ltx_enumerate">
+<li id="S5.I13.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="\bigcup_{\alpha\in\Gamma}A_{\alpha}\subseteq\bigcup_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="\bigcap_{\alpha\in\Lambda}A_{\alpha}\subseteq\bigcap_{\alpha\in\Gamma}A_{\alpha}" display="inline"><mrow><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S5.I13.i8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I13.i8.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.I13.i8.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets.</p>
+<ol id="S5.I13.i8.I1" class="ltx_enumerate">
+<li id="S5.I13.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i8.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove that if <math id="S5.I13.i8.I1.i1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is a set such that <math id="S5.I13.i8.I1.i1.p1.m3" class="ltx_Math" data-alttext="B\subseteq A_{\alpha}" display="inline"><mrow><mi>B</mi><mo>⊆</mo><msub><mi>A</mi><mi>α</mi></msub></mrow></math> for every <math id="S5.I13.i8.I1.i1.p1.m4" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>, then <math id="S5.I13.i8.I1.i1.p1.m5" class="ltx_Math" data-alttext="B\subseteq\bigcap_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mi>B</mi><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I13.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that if <math id="S5.I13.i8.I1.i2.p1.m1" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> is a set such that <math id="S5.I13.i8.I1.i2.p1.m2" class="ltx_Math" data-alttext="A_{\alpha}\subseteq C" display="inline"><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>⊆</mo><mi>C</mi></mrow></math> for every <math id="S5.I13.i8.I1.i2.p1.m3" class="ltx_Math" data-alttext="\alpha\in\Lambda" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>, then <math id="S5.I13.i8.I1.i2.p1.m4" class="ltx_Math" data-alttext="\bigcup_{\alpha\in\Lambda}A_{\alpha}\subseteq C" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>⊆</mo><mi>C</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S5.I13.i9.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S5.I13.i9.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S5.I13.i9.p1.m2" class="ltx_Math" data-alttext="A_{n}=\{x\in\mathbb{R}\mid n-1&lt;x&lt;n\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Prove that <math id="S5.I13.i9.p1.m3" class="ltx_Math" data-alttext="\left\{A_{n}\mid n\in\mathbb{N}\right\}" display="inline"><mrow><mo>{</mo><msub><mi>A</mi><mi>n</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>}</mo></mrow></math> is a pairwise disjoint family of sets and that <math id="S5.I13.i9.p1.m4" class="ltx_Math" data-alttext="\bigcup_{n\in\mathbb{N}}A_{n}=\left(\mathbb{R}^{+}-\mathbb{N}\right)" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><mo>(</mo><mrow><msup><mi>ℝ</mi><mo>+</mo></msup><mo>−</mo><mi>ℕ</mi></mrow><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I13.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S5.I13.i10.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S5.I13.i10.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S5.I13.i10.p1.m2" class="ltx_Math" data-alttext="A_{n}=\{k\in\mathbb{N}\mid k\geq n\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>k</mi><mo>≥</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Determine if the following statements are true or false. Justify each conclusion.</p>
+<ol id="S5.I13.i10.I1" class="ltx_enumerate">
+<li id="S5.I13.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S5.I13.i10.I1.i1.p1.m1" class="ltx_Math" data-alttext="j,k\in\mathbb{N}" display="inline"><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S5.I13.i10.I1.i1.p1.m2" class="ltx_Math" data-alttext="j\neq k" display="inline"><mrow><mi>j</mi><mo>≠</mo><mi>k</mi></mrow></math>, then <math id="S5.I13.i10.I1.i1.p1.m3" class="ltx_Math" data-alttext="A_{j}\cap A_{k}\neq\emptyset" display="inline"><mrow><mrow><msub><mi>A</mi><mi>j</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>k</mi></msub></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I13.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i10.I1.i2.p1.m1" class="ltx_Math" data-alttext="\bigcap_{k\in\mathbb{N}}A_{k}=\emptyset" display="inline"><mrow><mrow><msub><mo>⋂</mo><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>A</mi><mi>k</mi></msub></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S5.I13.i11.p1" class="ltx_para">
+<p class="ltx_p">Give an example of an indexed family of sets <math id="S5.I13.i11.p1.m1" class="ltx_Math" data-alttext="\left\{A_{n}\mid n\in\mathbb{N}\right\}" display="inline"><mrow><mo>{</mo><msub><mi>A</mi><mi>n</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>}</mo></mrow></math> such all three of the following conditions are true:</p>
+<ol id="S5.I13.i11.I1" class="ltx_enumerate">
+<li id="S5.I13.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S5.I13.i11.I1.i1.p1.m1" class="ltx_Math" data-alttext="m\in\mathbb{N},A_{m}\subseteq(0,1)" display="inline"><mrow><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>,</mo><mrow><msub><mi>A</mi><mi>m</mi></msub><mo>⊆</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="S5.I13.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S5.I13.i11.I1.i2.p1.m1" class="ltx_Math" data-alttext="j,k\in\mathbb{N}" display="inline"><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S5.I13.i11.I1.i2.p1.m2" class="ltx_Math" data-alttext="j\neq k" display="inline"><mrow><mi>j</mi><mo>≠</mo><mi>k</mi></mrow></math>, then <math id="S5.I13.i11.I1.i2.p1.m3" class="ltx_Math" data-alttext="A_{j}\cap A_{k}\neq\emptyset" display="inline"><mrow><mrow><msub><mi>A</mi><mi>j</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>k</mi></msub></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>; and</p>
+</div>
+</li>
+<li id="S5.I13.i11.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I13.i11.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i11.I1.i3.p1.m1" class="ltx_Math" data-alttext="\bigcap_{k\in\mathbb{N}}A_{k}=\emptyset" display="inline"><mrow><mrow><msub><mo>⋂</mo><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mi>A</mi><mi>k</mi></msub></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I13.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S5.I13.i12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I13.i12.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set, let <math id="S5.I13.i12.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets, and let <math id="S5.I13.i12.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be a set. Use the results of <a href="Theorem_5.30">Theorem 5.30</a> and <a href="Theorem_5.31">Theorem 5.31</a> to prove each of the following:</p>
+<ol id="S5.I13.i12.I1" class="ltx_enumerate">
+<li id="S5.I13.i12.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I13.i12.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i12.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> <math id="S5.I13.i12.I1.i1.p1.m2" class="ltx_Math" data-alttext="\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)-B=\bigcup_{\alpha\in\Lambda}%
+\left(A_{\alpha}-B\right)" display="inline"><mrow><mrow><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mo>−</mo><mi>B</mi></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>−</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i12.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I13.i12.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i12.I1.i2.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)-B=\bigcap_{\alpha\in\Lambda}%
+\left(A_{\alpha}-B\right)" display="inline"><mrow><mrow><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mo>−</mo><mi>B</mi></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>−</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i12.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I13.i12.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i12.I1.i3.p1.m1" class="ltx_Math" data-alttext="B-\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcap_{\alpha\in\Lambda}%
+\left(B-A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>−</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>−</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I13.i12.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I13.i12.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I13.i12.I1.i4.p1.m1" class="ltx_Math" data-alttext="B-\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcup_{\alpha\in\Lambda}%
+\left(B-A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>−</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>−</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS5.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.12 </span>Explorations and Activities</h3>
+
+<div id="S5.SS5.SSS12.p1" class="ltx_para">
+<ol id="S5.I14" class="ltx_enumerate">
+<li id="S5.I14.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S5.I14.i13.p1" class="ltx_para">
+<p class="ltx_p">An Indexed Family of Subsets of the Cartesian Plane. Let <math id="S5.I14.i13.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}^{*}" display="inline"><msup><mi>ℝ</mi><mo>∗</mo></msup></math> be the set of nonnegative real numbers, and for each <math id="S5.I14.i13.p1.m2" class="ltx_Math" data-alttext="r\in\mathbb{R}^{*}" display="inline"><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></math>, let</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS5.SSS12.p2" class="ltx_para">
+<table role="presentation" id="S5.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S5.Ex26.m1" class="ltx_Math" data-alttext="\displaystyle C_{r}" display="inline"><msub><mi>C</mi><mi>r</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex26.m2" class="ltx_Math" data-alttext="\displaystyle=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}=r^{2}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S5.Ex27.m1" class="ltx_Math" data-alttext="\displaystyle D_{r}" display="inline"><msub><mi>D</mi><mi>r</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex27.m2" class="ltx_Math" data-alttext="\displaystyle=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}\leq r^%
+{2}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>≤</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S5.Ex28.m1" class="ltx_Math" data-alttext="\displaystyle T_{r}" display="inline"><msub><mi>T</mi><mi>r</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex28.m2" class="ltx_Math" data-alttext="\displaystyle=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}&gt;r^{2}%
+\right\}=D_{r}^{c}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>&gt;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow><mo>=</mo><msubsup><mi>D</mi><mi>r</mi><mi>c</mi></msubsup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS5.SSS12.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S5.SS5.SSS12.p3.m1" class="ltx_Math" data-alttext="r&gt;0" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then the set <math id="S5.SS5.SSS12.p3.m2" class="ltx_Math" data-alttext="C_{r}" display="inline"><msub><mi>C</mi><mi>r</mi></msub></math> is the circle of radius <math id="S5.SS5.SSS12.p3.m3" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> with center at the origin as shown in Figure 5.8, and the set <math id="S5.SS5.SSS12.p3.m4" class="ltx_Math" data-alttext="D_{r}" display="inline"><msub><mi>D</mi><mi>r</mi></msub></math> is the shaded disk (including the boundary) shown in Figure 5.8.</p>
+</div>
+<figure id="S5.F2" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig5_5_2.jpg" id="S5.F2.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="200" height="92" alt="two circles of radius r centered at the origin, the one on the right is shaded">
+<figcaption class="ltx_caption ltx_centering">Figure 5.8: Two Sets for Activity 13</figcaption>
+</figure>
+<div id="S5.SS5.SSS12.p4" class="ltx_para">
+<ol id="S5.I15" class="ltx_enumerate">
+<li id="S5.I15.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I15.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i1.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in\mathbb{R}^{*}}C_{r}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></msub><msub><mi>C</mi><mi>r</mi></msub></mrow></math> and <math id="S5.I15.i1.p1.m2" class="ltx_Math" data-alttext="\bigcap_{r\in\mathbb{R}^{*}}C_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></msub><msub><mi>C</mi><mi>r</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I15.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i2.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in\mathbb{R}^{*}}D_{r}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow></math> and <math id="S5.I15.i2.p1.m2" class="ltx_Math" data-alttext="\bigcap_{r\in\mathbb{R}^{*}}D_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I15.i3.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i3.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in\mathbb{R}^{*}}T_{r}" display="inline"><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow></math> and <math id="S5.I15.i3.p1.m2" class="ltx_Math" data-alttext="\bigcap_{r\in\mathbb{R}^{*}}T_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I15.i4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I15.i4.p1.m1" class="ltx_Math" data-alttext="\mathcal{C}=\left\{C_{r}\mid r\in\mathbb{R}^{*}\right\},\mathcal{D}=\left\{D_{%
+r}\mid r\in\mathbb{R}^{*}\right\}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>C</mi><mi>r</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow><mo>}</mo></mrow></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>D</mi><mi>r</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow><mo>}</mo></mrow></mrow></mrow></math>, and <math id="S5.I15.i4.p1.m2" class="ltx_Math" data-alttext="\mathcal{T}=\left\{T_{r}\mid r\in\mathbb{R}^{*}\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒯</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>T</mi><mi>r</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>r</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow><mo>}</mo></mrow></mrow></math>. Are any of these indexed families of sets pairwise disjoint? Explain.</p>
+</div>
+<div id="S5.I15.i4.p2" class="ltx_para">
+<p class="ltx_p">Now let <math id="S5.I15.i4.p2.m1" class="ltx_Math" data-alttext="I" display="inline"><mi>I</mi></math> be the closed interval <math id="S5.I15.i4.p2.m2" class="ltx_Math" data-alttext="[0,2]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></math> and let <math id="S5.I15.i4.p2.m3" class="ltx_Math" data-alttext="J" display="inline"><mi>J</mi></math> be the closed interval <math id="S5.I15.i4.p2.m4" class="ltx_Math" data-alttext="[1,2]" display="inline"><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I15.i5.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i5.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in I}C_{r},\bigcap_{r\in I}C_{r},\bigcup_{r\in J}C_{r}" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>C</mi><mi>r</mi></msub></mrow><mo rspace="0em">,</mo><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>C</mi><mi>r</mi></msub></mrow><mo rspace="0em">,</mo><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>C</mi><mi>r</mi></msub></mrow></mrow></math>, and <math id="S5.I15.i5.p1.m2" class="ltx_Math" data-alttext="\bigcap_{r\in J}C_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>C</mi><mi>r</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I15.i6.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i6.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in I}D_{r},\bigcap_{r\in I}D_{r},\bigcup_{r\in J}D_{r}" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow><mo rspace="0em">,</mo><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow><mo rspace="0em">,</mo><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow></mrow></math>, and <math id="S5.I15.i6.p1.m2" class="ltx_Math" data-alttext="\bigcap_{r\in J}D_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S5.I15.i7.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i7.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{r\in I}D_{r}\right)^{c},\left(\bigcap_{r\in I}D_{r}\right)^{c},%
+\left(\bigcup_{r\in J}D_{r}\right)^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo>,</mo><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo>,</mo><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></mrow></math>, and <math id="S5.I15.i7.p1.m2" class="ltx_Math" data-alttext="\left(\bigcap_{r\in J}D_{r}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>D</mi><mi>r</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S5.I15.i8.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S5.I15.i8.p1.m1" class="ltx_Math" data-alttext="\bigcup_{r\in I}T_{r},\bigcap_{r\in I}T_{r},\bigcup_{r\in J}T_{r}" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow><mo rspace="0em">,</mo><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow><mo rspace="0em">,</mo><mrow><msub><mo>⋃</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow></mrow></math>, and <math id="S5.I15.i8.p1.m2" class="ltx_Math" data-alttext="\bigcap_{r\in J}T_{r}" display="inline"><mrow><msub><mo>⋂</mo><mrow><mi>r</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>T</mi><mi>r</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I15.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S5.I15.i9.p1" class="ltx_para">
+<p class="ltx_p">Use De Morgan’s Laws to explain the relationship between your answers in Parts (13g) and (13h).</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="S5.SS6" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.6 </span>Chapter 5 Summary</h2>
+
+<section id="S5.SS6.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.6.1 </span>Important Definitions</h3>
+
+<div id="S5.SS6.SSS1.p1" class="ltx_para">
+<ul id="S5.I16" class="ltx_itemize">
+<li id="S5.I16.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i1.p1" class="ltx_para">
+<p class="ltx_p">Equal sets, <a href="https://johnweeks03.github.io/teaching/300/2-3.html">Section 2.3</a></p>
+</div>
+</li>
+<li id="S5.I16.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i2.p1" class="ltx_para">
+<p class="ltx_p">Subset, <a href="https://johnweeks03.github.io/teaching/300/2-3.html">Section 2.3</a></p>
+</div>
+</li>
+<li id="S5.I16.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i3.p1" class="ltx_para">
+<p class="ltx_p">Proper subset, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i4.p1" class="ltx_para">
+<p class="ltx_p">Power set, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i5.p1" class="ltx_para">
+<p class="ltx_p">Cardinality of a finite set, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i6.p1" class="ltx_para">
+<p class="ltx_p">Intersection of two sets, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i7.p1" class="ltx_para">
+<p class="ltx_p">Union of two sets, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i8.p1" class="ltx_para">
+<p class="ltx_p">Set difference, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i9.p1" class="ltx_para">
+<p class="ltx_p">Complement of a set, <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1</a></p>
+</div>
+</li>
+<li id="S5.I16.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i10.p1" class="ltx_para">
+<p class="ltx_p">Disjoint sets, <a href="https://johnweeks03.github.io/teaching/300/5-2.html">Section 5.2</a></p>
+</div>
+</li>
+<li id="S5.I16.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i11.p1" class="ltx_para">
+<p class="ltx_p">Cartesian product of two sets, <a href="https://johnweeks03.github.io/teaching/300/5-4.html">Section 5.4</a></p>
+</div>
+</li>
+<li id="S5.I16.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i12.p1" class="ltx_para">
+<p class="ltx_p">Ordered pair, <a href="https://johnweeks03.github.io/teaching/300/5-4.html">Section 5.4</a></p>
+</div>
+</li>
+<li id="S5.I16.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i13.p1" class="ltx_para">
+<p class="ltx_p">Union over a family of sets, Section 5.5</p>
+</div>
+</li>
+<li id="S5.I16.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i14.p1" class="ltx_para">
+<p class="ltx_p">Intersection over a family of sets, Section 5.5</p>
+</div>
+</li>
+<li id="S5.I16.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i15.p1" class="ltx_para">
+<p class="ltx_p">Indexing set, Section 5.5</p>
+</div>
+</li>
+<li id="S5.I16.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i16.p1" class="ltx_para">
+<p class="ltx_p">Indexed family of sets, Section 5.5</p>
+</div>
+</li>
+<li id="S5.I16.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i17.p1" class="ltx_para">
+<p class="ltx_p">Union over an indexed family of sets, Section 5.5</p>
+</div>
+</li>
+<li id="S5.I16.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i18.p1" class="ltx_para">
+<p class="ltx_p">Intersection over an indexed family of sets, Section 5.5</p>
+</div>
+</li>
+<li id="S5.I16.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I16.i19.p1" class="ltx_para">
+<p class="ltx_p">Pairwise disjoint family of sets, Section 5.5</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S5.SS6.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.6.2 </span>Important Theorems and Results about Sets</h3>
+
+<div id="S5.SS6.SSS2.p1" class="ltx_para">
+<ul id="S5.I17" class="ltx_itemize">
+<li id="S5.I17.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I17.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a href="https://johnweeks03.github.io/teaching/300/5-1.html#Theorem_5.5">Theorem 5.5.</a></span> Let <math id="S5.I17.i1.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> be a nonnegative integer and let <math id="S5.I17.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a subset of some universal set. If <math id="S5.I17.i1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is a finite set with <math id="S5.I17.i1.p1.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> elements, then <math id="S5.I17.i1.p1.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> has <math id="S5.I17.i1.p1.m6" class="ltx_Math" data-alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> subsets. That is, if <math id="S5.I17.i1.p1.m7" class="ltx_Math" data-alttext="|A|=n" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>n</mi></mrow></math>, then <math id="S5.I17.i1.p1.m8" class="ltx_Math" data-alttext="|\mathcal{P}(A)|=2^{n}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I17.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I17.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a href="https://johnweeks03.github.io/teaching/300/5-3.html#Theorem_5.18">Theorem 5.18.</a></span> Let <math id="S5.I17.i2.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I17.i2.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be subsets of some universal set <math id="S5.I17.i2.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Then all of the following equalities hold.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS6.SSS2.p2" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Properties of the Empty Set</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="S5.SS6.SSS2.m1" class="ltx_Math" data-alttext="A\cap\emptyset=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi mathvariant="normal">∅</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">and the Universal Set</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS6.SSS2.m2" class="ltx_Math" data-alttext="A\cup\emptyset=A" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi mathvariant="normal">∅</mi></mrow><mo>=</mo><mi>A</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Idempotent Laws</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS6.SSS2.m3" class="ltx_Math" data-alttext="A\cap A=A" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>A</mi></mrow><mo>=</mo><mi>A</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Commutative Laws</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS6.SSS2.m4" class="ltx_Math" data-alttext="A\cap B=B\cap A" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>B</mi><mo>∩</mo><mi>A</mi></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_align_top ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t" rowspan="2">Associative Laws</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S5.SS6.SSS2.m5" class="ltx_Math" data-alttext="(A\cap B)\cap C=A\cap(B\cap C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><math id="S5.SS6.SSS2.m6" class="ltx_Math" data-alttext="(A\cup B)\cup C=A\cup(B\cup C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S5.SS6.SSS2.p3" class="ltx_para">
+<p class="ltx_p">Distributive Laws</p>
+</div>
+<div id="S5.SS6.SSS2.p4" class="ltx_para">
+<table role="presentation" id="S5.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex29.m1" class="ltx_Math" data-alttext="\displaystyle A\cap(B\cup C)=(A\cap B)\cup(A\cap C)" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex30.m1" class="ltx_Math" data-alttext="\displaystyle A\cup(B\cap C)=(A\cup B)\cap(A\cup C)" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS6.SSS2.p5" class="ltx_para">
+<ul id="S5.I18" class="ltx_itemize">
+<li id="S5.I18.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I18.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a href="https://johnweeks03.github.io/teaching/300/5-3.html#Theorem_5.20">Theorem 5.20.</a></span> Let <math id="S5.I18.i1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I18.i1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be subsets of some universal set <math id="S5.I18.i1.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Then the following are true:</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS6.SSS2.p6" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Basic Properties</th>
+<td class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S5.SS6.SSS2.m7" class="ltx_Math" data-alttext="\left(A^{c}\right)^{c}=A" display="inline"><mrow><msup><mrow><mo>(</mo><msup><mi>A</mi><mi>c</mi></msup><mo>)</mo></mrow><mi>c</mi></msup><mo>=</mo><mi>A</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S5.SS6.SSS2.m8" class="ltx_Math" data-alttext="A-B=A\cap B^{c}" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></mrow></math></td>
+</tr>
+</table>
+</td>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Empty Set, Universal Set</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S5.SS6.SSS2.m9" class="ltx_Math" data-alttext="A-\emptyset=A\text{ and }A-U=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>−</mo><mi mathvariant="normal">∅</mi></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>−</mo><mi>U</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S5.SS6.SSS2.m10" class="ltx_Math" data-alttext="\emptyset^{c}=U\text{ and }U^{c}=\emptyset" display="inline"><mrow><msup><mi mathvariant="normal">∅</mi><mi>c</mi></msup><mo>=</mo><mrow><mi>U</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><msup><mi>U</mi><mi>c</mi></msup></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">De Morgan’s Laws</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S5.SS6.SSS2.m11" class="ltx_Math" data-alttext="(A\cap B)^{c}=A^{c}\cup B^{c}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mi>c</mi></msup><mo>=</mo><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∪</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S5.SS6.SSS2.m12" class="ltx_Math" data-alttext="(A\cup B)^{c}=A^{c}\cap B^{c}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mi>c</mi></msup><mo>=</mo><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></mrow></math></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Subsets and Complements</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">
+<math id="S5.SS6.SSS2.m13" class="ltx_Math" data-alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> if and only if <math id="S5.SS6.SSS2.m14" class="ltx_Math" data-alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S5.SS6.SSS2.p7" class="ltx_para">
+<ul id="S5.I19" class="ltx_itemize">
+<li id="S5.I19.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I19.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a href="https://johnweeks03.github.io/teaching/300/5-4.html#Theorem_5.25">Theorem 5.25.</a></span> Let <math id="S5.I19.i1.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I19.i1.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be sets. Then</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS6.SSS2.p8" class="ltx_para">
+<ol id="S5.I20" class="ltx_enumerate">
+<li id="S5.I20.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I20.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I20.i1.p1.m1" class="ltx_Math" data-alttext="A\times(B\cap C)=(A\times B)\cap(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I20.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I20.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I20.i2.p1.m1" class="ltx_Math" data-alttext="A\times(B\cup C)=(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I20.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I20.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I20.i3.p1.m1" class="ltx_Math" data-alttext="(A\cap B)\times C=(A\times C)\cap(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I20.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I20.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I20.i4.p1.m1" class="ltx_Math" data-alttext="(A\cup B)\times C=(A\times C)\cup(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I20.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I20.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I20.i5.p1.m1" class="ltx_Math" data-alttext="A\times(B-C)=(A\times B)-(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>−</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I20.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I20.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I20.i6.p1.m1" class="ltx_Math" data-alttext="(A-B)\times C=(A\times C)-(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I20.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S5.I20.i7.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I20.i7.p1.m1" class="ltx_Math" data-alttext="T\subseteq A" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>A</mi></mrow></math>, then <math id="S5.I20.i7.p1.m2" class="ltx_Math" data-alttext="T\times B\subseteq A\times B" display="inline"><mrow><mrow><mi>T</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I20.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S5.I20.i8.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I20.i8.p1.m1" class="ltx_Math" data-alttext="Y\subseteq B" display="inline"><mrow><mi>Y</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.I20.i8.p1.m2" class="ltx_Math" data-alttext="A\times Y\subseteq A\times B" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>Y</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS6.SSS2.p9" class="ltx_para">
+<ul id="S5.I21" class="ltx_itemize">
+<li id="S5.I21.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I21.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a href="#Theorem_5.30">Theorem 5.30.</a></span> Let <math id="S5.I21.i1.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set and let <math id="S5.I21.i1.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets. Then</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS6.SSS2.p10" class="ltx_para">
+<ol id="S5.I22" class="ltx_enumerate">
+<li id="S5.I22.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I22.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S5.I22.i1.p1.m1" class="ltx_Math" data-alttext="\beta\in\Lambda,\bigcap_{\alpha\in\Lambda}A_{\alpha}\subseteq A_{\beta}" display="inline"><mrow><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo rspace="0em">,</mo><mrow><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>⊆</mo><msub><mi>A</mi><mi>β</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I22.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I22.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S5.I22.i2.p1.m1" class="ltx_Math" data-alttext="\beta\in\Lambda,A_{\beta}\subseteq\bigcup_{\alpha\in\Lambda}A_{\alpha}" display="inline"><mrow><mrow><mi>β</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>,</mo><mrow><msub><mi>A</mi><mi>β</mi></msub><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I22.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I22.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I22.i3.p1.m1" class="ltx_Math" data-alttext="\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)^{c}=\bigcup_{\alpha\in%
+\Lambda}A_{\alpha}^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I22.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I22.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I22.i4.p1.m1" class="ltx_Math" data-alttext="\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)^{c}=\bigcap_{\alpha\in%
+\Lambda}A_{\alpha}^{c}" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow><mi>c</mi></msup><mo rspace="0.111em">=</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msubsup><mi>A</mi><mi>α</mi><mi>c</mi></msubsup></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS6.SSS2.p11" class="ltx_para">
+<p class="ltx_p">Parts (3) and (4) are known as De Morgan’s Laws.</p>
+</div>
+<div id="S5.SS6.SSS2.p12" class="ltx_para">
+<ul id="S5.I23" class="ltx_itemize">
+<li id="S5.I23.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I23.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a href="#Theorem_5.31">Theorem 5.31.</a></span> Let <math id="S5.I23.i1.p1.m1" class="ltx_Math" data-alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a nonempty indexing set, let <math id="S5.I23.i1.p1.m2" class="ltx_Math" data-alttext="\mathcal{A}=\left\{A_{\alpha}\mid\alpha\in\Lambda\right\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>A</mi><mi>α</mi></msub><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow><mo>}</mo></mrow></mrow></math> be an indexed family of sets, and let <math id="S5.I23.i1.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be a set. Then</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS6.SSS2.p13" class="ltx_para">
+<ol id="S5.I24" class="ltx_enumerate">
+<li id="S5.I24.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I24.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I24.i1.p1.m1" class="ltx_Math" data-alttext="B\cap\left(\bigcup_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcup_{\alpha\in%
+\Lambda}\left(B\cap A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>∩</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="S5.I24.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I24.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I24.i2.p1.m1" class="ltx_Math" data-alttext="B\cup\left(\bigcap_{\alpha\in\Lambda}A_{\alpha}\right)=\bigcap_{\alpha\in%
+\Lambda}\left(B\cup A_{\alpha}\right)" display="inline"><mrow><mrow><mi>B</mi><mo>∪</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo rspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>B</mi><mo>∪</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS6.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.6.3 </span>Important Proof Method: The Choose-an-Element Method</h3>
+
+<div id="S5.SS6.SSS3.p1" class="ltx_para">
+<p class="ltx_p">The choose-an-element method is frequently used when we encounter a universal quantifier in a statement in the backward process of a proof. This statement often has the form</p>
+</div>
+<div id="S5.SS6.SSS3.p2" class="ltx_para">
+<p class="ltx_p">For each element with a given property, something happens.</p>
+</div>
+<div id="S5.SS6.SSS3.p3" class="ltx_para">
+<p class="ltx_p">In the forward process of the proof, we then we choose an arbitrary element with the given property.</p>
+</div>
+<div id="S5.SS6.SSS3.p4" class="ltx_para">
+<p class="ltx_p">Whenever we choose an arbitrary element with a given property, we are not selecting a specific element. Rather, the only thing we can assume about the element is the given property.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
