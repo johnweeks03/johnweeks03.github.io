@@ -1,0 +1,1116 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Equivalence Relations</title>
+<!--Generated on Sun Dec 14 18:44:43 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S7" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Equivalence Relations</h1>
+
+<section id="S7.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.2 </span>Equivalence Relations</h2>
+
+<section id="S7.SS2.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.1 </span>Beginning Activity 1 (Properties of Relations)</h3>
+
+<div id="S7.SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In previous mathematics courses, we have worked with the equality relation. For example, let <math id="S7.SS2.SSS1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the relation on <math id="S7.SS2.SSS1.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> defined as follows: For all <math id="S7.SS2.SSS1.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},aRb" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.SS2.SSS1.p1.m4" class="ltx_Math" data-alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>. We know this equality relation on <math id="S7.SS2.SSS1.p1.m5" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> has the following properties:</p>
+</div>
+<div id="S7.SS2.SSS1.p2" class="ltx_para">
+<ul id="S7.I1" class="ltx_itemize">
+<li id="S7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I1.i1.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Z},a=a" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>=</mo><mi>a</mi></mrow></mrow></math> and so <math id="S7.I1.i1.p1.m2" class="ltx_Math" data-alttext="aRa" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I1.i2.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, if <math id="S7.I1.i2.p1.m2" class="ltx_Math" data-alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, then <math id="S7.I1.i2.p1.m3" class="ltx_Math" data-alttext="b=a" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>a</mi></mrow></math>. That is, if <math id="S7.I1.i2.p1.m4" class="ltx_Math" data-alttext="aRb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math>, then <math id="S7.I1.i2.p1.m5" class="ltx_Math" data-alttext="bRa" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I1.i3.p1.m1" class="ltx_Math" data-alttext="a,b,c\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, if <math id="S7.I1.i3.p1.m2" class="ltx_Math" data-alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math> and <math id="S7.I1.i3.p1.m3" class="ltx_Math" data-alttext="b=c" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>c</mi></mrow></math>, then <math id="S7.I1.i3.p1.m4" class="ltx_Math" data-alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math>. That is, if <math id="S7.I1.i3.p1.m5" class="ltx_Math" data-alttext="aRb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math> and <math id="S7.I1.i3.p1.m6" class="ltx_Math" data-alttext="bRc" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>c</mi></mrow></math>, then <math id="S7.I1.i3.p1.m7" class="ltx_Math" data-alttext="aRc" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>c</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S7.SS2.SSS1.p3" class="ltx_para">
+<p class="ltx_p">In mathematics, when something satisfies certain properties, we often ask if other things satisfy the same properties. Before investigating this, we will give names to these properties.</p>
+</div>
+<div id="S7.SS2.SSS1.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS2.SSS1.p4.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and let <math id="S7.SS2.SSS1.p4.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be a relation on <math id="S7.SS2.SSS1.p4.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.SS2.SSS1.p5" class="ltx_para">
+<ul id="S7.I2" class="ltx_itemize">
+<li id="S7.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I2.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is <span class="ltx_text ltx_font_bold">reflexive</span> on <math id="S7.I2.i1.p1.m2" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> provided that for each <math id="S7.I2.i1.p1.m3" class="ltx_Math" data-alttext="x\in A,xRx" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> or, equivalently, <math id="S7.I2.i1.p1.m4" class="ltx_Math" data-alttext="(x,x)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I2.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is <span class="ltx_text ltx_font_bold">symmetric</span> provided that for every <math id="S7.I2.i2.p1.m2" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I2.i2.p1.m3" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math>, then <math id="S7.I2.i2.p1.m4" class="ltx_Math" data-alttext="yRx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math> or, equivalently, for every <math id="S7.I2.i2.p1.m5" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I2.i2.p1.m6" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I2.i2.p1.m7" class="ltx_Math" data-alttext="(y,x)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I2.i3.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is <span class="ltx_text ltx_font_bold">transitive</span> provided that for every <math id="S7.I2.i3.p1.m2" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I2.i3.p1.m3" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.I2.i3.p1.m4" class="ltx_Math" data-alttext="yRz" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math>, then <math id="S7.I2.i3.p1.m5" class="ltx_Math" data-alttext="xRz" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math> or, equivalently, for every <math id="S7.I2.i3.p1.m6" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I2.i3.p1.m7" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math> and <math id="S7.I2.i3.p1.m8" class="ltx_Math" data-alttext="(y,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I2.i3.p1.m9" class="ltx_Math" data-alttext="(x,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S7.SS2.SSS1.p6" class="ltx_para">
+<p class="ltx_p">Before exploring examples, for each of these properties, it is a good idea to understand what it means to say that a relation does not satisfy the property. So let <math id="S7.SS2.SSS1.p6.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and let <math id="S7.SS2.SSS1.p6.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be a relation on <math id="S7.SS2.SSS1.p6.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.SS2.SSS1.p7" class="ltx_para">
+<ol id="S7.I3" class="ltx_enumerate">
+<li id="S7.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Carefully explain what it means to say that the relation <math id="S7.I3.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is not reflexive on the set <math id="S7.I3.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Carefully explain what it means to say that the relation <math id="S7.I3.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is not symmetric.</p>
+</div>
+</li>
+<li id="S7.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Carefully explain what it means to say that the relation <math id="S7.I3.i3.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is not transitive.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS2.SSS1.p8" class="ltx_para">
+<p class="ltx_p">To illustrate these properties, we let <math id="S7.SS2.SSS1.p8.m1" class="ltx_Math" data-alttext="A=\{1,2,3,4\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math> and define the relations <math id="S7.SS2.SSS1.p8.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> and <math id="S7.SS2.SSS1.p8.m3" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> on <math id="S7.SS2.SSS1.p8.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows:</p>
+</div>
+<div id="S7.SS2.SSS1.p9" class="ltx_para">
+<table role="presentation" id="S7.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex1.m1" class="ltx_Math" data-alttext="\displaystyle R=\{(1,1),(2,2),(3,3),(4,4),(1,3),(3,2)\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex2.m1" class="ltx_Math" data-alttext="\displaystyle T=\{(1,1),(1,4),(2,4),(4,1),(4,2)\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS1.p10" class="ltx_para">
+<ol id="S7.I4" class="ltx_enumerate">
+<li id="S7.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Draw a directed graph for the relation <math id="S7.I4.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>. Then explain why the relation <math id="S7.I4.i1.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is reflexive on <math id="S7.I4.i1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, is not symmetric, and is not transitive.</p>
+</div>
+</li>
+<li id="S7.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Draw a directed graph for the relation <math id="S7.I4.i2.p1.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>. Is the relation <math id="S7.I4.i2.p1.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> reflexive on <math id="S7.I4.i2.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>? Is the relation <math id="S7.I4.i2.p1.m4" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> symmetric? Is the relation <math id="S7.I4.i2.p1.m5" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> transitive? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS2.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.2 </span>Beginning Activity 2 (Review of Congruence Modulo <math id="S7.SS2.SSS2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>)</h3>
+
+<div id="S7.SS2.SSS2.p1" class="ltx_para">
+<ol id="S7.I5" class="ltx_enumerate">
+<li id="S7.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I5.i1.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> and let <math id="S7.I5.i1.p1.m2" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. In <a href="https://johnweeks03.github.io/teaching/300/3-1.html">Section 3.1</a>, we defined what it means to say that <math id="S7.I5.i1.p1.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is congruent to <math id="S7.I5.i1.p1.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> modulo <math id="S7.I5.i1.p1.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. Write this definition and state two different conditions that are equivalent to the definition.</p>
+</div>
+</li>
+<li id="S7.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">Explain why congruence modulo <math id="S7.I5.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is a relation on <math id="S7.I5.i2.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I5.i3.p1" class="ltx_para">
+<p class="ltx_p">Carefully review <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.30">Theorem 3.30</a> and the proofs given below it in <a href="https://johnweeks03.github.io/teaching/300/3-5.html">Section 3.5</a>. In terms of the properties of relations introduced in Beginning Activity 1, what does this theorem say about the relation of congruence modulo <math id="S7.I5.i3.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> on the integers?</p>
+</div>
+</li>
+<li id="S7.I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I5.i4.p1" class="ltx_para">
+<p class="ltx_p">Write a complete statement of <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.31">Theorem 3.31 and Corollary 3.32.</a></p>
+</div>
+</li>
+<li id="S7.I5.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S7.I5.i5.p1" class="ltx_para">
+<p class="ltx_p">Write a proof of the symmetric property for congruence modulo <math id="S7.I5.i5.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. That is, prove the following:</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS2.SSS2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.SSS2.p2.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> and let <math id="S7.SS2.SSS2.p2.m2" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. If <math id="S7.SS2.SSS2.p2.m3" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S7.SS2.SSS2.p2.m4" class="ltx_Math" data-alttext="b\equiv a(\bmod n)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>a</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.3 </span>Directed Graphs and Properties of Relations</h3>
+
+<div id="S7.SS2.SSS3.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/7-1.html">Section 7.1</a>, we used directed graphs, or digraphs, to represent relations on finite sets. Three properties of relations were introduced in Beginning Activity 1 and will be repeated in the following descriptions of how these properties can be visualized on a directed graph.</p>
+</div>
+<div id="S7.SS2.SSS3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.SSS3.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and let <math id="S7.SS2.SSS3.p2.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be a relation on <math id="S7.SS2.SSS3.p2.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.SS2.SSS3.p3" class="ltx_para">
+<ul id="S7.I6" class="ltx_itemize">
+<li id="S7.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I6.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is reflexive on <math id="S7.I6.i1.p1.m2" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> provided that for each <math id="S7.I6.i1.p1.m3" class="ltx_Math" data-alttext="x\in A,xRx" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> or, equivalently, <math id="S7.I6.i1.p1.m4" class="ltx_Math" data-alttext="(x,x)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S7.SS2.SSS3.p4" class="ltx_para">
+<p class="ltx_p">This means that if a reflexive relation is represented on a digraph, there would have to be a loop at each vertex, as is shown in the following figure.
+<br class="ltx_break"><img src="https://johnweeks03.github.io/teaching/300/fig7_2_1.jpg" id="S7.SS2.SSS3.p4.g1" class="ltx_graphics ltx_img_square" width="112" height="115" alt="a loop starting and ending at one vertex"></p>
+</div>
+<div id="S7.SS2.SSS3.p5" class="ltx_para">
+<ul id="S7.I7" class="ltx_itemize">
+<li id="S7.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I7.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is symmetric provided that for every <math id="S7.I7.i1.p1.m2" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I7.i1.p1.m3" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math>, then <math id="S7.I7.i1.p1.m4" class="ltx_Math" data-alttext="yRx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math> or, equivalently, for every <math id="S7.I7.i1.p1.m5" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I7.i1.p1.m6" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I7.i1.p1.m7" class="ltx_Math" data-alttext="(y,x)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S7.SS2.SSS3.p6" class="ltx_para">
+<p class="ltx_p">This means that if a symmetric relation is represented on a digraph, then anytime there is a directed edge from one vertex to a second vertex, there would be a directed edge from the second vertex to the first vertex, as is shown in the following figure.
+<br class="ltx_break"><img src="https://johnweeks03.github.io/teaching/300/fig7_2_2.jpg" id="S7.SS2.SSS3.p6.g1" class="ltx_graphics ltx_img_landscape" width="325" height="42" alt="two arrows pointing between two vertices going each direction"></p>
+</div>
+<div id="S7.SS2.SSS3.p7" class="ltx_para">
+<ul id="S7.I8" class="ltx_itemize">
+<li id="S7.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I8.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is transitive provided that for every <math id="S7.I8.i1.p1.m2" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I8.i1.p1.m3" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.I8.i1.p1.m4" class="ltx_Math" data-alttext="yRz" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math>, then <math id="S7.I8.i1.p1.m5" class="ltx_Math" data-alttext="xRz" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math> or, equivalently, for every <math id="S7.I8.i1.p1.m6" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I8.i1.p1.m7" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math> and <math id="S7.I8.i1.p1.m8" class="ltx_Math" data-alttext="(y,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I8.i1.p1.m9" class="ltx_Math" data-alttext="(x,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>. So if a transitive relation is represented by a digraph, then anytime there is a directed edge from a vertex <math id="S7.I8.i1.p1.m10" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> to a vertex <math id="S7.I8.i1.p1.m11" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> and a directed edge from <math id="S7.I8.i1.p1.m12" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> to a vertex <math id="S7.I8.i1.p1.m13" class="ltx_Math" data-alttext="z" display="inline"><mi>z</mi></math>, there would be a directed edge from <math id="S7.I8.i1.p1.m14" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> to <math id="S7.I8.i1.p1.m15" class="ltx_Math" data-alttext="z" display="inline"><mi>z</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S7.SS2.SSS3.p8" class="ltx_para">
+<p class="ltx_p">In addition, if a transitive relation is represented by a digraph, then anytime there is a directed edge from a vertex <math id="S7.SS2.SSS3.p8.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> to a vertex <math id="S7.SS2.SSS3.p8.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> and a directed edge from <math id="S7.SS2.SSS3.p8.m3" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> to the vertex <math id="S7.SS2.SSS3.p8.m4" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>, there would be loops at <math id="S7.SS2.SSS3.p8.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.SS2.SSS3.p8.m6" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. These two situations are illustrated as follows:
+<br class="ltx_break"><img src="https://johnweeks03.github.io/teaching/300/fig7_2_3.jpg" id="S7.SS2.SSS3.p8.g1" class="ltx_graphics ltx_img_landscape" width="360" height="252" alt="a right triangle of vertices, arrows connecting x to y, y to z, and x to z">
+<br class="ltx_break"><img src="https://johnweeks03.github.io/teaching/300/fig7_2_4.jpg" id="S7.SS2.SSS3.p8.g2" class="ltx_graphics ltx_img_landscape" width="417" height="119" alt="a combination of previous graphs with loops and double arrows"></p>
+</div>
+</section>
+<section id="S7.SS2.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.4 </span>Progress Check 7.7 (Properties of Relations)</h3>
+
+<div id="S7.SS2.SSS4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.SSS4.p1.m1" class="ltx_Math" data-alttext="A=\{a,b,c,d\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S7.SS2.SSS4.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the following relation on <math id="S7.SS2.SSS4.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> :</p>
+</div>
+<div id="S7.SS2.SSS4.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex3.m1" class="ltx_Math" data-alttext="R=\{(a,a),(b,b),(a,c),(c,a),(b,d),(d,b)\}." display="block"><mrow><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS4.p3" class="ltx_para">
+<p class="ltx_p">Draw a directed graph for the relation <math id="S7.SS2.SSS4.p3.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> and then determine if the relation <math id="S7.SS2.SSS4.p3.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is reflexive on <math id="S7.SS2.SSS4.p3.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, if the relation <math id="S7.SS2.SSS4.p3.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is symmetric, and if the relation <math id="S7.SS2.SSS4.p3.m5" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is transitive.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.5 </span>Definition of an Equivalence Relation</h3>
+
+<div id="S7.SS2.SSS5.p1" class="ltx_para">
+<p class="ltx_p">In mathematics, as in real life, it is often convenient to think of two different things as being essentially the same. For example, when you go to a store to buy a cold soft drink, the cans of soft drinks in the cooler are often sorted by brand and type of soft drink. The Coca Colas are grouped together, the Pepsi Colas are grouped together, the Dr. Peppers are grouped together, and so on. When we choose a particular can of one type of soft drink, we are assuming that all the cans are essentially the same. Even though the specific cans of one type of soft drink are physically different, it makes no difference which can we choose. In doing this, we are saying that the cans of one type of soft drink are equivalent, and we are using the mathematical notion of an equivalence relation.</p>
+</div>
+<div id="S7.SS2.SSS5.p2" class="ltx_para">
+<p class="ltx_p">An equivalence relation on a set is a relation with a certain combination of properties that allow us to sort the elements of the set into certain classes. In this section, we will focus on the properties that define an equivalence relation, and in the next section, we will see how these properties allow us to sort or partition the elements of the set into certain classes.</p>
+</div>
+<div id="S7.SS2.SSS5.p3" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS2.SSS5.p3.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set. A relation <math id="S7.SS2.SSS5.p3.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on the set <math id="S7.SS2.SSS5.p3.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is an <span class="ltx_text ltx_font_bold">equivalence relation</span> provided that <math id="S7.SS2.SSS5.p3.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is reflexive, symmetric, and transitive. For <math id="S7.SS2.SSS5.p3.m5" class="ltx_Math" data-alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.SS2.SSS5.p3.m6" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.SS2.SSS5.p3.m7" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S7.SS2.SSS5.p3.m8" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, we say that <math id="S7.SS2.SSS5.p3.m9" class="ltx_Math" data-alttext="\boldsymbol{a}" display="inline"><mi>𝒂</mi></math> is equivalent to <math id="S7.SS2.SSS5.p3.m10" class="ltx_Math" data-alttext="\boldsymbol{b}" display="inline"><mi>𝒃</mi></math>.</span></p>
+</blockquote>
+</div>
+<div id="S7.SS2.SSS5.p4" class="ltx_para">
+<p class="ltx_p">Most of the examples we have studied so far have involved a relation on a small finite set. For these examples, it was convenient to use a directed graph to represent the relation. It is now time to look at some other type of examples, which may prove to be more interesting. In these examples, keep in mind that there is a subtle difference between the reflexive property and the other two properties. The reflexive property states that some ordered pairs actually belong to the relation <math id="S7.SS2.SSS5.p4.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>, or some elements of <math id="S7.SS2.SSS5.p4.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> are related. The reflexive property has a universal quantifier and, hence, we must prove that for all <math id="S7.SS2.SSS5.p4.m3" class="ltx_Math" data-alttext="x\in A,xRx" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>. Symmetry and transitivity, on
+<br class="ltx_break">the other hand, are defined by conditional sentences. We often use a direct proof for these properties, and so we start by assuming the hypothesis and then showing that the conclusion must follow from the hypothesis.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.6 </span>Example 7.8 (A Relation that Is Not an Equivalence Relation)</h3>
+
+<div id="S7.SS2.SSS6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.SSS6.p1.m1" class="ltx_Math" data-alttext="M" display="inline"><mi>M</mi></math> be the relation on <math id="S7.SS2.SSS6.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> defined as follows:
+<br class="ltx_break">For <math id="S7.SS2.SSS6.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},aMb" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.SS2.SSS6.p1.m4" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is a multiple of <math id="S7.SS2.SSS6.p1.m5" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>.
+<br class="ltx_break">So <math id="S7.SS2.SSS6.p1.m6" class="ltx_Math" data-alttext="aMb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>b</mi></mrow></math> if and only if there exists a <math id="S7.SS2.SSS6.p1.m7" class="ltx_Math" data-alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S7.SS2.SSS6.p1.m8" class="ltx_Math" data-alttext="a=bk" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mi>k</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S7.SS2.SSS6.p2" class="ltx_para">
+<ul id="S7.I9" class="ltx_itemize">
+<li id="S7.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I9.i1.p1.m1" class="ltx_Math" data-alttext="M" display="inline"><mi>M</mi></math> is reflexive on <math id="S7.I9.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> since for each <math id="S7.I9.i1.p1.m3" class="ltx_Math" data-alttext="x\in\mathbb{Z},x=x\cdot 1" display="inline"><mrow><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>=</mo><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow></mrow></mrow></math> and, hence, <math id="S7.I9.i1.p1.m4" class="ltx_Math" data-alttext="xMx" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">Notice that 4 M 2, but <math id="S7.I9.i2.p1.m1" class="ltx_Math" data-alttext="2\not M" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi class="ltx_mathvariant_italic" mathvariant="italic">M̸</mi></mrow></math> 4. So there exist integers <math id="S7.I9.i2.p1.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.I9.i2.p1.m3" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> such that <math id="S7.I9.i2.p1.m4" class="ltx_Math" data-alttext="xMy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>y</mi></mrow></math> but <math id="S7.I9.i2.p1.m5" class="ltx_Math" data-alttext="yMx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>x</mi></mrow></math>. Hence, the relation <math id="S7.I9.i2.p1.m6" class="ltx_Math" data-alttext="M" display="inline"><mi>M</mi></math> is not symmetric.</p>
+</div>
+</li>
+<li id="S7.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I9.i3.p1" class="ltx_para">
+<p class="ltx_p">Now assume that <math id="S7.I9.i3.p1.m1" class="ltx_Math" data-alttext="xMy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.I9.i3.p1.m2" class="ltx_Math" data-alttext="yMz" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>z</mi></mrow></math>. Then there exist integers <math id="S7.I9.i3.p1.m3" class="ltx_Math" data-alttext="p" display="inline"><mi>p</mi></math> and <math id="S7.I9.i3.p1.m4" class="ltx_Math" data-alttext="q" display="inline"><mi>q</mi></math> such that</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S7.SS2.SSS6.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex4.m1" class="ltx_Math" data-alttext="x=yp\text{ and }y=zq." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mi>y</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>z</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS6.p4" class="ltx_para">
+<p class="ltx_p">Using the second equation to make a substitution in the first equation, we see that <math id="S7.SS2.SSS6.p4.m1" class="ltx_Math" data-alttext="x=z(pq)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Since <math id="S7.SS2.SSS6.p4.m2" class="ltx_Math" data-alttext="pq\in\mathbb{Z}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, we have shown that <math id="S7.SS2.SSS6.p4.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is a multiple of <math id="S7.SS2.SSS6.p4.m4" class="ltx_Math" data-alttext="z" display="inline"><mi>z</mi></math> and hence <math id="S7.SS2.SSS6.p4.m5" class="ltx_Math" data-alttext="xMz" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>z</mi></mrow></math>. Therefore, <math id="S7.SS2.SSS6.p4.m6" class="ltx_Math" data-alttext="M" display="inline"><mi>M</mi></math> is a transitive relation.</p>
+</div>
+<div id="S7.SS2.SSS6.p5" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.SS2.SSS6.p5.m1" class="ltx_Math" data-alttext="M" display="inline"><mi>M</mi></math> is reflexive on <math id="S7.SS2.SSS6.p5.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> and is transitive, but since <math id="S7.SS2.SSS6.p5.m3" class="ltx_Math" data-alttext="M" display="inline"><mi>M</mi></math> is not symmetric, it is not an equivalence relation on <math id="S7.SS2.SSS6.p5.m4" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.7 </span>Progress Check 7.9 (A Relation that Is an Equivalence Relation)</h3>
+
+<div id="S7.SS2.SSS7.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.SS2.SSS7.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.SS2.SSS7.p1.m2" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> as follows: For all <math id="S7.SS2.SSS7.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Q},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.SS2.SSS7.p1.m4" class="ltx_Math" data-alttext="a-b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. For example:</p>
+</div>
+<div id="S7.SS2.SSS7.p2" class="ltx_para">
+<table role="presentation" id="S7.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex5.m1" class="ltx_math_unparsed" data-alttext="\displaystyle\cdot\frac{3}{4}\sim\frac{7}{4}\text{ since }\frac{3}{4}-\frac{7}%
+{4}=-1\text{ and }-1\in\mathbb{Z}." display="inline"><mrow><mo rspace="0.222em">⋅</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>4</mn></mfrac></mstyle><mo>∼</mo><mstyle displaystyle="true"><mfrac><mn>7</mn><mn>4</mn></mfrac></mstyle><mtext> since </mtext><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>4</mn></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mn>7</mn><mn>4</mn></mfrac></mstyle><mo rspace="0em">=</mo><mo lspace="0em">−</mo><mn>1</mn><mtext> and </mtext><mo>−</mo><mn>1</mn><mo>∈</mo><mi>ℤ</mi><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex6.m1" class="ltx_math_unparsed" data-alttext="\displaystyle\cdot\frac{3}{4}\nsim\frac{1}{2}\text{ since }\frac{3}{4}-\frac{1%
+}{2}=\frac{1}{4}\text{ and }\frac{1}{4}\notin\mathbb{Z}." display="inline"><mrow><mo rspace="0.222em">⋅</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>4</mn></mfrac></mstyle><mo>≁</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mtext> since </mtext><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>4</mn></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mtext> and </mtext><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>∉</mo><mi>ℤ</mi><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS7.p3" class="ltx_para">
+<p class="ltx_p">To prove that <math id="S7.SS2.SSS7.p3.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is reflexive on <math id="S7.SS2.SSS7.p3.m2" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>, we note that for all <math id="S7.SS2.SSS7.p3.m3" class="ltx_Math" data-alttext="a\in\mathbb{Q}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>, <math id="S7.SS2.SSS7.p3.m4" class="ltx_Math" data-alttext="a-a=0" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>a</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Since <math id="S7.SS2.SSS7.p3.m5" class="ltx_Math" data-alttext="0\in\mathbb{Z}" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>ℤ</mi></mrow></math>, we conclude that <math id="S7.SS2.SSS7.p3.m6" class="ltx_Math" data-alttext="a\sim a" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>a</mi></mrow></math>. Now prove that the relation <math id="S7.SS2.SSS7.p3.m7" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is symmetric and transitive, and hence, that <math id="S7.SS2.SSS7.p3.m8" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.SS2.SSS7.p3.m9" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.8 </span>Congruence Modulo n</h3>
+
+<div id="S7.SS2.SSS8.p1" class="ltx_para">
+<p class="ltx_p">One of the important equivalence relations we will study in detail is that of congruence modulo <math id="S7.SS2.SSS8.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. We reviewed this relation in Beginning Activity 2 .</p>
+</div>
+<div id="S7.SS2.SSS8.p2" class="ltx_para">
+<p class="ltx_p"><a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.30">Theorem 3.30</a> tells us that congruence modulo <math id="S7.SS2.SSS8.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an equivalence relation on <math id="S7.SS2.SSS8.p2.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. Recall that by the Division Algorithm, if <math id="S7.SS2.SSS8.p2.m3" class="ltx_Math" data-alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, then there exist unique integers <math id="S7.SS2.SSS8.p2.m4" class="ltx_Math" data-alttext="q" display="inline"><mi>q</mi></math> and <math id="S7.SS2.SSS8.p2.m5" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> such that</p>
+</div>
+<div id="S7.SS2.SSS8.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex7.m1" class="ltx_Math" data-alttext="a=nq+r\text{ and }0\leq r&lt;n." display="block"><mrow><mrow><mi>a</mi><mo>=</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mn>0</mn></mrow></mrow><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>n</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS8.p4" class="ltx_para">
+<p class="ltx_p"><a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.31">Theorem 3.31 and Corollary 3.32</a> then tell us that <math id="S7.SS2.SSS8.p4.m1" class="ltx_Math" data-alttext="a\equiv r(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. That is, <math id="S7.SS2.SSS8.p4.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is congruent modulo <math id="S7.SS2.SSS8.p4.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> to its remainder <math id="S7.SS2.SSS8.p4.m4" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> when it is divided by <math id="S7.SS2.SSS8.p4.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. When we use the term "remainder" in this context, we always mean the remainder <math id="S7.SS2.SSS8.p4.m6" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> with <math id="S7.SS2.SSS8.p4.m7" class="ltx_Math" data-alttext="0\leq r&lt;n" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>n</mi></mrow></math> that is guaranteed by the Division Algorithm. We can use this idea to prove the following theorem.</p>
+</div>
+<div id="Theorem_7.10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 7.10.</span> Let <math id="S7.SS2.SSS8.p5.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and let <math id="S7.SS2.SSS8.p5.m2" class="ltx_Math" data-alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. Then <math id="S7.SS2.SSS8.p5.m3" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if and only if a and <math id="S7.SS2.SSS8.p5.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S7.SS2.SSS8.p5.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S7.SS2.SSS8.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S7.SS2.SSS8.p6.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and let <math id="S7.SS2.SSS8.p6.m2" class="ltx_Math" data-alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. We will first prove that if <math id="S7.SS2.SSS8.p6.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.SS2.SSS8.p6.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S7.SS2.SSS8.p6.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, then <math id="S7.SS2.SSS8.p6.m6" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So assume that <math id="S7.SS2.SSS8.p6.m7" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.SS2.SSS8.p6.m8" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S7.SS2.SSS8.p6.m9" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, and let <math id="S7.SS2.SSS8.p6.m10" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> be this common remainder. Then, by <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.31">Theorem 3.31</a>,</p>
+</div>
+<div id="S7.SS2.SSS8.p7" class="ltx_para">
+<table role="presentation" id="S7.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex8.m1" class="ltx_math_unparsed" data-alttext="a\equiv r(\bmod n)\text{ and }b\equiv r(\bmod n)." display="block"><mrow><mi>a</mi><mo>≡</mo><mi>r</mi><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mtext> and </mtext><mi>b</mi><mo>≡</mo><mi>r</mi><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS8.p8" class="ltx_para">
+<p class="ltx_p">Since congruence modulo <math id="S7.SS2.SSS8.p8.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an equivalence relation, it is a symmetric relation. Hence, since <math id="S7.SS2.SSS8.p8.m2" class="ltx_Math" data-alttext="b\equiv r(\bmod n)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we can conclude that <math id="S7.SS2.SSS8.p8.m3" class="ltx_Math" data-alttext="r\equiv b(\bmod n)" display="inline"><mrow><mi>r</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Combining this with the fact that <math id="S7.SS2.SSS8.p8.m4" class="ltx_Math" data-alttext="a\equiv r(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we now have</p>
+</div>
+<div id="S7.SS2.SSS8.p9" class="ltx_para">
+<table role="presentation" id="S7.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex9.m1" class="ltx_math_unparsed" data-alttext="a\equiv r(\bmod n)\text{ and }r\equiv b(\bmod n)." display="block"><mrow><mi>a</mi><mo>≡</mo><mi>r</mi><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mtext> and </mtext><mi>r</mi><mo>≡</mo><mi>b</mi><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS8.p10" class="ltx_para">
+<p class="ltx_p">We can now use the transitive property to conclude that <math id="S7.SS2.SSS8.p10.m1" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This proves that if <math id="S7.SS2.SSS8.p10.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.SS2.SSS8.p10.m3" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S7.SS2.SSS8.p10.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, then <math id="S7.SS2.SSS8.p10.m5" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S7.SS2.SSS8.p11" class="ltx_para">
+<p class="ltx_p">We will now prove that if <math id="S7.SS2.SSS8.p11.m1" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S7.SS2.SSS8.p11.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.SS2.SSS8.p11.m3" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S7.SS2.SSS8.p11.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. Assume that <math id="S7.SS2.SSS8.p11.m5" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and let <math id="S7.SS2.SSS8.p11.m6" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> be the least nonnegative remainder when <math id="S7.SS2.SSS8.p11.m7" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> is divided by <math id="S7.SS2.SSS8.p11.m8" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. Then <math id="S7.SS2.SSS8.p11.m9" class="ltx_Math" data-alttext="0\leq r&lt;n" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>n</mi></mrow></math> and, by <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.31">Theorem 3.31</a>,</p>
+</div>
+<div id="S7.SS2.SSS8.p12" class="ltx_para">
+<table role="presentation" id="S7.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex10.m1" class="ltx_Math" data-alttext="b\equiv r(\bmod n)" display="block"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS8.p13" class="ltx_para">
+<p class="ltx_p">Now, using the facts that <math id="S7.SS2.SSS8.p13.m1" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S7.SS2.SSS8.p13.m2" class="ltx_Math" data-alttext="b\equiv r(\bmod n)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we can use the transitive property to conclude that</p>
+</div>
+<div id="S7.SS2.SSS8.p14" class="ltx_para">
+<table role="presentation" id="S7.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex11.m1" class="ltx_Math" data-alttext="a\equiv r(\bmod n)" display="block"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS8.p15" class="ltx_para">
+<p class="ltx_p">This means that there exists an integer <math id="S7.SS2.SSS8.p15.m1" class="ltx_Math" data-alttext="q" display="inline"><mi>q</mi></math> such that <math id="S7.SS2.SSS8.p15.m2" class="ltx_Math" data-alttext="a-r=nq" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>r</mi></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math> or that</p>
+</div>
+<div id="S7.SS2.SSS8.p16" class="ltx_para">
+<table role="presentation" id="S7.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex12.m1" class="ltx_Math" data-alttext="a=nq+r" display="block"><mrow><mi>a</mi><mo>=</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mi>r</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS2.SSS8.p17" class="ltx_para">
+<p class="ltx_p">Since we already know that <math id="S7.SS2.SSS8.p17.m1" class="ltx_Math" data-alttext="0\leq r&lt;n" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, the last equation tells us that <math id="S7.SS2.SSS8.p17.m2" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> is the least nonnegative remainder when <math id="S7.SS2.SSS8.p17.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is divided by <math id="S7.SS2.SSS8.p17.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. Hence we have proven that if <math id="S7.SS2.SSS8.p17.m5" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S7.SS2.SSS8.p17.m6" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.SS2.SSS8.p17.m7" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S7.SS2.SSS8.p17.m8" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.9 </span>Examples of Other Equivalence Relations</h3>
+
+<div id="S7.SS2.SSS9.p1" class="ltx_para">
+<ol id="S7.I10" class="ltx_enumerate">
+<li id="S7.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I10.i1.p1" class="ltx_para">
+<p class="ltx_p">The relation <math id="S7.I10.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I10.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> from Progress Check 7.9 is an equivalence relation.</p>
+</div>
+</li>
+<li id="S7.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I10.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set. The equality relation on <math id="S7.I10.i2.p1.m2" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> is an equivalence relation. This relation is also called the identity relation on <math id="S7.I10.i2.p1.m3" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> and is denoted by <math id="S7.I10.i2.p1.m4" class="ltx_Math" data-alttext="I_{A}" display="inline"><msub><mi>I</mi><mi>A</mi></msub></math>, where</p>
+</div>
+<div id="S7.I10.i2.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex13.m1" class="ltx_Math" data-alttext="I_{A}=\{(x,x)\mid x\in A\}" display="block"><mrow><msub><mi>I</mi><mi>A</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S7.I10.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I10.i3.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I10.i3.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I10.i3.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> as follows:</p>
+</div>
+<div id="S7.I10.i3.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I10.i3.p2.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{R},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if there exists an integer <math id="S7.I10.i3.p2.m2" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> such that <math id="S7.I10.i3.p2.m3" class="ltx_Math" data-alttext="a-b=2k\pi" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S7.I10.i3.p3" class="ltx_para">
+<p class="ltx_p">We will prove that the relation <math id="S7.I10.i3.p3.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I10.i3.p3.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. The relation <math id="S7.I10.i3.p3.m3" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is reflexive on <math id="S7.I10.i3.p3.m4" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> since for each <math id="S7.I10.i3.p3.m5" class="ltx_Math" data-alttext="a\in\mathbb{R},a-a=0=2\cdot 0\cdot\pi" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>a</mi></mrow><mo>=</mo><mn>0</mn><mo>=</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>0</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>π</mi></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S7.I10.i3.p4" class="ltx_para">
+<p class="ltx_p">Now, let <math id="S7.I10.i3.p4.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> and assume that <math id="S7.I10.i3.p4.m2" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>. We will prove that <math id="S7.I10.i3.p4.m3" class="ltx_Math" data-alttext="b\sim a" display="inline"><mrow><mi>b</mi><mo>∼</mo><mi>a</mi></mrow></math>. Since <math id="S7.I10.i3.p4.m4" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, there exists an integer <math id="S7.I10.i3.p4.m5" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> such that</p>
+</div>
+<div id="S7.I10.i3.p5" class="ltx_para">
+<table role="presentation" id="S7.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex14.m1" class="ltx_Math" data-alttext="a-b=2k\pi" display="block"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I10.i3.p6" class="ltx_para">
+<p class="ltx_p">By multiplying both sides of this equation by -1, we obtain</p>
+</div>
+<div id="S7.I10.i3.p7" class="ltx_para">
+<table role="presentation" id="S7.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex15.m1" class="ltx_Math" data-alttext="\displaystyle(-1)(a-b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex15.m2" class="ltx_Math" data-alttext="\displaystyle=(-1)(2k\pi)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex16.m1" class="ltx_Math" data-alttext="\displaystyle b-a" display="inline"><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex16.m2" class="ltx_Math" data-alttext="\displaystyle=2(-k)\pi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>π</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I10.i3.p8" class="ltx_para">
+<p class="ltx_p">Since <math id="S7.I10.i3.p8.m1" class="ltx_Math" data-alttext="-k\in\mathbb{Z}" display="inline"><mrow><mrow><mo>−</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, the last equation proves that <math id="S7.I10.i3.p8.m2" class="ltx_Math" data-alttext="b\sim a" display="inline"><mrow><mi>b</mi><mo>∼</mo><mi>a</mi></mrow></math>. Hence, we have proven that if <math id="S7.I10.i3.p8.m3" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, then <math id="S7.I10.i3.p8.m4" class="ltx_Math" data-alttext="b\sim a" display="inline"><mrow><mi>b</mi><mo>∼</mo><mi>a</mi></mrow></math> and, therefore, the relation <math id="S7.I10.i3.p8.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is symmetric.</p>
+</div>
+<div id="S7.I10.i3.p9" class="ltx_para">
+<p class="ltx_p">To prove transitivity, let <math id="S7.I10.i3.p9.m1" class="ltx_Math" data-alttext="a,b,c\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> and assume that <math id="S7.I10.i3.p9.m2" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math> and <math id="S7.I10.i3.p9.m3" class="ltx_Math" data-alttext="b\sim c" display="inline"><mrow><mi>b</mi><mo>∼</mo><mi>c</mi></mrow></math>. We will prove that <math id="S7.I10.i3.p9.m4" class="ltx_Math" data-alttext="a\sim c" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>c</mi></mrow></math>. Now, there exist integers <math id="S7.I10.i3.p9.m5" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> and <math id="S7.I10.i3.p9.m6" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that</p>
+</div>
+<div id="S7.I10.i3.p10" class="ltx_para">
+<table role="presentation" id="S7.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex17.m1" class="ltx_Math" data-alttext="a-b=2k\pi\text{ and }b-c=2n\pi." display="block"><mrow><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>−</mo><mi>c</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I10.i3.p11" class="ltx_para">
+<p class="ltx_p">By adding the corresponding sides of these two equations, we see that</p>
+</div>
+<div id="S7.I10.i3.p12" class="ltx_para">
+<table role="presentation" id="S7.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex18.m1" class="ltx_Math" data-alttext="\displaystyle(a-b)+(b-c)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex18.m2" class="ltx_Math" data-alttext="\displaystyle=2k\pi+2n\pi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex19.m1" class="ltx_Math" data-alttext="\displaystyle a-c" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex19.m2" class="ltx_Math" data-alttext="\displaystyle=2(k+n)\pi." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>π</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I10.i3.p13" class="ltx_para">
+<p class="ltx_p">By the closure properties of the integers, <math id="S7.I10.i3.p13.m1" class="ltx_Math" data-alttext="k+n\in\mathbb{Z}" display="inline"><mrow><mrow><mi>k</mi><mo>+</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. So this proves that <math id="S7.I10.i3.p13.m2" class="ltx_Math" data-alttext="a\sim c" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>c</mi></mrow></math> and, hence the relation <math id="S7.I10.i3.p13.m3" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is transitive.</p>
+</div>
+<div id="S7.I10.i3.p14" class="ltx_para">
+<p class="ltx_p">We have now proven that <math id="S7.I10.i3.p14.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I10.i3.p14.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. This equivalence relation is important in trigonometry. If <math id="S7.I10.i3.p14.m3" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, then there exists an integer <math id="S7.I10.i3.p14.m4" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> such that <math id="S7.I10.i3.p14.m5" class="ltx_Math" data-alttext="a-b=2k\pi" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow></mrow></math> and, hence, <math id="S7.I10.i3.p14.m6" class="ltx_Math" data-alttext="a=b+k(2\pi)" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi>b</mi><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Since the sine and cosine functions are periodic with a period of <math id="S7.I10.i3.p14.m7" class="ltx_Math" data-alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math>, we see that</p>
+</div>
+<div id="S7.I10.i3.p15" class="ltx_para">
+<table role="presentation" id="S7.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex20.m1" class="ltx_Math" data-alttext="\displaystyle\sin a" display="inline"><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>a</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex20.m2" class="ltx_Math" data-alttext="\displaystyle=\sin(b+k(2\pi))=\sin b,\text{ and }" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>b</mi></mrow></mrow><mo>,</mo><mtext> and</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex21.m1" class="ltx_Math" data-alttext="\displaystyle\cos a" display="inline"><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>a</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex21.m2" class="ltx_Math" data-alttext="\displaystyle=\cos(b+k(2\pi))=\cos b." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>b</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I10.i3.p16" class="ltx_para">
+<p class="ltx_p">Therefore, when <math id="S7.I10.i3.p16.m1" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, each of the trigonometric functions have the same value at <math id="S7.I10.i3.p16.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.I10.i3.p16.m3" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I10.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I10.i4.p1" class="ltx_para">
+<p class="ltx_p">For an example from Euclidean geometry, we define a relation <math id="S7.I10.i4.p1.m1" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math> on the set <math id="S7.I10.i4.p1.m2" class="ltx_Math" data-alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math> of all lines in the plane as follows:</p>
+</div>
+<div id="S7.I10.i4.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I10.i4.p2.m1" class="ltx_Math" data-alttext="l_{1},l_{2}\in\mathcal{L},l_{1}Pl_{2}" display="inline"><mrow><mrow><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>,</mo><msub><mi>l</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow><mo>,</mo><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>⁢</mo><mi>P</mi><mo>⁢</mo><msub><mi>l</mi><mn>2</mn></msub></mrow></mrow></math> if and only if <math id="S7.I10.i4.p2.m2" class="ltx_Math" data-alttext="l_{1}" display="inline"><msub><mi>l</mi><mn>1</mn></msub></math> is parallel to <math id="S7.I10.i4.p2.m3" class="ltx_Math" data-alttext="l_{2}" display="inline"><msub><mi>l</mi><mn>2</mn></msub></math> or <math id="S7.I10.i4.p2.m4" class="ltx_Math" data-alttext="l_{1}=l_{2}" display="inline"><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>=</mo><msub><mi>l</mi><mn>2</mn></msub></mrow></math>.
+<br class="ltx_break">We added the second condition to the definition of <math id="S7.I10.i4.p2.m5" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math> to ensure that <math id="S7.I10.i4.p2.m6" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math> is reflexive on <math id="S7.I10.i4.p2.m7" class="ltx_Math" data-alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>. Theorems from Euclidean geometry tell us that if <math id="S7.I10.i4.p2.m8" class="ltx_Math" data-alttext="l_{1}" display="inline"><msub><mi>l</mi><mn>1</mn></msub></math> is parallel to <math id="S7.I10.i4.p2.m9" class="ltx_Math" data-alttext="l_{2}" display="inline"><msub><mi>l</mi><mn>2</mn></msub></math>, then <math id="S7.I10.i4.p2.m10" class="ltx_Math" data-alttext="l_{2}" display="inline"><msub><mi>l</mi><mn>2</mn></msub></math> is parallel to <math id="S7.I10.i4.p2.m11" class="ltx_Math" data-alttext="l_{1}" display="inline"><msub><mi>l</mi><mn>1</mn></msub></math>, and if <math id="S7.I10.i4.p2.m12" class="ltx_Math" data-alttext="l_{1}" display="inline"><msub><mi>l</mi><mn>1</mn></msub></math> is parallel to <math id="S7.I10.i4.p2.m13" class="ltx_Math" data-alttext="l_{2}" display="inline"><msub><mi>l</mi><mn>2</mn></msub></math> and <math id="S7.I10.i4.p2.m14" class="ltx_Math" data-alttext="l_{2}" display="inline"><msub><mi>l</mi><mn>2</mn></msub></math> is parallel to <math id="S7.I10.i4.p2.m15" class="ltx_Math" data-alttext="l_{3}" display="inline"><msub><mi>l</mi><mn>3</mn></msub></math>, then <math id="S7.I10.i4.p2.m16" class="ltx_Math" data-alttext="l_{1}" display="inline"><msub><mi>l</mi><mn>1</mn></msub></math> is parallel to <math id="S7.I10.i4.p2.m17" class="ltx_Math" data-alttext="l_{3}" display="inline"><msub><mi>l</mi><mn>3</mn></msub></math>. (Drawing pictures will help visualize these properties.) This tells us that the relation <math id="S7.I10.i4.p2.m18" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math> is reflexive, symmetric, and transitive and, hence, an equivalence relation on <math id="S7.I10.i4.p2.m19" class="ltx_Math" data-alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS2.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.10 </span>Progress Check 7.11 (Another Equivalence Relation)</h3>
+
+<div id="S7.SS2.SSS10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.SSS10.p1.m1" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> be a finite, nonempty set and let <math id="S7.SS2.SSS10.p1.m2" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the power set of <math id="S7.SS2.SSS10.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Recall that <math id="S7.SS2.SSS10.p1.m4" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> consists of all subsets of <math id="S7.SS2.SSS10.p1.m5" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Define the relation <math id="S7.SS2.SSS10.p1.m6" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> on <math id="S7.SS2.SSS10.p1.m7" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> as follows:</p>
+</div>
+<div id="S7.SS2.SSS10.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.SS2.SSS10.p2.m1" class="ltx_Math" data-alttext="A,B\in\mathcal{P}(U),A\approx B" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>A</mi><mo>≈</mo><mi>B</mi></mrow></mrow></math> if and only if <math id="S7.SS2.SSS10.p2.m2" class="ltx_Math" data-alttext="\operatorname{card}(A)=\operatorname{card}(B)" display="inline"><mrow><mrow><mi>card</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>card</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+<br class="ltx_break">Review the definition of the cardinality of a finite set in <a href="https://johnweeks03.github.io/teaching/300/5-1.html">Section 5.1.</a> This relation states that two subsets of <math id="S7.SS2.SSS10.p2.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> are equivalent provided that they have the same number of elements. Prove that <math id="S7.SS2.SSS10.p2.m4" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> is an equivalence relation on the power set <math id="S7.SS2.SSS10.p2.m5" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S7.SS2.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.11 </span>Exercises 7.2</h3>
+
+<div id="S7.SS2.SSS11.p1" class="ltx_para">
+<ol id="S7.I11" class="ltx_enumerate">
+<li id="S7.I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I11.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i1.p1.m2" class="ltx_Math" data-alttext="A=\{a,b\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S7.I11.i1.p1.m3" class="ltx_Math" data-alttext="R=\{(a,b)\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Is <math id="S7.I11.i1.p1.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> an equivalence relation on <math id="S7.I11.i1.p1.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>? If not, is <math id="S7.I11.i1.p1.m6" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> reflexive, symmetric, or transitive? Justify all conclusions.</p>
+</div>
+</li>
+<li id="S7.I11.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I11.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i2.p1.m1" class="ltx_Math" data-alttext="A=\{a,b,c\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow></math>. For each of the following, draw a directed graph that represents a relation with the specified properties.</p>
+<ol id="S7.I11.i2.I1" class="ltx_enumerate">
+<li id="S7.I11.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A relation on <math id="S7.I11.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is symmetric but not transitive</p>
+</div>
+</li>
+<li id="S7.I11.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">A relation on <math id="S7.I11.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is transitive but not symmetric</p>
+</div>
+</li>
+<li id="S7.I11.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A relation on <math id="S7.I11.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is symmetric and transitive but not reflexive on <math id="S7.I11.i2.I1.i3.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math></p>
+</div>
+</li>
+<li id="S7.I11.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I11.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">A relation on <math id="S7.I11.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is not reflexive on <math id="S7.I11.i2.I1.i4.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, is not symmetric, and is not transitive</p>
+</div>
+</li>
+<li id="S7.I11.i2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S7.I11.i2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">A relation on <math id="S7.I11.i2.I1.i5.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, other than the identity relation, that is an equivalence relation on <math id="S7.I11.i2.I1.i5.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I11.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i3.p1.m2" class="ltx_Math" data-alttext="A=\{1,2,3,4,5\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">}</mo></mrow></mrow></math>. The identity relation on <math id="S7.I11.i3.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is</p>
+</div>
+<div id="S7.I11.i3.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex22.m1" class="ltx_Math" data-alttext="I_{A}=\{(1,1),(2,2),(3,3),(4,4),(5,5)\}" display="block"><mrow><msub><mi>I</mi><mi>A</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I11.i3.p3" class="ltx_para">
+<p class="ltx_p">Determine an equivalence relation on <math id="S7.I11.i3.p3.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is different from <math id="S7.I11.i3.p3.m2" class="ltx_Math" data-alttext="I_{A}" display="inline"><msub><mi>I</mi><mi>A</mi></msub></math> or explain why this is not possible.</p>
+</div>
+</li>
+<li id="S7.I11.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I11.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i4.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i4.p1.m2" class="ltx_Math" data-alttext="R=\{(x,y)\in\mathbb{R}\times\mathbb{R}||x|+|y|=4\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo lspace="0em" rspace="0em">|</mo><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="S7.I11.i4.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation on <math id="S7.I11.i4.p1.m4" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Is <math id="S7.I11.i4.p1.m5" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> an equivalence relation on <math id="S7.I11.i4.p1.m6" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? If not, is <math id="S7.I11.i4.p1.m7" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> reflexive, symmetric, or transitive? Justify all conclusions.</p>
+</div>
+</li>
+<li id="S7.I11.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S7.I11.i5.p1" class="ltx_para">
+<p class="ltx_p">A relation <math id="S7.I11.i5.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is defined on <math id="S7.I11.i5.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> as follows: For all <math id="S7.I11.i5.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},aRb" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i5.p1.m4" class="ltx_Math" data-alttext="|a-b|\leq 3" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>3</mn></mrow></math>. Is <math id="S7.I11.i5.p1.m5" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> an equivalence relation on <math id="S7.I11.i5.p1.m6" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? If not, is <math id="S7.I11.i5.p1.m7" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> reflexive, symmetric, or transitive? Justify all conclusions.</p>
+</div>
+</li>
+<li id="S7.I11.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S7.I11.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i6.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i6.p1.m2" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S7.I11.i6.p1.m3" class="ltx_Math" data-alttext="f(x)=x^{2}-4" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow></mrow></math> for each <math id="S7.I11.i6.p1.m4" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Define a relation <math id="S7.I11.i6.p1.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i6.p1.m6" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> as follows:</p>
+</div>
+<div id="S7.I11.i6.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i6.p2.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{R},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i6.p2.m2" class="ltx_Math" data-alttext="f(a)=f(b)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+<ol id="S7.I11.i6.I1" class="ltx_enumerate">
+<li id="S7.I11.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the relation <math id="S7.I11.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S7.I11.i6.I1.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S7.I11.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine all real numbers in the set <math id="S7.I11.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="C=\{x\in\mathbb{R}\mid x\sim 5\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∼</mo><mn>5</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S7.I11.i7.p1" class="ltx_para">
+<p class="ltx_p">Repeat Exercise (6) using the function <math id="S7.I11.i7.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> that is defined by <math id="S7.I11.i7.p1.m2" class="ltx_Math" data-alttext="f(x)=x^{2}-3x-7" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>7</mn></mrow></mrow></math> for each <math id="S7.I11.i7.p1.m3" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S7.I11.i8.p1" class="ltx_para">
+<ol id="S7.I11.i8.I1" class="ltx_enumerate">
+<li id="S7.I11.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Repeat Exercise (6a) using the function <math id="S7.I11.i8.I1.i1.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> that is defined by <math id="S7.I11.i8.I1.i1.p1.m2" class="ltx_Math" data-alttext="f(x)=\sin x" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></math> for each <math id="S7.I11.i8.I1.i1.p1.m3" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine all real numbers in the set <math id="S7.I11.i8.I1.i2.p1.m1" class="ltx_Math" data-alttext="C=\{x\in\mathbb{R}\mid x\sim\pi\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∼</mo><mi>π</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S7.I11.i9.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i9.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i9.p1.m2" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> as follows: For <math id="S7.I11.i9.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Q},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i9.p1.m4" class="ltx_Math" data-alttext="a-b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. In Progress Check 7.9, we showed that the relation <math id="S7.I11.i9.p1.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i9.p1.m6" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+<ol id="S7.I11.i9.I1" class="ltx_enumerate">
+<li id="S7.I11.i9.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i9.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">List four different elements of the set <math id="S7.I11.i9.I1.i1.p1.m1" class="ltx_Math" data-alttext="C=\left\{x\in\mathbb{Q}\mid\,x\sim\frac{5}{7}\right\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo fence="true" lspace="0em" rspace="0.170em">∣</mo><mrow><mi>x</mi><mo>∼</mo><mfrac><mn>5</mn><mn>7</mn></mfrac></mrow><mo>}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i9.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i9.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Use set builder notation (without using the symbol <math id="S7.I11.i9.I1.i2.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math>) to specify the set C.</p>
+</div>
+</li>
+<li id="S7.I11.i9.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i9.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the set <math id="S7.I11.i9.I1.i3.p1.m1" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S7.I11.i10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i10.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> and <math id="S7.I11.i10.p1.m2" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> be relations on <math id="S7.I11.i10.p1.m3" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> defined as follows:</p>
+</div>
+<div id="S7.I11.i10.p2" class="ltx_para">
+<ul id="S7.I11.i10.I1" class="ltx_itemize">
+<li id="S7.I11.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I11.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i10.I1.i1.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if 2 divides <math id="S7.I11.i10.I1.i1.p1.m2" class="ltx_Math" data-alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I11.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i10.I1.i2.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\approx b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>≈</mo><mi>b</mi></mrow></mrow></math> if and only if 3 divides <math id="S7.I11.i10.I1.i2.p1.m2" class="ltx_Math" data-alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<ol id="S7.I11.i10.I2" class="ltx_enumerate">
+<li id="S7.I11.i10.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i10.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I11.i10.I2.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S7.I11.i10.I2.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>? If not, is this relation reflexive, symmetric, or transitive?</p>
+</div>
+</li>
+<li id="S7.I11.i10.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i10.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I11.i10.I2.i2.p1.m1" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> an equivalence relation on <math id="S7.I11.i10.I2.i2.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>? If not, is this relation reflexive, symmetric, or transitive?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S7.I11.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i11.p1.m1" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> be a finite, nonempty set and let <math id="S7.I11.i11.p1.m2" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the power set of <math id="S7.I11.i11.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. That is, <math id="S7.I11.i11.p1.m4" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the set of all subsets of <math id="S7.I11.i11.p1.m5" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. Define the relation <math id="S7.I11.i11.p1.m6" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i11.p1.m7" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> as follows: For <math id="S7.I11.i11.p1.m8" class="ltx_Math" data-alttext="A,B\in\mathcal{P}(U),A\sim B" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>A</mi><mo>∼</mo><mi>B</mi></mrow></mrow></math> if and only if <math id="S7.I11.i11.p1.m9" class="ltx_Math" data-alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. That is, the ordered pair <math id="S7.I11.i11.p1.m10" class="ltx_Math" data-alttext="(A,B)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></math> is in the relation <math id="S7.I11.i11.p1.m11" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> if and only if <math id="S7.I11.i11.p1.m12" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S7.I11.i11.p1.m13" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> are disjoint.</p>
+</div>
+<div id="S7.I11.i11.p2" class="ltx_para">
+<p class="ltx_p">Is the relation <math id="S7.I11.i11.p2.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S7.I11.i11.p2.m2" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>? If not, is it reflexive, symmetric, or transitive? Justify all conclusions.</p>
+</div>
+</li>
+<li id="S7.I11.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S7.I11.i12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i12.p1.m1" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> be a nonempty set and let <math id="S7.I11.i12.p1.m2" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the power set of <math id="S7.I11.i12.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>. That is, <math id="S7.I11.i12.p1.m4" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the set of all subsets of <math id="S7.I11.i12.p1.m5" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>.</p>
+</div>
+<div id="S7.I11.i12.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i12.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S7.I11.i12.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> in <math id="S7.I11.i12.p2.m3" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>, define <math id="S7.I11.i12.p2.m4" class="ltx_Math" data-alttext="A\sim B" display="inline"><mrow><mi>A</mi><mo>∼</mo><mi>B</mi></mrow></math> to mean that there exists a bijection <math id="S7.I11.i12.p2.m5" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>. Prove that <math id="S7.I11.i12.p2.m6" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i12.p2.m7" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S7.I11.i12.p3" class="ltx_para">
+<p class="ltx_p">Hint: Use results from <a href="https://johnweeks03.github.io/teaching/300/6-4.html">Sections 6.4</a> and <a href="https://johnweeks03.github.io/teaching/300/6-5.html">6.5</a>.</p>
+</div>
+</li>
+<li id="S7.I11.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S7.I11.i13.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i13.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> and <math id="S7.I11.i13.p1.m2" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> be relations on <math id="S7.I11.i13.p1.m3" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> defined as follows:</p>
+</div>
+<div id="S7.I11.i13.p2" class="ltx_para">
+<ul id="S7.I11.i13.I1" class="ltx_itemize">
+<li id="S7.I11.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I11.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i13.I1.i1.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i13.I1.i1.p1.m2" class="ltx_Math" data-alttext="2a+3b\equiv 0(\bmod 5)" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I11.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i13.I1.i2.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\approx b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>≈</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i13.I1.i2.p1.m2" class="ltx_Math" data-alttext="a+3b\equiv 0(\bmod 5)" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<ol id="S7.I11.i13.I2" class="ltx_enumerate">
+<li id="S7.I11.i13.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i13.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I11.i13.I2.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S7.I11.i13.I2.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>? If not, is this relation reflexive, symmetric, or transitive?</p>
+</div>
+</li>
+<li id="S7.I11.i13.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i13.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I11.i13.I2.i2.p1.m1" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> an equivalence relation on <math id="S7.I11.i13.I2.i2.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>? If not, is this relation reflexive, symmetric, or transitive?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S7.I11.i14.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i14.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> and <math id="S7.I11.i14.p1.m2" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> be relations on <math id="S7.I11.i14.p1.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> defined as follows:</p>
+</div>
+<div id="S7.I11.i14.p2" class="ltx_para">
+<ul id="S7.I11.i14.I1" class="ltx_itemize">
+<li id="S7.I11.i14.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I11.i14.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i14.I1.i1.p1.m1" class="ltx_Math" data-alttext="x,y\in\mathbb{R},x\sim y" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></mrow></math> if and only if <math id="S7.I11.i14.I1.i1.p1.m2" class="ltx_Math" data-alttext="xy\geq 0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i14.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I11.i14.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i14.I1.i2.p1.m1" class="ltx_Math" data-alttext="x,y\in\mathbb{R},x\approx y" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>≈</mo><mi>y</mi></mrow></mrow></math> if and only if <math id="S7.I11.i14.I1.i2.p1.m2" class="ltx_Math" data-alttext="xy\leq 0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>≤</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<ol id="S7.I11.i14.I2" class="ltx_enumerate">
+<li id="S7.I11.i14.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i14.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I11.i14.I2.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S7.I11.i14.I2.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? If not, is this relation reflexive, symmetric, or transitive?</p>
+</div>
+</li>
+<li id="S7.I11.i14.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i14.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I11.i14.I2.i2.p1.m1" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> an equivalence relation on <math id="S7.I11.i14.I2.i2.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? If not, is this relation reflexive, symmetric, or transitive?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="S7.I11.i15.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i15.p1.m1" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> on <math id="S7.I11.i15.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math> as follows: For <math id="S7.I11.i15.p1.m3" class="ltx_Math" data-alttext="(a,b),(c,d)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="S7.I11.i15.p1.m4" class="ltx_Math" data-alttext="(a,b)\approx(c,d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>≈</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math> if and only if <math id="S7.I11.i15.p1.m5" class="ltx_Math" data-alttext="a^{2}+b^{2}=c^{2}+d^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow></math>.</p>
+<ol id="S7.I11.i15.I1" class="ltx_enumerate">
+<li id="S7.I11.i15.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i15.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I11.i15.I1.i1.p1.m1" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> is an equivalence relation on <math id="S7.I11.i15.I1.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i15.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i15.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">List four different elements of the set</p>
+</div>
+<div id="S7.I11.i15.I1.i2.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex23.m1" class="ltx_Math" data-alttext="C=\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid(x,y)\approx(4,3)\}." display="block"><mrow><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>≈</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S7.I11.i15.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i15.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i15.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Give a geometric description of the set <math id="S7.I11.i15.I1.i3.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="S7.I11.i16.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of proofs.</span> See the instructions for Exercise (19) from <a href="https://johnweeks03.github.io/teaching/300/3-1.html">Section 3.1.</a></p>
+<ol id="S7.I11.i16.I1" class="ltx_enumerate">
+<li id="S7.I11.i16.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i16.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. Let <math id="S7.I11.i16.I1.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be a relation on a set <math id="S7.I11.i16.I1.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. If <math id="S7.I11.i16.I1.i1.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is symmetric and transitive, then <math id="S7.I11.i16.I1.i1.p1.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is reflexive.</p>
+</div>
+<div id="S7.I11.i16.I1.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S7.I11.i16.I1.i1.p2.m1" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>. If <math id="S7.I11.i16.I1.i1.p2.m2" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math>, then <math id="S7.I11.i16.I1.i1.p2.m3" class="ltx_Math" data-alttext="yRx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math> since <math id="S7.I11.i16.I1.i1.p2.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is symmetric. Now, <math id="S7.I11.i16.I1.i1.p2.m5" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.I11.i16.I1.i1.p2.m6" class="ltx_Math" data-alttext="yRx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math>, and since <math id="S7.I11.i16.I1.i1.p2.m7" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is transitive, we can conclude that <math id="S7.I11.i16.I1.i1.p2.m8" class="ltx_Math" data-alttext="xRx" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math>. Therefore, <math id="S7.I11.i16.I1.i1.p2.m9" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is reflexive.</p>
+</div>
+</li>
+<li id="S7.I11.i16.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i16.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. Let <math id="S7.I11.i16.I1.i2.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be a relation on <math id="S7.I11.i16.I1.i2.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> where for all <math id="S7.I11.i16.I1.i2.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i16.I1.i2.p1.m4" class="ltx_Math" data-alttext="(a+2b)\equiv 0(\bmod 3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The relation <math id="S7.I11.i16.I1.i2.p1.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i16.I1.i2.p1.m6" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+<div id="S7.I11.i16.I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Assume <math id="S7.I11.i16.I1.i2.p2.m1" class="ltx_Math" data-alttext="a\sim a" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>a</mi></mrow></math>. Then <math id="S7.I11.i16.I1.i2.p2.m2" class="ltx_Math" data-alttext="(a+2a)\equiv 0(\bmod 3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> since <math id="S7.I11.i16.I1.i2.p2.m3" class="ltx_Math" data-alttext="(3a)\equiv 0(\bmod 3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore, <math id="S7.I11.i16.I1.i2.p2.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is reflexive on <math id="S7.I11.i16.I1.i2.p2.m5" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. In addition, if <math id="S7.I11.i16.I1.i2.p2.m6" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, then <math id="S7.I11.i16.I1.i2.p2.m7" class="ltx_Math" data-alttext="(a+2b)\equiv 0(\bmod 3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and if we multiply both sides of this congruence by 2, we get</p>
+</div>
+<div id="S7.I11.i16.I1.i2.p3" class="ltx_para">
+<table role="presentation" id="S7.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex24.m1" class="ltx_Math" data-alttext="\displaystyle 2(a+2b)" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex24.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 2\cdot 0(\bmod 3)" display="inline"><mrow><mi></mi><mo>≡</mo><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>0</mn></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex25.m1" class="ltx_Math" data-alttext="\displaystyle(2a+4b)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex25.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 0(\bmod 3)" display="inline"><mrow><mi></mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex26.m1" class="ltx_Math" data-alttext="\displaystyle(2a+b)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex26.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 0(\bmod 3)" display="inline"><mrow><mi></mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex27.m1" class="ltx_Math" data-alttext="\displaystyle(b+2a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex27.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 0(\bmod 3)." display="inline"><mrow><mrow><mi></mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I11.i16.I1.i2.p4" class="ltx_para">
+<p class="ltx_p">This means that <math id="S7.I11.i16.I1.i2.p4.m1" class="ltx_Math" data-alttext="b\sim a" display="inline"><mrow><mi>b</mi><mo>∼</mo><mi>a</mi></mrow></math> and hence, <math id="S7.I11.i16.I1.i2.p4.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is symmetric.
+<br class="ltx_break">We now assume that <math id="S7.I11.i16.I1.i2.p4.m3" class="ltx_Math" data-alttext="(a+2b)\equiv 0(\bmod 3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S7.I11.i16.I1.i2.p4.m4" class="ltx_Math" data-alttext="(b+2c)\equiv 0(\bmod 3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By adding the corresponding sides of these two congruences, we obtain</p>
+</div>
+<div id="S7.I11.i16.I1.i2.p5" class="ltx_para">
+<table role="presentation" id="S7.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex28.m1" class="ltx_Math" data-alttext="\displaystyle(a+2b)+(b+2c)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex28.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 0+0(\bmod 3)" display="inline"><mrow><mi></mi><mo>≡</mo><mrow><mrow><mn>0</mn><mo>+</mo><mn>0</mn></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex29.m1" class="ltx_Math" data-alttext="\displaystyle(a+3b+2c)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex29.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 0(\bmod 3)" display="inline"><mrow><mi></mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex30.m1" class="ltx_Math" data-alttext="\displaystyle(a+2c)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex30.m2" class="ltx_Math" data-alttext="\displaystyle\equiv 0(\bmod 3)." display="inline"><mrow><mrow><mi></mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I11.i16.I1.i2.p6" class="ltx_para">
+<p class="ltx_p">Hence, the relation <math id="S7.I11.i16.I1.i2.p6.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is transitive and we have proved that <math id="S7.I11.i16.I1.i2.p6.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i16.I1.i2.p6.m3" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS2.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.12 </span>Explorations and Activities</h3>
+
+<div id="S7.SS2.SSS12.p1" class="ltx_para">
+<ol id="S7.I12" class="ltx_enumerate">
+<li id="S7.I12.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="S7.I12.i17.p1" class="ltx_para">
+<p class="ltx_p">Other Types of Relations. In this section, we focused on the properties of a relation that are part of the definition of an equivalence relation. However, there are other properties of relations that are of importance. We will study two of these properties in this activity.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS2.SSS12.p2" class="ltx_para">
+<p class="ltx_p">A relation <math id="S7.SS2.SSS12.p2.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.SS2.SSS12.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is a circular relation provided that for all <math id="S7.SS2.SSS12.p2.m3" class="ltx_Math" data-alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math>, and <math id="S7.SS2.SSS12.p2.m4" class="ltx_Math" data-alttext="z" display="inline"><mi>z</mi></math> in <math id="S7.SS2.SSS12.p2.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, if <math id="S7.SS2.SSS12.p2.m6" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.SS2.SSS12.p2.m7" class="ltx_Math" data-alttext="yRz" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math>, then <math id="S7.SS2.SSS12.p2.m8" class="ltx_Math" data-alttext="zRx" display="inline"><mrow><mi>z</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math>.</p>
+<ol id="S7.I13" class="ltx_enumerate">
+<li id="S7.I13.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I13.i1.p1" class="ltx_para">
+<p class="ltx_p">Carefully explain what it means to say that a relation <math id="S7.I13.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.I13.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is not circular.</p>
+</div>
+</li>
+<li id="S7.I13.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I13.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I13.i2.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Draw a directed graph of a relation on <math id="S7.I13.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is circular and draw a directed graph of a relation on <math id="S7.I13.i2.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is not circular.</p>
+</div>
+</li>
+<li id="S7.I13.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I13.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I13.i3.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Draw a directed graph of a relation on <math id="S7.I13.i3.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is circular and not transitive and draw a directed graph of a relation on <math id="S7.I13.i3.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is transitive and not circular.</p>
+</div>
+</li>
+<li id="S7.I13.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I13.i4.p1" class="ltx_para">
+<p class="ltx_p">Prove the following proposition:</p>
+</div>
+<div id="S7.I13.i4.p2" class="ltx_para">
+<p class="ltx_p">A relation <math id="S7.I13.i4.p2.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.I13.i4.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is an equivalence relation if and only if it is reflexive and circular.</p>
+</div>
+<div id="S7.I13.i4.p3" class="ltx_para">
+<p class="ltx_p">A relation <math id="S7.I13.i4.p3.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.I13.i4.p3.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is an antisymmetric relation provided that for all <math id="S7.I13.i4.p3.m3" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I13.i4.p3.m4" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.I13.i4.p3.m5" class="ltx_Math" data-alttext="yRx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math>, then <math id="S7.I13.i4.p3.m6" class="ltx_Math" data-alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I13.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S7.I13.i5.p1" class="ltx_para">
+<p class="ltx_p">Carefully explain what it means to say that a relation on a set <math id="S7.I13.i5.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is not antisymmetric.</p>
+</div>
+</li>
+<li id="S7.I13.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S7.I13.i6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I13.i6.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Draw a directed graph of a relation on <math id="S7.I13.i6.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is antisymmetric and draw a directed graph of a relation on <math id="S7.I13.i6.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is not antisymmetric.</p>
+</div>
+</li>
+<li id="S7.I13.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S7.I13.i7.p1" class="ltx_para">
+<p class="ltx_p">Are the following propositions true or false? Justify all conclusions.</p>
+<ul id="S7.I13.i7.I1" class="ltx_itemize">
+<li id="S7.I13.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I13.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If a relation <math id="S7.I13.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.I13.i7.I1.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is both symmetric and antisymmetric, then <math id="S7.I13.i7.I1.i1.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is transitive.</p>
+</div>
+</li>
+<li id="S7.I13.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I13.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If a relation <math id="S7.I13.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.I13.i7.I1.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is both symmetric and antisymmetric, then <math id="S7.I13.i7.I1.i2.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is reflexive.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
