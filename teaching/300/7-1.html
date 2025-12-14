@@ -1,0 +1,1090 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Equivalence Relations</title>
+<!--Generated on Sun Dec 14 18:37:41 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S7" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Equivalence Relations</h1>
+
+<section id="S7.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.1 </span>Relations</h2>
+
+<section id="S7.SS1.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.1 </span>Beginning Activity 1 (The United States of America)</h3>
+
+<div id="S7.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Recall from <a href="https://johnweeks03.github.io/teaching/300/5-4.html">Section 5.4</a> that the Cartesian product of two sets <math id="S7.SS1.SSS1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S7.SS1.SSS1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, written <math id="S7.SS1.SSS1.p1.m3" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>, is the set of all ordered pairs (<math id="S7.SS1.SSS1.p1.m4" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>), where <math id="S7.SS1.SSS1.p1.m5" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S7.SS1.SSS1.p1.m6" class="ltx_Math" data-alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math>. That is, <math id="S7.SS1.SSS1.p1.m7" class="ltx_math_unparsed" data-alttext="A\times B=\{(a,b)\mid a\in A" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo lspace="0em" rspace="0.167em">∣</mo><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></mrow></math> and <math id="S7.SS1.SSS1.p1.m8" class="ltx_math_unparsed" data-alttext="b\in B\}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS1.SSS1.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be the set of all states in the United States and let</p>
+</div>
+<div id="S7.SS1.SSS1.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex1.m1" class="ltx_Math" data-alttext="R=\{(x,y)\in A\times A\mid x\text{ and }y\text{ have a land border in common }\}." display="block"><mrow><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mtext> have a land border in common </mtext></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS1.p4" class="ltx_para">
+<p class="ltx_p">For example, since California and Oregon have a land border, we can say that (California, Oregon) <math id="S7.SS1.SSS1.p4.m1" class="ltx_Math" data-alttext="\in R" display="inline"><mrow><mi></mi><mo>∈</mo><mi>R</mi></mrow></math> and (Oregon, California) <math id="S7.SS1.SSS1.p4.m2" class="ltx_Math" data-alttext="\in R" display="inline"><mrow><mi></mi><mo>∈</mo><mi>R</mi></mrow></math>. Also, since California and Michigan do not share a land border, (California, Michigan) <math id="S7.SS1.SSS1.p4.m3" class="ltx_Math" data-alttext="\notin R" display="inline"><mrow><mi></mi><mo>∉</mo><mi>R</mi></mrow></math> and (Michigan, California) <math id="S7.SS1.SSS1.p4.m4" class="ltx_Math" data-alttext="\notin R" display="inline"><mrow><mi></mi><mo>∉</mo><mi>R</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS1.p5" class="ltx_para">
+<ol id="S7.I1" class="ltx_enumerate">
+<li id="S7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the elements in each of the following sets:</p>
+<ol id="S7.I1.i1.I1" class="ltx_enumerate">
+<li id="S7.I1.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I1.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I1.i1.I1.i1.p1.m1" class="ltx_math_unparsed" data-alttext="B=\{y\in A\mid(" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∈</mo><mi>A</mi><mo lspace="0em" rspace="0.167em">∣</mo><mo stretchy="false">(</mo></mrow></mrow></math>Michigan, <math id="S7.I1.i1.I1.i1.p1.m2" class="ltx_math_unparsed" data-alttext="y)\in R\}" display="inline"><mrow><mrow><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi><mo stretchy="false">}</mo></mrow></math></p>
+</div>
+</li>
+<li id="S7.I1.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I1.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I1.i1.I1.i2.p1.m1" class="ltx_math_unparsed" data-alttext="C=\{x\in A\mid(x" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo lspace="0em" rspace="0.167em">∣</mo><mrow><mo stretchy="false">(</mo><mi>x</mi></mrow></mrow></mrow></math>, Michigan<math id="S7.I1.i1.I1.i2.p1.m2" class="ltx_math_unparsed" data-alttext=")\in R\}" display="inline"><mrow><mo stretchy="false">)</mo><mo>∈</mo><mi>R</mi><mo stretchy="false">}</mo></mrow></math></p>
+</div>
+</li>
+<li id="S7.I1.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I1.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I1.i1.I1.i3.p1.m1" class="ltx_math_unparsed" data-alttext="D=\{y\in A\mid(" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∈</mo><mi>A</mi><mo lspace="0em" rspace="0.167em">∣</mo><mo stretchy="false">(</mo></mrow></mrow></math>Wisconsin, <math id="S7.I1.i1.I1.i3.p1.m2" class="ltx_math_unparsed" data-alttext="y)\in R\}" display="inline"><mrow><mrow><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi><mo stretchy="false">}</mo></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Find two different examples of two ordered pairs, <math id="S7.I1.i2.p1.m1" class="ltx_Math" data-alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> and <math id="S7.I1.i2.p1.m2" class="ltx_Math" data-alttext="(y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> such that <math id="S7.I1.i2.p1.m3" class="ltx_Math" data-alttext="(x,y)\in R,(y,z)\in R" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></mrow></math>, but <math id="S7.I1.i2.p1.m4" class="ltx_Math" data-alttext="(x,z)\notin R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>R</mi></mrow></math>, or explain why no such example exists. Based on this, is the following conditional statement true or false?</p>
+</div>
+<div id="S7.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I1.i2.p2.m1" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I1.i2.p2.m2" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math> and <math id="S7.I1.i2.p2.m3" class="ltx_Math" data-alttext="(y,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I1.i2.p2.m4" class="ltx_Math" data-alttext="(x,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the following conditional statement true or false? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS1.SSS1.p6" class="ltx_para">
+<table role="presentation" id="S7.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex2.m1" class="ltx_Math" data-alttext="\text{ For all }x,y\in A\text{, if }(x,y)\in R\text{, then }(y,x)\in R\text{. }" display="block"><mrow><mrow><mrow><mtext> For all </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext>, if </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext>, then </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S7.SS1.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.2 </span>Beginning Activity 2 (The Solution Set of an Equation with Two Variables)</h3>
+
+<div id="S7.SS1.SSS2.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/2-3.html">Section 2.3</a>, we introduced the concept of the truth set of an open sentence with one variable. This was defined to be the set of all elements in the universal set that can be substituted for the variable to make the open sentence a true proposition. Assume that <math id="S7.SS1.SSS2.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.SS1.SSS2.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> represent real numbers. Then the equation</p>
+</div>
+<div id="S7.SS1.SSS2.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex3.m1" class="ltx_Math" data-alttext="4x^{2}+y^{2}=16" display="block"><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS2.p3" class="ltx_para">
+<p class="ltx_p">is an open sentence with two variables. An element of the truth set of this open sentence (also called a solution of the equation) is an ordered pair (<math id="S7.SS1.SSS2.p3.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>) of real numbers so that when <math id="S7.SS1.SSS2.p3.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is substituted for <math id="S7.SS1.SSS2.p3.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.SS1.SSS2.p3.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> is substituted for <math id="S7.SS1.SSS2.p3.m5" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>, the predicate becomes a true statement (a true equation in this case). We can use set builder notation to describe the truth set <math id="S7.SS1.SSS2.p3.m6" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> of this equation with two variables as follows:</p>
+</div>
+<div id="S7.SS1.SSS2.p4" class="ltx_para">
+<table role="presentation" id="S7.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex4.m1" class="ltx_Math" data-alttext="S=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid 4x^{2}+y^{2}=16\right\}." display="block"><mrow><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS2.p5" class="ltx_para">
+<p class="ltx_p">When a set is a truth set of an open sentence that is an equation, we also call the set the solution set of the equation.</p>
+</div>
+<div id="S7.SS1.SSS2.p6" class="ltx_para">
+<ol id="S7.I2" class="ltx_enumerate">
+<li id="S7.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">List four different elements of the set <math id="S7.I2.i1.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The graph of the equation <math id="S7.I2.i2.p1.m1" class="ltx_Math" data-alttext="4x^{2}+y^{2}=16" display="inline"><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow></math> in the <math id="S7.I2.i2.p1.m2" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-coordinate plane is an ellipse. Draw the graph and explain why this graph is a representation of the truth set (solution set) of the equation <math id="S7.I2.i2.p1.m3" class="ltx_Math" data-alttext="4x^{2}+y^{2}=16" display="inline"><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Describe each of the following sets as an interval of real numbers:</p>
+<ol id="S7.I2.i3.I1" class="ltx_enumerate">
+<li id="S7.I2.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I2.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I2.i3.I1.i1.p1.m1" class="ltx_math_unparsed" data-alttext="A=\{x\in\mathbb{R}\mid" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi><mo lspace="0em">∣</mo></mrow></mrow></math> there exists a <math id="S7.I2.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S7.I2.i3.I1.i1.p1.m3" class="ltx_math_unparsed" data-alttext="4x^{2}+y^{2}=16\}" display="inline"><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>16</mn><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I2.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I2.i3.I1.i2.p1.m1" class="ltx_math_unparsed" data-alttext="B=\{y\in\mathbb{R}\mid" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∈</mo><mi>ℝ</mi><mo lspace="0em">∣</mo></mrow></mrow></math> there exists an <math id="S7.I2.i3.I1.i2.p1.m2" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S7.I2.i3.I1.i2.p1.m3" class="ltx_math_unparsed" data-alttext="4x^{2}+y^{2}=16\}" display="inline"><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>16</mn><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS1.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.3 </span>Introduction to Relations</h3>
+
+<div id="S7.SS1.SSS3.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/6-1.html">Section 6.1</a>, we introduced the formal definition of a function from one set to another set. The notion of a function can be thought of as one way of relating the elements of one set with those of another set (or the same set). A function is a
+<br class="ltx_break">special type of relation in the sense that each element of the first set, the domain, is "related" to exactly one element of the second set, the codomain.</p>
+</div>
+<div id="S7.SS1.SSS3.p2" class="ltx_para">
+<p class="ltx_p">This idea of relating the elements of one set to those of another set using ordered pairs is not restricted to functions. For example, we may say that one integer, <math id="S7.SS1.SSS3.p2.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>, is related to another integer, <math id="S7.SS1.SSS3.p2.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, provided that <math id="S7.SS1.SSS3.p2.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is congruent to <math id="S7.SS1.SSS3.p2.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> modulo 3. Notice that this relation of congruence modulo 3 provides a way of relating one integer to another integer. However, in this case, an integer <math id="S7.SS1.SSS3.p2.m5" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is related to more than one other integer. For example, since</p>
+</div>
+<div id="S7.SS1.SSS3.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex5.m1" class="ltx_Math" data-alttext="5\equiv 5(\bmod 3),\quad 5\equiv 2(\bmod 3),\quad\text{ and }\quad 5\equiv-1(%
+\bmod 3)," display="block"><mrow><mrow><mrow><mn>5</mn><mo>≡</mo><mrow><mn>5</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mn>5</mn><mo>≡</mo><mrow><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="1.167em">,</mo><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mn>5</mn><mo>≡</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS3.p4" class="ltx_para">
+<p class="ltx_p">we can say that 5 is related to 5,5 is related to 2, and 5 is related to -1. Notice that, as with functions, each relation of the form <math id="S7.SS1.SSS3.p4.m1" class="ltx_Math" data-alttext="a\equiv b(\bmod 3)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> involves two integers <math id="S7.SS1.SSS3.p4.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.SS1.SSS3.p4.m3" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> and hence involves an ordered pair (<math id="S7.SS1.SSS3.p4.m4" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>), which is an element of <math id="S7.SS1.SSS3.p4.m5" class="ltx_Math" data-alttext="\mathbb{Z}\times\mathbb{Z}" display="inline"><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS1.SSS3.p5.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S7.SS1.SSS3.p5.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be sets. A <span class="ltx_text ltx_font_bold">relation</span> <math id="S7.SS1.SSS3.p5.m3" class="ltx_Math" data-alttext="\boldsymbol{R}" display="inline"><mi>𝑹</mi></math> <span class="ltx_text ltx_font_bold">from the set</span> <math id="S7.SS1.SSS3.p5.m4" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> <span class="ltx_text ltx_font_bold">to the set</span> <math id="S7.SS1.SSS3.p5.m5" class="ltx_Math" data-alttext="\boldsymbol{B}" display="inline"><mi>𝑩</mi></math> is a subset of <math id="S7.SS1.SSS3.p5.m6" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>. That is, <math id="S7.SS1.SSS3.p5.m7" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a collection of ordered pairs where the first coordinate of each ordered pair is an element of <math id="S7.SS1.SSS3.p5.m8" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and the second coordinate of each ordered pair is an element of <math id="S7.SS1.SSS3.p5.m9" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<div id="S7.SS1.SSS3.p6" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">relation</span> from the set <math id="S7.SS1.SSS3.p6.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S7.SS1.SSS3.p6.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is called a relation on the set <math id="S7.SS1.SSS3.p6.m3" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math>. So a relation on the set <math id="S7.SS1.SSS3.p6.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is a subset of <math id="S7.SS1.SSS3.p6.m5" class="ltx_Math" data-alttext="A\times A" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS3.p7" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/6-1.html">Section 6.1</a>, we defined the domain and range of a function. We make similar definitions for a relation.</p>
+</div>
+<div id="S7.SS1.SSS3.p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. If <math id="S7.SS1.SSS3.p8.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation from the set <math id="S7.SS1.SSS3.p8.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S7.SS1.SSS3.p8.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, then the subset of <math id="S7.SS1.SSS3.p8.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> consisting of all the first coordinates of the ordered pairs in <math id="S7.SS1.SSS3.p8.m5" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is called the <span class="ltx_text ltx_font_bold">domain</span> of <math id="S7.SS1.SSS3.p8.m6" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>. The subset of <math id="S7.SS1.SSS3.p8.m7" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> consisting of all the second coordinates of the ordered pairs in <math id="S7.SS1.SSS3.p8.m8" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is called the <span class="ltx_text ltx_font_bold">range</span> of <math id="S7.SS1.SSS3.p8.m9" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>.</p>
+</div>
+<div id="S7.SS1.SSS3.p9" class="ltx_para">
+<p class="ltx_p">We use the notation <math id="S7.SS1.SSS3.p9.m1" class="ltx_Math" data-alttext="\operatorname{dom}(R)" display="inline"><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> for the domain of <math id="S7.SS1.SSS3.p9.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> and <math id="S7.SS1.SSS3.p9.m3" class="ltx_Math" data-alttext="\operatorname{range}(R)" display="inline"><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> for the range of <math id="S7.SS1.SSS3.p9.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>. So using set builder notation,</p>
+</div>
+<div id="S7.SS1.SSS3.p10" class="ltx_para">
+<table role="presentation" id="S7.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex6.m1" class="ltx_Math" data-alttext="\displaystyle\operatorname{dom}(R)" display="inline"><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex6.m2" class="ltx_Math" data-alttext="\displaystyle=\{u\in A\mid(u,y)\in R\text{ for at least one }y\in B\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>A</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext> for at least one </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex7.m1" class="ltx_Math" data-alttext="\displaystyle\operatorname{range}(R)" display="inline"><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex7.m2" class="ltx_Math" data-alttext="\displaystyle=\{v\in B\mid(x,v)\in R\text{ for at least one }x\in A\}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>B</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext> for at least one </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S7.SS1.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.4 </span>Example 7.1 (Domain and Range)</h3>
+
+<div id="S7.SS1.SSS4.p1" class="ltx_para">
+<p class="ltx_p">A relation was studied in each of the beginning activities for this section. For</p>
+</div>
+<div id="S7.SS1.SSS4.p2" class="ltx_para">
+<p class="ltx_p">Beginning Activity 2, the set <math id="S7.SS1.SSS4.p2.m1" class="ltx_Math" data-alttext="S=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid 4x^{2}+y^{2}=16\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow><mo>}</mo></mrow></mrow></math> is a subset of <math id="S7.SS1.SSS4.p2.m2" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math> and, hence, <math id="S7.SS1.SSS4.p2.m3" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is a relation on <math id="S7.SS1.SSS4.p2.m4" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. In Problem (3) of Beginning Activity 2, we actually determined the domain and range of this relation.</p>
+</div>
+<div id="S7.SS1.SSS4.p3" class="ltx_para">
+<table role="presentation" id="S7.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex8.m1" class="ltx_Math" data-alttext="\displaystyle\operatorname{dom}(S)" display="inline"><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex8.m2" class="ltx_Math" data-alttext="\displaystyle=A=\left\{x\in\mathbb{R}\mid\text{ there exists a }y\in\mathbb{R}%
+\text{ such that }4x^{2}+y^{2}=16\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mi>A</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mtext> there exists a </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mrow><mrow><mi>ℝ</mi><mo>⁢</mo><mtext> such that </mtext><mo>⁢</mo><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex9.m1" class="ltx_Math" data-alttext="\displaystyle\operatorname{range}(S)" display="inline"><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex9.m2" class="ltx_Math" data-alttext="\displaystyle=B=\left\{y\in\mathbb{R}\mid\text{ there exists an }x\in\mathbb{R%
+}\text{ such that }4x^{2}+y^{2}=16\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mi>B</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mtext> there exists an </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mrow><mrow><mi>ℝ</mi><mo>⁢</mo><mtext> such that </mtext><mo>⁢</mo><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>16</mn></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS4.p4" class="ltx_para">
+<p class="ltx_p">So from the results in Beginning Activity 2, we can say that the domain of the relation <math id="S7.SS1.SSS4.p4.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is the closed interval <math id="S7.SS1.SSS4.p4.m2" class="ltx_Math" data-alttext="[-2,2]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></math> and the range of <math id="S7.SS1.SSS4.p4.m3" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is the closed interval <math id="S7.SS1.SSS4.p4.m4" class="ltx_Math" data-alttext="[-4,4]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="S7.SS1.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.5 </span>Progress Check 7.2 (Examples of Relations)</h3>
+
+<div id="S7.SS1.SSS5.p1" class="ltx_para">
+<ol id="S7.I3" class="ltx_enumerate">
+<li id="S7.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I3.i1.p1.m1" class="ltx_Math" data-alttext="T=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}=64\right\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>64</mn></mrow><mo>}</mo></mrow></mrow></math>.</p>
+<ol id="S7.I3.i1.I1" class="ltx_enumerate">
+<li id="S7.I3.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I3.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why <math id="S7.I3.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is a relation on <math id="S7.I3.i1.I1.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I3.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I3.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Find all values of <math id="S7.I3.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S7.I3.i1.I1.i2.p1.m2" class="ltx_Math" data-alttext="(x,4)\in T" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>T</mi></mrow></math>. Find all values of <math id="S7.I3.i1.I1.i2.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S7.I3.i1.I1.i2.p1.m4" class="ltx_Math" data-alttext="(x,9)\in T" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>9</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I3.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I3.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of the relation <math id="S7.I3.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>? What is the range of <math id="S7.I3.i1.I1.i3.p1.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I3.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I3.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="S7.I3.i1.I1.i4.p1.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is a relation on <math id="S7.I3.i1.I1.i4.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, its elements can be graphed in the coordinate plane. Describe the graph of the relation <math id="S7.I3.i1.I1.i4.p1.m3" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">From Beginning Activity 1, <math id="S7.I3.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is the set of all states in the United States, and</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS1.SSS5.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex10.m1" class="ltx_Math" data-alttext="R=\{(x,y)\in A\times A\mid x\text{ and }y\text{ have a land border in common }\}." display="block"><mrow><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mtext> have a land border in common </mtext></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS5.p3" class="ltx_para">
+<ol id="S7.I4" class="ltx_enumerate">
+<li id="S7.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why <math id="S7.I4.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation on <math id="S7.I4.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of the relation <math id="S7.I4.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>? What is the range of the relation <math id="S7.I4.i2.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I4.i3.p1" class="ltx_para">
+<p class="ltx_p">Are the following statements true or false? Justify your conclusions.</p>
+<ol id="S7.I4.i3.I1" class="ltx_enumerate">
+<li id="S7.I4.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I4.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I4.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I4.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I4.i3.I1.i1.p1.m3" class="ltx_Math" data-alttext="(y,x)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I4.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I4.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I4.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I4.i3.I1.i2.p1.m2" class="ltx_Math" data-alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math> and <math id="S7.I4.i3.I1.i2.p1.m3" class="ltx_Math" data-alttext="(y,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="S7.I4.i3.I1.i2.p1.m4" class="ltx_Math" data-alttext="(x,z)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS1.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.6 </span>Some Standard Mathematical Relations</h3>
+
+<div id="S7.SS1.SSS6.p1" class="ltx_para">
+<p class="ltx_p">There are many different relations in mathematics. For example, two real numbers can be considered to be related if one number is less than the other number. We
+<br class="ltx_break">call this the "less than" relation on <math id="S7.SS1.SSS6.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. If <math id="S7.SS1.SSS6.p1.m2" class="ltx_Math" data-alttext="x,y\in\mathbb{R}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S7.SS1.SSS6.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is less than <math id="S7.SS1.SSS6.p1.m4" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>, we often write <math id="S7.SS1.SSS6.p1.m5" class="ltx_Math" data-alttext="x&lt;y" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow></math>. As a set of ordered pairs, this relation is <math id="S7.SS1.SSS6.p1.m6" class="ltx_Math" data-alttext="R_{&lt;}" display="inline"><msub><mi>R</mi><mo>&lt;</mo></msub></math>, where</p>
+</div>
+<div id="S7.SS1.SSS6.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex11.m1" class="ltx_Math" data-alttext="R_{&lt;}=\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x&lt;y\}." display="block"><mrow><mrow><msub><mi>R</mi><mo>&lt;</mo></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS6.p3" class="ltx_para">
+<p class="ltx_p">With many mathematical relations, we do not write the relation as a set of ordered pairs even though, technically, it is a set of ordered pairs. Table 7.1 describes some standard mathematical relations.</p>
+</div>
+<figure id="S7.T1" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t">Name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">Open Sentence</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">Relation as a Set of Ordered Pairs</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">The "less than" relation on <math id="S7.T1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m2" class="ltx_Math" data-alttext="x&lt;y" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m3" class="ltx_Math" data-alttext="\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x&lt;y\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">The "equality" relation on <math id="S7.T1.m4" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m5" class="ltx_Math" data-alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m6" class="ltx_Math" data-alttext="\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x=y\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">The "divides" relation on <math id="S7.T1.m7" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m8" class="ltx_Math" data-alttext="m\mid n" display="inline"><mrow><mi>m</mi><mo>∣</mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S7.T1.m9" class="ltx_math_unparsed" data-alttext="\{(m,n)\in\mathbb{Z}\times\mathbb{Z}\mid m" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi><mo lspace="0em" rspace="0.167em">∣</mo><mi>m</mi></mrow></math> divides <math id="S7.T1.m10" class="ltx_math_unparsed" data-alttext="n\}" display="inline"><mrow><mi>n</mi><mo stretchy="false">}</mo></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">The "subset" relation on <math id="S7.T1.m11" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m12" class="ltx_Math" data-alttext="S\subseteq T" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m13" class="ltx_Math" data-alttext="\{(S,T)\in\mathcal{P}(U)\times\mathcal{P}(U)\mid S\subseteq T\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo rspace="0.055em" stretchy="false">)</mo></mrow></mrow><mo rspace="0.222em">×</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">The "element of" relation from <math id="S7.T1.m14" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> to <math id="S7.T1.m15" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m16" class="ltx_Math" data-alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S7.T1.m17" class="ltx_Math" data-alttext="\{(x,S)\in U\times\mathcal{P}(U)\mid x\in S\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mi>U</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">The "congruence modulo <math id="S7.T1.m18" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>" relation on <math id="S7.T1.m19" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><math id="S7.T1.m20" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><math id="S7.T1.m21" class="ltx_Math" data-alttext="\{(a,b)\in\mathbb{Z}\times\mathbb{Z}\mid a\equiv b(\bmod n)\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></math></td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption ltx_centering">Table 7.1: Standard Mathematical Relations</figcaption>
+</figure>
+</section>
+<section id="S7.SS1.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.7 </span>Notation for Relations</h3>
+
+<div id="S7.SS1.SSS7.p1" class="ltx_para">
+<p class="ltx_p">The mathematical relations in Table 7.1 all used a relation symbol between the two elements that form the ordered pair in <math id="S7.SS1.SSS7.p1.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>. For this reason, we often do the same thing for a general relation from the set <math id="S7.SS1.SSS7.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S7.SS1.SSS7.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. So if <math id="S7.SS1.SSS7.p1.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation from <math id="S7.SS1.SSS7.p1.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.SS1.SSS7.p1.m6" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, and <math id="S7.SS1.SSS7.p1.m7" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S7.SS1.SSS7.p1.m8" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, we use the notation</p>
+</div>
+<div id="S7.SS1.SSS7.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex12.m1" class="ltx_Math" data-alttext="\begin{array}[]{lll}xRy&amp;\text{ to mean }&amp;(x,y)\in R;\text{ and }\\
+x\not Ry&amp;\text{ to mean }&amp;(x,y)\notin R.\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mtext> to mean </mtext></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>;</mo><mtext> and </mtext></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>⁢</mo><mi class="ltx_mathvariant_italic" mathvariant="italic">R̸</mi><mo>⁢</mo><mi>y</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mtext> to mean </mtext></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>R</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS7.p3" class="ltx_para">
+<p class="ltx_p">In some cases, we will even use a generic relation symbol for defining a new relation or speaking about relations in a general context. Perhaps the most commonly
+<br class="ltx_break">used symbol is "˜", read "tilde" or "squiggle" or "is related to." When we do this, we will write</p>
+</div>
+<div id="S7.SS1.SSS7.p4" class="ltx_para">
+<table role="presentation" id="S7.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex13.m1" class="ltx_Math" data-alttext="\begin{array}[]{lll}x\sim y&amp;\text{ means the same thing as }&amp;(x,y)\in R;\text{%
+ and }\\
+x\nsim y&amp;\text{ means the same thing as }&amp;(x,y)\notin R.\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mtext> means the same thing as </mtext></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>;</mo><mtext> and </mtext></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>≁</mo><mi>y</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mtext> means the same thing as </mtext></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>R</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S7.SS1.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.8 </span>Progress Check 7.3 (The Divides Relation)</h3>
+
+<div id="S7.SS1.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Whenever we have spoken about one integer dividing another integer, we have worked with the "divides" relation on <math id="S7.SS1.SSS8.p1.m1" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. In particular, we can write</p>
+</div>
+<div id="S7.SS1.SSS8.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex14.m1" class="ltx_Math" data-alttext="D=\{(m,n)\in\mathbb{Z}\times\mathbb{Z}\mid m\text{ divides }n\}" display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>m</mi><mo>⁢</mo><mtext> divides </mtext><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS8.p3" class="ltx_para">
+<p class="ltx_p">In this case, we have a specific notation for "divides," and we write</p>
+</div>
+<div id="S7.SS1.SSS8.p4" class="ltx_para">
+<table role="presentation" id="S7.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex15.m1" class="ltx_Math" data-alttext="m\mid n\quad\text{ if and only if }\quad(m,n)\in D." display="block"><mrow><mrow><mrow><mi>m</mi><mo>∣</mo><mrow><mi>n</mi><mspace style="width:1em;" width="1em"></mspace><mtext> if and only if </mtext><mspace style="width:1em;" width="1em"></mspace><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∈</mo><mi>D</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS8.p5" class="ltx_para">
+<ol id="S7.I5" class="ltx_enumerate">
+<li id="S7.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of the "divides" relation? What is the range of the "divides" relation?</p>
+</div>
+</li>
+<li id="S7.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">Are the following statements true or false? Explain.</p>
+<ol id="S7.I5.i2.I1" class="ltx_enumerate">
+<li id="S7.I5.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I5.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For every nonzero integer <math id="S7.I5.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="a,a\mid a" display="inline"><mrow><mi>a</mi><mo>,</mo><mrow><mi>a</mi><mo>∣</mo><mi>a</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I5.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I5.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all nonzero integers <math id="S7.I5.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.I5.i2.I1.i2.p1.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, if <math id="S7.I5.i2.I1.i2.p1.m3" class="ltx_Math" data-alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math>, then <math id="S7.I5.i2.I1.i2.p1.m4" class="ltx_Math" data-alttext="b\mid a" display="inline"><mrow><mi>b</mi><mo>∣</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I5.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I5.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all nonzero integers <math id="S7.I5.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S7.I5.i2.I1.i3.p1.m2" class="ltx_Math" data-alttext="c" display="inline"><mi>c</mi></math>, if <math id="S7.I5.i2.I1.i3.p1.m3" class="ltx_Math" data-alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> and <math id="S7.I5.i2.I1.i3.p1.m4" class="ltx_Math" data-alttext="b\mid c" display="inline"><mrow><mi>b</mi><mo>∣</mo><mi>c</mi></mrow></math>, then <math id="S7.I5.i2.I1.i3.p1.m5" class="ltx_Math" data-alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS1.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.9 </span>Functions as Relations</h3>
+
+<div id="S7.SS1.SSS9.p1" class="ltx_para">
+<p class="ltx_p">If we have a function <math id="S7.SS1.SSS9.p1.m1" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>, we can generate a set of ordered pairs <math id="S7.SS1.SSS9.p1.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> that is a subset of <math id="S7.SS1.SSS9.p1.m3" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math> as follows:</p>
+</div>
+<div id="S7.SS1.SSS9.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex16.m1" class="ltx_Math" data-alttext="f=\{(a,f(a))\mid a\in A\}\quad\text{ or }\quad f=\{(a,b)\in A\times B\mid b=f(%
+a)\}" display="block"><mrow><mrow><mi>f</mi><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> or </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>f</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>b</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS9.p3" class="ltx_para">
+<p class="ltx_p">This means that <math id="S7.SS1.SSS9.p3.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is a relation from <math id="S7.SS1.SSS9.p3.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.SS1.SSS9.p3.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. Since, <math id="S7.SS1.SSS9.p3.m4" class="ltx_Math" data-alttext="\operatorname{dom}(f)=A" display="inline"><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>A</mi></mrow></math>, we know that
+<br class="ltx_break">(1) For every <math id="S7.SS1.SSS9.p3.m5" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>, there exists a <math id="S7.SS1.SSS9.p3.m6" class="ltx_Math" data-alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math> such that <math id="S7.SS1.SSS9.p3.m7" class="ltx_Math" data-alttext="(a,b)\in f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS9.p4" class="ltx_para">
+<p class="ltx_p">When <math id="S7.SS1.SSS9.p4.m1" class="ltx_Math" data-alttext="(a,b)\in f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow></math>, we write <math id="S7.SS1.SSS9.p4.m2" class="ltx_Math" data-alttext="b=f(a)" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In addition, to be a function, each input can produce only one output. In terms of ordered pairs, this means that there will never be two ordered pairs (<math id="S7.SS1.SSS9.p4.m3" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>) and (<math id="S7.SS1.SSS9.p4.m4" class="ltx_Math" data-alttext="a,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>c</mi></mrow></math>) in the function <math id="S7.SS1.SSS9.p4.m5" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>, where <math id="S7.SS1.SSS9.p4.m6" class="ltx_Math" data-alttext="a\in A,b,c\in B" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mrow><mi>A</mi><mo>,</mo><mi>b</mi></mrow></mrow><mo>,</mo><mrow><mi>c</mi><mo>∈</mo><mi>B</mi></mrow></mrow></math>, and <math id="S7.SS1.SSS9.p4.m7" class="ltx_Math" data-alttext="b\neq c" display="inline"><mrow><mi>b</mi><mo>≠</mo><mi>c</mi></mrow></math>. We can formulate this as a conditional statement as follows:
+<br class="ltx_break">(2) For every <math id="S7.SS1.SSS9.p4.m8" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and every <math id="S7.SS1.SSS9.p4.m9" class="ltx_Math" data-alttext="b,c\in B" display="inline"><mrow><mrow><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>B</mi></mrow></math>, if <math id="S7.SS1.SSS9.p4.m10" class="ltx_Math" data-alttext="(a,b)\in f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow></math> and <math id="S7.SS1.SSS9.p4.m11" class="ltx_Math" data-alttext="(a,c)\in f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow></math>, then <math id="S7.SS1.SSS9.p4.m12" class="ltx_Math" data-alttext="b=c" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>c</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS9.p5" class="ltx_para">
+<p class="ltx_p">This means that a function <math id="S7.SS1.SSS9.p5.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> from <math id="S7.SS1.SSS9.p5.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.SS1.SSS9.p5.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is a relation from <math id="S7.SS1.SSS9.p5.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.SS1.SSS9.p5.m5" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> that satisfies conditions (1) and (2). (See <a href="https://johnweeks03.github.io/teaching/300/6-5.html#Theorem_6.22">Theorem 6.22</a> in Section 6.5.) Not every relation, however, will be a function. For example, consider the relation <math id="S7.SS1.SSS9.p5.m6" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> in Progress Check 7.2.</p>
+</div>
+<div id="S7.SS1.SSS9.p6" class="ltx_para">
+<table role="presentation" id="S7.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex17.m1" class="ltx_Math" data-alttext="T=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}=64\right\}" display="block"><mrow><mi>T</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>64</mn></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS9.p7" class="ltx_para">
+<p class="ltx_p">This relation fails condition (2) above since a counterexample comes from the facts that <math id="S7.SS1.SSS9.p7.m1" class="ltx_Math" data-alttext="(0,8)\in T" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>T</mi></mrow></math> and <math id="S7.SS1.SSS9.p7.m2" class="ltx_Math" data-alttext="(0,-8)\in T" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>T</mi></mrow></math> and <math id="S7.SS1.SSS9.p7.m3" class="ltx_Math" data-alttext="8\neq-8" display="inline"><mrow><mn>8</mn><mo>≠</mo><mrow><mo>−</mo><mn>8</mn></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S7.SS1.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.10 </span>Progress Check 7.4 (A Set of Ordered Pairs)</h3>
+
+<div id="S7.SS1.SSS10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS1.SSS10.p1.m1" class="ltx_Math" data-alttext="F=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid y=x^{2}\right\}" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow></mrow></math>. The set <math id="S7.SS1.SSS10.p1.m2" class="ltx_Math" data-alttext="F" display="inline"><mi>F</mi></math> can then be considered to be relation on <math id="S7.SS1.SSS10.p1.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> since it is a subset of <math id="S7.SS1.SSS10.p1.m4" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS10.p2" class="ltx_para">
+<ol id="S7.I6" class="ltx_enumerate">
+<li id="S7.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">List five different ordered pairs that are in the set <math id="S7.I6.i1.p1.m1" class="ltx_Math" data-alttext="F" display="inline"><mi>F</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the elements of each of the following the sets:</p>
+<ol id="S7.I6.i2.I1" class="ltx_enumerate">
+<li id="S7.I6.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I6.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I6.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="A=\{x\in\mathbb{R}\mid(x,4)\in F\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>F</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I6.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I6.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I6.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="B=\{x\in\mathbb{R}\mid(x,10)\in F\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>10</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>F</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I6.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I6.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I6.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="C=\{y\in\mathbb{R}\mid(5,y)\in F\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>F</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I6.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I6.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I6.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="D=\{y\in\mathbb{R}\mid(-3,y)\in F\}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>F</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I6.i3.p1" class="ltx_para">
+<p class="ltx_p">Since each real number <math id="S7.I6.i3.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> produces only one value of <math id="S7.I6.i3.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> for which <math id="S7.I6.i3.p1.m3" class="ltx_Math" data-alttext="y=x^{2}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>, the set <math id="S7.I6.i3.p1.m4" class="ltx_Math" data-alttext="F" display="inline"><mi>F</mi></math> can be used to define a function from the set <math id="S7.I6.i3.p1.m5" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to <math id="S7.I6.i3.p1.m6" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Draw a graph of this function.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS1.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.11 </span>Visual Representations of Relations</h3>
+
+<div id="S7.SS1.SSS11.p1" class="ltx_para">
+<p class="ltx_p">In Progress Check 7.4, we were able to draw a graph of a relation as a way to visualize the relation. In this case, the relation was a function from <math id="S7.SS1.SSS11.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to <math id="S7.SS1.SSS11.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. In addition, in Progress Check 7.2, we were also able to use a graph to represent a relation. In this case, the graph of the relation <math id="S7.SS1.SSS11.p1.m3" class="ltx_Math" data-alttext="T=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}=64\right\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>64</mn></mrow><mo>}</mo></mrow></mrow></math> is a circle of radius 8 whose center is at the origin.</p>
+</div>
+<div id="S7.SS1.SSS11.p2" class="ltx_para">
+<p class="ltx_p">When <math id="S7.SS1.SSS11.p2.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation from a subset of the real numbers <math id="S7.SS1.SSS11.p2.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to a subset of <math id="S7.SS1.SSS11.p2.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, we can often use a graph to provide a visual representation of the relation. This is especially true if the relation is defined by an equation or even an inequality. For example, if</p>
+</div>
+<div id="S7.SS1.SSS11.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex18.m1" class="ltx_Math" data-alttext="R=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid y\geq x^{2}\right\}," display="block"><mrow><mrow><mi>R</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>≥</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<figure id="S7.F1" class="ltx_figure"><img src="images/fig7_1_2.jpg" id="S7.F1.g1" class="ltx_graphics ltx_centering ltx_img_square" width="200" height="230" alt="Directed graph with vertices 1, 2, 3, 4. Edges exist from 1 to 1, 1 to 2, 2 to 4, 4 to 2, 4 to 4, 3 to 2, and 3 to 4.">
+<figcaption class="ltx_caption ltx_centering">Figure 7.2: Directed Graph for a Relation</figcaption>
+</figure>
+</section>
+<section id="S7.SS1.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.12 </span>Progress Check 7.5 (The Directed Graph of a Relation)</h3>
+
+<div id="S7.SS1.SSS12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS1.SSS12.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3,4,5,6\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Draw a directed graph for the following two relations on the set <math id="S7.SS1.SSS12.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. For each relation, it may be helpful to arrange the vertices of <math id="S7.SS1.SSS12.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as shown in Figure 7.3.
+<br class="ltx_break"><math id="S7.SS1.SSS12.p1.m4" class="ltx_math_unparsed" data-alttext="R=\{(x,y)\in A\times A\mid x" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi><mo lspace="0em" rspace="0.167em">∣</mo><mi>x</mi></mrow></mrow></math> divides <math id="S7.SS1.SSS12.p1.m5" class="ltx_math_unparsed" data-alttext="y\},\quad T=\{(x,y)\in A\times A\mid x+y" display="inline"><mrow><mi>y</mi><mo stretchy="false">}</mo><mo rspace="1.167em">,</mo><mi>T</mi><mo>=</mo><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi><mo lspace="0em" rspace="0.167em">∣</mo><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is even <math id="S7.SS1.SSS12.p1.m6" class="ltx_Math" data-alttext="\}" display="inline"><mo stretchy="false">}</mo></math>.</p>
+</div>
+<figure id="S7.F2" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig7_1_1.jpg" id="S7.F2.g1" class="ltx_graphics ltx_centering ltx_img_square" width="200" height="192" alt="Six vertices labeled 1 through 6 arranged in a hexagon shape. 1 is at the top, proceeding clockwise to 6 at top-left.">
+<figcaption class="ltx_caption ltx_centering">Figure 7.3: Vertices for <math id="S7.F2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math></figcaption>
+</figure>
+</section>
+<section id="S7.SS1.SSS13" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.13 </span>Exercises 7.1</h3>
+
+<div id="S7.SS1.SSS13.p1" class="ltx_para">
+<ol id="S7.I7" class="ltx_enumerate">
+<li id="S7.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I7.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I7.i1.p1.m2" class="ltx_Math" data-alttext="A=\{a,b,c\},B=\{p,q,r\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo>,</mo><mi>r</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and let <math id="S7.I7.i1.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the set of ordered pairs defined by <math id="S7.I7.i1.p1.m4" class="ltx_Math" data-alttext="R=\{(a,p),(b,q),(c,p),(a,q)\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S7.I7.i1.I1" class="ltx_enumerate">
+<li id="S7.I7.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to list all the elements of <math id="S7.I7.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>. Explain why <math id="S7.I7.i1.I1.i1.p1.m2" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math> can be considered to be a relation from <math id="S7.I7.i1.I1.i1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.I7.i1.I1.i1.p1.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Explain why <math id="S7.I7.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation from <math id="S7.I7.i1.I1.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.I7.i1.I1.i2.p1.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of <math id="S7.I7.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>? What is the range of <math id="S7.I7.i1.I1.i3.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I7.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I7.i2.p1.m2" class="ltx_Math" data-alttext="A=\{a,b,c\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S7.I7.i2.p1.m3" class="ltx_Math" data-alttext="R=\{(a,a),(a,c),(b,b),(b,c),(c,a),(c,b)\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math> (so <math id="S7.I7.i2.p1.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a relation on <math id="S7.I7.i2.p1.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>). Are the following statements true or false? Explain.</p>
+<ol id="S7.I7.i2.I1" class="ltx_enumerate">
+<li id="S7.I7.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I7.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="x\in A,xRx" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="S7.I7.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I7.i2.I1.i2.p1.m2" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math>, then <math id="S7.I7.i2.I1.i2.p1.m3" class="ltx_Math" data-alttext="yRx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="S7.I7.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="x,y,z\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I7.i2.I1.i3.p1.m2" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="S7.I7.i2.I1.i3.p1.m3" class="ltx_Math" data-alttext="yRz" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math>, then <math id="S7.I7.i2.I1.i3.p1.m4" class="ltx_Math" data-alttext="xRz" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>z</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I7.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is a function from <math id="S7.I7.i2.I1.i4.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.I7.i2.I1.i4.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I7.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I7.i3.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be the set of all female citizens of the United States. Let <math id="S7.I7.i3.p1.m2" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> be the relation on <math id="S7.I7.i3.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> defined by</p>
+</div>
+<div id="S7.I7.i3.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex19.m1" class="ltx_Math" data-alttext="D=\{(x,y)\in A\times A\mid x\text{ is a daughter of }y\}" display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>⁢</mo><mtext> is a daughter of </mtext><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I7.i3.p3" class="ltx_para">
+<p class="ltx_p">That is, <math id="S7.I7.i3.p3.m1" class="ltx_Math" data-alttext="xDy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>y</mi></mrow></math> means that <math id="S7.I7.i3.p3.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is a daughter of <math id="S7.I7.i3.p3.m3" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>.</p>
+<ol id="S7.I7.i3.I1" class="ltx_enumerate">
+<li id="S7.I7.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Describe those elements of <math id="S7.I7.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that are in the domain of <math id="S7.I7.i3.I1.i1.p1.m3" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Describe those elements of <math id="S7.I7.i3.I1.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that are in the range of <math id="S7.I7.i3.I1.i2.p1.m3" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the relation <math id="S7.I7.i3.I1.i3.p1.m1" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> a function from <math id="S7.I7.i3.I1.i3.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S7.I7.i3.I1.i3.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I7.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i4.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I7.i4.p1.m2" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> be a nonempty set, and let <math id="S7.I7.i4.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the "subset relation" on <math id="S7.I7.i4.p1.m4" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>. That is,</p>
+</div>
+<div id="S7.I7.i4.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex20.m1" class="ltx_Math" data-alttext="R=\{(S,T)\in\mathcal{P}(U)\times\mathcal{P}(U)\mid S\subseteq T\}" display="block"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo rspace="0.055em" stretchy="false">)</mo></mrow></mrow><mo rspace="0.222em">×</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I7.i4.p3" class="ltx_para">
+<ol id="S7.I7.i4.I1" class="ltx_enumerate">
+<li id="S7.I7.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Write the open sentence <math id="S7.I7.i4.I1.i1.p1.m1" class="ltx_Math" data-alttext="(S,T)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math> using standard subset notation.</p>
+</div>
+</li>
+<li id="S7.I7.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of this subset relation, <math id="S7.I7.i4.I1.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I7.i4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">What is the range of this subset relation, <math id="S7.I7.i4.I1.i3.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I7.i4.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I7.i4.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I7.i4.I1.i4.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> a function from <math id="S7.I7.i4.I1.i4.p1.m2" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> to <math id="S7.I7.i4.I1.i4.p1.m3" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S7.I7.i5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I7.i5.p1.m1" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> be a nonempty set, and let <math id="S7.I7.i5.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the "element of" relation from <math id="S7.I7.i5.p1.m3" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> to <math id="S7.I7.i5.p1.m4" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>. That is,</p>
+</div>
+<div id="S7.I7.i5.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex21.m1" class="ltx_Math" data-alttext="R=\{(x,S)\in U\times\mathcal{P}(U)\mid x\in S\}" display="block"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mi>U</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I7.i5.p3" class="ltx_para">
+<ol id="S7.I7.i5.I1" class="ltx_enumerate">
+<li id="S7.I7.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of this "element of" relation, <math id="S7.I7.i5.I1.i1.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I7.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What is the range of this "element of" relation, <math id="S7.I7.i5.I1.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I7.i5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S7.I7.i5.I1.i3.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> a function from <math id="S7.I7.i5.I1.i3.p1.m2" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> to <math id="S7.I7.i5.I1.i3.p1.m3" class="ltx_Math" data-alttext="\mathcal{P}(U)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S7.I7.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i6.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I7.i6.p1.m2" class="ltx_Math" data-alttext="S=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}=100\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>100</mn></mrow><mo>}</mo></mrow></mrow></math>.</p>
+<ol id="S7.I7.i6.I1" class="ltx_enumerate">
+<li id="S7.I7.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine the set of all values of <math id="S7.I7.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S7.I7.i6.I1.i1.p1.m2" class="ltx_Math" data-alttext="(x,6)\in S" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>6</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow></math>, and determine the set of all values of <math id="S7.I7.i6.I1.i1.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S7.I7.i6.I1.i1.p1.m4" class="ltx_Math" data-alttext="(x,9)\in S" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>9</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine the domain and range of the relation <math id="S7.I7.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> and write each set using set builder notation.</p>
+</div>
+</li>
+<li id="S7.I7.i6.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i6.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the relation <math id="S7.I7.i6.I1.i3.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> a function from <math id="S7.I7.i6.I1.i3.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to <math id="S7.I7.i6.I1.i3.p1.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? Explain.</p>
+</div>
+</li>
+<li id="S7.I7.i6.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I7.i6.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="S7.I7.i6.I1.i4.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is a relation on <math id="S7.I7.i6.I1.i4.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, its elements can be graphed in the coordinate plane. Describe the graph of the relation <math id="S7.I7.i6.I1.i4.p1.m3" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. Is the graph consistent with your answers in Exercises (6a) through (6c)? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S7.I7.i7.p1" class="ltx_para">
+<p class="ltx_p">Repeat Exercise (6) using the relation on <math id="S7.I7.i7.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> defined by</p>
+</div>
+<div id="S7.I7.i7.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex22.m1" class="ltx_Math" data-alttext="S=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid y=\sqrt{100-x^{2}}\right\}." display="block"><mrow><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>=</mo><msqrt><mrow><mn>100</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.I7.i7.p3" class="ltx_para">
+<p class="ltx_p">What is the connection between this relation and the relation in Exercise (6)?</p>
+</div>
+</li>
+<li id="S7.I7.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S7.I7.i8.p1" class="ltx_para">
+<p class="ltx_p">Determine the domain and range of each of the following relations on <math id="S7.I7.i8.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and sketch the graph of each relation.</p>
+<ol id="S7.I7.i8.I1" class="ltx_enumerate">
+<li id="S7.I7.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i8.I1.i1.p1.m1" class="ltx_Math" data-alttext="R=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}+y^{2}=10\right\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>10</mn></mrow><mo>}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I7.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i8.I1.i2.p1.m1" class="ltx_Math" data-alttext="S=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid y^{2}=x+10\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mn>10</mn></mrow></mrow><mo>}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I7.i8.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i8.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i8.I1.i3.p1.m1" class="ltx_Math" data-alttext="T=\{(x,y)\in\mathbb{R}\times\mathbb{R}||x|+|y|=10\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo lspace="0em" rspace="0em">|</mo><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mn>10</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I7.i8.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I7.i8.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i8.I1.i4.p1.m1" class="ltx_Math" data-alttext="R=\left\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x^{2}=y^{2}\right\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>}</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S7.I7.i9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I7.i9.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the relation on <math id="S7.I7.i9.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> where for all <math id="S7.I7.i9.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},aRb" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I7.i9.p1.m4" class="ltx_Math" data-alttext="|a-b|\leq 2" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>2</mn></mrow></math>.</p>
+<ol id="S7.I7.i9.I1" class="ltx_enumerate">
+<li id="S7.I7.i9.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i9.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i9.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Use set builder notation to describe the relation <math id="S7.I7.i9.I1.i1.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> as a set of ordered pairs.</p>
+</div>
+</li>
+<li id="S7.I7.i9.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i9.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I7.i9.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the domain and range of the relation <math id="S7.I7.i9.I1.i2.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i9.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i9.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify the set of all integers <math id="S7.I7.i9.I1.i3.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S7.I7.i9.I1.i3.p1.m2" class="ltx_Math" data-alttext="xR5" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mn>5</mn></mrow></math> and the set of all integers <math id="S7.I7.i9.I1.i3.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S7.I7.i9.I1.i3.p1.m4" class="ltx_Math" data-alttext="5Rx" display="inline"><mrow><mn>5</mn><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i9.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I7.i9.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If possible, find integers <math id="S7.I7.i9.I1.i4.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.I7.i9.I1.i4.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> such that <math id="S7.I7.i9.I1.i4.p1.m3" class="ltx_Math" data-alttext="xR8,8Ry" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mn>8</mn></mrow><mo>,</mo><mrow><mn>8</mn><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math>, but <math id="S7.I7.i9.I1.i4.p1.m4" class="ltx_Math" data-alttext="x\not Ry" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi class="ltx_mathvariant_italic" mathvariant="italic">R̸</mi><mo>⁢</mo><mi>y</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i9.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S7.I7.i9.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I7.i9.I1.i5.p1.m1" class="ltx_Math" data-alttext="b\in\mathbb{Z}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, use the roster method to specify the set of all <math id="S7.I7.i9.I1.i5.p1.m2" class="ltx_Math" data-alttext="x\in\mathbb{Z}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S7.I7.i9.I1.i5.p1.m3" class="ltx_Math" data-alttext="xRb" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I7.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S7.I7.i10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I7.i10.p1.m1" class="ltx_Math" data-alttext="R_{&lt;}=\{(x,y)\in\mathbb{R}\times\mathbb{R}\mid x&lt;y\}" display="inline"><mrow><msub><mi>R</mi><mo>&lt;</mo></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. This means that <math id="S7.I7.i10.p1.m2" class="ltx_Math" data-alttext="R_{&lt;}" display="inline"><msub><mi>R</mi><mo>&lt;</mo></msub></math>is the "less than" relation on <math id="S7.I7.i10.p1.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+<ol id="S7.I7.i10.I1" class="ltx_enumerate">
+<li id="S7.I7.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I7.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of the relation <math id="S7.I7.i10.I1.i1.p1.m1" class="ltx_Math" data-alttext="R_{&lt;}" display="inline"><msub><mi>R</mi><mo>&lt;</mo></msub></math>?</p>
+</div>
+</li>
+<li id="S7.I7.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I7.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What is the range of the relation <math id="S7.I7.i10.I1.i2.p1.m1" class="ltx_Math" data-alttext="R_{&lt;}" display="inline"><msub><mi>R</mi><mo>&lt;</mo></msub></math>?</p>
+</div>
+</li>
+<li id="S7.I7.i10.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I7.i10.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the relation <math id="S7.I7.i10.I1.i3.p1.m1" class="ltx_Math" data-alttext="R_{&lt;}" display="inline"><msub><mi>R</mi><mo>&lt;</mo></msub></math>a function from <math id="S7.I7.i10.I1.i3.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to <math id="S7.I7.i10.I1.i3.p1.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS1.SSS13.p2" class="ltx_para">
+<p class="ltx_p">Note: Remember that a relation is a set. Consequently, we can talk about one relation being a subset of another relation. Another thing to remember is that the elements of a relation are ordered pairs.</p>
+</div>
+</section>
+<section id="S7.SS1.SSS14" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.1.14 </span>Explorations and Activities</h3>
+
+<div id="S7.SS1.SSS14.p1" class="ltx_para">
+<ol id="S7.I8" class="ltx_enumerate">
+<li id="S7.I8.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S7.I8.i11.p1" class="ltx_para">
+<p class="ltx_p">The Inverse of a Relation. (The results of this section will be termed <span class="ltx_text ltx_font_bold">Theorem 7.6</span>.) In <a href="https://johnweeks03.github.io/teaching/300/6-5.html">Section 6.5</a>, we introduced the inverse of a function. If <math id="S7.I8.i11.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S7.I8.i11.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> are nonempty sets and if <math id="S7.I8.i11.p1.m3" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> is a function, then the inverse of <math id="S7.I8.i11.p1.m4" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>, denoted by <math id="S7.I8.i11.p1.m5" class="ltx_Math" data-alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math>, is defined as</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS1.SSS14.p2" class="ltx_para">
+<table role="presentation" id="S7.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex23.m1" class="ltx_Math" data-alttext="\displaystyle f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex23.m2" class="ltx_Math" data-alttext="\displaystyle=\{(b,a)\in B\times A\mid f(a)=b\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex24.m1" class="ltx_Math" data-alttext="\displaystyle=\{(b,a)\in B\times A\mid(a,b)\in f\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS14.p3" class="ltx_para">
+<p class="ltx_p">Now that we know about relations, we see that <math id="S7.SS1.SSS14.p3.m1" class="ltx_Math" data-alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> is always a relation from <math id="S7.SS1.SSS14.p3.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> to <math id="S7.SS1.SSS14.p3.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. The concept of the inverse of a function is actually a special case of the more general concept of the inverse of a relation, which we now define.</p>
+</div>
+<div id="S7.SS1.SSS14.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS1.SSS14.p4.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be a relation from the set <math id="S7.SS1.SSS14.p4.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S7.SS1.SSS14.p4.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. The <span class="ltx_text ltx_font_bold">inverse</span> of <math id="S7.SS1.SSS14.p4.m4" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>, written <math id="S7.SS1.SSS14.p4.m5" class="ltx_Math" data-alttext="R^{-1}" display="inline"><msup><mi>R</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> and read "<math id="S7.SS1.SSS14.p4.m6" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> inverse," is the relation from <math id="S7.SS1.SSS14.p4.m7" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> to <math id="S7.SS1.SSS14.p4.m8" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> defined by</p>
+</div>
+<div id="S7.SS1.SSS14.p5" class="ltx_para">
+<table role="presentation" id="S7.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex25.m1" class="ltx_Math" data-alttext="\displaystyle R^{-1}=\{(y,x)\in B\times A\mid(x,y)\in R\},\text{ or }" display="inline"><mrow><msup><mi>R</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mtext> or</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex26.m1" class="ltx_Math" data-alttext="\displaystyle R^{-1}=\{(y,x)\in B\times A\mid xRy\}." display="inline"><mrow><mrow><msup><mi>R</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS1.SSS14.p6" class="ltx_para">
+<p class="ltx_p">That is, <math id="S7.SS1.SSS14.p6.m1" class="ltx_Math" data-alttext="R^{-1}" display="inline"><msup><mi>R</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> is the subset of <math id="S7.SS1.SSS14.p6.m2" class="ltx_Math" data-alttext="B\times A" display="inline"><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math> consisting of all ordered pairs (<math id="S7.SS1.SSS14.p6.m3" class="ltx_Math" data-alttext="y,x" display="inline"><mrow><mi>y</mi><mo>,</mo><mi>x</mi></mrow></math>) such that <math id="S7.SS1.SSS14.p6.m4" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS1.SSS14.p7" class="ltx_para">
+<p class="ltx_p">For example, let <math id="S7.SS1.SSS14.p7.m1" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> be the "divides" relation on <math id="S7.SS1.SSS14.p7.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. See Progress Check 7.3.
+<br class="ltx_break">So</p>
+</div>
+<div id="S7.SS1.SSS14.p8" class="ltx_para">
+<table role="presentation" id="S7.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex27.m1" class="ltx_Math" data-alttext="D=\{(m,n)\in\mathbb{Z}\times\mathbb{Z}\mid m\text{ divides }n\}" display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>m</mi><mo>⁢</mo><mtext> divides </mtext><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
