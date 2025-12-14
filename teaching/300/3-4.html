@@ -1,0 +1,830 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Constructing and Writing Proofs in Mathematics</title>
+<!--Generated on Sun Dec 14 04:10:52 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S3" class="ltx_section">
+<h1 class="ltx_title"> MATH-300 Reading</h1>
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Constructing and Writing Proofs in Mathematics</h2>
+
+<section id="S3.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.4 </span>Using Cases in Proofs</h3>
+
+<section id="S3.SS4.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.1 </span>Beginning Activity 1 (Using a Logical Equivalency)</h4>
+
+<div id="S3.SS4.SSS1.p1" class="ltx_para">
+<ol id="S3.I1" class="ltx_enumerate">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Complete a truth table to show that <math id="S3.I1.i1.p1.m1" class="ltx_Math" data-alttext="(P\vee Q)\rightarrow R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>R</mi></mrow></math> is logically equivalent to <math id="S3.I1.i1.p1.m2" class="ltx_Math" data-alttext="(P\rightarrow R)\wedge(Q\rightarrow R)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo stretchy="false">→</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose that you are trying to prove a statement that is written in the form <math id="S3.I1.i2.p1.m1" class="ltx_Math" data-alttext="(P\vee Q)\rightarrow R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>R</mi></mrow></math>. Explain why you can complete this proof by writing separate and independent proofs of <math id="S3.I1.i2.p1.m2" class="ltx_Math" data-alttext="P\rightarrow R" display="inline"><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>R</mi></mrow></math> and <math id="S3.I1.i2.p1.m3" class="ltx_Math" data-alttext="Q\rightarrow R" display="inline"><mrow><mi>Q</mi><mo stretchy="false">→</mo><mi>R</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Now consider the following proposition:</p>
+</div>
+<div id="S3.I1.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all integers <math id="S3.I1.i3.p2.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I1.i3.p2.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I1.i3.p2.m3" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> is odd, then <math id="S3.I1.i3.p2.m4" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is odd and <math id="S3.I1.i3.p2.m5" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> is odd.</p>
+</div>
+<div id="S3.I1.i3.p3" class="ltx_para">
+<p class="ltx_p">Write the contrapositive of this proposition.</p>
+</div>
+</li>
+<li id="S3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Now prove that if <math id="S3.I1.i4.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is an even integer, then <math id="S3.I1.i4.p1.m2" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> is an even integer. Also, prove that if <math id="S3.I1.i4.p1.m3" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> is an even integer, then <math id="S3.I1.i4.p1.m4" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> is an even integer.</p>
+</div>
+</li>
+<li id="S3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Use the results proved in part (4) and the explanation in part (2) to explain why we have proved the contrapositive of the proposition in part (3).</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS4.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.2 </span>Beginning Activity 2 (Using Cases in a Proof)</h4>
+
+<div id="S3.SS4.SSS2.p1" class="ltx_para">
+<p class="ltx_p">The work in Beginning Activity 1 was meant to introduce the idea of using cases in a proof. The method of using cases is often used when the hypothesis of the proposition is a disjunction. This is justified by the logical equivalency</p>
+</div>
+<div id="S3.SS4.SSS2.p2" class="ltx_para">
+<table id="S3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex1.m1" class="ltx_Math" data-alttext="[(P\vee Q)\rightarrow R]\equiv[(P\rightarrow R)\wedge(Q\rightarrow R)]" display="block"><mrow><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>R</mi></mrow><mo stretchy="false">]</mo></mrow><mo>≡</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo stretchy="false">→</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo stretchy="false">→</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS4.SSS2.p3" class="ltx_para">
+<p class="ltx_p">See <a href="https://johnweeks03.github.io/teaching/300/2-2.html#Theorem_2.8">Theorem 2.8</a> and Exercise (6) from Section 2.2.
+<br class="ltx_break">In some other situations when we are trying to prove a proposition or a theorem about an element <math id="S3.SS4.SSS2.p3.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in some set <math id="S3.SS4.SSS2.p3.m2" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math>, we often run into the problem that there does not seem to be enough information about <math id="S3.SS4.SSS2.p3.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> to proceed. For example, consider the following proposition:</p>
+</div>
+<div id="S3.SS4.SSS2.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span> 1. If <math id="S3.SS4.SSS2.p4.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an integer, then <math id="S3.SS4.SSS2.p4.m2" class="ltx_Math" data-alttext="\left(n^{2}+n\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></math> is an even integer.</p>
+</div>
+<div id="S3.SS4.SSS2.p5" class="ltx_para">
+<p class="ltx_p">If we were trying to write a direct proof of this proposition, the only thing we could assume is that <math id="S3.SS4.SSS2.p5.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an integer. This is not much help. In a situation such as this, we will sometimes use cases to provide additional assumptions for the forward process of the proof. Cases are usually based on some common properties that the element <math id="S3.SS4.SSS2.p5.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> may or may not possess. The cases must be chosen so that they exhaust all possibilities for the object <math id="S3.SS4.SSS2.p5.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in the hypothesis of the original proposition. For Proposition 1, we know that an integer must be even or it must be odd. We can thus use the following two cases for the integer <math id="S3.SS4.SSS2.p5.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> :</p>
+</div>
+<div id="S3.SS4.SSS2.p6" class="ltx_para">
+<ul id="S3.I2" class="ltx_itemize">
+<li id="S3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The integer <math id="S3.I2.i1.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an even integer;</p>
+</div>
+</li>
+<li id="S3.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The integer <math id="S3.I2.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an odd integer.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS4.SSS2.p7" class="ltx_para">
+<ol id="S3.I3" class="ltx_enumerate">
+<li id="S3.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Complete the proof for the following proposition:</p>
+</div>
+<div id="S3.I3.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span> 2: If <math id="S3.I3.i1.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an even integer, then <math id="S3.I3.i1.p2.m2" class="ltx_Math" data-alttext="n^{2}+n" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></math> is an even integer.
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S3.I3.i1.p2.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> be an even integer. Then there exists an integer <math id="S3.I3.i1.p2.m4" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that <math id="S3.I3.i1.p2.m5" class="ltx_Math" data-alttext="n=2m" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></math>. Substituting this into the expression <math id="S3.I3.i1.p2.m6" class="ltx_Math" data-alttext="n^{2}+n" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></math> yields <math id="S3.I3.i1.p2.m7" class="ltx_Math" data-alttext="\ldots" display="inline"><mi mathvariant="normal">…</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Construct a proof for the following proposition:</p>
+</div>
+<div id="S3.I3.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span> 3: If <math id="S3.I3.i2.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an odd integer, then <math id="S3.I3.i2.p2.m2" class="ltx_Math" data-alttext="n^{2}+n" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></math> is an even integer.</p>
+</div>
+</li>
+<li id="S3.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Explain why the proofs of Proposition 2 and Proposition 3 can be used to construct a proof of Proposition 1.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS4.SSS3" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.3 </span>Some Common Situations to Use Cases</h4>
+
+<div id="S3.SS4.SSS3.p1" class="ltx_para">
+<p class="ltx_p">When using cases in a proof, the main rule is that the cases must be chosen so that they exhaust all possibilities for an object <math id="S3.SS4.SSS3.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in the hypothesis of the original proposition. Following are some common uses of cases in proofs.</p>
+</div>
+<div id="S3.SS4.SSS3.p2" class="ltx_para">
+<p class="ltx_p">When the hypothesis is, "<math id="S3.SS4.SSS3.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an integer."
+<br class="ltx_break">Case 1: <math id="S3.SS4.SSS3.p2.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an even integer.
+<br class="ltx_break">Case 2: <math id="S3.SS4.SSS3.p2.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an odd integer.</p>
+</div>
+<div id="S3.SS4.SSS3.p3" class="ltx_para">
+<p class="ltx_p">When the hypothesis is, "<math id="S3.SS4.SSS3.p3.m1" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS4.SSS3.p3.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are integers."
+<br class="ltx_break">Case 1: <math id="S3.SS4.SSS3.p3.m3" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS4.SSS3.p3.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are even.
+<br class="ltx_break">Case 2: <math id="S3.SS4.SSS3.p3.m5" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> is even and <math id="S3.SS4.SSS3.p3.m6" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is odd.
+<br class="ltx_break">Case 3: <math id="S3.SS4.SSS3.p3.m7" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> is odd and <math id="S3.SS4.SSS3.p3.m8" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is even.
+<br class="ltx_break">Case 4: <math id="S3.SS4.SSS3.p3.m9" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.SS4.SSS3.p3.m10" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are both odd.</p>
+</div>
+<div id="S3.SS4.SSS3.p4" class="ltx_para">
+<p class="ltx_p">When the hypothesis is, "<math id="S3.SS4.SSS3.p4.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is a real number."
+<br class="ltx_break">Case 1: <math id="S3.SS4.SSS3.p4.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is rational.
+<br class="ltx_break">Case 2: <math id="S3.SS4.SSS3.p4.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is irrational.</p>
+</div>
+<div id="S3.SS4.SSS3.p5" class="ltx_para">
+<p class="ltx_p">When the hypothesis is, "<math id="S3.SS4.SSS3.p5.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is a real number."
+<br class="ltx_break">Case 1: <math id="S3.SS4.SSS3.p5.m2" class="ltx_Math" data-alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. OR Case 1: <math id="S3.SS4.SSS3.p5.m3" class="ltx_Math" data-alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.
+<br class="ltx_break">Case 2: <math id="S3.SS4.SSS3.p5.m4" class="ltx_Math" data-alttext="x\neq 0.\quad" display="inline"><mrow><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow><mo lspace="0em">.</mo><mspace style="width:1.167em;" width="1.167em"></mspace></mrow></math> Case 2: <math id="S3.SS4.SSS3.p5.m5" class="ltx_Math" data-alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>.
+<br class="ltx_break">Case 3: <math id="S3.SS4.SSS3.p5.m6" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS3.p6" class="ltx_para">
+<p class="ltx_p">When the hypothesis is, "<math id="S3.SS4.SSS3.p6.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS4.SSS3.p6.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> are real numbers."</p>
+</div>
+<div id="S3.SS4.SSS3.p7" class="ltx_para">
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_math_unparsed" data-alttext="\begin{array}[]{lll}\text{ Case 1: }a=b.\quad\text{ OR }&amp;\text{ Case 1: }a&gt;b.%
+\\
+\text{ Case 2: }a\neq b.&amp;&amp;\text{ Case 2: }a=b.\\
+&amp;&amp;\text{ Case 3: }a&lt;b.\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mtext> Case 1: </mtext><mi>a</mi><mo>=</mo><mi>b</mi><mo lspace="0em">.</mo><mspace style="width:1.167em;" width="1.167em"></mspace><mtext> OR </mtext></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> Case 1: </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>&gt;</mo><mi>b</mi></mrow><mo lspace="0em">.</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> Case 2: </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>≠</mo><mi>b</mi></mrow><mo lspace="0em">.</mo></mrow></mtd><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> Case 2: </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mi>b</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext> Case 3: </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>b</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S3.SS4.SSS4" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.4 </span>Writing Guidelines for a Proof Using Cases</h4>
+
+<div id="S3.SS4.SSS4.p1" class="ltx_para">
+<p class="ltx_p">When writing a proof that uses cases, we use all the other writing guidelines. In addition, we make sure that it is clear where each case begins. This can be done by using a new paragraph with a label such as "Case 1," or it can be done by starting a paragraph with a phrase such as, "In the case where …."</p>
+</div>
+</section>
+<section id="S3.SS4.SSS5" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.5 </span>Progress Check 3.21 (Using Cases: <math id="S3.SS4.SSS5.m1" class="ltx_Math" data-alttext="\boldsymbol{n}" display="inline"><mi>𝒏</mi></math> Is Even or <math id="S3.SS4.SSS5.m2" class="ltx_Math" data-alttext="\boldsymbol{n}" display="inline"><mi>𝒏</mi></math> Is Odd)</h4>
+
+<div id="S3.SS4.SSS5.p1" class="ltx_para">
+<p class="ltx_p">Complete the proof of the following proposition:
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Proposition</span>. For each integer <math id="S3.SS4.SSS5.p1.m1" class="ltx_Math" data-alttext="n,n^{2}-5n+7" display="inline"><mrow><mi>n</mi><mo>,</mo><mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>+</mo><mn>7</mn></mrow></mrow></math> is an odd integer.
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S3.SS4.SSS5.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> be an integer. We will prove that <math id="S3.SS4.SSS5.p1.m3" class="ltx_Math" data-alttext="n^{2}-5n+7" display="inline"><mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>+</mo><mn>7</mn></mrow></math> is an odd integer by examining the case where <math id="S3.SS4.SSS5.p1.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is even and the case where <math id="S3.SS4.SSS5.p1.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is odd.</p>
+</div>
+<div id="S3.SS4.SSS5.p2" class="ltx_para">
+<p class="ltx_p">Case 1. The integer <math id="S3.SS4.SSS5.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is even. In this case, there exists an integer <math id="S3.SS4.SSS5.p2.m2" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that <math id="S3.SS4.SSS5.p2.m3" class="ltx_Math" data-alttext="n=2m" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></math>. Therefore, <math id="S3.SS4.SSS5.p2.m4" class="ltx_Math" data-alttext="\ldots" display="inline"><mi mathvariant="normal">…</mi></math>.</p>
+</div>
+<div id="S3.SS4.SSS5.p3" class="ltx_para">
+<p class="ltx_p">As another example of using cases, consider a situation where we know that <math id="S3.SS4.SSS5.p3.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS4.SSS5.p3.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> are real numbers and <math id="S3.SS4.SSS5.p3.m3" class="ltx_Math" data-alttext="ab=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. If we want to make a conclusion about <math id="S3.SS4.SSS5.p3.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, the temptation might be to divide both sides of the equation by <math id="S3.SS4.SSS5.p3.m5" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>. However, we can only do this if <math id="S3.SS4.SSS5.p3.m6" class="ltx_Math" data-alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>. So, we consider two cases: one when <math id="S3.SS4.SSS5.p3.m7" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> and the other when <math id="S3.SS4.SSS5.p3.m8" class="ltx_Math" data-alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS5.p4" class="ltx_para">
+<p class="ltx_p"><span id="Prop_3.22" class="ltx_text ltx_font_bold">Proposition 3.22.</span> For all real numbers <math id="S3.SS4.SSS5.p4.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS4.SSS5.p4.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.SS4.SSS5.p4.m3" class="ltx_Math" data-alttext="ab=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, then <math id="S3.SS4.SSS5.p4.m4" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="S3.SS4.SSS5.p4.m5" class="ltx_Math" data-alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS5.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We let <math id="S3.SS4.SSS5.p5.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS4.SSS5.p5.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> be real numbers and assume that <math id="S3.SS4.SSS5.p5.m3" class="ltx_Math" data-alttext="ab=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. We will prove that <math id="S3.SS4.SSS5.p5.m4" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="S3.SS4.SSS5.p5.m5" class="ltx_Math" data-alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math> by considering two cases: (1) <math id="S3.SS4.SSS5.p5.m6" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>, and (2) <math id="S3.SS4.SSS5.p5.m7" class="ltx_Math" data-alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS5.p6" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S3.SS4.SSS5.p6.m1" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>, the conclusion of the proposition is true and so there is nothing to prove.</p>
+</div>
+<div id="S3.SS4.SSS5.p7" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S3.SS4.SSS5.p7.m1" class="ltx_Math" data-alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, we can multiply both sides of the equation <math id="S3.SS4.SSS5.p7.m2" class="ltx_Math" data-alttext="ab=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>
+<br class="ltx_break">by <math id="S3.SS4.SSS5.p7.m3" class="ltx_Math" data-alttext="\frac{1}{a}" display="inline"><mfrac><mn>1</mn><mi>a</mi></mfrac></math> and obtain</p>
+</div>
+<div id="S3.SS4.SSS5.p8" class="ltx_para">
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex3.m1" class="ltx_Math" data-alttext="\displaystyle\frac{1}{a}\cdot ab" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>a</mi></mrow><mo>⁢</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex3.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{1}{a}\cdot 0" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex4.m1" class="ltx_Math" data-alttext="\displaystyle b" display="inline"><mi>b</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex4.m2" class="ltx_Math" data-alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS4.SSS5.p9" class="ltx_para">
+<p class="ltx_p">So in both cases, <math id="S3.SS4.SSS5.p9.m1" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="S3.SS4.SSS5.p9.m2" class="ltx_Math" data-alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>, and this proves that for all real numbers <math id="S3.SS4.SSS5.p9.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS4.SSS5.p9.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.SS4.SSS5.p9.m5" class="ltx_Math" data-alttext="ab=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, then <math id="S3.SS4.SSS5.p9.m6" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="S3.SS4.SSS5.p9.m7" class="ltx_Math" data-alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS4.SSS6" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.6 </span>Absolute Value</h4>
+
+<div id="S3.SS4.SSS6.p1" class="ltx_para">
+<p class="ltx_p">Most students by now have studied the concept of the absolute value of a real number. We use the notation <math id="S3.SS4.SSS6.p1.m1" class="ltx_Math" data-alttext="|x|" display="inline"><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></math> to stand for the absolute value of the real number <math id="S3.SS4.SSS6.p1.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>. One way to think of the absolute value of <math id="S3.SS4.SSS6.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is as the "distance" between <math id="S3.SS4.SSS6.p1.m4" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and 0 on the number line. For example,</p>
+</div>
+<div id="S3.SS4.SSS6.p2" class="ltx_para">
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex5.m1" class="ltx_Math" data-alttext="|5|=5\quad\text{ and }\quad|-7|=7" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mn>5</mn><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mn>5</mn><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>7</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS4.SSS6.p3" class="ltx_para">
+<p class="ltx_p">Although this notion of absolute value is convenient for determining the absolute value of a specific number, if we want to prove properties about absolute value, we need a more careful and precise definition.</p>
+</div>
+<div id="S3.SS4.SSS6.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. For <math id="S3.SS4.SSS6.p4.m1" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, we define <math id="S3.SS4.SSS6.p4.m2" class="ltx_Math" data-alttext="|x|" display="inline"><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></math>, called the <span class="ltx_text ltx_font_bold">absolute value of</span> <math id="S3.SS4.SSS6.p4.m3" class="ltx_Math" data-alttext="\boldsymbol{x}" display="inline"><mi>𝒙</mi></math>, by</p>
+</div>
+<div id="S3.SS4.SSS6.p5" class="ltx_para">
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" data-alttext="|x|=\begin{cases}x,&amp;\text{ if }x\geq 0\\
+-x&amp;\text{ if }x&lt;0\end{cases}" display="block"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>≥</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mi>x</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mtext> if </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS4.SSS6.p6" class="ltx_para">
+<p class="ltx_p">Let’s first see if this definition is consistent with our intuitive notion of absolute value by looking at two specific examples.</p>
+</div>
+<div id="S3.SS4.SSS6.p7" class="ltx_para">
+<ul id="S3.I4" class="ltx_itemize">
+<li id="S3.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="S3.I4.i1.p1.m1" class="ltx_Math" data-alttext="5&gt;0" display="inline"><mrow><mn>5</mn><mo>&gt;</mo><mn>0</mn></mrow></math>, we see that <math id="S3.I4.i1.p1.m2" class="ltx_Math" data-alttext="|5|=5" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mn>5</mn><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>5</mn></mrow></math>, which should be no surprise.</p>
+</div>
+</li>
+<li id="S3.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="S3.I4.i2.p1.m1" class="ltx_Math" data-alttext="-7&lt;0" display="inline"><mrow><mrow><mo>−</mo><mn>7</mn></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, we see that <math id="S3.I4.i2.p1.m2" class="ltx_Math" data-alttext="|-7|=-(-7)=7" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>7</mn></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS4.SSS6.p8" class="ltx_para">
+<p class="ltx_p">Notice that the definition of the absolute value of <math id="S3.SS4.SSS6.p8.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is given in two parts, one for when <math id="S3.SS4.SSS6.p8.m2" class="ltx_Math" data-alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math> and the other for when <math id="S3.SS4.SSS6.p8.m3" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>. This means that when attempting to prove something about absolute value, we often use cases. This will be illustrated in Theorem 3.23.</p>
+</div>
+<div id="S3.SS4.SSS6.p9" class="ltx_para">
+<p class="ltx_p"><span id="Theorem_3.23" class="ltx_text ltx_font_bold">Theorem 3.23.</span> Let <math class="ltx_MATH" data-alttext="a" display="inline"><mi>a</mi></math> be a positive real number. For each real number <math id="S3.SS4.SSS6.p9.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>,</p>
+</div>
+<div id="S3.SS4.SSS6.p10" class="ltx_para">
+<ol id="S3.I5" class="ltx_enumerate">
+<li id="S3.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I5.i1.p1.m1" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math> if and only if <math id="S3.I5.i1.p1.m2" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.I5.i1.p1.m3" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I5.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I5.i2.p1.m1" class="ltx_Math" data-alttext="|-x|=|x|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS4.SSS6.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. The proof of Part (2) is part of Exercise (10). We will prove Part (1).
+<br class="ltx_break">We let <math id="S3.SS4.SSS6.p11.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> be a positive real number and let <math id="S3.SS4.SSS6.p11.m2" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. We will first prove that if <math id="S3.SS4.SSS6.p11.m3" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>, then <math id="S3.SS4.SSS6.p11.m4" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.SS4.SSS6.p11.m5" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>. So we assume that <math id="S3.SS4.SSS6.p11.m6" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>. In the case where <math id="S3.SS4.SSS6.p11.m7" class="ltx_Math" data-alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math>, we see that <math id="S3.SS4.SSS6.p11.m8" class="ltx_Math" data-alttext="|x|=x" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>, and since <math id="S3.SS4.SSS6.p11.m9" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>, we can conclude that <math id="S3.SS4.SSS6.p11.m10" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS6.p12" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S3.SS4.SSS6.p12.m1" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, we see that <math id="S3.SS4.SSS6.p12.m2" class="ltx_Math" data-alttext="|x|=-x" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>−</mo><mi>x</mi></mrow></mrow></math>. Since <math id="S3.SS4.SSS6.p12.m3" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>, we can conclude that <math id="S3.SS4.SSS6.p12.m4" class="ltx_Math" data-alttext="-x=a" display="inline"><mrow><mrow><mo>−</mo><mi>x</mi></mrow><mo>=</mo><mi>a</mi></mrow></math> and hence that <math id="S3.SS4.SSS6.p12.m5" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>. These two cases prove that if <math id="S3.SS4.SSS6.p12.m6" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>, then <math id="S3.SS4.SSS6.p12.m7" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.SS4.SSS6.p12.m8" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS6.p13" class="ltx_para">
+<p class="ltx_p">We will now prove that if <math id="S3.SS4.SSS6.p13.m1" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.SS4.SSS6.p13.m2" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>, then <math id="S3.SS4.SSS6.p13.m3" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>. We start by assuming that <math id="S3.SS4.SSS6.p13.m4" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.SS4.SSS6.p13.m5" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>. Since the hypothesis of this conditional statement is a disjunction, we use two cases. When <math id="S3.SS4.SSS6.p13.m6" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math>, we see that</p>
+</div>
+<div id="S3.SS4.SSS6.p14" class="ltx_para">
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex7.m1" class="ltx_Math" data-alttext="|x|=|a|=a\quad\text{ since }a&gt;0" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>a</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mtext> since </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS4.SSS6.p15" class="ltx_para">
+<p class="ltx_p">When <math id="S3.SS4.SSS6.p15.m1" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>, we conclude that</p>
+</div>
+<div id="S3.SS4.SSS6.p16" class="ltx_para">
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex8.m1" class="ltx_Math" data-alttext="|x|=|-a|=-(-a)\quad\text{ since }-a&lt;0" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mtext> since </mtext><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS4.SSS6.p17" class="ltx_para">
+<p class="ltx_p">and hence, <math id="S3.SS4.SSS6.p17.m1" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>. This proves that if <math id="S3.SS4.SSS6.p17.m2" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.SS4.SSS6.p17.m3" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>, then <math id="S3.SS4.SSS6.p17.m4" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math>. Because we have proven both conditional statements, we have proven that <math id="S3.SS4.SSS6.p17.m5" class="ltx_Math" data-alttext="|x|=a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>a</mi></mrow></math> if and only if <math id="S3.SS4.SSS6.p17.m6" class="ltx_Math" data-alttext="x=a" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow></math> or <math id="S3.SS4.SSS6.p17.m7" class="ltx_Math" data-alttext="x=-a" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS4.SSS7" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.7 </span>Progress Check 3.24 (Equations Involving Absolute Values)</h4>
+
+<div id="S3.SS4.SSS7.p1" class="ltx_para">
+<ol id="S3.I6" class="ltx_enumerate">
+<li id="S3.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">What is <math id="S3.I6.i1.p1.m1" class="ltx_Math" data-alttext="|4.3|" display="inline"><mrow><mo stretchy="false">|</mo><mn>4.3</mn><mo stretchy="false">|</mo></mrow></math> and what is <math id="S3.I6.i1.p1.m2" class="ltx_Math" data-alttext="|-\pi|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mi>π</mi></mrow><mo stretchy="false">|</mo></mrow></math> ?</p>
+</div>
+</li>
+<li id="S3.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Use the properties of absolute value in Theorem 3.23 to help solve the following equations for <math id="S3.I6.i2.p1.m1" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math>, where <math id="S3.I6.i2.p1.m2" class="ltx_Math" data-alttext="t" display="inline"><mi>t</mi></math> is a real number.</p>
+<ol id="S3.I6.i2.I1" class="ltx_enumerate">
+<li id="S3.I6.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I6.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I6.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="|t|=12" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>t</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>12</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I6.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I6.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I6.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="|t+3|=5" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>t</mi><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>5</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I6.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I6.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I6.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="|t-4|=\frac{1}{5}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>t</mi><mo>−</mo><mn>4</mn></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I6.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I6.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I6.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="|3t-4|=8" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>t</mi></mrow><mo>−</mo><mn>4</mn></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>8</mn></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS4.SSS7.p2" class="ltx_para">
+<p class="ltx_p">Although solving equations involving absolute values may not seem to have anything to do with writing proofs, the point of Progress Check 3.24 is to emphasize the importance of using cases when dealing with absolute value. The following theorem provides some important properties of absolute value.</p>
+</div>
+<div id="S3.SS4.SSS7.p3" class="ltx_para">
+<p class="ltx_p"><span id="Theorem_3.25" class="ltx_text ltx_font_bold">Theorem</span> 3.25. Let a be a positive real number. For all real numbers <math id="S3.SS4.SSS7.p3.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.SS4.SSS7.p3.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>,</p>
+</div>
+<div id="S3.SS4.SSS7.p4" class="ltx_para">
+<ol id="S3.I7" class="ltx_enumerate">
+<li id="S3.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I7.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I7.i1.p1.m1" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> if and only if <math id="S3.I7.i1.p1.m2" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I7.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I7.i2.p1.m1" class="ltx_Math" data-alttext="|xy|=|x||y|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I7.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I7.i3.p1.m1" class="ltx_Math" data-alttext="|x+y|\leq|x|+|y|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>. This is known as the Triangle Inequality.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS4.SSS7.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will prove Part (1). The proof of Part (2) is included in Exercise (10), and the proof of Part (3) is Exercise (14). For Part (1), we will prove the biconditional proposition by proving the two associated conditional propositions.</p>
+</div>
+<div id="S3.SS4.SSS7.p6" class="ltx_para">
+<p class="ltx_p">So we let <math id="S3.SS4.SSS7.p6.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> be a positive real number and let <math id="S3.SS4.SSS7.p6.m2" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and first assume that <math id="S3.SS4.SSS7.p6.m3" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math>. We will use two cases: either <math id="S3.SS4.SSS7.p6.m4" class="ltx_Math" data-alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math> or <math id="S3.SS4.SSS7.p6.m5" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS7.p7" class="ltx_para">
+<ul id="S3.I8" class="ltx_itemize">
+<li id="S3.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S3.I8.i1.p1.m1" class="ltx_Math" data-alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math>, we know that <math id="S3.I8.i1.p1.m2" class="ltx_Math" data-alttext="|x|=x" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>x</mi></mrow></math> and so the inequality <math id="S3.I8.i1.p1.m3" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> implies that <math id="S3.I8.i1.p1.m4" class="ltx_Math" data-alttext="x&lt;a" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>. However, we also know that <math id="S3.I8.i1.p1.m5" class="ltx_Math" data-alttext="-a&lt;0" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow></math> and that <math id="S3.I8.i1.p1.m6" class="ltx_Math" data-alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Therefore, we conclude that <math id="S3.I8.i1.p1.m7" class="ltx_Math" data-alttext="-a&lt;x" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi></mrow></math> and, hence, <math id="S3.I8.i1.p1.m8" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">When <math id="S3.I8.i2.p1.m1" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, we see that <math id="S3.I8.i2.p1.m2" class="ltx_Math" data-alttext="|x|=-x" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>−</mo><mi>x</mi></mrow></mrow></math>. Therefore, the inequality <math id="S3.I8.i2.p1.m3" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> implies that <math id="S3.I8.i2.p1.m4" class="ltx_Math" data-alttext="-x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>x</mi></mrow><mo>&lt;</mo><mi>a</mi></mrow></math>, which in turn implies that <math id="S3.I8.i2.p1.m5" class="ltx_Math" data-alttext="-a&lt;x" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi></mrow></math>. In this case, we also know that <math id="S3.I8.i2.p1.m6" class="ltx_Math" data-alttext="x&lt;a" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math> since <math id="S3.I8.i2.p1.m7" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is negative and <math id="S3.I8.i2.p1.m8" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is positive. Hence, <math id="S3.I8.i2.p1.m9" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS4.SSS7.p8" class="ltx_para">
+<p class="ltx_p">So in both cases, we have proven that <math id="S3.SS4.SSS7.p8.m1" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math> and this proves that if <math id="S3.SS4.SSS7.p8.m2" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math>, then <math id="S3.SS4.SSS7.p8.m3" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>. We now assume that <math id="S3.SS4.SSS7.p8.m4" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+<div id="S3.SS4.SSS7.p9" class="ltx_para">
+<ul id="S3.I9" class="ltx_itemize">
+<li id="S3.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I9.i1.p1.m1" class="ltx_Math" data-alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math>, then <math id="S3.I9.i1.p1.m2" class="ltx_Math" data-alttext="|x|=x" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>x</mi></mrow></math> and hence, <math id="S3.I9.i1.p1.m3" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I9.i2.p1.m1" class="ltx_Math" data-alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, then <math id="S3.I9.i2.p1.m2" class="ltx_Math" data-alttext="|x|=-x" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>−</mo><mi>x</mi></mrow></mrow></math> and so <math id="S3.I9.i2.p1.m3" class="ltx_Math" data-alttext="x=-|x|" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>. Thus, <math id="S3.I9.i2.p1.m4" class="ltx_Math" data-alttext="-a&lt;-|x|" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>. By multiplying both sides of the last inequality by -1, we conclude that <math id="S3.I9.i2.p1.m5" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS4.SSS7.p10" class="ltx_para">
+<p class="ltx_p">These two cases prove that if <math id="S3.SS4.SSS7.p10.m1" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>, then <math id="S3.SS4.SSS7.p10.m2" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math>. Hence, we have proven that <math id="S3.SS4.SSS7.p10.m3" class="ltx_Math" data-alttext="|x|&lt;a" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> if and only if <math id="S3.SS4.SSS7.p10.m4" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS4.SSS8" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.8 </span>Exercises for Section 3.4</h4>
+
+<div id="S3.SS4.SSS8.p1" class="ltx_para">
+<ol id="S3.I10" class="ltx_enumerate">
+<li id="S3.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I10.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> In Beginning Activity 2, we proved that if <math id="S3.I10.i1.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an integer, then <math id="S3.I10.i1.p1.m3" class="ltx_Math" data-alttext="n^{2}+n" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></math> is an even integer. We define two integers to be consecutive integers if one of the integers is one more than the other integer. This means that we can represent consecutive integers as <math id="S3.I10.i1.p1.m4" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I10.i1.p1.m5" class="ltx_Math" data-alttext="m+1" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></math>, where <math id="S3.I10.i1.p1.m6" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> is some integer.</p>
+</div>
+<div id="S3.I10.i1.p2" class="ltx_para">
+<p class="ltx_p">Explain why the result proven in Beginning Activity 2 can be used to prove that the product of any two consecutive integers is divisible by 2.</p>
+</div>
+</li>
+<li id="S3.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I10.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove that if <math id="S3.I10.i2.p1.m2" class="ltx_Math" data-alttext="u" display="inline"><mi>u</mi></math> is an odd integer, then the equation <math id="S3.I10.i2.p1.m3" class="ltx_Math" data-alttext="x^{2}+x-u=0" display="inline"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi></mrow><mo>−</mo><mi>u</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> has no solution that is an integer.</p>
+</div>
+</li>
+<li id="S3.I10.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I10.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove that if <math id="S3.I10.i3.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an odd integer, then <math id="S3.I10.i3.p1.m3" class="ltx_Math" data-alttext="n=4k+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> for some integer <math id="S3.I10.i3.p1.m4" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> or <math id="S3.I10.i3.p1.m5" class="ltx_Math" data-alttext="n=4k+3" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></math> for some integer <math id="S3.I10.i3.p1.m6" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I10.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i4.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove the following proposition:
+For each integer <math id="S3.I10.i4.p1.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>, if <math id="S3.I10.i4.p1.m3" class="ltx_Math" data-alttext="a^{2}=a" display="inline"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mi>a</mi></mrow></math>, then <math id="S3.I10.i4.p1.m4" class="ltx_Math" data-alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="S3.I10.i4.p1.m5" class="ltx_Math" data-alttext="a=1" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I10.i5.p1" class="ltx_para">
+<ol id="S3.I10.i5.I1" class="ltx_enumerate">
+<li id="S3.I10.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove the following proposition:</p>
+</div>
+<div id="S3.I10.i5.I1.i1.p2" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I10.i5.I1.i1.p2.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I10.i5.I1.i1.p2.m2" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> with <math id="S3.I10.i5.I1.i1.p2.m3" class="ltx_Math" data-alttext="d\neq 0" display="inline"><mrow><mi>d</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I10.i5.I1.i1.p2.m4" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> divides <math id="S3.I10.i5.I1.i1.p2.m5" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> or <math id="S3.I10.i5.I1.i1.p2.m6" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> divides <math id="S3.I10.i5.I1.i1.p2.m7" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, then <math id="S3.I10.i5.I1.i1.p2.m8" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> divides the product <math id="S3.I10.i5.I1.i1.p2.m9" class="ltx_Math" data-alttext="ab" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></math>.
+Hint: Notice that the hypothesis is a disjunction. So use two cases.</p>
+</div>
+</li>
+<li id="S3.I10.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Write the contrapositive of the proposition in Exercise (5a).</p>
+</div>
+</li>
+<li id="S3.I10.i5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I10.i5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i5.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Write the converse of the proposition in Exercise (5a). Is the converse true or false? Justify your conclusion.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S3.I10.i6.p1" class="ltx_para">
+<p class="ltx_p">Are the following propositions true or false? Justify all your conclusions. If a biconditional statement is found to be false, you should clearly determine if one of the conditional statements within it is true. In that case, you should state an appropriate theorem for this conditional statement and prove it.</p>
+<ol id="S3.I10.i6.I1" class="ltx_enumerate">
+<li id="S3.I10.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I10.i6.I1.i1.p1.m2" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I10.i6.I1.i1.p1.m3" class="ltx_Math" data-alttext="n,m" display="inline"><mrow><mi>n</mi><mo>,</mo><mi>m</mi></mrow></math> and <math id="S3.I10.i6.I1.i1.p1.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are consecutive integers if and only if 4 divides <math id="S3.I10.i6.I1.i1.p1.m5" class="ltx_Math" data-alttext="\left(m^{2}+n^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I10.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I10.i6.I1.i2.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, 4 divides <math id="S3.I10.i6.I1.i2.p1.m3" class="ltx_Math" data-alttext="\left(m^{2}-n^{2}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>−</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math> if and only if <math id="S3.I10.i6.I1.i2.p1.m4" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I10.i6.I1.i2.p1.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are both even or <math id="S3.I10.i6.I1.i2.p1.m6" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I10.i6.I1.i2.p1.m7" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are both odd.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S3.I10.i7.p1" class="ltx_para">
+<p class="ltx_p">Is the following proposition true or false? Justify your conclusion with a counterexample or a proof.</p>
+</div>
+<div id="S3.I10.i7.p2" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I10.i7.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, if <math id="S3.I10.i7.p2.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is odd, then <math id="S3.I10.i7.p2.m3" class="ltx_Math" data-alttext="8\mid\left(n^{2}-1\right)" display="inline"><mrow><mn>8</mn><mo>∣</mo><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S3.I10.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i8.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove that there are no natural numbers <math id="S3.I10.i8.p1.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i8.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> with <math id="S3.I10.i8.p1.m4" class="ltx_Math" data-alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math> and <math id="S3.I10.i8.p1.m5" class="ltx_Math" data-alttext="a^{2}+1=2^{n}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S3.I10.i9.p1" class="ltx_para">
+<p class="ltx_p">Are the following propositions true or false? Justify each conclusion with a counterexample or a proof.</p>
+<ol id="S3.I10.i9.I1" class="ltx_enumerate">
+<li id="S3.I10.i9.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i9.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I10.i9.I1.i1.p1.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i9.I1.i1.p1.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> with <math id="S3.I10.i9.I1.i1.p1.m3" class="ltx_Math" data-alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, the equation <math id="S3.I10.i9.I1.i1.p1.m4" class="ltx_Math" data-alttext="ax+b=0" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> has a rational number solution.</p>
+</div>
+</li>
+<li id="S3.I10.i9.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i9.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I10.i9.I1.i2.p1.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I10.i9.I1.i2.p1.m2" class="ltx_Math" data-alttext="c" display="inline"><mi>c</mi></math>, if <math id="S3.I10.i9.I1.i2.p1.m3" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I10.i9.I1.i2.p1.m4" class="ltx_Math" data-alttext="c" display="inline"><mi>c</mi></math> are odd, then the equation <math id="S3.I10.i9.I1.i2.p1.m5" class="ltx_Math" data-alttext="ax^{2}+bx+c=0" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> has no solution that is a rational number.
+Hint: Do not use the quadratic formula. Use a proof by contradiction and recall that any rational number can be written in the form <math id="S3.I10.i9.I1.i2.p1.m6" class="ltx_Math" data-alttext="\frac{p}{q}" display="inline"><mfrac><mi>p</mi><mi>q</mi></mfrac></math>, where <math id="S3.I10.i9.I1.i2.p1.m7" class="ltx_Math" data-alttext="p" display="inline"><mi>p</mi></math> and <math id="S3.I10.i9.I1.i2.p1.m8" class="ltx_Math" data-alttext="q" display="inline"><mi>q</mi></math> are integers, <math id="S3.I10.i9.I1.i2.p1.m9" class="ltx_Math" data-alttext="q&gt;0" display="inline"><mrow><mi>q</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, and <math id="S3.I10.i9.I1.i2.p1.m10" class="ltx_Math" data-alttext="p" display="inline"><mi>p</mi></math> and <math id="S3.I10.i9.I1.i2.p1.m11" class="ltx_Math" data-alttext="q" display="inline"><mi>q</mi></math> have no common factor greater than 1.</p>
+</div>
+</li>
+<li id="S3.I10.i9.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I10.i9.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I10.i9.I1.i3.p1.m1" class="ltx_Math" data-alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>, and <math id="S3.I10.i9.I1.i3.p1.m2" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math>, if <math id="S3.I10.i9.I1.i3.p1.m3" class="ltx_Math" data-alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>, and <math id="S3.I10.i9.I1.i3.p1.m4" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> are odd, then the equation <math id="S3.I10.i9.I1.i3.p1.m5" class="ltx_Math" data-alttext="ax^{3}+bx^{2}+cx+d=0" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>d</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> has no solution that is a rational number.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S3.I10.i10.p1" class="ltx_para">
+<ol id="S3.I10.i10.I1" class="ltx_enumerate">
+<li id="S3.I10.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i10.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove Part (2) of Theorem 3.23.</p>
+</div>
+<div id="S3.I10.i10.I1.i1.p2" class="ltx_para">
+<p class="ltx_p">For each <math id="S3.I10.i10.I1.i1.p2.m1" class="ltx_Math" data-alttext="x\in\mathbb{R},|-x|=|x|" display="inline"><mrow><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove Part (2) of Theorem 3.25.</p>
+</div>
+<div id="S3.I10.i10.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I10.i10.I1.i2.p2.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I10.i10.I1.i2.p2.m2" class="ltx_Math" data-alttext="y,|xy|=|x||y|" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S3.I10.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I10.i11.p1.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> be a positive real number. In Part (1) of Theorem 3.25, we proved that for each real number <math id="S3.I10.i11.p1.m2" class="ltx_Math" data-alttext="x,|x|&lt;a" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> if and only if <math id="S3.I10.i11.p1.m3" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>. It is important to realize that the sentence <math id="S3.I10.i11.p1.m4" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math> is actually the conjunction of two inequalities. That is, <math id="S3.I10.i11.p1.m5" class="ltx_Math" data-alttext="-a&lt;x&lt;a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math> means that <math id="S3.I10.i11.p1.m6" class="ltx_Math" data-alttext="-a&lt;x" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>x</mi></mrow></math> and <math id="S3.I10.i11.p1.m7" class="ltx_Math" data-alttext="x&lt;a" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>a</mi></mrow></math>.</p>
+<ol id="S3.I10.i11.I1" class="ltx_enumerate">
+<li id="S3.I10.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I10.i11.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Complete the following statement: For each real number <math id="S3.I10.i11.I1.i1.p1.m2" class="ltx_Math" data-alttext="x,|x|\geq a" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>≥</mo><mi>a</mi></mrow></math> if and only if ….</p>
+</div>
+</li>
+<li id="S3.I10.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that for each real number <math id="S3.I10.i11.I1.i2.p1.m1" class="ltx_Math" data-alttext="x,|x|\leq a" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>≤</mo><mi>a</mi></mrow></math> if and only if <math id="S3.I10.i11.I1.i2.p1.m2" class="ltx_Math" data-alttext="-a\leq x\leq a" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo>≤</mo><mi>x</mi><mo>≤</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i11.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I10.i11.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Complete the following statement: For each real number <math id="S3.I10.i11.I1.i3.p1.m1" class="ltx_Math" data-alttext="x,|x|&gt;a" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&gt;</mo><mi>a</mi></mrow></math> if and only if ….</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S3.I10.i12.p1" class="ltx_para">
+<p class="ltx_p">Prove each of the following:</p>
+<ol id="S3.I10.i12.I1" class="ltx_enumerate">
+<li id="S3.I10.i12.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i12.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each nonzero real number <math id="S3.I10.i12.I1.i1.p1.m1" class="ltx_Math" data-alttext="x,\left|x^{-1}\right|=\frac{1}{|x|}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mrow><mo>|</mo><msup><mi>x</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>|</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i12.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i12.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I10.i12.I1.i2.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I10.i12.I1.i2.p1.m2" class="ltx_Math" data-alttext="y,|x-y|\geq|x|-|y|" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S3.I10.i12.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">Hint: An idea that is often used by mathematicians is to add 0 to an expression "intelligently". In this case, we know that <math id="S3.I10.i12.I1.i2.p2.m1" class="ltx_Math" data-alttext="(-y)+y=0" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Start by adding this "version" of 0 inside the absolute value sign of <math id="S3.I10.i12.I1.i2.p2.m2" class="ltx_Math" data-alttext="|x|" display="inline"><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i12.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I10.i12.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I10.i12.I1.i3.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I10.i12.I1.i3.p1.m2" class="ltx_math_unparsed" data-alttext="y,\|x|-|y||\leq|x-y|" display="inline"><mrow><mi>y</mi><mo>,</mo><mo lspace="0em" rspace="0.167em">∥</mo><mi>x</mi><mo fence="false" stretchy="false">|</mo><mo lspace="0em" rspace="0em">−</mo><mo fence="false" rspace="0.167em" stretchy="false">|</mo><mi>y</mi><mo fence="false" rspace="0.167em" stretchy="false">|</mo><mo fence="false" stretchy="false">|</mo><mo lspace="0.167em" rspace="0em">≤</mo><mo fence="false" rspace="0.167em" stretchy="false">|</mo><mi>x</mi><mo>−</mo><mi>y</mi><mo fence="false" stretchy="false">|</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S3.I10.i13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of proofs.</span> See the instructions for Exercise (19) from Section 3.1.</p>
+<ol id="S3.I10.i13.I1" class="ltx_enumerate">
+<li id="S3.I10.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all nonzero integers <math id="S3.I10.i13.I1.i1.p1.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i13.I1.i1.p1.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I10.i13.I1.i1.p1.m3" class="ltx_Math" data-alttext="a+2b\neq 3" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≠</mo><mn>3</mn></mrow></math> and <math id="S3.I10.i13.I1.i1.p1.m4" class="ltx_Math" data-alttext="9a+2b\neq 1" display="inline"><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≠</mo><mn>1</mn></mrow></math>, then the equation <math id="S3.I10.i13.I1.i1.p1.m5" class="ltx_Math" data-alttext="ax^{3}+2bx=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> does not have a solution that is a natural number.</p>
+</div>
+<div id="S3.I10.i13.I1.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will prove the contrapositive, which is
+<br class="ltx_break">For all nonzero integers <math id="S3.I10.i13.I1.i1.p2.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i13.I1.i1.p2.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, if the equation <math id="S3.I10.i13.I1.i1.p2.m3" class="ltx_Math" data-alttext="ax^{3}+2bx=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> has a solution that is a natural number, then <math id="S3.I10.i13.I1.i1.p2.m4" class="ltx_Math" data-alttext="a+2b=3" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> or <math id="S3.I10.i13.I1.i1.p2.m5" class="ltx_Math" data-alttext="9a+2b=1" display="inline"><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.
+<br class="ltx_break">So we let <math id="S3.I10.i13.I1.i1.p2.m6" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i13.I1.i1.p2.m7" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> be nonzero integers and assume that the natural number <math id="S3.I10.i13.I1.i1.p2.m8" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is a solution of the equation <math id="S3.I10.i13.I1.i1.p2.m9" class="ltx_Math" data-alttext="ax^{3}+2bx=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. So we have</p>
+</div>
+<div id="S3.I10.i13.I1.i1.p3" class="ltx_para">
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex9.m1" class="ltx_Math" data-alttext="\displaystyle an^{3}+2bn" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>n</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex9.m2" class="ltx_Math" data-alttext="\displaystyle=3\quad\text{ or }" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>3</mn><mspace style="width:1em;" width="1em"></mspace><mtext> or</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex10.m1" class="ltx_Math" data-alttext="\displaystyle n\left(an^{2}+2b\right)" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex10.m2" class="ltx_Math" data-alttext="\displaystyle=3." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I10.i13.I1.i1.p4" class="ltx_para">
+<p class="ltx_p">So we can conclude that <math id="S3.I10.i13.I1.i1.p4.m1" class="ltx_Math" data-alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math> and <math id="S3.I10.i13.I1.i1.p4.m2" class="ltx_Math" data-alttext="an^{2}+2b=1" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. Since we now have the value of <math id="S3.I10.i13.I1.i1.p4.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, we can substitute it in the equation <math id="S3.I10.i13.I1.i1.p4.m4" class="ltx_Math" data-alttext="an^{3}+2bn=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> and obtain <math id="S3.I10.i13.I1.i1.p4.m5" class="ltx_Math" data-alttext="27a+6b=3" display="inline"><mrow><mrow><mrow><mn>27</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. Dividing both sides of this equation by 3 shows that <math id="S3.I10.i13.I1.i1.p4.m6" class="ltx_Math" data-alttext="9a+2b=1" display="inline"><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. So there is no need for us to go any further, and this concludes the proof of the contrapositive of the proposition.</p>
+</div>
+</li>
+<li id="S3.I10.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all nonzero integers <math id="S3.I10.i13.I1.i2.p1.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i13.I1.i2.p1.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I10.i13.I1.i2.p1.m3" class="ltx_Math" data-alttext="a+2b\neq 3" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≠</mo><mn>3</mn></mrow></math> and <math id="S3.I10.i13.I1.i2.p1.m4" class="ltx_Math" data-alttext="9a+2b\neq 1" display="inline"><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≠</mo><mn>1</mn></mrow></math>, then the equation <math id="S3.I10.i13.I1.i2.p1.m5" class="ltx_Math" data-alttext="ax^{3}+2bx=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> does not have a solution that is a natural number.</p>
+</div>
+<div id="S3.I10.i13.I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will use a proof by contradiction. Let us assume that there exist nonzero integers <math id="S3.I10.i13.I1.i2.p2.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I10.i13.I1.i2.p2.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> such that <math id="S3.I10.i13.I1.i2.p2.m3" class="ltx_Math" data-alttext="a+2b=3" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> and <math id="S3.I10.i13.I1.i2.p2.m4" class="ltx_Math" data-alttext="9a+2b=1" display="inline"><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and <math id="S3.I10.i13.I1.i2.p2.m5" class="ltx_Math" data-alttext="an^{3}+2bn=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>, where <math id="S3.I10.i13.I1.i2.p2.m6" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is a natural number. First, we will solve one equation for <math id="S3.I10.i13.I1.i2.p2.m7" class="ltx_Math" data-alttext="2b" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></math>; doing this, we obtain</p>
+</div>
+<div id="S3.I10.i13.I1.i2.p3" class="ltx_para">
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex11.m1" class="ltx_Math" data-alttext="\displaystyle a+2b" display="inline"><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex11.m2" class="ltx_Math" data-alttext="\displaystyle=3" display="inline"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex12.m1" class="ltx_Math" data-alttext="\displaystyle 2b" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex12.m2" class="ltx_Math" data-alttext="\displaystyle=3-a." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>3</mn><mo>−</mo><mi>a</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I10.i13.I1.i2.p4" class="ltx_para">
+<p class="ltx_p">We can now substitute for <math id="S3.I10.i13.I1.i2.p4.m1" class="ltx_Math" data-alttext="2b" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></math> in <math id="S3.I10.i13.I1.i2.p4.m2" class="ltx_Math" data-alttext="an^{3}+2bn=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. This gives</p>
+</div>
+<div id="S3.I10.i13.I1.i2.p5" class="ltx_para">
+<table id="S3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex13.m1" class="ltx_Math" data-alttext="\displaystyle an^{3}+(3-a)n" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>n</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex13.m2" class="ltx_Math" data-alttext="\displaystyle=3" display="inline"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex14.m1" class="ltx_Math" data-alttext="\displaystyle an^{3}+3n-an" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>−</mo><mrow><mi>a</mi><mo>⁢</mo><mi>n</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex14.m2" class="ltx_Math" data-alttext="\displaystyle=3" display="inline"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex15.m1" class="ltx_Math" data-alttext="\displaystyle n\left(an^{2}+3-a\right)" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow><mo>−</mo><mi>a</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex15.m2" class="ltx_Math" data-alttext="\displaystyle=3" display="inline"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I10.i13.I1.i2.p6" class="ltx_para">
+<p class="ltx_p">By the closure properties of the integers, <math id="S3.I10.i13.I1.i2.p6.m1" class="ltx_Math" data-alttext="\left(an^{2}+3-a\right)" display="inline"><mrow><mo>(</mo><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow><mo>−</mo><mi>a</mi></mrow><mo>)</mo></mrow></math> is an integer and, hence, equation (2) implies that <math id="S3.I10.i13.I1.i2.p6.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> divides 3. So <math id="S3.I10.i13.I1.i2.p6.m3" class="ltx_Math" data-alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math> or <math id="S3.I10.i13.I1.i2.p6.m4" class="ltx_Math" data-alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>. When we substitute <math id="S3.I10.i13.I1.i2.p6.m5" class="ltx_Math" data-alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math> into the equation <math id="S3.I10.i13.I1.i2.p6.m6" class="ltx_Math" data-alttext="an^{3}+2bn=3" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>, we obtain <math id="S3.I10.i13.I1.i2.p6.m7" class="ltx_Math" data-alttext="a+2b=3" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. This is a contradiction since we are told in the proposition that <math id="S3.I10.i13.I1.i2.p6.m8" class="ltx_Math" data-alttext="a+2b\neq 3" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≠</mo><mn>3</mn></mrow></math>. This proves that the negation of the proposition is false and, hence, the proposition is true.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS4.SSS9" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.4.9 </span>Explorations and Activities</h4>
+
+<div id="S3.SS4.SSS9.p1" class="ltx_para">
+<ol id="S3.I11" class="ltx_enumerate">
+<li id="S3.I11.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S3.I11.i14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof of the Triangle Inequality.</span></p>
+<ol id="S3.I11.i14.I1" class="ltx_enumerate">
+<li id="S3.I11.i14.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I11.i14.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Verify that the triangle inequality is true for several different real numbers <math id="S3.I11.i14.I1.i1.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I11.i14.I1.i1.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. Be sure to have some examples where the real numbers are negative.</p>
+</div>
+</li>
+<li id="S3.I11.i14.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I11.i14.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Explain why the following proposition is true: For each real number <math id="S3.I11.i14.I1.i2.p1.m1" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math>, <math id="S3.I11.i14.I1.i2.p1.m2" class="ltx_Math" data-alttext="-|r|\leq r\leq|r|" display="inline"><mrow><mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi>r</mi><mo stretchy="false">|</mo></mrow></mrow><mo>≤</mo><mi>r</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>r</mi><mo stretchy="false">|</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I11.i14.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I11.i14.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Now let <math id="S3.I11.i14.I1.i3.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I11.i14.I1.i3.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> be real numbers. Apply the result in Part (14b) to both <math id="S3.I11.i14.I1.i3.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I11.i14.I1.i3.p1.m4" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. Then add the corresponding parts of the two inequalities to obtain another inequality. Use this to prove that <math id="S3.I11.i14.I1.i3.p1.m5" class="ltx_Math" data-alttext="|x+y|\leq|x|+|y|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div>
+</body>
+</html>
