@@ -1,0 +1,985 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Equivalence Relations</title>
+<!--Generated on Sun Dec 14 18:53:44 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S7" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Equivalence Relations</h1>
+
+<section id="S7.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.3 </span>Equivalence Classes</h2>
+
+<section id="S7.SS3.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.1 </span>Beginning Activity 1 (Sets Associated with a Relation)</h3>
+
+<div id="S7.SS3.SSS1.p1" class="ltx_para">
+<p class="ltx_p">As was indicated in <a href="https://johnweeks03.github.io/teaching/300/7-2.html">Section 7.2</a>, an equivalence relation on a set <math id="S7.SS3.SSS1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is a relation with a certain combination of properties (reflexive, symmetric, and transitive) that allow us to sort the elements of the set into certain classes. This is done by means of certain subsets of <math id="S7.SS3.SSS1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that are associated with the elements of the set <math id="S7.SS3.SSS1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. This will be illustrated with the following example. Let <math id="S7.SS3.SSS1.p1.m4" class="ltx_Math" data-alttext="A=\{a,b,c,d,e\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow></mrow></math>, and let <math id="S7.SS3.SSS1.p1.m5" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> be the relation on the set <math id="S7.SS3.SSS1.p1.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> defined as follows:
+<br class="ltx_break"><math id="S7.SS3.SSS1.p1.m7" class="ltx_Math" data-alttext="aRa" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m8" class="ltx_Math" data-alttext="bRb" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m9" class="ltx_Math" data-alttext="cRc" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>c</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m10" class="ltx_Math" data-alttext="dRd" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>d</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m11" class="ltx_Math" data-alttext="eRe" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>e</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m12" class="ltx_Math" data-alttext="aRb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m13" class="ltx_Math" data-alttext="bRa" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m14" class="ltx_Math" data-alttext="bRe" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>e</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m15" class="ltx_Math" data-alttext="eRb" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m16" class="ltx_Math" data-alttext="aRe" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>e</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m17" class="ltx_Math" data-alttext="eRa" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m18" class="ltx_Math" data-alttext="cRd" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>d</mi></mrow></math>, <math id="S7.SS3.SSS1.p1.m19" class="ltx_Math" data-alttext="dRc" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>c</mi></mrow></math></p>
+</div>
+<div id="S7.SS3.SSS1.p2" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.SS3.SSS1.p2.m1" class="ltx_Math" data-alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math>, define the subset <math id="S7.SS3.SSS1.p2.m2" class="ltx_Math" data-alttext="R[y]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></math> of <math id="S7.SS3.SSS1.p2.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows:</p>
+</div>
+<div id="S7.SS3.SSS1.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex1.m1" class="ltx_Math" data-alttext="R[y]=\{x\in A\mid xRy\}." display="block"><mrow><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS1.p4" class="ltx_para">
+<p class="ltx_p">That is, <math id="S7.SS3.SSS1.p4.m1" class="ltx_Math" data-alttext="R[y]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></math> consists of those elements in <math id="S7.SS3.SSS1.p4.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> such that <math id="S7.SS3.SSS1.p4.m3" class="ltx_Math" data-alttext="xRy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></math>. For example, using <math id="S7.SS3.SSS1.p4.m4" class="ltx_Math" data-alttext="y=a" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>a</mi></mrow></math>, we see that <math id="S7.SS3.SSS1.p4.m5" class="ltx_Math" data-alttext="aRa,bRa" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></math>, and <math id="S7.SS3.SSS1.p4.m6" class="ltx_Math" data-alttext="eRa" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>a</mi></mrow></math>, and so <math id="S7.SS3.SSS1.p4.m7" class="ltx_Math" data-alttext="R[a]=\{a,b,e\}" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S7.SS3.SSS1.p5" class="ltx_para">
+<ol id="S7.I1" class="ltx_enumerate">
+<li id="S7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S7.I1.i1.p1.m1" class="ltx_Math" data-alttext="R[b],R[c],R[d]" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.I1.i1.p1.m2" class="ltx_Math" data-alttext="R[e]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Draw a directed graph for the relation <math id="S7.I1.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> and explain why <math id="S7.I1.i2.p1.m2" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is an equivalence relation on <math id="S7.I1.i2.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Which of the sets <math id="S7.I1.i3.p1.m1" class="ltx_Math" data-alttext="R[a],R[b],R[c],R[d]" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.I1.i3.p1.m2" class="ltx_Math" data-alttext="R[e]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo stretchy="false">]</mo></mrow></mrow></math> are equal?</p>
+</div>
+</li>
+<li id="S7.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Which of the sets <math id="S7.I1.i4.p1.m1" class="ltx_Math" data-alttext="R[a],R[b],R[c],R[d]" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.I1.i4.p1.m2" class="ltx_Math" data-alttext="R[e]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo stretchy="false">]</mo></mrow></mrow></math> are disjoint?</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS1.p6" class="ltx_para">
+<p class="ltx_p">As we will see in this section, the relationships between these sets are typical for an equivalence relation. The following example will show how different this can be for a relation that is not an equivalence relation.</p>
+</div>
+<div id="S7.SS3.SSS1.p7" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS3.SSS1.p7.m1" class="ltx_Math" data-alttext="A=\{a,b,c,d,e\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow></mrow></math>, and let <math id="S7.SS3.SSS1.p7.m2" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> be the relation on the set <math id="S7.SS3.SSS1.p7.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> defined as follows:</p>
+</div>
+<div id="S7.SS3.SSS1.p8" class="ltx_para">
+<table role="presentation" id="S7.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex2.m1" class="ltx_Math" data-alttext="\begin{array}[]{cccc}bSb&amp;cSc&amp;dSd&amp;eSe\\
+aSb&amp;aSd&amp;bSc&amp;\\
+cSd&amp;dSc&amp;&amp;\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mi>b</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>c</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd><mrow><mi>d</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>d</mi></mrow></mtd><mtd><mrow><mi>e</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>e</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>d</mi></mrow></mtd><mtd><mrow><mi>b</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><mi>c</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>d</mi></mrow></mtd><mtd><mrow><mi>d</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd></mtd><mtd></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS1.p9" class="ltx_para">
+<ol id="S7.I2" class="ltx_enumerate">
+<li id="S7.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Draw a digraph that represents the relation <math id="S7.I2.i1.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> on <math id="S7.I2.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. Explain why <math id="S7.I2.i1.p1.m3" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> is not an equivalence relation on <math id="S7.I2.i1.p1.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS1.p10" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.SS3.SSS1.p10.m1" class="ltx_Math" data-alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math>, define the subset <math id="S7.SS3.SSS1.p10.m2" class="ltx_Math" data-alttext="S[y]" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></math> of <math id="S7.SS3.SSS1.p10.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows:</p>
+</div>
+<div id="S7.SS3.SSS1.p11" class="ltx_para">
+<table role="presentation" id="S7.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex3.m1" class="ltx_Math" data-alttext="S[y]=\{x\in A\mid xSy\}=\{x\in A\mid(x,y)\in S\}." display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS1.p12" class="ltx_para">
+<p class="ltx_p">For example, using <math id="S7.SS3.SSS1.p12.m1" class="ltx_Math" data-alttext="y=b" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>b</mi></mrow></math>, we see that <math id="S7.SS3.SSS1.p12.m2" class="ltx_Math" data-alttext="S[b]=\{a,b\}" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math> since <math id="S7.SS3.SSS1.p12.m3" class="ltx_Math" data-alttext="(a,b)\in S" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow></math> and <math id="S7.SS3.SSS1.p12.m4" class="ltx_Math" data-alttext="(b,b)\in S" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow></math>. In addition, we see that <math id="S7.SS3.SSS1.p12.m5" class="ltx_Math" data-alttext="S[a]=\varnothing" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> since there is no <math id="S7.SS3.SSS1.p12.m6" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S7.SS3.SSS1.p12.m7" class="ltx_Math" data-alttext="(x,a)\in S" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+<ol id="S7.I3" class="ltx_enumerate">
+<li id="S7.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S7.I3.i2.p1.m1" class="ltx_Math" data-alttext="S[c],S[d]" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.I3.i2.p1.m2" class="ltx_Math" data-alttext="S[e]" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Which of the sets <math id="S7.I3.i3.p1.m1" class="ltx_Math" data-alttext="S[a],S[b],S[c],S[d]" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.I3.i3.p1.m2" class="ltx_Math" data-alttext="S[e]" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo stretchy="false">]</mo></mrow></mrow></math> are equal?</p>
+</div>
+</li>
+<li id="S7.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I3.i4.p1" class="ltx_para">
+<p class="ltx_p">Which of the sets <math id="S7.I3.i4.p1.m1" class="ltx_Math" data-alttext="S[b],S[c],S[d]" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.I3.i4.p1.m2" class="ltx_Math" data-alttext="S[e]" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo stretchy="false">]</mo></mrow></mrow></math> are disjoint?</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS3.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.2 </span>The Definition of an Equivalence Class</h3>
+
+<div id="S7.SS3.SSS2.p1" class="ltx_para">
+<p class="ltx_p">We have indicated that an equivalence relation on a set is a relation with a certain combination of properties (reflexive, symmetric, and transitive) that allow us to sort the elements of the set into certain classes. We saw this happen in the beginning activities. We can now illustrate specifically what this means. For example, in Beginning Activity 2, we used the equivalence relation of congruence modulo 3 on <math id="S7.SS3.SSS2.p1.m1" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> to construct the following three sets:</p>
+</div>
+<div id="S7.SS3.SSS2.p2" class="ltx_para">
+<table role="presentation" id="S7.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex4.m1" class="ltx_Math" data-alttext="\displaystyle C[0]=\{a\in\mathbb{Z}\mid a\equiv 0(\bmod 3)\}," display="inline"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S7.Ex4.m2" class="ltx_Math" data-alttext="\displaystyle C[1]=\{a\in\mathbb{Z}\mid a\equiv 1(\bmod 3)\},\text{ and }" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex4.m3" class="ltx_Math" data-alttext="\displaystyle C[2]=\{a\in\mathbb{Z}\mid a\equiv 2(\bmod 3)\}." display="inline"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS2.p3" class="ltx_para">
+<p class="ltx_p">The main results that we want to use now are <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.31">Theorem 3.31 and Corollary 3.32</a>. This corollary tells us that for any <math id="S7.SS3.SSS2.p3.m1" class="ltx_Math" data-alttext="a\in\mathbb{Z},a" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mi>ℤ</mi><mo>,</mo><mi>a</mi></mrow></mrow></math> is congruent to precisely one of the integers 0,1, or 2. Consequently, the integer <math id="S7.SS3.SSS2.p3.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> must be congruent to 0,1, or 2, and it cannot be congruent to two of these numbers. Thus</p>
+</div>
+<div id="S7.SS3.SSS2.p4" class="ltx_para">
+<ol id="S7.I4" class="ltx_enumerate">
+<li id="S7.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I4.i1.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Z},a\in C[0],a\in C[1]" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mrow><mi>a</mi><mo>∈</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></mrow></math>, or <math id="S7.I4.i1.p1.m2" class="ltx_Math" data-alttext="a\in C[2]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math>; and</p>
+</div>
+</li>
+<li id="S7.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I4.i2.p1.m1" class="ltx_Math" data-alttext="C[0]\cap C[1]=\emptyset,C[0]\cap C[2]=\emptyset" display="inline"><mrow><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow><mo>∩</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow><mo>,</mo><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow><mo>∩</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></mrow></math>, and <math id="S7.I4.i2.p1.m2" class="ltx_Math" data-alttext="C[1]\cap C[2]=\emptyset" display="inline"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow><mo>∩</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS2.p5" class="ltx_para">
+<p class="ltx_p">This means that the relation of congruence modulo 3 sorts the integers into three distinct sets, or classes, and that each pair of these sets have no elements in common. So if we use a rectangle to represent <math id="S7.SS3.SSS2.p5.m1" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>, we can divide that rectangle into three smaller rectangles, corresponding to <math id="S7.SS3.SSS2.p5.m2" class="ltx_Math" data-alttext="C[0],C[1]" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and <math id="S7.SS3.SSS2.p5.m3" class="ltx_Math" data-alttext="C[2]" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow></math>, and we might picture this situation as follows:</p>
+</div>
+<figure id="S7.T1" class="ltx_table">
+<figcaption class="ltx_caption ltx_centering">The Integers</figcaption>
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<math id="S7.T1.m1" class="ltx_Math" data-alttext="C[0]" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow></math> consisting of</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">all integers with a</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">remainder of 0 when</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">divided by 3</td>
+</tr>
+</table>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<math id="S7.T1.m2" class="ltx_Math" data-alttext="C[1]" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> consisting of</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">all integers with a</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">remainder of 1 when</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">divided by 3</td>
+</tr>
+</table>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<math id="S7.T1.m3" class="ltx_Math" data-alttext="C[2]" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow></math> consisting of</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">all integers with a</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">remainder of 2 when</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">divided by 3</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<div id="S7.SS3.SSS2.p6" class="ltx_para">
+<p class="ltx_p">Each integer is in exactly one of the three sets <math id="S7.SS3.SSS2.p6.m1" class="ltx_Math" data-alttext="C[0],C[1]" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, or <math id="S7.SS3.SSS2.p6.m2" class="ltx_Math" data-alttext="C[2]" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow></math>, and two integers are congruent modulo 3 if and only if they are in the same set. We will see that, in a similar manner, if <math id="S7.SS3.SSS2.p6.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is any natural number, then the relation of congruence modulo <math id="S7.SS3.SSS2.p6.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> can be used to sort the integers into <math id="S7.SS3.SSS2.p6.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> classes. We will also see that in general, if we have an equivalence relation <math id="S7.SS3.SSS2.p6.m6" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on a set <math id="S7.SS3.SSS2.p6.m7" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, we can sort the elements of the set <math id="S7.SS3.SSS2.p6.m8" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> into classes in a similar manner.</p>
+</div>
+<div id="S7.SS3.SSS2.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS3.SSS2.p7.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on a nonempty set <math id="S7.SS3.SSS2.p7.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. For each <math id="S7.SS3.SSS2.p7.m3" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">equivalence class of</span> <math id="S7.SS3.SSS2.p7.m4" class="ltx_Math" data-alttext="\boldsymbol{a}" display="inline"><mi>𝒂</mi></math> <span class="ltx_text ltx_font_bold">determined by</span> <math id="S7.SS3.SSS2.p7.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is the subset of <math id="S7.SS3.SSS2.p7.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, denoted by [a], consisting of all the elements of <math id="S7.SS3.SSS2.p7.m7" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that are equivalent to <math id="S7.SS3.SSS2.p7.m8" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>. That is,</p>
+</div>
+<div id="S7.SS3.SSS2.p8" class="ltx_para">
+<table role="presentation" id="S7.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex5.m1" class="ltx_Math" data-alttext="[a]=\{x\in A\mid x\sim a\}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∼</mo><mi>a</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS2.p9" class="ltx_para">
+<p class="ltx_p">We read <math id="S7.SS3.SSS2.p9.m1" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> as "the equivalence class of <math id="S7.SS3.SSS2.p9.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>" or as "bracket <math id="S7.SS3.SSS2.p9.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>."</p>
+</div>
+</section>
+<section id="S7.SS3.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.3 </span>Notes</h3>
+
+<div id="S7.SS3.SSS3.p1" class="ltx_para">
+<ol id="S7.I5" class="ltx_enumerate">
+<li id="S7.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">We use the notation <math id="S7.I5.i1.p1.m1" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> when only one equivalence relation is being used. If there is more than one equivalence relation, then we need to distinguish between the equivalence classes for each relation. We often use something like <math id="S7.I5.i1.p1.m2" class="ltx_Math" data-alttext="[a]_{\sim}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∼</mo></msub></math>, or if <math id="S7.I5.i1.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is the name of the relation, we can use <math id="S7.I5.i1.p1.m4" class="ltx_Math" data-alttext="R[a]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math> or <math id="S7.I5.i1.p1.m5" class="ltx_Math" data-alttext="[a]_{R}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>R</mi></msub></math> for the equivalence class of <math id="S7.I5.i1.p1.m6" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> determined by <math id="S7.I5.i1.p1.m7" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>. In any case, always remember that when we are working with any equivalence relation on a set <math id="S7.I5.i1.p1.m8" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> if <math id="S7.I5.i1.p1.m9" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>, then the equivalence class <math id="S7.I5.i1.p1.m10" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> is a subset of <math id="S7.I5.i1.p1.m11" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">We know that each integer has an equivalence class for the equivalence relation of congruence modulo 3. But as we have seen, there are really only three distinct equivalence classes. Using the notation from the definition, they are:</p>
+</div>
+<div id="S7.I5.i2.p2" class="ltx_para">
+<table role="presentation" id="S7.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S7.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex6.m1" class="ltx_Math" data-alttext="\displaystyle{[0]=\{a\in\mathbb{Z}\mid a\equiv 0(\bmod 3)\},\quad[1]=\{a\in%
+\mathbb{Z}\mid a\equiv 1(\bmod 3)\},\text{ and }}" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mtext> and</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S7.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S7.Ex7.m1" class="ltx_Math" data-alttext="\displaystyle{[2]=\{a\in\mathbb{Z}\mid a\equiv 2(\bmod 3)\}.}" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS3.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.4 </span>Progress Check 7.12 (Equivalence Classes from Beginning Activity 1)</h3>
+
+<div id="S7.SS3.SSS4.p1" class="ltx_para">
+<p class="ltx_p">Without using the terminology at that time, we actually determined the equivalence classes of the equivalence relation <math id="S7.SS3.SSS4.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> in Beginning Activity 1. What are the distinct equivalence classes for this equivalence relation?</p>
+</div>
+</section>
+<section id="S7.SS3.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.5 </span>Congruence Modulo <math id="S7.SS3.SSS5.m1" class="ltx_Math" data-alttext="\boldsymbol{n}" display="inline"><mi>𝒏</mi></math> and Congruence Classes</h3>
+
+<div id="S7.SS3.SSS5.p1" class="ltx_para">
+<p class="ltx_p">In Beginning Activity 2, we used the notation <math id="S7.SS3.SSS5.p1.m1" class="ltx_Math" data-alttext="C[k]" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo></mrow></mrow></math> for the set of all integers that are congruent to <math id="S7.SS3.SSS5.p1.m2" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> modulo 3. We could have used a similar notation for equivalence classes, and this would have been perfectly acceptable. However, the notation <math id="S7.SS3.SSS5.p1.m3" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> is probably the most common notation for the equivalence class of <math id="S7.SS3.SSS5.p1.m4" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>. We will now use this same notation when dealing with congruence modulo <math id="S7.SS3.SSS5.p1.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> when only one congruence relation is under consideration.</p>
+</div>
+<div id="S7.SS3.SSS5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS3.SSS5.p2.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. Congruence modulo <math id="S7.SS3.SSS5.p2.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is an equivalence relation on <math id="S7.SS3.SSS5.p2.m3" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. So for <math id="S7.SS3.SSS5.p2.m4" class="ltx_Math" data-alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>,</p>
+</div>
+<div id="S7.SS3.SSS5.p3" class="ltx_para">
+<table role="presentation" id="S7.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex8.m1" class="ltx_Math" data-alttext="[a]=\{x\in\mathbb{Z}\mid x\equiv a(\bmod n)\}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≡</mo><mrow><mi>a</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS5.p4" class="ltx_para">
+<p class="ltx_p">In this case, <math id="S7.SS3.SSS5.p4.m1" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> is called the <span class="ltx_text ltx_font_bold">congruence class</span> of <math id="S7.SS3.SSS5.p4.m2" class="ltx_Math" data-alttext="\boldsymbol{a}" display="inline"><mi>𝒂</mi></math> modulo <math id="S7.SS3.SSS5.p4.m3" class="ltx_Math" data-alttext="\boldsymbol{n}" display="inline"><mi>𝒏</mi></math>.</p>
+</div>
+<div id="S7.SS3.SSS5.p5" class="ltx_para">
+<p class="ltx_p">We have seen that congruence modulo 3 divides the integers into three distinct congruence classes. Each congruence class consists of those integers with the same remainder when divided by 3. In a similar manner, if we use congruence modulo 2, we simply divide the integers into two classes. One class will consist of all the integers that have a remainder of 0 when divided by 2, and the other class will consist of all the integers that have a remainder of 1 when divided by 2. That is, congruence modulo 2 simply divides the integers into the even and odd integers.</p>
+</div>
+</section>
+<section id="S7.SS3.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.6 </span>Progress Check 7.13 (Congruence Modulo 4)</h3>
+
+<div id="S7.SS3.SSS6.p1" class="ltx_para">
+<p class="ltx_p">Determine all of the distinct congruence classes for the equivalence relation of congruence modulo 4 on the integers. Specify each congruence class using the roster method.</p>
+</div>
+</section>
+<section id="S7.SS3.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.7 </span>Properties of Equivalence Classes</h3>
+
+<div id="S7.SS3.SSS7.p1" class="ltx_para">
+<p class="ltx_p">As we have seen, in Beginning Activity 1, the relation <math id="S7.SS3.SSS7.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> was an equivalence relation. For that activity, we used <math id="S7.SS3.SSS7.p1.m2" class="ltx_Math" data-alttext="R[y]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></math> to denote the equivalence class of <math id="S7.SS3.SSS7.p1.m3" class="ltx_Math" data-alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math>, and we observed that these equivalence classes were either equal or disjoint.</p>
+</div>
+<div id="S7.SS3.SSS7.p2" class="ltx_para">
+<p class="ltx_p">However, in Beginning Activity 1, the relation <math id="S7.SS3.SSS7.p2.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> was not an equivalence relation, and hence we do not use the term "equivalence class" for this relation. We should note, however, that the sets <math id="S7.SS3.SSS7.p2.m2" class="ltx_Math" data-alttext="S[y]" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></math> were not equal and were not disjoint. This exhibits one of the main distinctions between equivalence relations and relations that are not equivalence relations.</p>
+</div>
+<div id="S7.SS3.SSS7.p3" class="ltx_para">
+<p class="ltx_p">In Theorem 7.14, we will prove that if <math id="S7.SS3.SSS7.p3.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on the set <math id="S7.SS3.SSS7.p3.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, then we can "sort" the elements of <math id="S7.SS3.SSS7.p3.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> into distinct equivalence classes. The properties of equivalence classes that we will prove are as follows: (1) Every element of <math id="S7.SS3.SSS7.p3.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is in its own equivalence class; (2) two elements are equivalent if and only if their equivalence classes are equal; and (3) two equivalence classes are either identical or they are disjoint.</p>
+</div>
+<div id="Theorem_7.14" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 7.14.</span> Let <math id="S7.SS3.SSS7.p4.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and let <math id="S7.SS3.SSS7.p4.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on the set <math id="S7.SS3.SSS7.p4.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. Then,</p>
+</div>
+<div id="S7.SS3.SSS7.p5" class="ltx_para">
+<ol id="S7.I6" class="ltx_enumerate">
+<li id="S7.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I6.i1.p1.m1" class="ltx_Math" data-alttext="a\in A,a\in[a]" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I6.i2.p1.m1" class="ltx_Math" data-alttext="a,b\in A,a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I6.i2.p1.m2" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I6.i3.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I6.i3.p1.m1" class="ltx_Math" data-alttext="a,b\in A,[a]=[b]" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> or <math id="S7.I6.i3.p1.m2" class="ltx_Math" data-alttext="[a]\cap[b]=\varnothing" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS7.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S7.SS3.SSS7.p6.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and assume that <math id="S7.SS3.SSS7.p6.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.SS3.SSS7.p6.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. To prove the first part of the theorem, let <math id="S7.SS3.SSS7.p6.m4" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>. Since <math id="S7.SS3.SSS7.p6.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.SS3.SSS7.p6.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, it is reflexive on <math id="S7.SS3.SSS7.p6.m7" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. Thus, <math id="S7.SS3.SSS7.p6.m8" class="ltx_Math" data-alttext="a\sim a" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>a</mi></mrow></math>, and we can conclude that <math id="S7.SS3.SSS7.p6.m9" class="ltx_Math" data-alttext="a\in[a]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S7.SS3.SSS7.p7" class="ltx_para">
+<p class="ltx_p">The second part of this theorem is a biconditional statement. We will prove it by proving two conditional statements. We will first prove that if <math id="S7.SS3.SSS7.p7.m1" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, then <math id="S7.SS3.SSS7.p7.m2" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. So let <math id="S7.SS3.SSS7.p7.m3" class="ltx_Math" data-alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> and assume that <math id="S7.SS3.SSS7.p7.m4" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>. We will now prove that the two sets <math id="S7.SS3.SSS7.p7.m5" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> and <math id="S7.SS3.SSS7.p7.m6" class="ltx_Math" data-alttext="[b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> are equal. We will do this by proving that each is a subset of the other.</p>
+</div>
+<div id="S7.SS3.SSS7.p8" class="ltx_para">
+<p class="ltx_p">First, assume that <math id="S7.SS3.SSS7.p8.m1" class="ltx_Math" data-alttext="x\in[a]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Then, by definition, <math id="S7.SS3.SSS7.p8.m2" class="ltx_Math" data-alttext="x\sim a" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>a</mi></mrow></math>. Since we have assumed that <math id="S7.SS3.SSS7.p8.m3" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, we can use the transitive property of <math id="S7.SS3.SSS7.p8.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> to conclude that <math id="S7.SS3.SSS7.p8.m5" class="ltx_Math" data-alttext="x\sim b" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>b</mi></mrow></math>, and this means that <math id="S7.SS3.SSS7.p8.m6" class="ltx_Math" data-alttext="x\in[b]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. This proves that <math id="S7.SS3.SSS7.p8.m7" class="ltx_Math" data-alttext="[a]\subseteq[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S7.SS3.SSS7.p9" class="ltx_para">
+<p class="ltx_p">We now assume that <math id="S7.SS3.SSS7.p9.m1" class="ltx_Math" data-alttext="y\in[b]" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. This means that <math id="S7.SS3.SSS7.p9.m2" class="ltx_Math" data-alttext="y\sim b" display="inline"><mrow><mi>y</mi><mo>∼</mo><mi>b</mi></mrow></math>, and hence by the symmetric property, that <math id="S7.SS3.SSS7.p9.m3" class="ltx_Math" data-alttext="b\sim y" display="inline"><mrow><mi>b</mi><mo>∼</mo><mi>y</mi></mrow></math>. Again, we are assuming that <math id="S7.SS3.SSS7.p9.m4" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>. So we have</p>
+</div>
+<div id="S7.SS3.SSS7.p10" class="ltx_para">
+<table role="presentation" id="S7.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex9.m1" class="ltx_Math" data-alttext="a\sim b\text{ and }b\sim y." display="block"><mrow><mrow><mi>a</mi><mo>∼</mo><mrow><mi>b</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>∼</mo><mi>y</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS7.p11" class="ltx_para">
+<p class="ltx_p">We use the transitive property to conclude that <math id="S7.SS3.SSS7.p11.m1" class="ltx_Math" data-alttext="a\sim y" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>y</mi></mrow></math> and then, using the symmetric property, we conclude that <math id="S7.SS3.SSS7.p11.m2" class="ltx_Math" data-alttext="y\sim a" display="inline"><mrow><mi>y</mi><mo>∼</mo><mi>a</mi></mrow></math>. This proves that <math id="S7.SS3.SSS7.p11.m3" class="ltx_Math" data-alttext="y\in[a]" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math> and, hence, that <math id="S7.SS3.SSS7.p11.m4" class="ltx_Math" data-alttext="[b]\subseteq[a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>. This means that we can conclude that if <math id="S7.SS3.SSS7.p11.m5" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>, then <math id="S7.SS3.SSS7.p11.m6" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S7.SS3.SSS7.p12" class="ltx_para">
+<p class="ltx_p">We must now prove that if <math id="S7.SS3.SSS7.p12.m1" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, then <math id="S7.SS3.SSS7.p12.m2" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>. Let <math id="S7.SS3.SSS7.p12.m3" class="ltx_Math" data-alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> and assume that <math id="S7.SS3.SSS7.p12.m4" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Using the first part of the theorem, we know that <math id="S7.SS3.SSS7.p12.m5" class="ltx_Math" data-alttext="a\in[a]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math> and since the two sets are equal, this tells us that <math id="S7.SS3.SSS7.p12.m6" class="ltx_Math" data-alttext="a\in[b]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Hence by the definition of <math id="S7.SS3.SSS7.p12.m7" class="ltx_Math" data-alttext="[b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>, we conclude that <math id="S7.SS3.SSS7.p12.m8" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>. This completes the proof of the second part of the theorem.</p>
+</div>
+<div id="S7.SS3.SSS7.p13" class="ltx_para">
+<p class="ltx_p">For the third part of the theorem, let <math id="S7.SS3.SSS7.p13.m1" class="ltx_Math" data-alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>. Since this part of the theorem is a disjunction, we will consider two cases: Either</p>
+</div>
+<div id="S7.SS3.SSS7.p14" class="ltx_para">
+<table role="presentation" id="S7.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex10.m1" class="ltx_Math" data-alttext="[a]\cap[b]=\emptyset\quad\text{ or }\quad[a]\cap[b]\neq\emptyset." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">∅</mi><mspace style="width:1em;" width="1em"></mspace><mtext> or </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS7.p15" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S7.SS3.SSS7.p15.m1" class="ltx_Math" data-alttext="[a]\cap[b]=\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, the first part of the disjunction is true, and hence there is nothing to prove. So we assume that <math id="S7.SS3.SSS7.p15.m2" class="ltx_Math" data-alttext="[a]\cap[b]\neq\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> and will show that <math id="S7.SS3.SSS7.p15.m3" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Since <math id="S7.SS3.SSS7.p15.m4" class="ltx_Math" data-alttext="[a]\cap[b]\neq\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, there is an element <math id="S7.SS3.SSS7.p15.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in <math id="S7.SS3.SSS7.p15.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> such that</p>
+</div>
+<div id="S7.SS3.SSS7.p16" class="ltx_para">
+<table role="presentation" id="S7.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex11.m1" class="ltx_Math" data-alttext="x\in[a]\cap[b]." display="block"><mrow><mrow><mi>x</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS7.p17" class="ltx_para">
+<p class="ltx_p">This means that <math id="S7.SS3.SSS7.p17.m1" class="ltx_Math" data-alttext="x\in[a]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math> and <math id="S7.SS3.SSS7.p17.m2" class="ltx_Math" data-alttext="x\in[b]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Consequently, <math id="S7.SS3.SSS7.p17.m3" class="ltx_Math" data-alttext="x\sim a" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>a</mi></mrow></math> and <math id="S7.SS3.SSS7.p17.m4" class="ltx_Math" data-alttext="x\sim b" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>b</mi></mrow></math>, and so we can use the second part of the theorem to conclude that <math id="S7.SS3.SSS7.p17.m5" class="ltx_Math" data-alttext="[x]=[a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math> and <math id="S7.SS3.SSS7.p17.m6" class="ltx_Math" data-alttext="[x]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Hence, <math id="S7.SS3.SSS7.p17.m7" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, and we have proven that <math id="S7.SS3.SSS7.p17.m8" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> or <math id="S7.SS3.SSS7.p17.m9" class="ltx_Math" data-alttext="[a]\cap[b]=\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S7.SS3.SSS7.p18" class="ltx_para">
+<p class="ltx_p">Theorem 7.14 gives the primary properties of equivalence classes. Consequences of these properties will be explored in the exercises. The following table restates the properties in Theorem 7.14 and gives a verbal description of each one.</p>
+</div>
+<div id="S7.SS3.SSS7.p19" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Formal Statement from Theorem 7.14</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">Verbal Description</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">For each <math id="S7.SS3.SSS7.m1" class="ltx_Math" data-alttext="a\in A,a\in[a]" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Every element of <math id="S7.SS3.SSS7.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is in its own equivalence class.</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">For each <math id="S7.SS3.SSS7.m3" class="ltx_Math" data-alttext="a,b\in A,a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.SS3.SSS7.m4" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Two elements of <math id="S7.SS3.SSS7.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> are equivalent if and</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">only if their equivalence classes are equal.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">For each <math id="S7.SS3.SSS7.m6" class="ltx_Math" data-alttext="a,b\in A,[a]=[b]" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> or <math id="S7.SS3.SSS7.m7" class="ltx_Math" data-alttext="[a]\cap[b]=\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">
+<table role="presentation" class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Any two equivalence classes are either equal or</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">they are disjoint. This means that if</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">two equivalence classes are not disjoint then they must</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">be equal.</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S7.SS3.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.8 </span>Progress Check 7.15 (Equivalence Classes)</h3>
+
+<div id="S7.SS3.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS3.SSS8.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S7.SS3.SSS8.p1.m2" class="ltx_Math" data-alttext="f(x)=x^{2}-4" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow></mrow></math> for each <math id="S7.SS3.SSS8.p1.m3" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Define a relation <math id="S7.SS3.SSS8.p1.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.SS3.SSS8.p1.m5" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> as follows:</p>
+</div>
+<div id="S7.SS3.SSS8.p2" class="ltx_para">
+<table role="presentation" id="S7.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex12.m1" class="ltx_Math" data-alttext="\text{ For }a,b\in\mathbb{R},a\sim b\text{ if and only if }f(a)=f(b)." display="block"><mrow><mrow><mrow><mrow><mrow><mtext> For </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mrow><mi>b</mi><mo>⁢</mo><mtext> if and only if </mtext><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS8.p3" class="ltx_para">
+<p class="ltx_p">In Exercise (6) of <a href="https://johnweeks03.github.io/teaching/300/7-2.html">Section 7.2</a>, we proved that <math id="S7.SS3.SSS8.p3.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.SS3.SSS8.p3.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Consequently, each real number has an equivalence class. For this equivalence relation,</p>
+</div>
+<div id="S7.SS3.SSS8.p4" class="ltx_para">
+<ol id="S7.I7" class="ltx_enumerate">
+<li id="S7.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine the equivalence classes of <math id="S7.I7.i1.p1.m1" class="ltx_Math" data-alttext="5,-5,10,-10,\pi" display="inline"><mrow><mn>5</mn><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo>,</mo><mn>10</mn><mo>,</mo><mrow><mo>−</mo><mn>10</mn></mrow><mo>,</mo><mi>π</mi></mrow></math>, and <math id="S7.I7.i1.p1.m2" class="ltx_Math" data-alttext="-\pi" display="inline"><mrow><mo>−</mo><mi>π</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I7.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine the equivalence class of 0 .</p>
+</div>
+</li>
+<li id="S7.I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I7.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I7.i3.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, use the roster method to specify the elements of the equivalence class <math id="S7.I7.i3.p1.m2" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS8.p5" class="ltx_para">
+<p class="ltx_p">The results of Theorem 7.14 are consistent with all the equivalence relations studied in the beginning activities and in the progress checks. Since this theorem applies to all equivalence relations, it applies to the relation of congruence modulo <math id="S7.SS3.SSS8.p5.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> on the integers. Because of the importance of this equivalence relation, these results for congruence modulo <math id="S7.SS3.SSS8.p5.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> are given in the following corollary.</p>
+</div>
+<div id="S7.SS3.SSS8.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary</span> 7.16. Let <math id="S7.SS3.SSS8.p6.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. For each <math id="S7.SS3.SSS8.p6.m2" class="ltx_Math" data-alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, let <math id="S7.SS3.SSS8.p6.m3" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> represent the congruence class of a modulo n.</p>
+</div>
+<div id="S7.SS3.SSS8.p7" class="ltx_para">
+<ol id="S7.I8" class="ltx_enumerate">
+<li id="S7.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I8.i1.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Z},a\in[a]" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I8.i2.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\equiv b(\bmod n)" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> if and only if <math id="S7.I8.i2.p1.m2" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I8.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I8.i3.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I8.i3.p1.m1" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},[a]=[b]" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> or <math id="S7.I8.i3.p1.m2" class="ltx_Math" data-alttext="[a]\cap[b]=\varnothing" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS8.p8" class="ltx_para">
+<p class="ltx_p">For the equivalence relation of congruence modulo <math id="S7.SS3.SSS8.p8.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.31">Theorem 3.31 and Corollary 3.32</a> tell us that each integer is congruent to its remainder when divided by <math id="S7.SS3.SSS8.p8.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, and that each integer is congruent modulo <math id="S7.SS3.SSS8.p8.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> to precisely one of one of the integers <math id="S7.SS3.SSS8.p8.m4" class="ltx_Math" data-alttext="0,1,2,\ldots,n-1" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></math>. This means that each integer is in precisely one of the congruence classes <math id="S7.SS3.SSS8.p8.m5" class="ltx_Math" data-alttext="[0],[1],[2],\ldots,[n-1]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>,</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>,</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow></mrow></math>. Hence, Corollary 7.16 gives us the following result.</p>
+</div>
+<div id="S7.SS3.SSS8.p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary</span> 7.17. Let <math id="S7.SS3.SSS8.p9.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. For each <math id="S7.SS3.SSS8.p9.m2" class="ltx_Math" data-alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, let <math id="S7.SS3.SSS8.p9.m3" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> represent the congruence class of a modulo n.</p>
+</div>
+<div id="S7.SS3.SSS8.p10" class="ltx_para">
+<ol id="S7.I9" class="ltx_enumerate">
+<li id="S7.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I9.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I9.i1.p1.m1" class="ltx_Math" data-alttext="\mathbb{Z}=[0]\cup[1]\cup[2]\cup\cdots\cup[n-1]" display="inline"><mrow><mi>ℤ</mi><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mi mathvariant="normal">⋯</mi><mo>∪</mo><mrow><mo stretchy="false">[</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S7.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I9.i2.p1.m1" class="ltx_Math" data-alttext="j,k\in\{0,1,2,\ldots,n-1\}" display="inline"><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, if <math id="S7.I9.i2.p1.m2" class="ltx_Math" data-alttext="j\neq k" display="inline"><mrow><mi>j</mi><mo>≠</mo><mi>k</mi></mrow></math>, then <math id="S7.I9.i2.p1.m3" class="ltx_Math" data-alttext="[j]\cap[k]=\varnothing" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS3.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.9 </span>Partitions and Equivalence Relations</h3>
+
+<div id="S7.SS3.SSS9.p1" class="ltx_para">
+<p class="ltx_p">A partition of a set <math id="S7.SS3.SSS9.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is a collection of subsets of <math id="S7.SS3.SSS9.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that "breaks up" the set <math id="S7.SS3.SSS9.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> into disjoint subsets. Technically, each pair of distinct subsets in the collection must be disjoint. We then say that the collection of subsets is pairwise disjoint. We introduce the following formal definition.</p>
+</div>
+<div id="S7.SS3.SSS9.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S7.SS3.SSS9.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set, and let <math id="S7.SS3.SSS9.p2.m2" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a collection of subsets of <math id="S7.SS3.SSS9.p2.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. The collection of subsets <math id="S7.SS3.SSS9.p2.m4" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a <span class="ltx_text ltx_font_bold">partition of</span> <math id="S7.SS3.SSS9.p2.m5" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> provided that</p>
+</div>
+<div id="S7.SS3.SSS9.p3" class="ltx_para">
+<ol id="S7.I10" class="ltx_enumerate">
+<li id="S7.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I10.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I10.i1.p1.m1" class="ltx_Math" data-alttext="V\in\mathcal{C},V\neq\emptyset" display="inline"><mrow><mrow><mi>V</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo>,</mo><mrow><mi>V</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I10.i2.p1.m1" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, there exists a <math id="S7.I10.i2.p1.m2" class="ltx_Math" data-alttext="V\in\mathcal{C}" display="inline"><mrow><mi>V</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> such that <math id="S7.I10.i2.p1.m3" class="ltx_Math" data-alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I10.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I10.i3.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="S7.I10.i3.p1.m1" class="ltx_Math" data-alttext="V,W\in\mathcal{C},V=W" display="inline"><mrow><mrow><mrow><mi>V</mi><mo>,</mo><mi>W</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo>,</mo><mrow><mi>V</mi><mo>=</mo><mi>W</mi></mrow></mrow></math> or <math id="S7.I10.i3.p1.m2" class="ltx_Math" data-alttext="V\cap W=\emptyset" display="inline"><mrow><mrow><mi>V</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.SSS9.p4" class="ltx_para">
+<p class="ltx_p">There is a close relation between partitions and equivalence classes since the equivalence classes of an equivalence relation form a partition of the underlying set, as will be proven in Theorem 7.18. The proof of this theorem relies on the results in <a href="#Theorem_7.14">Theorem 7.14.</a></p>
+</div>
+<div id="Theorem_7.18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 7.18.</span> Let <math id="S7.SS3.SSS9.p5.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on the nonempty set <math id="S7.SS3.SSS9.p5.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. Then the collection <math id="S7.SS3.SSS9.p5.m3" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> of all equivalence classes determined by <math id="S7.SS3.SSS9.p5.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is a partition of the set <math id="S7.SS3.SSS9.p5.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.SS3.SSS9.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S7.SS3.SSS9.p6.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on the nonempty set <math id="S7.SS3.SSS9.p6.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and let <math id="S7.SS3.SSS9.p6.m3" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be the collection of all equivalence classes determined by <math id="S7.SS3.SSS9.p6.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math>. That is,</p>
+</div>
+<div id="S7.SS3.SSS9.p7" class="ltx_para">
+<table role="presentation" id="S7.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex13.m1" class="ltx_Math" data-alttext="\mathcal{C}=\{[a]\mid a\in A\}." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S7.SS3.SSS9.p8" class="ltx_para">
+<p class="ltx_p">We will use <a href="#Theorem_7.14">Theorem 7.14.</a> to prove that <math id="S7.SS3.SSS9.p8.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a partition of <math id="S7.SS3.SSS9.p8.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.
+<br class="ltx_break">Part (1) of Theorem 7.14 states that for each <math id="S7.SS3.SSS9.p8.m3" class="ltx_Math" data-alttext="a\in A,a\in[a]" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. In terms of the equivalence classes, this means that each equivalence class is nonempty since each element of <math id="S7.SS3.SSS9.p8.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is in its own equivalence class. Consequently, <math id="S7.SS3.SSS9.p8.m5" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, the collection of all equivalence classes determined by <math id="S7.SS3.SSS9.p8.m6" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math>, satisfies the first two conditions of the definition of a partition.</p>
+</div>
+<div id="S7.SS3.SSS9.p9" class="ltx_para">
+<p class="ltx_p">We must now show that the collection <math id="S7.SS3.SSS9.p9.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> of all equivalence classes determined by <math id="S7.SS3.SSS9.p9.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> satisfies the third condition for being a partition. That is, we need to show that any two equivalence classes are either equal or are disjoint. However, this is exactly the result in Part (3) of Theorem 7.14.</p>
+</div>
+<div id="S7.SS3.SSS9.p10" class="ltx_para">
+<p class="ltx_p">Hence, we have proven that the collection <math id="S7.SS3.SSS9.p10.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> of all equivalence classes determined by <math id="S7.SS3.SSS9.p10.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is a partition of the set <math id="S7.SS3.SSS9.p10.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.SS3.SSS9.p11" class="ltx_para">
+<p class="ltx_p">Note: Theorem 7.18 has shown us that if <math id="S7.SS3.SSS9.p11.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on a nonempty set <math id="S7.SS3.SSS9.p11.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, then the collection of the equivalence classes determined by <math id="S7.SS3.SSS9.p11.m3" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> form a partition of the set <math id="S7.SS3.SSS9.p11.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.SS3.SSS9.p12" class="ltx_para">
+<p class="ltx_p">This process can be reversed. This means that given a partition <math id="S7.SS3.SSS9.p12.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> of a nonempty set <math id="S7.SS3.SSS9.p12.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, we can define an equivalence relation on <math id="S7.SS3.SSS9.p12.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> whose equivalence classes are precisely the subsets of <math id="S7.SS3.SSS9.p12.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that form the partition. This will be explored in Exercise (12).</p>
+</div>
+</section>
+<section id="S7.SS3.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.10 </span>Exercises 7.3</h3>
+
+<div id="S7.SS3.SSS10.p1" class="ltx_para">
+<ol id="S7.I11" class="ltx_enumerate">
+<li id="S7.I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I11.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i1.p1.m2" class="ltx_Math" data-alttext="A=\{a,b,c,d,e\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S7.I11.i1.p1.m3" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be the relation on <math id="S7.I11.i1.p1.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> that is represented by the directed graph in Figure 7.4.</p>
+</div>
+<figure id="S7.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig7_3.jpg" id="S7.F1.g1" class="ltx_graphics ltx_centering ltx_img_portrait" width="200" height="288" alt="Digraph with vertices a, b, c, d, e. All vertices have self-loops. Symmetric edges (double arrows) connect a and b, and d and e. Vertex c is isolated (except for its self-loop).">
+<figcaption class="ltx_caption ltx_centering">Figure 7.4: Directed Graph for the Relation in Exercise (1)</figcaption>
+</figure>
+<div id="S7.I11.i1.p2" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I11.i1.p2.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on the set <math id="S7.I11.i1.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and determine all of the equivalence classes determined by this equivalence relation.</p>
+</div>
+</li>
+<li id="S7.I11.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I11.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i2.p1.m2" class="ltx_Math" data-alttext="A=\{a,b,c,d,e,f\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo stretchy="false">}</mo></mrow></mrow></math>, and assume that <math id="S7.I11.i2.p1.m3" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i2.p1.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. Also assume that it is known that
+<br class="ltx_break"><math id="S7.I11.i2.p1.m5" class="ltx_Math" data-alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>
+<br class="ltx_break"><math id="S7.I11.i2.p1.m6" class="ltx_Math" data-alttext="a\nsim c" display="inline"><mrow><mi>a</mi><mo>≁</mo><mi>c</mi></mrow></math>
+<br class="ltx_break"><math id="S7.I11.i2.p1.m7" class="ltx_Math" data-alttext="e\sim f" display="inline"><mrow><mi>e</mi><mo>∼</mo><mi>f</mi></mrow></math>
+<br class="ltx_break"><math id="S7.I11.i2.p1.m8" class="ltx_Math" data-alttext="a\sim d" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>d</mi></mrow></math>
+<br class="ltx_break"><math id="S7.I11.i2.p1.m9" class="ltx_Math" data-alttext="a\nsim f" display="inline"><mrow><mi>a</mi><mo>≁</mo><mi>f</mi></mrow></math>
+<br class="ltx_break"><math id="S7.I11.i2.p1.m10" class="ltx_Math" data-alttext="e\nsim c" display="inline"><mrow><mi>e</mi><mo>≁</mo><mi>c</mi></mrow></math>.</p>
+</div>
+<div id="S7.I11.i2.p2" class="ltx_para">
+<p class="ltx_p">Draw a complete directed graph for the equivalence relation <math id="S7.I11.i2.p2.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on the set <math id="S7.I11.i2.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and then determine all of the equivalence classes for this equivalence relation.</p>
+</div>
+</li>
+<li id="S7.I11.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I11.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S7.I11.i3.p1.m2" class="ltx_Math" data-alttext="A=\{0,1,2,3,\ldots,999,1000\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>999</mn><mo>,</mo><mn>1000</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Define the relation <math id="S7.I11.i3.p1.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on <math id="S7.I11.i3.p1.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows:
+<br class="ltx_break">For <math id="S7.I11.i3.p1.m5" class="ltx_Math" data-alttext="x,y\in A,xRy" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math> if and only if <math id="S7.I11.i3.p1.m6" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.I11.i3.p1.m7" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> have the same number of digits.</p>
+</div>
+<div id="S7.I11.i3.p2" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I11.i3.p2.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> is an equivalence relation on the set <math id="S7.I11.i3.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and determine all of the distinct equivalence classes determined by <math id="S7.I11.i3.p2.m3" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S7.I11.i4.p1" class="ltx_para">
+<p class="ltx_p">Determine all of the congruence classes for the relation of congruence modulo 5 on the set of integers.</p>
+</div>
+</li>
+<li id="S7.I11.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S7.I11.i5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i5.p1.m1" class="ltx_Math" data-alttext="R_{9}=\{0,1,2,3,4,5,6,7,8\}" display="inline"><mrow><msub><mi>R</mi><mn>9</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>8</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S7.I11.i5.I1" class="ltx_enumerate">
+<li id="S7.I11.i5.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="S7.I11.i5.I1.ix1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> (a)</span> 
+<div id="S7.I11.i5.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i5.I1.ix1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i5.I1.ix1.p1.m2" class="ltx_Math" data-alttext="R_{9}" display="inline"><msub><mi>R</mi><mn>9</mn></msub></math> as follows: For all <math id="S7.I11.i5.I1.ix1.p1.m3" class="ltx_Math" data-alttext="a,b\in R_{9},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><msub><mi>R</mi><mn>9</mn></msub></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i5.I1.ix1.p1.m4" class="ltx_Math" data-alttext="a^{2}\equiv b^{2}(\bmod 9)" display="inline"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>≡</mo><mrow><msup><mi>b</mi><mn>2</mn></msup><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Prove that <math id="S7.I11.i5.I1.ix1.p1.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i5.I1.ix1.p1.m6" class="ltx_Math" data-alttext="R_{9}" display="inline"><msub><mi>R</mi><mn>9</mn></msub></math> and determine all of the distinct equivalence classes of this equivalence relation.</p>
+</div>
+</li>
+<li id="S7.I11.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i5.I1.i1.p1.m1" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> on <math id="S7.I11.i5.I1.i1.p1.m2" class="ltx_Math" data-alttext="R_{9}" display="inline"><msub><mi>R</mi><mn>9</mn></msub></math> as follows: For all <math id="S7.I11.i5.I1.i1.p1.m3" class="ltx_Math" data-alttext="a,b\in R_{9},a\approx b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><msub><mi>R</mi><mn>9</mn></msub></mrow><mo>,</mo><mrow><mi>a</mi><mo>≈</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i5.I1.i1.p1.m4" class="ltx_Math" data-alttext="a^{3}\equiv b^{3}(\bmod 9)" display="inline"><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>≡</mo><mrow><msup><mi>b</mi><mn>3</mn></msup><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Prove that <math id="S7.I11.i5.I1.i1.p1.m5" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> is an equivalence relation on <math id="S7.I11.i5.I1.i1.p1.m6" class="ltx_Math" data-alttext="R_{9}" display="inline"><msub><mi>R</mi><mn>9</mn></msub></math> and determine all of the distinct equivalence classes of this equivalence relation.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S7.I11.i6.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i6.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i6.p1.m2" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> as follows: For <math id="S7.I11.i6.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Q},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i6.p1.m4" class="ltx_Math" data-alttext="a-b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. In Progress Check 7.9 of <a href="https://johnweeks03.github.io/teaching/300/7-2.html">Section 7.2</a>, we showed that the relation <math id="S7.I11.i6.p1.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i6.p1.m6" class="ltx_Math" data-alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>. Also, see Exercise (9) in <a href="https://johnweeks03.github.io/teaching/300/7-2.html">Section 7.2</a>.</p>
+<ol id="S7.I11.i6.I1" class="ltx_enumerate">
+<li id="S7.I11.i6.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="S7.I11.i6.I1.ix1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> (a)</span> 
+<div id="S7.I11.i6.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I11.i6.I1.ix1.p1.m1" class="ltx_Math" data-alttext="\left[\frac{5}{7}\right]=\left\{\left.m+\frac{5}{7}\right\rvert\,m\in\mathbb{Z%
+}\right\}" display="inline"><mrow><mrow><mo>[</mo><mfrac><mn>5</mn><mn>7</mn></mfrac><mo>]</mo></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>m</mi><mo>+</mo><mfrac><mn>5</mn><mn>7</mn></mfrac></mrow><mo lspace="0em" rspace="0.170em" stretchy="true">|</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I11.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, then what is the equivalence class of <math id="S7.I11.i6.I1.i1.p1.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I11.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I11.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, prove that there is a bijection from <math id="S7.I11.i6.I1.i2.p1.m2" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> to <math id="S7.I11.i6.I1.i2.p1.m3" class="ltx_Math" data-alttext="\left[\frac{5}{7}\right]" display="inline"><mrow><mo>[</mo><mfrac><mn>5</mn><mn>7</mn></mfrac><mo>]</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S7.I11.i7.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i7.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i7.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> as follows:</p>
+</div>
+<div id="S7.I11.i7.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i7.p2.m1" class="ltx_Math" data-alttext="x,y\in\mathbb{R},x\sim y" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></mrow></math> if and only if <math id="S7.I11.i7.p2.m2" class="ltx_Math" data-alttext="x-y\in\mathbb{Q}" display="inline"><mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow></math>.</p>
+<ol id="S7.I11.i7.I1" class="ltx_enumerate">
+<li id="S7.I11.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I11.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i7.I1.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">List four different real numbers that are in the equivalence class of <math id="S7.I11.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I11.i7.I1.i3.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Q}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>, what is the equivalence class of <math id="S7.I11.i7.I1.i3.p1.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I11.i7.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I11.i7.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I11.i7.I1.i4.p1.m1" class="ltx_Math" data-alttext="[\sqrt{2}]=\{r+\sqrt{2}\mid r\in\mathbb{Q}\}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>r</mi><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>r</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i7.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S7.I11.i7.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I11.i7.I1.i5.p1.m1" class="ltx_Math" data-alttext="a\in\mathbb{Q}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>, prove that there is a bijection from <math id="S7.I11.i7.I1.i5.p1.m2" class="ltx_Math" data-alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> to <math id="S7.I11.i7.I1.i5.p1.m3" class="ltx_Math" data-alttext="[\sqrt{2}]" display="inline"><mrow><mo stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S7.I11.i8.p1" class="ltx_para">
+<p class="ltx_p">Define the relation <math id="S7.I11.i8.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I11.i8.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> as follows: For <math id="S7.I11.i8.p1.m3" class="ltx_Math" data-alttext="a,b\in\mathbb{Z},a\sim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i8.p1.m4" class="ltx_Math" data-alttext="2a+3b\equiv 0(\bmod 5)" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The relation <math id="S7.I11.i8.p1.m5" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i8.p1.m6" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. (See Exercise (13) in <a href="https://johnweeks03.github.io/teaching/300/7-2.html">Section 7.2</a>). Determine all the distinct equivalence classes for this equivalence relation.</p>
+</div>
+</li>
+<li id="S7.I11.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S7.I11.i9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i9.p1.m1" class="ltx_Math" data-alttext="A=\mathbb{Z}\times(\mathbb{Z}-\{0\})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ℤ</mi><mo>−</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. That is, <math id="S7.I11.i9.p1.m2" class="ltx_Math" data-alttext="A=\{(a,b)\in\mathbb{Z}\times\mathbb{Z}\mid b\neq 0\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℤ</mi></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Define the relation <math id="S7.I11.i9.p1.m3" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> on <math id="S7.I11.i9.p1.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows:</p>
+</div>
+<div id="S7.I11.i9.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i9.p2.m1" class="ltx_Math" data-alttext="(a,b),(c,d)\in A,(a,b)\approx(c,d)" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>≈</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if and only if <math id="S7.I11.i9.p2.m2" class="ltx_Math" data-alttext="ad=bc" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></math>.</p>
+<ol id="S7.I11.i9.I1" class="ltx_enumerate">
+<li id="S7.I11.i9.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i9.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i9.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove that <math id="S7.I11.i9.I1.i1.p1.m2" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> is an equivalence relation on <math id="S7.I11.i9.I1.i1.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i9.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i9.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Why was it necessary to include the restriction that <math id="S7.I11.i9.I1.i2.p1.m1" class="ltx_Math" data-alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math> in the definition of the set <math id="S7.I11.i9.I1.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>?</p>
+</div>
+</li>
+<li id="S7.I11.i9.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i9.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S7.I11.i9.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine an equation that gives a relation between <math id="S7.I11.i9.I1.i3.p1.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S7.I11.i9.I1.i3.p1.m3" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> if <math id="S7.I11.i9.I1.i3.p1.m4" class="ltx_Math" data-alttext="(a,b)\in A" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S7.I11.i9.I1.i3.p1.m5" class="ltx_Math" data-alttext="(a,b)\approx(2,3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>≈</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>. [0pt]</p>
+</div>
+</li>
+<li id="S7.I11.i9.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I11.i9.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Determine at least four different elements in [(2,3)], the equivalence class of <math id="S7.I11.i9.I1.i4.p1.m1" class="ltx_Math" data-alttext="(2,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i9.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S7.I11.i9.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Use set builder notation to describe [(2,3)], the equivalence class of <math id="S7.I11.i9.I1.i5.p1.m1" class="ltx_Math" data-alttext="(2,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S7.I11.i10.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I11.i10.p1.m1" class="ltx_Math" data-alttext="(a,b),(c,d)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, define <math id="S7.I11.i10.p1.m2" class="ltx_Math" data-alttext="(a,b)\sim(c,d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∼</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math> if and only if <math id="S7.I11.i10.p1.m3" class="ltx_Math" data-alttext="a^{2}+b^{2}=c^{2}+d^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow></math>. In Exercise (15) of <a href="https://johnweeks03.github.io/teaching/300/7-2.html">Section 7.2</a>, we proved that <math id="S7.I11.i10.p1.m4" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I11.i10.p1.m5" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>.</p>
+<ol id="S7.I11.i10.I1" class="ltx_enumerate">
+<li id="S7.I11.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine the equivalence class of <math id="S7.I11.i10.I1.i1.p1.m1" class="ltx_Math" data-alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Use set builder notation (and do not use the symbol <math id="S7.I11.i10.I1.i2.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math>) to describe the equivalence class of <math id="S7.I11.i10.I1.i2.p1.m2" class="ltx_Math" data-alttext="(2,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> and then give a geometric description of this equivalence class.</p>
+</div>
+</li>
+<li id="S7.I11.i10.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i10.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Give a geometric description of a typical equivalence class for this equivalence relation.</p>
+</div>
+</li>
+<li id="S7.I11.i10.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S7.I11.i10.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i10.I1.i4.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}^{*}=\{x\in\mathbb{R}\mid x\geq 0\}" display="inline"><mrow><msup><mi>ℝ</mi><mo>∗</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Prove that there is a one-to-one correspondence (bijection) between <math id="S7.I11.i10.I1.i4.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}^{*}" display="inline"><msup><mi>ℝ</mi><mo>∗</mo></msup></math> and the set of all equivalence classes for this equivalence relation.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I11.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S7.I11.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I11.i11.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and let <math id="S7.I11.i11.p1.m2" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on <math id="S7.I11.i11.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. Prove each of the following:</p>
+<ol id="S7.I11.i11.I1" class="ltx_enumerate">
+<li id="S7.I11.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I11.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I11.i11.I1.i1.p1.m1" class="ltx_Math" data-alttext="a,b\in A,a\nsim b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>≁</mo><mi>b</mi></mrow></mrow></math> if and only if <math id="S7.I11.i11.I1.i1.p1.m2" class="ltx_Math" data-alttext="[a]\cap[b]=\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I11.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I11.i11.I1.i2.p1.m1" class="ltx_Math" data-alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I11.i11.I1.i2.p1.m2" class="ltx_Math" data-alttext="[a]\neq[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, then <math id="S7.I11.i11.I1.i2.p1.m3" class="ltx_Math" data-alttext="[a]\cap[b]=\varnothing" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I11.i11.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I11.i11.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I11.i11.I1.i3.p1.m1" class="ltx_Math" data-alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S7.I11.i11.I1.i3.p1.m2" class="ltx_Math" data-alttext="[a]\cap[b]\neq\emptyset" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> then <math id="S7.I11.i11.I1.i3.p1.m3" class="ltx_Math" data-alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S7.SS3.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.11 </span>Explorations and Activities</h3>
+
+<div id="S7.SS3.SSS11.p1" class="ltx_para">
+<ol id="S7.I12" class="ltx_enumerate">
+<li id="S7.I12.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S7.I12.i12.p1" class="ltx_para">
+<p class="ltx_p">A Partition Defines an Equivalence Relation. Let <math id="S7.I12.i12.p1.m1" class="ltx_Math" data-alttext="A=\{a,b,c,d,e\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S7.I12.i12.p1.m2" class="ltx_Math" data-alttext="\mathcal{C}=\{\{a,b,c\},\{d,e\}\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S7.I12.i12.I1" class="ltx_enumerate">
+<li id="S7.I12.i12.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I12.i12.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why <math id="S7.I12.i12.I1.i1.p1.m1" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a partition of <math id="S7.I12.i12.I1.i1.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S7.I12.i12.I1.i1.p2" class="ltx_para">
+<p class="ltx_p">Define a relation <math id="S7.I12.i12.I1.i1.p2.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I12.i12.I1.i1.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows: For <math id="S7.I12.i12.I1.i1.p2.m3" class="ltx_Math" data-alttext="x,y\in A,x\sim y" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></mrow></math> if and only if there exists a set <math id="S7.I12.i12.I1.i1.p2.m4" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> in <math id="S7.I12.i12.I1.i1.p2.m5" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> such that <math id="S7.I12.i12.I1.i1.p2.m6" class="ltx_Math" data-alttext="x\in U" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow></math> and <math id="S7.I12.i12.I1.i1.p2.m7" class="ltx_Math" data-alttext="y\in U" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I12.i12.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I12.i12.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I12.i12.I1.i2.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on the set <math id="S7.I12.i12.I1.i2.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and then determine all the equivalence classes for <math id="S7.I12.i12.I1.i2.p1.m3" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math>. How does the collection of all equivalence classes compare to <math id="S7.I12.i12.I1.i2.p1.m4" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> ?</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">What we did for the specific partition in Part (12b) can be done for any partition of a set. So to generalize Part (12b), we let <math id="S7.I12.i12.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> be a nonempty set and let <math id="S7.I12.i12.p1.m4" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a partition of <math id="S7.I12.i12.p1.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>. We then define a relation <math id="S7.I12.i12.p1.m6" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I12.i12.p1.m7" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> as follows:</p>
+</div>
+<div id="S7.I12.i12.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S7.I12.i12.p2.m1" class="ltx_Math" data-alttext="x,y\in A,x\sim y" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></mrow></math> if and only if there exists a set <math id="S7.I12.i12.p2.m2" class="ltx_Math" data-alttext="U" display="inline"><mi>U</mi></math> in <math id="S7.I12.i12.p2.m3" class="ltx_Math" data-alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> such that <math id="S7.I12.i12.p2.m4" class="ltx_Math" data-alttext="x\in U" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow></math> and <math id="S7.I12.i12.p2.m5" class="ltx_Math" data-alttext="y\in U" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+<ol id="S7.I12.i12.I2" class="ltx_enumerate">
+<li id="S7.I12.i12.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S7.I12.i12.I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S7.I12.i12.I2.i5.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on the set <math id="S7.I12.i12.I2.i5.p1.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+<li id="S7.I12.i12.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S7.I12.i12.I2.i6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I12.i12.I2.i6.p1.m1" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and let <math id="S7.I12.i12.I2.i6.p1.m2" class="ltx_Math" data-alttext="U\in\mathcal{C}" display="inline"><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> such that <math id="S7.I12.i12.I2.i6.p1.m3" class="ltx_Math" data-alttext="a\in U" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>U</mi></mrow></math>. Prove that <math id="S7.I12.i12.I2.i6.p1.m4" class="ltx_Math" data-alttext="[a]=U" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>U</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S7.I12.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S7.I12.i13.p1" class="ltx_para">
+<p class="ltx_p">Equivalence Relations on a Set of Matrices. The following exercises require a knowledge of elementary linear algebra. We let <math id="S7.I12.i13.p1.m1" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the set of all <math id="S7.I12.i13.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> by <math id="S7.I12.i13.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> matrices with real number entries.</p>
+<ol id="S7.I12.i13.I1" class="ltx_enumerate">
+<li id="S7.I12.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I12.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Define a relation <math id="S7.I12.i13.I1.i1.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.I12.i13.I1.i1.p1.m2" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> as follows: For all <math id="S7.I12.i13.I1.i1.p1.m3" class="ltx_Math" data-alttext="A,B\in\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S7.I12.i13.I1.i1.p1.m4" class="ltx_Math" data-alttext="A\sim B" display="inline"><mrow><mi>A</mi><mo>∼</mo><mi>B</mi></mrow></math> if and only if there exists an invertible matrix <math id="S7.I12.i13.I1.i1.p1.m5" class="ltx_Math" data-alttext="P" display="inline"><mi>P</mi></math> in <math id="S7.I12.i13.I1.i1.p1.m6" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S7.I12.i13.I1.i1.p1.m7" class="ltx_Math" data-alttext="B=PAP^{-1}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. Is <math id="S7.I12.i13.I1.i1.p1.m8" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S7.I12.i13.I1.i1.p1.m9" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math>? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S7.I12.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I12.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Define a relation <math id="S7.I12.i13.I1.i2.p1.m1" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> on <math id="S7.I12.i13.I1.i2.p1.m2" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> as follows: For all <math id="S7.I12.i13.I1.i2.p1.m3" class="ltx_Math" data-alttext="A,B\in\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S7.I12.i13.I1.i2.p1.m4" class="ltx_Math" data-alttext="ARB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>B</mi></mrow></math> if and only if <math id="S7.I12.i13.I1.i2.p1.m5" class="ltx_Math" data-alttext="\operatorname{det}(A)=\operatorname{det}(B)" display="inline"><mrow><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Is <math id="S7.I12.i13.I1.i2.p1.m6" class="ltx_Math" data-alttext="R" display="inline"><mi>R</mi></math> an equivalence relation on <math id="S7.I12.i13.I1.i2.p1.m7" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math>? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S7.I12.i13.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S7.I12.i13.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.I12.i13.I1.i3.p1.m1" class="ltx_Math" data-alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on <math id="S7.I12.i13.I1.i3.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Define a relation <math id="S7.I12.i13.I1.i3.p1.m3" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> on <math id="S7.I12.i13.I1.i3.p1.m4" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> as follows: For all <math id="S7.I12.i13.I1.i3.p1.m5" class="ltx_Math" data-alttext="A,B\in\mathcal{M}_{n,n}(\mathbb{R}),A\approx B" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>A</mi><mo>≈</mo><mi>B</mi></mrow></mrow></math> if and only if <math id="S7.I12.i13.I1.i3.p1.m6" class="ltx_Math" data-alttext="\operatorname{det}(A)\sim\operatorname{det}(B)" display="inline"><mrow><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∼</mo><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Is <math id="S7.I12.i13.I1.i3.p1.m7" class="ltx_Math" data-alttext="\approx" display="inline"><mo>≈</mo></math> an equivalence relation on <math id="S7.I12.i13.I1.i3.p1.m8" class="ltx_Math" data-alttext="\mathcal{M}_{n,n}(\mathbb{R})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℳ</mi><mrow><mi>n</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math>? Justify your conclusion.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
