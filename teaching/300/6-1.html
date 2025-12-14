@@ -1,0 +1,1054 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Functions</title>
+<!--Generated on Sun Dec 14 17:46:36 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S6" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Functions</h1>
+
+<section id="S6.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">6.1 </span>Introduction to Functions</h2>
+
+<section id="S6.SS1.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.1 </span>Beginning Activity 1 (Functions from Previous Courses)</h3>
+
+<div id="S6.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">One of the most important concepts in modern mathematics is that of a function. In previous mathematics courses, we have often thought of a function as some sort of input-output rule that assigns exactly one output to each input. So in this context, a function can be thought of as a procedure for associating with each element of some set, called the domain of the function, exactly one element of another set, called the codomain of the function. This procedure can be considered an input-output rule. The function takes the input, which is an element of the domain, and produces an output, which is an element of the codomain. In calculus and precalculus, the inputs and outputs were almost always real numbers. So the notation <math id="S6.SS1.SSS1.p1.m1" class="ltx_Math" data-alttext="f(x)=x^{2}\sin x" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow></math> means the following:</p>
+</div>
+<div id="S6.SS1.SSS1.p2" class="ltx_para">
+<ul id="S6.I1" class="ltx_itemize">
+<li id="S6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I1.i1.p1.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is the name of the function.</p>
+</div>
+</li>
+<li id="S6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I1.i2.p1.m1" class="ltx_Math" data-alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a real number. It is the output of the function when the input is the real number <math id="S6.I1.i2.p1.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>. For example,</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S6.SS1.SSS1.p3" class="ltx_para">
+<table role="presentation" id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex1.m1" class="ltx_Math" data-alttext="\displaystyle f\left(\frac{\pi}{2}\right)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex1.m2" class="ltx_Math" data-alttext="\displaystyle=\left(\frac{\pi}{2}\right)^{2}\sin\left(\frac{\pi}{2}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex2.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{\pi^{2}}{4}\cdot 1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>4</mn></mfrac></mstyle><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex3.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{\pi^{2}}{4}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>4</mn></mfrac></mstyle></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS1.p4" class="ltx_para">
+<p class="ltx_p">For this function, it is understood that the domain of the function is the set <math id="S6.SS1.SSS1.p4.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> of all real numbers. In this situation, we think of the domain as the set of all possible inputs. That is, the domain is the set of all possible real numbers <math id="S6.SS1.SSS1.p4.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> for which a real number output can be determined.</p>
+</div>
+<div id="S6.SS1.SSS1.p5" class="ltx_para">
+<p class="ltx_p">This is closely related to the equation <math id="S6.SS1.SSS1.p5.m1" class="ltx_Math" data-alttext="y=x^{2}\sin x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow></math>. With this equation, we frequently think of <math id="S6.SS1.SSS1.p5.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> as the input and <math id="S6.SS1.SSS1.p5.m3" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> as the output. In fact, we sometimes write <math id="S6.SS1.SSS1.p5.m4" class="ltx_Math" data-alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The key to remember is that a function must have exactly one output for each input. When we write an equation such as</p>
+</div>
+<div id="S6.SS1.SSS1.p6" class="ltx_para">
+<table role="presentation" id="S6.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex4.m1" class="ltx_Math" data-alttext="y=\frac{1}{2}x^{3}-1," display="block"><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>−</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS1.p7" class="ltx_para">
+<p class="ltx_p">we can use this equation to define <math id="S6.SS1.SSS1.p7.m1" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> as a function of <math id="S6.SS1.SSS1.p7.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>. This is because when we substitute a real number for <math id="S6.SS1.SSS1.p7.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> (the input), the equation produces exactly one real number for <math id="S6.SS1.SSS1.p7.m4" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> (the output). We can give this function a name, such as <math id="S6.SS1.SSS1.p7.m5" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>, and write</p>
+</div>
+<div id="S6.SS1.SSS1.p8" class="ltx_para">
+<table role="presentation" id="S6.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex5.m1" class="ltx_Math" data-alttext="y=g(x)=\frac{1}{2}x^{3}-1" display="block"><mrow><mi>y</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS1.p9" class="ltx_para">
+<p class="ltx_p">However, as written, an equation such as</p>
+</div>
+<div id="S6.SS1.SSS1.p10" class="ltx_para">
+<table role="presentation" id="S6.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex6.m1" class="ltx_Math" data-alttext="y^{2}=x+3" display="block"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS1.p11" class="ltx_para">
+<p class="ltx_p">cannot be used to define <math id="S6.SS1.SSS1.p11.m1" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> as a function of <math id="S6.SS1.SSS1.p11.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> since there are real numbers that can be substituted for <math id="S6.SS1.SSS1.p11.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> that will produce more than one possible value of <math id="S6.SS1.SSS1.p11.m4" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. For example, if <math id="S6.SS1.SSS1.p11.m5" class="ltx_Math" data-alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>, then <math id="S6.SS1.SSS1.p11.m6" class="ltx_Math" data-alttext="y^{2}=4" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>4</mn></mrow></math>, and <math id="S6.SS1.SSS1.p11.m7" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> could be -2 or 2 .</p>
+</div>
+<div id="S6.SS1.SSS1.p12" class="ltx_para">
+<p class="ltx_p">Which of the following equations can be used to define a function with <math id="S6.SS1.SSS1.p12.m1" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> as the input and <math id="S6.SS1.SSS1.p12.m2" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> as the output?</p>
+</div>
+<div id="S6.SS1.SSS1.p13" class="ltx_para">
+<ol id="S6.I2" class="ltx_enumerate">
+<li id="S6.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i1.p1.m1" class="ltx_Math" data-alttext="y=x^{2}-2" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i2.p1.m1" class="ltx_Math" data-alttext="y^{2}=x+3" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i3.p1.m1" class="ltx_Math" data-alttext="y=\frac{1}{2}x^{3}-1" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i4.p1.m1" class="ltx_Math" data-alttext="y=\frac{1}{2}x\sin x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>x</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S6.I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i5.p1.m1" class="ltx_Math" data-alttext="x^{2}+y^{2}=4" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>4</mn></mrow></math></p>
+</div>
+</li>
+<li id="S6.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S6.I2.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i6.p1.m1" class="ltx_Math" data-alttext="y=2x-1" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S6.I2.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.i7.p1.m1" class="ltx_Math" data-alttext="y=\frac{x}{x-1}" display="inline"><mrow><mi>y</mi><mo>=</mo><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS1.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.2 </span>Beginning Activity 2 (Some Other Types of Functions)</h3>
+
+<div id="S6.SS1.SSS2.p1" class="ltx_para">
+<p class="ltx_p">The domain and codomain of each of the functions in Beginning Activity 1 are the set <math id="S6.SS1.SSS2.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> of all real numbers, or some subset of <math id="S6.SS1.SSS2.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. In most of these cases, the way in which the function associates elements of the domain with elements of the codomain is by a rule determined by some mathematical expression. For example, when we say that <math id="S6.SS1.SSS2.p1.m3" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is the function such that</p>
+</div>
+<div id="S6.SS1.SSS2.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex7.m1" class="ltx_Math" data-alttext="f(x)=\frac{x}{x-1}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS2.p3" class="ltx_para">
+<p class="ltx_p">then the algebraic rule that determines the output of the function <math id="S6.SS1.SSS2.p3.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> when the input is <math id="S6.SS1.SSS2.p3.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is <math id="S6.SS1.SSS2.p3.m3" class="ltx_Math" data-alttext="\frac{x}{x-1}" display="inline"><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></math>. In this case, we would say that the domain of <math id="S6.SS1.SSS2.p3.m4" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is the set of all real numbers not equal to 1 since division by zero is not defined.</p>
+</div>
+<div id="S6.SS1.SSS2.p4" class="ltx_para">
+<p class="ltx_p">However, the concept of a function is much more general than this. The domain and codomain of a function can be any set, and the way in which a function associates elements of the domain with elements of the codomain can have many different forms. The input-output rule for a function can be a formula, a graph, a table, a random process, or a verbal description. We will explore two different examples in this activity.</p>
+</div>
+<div id="S6.SS1.SSS2.p5" class="ltx_para">
+<ol id="S6.I3" class="ltx_enumerate">
+<li id="S6.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I3.i1.p1.m1" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> be the function that assigns to each person his or her birthday (month and day). The domain of the function <math id="S6.I3.i1.p1.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> is the set of all people and the codomain of <math id="S6.I3.i1.p1.m3" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> is the set of all days in a leap year (i.e., January 1 through December 31, including February 29).</p>
+<ol id="S6.I3.i1.I1" class="ltx_enumerate">
+<li id="S6.I3.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I3.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why <math id="S6.I3.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> really is a function. We will call this the birthday function.</p>
+</div>
+</li>
+<li id="S6.I3.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I3.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">In 1995, Andrew Wiles became famous for publishing a proof of Fermat’s Last Theorem. (See A. D. Aczel, Fermat’s Last Theorem: Unlocking the Secret of an Ancient Mathematical Problem, Dell Publishing, New York, 1996.) Andrew Wiles’s birthday is April 11, 1953. Translate this fact into functional notation using the "birthday function" <math id="S6.I3.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>. That is, fill in the spaces for the following question marks:</p>
+</div>
+<div id="S6.I3.i1.I1.i2.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex8.m1" class="ltx_Math" data-alttext="b(?)=?." display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">?</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">?</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S6.I3.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I3.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false? Explain.</p>
+</div>
+<div id="S6.I3.i1.I1.i3.p2" class="ltx_para">
+<p class="ltx_p">For each day <math id="S6.I3.i1.I1.i3.p2.m1" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> of the year, there exists a person <math id="S6.I3.i1.I1.i3.p2.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S6.I3.i1.I1.i3.p2.m3" class="ltx_Math" data-alttext="b(x)=D" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>D</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I3.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I3.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false? Explain.</p>
+</div>
+<div id="S6.I3.i1.I1.i4.p2" class="ltx_para">
+<p class="ltx_p">For any people <math id="S6.I3.i1.I1.i4.p2.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S6.I3.i1.I1.i4.p2.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>, if <math id="S6.I3.i1.I1.i4.p2.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S6.I3.i1.I1.i4.p2.m4" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> are different people, then <math id="S6.I3.i1.I1.i4.p2.m5" class="ltx_Math" data-alttext="b(x)\neq b(y)" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I3.i2.p1.m1" class="ltx_Math" data-alttext="s" display="inline"><mi>s</mi></math> be the function that associates with each natural number the sum of its distinct natural number divisors. This is called the sum of the divisors function. For example, the natural number divisors of 6 are <math id="S6.I3.i2.p1.m2" class="ltx_Math" data-alttext="1,2,3" display="inline"><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow></math>, and 6, and so</p>
+</div>
+<div id="S6.I3.i2.p2" class="ltx_para">
+<table role="presentation" id="S6.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex9.m1" class="ltx_Math" data-alttext="\displaystyle s(6)" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex9.m2" class="ltx_Math" data-alttext="\displaystyle=1+2+3+6" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>6</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex10.m1" class="ltx_Math" data-alttext="\displaystyle=12." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>12</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I3.i2.p3" class="ltx_para">
+<ol id="S6.I3.i2.I1" class="ltx_enumerate">
+<li id="S6.I3.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I3.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Calculate <math id="S6.I3.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="s(k)" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> for each natural number <math id="S6.I3.i2.I1.i1.p1.m2" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> from 1 through 15.</p>
+</div>
+</li>
+<li id="S6.I3.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I3.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Does there exist a natural number <math id="S6.I3.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I3.i2.I1.i2.p1.m2" class="ltx_Math" data-alttext="s(n)=5" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>5</mn></mrow></math>? Justify your conclusion.</p>
+</div>
+</li>
+<li id="S6.I3.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I3.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is it possible to find two different natural numbers <math id="S6.I3.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S6.I3.i2.I1.i3.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I3.i2.I1.i3.p1.m3" class="ltx_Math" data-alttext="s(m)=s(n)" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S6.I3.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I3.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Use your responses in (b) and (c) to determine the truth value of each of the following statements.</p>
+<ol id="S6.I3.i2.I1.i4.I1" class="ltx_enumerate">
+<li id="S6.I3.i2.I1.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">i.</span> 
+<div id="S6.I3.i2.I1.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.I3.i2.I1.i4.I1.i1.p1.m1" class="ltx_Math" data-alttext="m\in\mathbb{N}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, there exists a natural number <math id="S6.I3.i2.I1.i4.I1.i1.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I3.i2.I1.i4.I1.i1.p1.m3" class="ltx_Math" data-alttext="s(n)=m" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>m</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I3.i2.I1.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">ii.</span> 
+<div id="S6.I3.i2.I1.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I3.i2.I1.i4.I1.i2.p1.m1" class="ltx_Math" data-alttext="m,n\in\mathbb{N}" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S6.I3.i2.I1.i4.I1.i2.p1.m2" class="ltx_Math" data-alttext="m\neq n" display="inline"><mrow><mi>m</mi><mo>≠</mo><mi>n</mi></mrow></math>, then <math id="S6.I3.i2.I1.i4.I1.i2.p1.m3" class="ltx_Math" data-alttext="s(m)\neq s(n)" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS1.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.3 </span>The Definition of a Function</h3>
+
+<div id="S6.SS1.SSS3.p1" class="ltx_para">
+<p class="ltx_p">The concept of a function is much more general than the idea of a function used in calculus or precalculus. In particular, the domain and codomain do not have to be subsets of <math id="S6.SS1.SSS3.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. In addition, the way in which a function associates elements of the domain with elements of the codomain can have many different forms. This input-output rule can be a formula, a graph, a table, a random process, a computer algorithm, or a verbal description. Two such examples were introduced in Beginning Activity 2.</p>
+</div>
+<div id="S6.SS1.SSS3.p2" class="ltx_para">
+<p class="ltx_p">For the birthday function, the domain would be the set of all people and the codomain would be the set of all days in a leap year. For the sum of the divisors function, the domain is the set <math id="S6.SS1.SSS3.p2.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> of natural numbers, and the codomain could also be <math id="S6.SS1.SSS3.p2.m2" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>. In both of these cases, the input-output rule was a verbal description of how to assign an element of the codomain to an element of the domain.</p>
+</div>
+<div id="S6.SS1.SSS3.p3" class="ltx_para">
+<p class="ltx_p">We formally define the concept of a function as follows:</p>
+</div>
+<div id="S6.SS1.SSS3.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A <span class="ltx_text ltx_font_bold">function</span> from a set <math id="S6.SS1.SSS3.p4.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to a set <math id="S6.SS1.SSS3.p4.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is a rule that associates with each element <math id="S6.SS1.SSS3.p4.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> of the set <math id="S6.SS1.SSS3.p4.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> exactly one element of the set <math id="S6.SS1.SSS3.p4.m5" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. A function from <math id="S6.SS1.SSS3.p4.m6" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.SS1.SSS3.p4.m7" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is also called a <span class="ltx_text ltx_font_bold">mapping</span> from <math id="S6.SS1.SSS3.p4.m8" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.SS1.SSS3.p4.m9" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p5" class="ltx_para">
+<p class="ltx_p">Function Notation. When we work with a function, we usually give it a name. The name is often a single letter, such as <math id="S6.SS1.SSS3.p5.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> or <math id="S6.SS1.SSS3.p5.m2" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>. If <math id="S6.SS1.SSS3.p5.m3" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is a function from the set <math id="S6.SS1.SSS3.p5.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S6.SS1.SSS3.p5.m5" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, we will write <math id="S6.SS1.SSS3.p5.m6" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>. This is simply shorthand notation for the fact that <math id="S6.SS1.SSS3.p5.m7" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is a function from the set <math id="S6.SS1.SSS3.p5.m8" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the set <math id="S6.SS1.SSS3.p5.m9" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. In this case, we also say that <math id="S6.SS1.SSS3.p5.m10" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> maps <math id="S6.SS1.SSS3.p5.m11" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.SS1.SSS3.p5.m12" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S6.SS1.SSS3.p6.m1" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>. (This is read, "Let <math id="S6.SS1.SSS3.p6.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> be a function from <math id="S6.SS1.SSS3.p6.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.SS1.SSS3.p6.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. ") The set <math id="S6.SS1.SSS3.p6.m5" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is called the <span class="ltx_text ltx_font_bold">domain</span> of the function <math id="S6.SS1.SSS3.p6.m6" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>, and we write <math id="S6.SS1.SSS3.p6.m7" class="ltx_Math" data-alttext="A=\operatorname{dom}(f)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The set <math id="S6.SS1.SSS3.p6.m8" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is called the <span class="ltx_text ltx_font_bold">codomain</span> of the function <math id="S6.SS1.SSS3.p6.m9" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>, and we write <math id="S6.SS1.SSS3.p6.m10" class="ltx_Math" data-alttext="B=\operatorname{codom}(f)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>codom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p7" class="ltx_para">
+<p class="ltx_p">If <math id="S6.SS1.SSS3.p7.m1" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>, then the element of <math id="S6.SS1.SSS3.p7.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> that is associated with <math id="S6.SS1.SSS3.p7.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is denoted by <math id="S6.SS1.SSS3.p7.m4" class="ltx_Math" data-alttext="f(a)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> and is called the <span class="ltx_text ltx_font_bold">image</span> of <math id="S6.SS1.SSS3.p7.m5" class="ltx_Math" data-alttext="\boldsymbol{a}" display="inline"><mi>𝒂</mi></math> under <math id="S6.SS1.SSS3.p7.m6" class="ltx_Math" data-alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math>. If <math id="S6.SS1.SSS3.p7.m7" class="ltx_Math" data-alttext="f(a)=b" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math>, with <math id="S6.SS1.SSS3.p7.m8" class="ltx_Math" data-alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math>, then <math id="S6.SS1.SSS3.p7.m9" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is called a <span class="ltx_text ltx_font_bold">preimage</span> of <math id="S6.SS1.SSS3.p7.m10" class="ltx_Math" data-alttext="\boldsymbol{b}" display="inline"><mi>𝒃</mi></math> for <math id="S6.SS1.SSS3.p7.m11" class="ltx_Math" data-alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p8" class="ltx_para">
+<p class="ltx_p">Some Function Terminology with an Example. When we have a function <math id="S6.SS1.SSS3.p8.m1" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>, we often write <math id="S6.SS1.SSS3.p8.m2" class="ltx_Math" data-alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In this case, we consider <math id="S6.SS1.SSS3.p8.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> to be an unspecified object that can be chosen from the set <math id="S6.SS1.SSS3.p8.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and we would say that <math id="S6.SS1.SSS3.p8.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> is the independent variable of the function <math id="S6.SS1.SSS3.p8.m6" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> and <math id="S6.SS1.SSS3.p8.m7" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> is the dependent variable of the function <math id="S6.SS1.SSS3.p8.m8" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p9" class="ltx_para">
+<p class="ltx_p">For a specific example, consider the function <math id="S6.SS1.SSS3.p9.m1" class="ltx_Math" data-alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, where <math id="S6.SS1.SSS3.p9.m2" class="ltx_Math" data-alttext="g(x)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is defined by the formula</p>
+</div>
+<div id="S6.SS1.SSS3.p10" class="ltx_para">
+<table role="presentation" id="S6.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex11.m1" class="ltx_Math" data-alttext="g(x)=x^{2}-2" display="block"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS3.p11" class="ltx_para">
+<p class="ltx_p">Note that this is indeed a function since given any input <math id="S6.SS1.SSS3.p11.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in the domain, <math id="S6.SS1.SSS3.p11.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, there is exactly one output <math id="S6.SS1.SSS3.p11.m3" class="ltx_Math" data-alttext="g(x)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> in the codomain, <math id="S6.SS1.SSS3.p11.m4" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. For example,</p>
+</div>
+<div id="S6.SS1.SSS3.p12" class="ltx_para">
+<table role="presentation" id="S6.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex12.m1" class="ltx_Math" data-alttext="\displaystyle g(-2)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex12.m2" class="ltx_Math" data-alttext="\displaystyle=(-2)^{2}-2=2" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex13.m1" class="ltx_Math" data-alttext="\displaystyle g(5)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex13.m2" class="ltx_Math" data-alttext="\displaystyle=5^{2}-2=23" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mn>5</mn><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>23</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex14.m1" class="ltx_Math" data-alttext="\displaystyle g(\sqrt{2})" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msqrt><mn>2</mn></msqrt><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex14.m2" class="ltx_Math" data-alttext="\displaystyle=(\sqrt{2})^{2}-2=0" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><msqrt><mn>2</mn></msqrt><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex15.m1" class="ltx_Math" data-alttext="\displaystyle g(-\sqrt{2})" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex15.m2" class="ltx_Math" data-alttext="\displaystyle=(-\sqrt{2})^{2}-2=0" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS3.p13" class="ltx_para">
+<p class="ltx_p">So we say that the image of -2 under <math id="S6.SS1.SSS3.p13.m1" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is 2, the image of 5 under <math id="S6.SS1.SSS3.p13.m2" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is 23, and so on.</p>
+</div>
+<div id="S6.SS1.SSS3.p14" class="ltx_para">
+<p class="ltx_p">Notice in this case that the number 0 in the codomain has two preimages, <math id="S6.SS1.SSS3.p14.m1" class="ltx_Math" data-alttext="-\sqrt{2}" display="inline"><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math> and <math id="S6.SS1.SSS3.p14.m2" class="ltx_Math" data-alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math>. This does not violate the mathematical definition of a function since the definition only states that each input must produce one and only one output. That is, each element of the domain has exactly one image in the codomain.</p>
+</div>
+<div id="S6.SS1.SSS3.p15" class="ltx_para">
+<p class="ltx_p">Nowhere does the definition stipulate that two different inputs must produce different outputs.</p>
+</div>
+<div id="S6.SS1.SSS3.p16" class="ltx_para">
+<p class="ltx_p">Finding the preimages of an element in the codomain can sometimes be difficult. In general, if <math id="S6.SS1.SSS3.p16.m1" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> is in the codomain, to find its preimages, we need to ask, "For which values of <math id="S6.SS1.SSS3.p16.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in the domain will we have <math id="S6.SS1.SSS3.p16.m3" class="ltx_Math" data-alttext="y=g(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> ?" For example, for the function <math id="S6.SS1.SSS3.p16.m4" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>, to find the preimages of 5, we need to find all <math id="S6.SS1.SSS3.p16.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> for which <math id="S6.SS1.SSS3.p16.m6" class="ltx_Math" data-alttext="g(x)=5" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>5</mn></mrow></math>. In this case, since <math id="S6.SS1.SSS3.p16.m7" class="ltx_Math" data-alttext="g(x)=x^{2}-2" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow></mrow></math>, we can do this by solving the equation</p>
+</div>
+<div id="S6.SS1.SSS3.p17" class="ltx_para">
+<table role="presentation" id="S6.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex16.m1" class="ltx_Math" data-alttext="x^{2}-2=5" display="block"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>5</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS3.p18" class="ltx_para">
+<p class="ltx_p">The solutions of this equation are <math id="S6.SS1.SSS3.p18.m1" class="ltx_Math" data-alttext="-\sqrt{7}" display="inline"><mrow><mo>−</mo><msqrt><mn>7</mn></msqrt></mrow></math> and <math id="S6.SS1.SSS3.p18.m2" class="ltx_Math" data-alttext="\sqrt{7}" display="inline"><msqrt><mn>7</mn></msqrt></math>. So for the function <math id="S6.SS1.SSS3.p18.m3" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>, the preimages of 5 are <math id="S6.SS1.SSS3.p18.m4" class="ltx_Math" data-alttext="-\sqrt{7}" display="inline"><mrow><mo>−</mo><msqrt><mn>7</mn></msqrt></mrow></math> and <math id="S6.SS1.SSS3.p18.m5" class="ltx_Math" data-alttext="\sqrt{7}" display="inline"><msqrt><mn>7</mn></msqrt></math>. We often use set notation for this and say that the set of preimages of 5 for the function <math id="S6.SS1.SSS3.p18.m6" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is <math id="S6.SS1.SSS3.p18.m7" class="ltx_Math" data-alttext="\{-\sqrt{7},\sqrt{7}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo>−</mo><msqrt><mn>7</mn></msqrt></mrow><mo>,</mo><msqrt><mn>7</mn></msqrt><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p19" class="ltx_para">
+<p class="ltx_p">Also notice that for this function, not every element in the codomain has a preimage. For example, there is no input <math id="S6.SS1.SSS3.p19.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S6.SS1.SSS3.p19.m2" class="ltx_Math" data-alttext="g(x)=-3" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mn>3</mn></mrow></mrow></math>. This is true since for all real numbers <math id="S6.SS1.SSS3.p19.m3" class="ltx_Math" data-alttext="x,x^{2}\geq 0" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>≥</mo><mn>0</mn></mrow></math> and hence <math id="S6.SS1.SSS3.p19.m4" class="ltx_Math" data-alttext="x^{2}-2\geq-2" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow><mo>≥</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>. This means that for all <math id="S6.SS1.SSS3.p19.m5" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> in <math id="S6.SS1.SSS3.p19.m6" class="ltx_Math" data-alttext="\mathbb{R},g(x)\geq-2" display="inline"><mrow><mrow><mi>ℝ</mi><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≥</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S6.SS1.SSS3.p20" class="ltx_para">
+<p class="ltx_p">Finally, note that we introduced the function <math id="S6.SS1.SSS3.p20.m1" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> with the sentence, "Consider the function <math id="S6.SS1.SSS3.p20.m2" class="ltx_Math" data-alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, where <math id="S6.SS1.SSS3.p20.m3" class="ltx_Math" data-alttext="g(x)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is defined by the formula <math id="S6.SS1.SSS3.p20.m4" class="ltx_Math" data-alttext="g(x)=x^{2}-2" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow></mrow></math>." This is one correct way to do this, but we will frequently shorten this to, "Let <math id="S6.SS1.SSS3.p20.m5" class="ltx_Math" data-alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S6.SS1.SSS3.p20.m6" class="ltx_Math" data-alttext="g(x)=x^{2}-2" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow></mrow></math> ", or "Let <math id="S6.SS1.SSS3.p20.m7" class="ltx_Math" data-alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, where <math id="S6.SS1.SSS3.p20.m8" class="ltx_Math" data-alttext="g(x)=x^{2}-2" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></mrow></mrow></math>."</p>
+</div>
+</section>
+<section id="S6.SS1.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.4 </span>Progress Check 6.1 (Images and Preimages)</h3>
+
+<div id="S6.SS1.SSS4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS1.SSS4.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S6.SS1.SSS4.p1.m2" class="ltx_Math" data-alttext="f(x)=x^{2}-5x" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> for all <math id="S6.SS1.SSS4.p1.m3" class="ltx_Math" data-alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, and let <math id="S6.SS1.SSS4.p1.m4" class="ltx_Math" data-alttext="g:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> be defined by <math id="S6.SS1.SSS4.p1.m5" class="ltx_Math" data-alttext="g(m)=m^{2}-5m" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></mrow></math> for all <math id="S6.SS1.SSS4.p1.m6" class="ltx_Math" data-alttext="m\in\mathbb{Z}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+<div id="S6.SS1.SSS4.p2" class="ltx_para">
+<ol id="S6.I4" class="ltx_enumerate">
+<li id="S6.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S6.I4.i1.p1.m1" class="ltx_Math" data-alttext="f(-3)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S6.I4.i1.p1.m2" class="ltx_Math" data-alttext="f(\sqrt{8})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msqrt><mn>8</mn></msqrt><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine <math id="S6.I4.i2.p1.m1" class="ltx_Math" data-alttext="g(2)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S6.I4.i2.p1.m2" class="ltx_Math" data-alttext="g(-2)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I4.i3.p1" class="ltx_para">
+<p class="ltx_p">Determine the set of all preimages of 6 for the function <math id="S6.I4.i3.p1.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I4.i4.p1" class="ltx_para">
+<p class="ltx_p">Determine the set of all preimages of 6 for the function <math id="S6.I4.i4.p1.m1" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I4.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S6.I4.i5.p1" class="ltx_para">
+<p class="ltx_p">Determine the set of all preimages of 2 for the function <math id="S6.I4.i5.p1.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I4.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S6.I4.i6.p1" class="ltx_para">
+<p class="ltx_p">Determine the set of all preimages of 2 for the function <math id="S6.I4.i6.p1.m1" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS1.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.5 </span>The Codomain and Range of a Function</h3>
+
+<div id="S6.SS1.SSS5.p1" class="ltx_para">
+<p class="ltx_p">Besides the domain and codomain, there is another important set associated with a function. The need for this was illustrated in the example of the function <math id="S6.SS1.SSS5.p1.m1" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math>. For this function, it was noticed that there are elements in the codomain that have no preimage or, equivalently, there are elements in the codomain that are not the image of any element in the domain. The set we are talking about is the subset of the codomain consisting of all images of the elements of the domain of the function, and it is called the range of the function.</p>
+</div>
+<div id="S6.SS1.SSS5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S6.SS1.SSS5.p2.m1" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math>. The set <math id="S6.SS1.SSS5.p2.m2" class="ltx_Math" data-alttext="\{f(x)\mid x\in A\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></math> is called the <span class="ltx_text ltx_font_bold">range</span> of the function <math id="S6.SS1.SSS5.p2.m3" class="ltx_Math" data-alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math> and is denoted by range (<math id="S6.SS1.SSS5.p2.m4" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>). The range of <math id="S6.SS1.SSS5.p2.m5" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is sometimes called the <span class="ltx_text ltx_font_bold">image of the function</span> <math id="S6.SS1.SSS5.p2.m6" class="ltx_Math" data-alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math> (or the <span class="ltx_text ltx_font_bold">image of</span> <math id="S6.SS1.SSS5.p2.m7" class="ltx_Math" data-alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> <span class="ltx_text ltx_font_bold">under</span> <math id="S6.SS1.SSS5.p2.m8" class="ltx_Math" data-alttext="\boldsymbol{f}" display="inline"><mi>𝒇</mi></math>).</p>
+</div>
+<div id="S6.SS1.SSS5.p3" class="ltx_para">
+<p class="ltx_p">The range of <math id="S6.SS1.SSS5.p3.m1" class="ltx_Math" data-alttext="f:A\rightarrow B" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> could equivalently be defined as follows:</p>
+</div>
+<div id="S6.SS1.SSS5.p4" class="ltx_para">
+<table role="presentation" id="S6.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex17.m1" class="ltx_Math" data-alttext="\operatorname{range}(f)=\{y\in B\mid y=f(x)\text{ for some }x\in A\}" display="block"><mrow><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS5.p5" class="ltx_para">
+<p class="ltx_p">Notice that this means that range <math id="S6.SS1.SSS5.p5.m1" class="ltx_Math" data-alttext="(f)\subseteq\operatorname{codom}(f)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>⊆</mo><mrow><mi>codom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> but does not necessarily mean that <math id="S6.SS1.SSS5.p5.m2" class="ltx_Math" data-alttext="\operatorname{range}(f)=\operatorname{codom}(f)" display="inline"><mrow><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>codom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Whether we have this set equality or not depends on the function <math id="S6.SS1.SSS5.p5.m3" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>. More about this will be explored in <a href="https://johnweeks03.github.io/teaching/300/6-3.html">Section 6.3.</a></p>
+</div>
+</section>
+<section id="S6.SS1.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.6 </span>Progress Check 6.2 (Codomain and Range)</h3>
+
+<div id="S6.SS1.SSS6.p1" class="ltx_para">
+<ol id="S6.I5" class="ltx_enumerate">
+<li id="S6.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I5.i1.p1.m1" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> be the function that assigns to each person his or her birthday (month and day).</p>
+<ol id="S6.I5.i1.I1" class="ltx_enumerate">
+<li id="S6.I5.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I5.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of this function?</p>
+</div>
+</li>
+<li id="S6.I5.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I5.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What is a codomain for this function?</p>
+</div>
+</li>
+<li id="S6.I5.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I5.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In Beginning Activity 2, we determined that the following statement is true: For each day <math id="S6.I5.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> of the year, there exists a person <math id="S6.I5.i1.I1.i3.p1.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S6.I5.i1.I1.i3.p1.m3" class="ltx_Math" data-alttext="b(x)=D" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>D</mi></mrow></math>. What does this tell us about the range of the function <math id="S6.I5.i1.I1.i3.p1.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math>? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I5.i2.p1.m1" class="ltx_Math" data-alttext="s" display="inline"><mi>s</mi></math> be the function that associates with each natural number the sum of its distinct natural number factors.</p>
+<ol id="S6.I5.i2.I1" class="ltx_enumerate">
+<li id="S6.I5.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I5.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What is the domain of this function?</p>
+</div>
+</li>
+<li id="S6.I5.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I5.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What is a codomain for this function?</p>
+</div>
+</li>
+<li id="S6.I5.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I5.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In Beginning Activity 2, we determined that the following statement is false:</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="S6.SS1.SSS6.p2" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.SS1.SSS6.p2.m1" class="ltx_Math" data-alttext="m\in\mathbb{N}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, there exists a natural number <math id="S6.SS1.SSS6.p2.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.SS1.SSS6.p2.m3" class="ltx_Math" data-alttext="s(n)=m" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>m</mi></mrow></math>.
+<br class="ltx_break">Give an example of a natural number <math id="S6.SS1.SSS6.p2.m4" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> that shows this statement is false, and explain what this tells us about the range of the function <math id="S6.SS1.SSS6.p2.m5" class="ltx_Math" data-alttext="s" display="inline"><mi>s</mi></math>.</p>
+</div>
+</section>
+<section id="S6.SS1.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.7 </span>The Graph of a Real Function</h3>
+
+<div id="S6.SS1.SSS7.p1" class="ltx_para">
+<p class="ltx_p">We will finish this section with methods to visually communicate information about two specific types of functions. The first is the familiar method of graphing functions that was a major part of some previous mathematics courses. For example, consider the function <math id="S6.SS1.SSS7.p1.m1" class="ltx_Math" data-alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="S6.SS1.SSS7.p1.m2" class="ltx_Math" data-alttext="g(x)=x^{2}-2x-1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<figure id="S6.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig6_1_1.jpg" id="S6.F1.g1" class="ltx_graphics ltx_centering ltx_img_square" width="200" height="178" alt="graph of function x squared minus 2 x minus 1">
+<figcaption class="ltx_caption ltx_centering">Figure 6.1: Graph of <math id="S6.F1.m3" class="ltx_Math" data-alttext="y=g(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="S6.F1.m4" class="ltx_Math" data-alttext="g(x)=x^{2}-2x-1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></figcaption>
+</figure>
+<div id="S6.SS1.SSS7.p2" class="ltx_para">
+<p class="ltx_p">Every point on this graph corresponds to an ordered pair (<math id="S6.SS1.SSS7.p2.m1" class="ltx_Math" data-alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math>) of real numbers, where <math id="S6.SS1.SSS7.p2.m2" class="ltx_Math" data-alttext="y=g(x)=x^{2}-2x-1" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>. Because we use the Cartesian plane when drawing this type of graph, we can only use this type of graph when both the domain and the codomain of the function are subsets of the real numbers <math id="S6.SS1.SSS7.p2.m3" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Such a function is sometimes called a real function. The graph of a real function is a visual way to communicate information about the function. For example, the range of <math id="S6.SS1.SSS7.p2.m4" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is the set of all <math id="S6.SS1.SSS7.p2.m5" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>-values that correspond to points on the graph. In this case, the graph of <math id="S6.SS1.SSS7.p2.m6" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is a parabola and has a vertex at the point <math id="S6.SS1.SSS7.p2.m7" class="ltx_Math" data-alttext="(1,-2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math>. (Note: The <math id="S6.SS1.SSS7.p2.m8" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> coordinate of the vertex can be found by using calculus and solving the equation <math id="S6.SS1.SSS7.p2.m9" class="ltx_Math" data-alttext="f^{\prime}(x)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.) Since the graph of the function <math id="S6.SS1.SSS7.p2.m10" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is a parabola, we know that the pattern shown on the left end and the right end of the graph continues and we can
+<br class="ltx_break">conclude that the range of <math id="S6.SS1.SSS7.p2.m11" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> is the set of all <math id="S6.SS1.SSS7.p2.m12" class="ltx_Math" data-alttext="y\in\mathbb{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S6.SS1.SSS7.p2.m13" class="ltx_Math" data-alttext="y\geq-2" display="inline"><mrow><mi>y</mi><mo>≥</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>. That is,</p>
+</div>
+<div id="S6.SS1.SSS7.p3" class="ltx_para">
+<table role="presentation" id="S6.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex18.m1" class="ltx_Math" data-alttext="\operatorname{range}(g)=\{y\in\mathbb{R}\mid y\geq-2\}." display="block"><mrow><mrow><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>y</mi><mo>≥</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S6.SS1.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.8 </span>Progress Check 6.3 (Using the Graph of a Real Function)</h3>
+
+<div id="S6.SS1.SSS8.p1" class="ltx_para">
+<p class="ltx_p">The graph in Figure 6.2 shows the graph of (slightly more than) two complete periods for a function <math id="S6.SS1.SSS8.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, where <math id="S6.SS1.SSS8.p1.m2" class="ltx_Math" data-alttext="f(x)=A\sin(Bx)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for some positive real number constants <math id="S6.SS1.SSS8.p1.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S6.SS1.SSS8.p1.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<figure id="S6.SS1.SSS8.fig1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig6_1_2.jpg" id="S6.SS1.SSS8.g1" class="ltx_graphics ltx_centering ltx_img_square" width="200" height="193" alt="Graph of a sinusoidal wave on Cartesian axes. The wave passes through the origin (0,0), peaks at (1, 2), crosses the x-axis at 2, troughs at (3, -2), and returns to 0 at 4.">
+</figure>
+<div id="S6.SS1.SSS8.p2" class="ltx_para">
+<p class="ltx_p" style="text-align: center">Figure 6.2: Graph of <math id="S6.SS1.SSS8.p2.m1" class="ltx_Math" data-alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S6.SS1.SSS8.p3" class="ltx_para">
+<ol id="S6.I6" class="ltx_enumerate">
+<li id="S6.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">We can use the graph to estimate the output for various inputs. This is done by estimating the <math id="S6.I6.i1.p1.m1" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>-coordinate for the point on the graph with a specified <math id="S6.I6.i1.p1.m2" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>-coordinate. On the graph, draw vertical lines at <math id="S6.I6.i1.p1.m3" class="ltx_Math" data-alttext="x=-1" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math> and <math id="S6.I6.i1.p1.m4" class="ltx_Math" data-alttext="x=2" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></math> and estimate the values of <math id="S6.I6.i1.p1.m5" class="ltx_Math" data-alttext="f(-1)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S6.I6.i1.p1.m6" class="ltx_Math" data-alttext="f(2)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Similarly, we can estimate inputs of the function that produce a specified output. This is done by estimating the <math id="S6.I6.i2.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math>-coordinates of the points on the graph that have a specified <math id="S6.I6.i2.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>-coordinate. Draw a horizontal line at <math id="S6.I6.i2.p1.m3" class="ltx_Math" data-alttext="y=2" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>2</mn></mrow></math> and estimate at least two values of <math id="S6.I6.i2.p1.m4" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> such that <math id="S6.I6.i2.p1.m5" class="ltx_Math" data-alttext="f(x)=2" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I6.i3.p1" class="ltx_para">
+<p class="ltx_p">Use the graph in Figure 6.2 to estimate the range of the function <math id="S6.I6.i3.p1.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS1.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.9 </span>Arrow Diagrams</h3>
+
+<div id="S6.SS1.SSS9.p1" class="ltx_para">
+<p class="ltx_p">Sometimes the domain and codomain of a function are small, finite sets. When this is the case, we can define a function simply by specifying the outputs for each input in the domain. For example, if we let <math id="S6.SS1.SSS9.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S6.SS1.SSS9.p1.m2" class="ltx_Math" data-alttext="B=\{a,b\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>, we can define a function <math id="S6.SS1.SSS9.p1.m3" class="ltx_Math" data-alttext="F:A\rightarrow B" display="inline"><mrow><mi>F</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></mrow></math> by specifying that</p>
+</div>
+<div id="S6.SS1.SSS9.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex19.m1" class="ltx_Math" data-alttext="F(1)=a,F(2)=a,\text{ and }F(3)=b." display="block"><mrow><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow><mo>,</mo><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow><mo>,</mo><mrow><mrow><mtext> and </mtext><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.SS1.SSS9.p3" class="ltx_para">
+<p class="ltx_p">This is a function since each element of the domain is mapped to exactly one element in <math id="S6.SS1.SSS9.p3.m1" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. A convenient way to illustrate or visualize this type of function is with a so-called arrow diagram as shown in Figure 6.3. An arrow diagram can</p>
+</div>
+<figure id="S6.F2" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig6_1_3.jpg" id="S6.F2.g1" class="ltx_graphics ltx_centering ltx_img_square" width="200" height="234" alt="Arrow diagram mapping Set A 1, 2, 3 to Set B a, b. 1 maps to a. 2 maps to a. 3 maps to b.">
+<figcaption class="ltx_caption ltx_centering">Figure 6.3: Arrow Diagram for a Function</figcaption>
+</figure>
+<div id="S6.SS1.SSS9.p4" class="ltx_para">
+<p class="ltx_p">be used when the domain and codomain of the function are finite (and small). We represent the elements of each set with points and then use arrows to show how the elements of the domain are associated with elements of the codomain. For example, the arrow from the point 2 in <math id="S6.SS1.SSS9.p4.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to the point <math id="S6.SS1.SSS9.p4.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> in <math id="S6.SS1.SSS9.p4.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> represents the fact that <math id="S6.SS1.SSS9.p4.m4" class="ltx_Math" data-alttext="F(2)=a" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow></math>. In this case, we can use the arrow diagram in Figure 6.3 to conclude that <math id="S6.SS1.SSS9.p4.m5" class="ltx_Math" data-alttext="\operatorname{range}(F)=\{a,b\}" display="inline"><mrow><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S6.SS1.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.10 </span>Progress Check 6.4 (Working with Arrow Diagrams)</h3>
+
+<div id="S6.SS1.SSS10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS1.SSS10.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3,4\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="S6.SS1.SSS10.p1.m2" class="ltx_Math" data-alttext="B=\{a,b,c\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S6.SS1.SSS10.p2" class="ltx_para">
+<ol id="S6.I7" class="ltx_enumerate">
+<li id="S6.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">Which of the arrow diagrams in Figure 6.4 can be used to represent a function from <math id="S6.I7.i1.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.I7.i1.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>? Explain.</p>
+</div>
+</li>
+<li id="S6.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I7.i2.p1" class="ltx_para">
+<p class="ltx_p">For those arrow diagrams that can be used to represent a function from <math id="S6.I7.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.I7.i2.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, determine the range of the function.</p>
+</div>
+</li>
+</ol>
+</div>
+<figure id="S6.F3" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig6_1_4.jpg" id="S6.F3.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="200" height="64" alt="Three arrow diagrams mapping Set A 1, 2, 3, 4 to Set B a, b, c. Diagram 1: 1 to a, 2 to a, 3 to b, 4 to c. Diagram 2: 1 to a, 1 to b, 2 to b, 3 to a, 4 to c. Diagram 3: 1 to a, 2 to b, 4 to c (3 has no mapping).">
+<figcaption class="ltx_caption ltx_centering">Figure 6.4: Arrow Diagrams</figcaption>
+</figure>
+</section>
+<section id="S6.SS1.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.11 </span>Exercises 6.1</h3>
+
+<div id="S6.SS1.SSS11.p1" class="ltx_para">
+<ol id="S6.I8" class="ltx_enumerate">
+<li id="S6.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S6.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I8.i1.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by <math id="S6.I8.i1.p1.m2" class="ltx_Math" data-alttext="f(x)=x^{2}-2x" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>.</p>
+<ol id="S6.I8.i1.I1" class="ltx_enumerate">
+<li id="S6.I8.i1.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="S6.I8.i1.I1.ix1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> (a)</span> 
+<div id="S6.I8.i1.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">Evaluate <math id="S6.I8.i1.I1.ix1.p1.m1" class="ltx_Math" data-alttext="f(-3),f(-1),f(1)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="S6.I8.i1.I1.ix1.p1.m2" class="ltx_Math" data-alttext="f(3)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the set of all of the preimages of 0 and the set of all of the preimages of 4.</p>
+</div>
+</li>
+<li id="S6.I8.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Sketch a graph of the function <math id="S6.I8.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the range of the function <math id="S6.I8.i1.I1.i3.p1.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S6.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I8.i2.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}^{*}=\{x\in\mathbb{R}\mid x\geq 0\}" display="inline"><mrow><msup><mi>ℝ</mi><mo>∗</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and let <math id="S6.I8.i2.p1.m2" class="ltx_Math" data-alttext="s:\mathbb{R}\rightarrow\mathbb{R}^{*}" display="inline"><mrow><mi>s</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><msup><mi>ℝ</mi><mo>∗</mo></msup></mrow></mrow></math> be defined by <math id="S6.I8.i2.p1.m3" class="ltx_Math" data-alttext="s(x)=x^{2}" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>.</p>
+<ol id="S6.I8.i2.I1" class="ltx_enumerate">
+<li id="S6.I8.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Evaluate <math id="S6.I8.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="s(-3),s(-1),s(1)" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="S6.I8.i2.I1.i1.p1.m2" class="ltx_Math" data-alttext="s(3)" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine the set of all of the preimages of 0 and the set of all preimages of 2.</p>
+</div>
+</li>
+<li id="S6.I8.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Sketch a graph of the function <math id="S6.I8.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="s" display="inline"><mi>s</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I8.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Determine the range of the function <math id="S6.I8.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="s" display="inline"><mi>s</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I8.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S6.I8.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I8.i3.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> be defined by <math id="S6.I8.i3.p1.m2" class="ltx_Math" data-alttext="f(m)=3-m" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>3</mn><mo>−</mo><mi>m</mi></mrow></mrow></math>.</p>
+<ol id="S6.I8.i3.I1" class="ltx_enumerate">
+<li id="S6.I8.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Evaluate <math id="S6.I8.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="f(-7),f(-3),f(3)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="S6.I8.i3.I1.i1.p1.m3" class="ltx_Math" data-alttext="f(7)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the set of all of the preimages of 5 and the set of all of the preimages of 4.</p>
+</div>
+</li>
+<li id="S6.I8.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i3.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the range of the function <math id="S6.I8.i3.I1.i3.p1.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I8.i3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">This function can be considered a real function since <math id="S6.I8.i3.I1.i4.p1.m1" class="ltx_Math" data-alttext="\mathbb{Z}\subseteq\mathbb{R}" display="inline"><mrow><mi>ℤ</mi><mo>⊆</mo><mi>ℝ</mi></mrow></math>. Sketch a graph of this function. Note: The graph will be an infinite set of points that lie on a line. However, it will not be a line since its domain is not <math id="S6.I8.i3.I1.i4.p1.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> but is <math id="S6.I8.i3.I1.i4.p1.m3" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I8.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S6.I8.i4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.I8.i4.p1.m1" class="ltx_Math" data-alttext="f:\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow></mrow></math> be defined by <math id="S6.I8.i4.p1.m2" class="ltx_Math" data-alttext="f(m)=2m+1" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+<ol id="S6.I8.i4.I1" class="ltx_enumerate">
+<li id="S6.I8.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Evaluate <math id="S6.I8.i4.I1.i1.p1.m1" class="ltx_Math" data-alttext="f(-7),f(-3),f(3)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="S6.I8.i4.I1.i1.p1.m2" class="ltx_Math" data-alttext="f(7)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i4.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the set of all of the preimages of 5 and the set of all of the preimages of 4.</p>
+</div>
+</li>
+<li id="S6.I8.i4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i4.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine the range of the function <math id="S6.I8.i4.I1.i3.p1.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i4.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I8.i4.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i4.I1.i4.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Sketch a graph of the function <math id="S6.I8.i4.I1.i4.p1.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math>. See the comments in Exercise (3d).</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I8.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S6.I8.i5.p1" class="ltx_para">
+<p class="ltx_p">Recall that a real function is a function whose domain and codomain are subsets of the real numbers <math id="S6.I8.i5.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Most of the functions used in calculus are real functions. Quite often, a real function is given by a formula or a graph with no specific reference to the domain or the codomain. In these cases, the usual convention is to assume that the domain of the real function <math id="S6.I8.i5.p1.m2" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> is the set of all real numbers <math id="S6.I8.i5.p1.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> for which <math id="S6.I8.i5.p1.m4" class="ltx_Math" data-alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a real number, and that the codomain is <math id="S6.I8.i5.p1.m5" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. For example, if we define the (real) function <math id="S6.I8.i5.p1.m6" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> by</p>
+</div>
+<div id="S6.I8.i5.p2" class="ltx_para">
+<table role="presentation" id="S6.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex20.m1" class="ltx_Math" data-alttext="f(x)=\frac{x}{x-2}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S6.I8.i5.p3" class="ltx_para">
+<p class="ltx_p">we would be assuming that the domain is the set of all real numbers that are not equal to 2 and that the codomain is <math id="S6.I8.i5.p3.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+<div id="S6.I8.i5.p4" class="ltx_para">
+<p class="ltx_p">Determine the domain and range of each of the following real functions. It might help to use a graphing calculator to plot a graph of the function.</p>
+<ol id="S6.I8.i5.I1" class="ltx_enumerate">
+<li id="S6.I8.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S6.I8.i5.I1.i1.p1.m1" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> defined by <math id="S6.I8.i5.I1.i1.p1.m2" class="ltx_Math" data-alttext="k(x)=\sqrt{x-3}" display="inline"><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><mi>x</mi><mo>−</mo><mn>3</mn></mrow></msqrt></mrow></math>
+<math id="S6.I8.i5.I1.i1.p1.m3" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</li>
+<li id="S6.I8.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S6.I8.i5.I1.i2.p1.m1" class="ltx_Math" data-alttext="F" display="inline"><mi>F</mi></math> defined by <math id="S6.I8.i5.I1.i2.p1.m2" class="ltx_Math" data-alttext="F(x)=\ln(2x-1)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S6.I8.i5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S6.I8.i5.I1.i3.p1.m1" class="ltx_Math" data-alttext="f" display="inline"><mi>f</mi></math> defined by <math id="S6.I8.i5.I1.i3.p1.m2" class="ltx_Math" data-alttext="f(x)=3\sin(2x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>3</mn><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>
+<math id="S6.I8.i5.I1.i3.p1.m3" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</li>
+<li id="S6.I8.i5.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I8.i5.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S6.I8.i5.I1.i4.p1.m1" class="ltx_Math" data-alttext="g" display="inline"><mi>g</mi></math> defined by <math id="S6.I8.i5.I1.i4.p1.m2" class="ltx_Math" data-alttext="g(x)=\frac{4}{x^{2}-4}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mn>4</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow></mfrac></mrow></math></p>
+</div>
+</li>
+<li id="S6.I8.i5.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S6.I8.i5.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S6.I8.i5.I1.i5.p1.m1" class="ltx_Math" data-alttext="G" display="inline"><mi>G</mi></math> defined by <math id="S6.I8.i5.I1.i5.p1.m2" class="ltx_Math" data-alttext="G(x)=4\cos(\pi x)+8" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>4</mn><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mn>8</mn></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I8.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S6.I8.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i6.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> The number of divisors function. Let <math id="S6.I8.i6.p1.m2" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> be the function that associates with each natural number the number of its natural number divisors. That is, <math id="S6.I8.i6.p1.m3" class="ltx_Math" data-alttext="d:\mathbb{N}\rightarrow\mathbb{N}" display="inline"><mrow><mi>d</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℕ</mi><mo stretchy="false">→</mo><mi>ℕ</mi></mrow></mrow></math> where <math id="S6.I8.i6.p1.m4" class="ltx_Math" data-alttext="d(n)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of natural number divisors of <math id="S6.I8.i6.p1.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. For example, <math id="S6.I8.i6.p1.m6" class="ltx_Math" data-alttext="d(6)=4" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow></math> since <math id="S6.I8.i6.p1.m7" class="ltx_Math" data-alttext="1,2,3" display="inline"><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow></math>, and 6 are the natural number divisors of 6.</p>
+<ol id="S6.I8.i6.I1" class="ltx_enumerate">
+<li id="S6.I8.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Calculate <math id="S6.I8.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="d(k)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> for each natural number <math id="S6.I8.i6.I1.i1.p1.m2" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> from 1 through 12.</p>
+</div>
+</li>
+<li id="S6.I8.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Does there exist a natural number <math id="S6.I8.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I8.i6.I1.i2.p1.m2" class="ltx_Math" data-alttext="d(n)=1" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>? What is the set of preimages of the natural number 1?</p>
+</div>
+</li>
+<li id="S6.I8.i6.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i6.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Does there exist a natural number <math id="S6.I8.i6.I1.i3.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I8.i6.I1.i3.p1.m2" class="ltx_Math" data-alttext="d(n)=2" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>? If so, determine the set of all preimages of the natural number 2.</p>
+</div>
+</li>
+<li id="S6.I8.i6.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I8.i6.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false? Justify your conclusion.</p>
+</div>
+<div id="S6.I8.i6.I1.i4.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I8.i6.I1.i4.p2.m1" class="ltx_Math" data-alttext="m,n\in\mathbb{N}" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S6.I8.i6.I1.i4.p2.m2" class="ltx_Math" data-alttext="m\neq n" display="inline"><mrow><mi>m</mi><mo>≠</mo><mi>n</mi></mrow></math>, then <math id="S6.I8.i6.I1.i4.p2.m3" class="ltx_Math" data-alttext="d(m)\neq d(n)" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i6.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S6.I8.i6.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Calculate <math id="S6.I8.i6.I1.i5.p1.m1" class="ltx_Math" data-alttext="d\left(2^{k}\right)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><msup><mn>2</mn><mi>k</mi></msup><mo>)</mo></mrow></mrow></math> for <math id="S6.I8.i6.I1.i5.p1.m2" class="ltx_Math" data-alttext="k=0" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></math> and for each natural number <math id="S6.I8.i6.I1.i5.p1.m3" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> from 1 through 6.</p>
+</div>
+</li>
+<li id="S6.I8.i6.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S6.I8.i6.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Based on your work in Exercise (6e), make a conjecture for a formula for <math id="S6.I8.i6.I1.i6.p1.m1" class="ltx_Math" data-alttext="d\left(2^{n}\right)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><msup><mn>2</mn><mi>n</mi></msup><mo>)</mo></mrow></mrow></math> where <math id="S6.I8.i6.I1.i6.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> is a nonnegative integer. Then explain why your conjecture is correct.</p>
+</div>
+</li>
+<li id="S6.I8.i6.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S6.I8.i6.I1.i7.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement is true or false?</p>
+</div>
+<div id="S6.I8.i6.I1.i7.p2" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.I8.i6.I1.i7.p2.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, there exists a natural number <math id="S6.I8.i6.I1.i7.p2.m2" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that <math id="S6.I8.i6.I1.i7.p2.m3" class="ltx_Math" data-alttext="d(m)=n" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S6.I8.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S6.I8.i7.p1" class="ltx_para">
+<p class="ltx_p">In Exercise (6), we introduced the number of divisors function <math id="S6.I8.i7.p1.m1" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math>. For this function, <math id="S6.I8.i7.p1.m2" class="ltx_Math" data-alttext="d:\mathbb{N}\rightarrow\mathbb{N}" display="inline"><mrow><mi>d</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℕ</mi><mo stretchy="false">→</mo><mi>ℕ</mi></mrow></mrow></math>, where <math id="S6.I8.i7.p1.m3" class="ltx_Math" data-alttext="d(n)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of natural number divisors of <math id="S6.I8.i7.p1.m4" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S6.I8.i7.p2" class="ltx_para">
+<p class="ltx_p">A function that is related to this function is the so-called set of divisors function. This can be defined as a function <math id="S6.I8.i7.p2.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> that associates with each natural number the set of its distinct natural number factors. For example, <math id="S6.I8.i7.p2.m2" class="ltx_Math" data-alttext="S(6)=\{1,2,3,6\}" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>6</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S6.I8.i7.p2.m3" class="ltx_Math" data-alttext="S(10)=\{1,2,5,10\}" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S6.I8.i7.I1" class="ltx_enumerate">
+<li id="S6.I8.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I8.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Discuss the function <math id="S6.I8.i7.I1.i1.p1.m2" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> by carefully stating its domain, codomain, and its rule for determining outputs.</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I8.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine <math id="S6.I8.i7.I1.i2.p1.m2" class="ltx_Math" data-alttext="S(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> for at least five different values of <math id="S6.I8.i7.I1.i2.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I8.i7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I8.i7.I1.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Determine <math id="S6.I8.i7.I1.i3.p1.m2" class="ltx_Math" data-alttext="S(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> for at least three different prime number values of <math id="S6.I8.i7.I1.i3.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I8.i7.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Does there exist a natural number <math id="S6.I8.i7.I1.i4.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I8.i7.I1.i4.p1.m2" class="ltx_Math" data-alttext="\operatorname{card}(S(n))=1" display="inline"><mrow><mrow><mi>card</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>? Explain. [Recall that card <math id="S6.I8.i7.I1.i4.p1.m3" class="ltx_Math" data-alttext="(S(n))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is the number of elements in the set <math id="S6.I8.i7.I1.i4.p1.m4" class="ltx_Math" data-alttext="S(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.]</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S6.I8.i7.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Does there exist a natural number <math id="S6.I8.i7.I1.i5.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I8.i7.I1.i5.p1.m2" class="ltx_Math" data-alttext="\operatorname{card}(S(n))=2" display="inline"><mrow><mrow><mi>card</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S6.I8.i7.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Write the output for the function <math id="S6.I8.i7.I1.i6.p1.m1" class="ltx_Math" data-alttext="d" display="inline"><mi>d</mi></math> in terms of the output for the function <math id="S6.I8.i7.I1.i6.p1.m2" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math>. That is, write <math id="S6.I8.i7.I1.i6.p1.m3" class="ltx_Math" data-alttext="d(n)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> in terms of <math id="S6.I8.i7.I1.i6.p1.m4" class="ltx_Math" data-alttext="S(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S6.I8.i7.I1.i7.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false? Justify your conclusion.</p>
+</div>
+<div id="S6.I8.i7.I1.i7.p2" class="ltx_para">
+<p class="ltx_p">For all natural numbers <math id="S6.I8.i7.I1.i7.p2.m1" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> and <math id="S6.I8.i7.I1.i7.p2.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, if <math id="S6.I8.i7.I1.i7.p2.m3" class="ltx_Math" data-alttext="m\neq n" display="inline"><mrow><mi>m</mi><mo>≠</mo><mi>n</mi></mrow></math>, then <math id="S6.I8.i7.I1.i7.p2.m4" class="ltx_Math" data-alttext="S(m)\neq S(n)" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S6.I8.i7.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S6.I8.i7.I1.i8.p1" class="ltx_para">
+<p class="ltx_p">Is the following statement true or false? Justify your conclusion.</p>
+</div>
+<div id="S6.I8.i7.I1.i8.p2" class="ltx_para">
+<p class="ltx_p">For all sets <math id="S6.I8.i7.I1.i8.p2.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> that are subsets of <math id="S6.I8.i7.I1.i8.p2.m2" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>, there exists a natural number <math id="S6.I8.i7.I1.i8.p2.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> such that <math id="S6.I8.i7.I1.i8.p2.m4" class="ltx_Math" data-alttext="S(n)=T" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S6.SS1.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.1.12 </span>Explorations and Activities</h3>
+
+<div id="S6.SS1.SSS12.p1" class="ltx_para">
+<ol id="S6.I9" class="ltx_enumerate">
+<li id="S6.I9.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S6.I9.i8.p1" class="ltx_para">
+<p class="ltx_p">Creating Functions with Finite Domains. Let <math id="S6.I9.i8.p1.m1" class="ltx_Math" data-alttext="A=\{a,b,c,d\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S6.I9.i8.p1.m2" class="ltx_Math" data-alttext="B=\{a,b,c\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="S6.I9.i8.p1.m3" class="ltx_Math" data-alttext="C=\{s,t,u,v\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo>,</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">}</mo></mrow></mrow></math>. In each of the following exercises, draw an arrow diagram to represent your function when it is appropriate.</p>
+<ol id="S6.I9.i8.I1" class="ltx_enumerate">
+<li id="S6.I9.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I9.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Create a function <math id="S6.I9.i8.I1.i1.p1.m1" class="ltx_Math" data-alttext="f:A\rightarrow C" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math> whose range is the set <math id="S6.I9.i8.I1.i1.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> or explain why it is not possible to construct such a function.</p>
+</div>
+</li>
+<li id="S6.I9.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I9.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Create a function <math id="S6.I9.i8.I1.i2.p1.m1" class="ltx_Math" data-alttext="f:A\rightarrow C" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math> whose range is the set <math id="S6.I9.i8.I1.i2.p1.m2" class="ltx_Math" data-alttext="\{u,v\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">}</mo></mrow></math> or explain why it is not possible to construct such a function.</p>
+</div>
+</li>
+<li id="S6.I9.i8.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S6.I9.i8.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Create a function <math id="S6.I9.i8.I1.i3.p1.m1" class="ltx_Math" data-alttext="f:B\rightarrow C" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>B</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math> whose range is the set <math id="S6.I9.i8.I1.i3.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> or explain why it is not possible to construct such a function.</p>
+</div>
+</li>
+<li id="S6.I9.i8.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S6.I9.i8.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Create a function <math id="S6.I9.i8.I1.i4.p1.m1" class="ltx_Math" data-alttext="f:A\rightarrow C" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math> whose range is the set <math id="S6.I9.i8.I1.i4.p1.m2" class="ltx_Math" data-alttext="\{u\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>u</mi><mo stretchy="false">}</mo></mrow></math> or explain why it is not possible to construct such a function.</p>
+</div>
+</li>
+<li id="S6.I9.i8.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S6.I9.i8.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If possible, create a function <math id="S6.I9.i8.I1.i5.p1.m1" class="ltx_Math" data-alttext="f:A\rightarrow C" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>C</mi></mrow></mrow></math> that satisfies the following condition:</p>
+</div>
+<div id="S6.I9.i8.I1.i5.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I9.i8.I1.i5.p2.m1" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S6.I9.i8.I1.i5.p2.m2" class="ltx_Math" data-alttext="x\neq y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math>, then <math id="S6.I9.i8.I1.i5.p2.m3" class="ltx_Math" data-alttext="f(x)\neq f(y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. 
+<br class="ltx_break">If it is not possible to create such a function, explain why.</p>
+</div>
+</li>
+<li id="S6.I9.i8.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S6.I9.i8.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">If possible, create a function <math id="S6.I9.i8.I1.i6.p1.m1" class="ltx_Math" data-alttext="f:A\rightarrow\{s,t,u\}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>A</mi><mo stretchy="false">→</mo><mrow><mo stretchy="false">{</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo>,</mo><mi>u</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> that satisfies the following condition:</p>
+</div>
+<div id="S6.I9.i8.I1.i6.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="S6.I9.i8.I1.i6.p2.m1" class="ltx_Math" data-alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, if <math id="S6.I9.i8.I1.i6.p2.m2" class="ltx_Math" data-alttext="x\neq y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math>, then <math id="S6.I9.i8.I1.i6.p2.m3" class="ltx_Math" data-alttext="f(x)\neq f(y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+<br class="ltx_break">If it is not possible to create such a function, explain why.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
