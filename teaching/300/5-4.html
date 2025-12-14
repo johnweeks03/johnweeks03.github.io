@@ -1,0 +1,786 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5 Set Theory</title>
+<!--Generated on Sun Dec 14 17:26:40 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S5" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Set Theory</h1>
+
+<section id="S5.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4 </span>Cartesian Products</h2>
+
+<section id="S5.SS4.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.4.1 </span>Beginning Activity 1 (An Equation with Two Variables)</h3>
+
+<div id="S5.SS4.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/2-3.html">Section 2.3</a>, we introduced the concept of the truth set of an open sentence with one variable. This was defined to be the set of all elements in the universal set that can be substituted for the variable to make the open sentence a true statement.</p>
+</div>
+<div id="S5.SS4.SSS1.p2" class="ltx_para">
+<p class="ltx_p">In previous mathematics courses, we have also had experience with open sentences with two variables. For example, if we assume that <math id="S5.SS4.SSS1.p2.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.SS4.SSS1.p2.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> represent real numbers, then the equation</p>
+</div>
+<div id="S5.SS4.SSS1.p3" class="ltx_para">
+<table role="presentation" id="S5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex1.m1" class="ltx_Math" data-alttext="2x+3y=12" display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS1.p4" class="ltx_para">
+<p class="ltx_p">is an open sentence with two variables. An element of the truth set of this open sentence (also called a solution of the equation) is an ordered pair (<math id="S5.SS4.SSS1.p4.m1" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>) of real numbers so that when <math id="S5.SS4.SSS1.p4.m2" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> is substituted for <math id="S5.SS4.SSS1.p4.m3" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S5.SS4.SSS1.p4.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> is substituted for <math id="S5.SS4.SSS1.p4.m5" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>, the open sentence becomes a true statement (a true equation in this case). For example, we see that the ordered pair <math id="S5.SS4.SSS1.p4.m6" class="ltx_Math" data-alttext="(6,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> is in the truth set for this open sentence since</p>
+</div>
+<div id="S5.SS4.SSS1.p5" class="ltx_para">
+<table role="presentation" id="S5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex2.m1" class="ltx_Math" data-alttext="2\cdot 6+3\cdot 0=12" display="block"><mrow><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>6</mn></mrow><mo>+</mo><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>0</mn></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS1.p6" class="ltx_para">
+<p class="ltx_p">is a true statement. On the other hand, the ordered pair <math id="S5.SS4.SSS1.p6.m1" class="ltx_Math" data-alttext="(4,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> is not in the truth set for this open sentence since</p>
+</div>
+<div id="S5.SS4.SSS1.p7" class="ltx_para">
+<table role="presentation" id="S5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex3.m1" class="ltx_Math" data-alttext="2\cdot 4+3\cdot 1=12" display="block"><mrow><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn></mrow><mo>+</mo><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS1.p8" class="ltx_para">
+<p class="ltx_p">is a false statement.
+<br class="ltx_break">Important Note: The order of the two numbers in the ordered pair is very important. We are using the convention that the first number is to be substituted for <math id="S5.SS4.SSS1.p8.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and the second number is to be substituted for <math id="S5.SS4.SSS1.p8.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math>. With this convention, <math id="S5.SS4.SSS1.p8.m3" class="ltx_Math" data-alttext="(3,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math> is a solution of the equation <math id="S5.SS4.SSS1.p8.m4" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math>, but <math id="S5.SS4.SSS1.p8.m5" class="ltx_Math" data-alttext="(2,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> is not a solution of this equation.</p>
+</div>
+<div id="S5.SS4.SSS1.p9" class="ltx_para">
+<ol id="S5.I1" class="ltx_enumerate">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">List six different elements of the truth set (often called the solution set) of the open sentence with two variables <math id="S5.I1.i1.p1.m1" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">From previous mathematics courses, we know that the graph of the equation <math id="S5.I1.i2.p1.m1" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math> is a straight line. Sketch the graph of the equation <math id="S5.I1.i2.p1.m2" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math> in the <math id="S5.I1.i2.p1.m3" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-coordinate plane. What does the graph of the equation <math id="S5.I1.i2.p1.m4" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math> show?</p>
+</div>
+</li>
+<li id="S5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Write a description of the solution set <math id="S5.I1.i3.p1.m1" class="ltx_Math" data-alttext="S" display="inline"><mi>S</mi></math> of the equation <math id="S5.I1.i3.p1.m2" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math> using set builder notation.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS4.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.4.2 </span>Beginning Activity 2 (The Cartesian Product of Two Sets)</h3>
+
+<div id="S5.SS4.SSS2.p1" class="ltx_para">
+<p class="ltx_p">In Activity 1, we worked with ordered pairs without providing a formal definition of an ordered pair. We instead relied on your previous work with ordered pairs, primarily from graphing equations with two variables. Following is a formal definition of an ordered pair.</p>
+</div>
+<div id="S5.SS4.SSS2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S5.SS4.SSS2.p2.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS4.SSS2.p2.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be sets. An <span class="ltx_text ltx_font_bold">ordered pair</span> (with first element from <math id="S5.SS4.SSS2.p2.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and second element from <math id="S5.SS4.SSS2.p2.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>) is a single pair of objects, denoted by (<math id="S5.SS4.SSS2.p2.m5" class="ltx_Math" data-alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>), with <math id="S5.SS4.SSS2.p2.m6" class="ltx_Math" data-alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS4.SSS2.p2.m7" class="ltx_Math" data-alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math> and an implied order. This means that for two ordered pairs to be equal, they must contain exactly the same objects in the same order. That is, if <math id="S5.SS4.SSS2.p2.m8" class="ltx_Math" data-alttext="a,c\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS4.SSS2.p2.m9" class="ltx_Math" data-alttext="b,d\in B" display="inline"><mrow><mrow><mi>b</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>B</mi></mrow></math>, then</p>
+</div>
+<div id="S5.SS4.SSS2.p3" class="ltx_para">
+<table role="presentation" id="S5.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex4.m1" class="ltx_Math" data-alttext="(a,b)=(c,d)\text{ if and only if }a=c\text{ and }b=d." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> if and only if </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mi>d</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS2.p4" class="ltx_para">
+<p class="ltx_p">The objects in the ordered pair are called the <span class="ltx_text ltx_font_bold">coordinates</span> of the ordered pair. In the ordered pair <math id="S5.SS4.SSS2.p4.m1" class="ltx_Math" data-alttext="(a,b),a" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>a</mi></mrow></math> is the first coordinate and <math id="S5.SS4.SSS2.p4.m2" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> is the second coordinate.</p>
+</div>
+<div id="S5.SS4.SSS2.p5" class="ltx_para">
+<p class="ltx_p">We will now introduce a new set operation that gives a way of combining elements from two given sets to form ordered pairs. The basic idea is that we will create a set of ordered pairs.</p>
+</div>
+<div id="S5.SS4.SSS2.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. If <math id="S5.SS4.SSS2.p6.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS4.SSS2.p6.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> are sets, then the <span class="ltx_text ltx_font_bold">Cartesian product</span>, <math id="S5.SS4.SSS2.p6.m3" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>, of <math id="S5.SS4.SSS2.p6.m4" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS4.SSS2.p6.m5" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is the set of all ordered pairs <math id="S5.SS4.SSS2.p6.m6" class="ltx_Math" data-alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> where <math id="S5.SS4.SSS2.p6.m7" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS4.SSS2.p6.m8" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>. We use the notation <math id="S5.SS4.SSS2.p6.m9" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math> for the Cartesian product of <math id="S5.SS4.SSS2.p6.m10" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.SS4.SSS2.p6.m11" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>, and using set builder notation, we can write</p>
+</div>
+<div id="S5.SS4.SSS2.p7" class="ltx_para">
+<table role="presentation" id="S5.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex5.m1" class="ltx_Math" data-alttext="A\times B=\{(x,y)\mid x\in A\text{ and }y\in B\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS2.p8" class="ltx_para">
+<p class="ltx_p">We frequently read <math id="S5.SS4.SSS2.p8.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math> as "<math id="S5.SS4.SSS2.p8.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> cross <math id="S5.SS4.SSS2.p8.m3" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>." In the case where the two sets are the same, we will write <math id="S5.SS4.SSS2.p8.m4" class="ltx_Math" data-alttext="A^{2}" display="inline"><msup><mi>A</mi><mn>2</mn></msup></math> for <math id="S5.SS4.SSS2.p8.m5" class="ltx_Math" data-alttext="A\times A" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math>. That is,</p>
+</div>
+<div id="S5.SS4.SSS2.p9" class="ltx_para">
+<table role="presentation" id="S5.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex6.m1" class="ltx_Math" data-alttext="A^{2}=A\times A=\{(a,b)\mid a\in A\text{ and }b\in A\}." display="block"><mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS2.p10" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS4.SSS2.p10.m1" class="ltx_Math" data-alttext="A=\{1,2,3\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S5.SS4.SSS2.p10.m2" class="ltx_Math" data-alttext="B=\{a,b\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS4.SSS2.p11" class="ltx_para">
+<ol id="S5.I2" class="ltx_enumerate">
+<li id="S5.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Is the ordered pair (<math id="S5.I2.i1.p1.m1" class="ltx_Math" data-alttext="3,a" display="inline"><mrow><mn>3</mn><mo>,</mo><mi>a</mi></mrow></math>) in the Cartesian product <math id="S5.I2.i1.p1.m2" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S5.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the ordered pair (<math id="S5.I2.i2.p1.m1" class="ltx_Math" data-alttext="3,a" display="inline"><mrow><mn>3</mn><mo>,</mo><mi>a</mi></mrow></math>) in the Cartesian product <math id="S5.I2.i2.p1.m2" class="ltx_Math" data-alttext="A\times A" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S5.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Is the ordered pair <math id="S5.I2.i3.p1.m1" class="ltx_Math" data-alttext="(3,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> in the Cartesian product <math id="S5.I2.i3.p1.m2" class="ltx_Math" data-alttext="A\times A" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S5.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify all the elements of <math id="S5.I2.i4.p1.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>. (Remember that the elements of <math id="S5.I2.i4.p1.m2" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math> will be ordered pairs.)</p>
+</div>
+</li>
+<li id="S5.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Use the roster method to specify all of the elements of the set <math id="S5.I2.i5.p1.m1" class="ltx_Math" data-alttext="A\times A=A^{2}" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I2.i6.p1" class="ltx_para">
+<p class="ltx_p">List all the relationships between the sets in Part (1) that you observe.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS4.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.4.3 </span>The Cartesian Plane</h3>
+
+<div id="S5.SS4.SSS3.p1" class="ltx_para">
+<p class="ltx_p">In Beginning Activity 1, we sketched the graph of the equation <math id="S5.SS4.SSS3.p1.m1" class="ltx_Math" data-alttext="2x+3y=12" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>12</mn></mrow></math> in the <math id="S5.SS4.SSS3.p1.m2" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane. This <math id="S5.SS4.SSS3.p1.m3" class="ltx_Math" data-alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane, with which you are familiar, is a representation of the set <math id="S5.SS4.SSS3.p1.m4" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math> or <math id="S5.SS4.SSS3.p1.m5" class="ltx_Math" data-alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>. This plane is called the Cartesian plane.</p>
+</div>
+<div id="S5.SS4.SSS3.p2" class="ltx_para">
+<p class="ltx_p">The basic idea is that each ordered pair of real numbers corresponds to a point in the plane, and each point in the plane corresponds to an ordered pair of real numbers. This geometric representation of <math id="S5.SS4.SSS3.p2.m1" class="ltx_Math" data-alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> is an extension of the geometric representation of <math id="S5.SS4.SSS3.p2.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> as a straight line whose points correspond to real numbers.</p>
+</div>
+<div id="S5.SS4.SSS3.p3" class="ltx_para">
+<p class="ltx_p">Since the Cartesian product <math id="S5.SS4.SSS3.p3.m1" class="ltx_Math" data-alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> corresponds to the Cartesian plane, the Cartesian product of two subsets of <math id="S5.SS4.SSS3.p3.m2" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> corresponds to a subset of the Cartesian plane. For example, if <math id="S5.SS4.SSS3.p3.m3" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> is the interval [ 1,3 ], and <math id="S5.SS4.SSS3.p3.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> is the interval [ 2,5 ], then</p>
+</div>
+<div id="S5.SS4.SSS3.p4" class="ltx_para">
+<table role="presentation" id="S5.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex7.m1" class="ltx_Math" data-alttext="A\times B=\left\{(x,y)\in\mathbb{R}^{2}\mid 1\leq x\leq 3\text{ and }2\leq y%
+\leq 5\right\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mrow><mn>3</mn><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mn>2</mn></mrow><mo>≤</mo><mi>y</mi><mo>≤</mo><mn>5</mn></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS3.p5" class="ltx_para">
+<p class="ltx_p">A graph of the set <math id="S5.SS4.SSS3.p5.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math> can then be drawn in the Cartesian plane as shown in Figure 5.6.</p>
+</div>
+<figure id="S5.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/fig5_4.jpg" id="S5.F1.g1" class="ltx_graphics ltx_centering ltx_img_portrait" width="200" height="254" alt="Shaded rectangle where x ranges from 1 to 3 and y ranges from 2 to 5">
+<figcaption class="ltx_caption ltx_centering">Figure 5.6: Cartesian Product <math id="S5.F1.m2" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math></figcaption>
+</figure>
+<div id="S5.SS4.SSS3.p6" class="ltx_para">
+<p class="ltx_p">This illustrates that the graph of a Cartesian product of two intervals of finite length in <math id="S5.SS4.SSS3.p6.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> corresponds to the interior of a rectangle and possibly some or all of its
+<br class="ltx_break">boundary. The solid line for the boundary in Figure 5.6 indicates that the boundary is included. In this case, the Cartesian product contained all of the boundary of the rectangle. When the graph does not contain a portion of the boundary, we usually draw that portion of the boundary with a dotted line.</p>
+</div>
+<div id="S5.SS4.SSS3.p7" class="ltx_para">
+<p class="ltx_p">Note: A Caution about Notation. The standard notation for an open interval in <math id="S5.SS4.SSS3.p7.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> is the same as the notation for an ordered pair, which is an element of <math id="S5.SS4.SSS3.p7.m2" class="ltx_Math" data-alttext="\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math>. We need to use the context in which the notation is used to determine which interpretation is intended. For example,</p>
+</div>
+<div id="S5.SS4.SSS3.p8" class="ltx_para">
+<ul id="S5.I3" class="ltx_itemize">
+<li id="S5.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">If we write <math id="S5.I3.i1.p1.m1" class="ltx_Math" data-alttext="(\sqrt{2},7)\in\mathbb{R}\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>ℝ</mi></mrow></mrow></math>, then we are using <math id="S5.I3.i1.p1.m2" class="ltx_Math" data-alttext="(\sqrt{2},7)" display="inline"><mrow><mo stretchy="false">(</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></math> to represent an ordered pair of real numbers.</p>
+</div>
+</li>
+<li id="S5.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">If we write <math id="S5.I3.i2.p1.m1" class="ltx_Math" data-alttext="(1,2)\times\{4\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math>, then we are interpreting <math id="S5.I3.i2.p1.m2" class="ltx_Math" data-alttext="(1,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math> as an open interval. We could write</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS4.SSS3.p9" class="ltx_para">
+<table role="presentation" id="S5.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex8.m1" class="ltx_Math" data-alttext="(1,2)\times\{4\}=\{(x,4)\mid 1&lt;x&lt;2\}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS3.p10" class="ltx_para">
+<p class="ltx_p">The following progress check explores some of the same ideas explored in Progress Check 5.23 except that intervals of real numbers are used for the sets.</p>
+</div>
+</section>
+<section id="S5.SS4.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.4.4 </span>Progress Check 5.24 (Cartesian Products of Intervals)</h3>
+
+<div id="S5.SS4.SSS4.p1" class="ltx_para">
+<p class="ltx_p">We will use the following intervals that are subsets of <math id="S5.SS4.SSS4.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+<div id="S5.SS4.SSS4.p2" class="ltx_para">
+<table role="presentation" id="S5.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex9.m1" class="ltx_Math" data-alttext="A=[0,2]\quad T=(1,2)\quad B=[2,4)\quad C=(3,5]" display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p3" class="ltx_para">
+<ol id="S5.I4" class="ltx_enumerate">
+<li id="S5.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Draw a graph of each of the following subsets of the Cartesian plane and write each subset using set builder notation.</p>
+<ol id="S5.I4.i1.I1" class="ltx_enumerate">
+<li id="S5.I4.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I4.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I4.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="T\times B" display="inline"><mrow><mi>T</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I4.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="A\times C" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I4.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i4.p1.m1" class="ltx_Math" data-alttext="A\times(B\cap C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I4.i1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i5.p1.m1" class="ltx_Math" data-alttext="(A\times B)\cap(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I4.i1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i6.p1.m1" class="ltx_Math" data-alttext="A\times(B\cup C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S5.I4.i1.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i7.p1.m1" class="ltx_Math" data-alttext="(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S5.I4.i1.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i8.p1.m1" class="ltx_Math" data-alttext="A\times(B-C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>−</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S5.I4.i1.I1.i9.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i9.p1.m1" class="ltx_Math" data-alttext="(A\times B)-(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I4.i1.I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(j)</span> 
+<div id="S5.I4.i1.I1.i10.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I4.i1.I1.i10.p1.m1" class="ltx_Math" data-alttext="B\times A" display="inline"><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">List all the relationships between the sets in Part (1) that you observe.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS4.SSS4.p4" class="ltx_para">
+<p class="ltx_p">One purpose of the work in Progress Checks 5.23 and 5.24 was to indicate the plausibility of many of the results contained in the next theorem.</p>
+</div>
+<div id="Theorem_5.25" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5.25.</span> Let <math id="S5.SS4.SSS4.p5.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.SS4.SSS4.p5.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be sets. Then</p>
+</div>
+<div id="S5.SS4.SSS4.p6" class="ltx_para">
+<ol id="S5.I5" class="ltx_enumerate">
+<li id="S5.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i1.p1.m1" class="ltx_Math" data-alttext="A\times(B\cap C)=(A\times B)\cap(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I5.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i2.p1.m1" class="ltx_Math" data-alttext="A\times(B\cup C)=(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I5.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i3.p1.m1" class="ltx_Math" data-alttext="(A\cap B)\times C=(A\times C)\cap(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I5.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i4.p1.m1" class="ltx_Math" data-alttext="(A\cup B)\times C=(A\times C)\cup(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I5.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i5.p1.m1" class="ltx_Math" data-alttext="A\times(B-C)=(A\times B)-(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>−</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I5.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I5.i6.p1.m1" class="ltx_Math" data-alttext="(A-B)\times C=(A\times C)-(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I5.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S5.I5.i7.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I5.i7.p1.m1" class="ltx_Math" data-alttext="T\subseteq A" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>A</mi></mrow></math>, then <math id="S5.I5.i7.p1.m2" class="ltx_Math" data-alttext="T\times B\subseteq A\times B" display="inline"><mrow><mrow><mi>T</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I5.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S5.I5.i8.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I5.i8.p1.m1" class="ltx_Math" data-alttext="Y\subseteq B" display="inline"><mrow><mi>Y</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S5.I5.i8.p1.m2" class="ltx_Math" data-alttext="A\times Y\subseteq A\times B" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>Y</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS4.SSS4.p7" class="ltx_para">
+<p class="ltx_p">We will not prove all these results; rather, we will prove Part (2) of Theorem 5.25 and leave some of the rest to the exercises. In constructing these proofs, we need to keep in mind that Cartesian products are sets, and so we follow many of the same principles to prove set relationships that were introduced in <a href="https://johnweeks03.github.io/teaching/300/5-2.html">Sections 5.2</a> and <a href="https://johnweeks03.github.io/teaching/300/5-3.html">5.3.</a></p>
+</div>
+<div id="S5.SS4.SSS4.p8" class="ltx_para">
+<p class="ltx_p">The other thing to remember is that the elements of a Cartesian product are ordered pairs. So when we start a proof of a result such as Part (2) of Theorem 5.25, the primary goal is to prove that the two sets are equal. We will do this by proving that each one is a subset of the other one. So if we want to prove that <math id="S5.SS4.SSS4.p8.m1" class="ltx_Math" data-alttext="A\times(B\cup C)\subseteq(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we can start by choosing an arbitrary element of <math id="S5.SS4.SSS4.p8.m2" class="ltx_Math" data-alttext="A\times(B\cup C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. The goal is then to show that this element must be in <math id="S5.SS4.SSS4.p8.m3" class="ltx_Math" data-alttext="(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. When we start by choosing an arbitrary element of <math id="S5.SS4.SSS4.p8.m4" class="ltx_Math" data-alttext="A\times(B\cup C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, we could give that element a name. For example, we could start by letting</p>
+</div>
+<div id="S5.SS4.SSS4.p9" class="ltx_para">
+<table role="presentation" id="S5.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex10.m1" class="ltx_Math" data-alttext="u\text{ be an element of }A\times(B\cup C)." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mtext> be an element of </mtext><mo>⁢</mo><mi>A</mi></mrow><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p10" class="ltx_para">
+<p class="ltx_p">We can then use the definition of "ordered pair" to conclude that</p>
+</div>
+<div id="S5.SS4.SSS4.p11" class="ltx_para">
+<table role="presentation" id="S5.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex11.m1" class="ltx_Math" data-alttext="\text{ there exists }x\in A\text{ and there exists }y\in B\cup C\text{ such %
+that }u=(x,y)\text{. }" display="block"><mrow><mrow><mtext> there exists </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and there exists </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mrow><mi>B</mi><mo>∪</mo><mrow><mi>C</mi><mo>⁢</mo><mtext> such that </mtext><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p12" class="ltx_para">
+<p class="ltx_p">In order to prove that <math id="S5.SS4.SSS4.p12.m1" class="ltx_Math" data-alttext="A\times(B\cup C)\subseteq(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we must now show that the ordered pair <math id="S5.SS4.SSS4.p12.m2" class="ltx_Math" data-alttext="u" display="inline"><mi>u</mi></math> from (1) is in <math id="S5.SS4.SSS4.p12.m3" class="ltx_Math" data-alttext="(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. In order to do this, we can use the definition of set union and prove that</p>
+</div>
+<div id="S5.SS4.SSS4.p13" class="ltx_para">
+<table role="presentation" id="S5.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex12.m1" class="ltx_Math" data-alttext="u\in(A\times B)\text{ or }u\in(A\times C)." display="block"><mrow><mrow><mi>u</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> or </mtext><mo>⁢</mo><mi>u</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p14" class="ltx_para">
+<p class="ltx_p">Since <math id="S5.SS4.SSS4.p14.m1" class="ltx_Math" data-alttext="u=(x,y)" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we can prove (3) by proving that</p>
+</div>
+<div id="S5.SS4.SSS4.p15" class="ltx_para">
+<table role="presentation" id="S5.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex13.m1" class="ltx_Math" data-alttext="(x\in A\text{ and }y\in B)\text{ or }(x\in A\text{ and }y\in C)." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> or </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p16" class="ltx_para">
+<p class="ltx_p">If we look at the sentences in (2) and (4), it would seem that we are very close to proving that <math id="S5.SS4.SSS4.p16.m1" class="ltx_Math" data-alttext="A\times(B\cup C)\subseteq(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Following is a proof of Part (2) of Theorem 5.25.</p>
+</div>
+<div id="S5.SS4.SSS4.p17" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5.25 (Part (2)).</span> Let <math id="S5.SS4.SSS4.p17.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.SS4.SSS4.p17.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be sets. Then</p>
+</div>
+<div id="S5.SS4.SSS4.p18" class="ltx_para">
+<table role="presentation" id="S5.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex14.m1" class="ltx_Math" data-alttext="A\times(B\cup C)=(A\times B)\cup(A\times C)." display="block"><mrow><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p19" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Let <math id="S5.SS4.SSS4.p19.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.SS4.SSS4.p19.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be sets. We will prove that <math id="S5.SS4.SSS4.p19.m3" class="ltx_Math" data-alttext="A\times(B\cup C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is equal to <math id="S5.SS4.SSS4.p19.m4" class="ltx_Math" data-alttext="(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> by proving that each set is a subset of the other set.</p>
+</div>
+<div id="S5.SS4.SSS4.p20" class="ltx_para">
+<p class="ltx_p">To prove that <math id="S5.SS4.SSS4.p20.m1" class="ltx_Math" data-alttext="A\times(B\cup C)\subseteq(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we let <math id="S5.SS4.SSS4.p20.m2" class="ltx_Math" data-alttext="u\in A\times(B\cup C)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then there exists <math id="S5.SS4.SSS4.p20.m3" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and there exists <math id="S5.SS4.SSS4.p20.m4" class="ltx_Math" data-alttext="y\in B\cup C" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math> such that <math id="S5.SS4.SSS4.p20.m5" class="ltx_Math" data-alttext="u=(x,y)" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Since <math id="S5.SS4.SSS4.p20.m6" class="ltx_Math" data-alttext="y\in B\cup C" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math>, we know that <math id="S5.SS4.SSS4.p20.m7" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> or <math id="S5.SS4.SSS4.p20.m8" class="ltx_Math" data-alttext="y\in C" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>C</mi></mrow></math>.</p>
+</div>
+<div id="S5.SS4.SSS4.p21" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S5.SS4.SSS4.p21.m1" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, we have <math id="S5.SS4.SSS4.p21.m2" class="ltx_Math" data-alttext="u=(x,y)" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, where <math id="S5.SS4.SSS4.p21.m3" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS4.SSS4.p21.m4" class="ltx_Math" data-alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>. So in this case, <math id="S5.SS4.SSS4.p21.m5" class="ltx_Math" data-alttext="u\in A\times B" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>, and hence <math id="S5.SS4.SSS4.p21.m6" class="ltx_Math" data-alttext="u\in(A\times B)\cup(A\times C)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Similarly, in the case where <math id="S5.SS4.SSS4.p21.m7" class="ltx_Math" data-alttext="y\in C" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>C</mi></mrow></math>, we have <math id="S5.SS4.SSS4.p21.m8" class="ltx_Math" data-alttext="u=(x,y)" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, where <math id="S5.SS4.SSS4.p21.m9" class="ltx_Math" data-alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.SS4.SSS4.p21.m10" class="ltx_Math" data-alttext="y\in C" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>C</mi></mrow></math>. So in this case, <math id="S5.SS4.SSS4.p21.m11" class="ltx_Math" data-alttext="u\in A\times C" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow></mrow></math> and, hence, <math id="S5.SS4.SSS4.p21.m12" class="ltx_Math" data-alttext="u\in(A\times B)\cup(A\times C)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS4.SSS4.p22" class="ltx_para">
+<p class="ltx_p">In both cases, <math id="S5.SS4.SSS4.p22.m1" class="ltx_Math" data-alttext="u\in(A\times B)\cup(A\times C)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence, we may conclude that if <math id="S5.SS4.SSS4.p22.m2" class="ltx_Math" data-alttext="u" display="inline"><mi>u</mi></math> is an element of <math id="S5.SS4.SSS4.p22.m3" class="ltx_Math" data-alttext="A\times(B\cup C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="S5.SS4.SSS4.p22.m4" class="ltx_Math" data-alttext="u\in(A\times B)\cup(A\times C)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and this proves that</p>
+</div>
+<div id="S5.SS4.SSS4.p23" class="ltx_para">
+<table role="presentation" id="S5.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex15.m1" class="ltx_Math" data-alttext="A\times(B\cup C)\subseteq(A\times B)\cup(A\times C)" display="block"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p24" class="ltx_para">
+<p class="ltx_p">We must now prove that <math id="S5.SS4.SSS4.p24.m1" class="ltx_Math" data-alttext="(A\times B)\cup(A\times C)\subseteq A\times(B\cup C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So we let <math id="S5.SS4.SSS4.p24.m2" class="ltx_Math" data-alttext="v\in(A\times B)\cup(A\times C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then <math id="S5.SS4.SSS4.p24.m3" class="ltx_Math" data-alttext="v\in(A\times B)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> or <math id="S5.SS4.SSS4.p24.m4" class="ltx_Math" data-alttext="v\in(A\times C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS4.SSS4.p25" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S5.SS4.SSS4.p25.m1" class="ltx_Math" data-alttext="v\in(A\times B)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, we know that there exists <math id="S5.SS4.SSS4.p25.m2" class="ltx_Math" data-alttext="s\in A" display="inline"><mrow><mi>s</mi><mo>∈</mo><mi>A</mi></mrow></math> and there exists <math id="S5.SS4.SSS4.p25.m3" class="ltx_Math" data-alttext="t\in B" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>B</mi></mrow></math> such that <math id="S5.SS4.SSS4.p25.m4" class="ltx_Math" data-alttext="v=(s,t)" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. But since <math id="S5.SS4.SSS4.p25.m5" class="ltx_Math" data-alttext="t\in B" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>B</mi></mrow></math>, we know that <math id="S5.SS4.SSS4.p25.m6" class="ltx_Math" data-alttext="t\in B\cup C" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math>, and hence <math id="S5.SS4.SSS4.p25.m7" class="ltx_Math" data-alttext="v\in A\times(B\cup C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Similarly, in the case where <math id="S5.SS4.SSS4.p25.m8" class="ltx_Math" data-alttext="v\in(A\times C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, we know that there exists <math id="S5.SS4.SSS4.p25.m9" class="ltx_Math" data-alttext="s\in A" display="inline"><mrow><mi>s</mi><mo>∈</mo><mi>A</mi></mrow></math> and there exists <math id="S5.SS4.SSS4.p25.m10" class="ltx_Math" data-alttext="t\in C" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>C</mi></mrow></math> such that <math id="S5.SS4.SSS4.p25.m11" class="ltx_Math" data-alttext="v=(s,t)" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. But because <math id="S5.SS4.SSS4.p25.m12" class="ltx_Math" data-alttext="t\in C" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>C</mi></mrow></math>, we can conclude that <math id="S5.SS4.SSS4.p25.m13" class="ltx_Math" data-alttext="t\in B\cup C" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow></mrow></math> and, hence, <math id="S5.SS4.SSS4.p25.m14" class="ltx_Math" data-alttext="v\in A\times(B\cup C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S5.SS4.SSS4.p26" class="ltx_para">
+<p class="ltx_p">In both cases, <math id="S5.SS4.SSS4.p26.m1" class="ltx_Math" data-alttext="v\in A\times(B\cup C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence, we may conclude that if <math id="S5.SS4.SSS4.p26.m2" class="ltx_Math" data-alttext="v\in(A\times B)\cup(A\times C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S5.SS4.SSS4.p26.m3" class="ltx_Math" data-alttext="v\in A\times(B\cup C)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and this proves that</p>
+</div>
+<div id="S5.SS4.SSS4.p27" class="ltx_para">
+<table role="presentation" id="S5.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex16.m1" class="ltx_Math" data-alttext="(A\times B)\cup(A\times C)\subseteq A\times(B\cup C)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.SS4.SSS4.p28" class="ltx_para">
+<p class="ltx_p">The relationshipsin (1) and (2) prove that <math id="S5.SS4.SSS4.p28.m1" class="ltx_Math" data-alttext="A\times(B\cup C)=(A\times B)\cup(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. <math id="S5.SS4.SSS4.p28.m2" class="ltx_Math" data-alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S5.SS4.SSS4.p29" class="ltx_para">
+<p class="ltx_p">Final Note. The definition of an ordered pair in Beginning Activity 2 may have seemed like a lengthy definition, but in some areas of mathematics, an even more formal and precise definition of "ordered pair" is needed. This definition is explored in Exercise (10).</p>
+</div>
+</section>
+<section id="S5.SS4.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.4.5 </span>Exercises for Section 5.4</h3>
+
+<div id="S5.SS4.SSS5.p1" class="ltx_para">
+<ol id="S5.I6" class="ltx_enumerate">
+<li id="S5.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S5.I6.i1.p1.m2" class="ltx_Math" data-alttext="A=\{1,2\},B=\{a,b,c,d\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and <math id="S5.I6.i1.p1.m3" class="ltx_Math" data-alttext="C=\{1,a,b\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Use the roster method to list all of the elements of each of the following sets:</p>
+<ol id="S5.I6.i1.I1" class="ltx_enumerate">
+<li id="S5.I6.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="B\times A" display="inline"><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="A\times C" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I6.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i4.p1.m1" class="ltx_Math" data-alttext="A^{2}" display="inline"><msup><mi>A</mi><mn>2</mn></msup></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I6.i1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i5.p1.m1" class="ltx_Math" data-alttext="A\times(B\cap C)" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I6.i1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i6.p1.m1" class="ltx_Math" data-alttext="(A\times B)\cap(A\times C)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S5.I6.i1.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i7.p1.m1" class="ltx_Math" data-alttext="A\times\emptyset" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi mathvariant="normal">∅</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i1.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S5.I6.i1.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i1.I1.i8.p1.m1" class="ltx_Math" data-alttext="B\times\{2\}" display="inline"><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Sketch a graph of each of the following Cartesian products in the Cartesian plane.</p>
+<ol id="S5.I6.i2.I1" class="ltx_enumerate">
+<li id="S5.I6.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="[0,2]\times[1,3]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo rspace="0.055em" stretchy="false">]</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="(0,2)\times(1,3]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="[2,3]\times\{1\}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo rspace="0.055em" stretchy="false">]</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S5.I6.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="\{1\}\times[2,3]" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mn>1</mn><mo rspace="0.055em" stretchy="false">}</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">[</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S5.I6.i2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i5.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}\times(2,4)" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S5.I6.i2.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i6.p1.m1" class="ltx_Math" data-alttext="(2,4)\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>ℝ</mi></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S5.I6.i2.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i7.p1.m1" class="ltx_Math" data-alttext="\mathbb{R}\times\{-1\}" display="inline"><mrow><mi>ℝ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S5.I6.i2.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S5.I6.i2.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i2.I1.i8.p1.m1" class="ltx_Math" data-alttext="\{-1\}\times[1,+\infty)" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo rspace="0.055em" stretchy="false">}</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S5.I6.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i3.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove Theorem 5.25, <math id="S5.I6.i3.p1.m2" class="ltx_Math" data-alttext="\operatorname{Part}(1):A\times(B\cap C)=(A\times B)\cap(A\times C)" display="inline"><mrow><mrow><mi>Part</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo rspace="0.278em" stretchy="false">)</mo></mrow></mrow><mo rspace="0.278em">:</mo><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S5.I6.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I6.i4.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove Theorem 5.25, Part (4): <math id="S5.I6.i4.p1.m2" class="ltx_Math" data-alttext="(A\cup B)\times C=(A\times C)\cup(B\times C)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S5.I6.i5.p1" class="ltx_para">
+<p class="ltx_p">Prove Theorem 5.25, Part (5): <math id="S5.I6.i5.p1.m1" class="ltx_Math" data-alttext="A\times(B-C)=(A\times B)-(A\times C)" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>−</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S5.I6.i6.p1" class="ltx_para">
+<p class="ltx_p">Prove Theorem 5.25, Part (7): If <math id="S5.I6.i6.p1.m1" class="ltx_Math" data-alttext="T\subseteq A" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>A</mi></mrow></math>, then <math id="S5.I6.i6.p1.m2" class="ltx_Math" data-alttext="T\times B\subseteq A\times B" display="inline"><mrow><mrow><mi>T</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S5.I6.i7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i7.p1.m1" class="ltx_Math" data-alttext="A=\{1\},B=\{2\}" display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, and <math id="S5.I6.i7.p1.m2" class="ltx_Math" data-alttext="C=\{3\}" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<ol id="S5.I6.i7.I1" class="ltx_enumerate">
+<li id="S5.I6.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why <math id="S5.I6.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="A\times B\neq B\times A" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>≠</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Explain why (<math id="S5.I6.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>) × <math id="S5.I6.i7.I1.i2.p1.m2" class="ltx_Math" data-alttext="C\neq A\times(B\times C)" display="inline"><mrow><mi>C</mi><mo>≠</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S5.I6.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S5.I6.i8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i8.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I6.i8.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be nonempty sets. Prove that <math id="S5.I6.i8.p1.m3" class="ltx_Math" data-alttext="A\times B=B\times A" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>B</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow></mrow></math> if and only if <math id="S5.I6.i8.p1.m4" class="ltx_Math" data-alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S5.I6.i9.p1" class="ltx_para">
+<p class="ltx_p">Is the following proposition true or false? Justify your conclusion.</p>
+</div>
+<div id="S5.I6.i9.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I6.i9.p2.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I6.i9.p2.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be sets with <math id="S5.I6.i9.p2.m3" class="ltx_Math" data-alttext="A\neq\emptyset" display="inline"><mrow><mi>A</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. If <math id="S5.I6.i9.p2.m4" class="ltx_Math" data-alttext="A\times B=A\times C" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>=</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>C</mi></mrow></mrow></math>, then <math id="S5.I6.i9.p2.m5" class="ltx_Math" data-alttext="B=C" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>C</mi></mrow></math>. Explain where the assumption that <math id="S5.I6.i9.p2.m6" class="ltx_Math" data-alttext="A\neq\emptyset" display="inline"><mrow><mi>A</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> is needed.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S5.SS4.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.4.6 </span>Explorations and Activities</h3>
+
+<div id="S5.SS4.SSS6.p1" class="ltx_para">
+<ol id="S5.I7" class="ltx_enumerate">
+<li id="S5.I7.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S5.I7.i10.p1" class="ltx_para">
+<p class="ltx_p">(A Set Theoretic Definition of an Ordered Pair) In elementary mathematics, the notion of an ordered pair introduced at the beginning of this section will suffice. However, if we are interested in a formal development of the Cartesian product of two sets, we need a more precise definition of ordered pair. Following is one way to do this in terms of sets. This definition is credited to Kazimierz Kuratowski (1896-1980). Kuratowski was a famous Polish mathematician whose main work was in the areas of topology and set theory. He was appointed the Director of the Polish Academy of Sciences and served in that position for 19 years.</p>
+</div>
+<div id="S5.I7.i10.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I7.i10.p2.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> be an element of the set <math id="S5.I7.i10.p2.m2" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math>, and let <math id="S5.I7.i10.p2.m3" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> be an element of the set <math id="S5.I7.i10.p2.m4" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math>. The ordered pair <math id="S5.I7.i10.p2.m5" class="ltx_Math" data-alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> is defined to be the set <math id="S5.I7.i10.p2.m6" class="ltx_Math" data-alttext="\{\{x\},\{x,y\}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></math>. That is,</p>
+</div>
+<div id="S5.I7.i10.p3" class="ltx_para">
+<table role="presentation" id="S5.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex17.m1" class="ltx_Math" data-alttext="(x,y)=\{\{x\},\{x,y\}\}." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S5.I7.i10.p4" class="ltx_para">
+<ol id="S5.I7.i10.I1" class="ltx_enumerate">
+<li id="S5.I7.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I7.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain how this definition allows us to distinguish between the ordered pairs <math id="S5.I7.i10.I1.i1.p1.m1" class="ltx_Math" data-alttext="(3,5)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math> and <math id="S5.I7.i10.I1.i1.p1.m2" class="ltx_Math" data-alttext="(5,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I7.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I7.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I7.i10.I1.i2.p1.m1" class="ltx_Math" data-alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I7.i10.I1.i2.p1.m2" class="ltx_Math" data-alttext="B" display="inline"><mi>B</mi></math> be sets and let <math id="S5.I7.i10.I1.i2.p1.m3" class="ltx_Math" data-alttext="a,c\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S5.I7.i10.I1.i2.p1.m4" class="ltx_Math" data-alttext="b,d\in B" display="inline"><mrow><mrow><mi>b</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>B</mi></mrow></math>. Use this definition of an ordered pair and the concept of set equality to prove that <math id="S5.I7.i10.I1.i2.p1.m5" class="ltx_Math" data-alttext="(a,b)=" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi></mi></mrow></math> (<math id="S5.I7.i10.I1.i2.p1.m6" class="ltx_Math" data-alttext="c,d" display="inline"><mrow><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math>) if and only if <math id="S5.I7.i10.I1.i2.p1.m7" class="ltx_Math" data-alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math> and <math id="S5.I7.i10.I1.i2.p1.m8" class="ltx_Math" data-alttext="b=d" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi></mrow></math>.</p>
+</div>
+<div id="S5.I7.i10.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">An ordered triple can be thought of as a single triple of objects, denoted by (<math id="S5.I7.i10.I1.i2.p2.m1" class="ltx_Math" data-alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>), with an implied order. This means that in order for two ordered triples to be equal, they must contain exactly the same objects in the same order. That is, <math id="S5.I7.i10.I1.i2.p2.m2" class="ltx_Math" data-alttext="(a,b,c)=(p,q,r)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> if and only if <math id="S5.I7.i10.I1.i2.p2.m3" class="ltx_Math" data-alttext="a=p,b=q" display="inline"><mrow><mrow><mi>a</mi><mo>=</mo><mi>p</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mi>q</mi></mrow></mrow></math> and <math id="S5.I7.i10.I1.i2.p2.m4" class="ltx_Math" data-alttext="c=r" display="inline"><mrow><mi>c</mi><mo>=</mo><mi>r</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I7.i10.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I7.i10.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.I7.i10.I1.i3.p1.m1" class="ltx_Math" data-alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, and <math id="S5.I7.i10.I1.i3.p1.m2" class="ltx_Math" data-alttext="C" display="inline"><mi>C</mi></math> be sets, and let <math id="S5.I7.i10.I1.i3.p1.m3" class="ltx_Math" data-alttext="x\in A,y\in B" display="inline"><mrow><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></mrow></math>, and <math id="S5.I7.i10.I1.i3.p1.m4" class="ltx_Math" data-alttext="z\in C" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>C</mi></mrow></math>. Write a set theoretic definition of the ordered triple <math id="S5.I7.i10.I1.i3.p1.m5" class="ltx_Math" data-alttext="(x,y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> similar to the set theoretic definition of "ordered pair."</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
