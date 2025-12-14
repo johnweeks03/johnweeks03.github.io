@@ -1,0 +1,1637 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3 Constructing and Writing Proofs in Mathematics</title>
+<!--Generated on Sun Dec 14 01:53:45 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Constructing and Writing Proofs in Mathematics</h2>
+
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Direct Proofs</h3>
+
+<section id="S3.SS1.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.1 </span>Beginning Activity 1 (Definition of Divides, Divisor, Multiple)</h4>
+
+<div id="S3.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In <a href="https://johnweeks03.github.io/teaching/300/1-2.html">Section 1.2</a>, we studied the concepts of even integers and odd integers. The definition of an even integer was a formalization of our concept of an even integer as being one that is "divisible by 2," or a "multiple of 2." We could also say that if "2 divides an integer," then that integer is an even integer. We will now extend this idea to integers other than 2. Following is a formal definition of what it means to say that a nonzero integer <math id="S3.SS1.SSS1.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> divides an integer <math id="S3.SS1.SSS1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S3.SS1.SSS1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A nonzero integer <math id="S3.SS1.SSS1.p2.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> <span class="ltx_text ltx_font_bold">divides</span> an integer <math id="S3.SS1.SSS1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> provided that there is an integer <math id="S3.SS1.SSS1.p2.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> such that <math id="S3.SS1.SSS1.p2.m4" class="ltx_Math" alttext="n=m\cdot q" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>q</mi></mrow></mrow></math>. We also say that <math id="S3.SS1.SSS1.p2.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a <span class="ltx_text ltx_font_bold">divisor</span> of <math id="S3.SS1.SSS1.p2.m6" class="ltx_Math" alttext="n,m" display="inline"><mrow><mi>n</mi><mo>,</mo><mi>m</mi></mrow></math> is a factor of <math id="S3.SS1.SSS1.p2.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, and <math id="S3.SS1.SSS1.p2.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a <span class="ltx_text ltx_font_bold">multiple</span> of <math id="S3.SS1.SSS1.p2.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>. The integer 0 is not a divisor of any integer. If <math id="S3.SS1.SSS1.p2.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS1.SSS1.p2.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are integers and <math id="S3.SS1.SSS1.p2.m12" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, we frequently use the notation <math id="S3.SS1.SSS1.p2.m13" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> as a shorthand for "<math id="S3.SS1.SSS1.p2.m14" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS1.p2.m15" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>."</p>
+</div>
+<div id="S3.SS1.SSS1.p3" class="ltx_para">
+<p class="ltx_p">A Note about Notation: Be careful with the notation <math id="S3.SS1.SSS1.p3.m1" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math>. This does not represent the rational number <math id="S3.SS1.SSS1.p3.m2" class="ltx_Math" alttext="\frac{a}{b}" display="inline"><mfrac><mi>a</mi><mi>b</mi></mfrac></math>. The notation <math id="S3.SS1.SSS1.p3.m3" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> represents a relationship between the integers <math id="S3.SS1.SSS1.p3.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS1.SSS1.p3.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and is simply a shorthand for "<math id="S3.SS1.SSS1.p3.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS1.p3.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>."</p>
+</div>
+<div id="S3.SS1.SSS1.p4" class="ltx_para">
+<p class="ltx_p">A Note about Definitions: Technically, a definition in mathematics should almost always be written using "if and only if." It is not clear why, but the convention in
+<br class="ltx_break">mathematics is to replace the phrase "if and only if" with "if" or an equivalent. Perhaps this is a bit of laziness or the "if and only if" phrase can be a bit cumbersome. In this text, we will often use the phrase "provided that" instead.</p>
+</div>
+<div id="S3.SS1.SSS1.p5" class="ltx_para">
+<p class="ltx_p">The definition for "divides" can be written in symbolic form using appropriate quantifiers as follows: A nonzero integer <math id="S3.SS1.SSS1.p5.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> divides an integer <math id="S3.SS1.SSS1.p5.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> provided that <math id="S3.SS1.SSS1.p5.m3" class="ltx_Math" alttext="(\exists q\in\mathbb{Z})(n=m\cdot q)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>q</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>=</mo><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS1.SSS1.p6" class="ltx_para">
+<ol id="S3.I1" class="ltx_enumerate">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of divides to explain why 4 divides 32 and to explain why 8 divides -96 .</p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Give several examples of two integers where the first integer does not divide the second integer.</p>
+</div>
+</li>
+<li id="S3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">According to the definition of "divides," does the integer 10 divide the integer 0? That is, is 10 a divisor of 0? Explain.</p>
+</div>
+</li>
+<li id="S3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of "divides" to complete the following sentence in symbolic form: "The nonzero integer <math id="S3.I1.i4.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> does not divide the integer <math id="S3.I1.i4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> means that …"</p>
+</div>
+</li>
+<li id="S3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of "divides" to complete the following sentence without using the symbols for quantifiers: "The nonzero integer <math id="S3.I1.i5.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> does not divide the integer <math id="S3.I1.i5.p1.m2" class="ltx_Math" alttext="n\ldots" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math>."</p>
+</div>
+</li>
+<li id="S3.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S3.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Give three different examples of three integers where the first integer divides the second integer and the second integer divides the third integer.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS1.SSS1.p7" class="ltx_para">
+<p class="ltx_p">As we have seen in Section 1.2, a definition is frequently used when constructing and writing mathematical proofs. Consider the following conjecture:</p>
+</div>
+<div id="S3.SS1.SSS1.p8" class="ltx_para">
+<p class="ltx_p">Conjecture: Let <math id="S3.SS1.SSS1.p8.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.SS1.SSS1.p8.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be integers with <math id="S3.SS1.SSS1.p8.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS1.SSS1.p8.m4" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math>. If <math id="S3.SS1.SSS1.p8.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS1.p8.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.SS1.SSS1.p8.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S3.SS1.SSS1.p8.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, then a divides <math id="S3.SS1.SSS1.p8.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+<ol id="S3.I2" class="ltx_enumerate">
+<li id="S3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Explain why the examples you generated in part (6) provide evidence that this conjecture is true.</p>
+</div>
+<div id="S3.I2.i1.p2" class="ltx_para">
+<p class="ltx_p">In Section 1.2, we also learned how to use a know-show table to help organize our thoughts when trying to construct a proof of a statement. If necessary, review the appropriate material in Section 1.2.</p>
+</div>
+</li>
+<li id="S3.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">State precisely what we would assume if we were trying to write a proof of the preceding conjecture.</p>
+</div>
+</li>
+<li id="S3.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of "divides" to make some conclusions based on your assumptions in part (8).</p>
+</div>
+</li>
+<li id="S3.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">State precisely what we would be trying to prove if we were trying to write a proof of the conjecture.</p>
+</div>
+</li>
+<li id="S3.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of divides to write an answer to the question, "How can we prove what we stated in part(10)?"</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS1.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.2 </span>Beginning Activity 2 (Calendars and Clocks)</h4>
+
+<div id="S3.SS1.SSS2.p1" class="ltx_para">
+<p class="ltx_p">This activity is intended to help with understanding the concept of congruence, which will be studied at the end of this section.</p>
+</div>
+<div id="S3.SS1.SSS2.p2" class="ltx_para">
+<ol id="S3.I3" class="ltx_enumerate">
+<li id="S3.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Suppose that it is currently Tuesday.</p>
+<ol id="S3.I3.i1.I1" class="ltx_enumerate">
+<li id="S3.I3.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I3.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What day will it be 3 days from now?</p>
+</div>
+</li>
+<li id="S3.I3.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I3.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What day will it be 10 days from now?</p>
+</div>
+</li>
+<li id="S3.I3.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I3.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">What day will it be 17 days from now? What day will it be 24 days from now?</p>
+</div>
+</li>
+<li id="S3.I3.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I3.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Find several other natural numbers <math id="S3.I3.i1.I1.i4.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that it will be Friday <math id="S3.I3.i1.I1.i4.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> days from now.</p>
+</div>
+</li>
+<li id="S3.I3.i1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S3.I3.i1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Create a list (in increasing order) of the numbers <math id="S3.I3.i1.I1.i5.p1.m1" class="ltx_Math" alttext="3,10,17,24" display="inline"><mrow><mn>3</mn><mo>,</mo><mn>10</mn><mo>,</mo><mn>17</mn><mo>,</mo><mn>24</mn></mrow></math>, and the numbers you generated in Part (1d). Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p>
+</div>
+</li>
+<li id="S3.I3.i1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S3.I3.i1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">What do the numbers you obtained in Part (1e) have in common?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose that we are using a twelve-hour clock with no distinction between A.M. and P.M. Also, suppose that the current time is 5:00.</p>
+<ol id="S3.I3.i2.I1" class="ltx_enumerate">
+<li id="S3.I3.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I3.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What time will it be 4 hours from now?</p>
+</div>
+</li>
+<li id="S3.I3.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I3.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What time will it be 16 hours from now? What time will it be 28 hours from now?</p>
+</div>
+</li>
+<li id="S3.I3.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I3.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Find several other natural numbers <math id="S3.I3.i2.I1.i3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that it will be 9:00 <math id="S3.I3.i2.I1.i3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> hours from now.</p>
+</div>
+</li>
+<li id="S3.I3.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I3.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Create a list (in increasing order) of the numbers 4,16,28, and the numbers you generated in Part (2c). Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p>
+</div>
+</li>
+<li id="S3.I3.i2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S3.I3.i2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">What do the numbers you obtained in Part (2d) have in common?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">This is a continuation of Part (1). Suppose that it is currently Tuesday.</p>
+<ol id="S3.I3.i3.I1" class="ltx_enumerate">
+<li id="S3.I3.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I3.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What day was it 4 days ago?</p>
+</div>
+</li>
+<li id="S3.I3.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I3.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What day was it 11 days ago? What day was it 18 days ago?</p>
+</div>
+</li>
+<li id="S3.I3.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I3.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Find several other natural numbers <math id="S3.I3.i3.I1.i3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that it was Friday <math id="S3.I3.i3.I1.i3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> days ago.</p>
+</div>
+</li>
+<li id="S3.I3.i3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I3.i3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Create a list (in increasing order) consisting of the numbers <math id="S3.I3.i3.I1.i4.p1.m1" class="ltx_Math" alttext="-18,-11,-4" display="inline"><mrow><mrow><mo>−</mo><mn>18</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>11</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow></mrow></math>, the opposites of the numbers you generated in Part (3c) and the positive numbers in the list from Part (1e). Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p>
+</div>
+</li>
+<li id="S3.I3.i3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S3.I3.i3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">What do the numbers you obtained in Part (3d) have in common?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS1.SSS3" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.3 </span>Some Mathematical Terminology</h4>
+
+<div id="S3.SS1.SSS3.p1" class="ltx_para">
+<p class="ltx_p">In Section 1.2, we introduced the idea of a direct proof. Since then, we have used some common terminology in mathematics without much explanation. Before we proceed further, we will discuss some frequently used mathematical terms.</p>
+</div>
+<div id="S3.SS1.SSS3.p2" class="ltx_para">
+<p class="ltx_p">A proof in mathematics is a convincing argument that some mathematical statement is true. A proof should contain enough mathematical detail to be convincing to the person(s) to whom the proof is addressed. In essence, a proof is an argument that communicates a mathematical truth to another person (who has the appropriate mathematical background). A proof must use correct, logical reasoning and be based on previously established results. These previous results can be axioms, definitions, or previously proven theorems. These terms are discussed below.</p>
+</div>
+<div id="S3.SS1.SSS3.p3" class="ltx_para">
+<p class="ltx_p">Surprising to some is the fact that in mathematics, there are always undefined terms. This is because if we tried to define everything, we would end up going in circles. Simply put, we must start somewhere. For example, in Euclidean geometry, the terms "point," "line," and "contains" are undefined terms. In this text, we are using our number systems such as the natural numbers and integers as undefined terms. We often assume that these undefined objects satisfy certain properties. These assumed relationships are accepted as true without proof and are called axioms (or postulates). An axiom is a mathematical statement that is accepted without proof. Euclidean geometry starts with undefined terms and a set of postulates and axioms. For example, the following statement is an axiom of Euclidean geometry:</p>
+</div>
+<div id="S3.SS1.SSS3.p4" class="ltx_para">
+<p class="ltx_p">Given any two distinct points, there is exactly one line that contains these two points.</p>
+</div>
+<div id="S3.SS1.SSS3.p5" class="ltx_para">
+<p class="ltx_p">The closure properties of the number systems discussed in <a href="https://johnweeks03.github.io/teaching/300/1-1.html">Section 1.1</a> and the properties of the number systems in <a href="https://johnweeks03.github.io/teaching/300/1-2.html#Table_1.2">Table 1.2</a> are being used as axioms in this text.</p>
+</div>
+<div id="S3.SS1.SSS3.p6" class="ltx_para">
+<p class="ltx_p">A definition is simply an agreement as to the meaning of a particular term. For example, in this text, we have defined the terms "even integer" and "odd integer." Definitions are not made at random, but rather, a definition is usually made because a certain property is observed to occur frequently. As a result, it becomes convenient to give this property its own special name. Definitions that have been made can be used in developing mathematical proofs. In fact, most proofs require the use of some definitions.</p>
+</div>
+<div id="S3.SS1.SSS3.p7" class="ltx_para">
+<p class="ltx_p">In dealing with mathematical statements, we frequently use the terms "conjecture," "theorem," "proposition," "lemma," and "corollary." A conjecture is a statement that we believe is plausible. That is, we think it is true, but we have not yet developed a proof that it is true. A theorem is a mathematical statement for which we have a proof. A term that is often considered to be synonymous with "theorem" is proposition.</p>
+</div>
+<div id="S3.SS1.SSS3.p8" class="ltx_para">
+<p class="ltx_p">Often the proof of a theorem can be quite long. In this case, it is often easier to communicate the proof in smaller "pieces." These supporting pieces are often called lemmas. A lemma is a true mathematical statement that was proven mainly to help in the proof of some theorem. Once a given theorem has been proven, it is often the case that other propositions follow immediately from the fact that the theorem is true. These are called corollaries of the theorem. The term corollary is used to refer to a theorem that is easily proven once some other theorem has been proven.</p>
+</div>
+</section>
+<section id="S3.SS1.SSS4" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.4 </span>Constructing Mathematical Proofs</h4>
+
+<div id="S3.SS1.SSS4.p1" class="ltx_para">
+<p class="ltx_p">To create a proof of a theorem, we must use correct logical reasoning and mathematical statements that we already accept as true. These statements include axioms, definitions, theorems, lemmas, and corollaries.</p>
+</div>
+<div id="S3.SS1.SSS4.p2" class="ltx_para">
+<p class="ltx_p">In Section 1.2, we introduced the use of a know-show table to help us organize our work when we are attempting to prove a statement. We also introduced some guidelines for writing mathematical proofs once we have created the proof. These guidelines should be reviewed before proceeding.</p>
+</div>
+<div id="S3.SS1.SSS4.p3" class="ltx_para">
+<p class="ltx_p">Please remember that when we start the process of writing a proof, we are essentially "reporting the news." That is, we have already discovered the proof, and now we need to report it. This reporting often does not describe the process of discovering the news (the investigative portion of the process).</p>
+</div>
+<div id="S3.SS1.SSS4.p4" class="ltx_para">
+<p class="ltx_p">Quite often, the first step is to develop a conjecture. This is often done after working within certain objects for some time. This is what we did in Beginning Activity 1 when we used examples to provide evidence that the following conjecture is true:</p>
+</div>
+<div id="S3.SS1.SSS4.p5" class="ltx_para">
+<p class="ltx_p">Conjecture: Let <math id="S3.SS1.SSS4.p5.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.SS1.SSS4.p5.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be integers with <math id="S3.SS1.SSS4.p5.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS1.SSS4.p5.m4" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math>. If <math id="S3.SS1.SSS4.p5.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p5.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.SS1.SSS4.p5.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S3.SS1.SSS4.p5.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, then a divides <math id="S3.SS1.SSS4.p5.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+</div>
+<div id="S3.SS1.SSS4.p6" class="ltx_para">
+<p class="ltx_p">Before we try to prove a conjecture, we should make sure we have explored some examples. This simply means to construct some specific examples where the integers <math id="S3.SS1.SSS4.p6.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.SS1.SSS4.p6.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> satisfy the hypothesis of the conjecture in order to see if they also satisfy the conclusion. We did this for this conjecture in Beginning Activity 1.</p>
+</div>
+<div id="S3.SS1.SSS4.p7" class="ltx_para">
+<p class="ltx_p">We will now start a know-show table for this conjecture.</p>
+</div>
+<div id="S3.SS1.SSS4.p8" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Know</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Reason</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S3.SS1.SSS4.m2" class="ltx_Math" alttext="a,b,c\in\mathbb{Z},a\neq 0,b\neq 0,a\mid b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></mrow></mrow></mrow></mrow></math> and <math id="S3.SS1.SSS4.m3" class="ltx_Math" alttext="b\mid c" display="inline"><mrow><mi>b</mi><mo>∣</mo><mi>c</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hypothesis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m4" class="ltx_Math" alttext="P1" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m5" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m6" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m7" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m8" class="ltx_Math" alttext="Q1" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m9" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m10" class="ltx_Math" alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Show</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Reason</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS4.p9" class="ltx_para">
+<p class="ltx_p">The backward question we ask is, "How can we prove that <math id="S3.SS1.SSS4.p9.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p9.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> ?" One answer is to use the definition and show that there exists an integer <math id="S3.SS1.SSS4.p9.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> such that <math id="S3.SS1.SSS4.p9.m4" class="ltx_Math" alttext="c=a\cdot q" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>q</mi></mrow></mrow></math>. This could be step <math id="S3.SS1.SSS4.p9.m5" class="ltx_Math" alttext="Q1" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mn>1</mn></mrow></math> in the know-show table.</p>
+</div>
+<div id="S3.SS1.SSS4.p10" class="ltx_para">
+<p class="ltx_p">We now have to prove that a certain integer <math id="S3.SS1.SSS4.p10.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> exists, so we ask the question, "How do we prove that this integer exists?" When we are at such a stage in the backward process of a proof, we usually turn to what is known in order to prove that the object exists or to find or construct the object we are trying to prove exists. We often say that we try to "construct" the object or at least prove it exists from the known information. So at this point, we go to the forward part of the proof to try to prove that there exists an integer <math id="S3.SS1.SSS4.p10.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> such that <math id="S3.SS1.SSS4.p10.m3" class="ltx_Math" alttext="c=a\cdot q" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>q</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS1.SSS4.p11" class="ltx_para">
+<p class="ltx_p">The forward question we ask is, "What can we conclude from the facts that <math id="S3.SS1.SSS4.p11.m1" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> and <math id="S3.SS1.SSS4.p11.m2" class="ltx_Math" alttext="b\mid c" display="inline"><mrow><mi>b</mi><mo>∣</mo><mi>c</mi></mrow></math> ?" Again, using the definition, we know that there exist integers <math id="S3.SS1.SSS4.p11.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>
+<br class="ltx_break">and <math id="S3.SS1.SSS4.p11.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> such that <math id="S3.SS1.SSS4.p11.m5" class="ltx_Math" alttext="b=a\cdot s" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow></mrow></math> and <math id="S3.SS1.SSS4.p11.m6" class="ltx_Math" alttext="c=b\cdot t" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow></math>. This could be step <math id="S3.SS1.SSS4.p11.m7" class="ltx_Math" alttext="P1" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mn>1</mn></mrow></math> in the know-show table.</p>
+</div>
+<div id="S3.SS1.SSS4.p12" class="ltx_para">
+<p class="ltx_p">The key now is to determine how to get from <math id="S3.SS1.SSS4.p12.m1" class="ltx_Math" alttext="P1" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mn>1</mn></mrow></math> to <math id="S3.SS1.SSS4.p12.m2" class="ltx_Math" alttext="Q1" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mn>1</mn></mrow></math>. That is, can we use the conclusions that the integers <math id="S3.SS1.SSS4.p12.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and <math id="S3.SS1.SSS4.p12.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> exist in order to prove that the integer <math id="S3.SS1.SSS4.p12.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> (from the backward process) exists. Using the equation <math id="S3.SS1.SSS4.p12.m6" class="ltx_Math" alttext="b=a\cdot s" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow></mrow></math>, we can substitute <math id="S3.SS1.SSS4.p12.m7" class="ltx_Math" alttext="a\cdot s" display="inline"><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow></math> for <math id="S3.SS1.SSS4.p12.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> in the second equation, <math id="S3.SS1.SSS4.p12.m9" class="ltx_Math" alttext="c=b\cdot t" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow></math>. This gives</p>
+</div>
+<div id="S3.SS1.SSS4.p13" class="ltx_para">
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex1.m1" class="ltx_Math" alttext="\displaystyle c" display="inline"><mi>c</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex1.m2" class="ltx_Math" alttext="\displaystyle=b\cdot t" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\displaystyle=(a\cdot s)\cdot t" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex3.m1" class="ltx_Math" alttext="\displaystyle=a(s\cdot t)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS4.p14" class="ltx_para">
+<p class="ltx_p">The last step used the associative property of multiplication. (See <a href="https://johnweeks03.github.io/teaching/300/1-2.html#Table_1.2">Table 1.2</a> in Section 1.2.) This shows that <math id="S3.SS1.SSS4.p14.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is equal to <math id="S3.SS1.SSS4.p14.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> times some integer. (This is because <math id="S3.SS1.SSS4.p14.m3" class="ltx_Math" alttext="s\cdot t" display="inline"><mrow><mi>s</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow></math> is an integer by the closure property for integers.) So although we did not use the letter <math id="S3.SS1.SSS4.p14.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>, we have arrived at step <math id="S3.SS1.SSS4.p14.m5" class="ltx_Math" alttext="Q1" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mn>1</mn></mrow></math>. The completed know-show table follows.</p>
+</div>
+<div id="S3.SS1.SSS4.p15" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Step</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Know</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Reason</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m11" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S3.SS1.SSS4.m12" class="ltx_Math" alttext="a,b,c\in\mathbb{Z},a\neq 0,b\neq 0,a\mid b" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></mrow></mrow></mrow></mrow></math> and <math id="S3.SS1.SSS4.m13" class="ltx_Math" alttext="b\mid c" display="inline"><mrow><mi>b</mi><mo>∣</mo><mi>c</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hypothesis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">P1</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<table class="ltx_tabular ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S3.SS1.SSS4.m14" class="ltx_Math" alttext="(\exists s\in\mathbb{Z})(b=a\cdot s)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>s</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="S3.SS1.SSS4.m15" class="ltx_Math" alttext="(\exists t\in\mathbb{Z})(c=b\cdot t)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>t</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>=</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+</tr>
+</table>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Definition of "divides"</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">P2</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m16" class="ltx_Math" alttext="c=(a\cdot s)\cdot t" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Substitution for <math id="S3.SS1.SSS4.m17" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">P3</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m18" class="ltx_Math" alttext="c=a\cdot(s\cdot t)" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Associative property of multiplication</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Q1</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m19" class="ltx_Math" alttext="(\exists q\in\mathbb{Z})(c=a\cdot q)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>q</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Step P3 and the closure properties of the integers</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m20" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><math id="S3.SS1.SSS4.m21" class="ltx_Math" alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">Definition of "divides"</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS4.p16" class="ltx_para">
+<p class="ltx_p">Notice the similarities between what we did for this proof and many of the proofs about even and odd integers we constructed in Section 1.2. When we try to prove that a certain object exists, we often use what is called the construction method for a proof. The appearance of an existential quantifier in the show (or backward) portion of the proof is usually the indicator to go to what is known in order to prove the object exists.</p>
+</div>
+<div id="S3.SS1.SSS4.p17" class="ltx_para">
+<p class="ltx_p">We can now report the news by writing a formal proof.
+<br class="ltx_break"><span id="Theorem_3.1"> class="ltx_text ltx_font_bold">Theorem 3.1</span>. Let <math id="S3.SS1.SSS4.p17.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.SS1.SSS4.p17.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be integers with <math id="S3.SS1.SSS4.p17.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS1.SSS4.p17.m4" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math>. If <math id="S3.SS1.SSS4.p17.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p17.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.SS1.SSS4.p17.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S3.SS1.SSS4.p17.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, then <math id="S3.SS1.SSS4.p17.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p17.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+</div>
+<div id="S3.SS1.SSS4.p18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We assume that <math id="S3.SS1.SSS4.p18.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.SS1.SSS4.p18.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are integers with <math id="S3.SS1.SSS4.p18.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS1.SSS4.p18.m4" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math>. We further assume that <math id="S3.SS1.SSS4.p18.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p18.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and that <math id="S3.SS1.SSS4.p18.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S3.SS1.SSS4.p18.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. We will prove that <math id="S3.SS1.SSS4.p18.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p18.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+</div>
+<div id="S3.SS1.SSS4.p19" class="ltx_para">
+<p class="ltx_p">Since <math id="S3.SS1.SSS4.p19.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p19.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.SS1.SSS4.p19.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S3.SS1.SSS4.p19.m4" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, there exist integers <math id="S3.SS1.SSS4.p19.m5" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and <math id="S3.SS1.SSS4.p19.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> such that</p>
+</div>
+<div id="S3.SS1.SSS4.p20" class="ltx_para">
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex4.m1" class="ltx_Math" alttext="\displaystyle b=a\cdot s,\text{ and }" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow><mo>,</mo><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S3.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex5.m1" class="ltx_Math" alttext="\displaystyle c=b\cdot t." display="inline"><mrow><mrow><mi>c</mi><mo>=</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS4.p21" class="ltx_para">
+<p class="ltx_p">We can now substitute the expression for <math id="S3.SS1.SSS4.p21.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> from equation (1) into equation (2). This gives</p>
+</div>
+<div id="S3.SS1.SSS4.p22" class="ltx_para">
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="c=(a\cdot s)\cdot t" display="block"><mrow><mi>c</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>s</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS4.p23" class="ltx_para">
+<p class="ltx_p">Using the associate property for multiplication, we can rearrange the right side of the last equation to obtain</p>
+</div>
+<div id="S3.SS1.SSS4.p24" class="ltx_para">
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex7.m1" class="ltx_Math" alttext="c=a\cdot(s\cdot t)." display="block"><mrow><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS4.p25" class="ltx_para">
+<p class="ltx_p">Because both <math id="S3.SS1.SSS4.p25.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and <math id="S3.SS1.SSS4.p25.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> are integers, and since the integers are closed under multiplication, we know that <math id="S3.SS1.SSS4.p25.m3" class="ltx_Math" alttext="s\cdot t\in\mathbb{Z}" display="inline"><mrow><mrow><mi>s</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>t</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. Therefore, the previous equation proves that <math id="S3.SS1.SSS4.p25.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p25.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Consequently, we have proven that whenever <math id="S3.SS1.SSS4.p25.m6" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.SS1.SSS4.p25.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are integers with <math id="S3.SS1.SSS4.p25.m8" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.SS1.SSS4.p25.m9" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math> such that <math id="S3.SS1.SSS4.p25.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p25.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.SS1.SSS4.p25.m12" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S3.SS1.SSS4.p25.m13" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, then <math id="S3.SS1.SSS4.p25.m14" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.SS1.SSS4.p25.m15" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+</div>
+</section>
+<section id="S3.SS1.SSS5" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.5 </span>Writing Guidelines for Equation Numbers</h4>
+
+<div id="S3.SS1.SSS5.p1" class="ltx_para">
+<p class="ltx_p">We wrote the proof for Theorem 3.1 according to the guidelines introduced in Section 1.2, but a new element that appeared in this proof was the use of equation numbers. Following are some guidelines that can be used for equation numbers.</p>
+</div>
+<div id="S3.SS1.SSS5.p2" class="ltx_para">
+<p class="ltx_p">If it is necessary to refer to an equation later in a proof, that equation should be centered and displayed. It should then be given a number. The number for the equation should be written in parentheses on the same line as the equation at the right-hand margin as in shown in the following example.</p>
+</div>
+<div id="S3.SS1.SSS5.p3" class="ltx_para">
+<p class="ltx_p">Since <math id="S3.SS1.SSS5.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is an odd integer, there exists an integer <math id="S3.SS1.SSS5.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that</p>
+</div>
+<div id="S3.SS1.SSS5.p4" class="ltx_para">
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex8.m1" class="ltx_Math" alttext="x=2n+1." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS5.p5" class="ltx_para">
+<p class="ltx_p">Later in the proof, there may be a line such as</p>
+</div>
+<div id="S3.SS1.SSS5.p6" class="ltx_para">
+<p class="ltx_p">Then, using the result in equation (1), we obtain….</p>
+</div>
+<div id="S3.SS1.SSS5.p7" class="ltx_para">
+<p class="ltx_p">Notice that we did not number every equation in Theorem 3.1. We should only number those equations we will be referring to later in the proof, and we should only number equations when it is necessary. For example, instead of numbering an equation, it is often better to use a phrase such as, "the previous equation proves that …" or "we can rearrange the terms on the right side of the previous equation." Also, note that the word "equation" is not capitalized when we are referring to an equation by number. Although it may be appropriate to use a capital "E," the usual convention in mathematics is not to capitalize.</p>
+</div>
+</section>
+<section id="S3.SS1.SSS6" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.6 </span>Progress Check 3.2 (A Property of Divisors)</h4>
+
+<div id="S3.SS1.SSS6.p1" class="ltx_para">
+<ol id="S3.I4" class="ltx_enumerate">
+<li id="S3.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Give at least four different examples of integers <math id="S3.I4.i1.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I4.i1.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I4.i1.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> such that <math id="S3.I4.i1.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I4.i1.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.I4.i1.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I4.i1.p1.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">For each example in Part (1), calculate the sum <math id="S3.I4.i2.p1.m1" class="ltx_Math" alttext="b+c" display="inline"><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow></math>. Does the integer <math id="S3.I4.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divide the sum <math id="S3.I4.i2.p1.m3" class="ltx_Math" alttext="b+c" display="inline"><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow></math> ?</p>
+</div>
+</li>
+<li id="S3.I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I4.i3.p1" class="ltx_para">
+<p class="ltx_p">Construct a know-show table for the following proposition: For all integers <math id="S3.I4.i3.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I4.i3.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I4.i3.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I4.i3.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I4.i3.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S3.I4.i3.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I4.i3.p1.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, then <math id="S3.I4.i3.p1.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I4.i3.p1.m9" class="ltx_Math" alttext="(b+c)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS1.SSS7" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.7 </span>Using Counterexamples</h4>
+
+<div id="S3.SS1.SSS7.p1" class="ltx_para">
+<p class="ltx_p">In Section 1.2 and so far in this section, our focus has been on proving statements that involve universal quantifiers. However, another important skill for mathematicians is to be able to recognize when a statement is false and then to be able to prove that it is false. For example, suppose we want to know if the following proposition is true or false.</p>
+</div>
+<div id="S3.SS1.SSS7.p2" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.SS1.SSS7.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if 5 divides (<math id="S3.SS1.SSS7.p2.m2" class="ltx_Math" alttext="n^{2}-1" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></math>), then 5 divides (<math id="S3.SS1.SSS7.p2.m3" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></math>).</p>
+</div>
+<div id="S3.SS1.SSS7.p3" class="ltx_para">
+<p class="ltx_p">Suppose we start trying to prove this proposition. In the backward process, we would say that in order to prove that 5 divides <math id="S3.SS1.SSS7.p3.m1" class="ltx_Math" alttext="(n-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>, we can show that there exists an integer <math id="S3.SS1.SSS7.p3.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> such that</p>
+</div>
+<div id="S3.SS1.SSS7.p4" class="ltx_para">
+<table id="S3.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex9.m1" class="ltx_Math" alttext="Q_{1}:n-1=5k\quad\text{ or }\quad n=5k+1." display="block"><mrow><mrow><msub><mi>Q</mi><mn>1</mn></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>k</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> or </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS7.p5" class="ltx_para">
+<p class="ltx_p">For the forward process, we could say that since 5 divides <math id="S3.SS1.SSS7.p5.m1" class="ltx_Math" alttext="\left(n^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>, we know that there exists an integer <math id="S3.SS1.SSS7.p5.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> such that</p>
+</div>
+<div id="S3.SS1.SSS7.p6" class="ltx_para">
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="P_{1}:n^{2}-1=5m\quad\text{ or }\quad n^{2}=5m+1." display="block"><mrow><mrow><msub><mi>P</mi><mn>1</mn></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> or </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS7.p7" class="ltx_para">
+<p class="ltx_p">The problem is that there is no straightforward way to use <math id="S3.SS1.SSS7.p7.m1" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> to prove <math id="S3.SS1.SSS7.p7.m2" class="ltx_Math" alttext="Q_{1}" display="inline"><msub><mi>Q</mi><mn>1</mn></msub></math>. At this point, it would be a good idea to try some examples for <math id="S3.SS1.SSS7.p7.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and try to find situations in which the hypothesis of the proposition is true. (In fact, this should have been done before we started trying to prove the proposition.) The following table summarizes the results of some of these explorations with values for <math id="S3.SS1.SSS7.p7.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S3.SS1.SSS7.p8" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r"><math id="S3.SS1.SSS7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r"><math id="S3.SS1.SSS7.m2" class="ltx_Math" alttext="n^{2}-1" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r">Does 5 divide <math id="S3.SS1.SSS7.m3" class="ltx_Math" alttext="\left(n^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r"><math id="S3.SS1.SSS7.m4" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center">Does 5 divide <math id="S3.SS1.SSS7.m5" class="ltx_Math" alttext="(n-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">yes</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0</td>
+<td class="ltx_td ltx_align_center ltx_border_t">yes</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">no</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_center ltx_border_t">no</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">8</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">no</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2</td>
+<td class="ltx_td ltx_align_center ltx_border_t">no</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">4</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">15</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">yes</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_t">no</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS7.p9" class="ltx_para">
+<p class="ltx_p">We can stop exploring examples now since the last row in the table provides an example where the hypothesis is true and the conclusion is false. Recall from Section 2.4 (see Section 2.4) that a counterexample for a statement of the form <math id="S3.SS1.SSS7.p9.m1" class="ltx_Math" alttext="(\forall x\in U)(P(x))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>U</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is an element <math id="S3.SS1.SSS7.p9.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> in the universal set for which <math id="S3.SS1.SSS7.p9.m3" class="ltx_Math" alttext="P(a)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> is false. So we have actually proved that the negation of the proposition is true.</p>
+</div>
+<div id="S3.SS1.SSS7.p10" class="ltx_para">
+<p class="ltx_p">When using a counterexample to prove a statement is false, we do not use the term "proof" since we reserve a proof for proving a proposition is true. We could summarize our work as follows:</p>
+</div>
+<div id="S3.SS1.SSS7.p11" class="ltx_para">
+<p class="ltx_p">Conjecture. For each integer <math id="S3.SS1.SSS7.p11.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if 5 divides <math id="S3.SS1.SSS7.p11.m2" class="ltx_Math" alttext="\left(n^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>, then 5 divides <math id="S3.SS1.SSS7.p11.m3" class="ltx_Math" alttext="(n-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S3.SS1.SSS7.p12" class="ltx_para">
+<p class="ltx_p">The integer <math id="S3.SS1.SSS7.p12.m1" class="ltx_Math" alttext="n=4" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow></math> is a counterexample that proves this conjecture is false. Notice that when <math id="S3.SS1.SSS7.p12.m2" class="ltx_Math" alttext="n=4,n^{2}-1=15" display="inline"><mrow><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow><mo>,</mo><mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mn>15</mn></mrow></mrow></math> and 5 divides 15. Hence, the hypothesis of the conjecture is true in this case. In addition, <math id="S3.SS1.SSS7.p12.m3" class="ltx_Math" alttext="n-1=3" display="inline"><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mn>3</mn></mrow></math> and 5 does not divide 3 and so the conclusion of the conjecture is false in this case. Since this is an example where the hypothesis is true and the conclusion is false, the conjecture is false.</p>
+</div>
+<div id="S3.SS1.SSS7.p13" class="ltx_para">
+<p class="ltx_p">As a general rule of thumb, anytime we are trying to decide if a proposition is true or false, it is a good idea to try some examples first. The examples that are chosen should be ones in which the hypothesis of the proposition is true. If one of these examples makes the conclusion false, then we have found a counterexample and we know the proposition is false. If all of the examples produce a true conclusion, then we have evidence that the proposition is true and can try to write a proof.</p>
+</div>
+</section>
+<section id="S3.SS1.SSS8" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.8 </span>Progress Check 3.3 (Using a Counterexample)</h4>
+
+<div id="S3.SS1.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Use a counterexample to prove the following statement is false.
+<br class="ltx_break">For all integers <math id="S3.SS1.SSS8.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS1.SSS8.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if 5 divides <math id="S3.SS1.SSS8.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> or 5 divides <math id="S3.SS1.SSS8.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, then 5 divides <math id="S3.SS1.SSS8.p1.m5" class="ltx_Math" alttext="(5a+b)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS1.SSS9" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.9 </span>Congruence</h4>
+
+<div id="S3.SS1.SSS9.p1" class="ltx_para">
+<p class="ltx_p">What mathematicians call congruence is a concept used to describe cycles in the world of the integers. For example, the day of the week is a cyclic phenomenon in that the day of the week repeats every seven days. The time of the day is a cyclic phenomenon because it repeats every 12 hours if we use a 12-hour clock or every 24 hours if we use a 24 -hour clock. We explored these two cyclic phenomena in Beginning Activity 2.</p>
+</div>
+<div id="S3.SS1.SSS9.p2" class="ltx_para">
+<p class="ltx_p">Similar to what we saw in Beginning Activity 2, if it is currently Monday, then it will be Wednesday 2 days from now, 9 days from now, 16 days from now, 23 days from now, and so on. In addition, it was Wednesday 5 days ago, 12 days ago, 19 days ago, and so on. Using negative numbers for time in the past, we generate the following list of numbers:</p>
+</div>
+<div id="S3.SS1.SSS9.p3" class="ltx_para">
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="\ldots,-19,-12,-5,2,9,16,23,\ldots." display="block"><mrow><mrow><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>19</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>12</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo>,</mo><mn>2</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>23</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS9.p4" class="ltx_para">
+<p class="ltx_p">Notice that if we subtract any number in the list above from any other number in that list, we will obtain a multiple of 7. For example,</p>
+</div>
+<div id="S3.SS1.SSS9.p5" class="ltx_para">
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex12.m1" class="ltx_Math" alttext="\displaystyle 16-2" display="inline"><mrow><mn>16</mn><mo>−</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex12.m2" class="ltx_Math" alttext="\displaystyle=14=7\cdot 2" display="inline"><mrow><mi></mi><mo>=</mo><mn>14</mn><mo>=</mo><mrow><mn>7</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex13.m1" class="ltx_Math" alttext="\displaystyle(-5)-(9)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex13.m2" class="ltx_Math" alttext="\displaystyle=-14=7\cdot(-2)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mn>14</mn></mrow><mo>=</mo><mrow><mn>7</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex14.m1" class="ltx_Math" alttext="\displaystyle 16-(-12)" display="inline"><mrow><mn>16</mn><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>12</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex14.m2" class="ltx_Math" alttext="\displaystyle=28=7\cdot 4." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>28</mn><mo>=</mo><mrow><mn>7</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS9.p6" class="ltx_para">
+<p class="ltx_p">Using the concept of congruence, we would say that all the numbers in this list are congruent modulo 7, but we first have to define when two numbers are congruent modulo some natural number <math id="S3.SS1.SSS9.p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S3.SS1.SSS9.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S3.SS1.SSS9.p7.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. If <math id="S3.SS1.SSS9.p7.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS1.SSS9.p7.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are integers, then we say that <math id="S3.SS1.SSS9.p7.m4" class="ltx_Math" alttext="\boldsymbol{a}" display="inline"><mi>𝒂</mi></math> is <span class="ltx_text ltx_font_bold">congruent</span> to <math id="S3.SS1.SSS9.p7.m5" class="ltx_Math" alttext="\boldsymbol{b}" display="inline"><mi>𝒃</mi></math> modulo <math id="S3.SS1.SSS9.p7.m6" class="ltx_Math" alttext="\boldsymbol{n}" display="inline"><mi>𝒏</mi></math> provided that <math id="S3.SS1.SSS9.p7.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S3.SS1.SSS9.p7.m8" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>. A standard notation for this is <math id="S3.SS1.SSS9.p7.m9" class="ltx_Math" alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This is read as "<math id="S3.SS1.SSS9.p7.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is congruent to <math id="S3.SS1.SSS9.p7.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> modulo <math id="S3.SS1.SSS9.p7.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>" or "<math id="S3.SS1.SSS9.p7.m13" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is congruent to <math id="S3.SS1.SSS9.p7.m14" class="ltx_Math" alttext="b\bmod n" display="inline"><mrow><mi>b</mi><mo>mod</mo><mi>n</mi></mrow></math>."</p>
+</div>
+<div id="S3.SS1.SSS9.p8" class="ltx_para">
+<p class="ltx_p">Notice that we can use the definition of divides to say that <math id="S3.SS1.SSS9.p8.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides (<math id="S3.SS1.SSS9.p8.m2" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>) if and only if there exists an integer <math id="S3.SS1.SSS9.p8.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> such that <math id="S3.SS1.SSS9.p8.m4" class="ltx_Math" alttext="a-b=nk" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>k</mi></mrow></mrow></math>. So we can write</p>
+</div>
+<div id="S3.SS1.SSS9.p9" class="ltx_para">
+<table id="S3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex15.m1" class="ltx_math_unparsed" alttext="\displaystyle a\equiv b(\bmod n)\text{ means }(\exists k\in\mathbb{Z})(a-b=nk)%
+,\text{ or }" display="inline"><mrow><mi>a</mi><mo>≡</mo><mi>b</mi><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mtext> means </mtext><mrow><mo stretchy="false">(</mo><mo rspace="0.167em">∃</mo><mi>k</mi><mo>∈</mo><mi>ℤ</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>=</mo><mi>n</mi><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mtext> or</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex16.m1" class="ltx_math_unparsed" alttext="\displaystyle a\equiv b(\bmod n)\text{ means }(\exists k\in\mathbb{Z})(a=b+nk)." display="inline"><mrow><mi>a</mi><mo>≡</mo><mi>b</mi><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mtext> means </mtext><mrow><mo stretchy="false">(</mo><mo rspace="0.167em">∃</mo><mi>k</mi><mo>∈</mo><mi>ℤ</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>n</mi><mi>k</mi><mo stretchy="false">)</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS9.p10" class="ltx_para">
+<p class="ltx_p">This means that in order to find integers that are congruent to <math id="S3.SS1.SSS9.p10.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> modulo <math id="S3.SS1.SSS9.p10.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, we only need to add multiples of <math id="S3.SS1.SSS9.p10.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> to <math id="S3.SS1.SSS9.p10.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. For example, to find integers that are congruent to 2 modulo 5, we add multiples of 5 to 2. This gives the following list:</p>
+</div>
+<div id="S3.SS1.SSS9.p11" class="ltx_para">
+<table id="S3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex17.m1" class="ltx_Math" alttext="\ldots,-13,-8,-3,2,7,12,17,\ldots." display="block"><mrow><mrow><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>13</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>8</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mn>2</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>17</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.SS1.SSS9.p12" class="ltx_para">
+<p class="ltx_p">We can also write this using set notation and say that</p>
+</div>
+<div id="S3.SS1.SSS9.p13" class="ltx_para">
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex18.m1" class="ltx_Math" alttext="\{a\in\mathbb{Z}\mid a\equiv 2(\bmod 5)\}=\{\ldots,-13,-8,-3,2,7,12,17,\ldots\}." display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>13</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>8</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mn>2</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>17</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S3.SS1.SSS10" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.10 </span>Progress Check 3.4 (Congruence Modulo 8)</h4>
+
+<div id="S3.SS1.SSS10.p1" class="ltx_para">
+<ol id="S3.I5" class="ltx_enumerate">
+<li id="S3.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine at least eight different integers that are congruent to 5 modulo 8 .</p>
+</div>
+</li>
+<li id="S3.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">Use set builder notation and the roster method to specify the set of all integers that are congruent to 5 modulo 8 .</p>
+</div>
+</li>
+<li id="S3.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I5.i3.p1" class="ltx_para">
+<p class="ltx_p">Choose two integers that are congruent to 5 modulo 8 and add them. Then repeat this for at least five other pairs of integers that are congruent to 5 modulo 8.</p>
+</div>
+</li>
+<li id="S3.I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I5.i4.p1" class="ltx_para">
+<p class="ltx_p">Explain why all of the sums that were obtained in Part (3) are congruent to 2 modulo 8 .</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS1.SSS10.p2" class="ltx_para">
+<p class="ltx_p">We will study the concept of congruence modulo <math id="S3.SS1.SSS10.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in much more detail later in the text. For now, we will work with the definition of congruence modulo <math id="S3.SS1.SSS10.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in the context of proofs. For example, all of the examples used in Progress Check 3.4 should provide evidence that the following proposition is true.</p>
+</div>
+<div id="S3.SS1.SSS10.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span> 3.5. For all integers <math id="S3.SS1.SSS10.p3.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.SS1.SSS10.p3.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.SS1.SSS10.p3.m3" class="ltx_Math" alttext="a\equiv 5(\bmod 8)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>5</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.SS1.SSS10.p3.m4" class="ltx_Math" alttext="b\equiv 5(\bmod 8)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mn>5</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.SS1.SSS10.p3.m5" class="ltx_Math" alttext="(a+b)\equiv 2(\bmod 8)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS1.SSS11" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.11 </span>Progress Check 3.6 (Proving Proposition 3.5)</h4>
+
+<div id="S3.SS1.SSS11.p1" class="ltx_para">
+<p class="ltx_p">We will use "backward questions" and "forward questions" to help construct a proof for Proposition 3.5. So, we might ask, "How do we prove that <math id="S3.SS1.SSS11.p1.m1" class="ltx_math_unparsed" alttext='(a+b)\equiv 2(\bmod 8)?"' display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>≡</mo><mn>2</mn><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><mi mathvariant="normal">?</mi><mi mathvariant="normal">”</mi></mrow></math> One way to answer this is to use the definition of congruence and state that <math id="S3.SS1.SSS11.p1.m2" class="ltx_Math" alttext="(a+b)\equiv 2(\bmod 8)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> provided that 8 divides <math id="S3.SS1.SSS11.p1.m3" class="ltx_Math" alttext="(a+b-2)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S3.SS1.SSS11.p2" class="ltx_para">
+<ol id="S3.I6" class="ltx_enumerate">
+<li id="S3.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of divides to determine a way to prove that 8 divides <math id="S3.I6.i1.p1.m1" class="ltx_math_unparsed" alttext="(a+b-2" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>−</mo><mn>2</mn></mrow></math>).</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS1.SSS11.p3" class="ltx_para">
+<p class="ltx_p">We now turn to what we know and ask, "What can we conclude from the assumptions that <math id="S3.SS1.SSS11.p3.m1" class="ltx_Math" alttext="a\equiv 5(\bmod 8)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>5</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.SS1.SSS11.p3.m2" class="ltx_math_unparsed" alttext="b\equiv 5(\bmod 8)?" display="inline"><mrow><mi>b</mi><mo>≡</mo><mn>5</mn><mrow><mo stretchy="false">(</mo><mo lspace="0em">mod</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><mi mathvariant="normal">?</mi></mrow></math> ?" We can again use the definition of congruence and conclude that 8 divides <math id="S3.SS1.SSS11.p3.m3" class="ltx_Math" alttext="(a-5)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></math> and 8 divides <math id="S3.SS1.SSS11.p3.m4" class="ltx_Math" alttext="(b-5)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+<ol id="S3.I7" class="ltx_enumerate">
+<li id="S3.I7.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S3.I7.i6.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of divides to make conclusions based on the facts that 8 divides <math id="S3.I7.i6.p1.m1" class="ltx_Math" alttext="(a-5)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></math> and 8 divides <math id="S3.I7.i6.p1.m2" class="ltx_Math" alttext="(b-5)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I7.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S3.I7.i7.p1" class="ltx_para">
+<p class="ltx_p">Solve an equation from part (2) for <math id="S3.I7.i7.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and for <math id="S3.I7.i7.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I7.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S3.I7.i8.p1" class="ltx_para">
+<p class="ltx_p">Use the results from part (3) to prove that 8 divides <math id="S3.I7.i8.p1.m1" class="ltx_Math" alttext="(a+b-2)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I7.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S3.I7.i9.p1" class="ltx_para">
+<p class="ltx_p">Write a proof for Proposition 3.5.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS1.SSS12" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.12 </span>Additional Writing Guidelines</h4>
+
+<div id="S3.SS1.SSS12.p1" class="ltx_para">
+<p class="ltx_p">We will now be writing many proofs, and it is important to make sure we write according to accepted guidelines so that our proofs may be understood by others. Some writing guidelines were introduced in Chapter 1. The first four writing guidelines given below can be considered general guidelines, and the last three can be considered as technical guidelines specific to writing in mathematics.</p>
+</div>
+<div id="S3.SS1.SSS12.p2" class="ltx_para">
+<ol id="S3.I8" class="ltx_enumerate">
+<li id="S3.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">Know your audience. Every writer should have a clear idea of the intended audience for a piece of writing. In that way, the writer can give the right amount of information at the proper level of sophistication to communicate effectively. This is especially true for mathematical writing. For example, if a mathematician is writing a solution to a textbook problem for a solutions manual for instructors, the writing would be brief with many details omitted. However, if the writing was for a students’ solution manual, more details would be included.</p>
+</div>
+</li>
+<li id="S3.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">Use complete sentences and proper paragraph structure. Good grammar is an important part of any writing. Therefore, conform to the accepted rules of grammar. Pay careful attention to the structure of sentences. Write proofs using complete sentences but avoid run-on sentences. Also, do not forget punctuation, and always use a spell checker when using a word processor.</p>
+</div>
+</li>
+<li id="S3.I8.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I8.i3.p1" class="ltx_para">
+<p class="ltx_p">Keep it simple. It is often difficult to understand a mathematical argument no matter how well it is written. Do not let your writing help make it more difficult for the reader. Use simple, declarative sentences and short paragraphs, each with a simple point.</p>
+</div>
+</li>
+<li id="S3.I8.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I8.i4.p1" class="ltx_para">
+<p class="ltx_p">Write a first draft of your proof and then revise it. Remember that a proof is written so that readers are able to read and understand the reasoning in the proof. Be clear and concise. Include details but do not ramble. Do not be satisfied with the first draft of a proof. Read it over and refine it. Just like any worthwhile activity, learning to write mathematics well takes practice and hard work. This can be frustrating. Everyone can be sure that there will be some proofs that are difficult to construct, but remember that proofs are a very important part of mathematics. So work hard and have fun.</p>
+</div>
+</li>
+<li id="S3.I8.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I8.i5.p1" class="ltx_para">
+<p class="ltx_p">Do not use * for multiplication or <sup class="ltx_sup"><span class="ltx_text ltx_font_italic">∧</span></sup> for exponents. Leave this type of notation for writing computer code. The use of this notation makes it difficult for humans to read. In addition, avoid using / for division when using a complex fraction.
+<br class="ltx_break">For example, it is very difficult to read <math id="S3.I8.i5.p1.m2" class="ltx_Math" alttext="\left(x^{3}-3x^{2}+1/2\right)/(2x/3-7)" display="inline"><mrow><mrow><mo>(</mo><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>/</mo><mn>3</mn></mrow><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>; the fraction</p>
+</div>
+<div id="S3.I8.i5.p2" class="ltx_para">
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex19.m1" class="ltx_Math" alttext="\frac{x^{3}-3x^{2}+\frac{1}{2}}{\frac{2x}{3}-7}" display="block"><mfrac><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mn>3</mn></mfrac><mo>−</mo><mn>7</mn></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I8.i5.p3" class="ltx_para">
+<p class="ltx_p">is much easier to read.</p>
+</div>
+</li>
+<li id="S3.I8.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S3.I8.i6.p1" class="ltx_para">
+<p class="ltx_p">Do not use a mathematical symbol at the beginning of a sentence. For example, we should not write, "Let <math id="S3.I8.i6.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> be an integer. <math id="S3.I8.i6.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an odd integer provided that …." Many people find this hard to read and often have to reread it to understand it. It would be better to write, "An integer <math id="S3.I8.i6.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an odd integer provided that . . . ."</p>
+</div>
+</li>
+<li id="S3.I8.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S3.I8.i7.p1" class="ltx_para">
+<p class="ltx_p">Use English and minimize the use of cumbersome notation. Do not use the special symbols for quantifiers <math id="S3.I8.i7.p1.m1" class="ltx_Math" alttext="\forall" display="inline"><mo>∀</mo></math> (for all), <math id="S3.I8.i7.p1.m2" class="ltx_Math" alttext="\exists" display="inline"><mo>∃</mo></math> (there exists), <math id="S3.I8.i7.p1.m3" class="ltx_Math" alttext="\ni" display="inline"><mo>∋</mo></math> (such that), or <math id="S3.I8.i7.p1.m4" class="ltx_Math" alttext="\therefore" display="inline"><mo>∴</mo></math> (therefore) in formal mathematical writing. It is often easier to write, and usually easier to read, if the English words are used instead of the symbols. For example, why make the reader interpret</p>
+</div>
+<div id="S3.I8.i7.p2" class="ltx_para">
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y=0)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I8.i7.p3" class="ltx_para">
+<p class="ltx_p">when it is possible to write
+<br class="ltx_break">For each real number <math id="S3.I8.i7.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, there exists a real number <math id="S3.I8.i7.p3.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that <math id="S3.I8.i7.p3.m3" class="ltx_Math" alttext="x+y=0" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>,</p>
+</div>
+<div id="S3.I8.i7.p4" class="ltx_para">
+<p class="ltx_p">or, more succinctly (if appropriate),</p>
+</div>
+<div id="S3.I8.i7.p5" class="ltx_para">
+<p class="ltx_p">Every real number has an additive inverse.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS1.SSS13" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.13 </span>Exercises for Section 3.1</h4>
+
+<div id="S3.SS1.SSS13.p1" class="ltx_para">
+<ol id="S3.I9" class="ltx_enumerate">
+<li id="S3.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I9.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove each of the following statements:</p>
+<ol id="S3.I9.i1.I1" class="ltx_enumerate">
+<li id="S3.I9.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I9.i1.I1.i1.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i1.I1.i1.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I9.i1.I1.i1.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I9.i1.I1.i1.p1.m4" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> and <math id="S3.I9.i1.I1.i1.p1.m5" class="ltx_Math" alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math>, then <math id="S3.I9.i1.I1.i1.p1.m6" class="ltx_Math" alttext="a\mid(b-c)" display="inline"><mrow><mi>a</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S3.I9.i1.I1.i2.p1.m1" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, if <math id="S3.I9.i1.I1.i2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an odd integer, then <math id="S3.I9.i1.I1.i2.p1.m3" class="ltx_Math" alttext="n^{3}" display="inline"><msup><mi>n</mi><mn>3</mn></msup></math> is an odd integer.</p>
+</div>
+</li>
+<li id="S3.I9.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i1.I1.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, if 4 divides <math id="S3.I9.i1.I1.i3.p1.m2" class="ltx_Math" alttext="(a-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>, then 4 divides <math id="S3.I9.i1.I1.i3.p1.m3" class="ltx_Math" alttext="\left(a^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">For each of the following, use a counterexample to prove the statement is false.</p>
+<ol id="S3.I9.i2.I1" class="ltx_enumerate">
+<li id="S3.I9.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i2.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each odd natural number <math id="S3.I9.i2.I1.i1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if <math id="S3.I9.i2.I1.i1.p1.m3" class="ltx_Math" alttext="n&gt;3" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>3</mn></mrow></math>, then 3 divides <math id="S3.I9.i2.I1.i1.p1.m4" class="ltx_Math" alttext="\left(n^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S3.I9.i2.I1.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, (<math id="S3.I9.i2.I1.i2.p1.m2" class="ltx_Math" alttext="3\cdot 2^{n}+2\cdot 3^{n}+1" display="inline"><mrow><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>3</mn><mi>n</mi></msup></mrow><mo>+</mo><mn>1</mn></mrow></math>) is a prime number.</p>
+</div>
+</li>
+<li id="S3.I9.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I9.i2.I1.i3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i2.I1.i3.p1.m2" class="ltx_Math" alttext="y,\sqrt{x^{2}+y^{2}}&gt;2xy" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo>&gt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math>.
+<math id="S3.I9.i2.I1.i3.p1.m3" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</li>
+<li id="S3.I9.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I9.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i2.I1.i4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, if 4 divides <math id="S3.I9.i2.I1.i4.p1.m2" class="ltx_Math" alttext="\left(a^{2}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>, then 4 divides <math id="S3.I9.i2.I1.i4.p1.m3" class="ltx_Math" alttext="(a-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I9.i3.p1" class="ltx_para">
+<p class="ltx_p">Determine if each of the following statements is true or false. If a statement is true, then write a formal proof of that statement, and if it is false, then provide a counterexample that shows it is false.</p>
+<ol id="S3.I9.i3.I1" class="ltx_enumerate">
+<li id="S3.I9.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I9.i3.I1.i1.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i3.I1.i1.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I9.i3.I1.i1.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I9.i3.I1.i1.p1.m4" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math>, then <math id="S3.I9.i3.I1.i1.p1.m5" class="ltx_Math" alttext="a\mid(bc)" display="inline"><mrow><mi>a</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i3.I1.i2.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I9.i3.I1.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i3.I1.i2.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> with <math id="S3.I9.i3.I1.i2.p1.m4" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I9.i3.I1.i2.p1.m5" class="ltx_Math" alttext="6\mid(ab)" display="inline"><mrow><mn>6</mn><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="S3.I9.i3.I1.i2.p1.m6" class="ltx_Math" alttext="6\mid a" display="inline"><mrow><mn>6</mn><mo>∣</mo><mi>a</mi></mrow></math> or <math id="S3.I9.i3.I1.i2.p1.m7" class="ltx_Math" alttext="6\mid b" display="inline"><mrow><mn>6</mn><mo>∣</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I9.i3.I1.i3.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i3.I1.i3.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I9.i3.I1.i3.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I9.i3.I1.i3.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I9.i3.I1.i3.p1.m5" class="ltx_Math" alttext="(b-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="S3.I9.i3.I1.i3.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I9.i3.I1.i3.p1.m7" class="ltx_Math" alttext="(c-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>, then <math id="S3.I9.i3.I1.i3.p1.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I9.i3.I1.i3.p1.m9" class="ltx_Math" alttext="(bc-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I9.i3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i3.I1.i4.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each integer <math id="S3.I9.i3.I1.i4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if 7 divides <math id="S3.I9.i3.I1.i4.p1.m3" class="ltx_Math" alttext="\left(n^{2}-4\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow><mo>)</mo></mrow></math>, then 7 divides <math id="S3.I9.i3.I1.i4.p1.m4" class="ltx_Math" alttext="(n-2)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S3.I9.i3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i3.I1.i5.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For every integer <math id="S3.I9.i3.I1.i5.p1.m2" class="ltx_Math" alttext="n,4n^{2}+7n+6" display="inline"><mrow><mi>n</mi><mo>,</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>6</mn></mrow></mrow></math> is an odd integer.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S3.I9.i3.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i3.I1.i6.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For every odd integer <math id="S3.I9.i3.I1.i6.p1.m2" class="ltx_Math" alttext="n,4n^{2}+7n+6" display="inline"><mrow><mi>n</mi><mo>,</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>6</mn></mrow></mrow></math> is an odd integer.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S3.I9.i3.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i3.I1.i7.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I9.i3.I1.i7.p1.m2" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i3.I1.i7.p1.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> with <math id="S3.I9.i3.I1.i7.p1.m4" class="ltx_Math" alttext="d\neq 0" display="inline"><mrow><mi>d</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I9.i3.I1.i7.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides both <math id="S3.I9.i3.I1.i7.p1.m6" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math> and <math id="S3.I9.i3.I1.i7.p1.m7" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>, then <math id="S3.I9.i3.I1.i7.p1.m8" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides <math id="S3.I9.i3.I1.i7.p1.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i3.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(h)</span> 
+<div id="S3.I9.i3.I1.i8.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I9.i3.I1.i8.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i3.I1.i8.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I9.i3.I1.i8.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>, if <math id="S3.I9.i3.I1.i8.p1.m4" class="ltx_Math" alttext="a\mid(bc)" display="inline"><mrow><mi>a</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="S3.I9.i3.I1.i8.p1.m5" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> or <math id="S3.I9.i3.I1.i8.p1.m6" class="ltx_Math" alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S3.I9.i4.p1" class="ltx_para">
+<ol id="S3.I9.i4.I1" class="ltx_enumerate">
+<li id="S3.I9.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i4.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> If <math id="S3.I9.i4.I1.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i4.I1.i1.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are integers and <math id="S3.I9.i4.I1.i1.p1.m4" class="ltx_Math" alttext="xy=1" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>, explain why <math id="S3.I9.i4.I1.i1.p1.m5" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> or <math id="S3.I9.i4.I1.i1.p1.m6" class="ltx_Math" alttext="x=-1" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the following proposition true or false?</p>
+</div>
+<div id="S3.I9.i4.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">For all nonzero integers <math id="S3.I9.i4.I1.i2.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i4.I1.i2.p2.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I9.i4.I1.i2.p2.m3" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> and <math id="S3.I9.i4.I1.i2.p2.m4" class="ltx_Math" alttext="b\mid a" display="inline"><mrow><mi>b</mi><mo>∣</mo><mi>a</mi></mrow></math>, then <math id="S3.I9.i4.I1.i2.p2.m5" class="ltx_Math" alttext="a=\pm b" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo>±</mo><mi>b</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S3.I9.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i5.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove the following proposition:</p>
+</div>
+<div id="S3.I9.i5.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i5.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be an integer. If there exists an integer <math id="S3.I9.i5.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="S3.I9.i5.p2.m3" class="ltx_Math" alttext="a\mid(4n+3)" display="inline"><mrow><mi>a</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.I9.i5.p2.m4" class="ltx_Math" alttext="a\mid(2n+1)" display="inline"><mrow><mi>a</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="S3.I9.i5.p2.m5" class="ltx_Math" alttext="a=1" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>1</mn></mrow></math> or <math id="S3.I9.i5.p2.m6" class="ltx_Math" alttext="a=-1" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S3.I9.i5.p3" class="ltx_para">
+<p class="ltx_p">Hint: Use the fact that the only divisors of 1 are 1 and -1.</p>
+</div>
+</li>
+<li id="S3.I9.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S3.I9.i6.p1" class="ltx_para">
+<p class="ltx_p">Determine if each of the following statements is true or false. If a statement is true, then write a formal proof of that statement, and if it is false, then provide a counterexample that shows it is false.</p>
+<ol id="S3.I9.i6.I1" class="ltx_enumerate">
+<li id="S3.I9.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i6.I1.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, if there exists an integer <math id="S3.I9.i6.I1.i1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="S3.I9.i6.I1.i1.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides (<math id="S3.I9.i6.I1.i1.p1.m4" class="ltx_Math" alttext="8n+7" display="inline"><mrow><mrow><mn>8</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>7</mn></mrow></math>) and <math id="S3.I9.i6.I1.i1.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides (<math id="S3.I9.i6.I1.i1.p1.m6" class="ltx_Math" alttext="4n+1" display="inline"><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></math>), then <math id="S3.I9.i6.I1.i1.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides 5.</p>
+</div>
+</li>
+<li id="S3.I9.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i6.I1.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, if there exists an integer <math id="S3.I9.i6.I1.i2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="S3.I9.i6.I1.i2.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides (<math id="S3.I9.i6.I1.i2.p1.m4" class="ltx_Math" alttext="9n+5" display="inline"><mrow><mrow><mn>9</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>5</mn></mrow></math>) and <math id="S3.I9.i6.I1.i2.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I9.i6.I1.i2.p1.m6" class="ltx_Math" alttext="(6n+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>6</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>, then <math id="S3.I9.i6.I1.i2.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides 7.</p>
+</div>
+</li>
+<li id="S3.I9.i6.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i6.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i6.I1.i3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if <math id="S3.I9.i6.I1.i3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is odd, then 8 divides <math id="S3.I9.i6.I1.i3.p1.m3" class="ltx_Math" alttext="\left(n^{4}+4n^{2}+11\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>11</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i6.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I9.i6.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i6.I1.i4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, if <math id="S3.I9.i6.I1.i4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is odd, then 8 divides <math id="S3.I9.i6.I1.i4.p1.m3" class="ltx_Math" alttext="\left(n^{4}+n^{2}+2n\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>4</mn></msup><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S3.I9.i7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i7.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be an integer and let <math id="S3.I9.i7.p1.m2" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>.</p>
+<ol id="S3.I9.i7.I1" class="ltx_enumerate">
+<li id="S3.I9.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that if <math id="S3.I9.i7.I1.i1.p1.m1" class="ltx_Math" alttext="a\equiv 0(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i7.I1.i1.p1.m2" class="ltx_Math" alttext="n\mid a" display="inline"><mrow><mi>n</mi><mo>∣</mo><mi>a</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that if <math id="S3.I9.i7.I1.i2.p1.m1" class="ltx_Math" alttext="n\mid a" display="inline"><mrow><mi>n</mi><mo>∣</mo><mi>a</mi></mrow></math>, then <math id="S3.I9.i7.I1.i2.p1.m2" class="ltx_Math" alttext="a\equiv 0(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S3.I9.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i8.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S3.I9.i8.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i8.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> be integers. Prove that if <math id="S3.I9.i8.p1.m4" class="ltx_Math" alttext="a\equiv 2(\bmod 3)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.I9.i8.p1.m5" class="ltx_Math" alttext="b\equiv 2(\bmod 3)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then</p>
+<ol id="S3.I9.i8.I1" class="ltx_enumerate">
+<li id="S3.I9.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i8.I1.i1.p1.m1" class="ltx_Math" alttext="a+b\equiv 1(\bmod 3)" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="S3.I9.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i8.I1.i2.p1.m1" class="ltx_Math" alttext="a\cdot b\equiv 1(\bmod 3)" display="inline"><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>b</mi></mrow><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S3.I9.i9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i9.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i9.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> be integers. Prove that if <math id="S3.I9.i9.p1.m3" class="ltx_Math" alttext="a\equiv 7(\bmod 8)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>7</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.I9.i9.p1.m4" class="ltx_Math" alttext="b\equiv 3(\bmod 8)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mn>3</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then:</p>
+<ol id="S3.I9.i9.I1" class="ltx_enumerate">
+<li id="S3.I9.i9.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i9.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i9.I1.i1.p1.m1" class="ltx_Math" alttext="a+b\equiv 2(\bmod 8)" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="S3.I9.i9.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i9.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i9.I1.i2.p1.m1" class="ltx_Math" alttext="a\cdot b\equiv 5(\bmod 8)" display="inline"><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>b</mi></mrow><mo>≡</mo><mrow><mn>5</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S3.I9.i10.p1" class="ltx_para">
+<p class="ltx_p">Determine if each of the following propositions is true or false. Justify each conclusion.</p>
+<ol id="S3.I9.i10.I1" class="ltx_enumerate">
+<li id="S3.I9.i10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I9.i10.I1.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i10.I1.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I9.i10.I1.i1.p1.m3" class="ltx_Math" alttext="ab\equiv 0(\bmod 6)" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i10.I1.i1.p1.m4" class="ltx_Math" alttext="a\equiv 0(\bmod 6)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> or <math id="S3.I9.i10.I1.i1.p1.m5" class="ltx_Math" alttext="b\equiv 0(\bmod 6)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mn>0</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i10.I1.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, if <math id="S3.I9.i10.I1.i2.p1.m2" class="ltx_Math" alttext="a\equiv 2(\bmod 8)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i10.I1.i2.p1.m3" class="ltx_Math" alttext="a^{2}\equiv 4(\bmod 8)" display="inline"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>≡</mo><mrow><mn>4</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i10.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i10.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I9.i10.I1.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, if <math id="S3.I9.i10.I1.i3.p1.m2" class="ltx_Math" alttext="a^{2}\equiv 4(\bmod 8)" display="inline"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>≡</mo><mrow><mn>4</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i10.I1.i3.p1.m3" class="ltx_Math" alttext="a\equiv 2(\bmod 8)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>2</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S3.I9.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i11.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> be a natural number. Prove each of the following:</p>
+<ol id="S3.I9.i11.I1" class="ltx_enumerate">
+<li id="S3.I9.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i11.I1.i1.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For every integer <math id="S3.I9.i11.I1.i1.p1.m2" class="ltx_Math" alttext="a,a\equiv a(\bmod n)" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>a</mi></mrow><mo>≡</mo><mrow><mi>a</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+This is called the reflexive property of congruence modulo <math id="S3.I9.i11.I1.i1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i11.I1.i2.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For all integers <math id="S3.I9.i11.I1.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i11.I1.i2.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, if <math id="S3.I9.i11.I1.i2.p1.m4" class="ltx_Math" alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i11.I1.i2.p1.m5" class="ltx_Math" alttext="b\equiv a(\bmod n)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>a</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+This is called the symmetric property of congruence modulo <math id="S3.I9.i11.I1.i2.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i11.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i11.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all integers <math id="S3.I9.i11.I1.i3.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i11.I1.i3.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, if <math id="S3.I9.i11.I1.i3.p1.m3" class="ltx_Math" alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.I9.i11.I1.i3.p1.m4" class="ltx_Math" alttext="b\equiv c(\bmod n)" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>c</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i11.I1.i3.p1.m5" class="ltx_Math" alttext="a\equiv c(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>c</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+This is called the transitive property of congruence modulo <math id="S3.I9.i11.I1.i3.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S3.I9.i12.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I9.i12.p1.m1" class="ltx_Math" alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Let <math id="S3.I9.i12.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> be a natural number and let <math id="S3.I9.i12.p1.m3" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>, and <math id="S3.I9.i12.p1.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> be integers. Prove each of the following.</p>
+<ol id="S3.I9.i12.I1" class="ltx_enumerate">
+<li id="S3.I9.i12.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i12.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I9.i12.I1.i1.p1.m1" class="ltx_Math" alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.I9.i12.I1.i1.p1.m2" class="ltx_Math" alttext="c\equiv d(\bmod n)" display="inline"><mrow><mi>c</mi><mo>≡</mo><mrow><mi>d</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i12.I1.i1.p1.m3" class="ltx_Math" alttext="(a+c)\equiv(b+d)(\bmod n)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mo>≡</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i12.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i12.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.I9.i12.I1.i2.p1.m1" class="ltx_Math" alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.I9.i12.I1.i2.p1.m2" class="ltx_Math" alttext="c\equiv d(\bmod n)" display="inline"><mrow><mi>c</mi><mo>≡</mo><mrow><mi>d</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I9.i12.I1.i2.p1.m3" class="ltx_Math" alttext="ac\equiv bd(\bmod n)" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo>≡</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S3.I9.i13.p1" class="ltx_para">
+<ol id="S3.I9.i13.I1" class="ltx_enumerate">
+<li id="S3.I9.i13.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i13.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i13.I1.i1.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i13.I1.i1.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be real numbers with <math id="S3.I9.i13.I1.i1.p1.m3" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math>. Explain how to use a part of the quadratic formula (called the discriminant) to determine if the quadratic equation <math id="S3.I9.i13.I1.i1.p1.m4" class="ltx_Math" alttext="ax^{2}+bx+c=0" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> has two real number solutions, one real number solution, or no real number solutions. (See Exercise (11) in Section 1.2 for a statement of the quadratic formula.)</p>
+</div>
+</li>
+<li id="S3.I9.i13.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i13.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that if <math id="S3.I9.i13.I1.i2.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i13.I1.i2.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are real numbers for which <math id="S3.I9.i13.I1.i2.p1.m3" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S3.I9.i13.I1.i2.p1.m4" class="ltx_Math" alttext="c&lt;0" display="inline"><mrow><mi>c</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, then one solution of the quadratic equation <math id="S3.I9.i13.I1.i2.p1.m5" class="ltx_Math" alttext="ax^{2}+bx+c=0" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> is a positive real number.</p>
+</div>
+</li>
+<li id="S3.I9.i13.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i13.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Prove that if <math id="S3.I9.i13.I1.i3.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i13.I1.i3.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are real numbers, if <math id="S3.I9.i13.I1.i3.p1.m3" class="ltx_Math" alttext="a\neq 0,b&gt;0" display="inline"><mrow><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></math> and <math id="S3.I9.i13.I1.i3.p1.m4" class="ltx_Math" alttext="\frac{b}{2}&lt;\sqrt{ac}" display="inline"><mrow><mfrac><mi>b</mi><mn>2</mn></mfrac><mo>&lt;</mo><msqrt><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow></msqrt></mrow></math>, then the quadratic equation <math id="S3.I9.i13.I1.i3.p1.m5" class="ltx_Math" alttext="ax^{2}+bx+c=0" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> has no real number solution.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S3.I9.i14.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i14.p1.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> and <math id="S3.I9.i14.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> be real numbers and let <math id="S3.I9.i14.p1.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> be a positive number. The equation for a circle whose center is at the point <math id="S3.I9.i14.p1.m4" class="ltx_Math" alttext="(h,k)" display="inline"><mrow><mo stretchy="false">(</mo><mi>h</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></math> and whose radius is <math id="S3.I9.i14.p1.m5" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is</p>
+</div>
+<div id="S3.I9.i14.p2" class="ltx_para">
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="(x-h)^{2}+(y-k)^{2}=r^{2}." display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>−</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I9.i14.p3" class="ltx_para">
+<p class="ltx_p">We also know that if <math id="S3.I9.i14.p3.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S3.I9.i14.p3.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are real numbers, then</p>
+</div>
+<div id="S3.I9.i14.p4" class="ltx_para">
+<ul id="S3.I9.i14.I1" class="ltx_itemize">
+<li id="S3.I9.i14.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i14.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The point <math id="S3.I9.i14.I1.i1.p1.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> is inside the circle if <math id="S3.I9.i14.I1.i1.p1.m2" class="ltx_Math" alttext="(a-h)^{2}+(b-k)^{2}&lt;r^{2}" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>&lt;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i14.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i14.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The point <math id="S3.I9.i14.I1.i2.p1.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> is on the circle if <math id="S3.I9.i14.I1.i2.p1.m2" class="ltx_Math" alttext="(a-h)^{2}+(b-k)^{2}=r^{2}" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i14.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i14.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The point <math id="S3.I9.i14.I1.i3.p1.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> is outside the circle if <math id="S3.I9.i14.I1.i3.p1.m2" class="ltx_Math" alttext="(a-h)^{2}+(b-k)^{2}&gt;r^{2}" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>&gt;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.I9.i14.p5" class="ltx_para">
+<p class="ltx_p">Prove that all points on or inside the circle whose equation is <math id="S3.I9.i14.p5.m1" class="ltx_Math" alttext="(x-1)^{2}+(y-2)^{2}=4" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mn>4</mn></mrow></math> are inside the circle whose equation is <math id="S3.I9.i14.p5.m2" class="ltx_Math" alttext="x^{2}+y^{2}=26" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>26</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="S3.I9.i15.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.I9.i15.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> be a positive real number. The equation for a circle of radius <math id="S3.I9.i15.p1.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> whose center is the origin is <math id="S3.I9.i15.p1.m3" class="ltx_Math" alttext="x^{2}+y^{2}=r^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>.</p>
+<ol id="S3.I9.i15.I1" class="ltx_enumerate">
+<li id="S3.I9.i15.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i15.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use implicit differentiation to determine <math id="S3.I9.i15.I1.i1.p1.m1" class="ltx_Math" alttext="\frac{dy}{dx}" display="inline"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i15.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i15.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let (<math id="S3.I9.i15.I1.i2.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>) be a point on the circle with <math id="S3.I9.i15.I1.i2.p1.m2" class="ltx_Math" alttext="a\neq 0" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.I9.i15.I1.i2.p1.m3" class="ltx_Math" alttext="b\neq 0" display="inline"><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></math>. Determine the slope of the line tangent to the circle at the point <math id="S3.I9.i15.I1.i2.p1.m4" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i15.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i15.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Prove that the radius of the circle to the point <math id="S3.I9.i15.I1.i3.p1.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> is perpendicular to the line tangent to the circle at the point <math id="S3.I9.i15.I1.i3.p1.m2" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>. Hint: Two lines (neither of which is horizontal) are perpendicular if and only if the products of their slopes is equal to -1.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="S3.I9.i16.p1" class="ltx_para">
+<p class="ltx_p">Determine if each of the following statements is true or false. Provide a counterexample for statements that are false and provide a complete proof for those that are true.</p>
+<ol id="S3.I9.i16.I1" class="ltx_enumerate">
+<li id="S3.I9.i16.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i16.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I9.i16.I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i16.I1.i1.p1.m2" class="ltx_Math" alttext="y,\sqrt{xy}\leq\frac{x+y}{2}" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><msqrt><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msqrt></mrow><mo>≤</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i16.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i16.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all real numbers <math id="S3.I9.i16.I1.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i16.I1.i2.p1.m2" class="ltx_Math" alttext="y,xy\leq\left(\frac{x+y}{2}\right)^{2}" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>≤</mo><msup><mrow><mo>(</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i16.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i16.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all nonnegative real numbers <math id="S3.I9.i16.I1.i3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i16.I1.i3.p1.m2" class="ltx_Math" alttext="y,\sqrt{xy}\leq\frac{x+y}{2}" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><msqrt><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msqrt></mrow><mo>≤</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="S3.I9.i17.p1" class="ltx_para">
+<p class="ltx_p">Use one of the true inequalities in Exercise (16) to prove the following proposition.</p>
+</div>
+<div id="S3.I9.i17.p2" class="ltx_para">
+<p class="ltx_p">For each real number <math id="S3.I9.i17.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, the value of <math id="S3.I9.i17.p2.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> that gives the maximum value of <math id="S3.I9.i17.p2.m3" class="ltx_Math" alttext="y=x(a-x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is <math id="S3.I9.i17.p2.m4" class="ltx_Math" alttext="x=\frac{a}{2}" display="inline"><mrow><mi>x</mi><mo>=</mo><mfrac><mi>a</mi><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="S3.I9.i18.p1" class="ltx_para">
+<ol id="S3.I9.i18.I1" class="ltx_enumerate">
+<li id="S3.I9.i18.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i18.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">State the Pythagorean Theorem for right triangles.</p>
+</div>
+<div id="S3.I9.i18.I1.i1.p2" class="ltx_para">
+<p class="ltx_p">The diagrams in Figure 3.1 will be used for the problems in this exercise.</p>
+</div>
+</li>
+<li id="S3.I9.i18.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i18.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">In the diagram on the left, <math id="S3.I9.i18.I1.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is the length of a side of the equilateral triangle and <math id="S3.I9.i18.I1.i2.p1.m2" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is the length of an altitude of the equilateral triangle. The labeling in the diagram shows the fact that the altitude intersects the base of the equilateral triangle at the midpoint of the base. Use the</p>
+</div>
+<figure id="S3.F1" class="ltx_figure"><img src="https://johnweeks03.github.io/teaching/300/figure_3_1.jpg" id="S3.F1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="200" height="117" alt="Two diagrams. Left: An equilateral triangle with side length x and altitude h bisecting the base. Right: A right triangle ABC with an equilateral triangle constructed on each of its three sides.">
+<figcaption class="ltx_caption ltx_centering">Figure 3.1: Diagrams for Exercise (18)</figcaption>
+</figure>
+<div id="S3.I9.i18.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">Pythagorean Theorem to prove that the area of this equilateral triangle is <math id="S3.I9.i18.I1.i2.p2.m1" class="ltx_Math" alttext="\frac{\sqrt{3}}{4}x^{2}" display="inline"><mrow><mfrac><msqrt><mn>3</mn></msqrt><mn>4</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i18.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i18.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In the diagram on the right, <math id="S3.I9.i18.I1.i3.p1.m1" class="ltx_Math" alttext="\triangle ABC" display="inline"><mrow><mi mathvariant="normal">△</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math> is a right triangle. In addition, there has been an equilateral triangle constructed on each side of this right triangle. Prove that the area of the equilateral triangle on the hypotenuse is equal to the sum of the areas of the equilateral triangles constructed on the other two sides of the right triangle.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I9.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">19.</span> 
+<div id="S3.I9.i19.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of proofs.</span> This type of exercise will appear frequently in the book. In each case, there is a proposed proof of a proposition. However, the proposition may be true or may be false.</p>
+</div>
+<div id="S3.I9.i19.p2" class="ltx_para">
+<ul id="S3.I9.i19.I1" class="ltx_itemize">
+<li id="S3.I9.i19.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i19.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If a proposition is false, the proposed proof is, of course, incorrect. In this situation, you are to find the error in the proof and then provide a counterexample showing that the proposition is false.</p>
+</div>
+</li>
+<li id="S3.I9.i19.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i19.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If a proposition is true, the proposed proof may still be incorrect. In this case, you are to determine why the proof is incorrect and then write a correct proof using the writing guidelines that have been presented in this book.</p>
+</div>
+</li>
+<li id="S3.I9.i19.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I9.i19.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If a proposition is true and the proof is correct, you are to decide if the proof is well written or not. If it is well written, then you simply must indicate that this is an excellent proof and needs no revision. On the other hand, if the proof is not well written, then you must then revise the proof by writing it according to the guidelines presented in this text.</p>
+</div>
+</li>
+</ul>
+<ol id="S3.I9.i19.I2" class="ltx_enumerate">
+<li id="S3.I9.i19.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I9.i19.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. If <math id="S3.I9.i19.I2.i1.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is an even integer, then <math id="S3.I9.i19.I2.i1.p1.m2" class="ltx_Math" alttext="(5m+4)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></math> is an even integer.</p>
+</div>
+<div id="S3.I9.i19.I2.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We see that <math id="S3.I9.i19.I2.i1.p2.m1" class="ltx_Math" alttext="5m+4=10n+4=2(5n+2)" display="inline"><mrow><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>4</mn></mrow><mo>=</mo><mrow><mrow><mn>10</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>4</mn></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore, <math id="S3.I9.i19.I2.i1.p2.m2" class="ltx_Math" alttext="(5m+4)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></math> is an even integer.</p>
+</div>
+</li>
+<li id="S3.I9.i19.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I9.i19.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all real numbers <math id="S3.I9.i19.I2.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i19.I2.i2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, if <math id="S3.I9.i19.I2.i2.p1.m3" class="ltx_Math" alttext="x\neq y,x&gt;0" display="inline"><mrow><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></math>, and <math id="S3.I9.i19.I2.i2.p1.m4" class="ltx_Math" alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S3.I9.i19.I2.i2.p1.m5" class="ltx_Math" alttext="\frac{x}{y}+\frac{y}{x}&gt;2" display="inline"><mrow><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><mo>&gt;</mo><mn>2</mn></mrow></math>.</p>
+</div>
+<div id="S3.I9.i19.I2.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. Since <math id="S3.I9.i19.I2.i2.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.I9.i19.I2.i2.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are positive real numbers, <math id="S3.I9.i19.I2.i2.p2.m3" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> is positive and we can multiply both sides of the inequality by <math id="S3.I9.i19.I2.i2.p2.m4" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> to obtain</p>
+</div>
+<div id="S3.I9.i19.I2.i2.p3" class="ltx_para">
+<table id="S3.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex22.m1" class="ltx_Math" alttext="\displaystyle\left(\frac{x}{y}+\frac{y}{x}\right)\cdot xy" display="inline"><mrow><mrow><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mi>x</mi><mi>y</mi></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle></mrow><mo rspace="0.055em">)</mo></mrow><mo rspace="0.222em">⋅</mo><mi>x</mi></mrow><mo>⁢</mo><mi>y</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex22.m2" class="ltx_Math" alttext="\displaystyle&gt;2\cdot xyx^{2}+y^{2}" display="inline"><mrow><mi></mi><mo>&gt;</mo><mrow><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>x</mi></mrow><mo>⁢</mo><mi>y</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex22.m3" class="ltx_Math" alttext="\displaystyle&gt;2xy" display="inline"><mrow><mi></mi><mo>&gt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I9.i19.I2.i2.p4" class="ltx_para">
+<p class="ltx_p">By combining all terms on the left side of the inequality, we see that <math id="S3.I9.i19.I2.i2.p4.m1" class="ltx_Math" alttext="x^{2}-2xy+y^{2}&gt;0" display="inline"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> and then by factoring the left side, we obtain <math id="S3.I9.i19.I2.i2.p4.m2" class="ltx_Math" alttext="(x-y)^{2}&gt;0" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></mrow></math>. Since <math id="S3.I9.i19.I2.i2.p4.m3" class="ltx_Math" alttext="x\neq y,(x-y)\neq 0" display="inline"><mrow><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>≠</mo><mn>0</mn></mrow></mrow></math> and so <math id="S3.I9.i19.I2.i2.p4.m4" class="ltx_Math" alttext="(x-y)^{2}&gt;0" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></mrow></math>. This proves that if <math id="S3.I9.i19.I2.i2.p4.m5" class="ltx_Math" alttext="x\neq y,x&gt;0" display="inline"><mrow><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></math>, and <math id="S3.I9.i19.I2.i2.p4.m6" class="ltx_Math" alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S3.I9.i19.I2.i2.p4.m7" class="ltx_Math" alttext="\frac{x}{y}+\frac{y}{x}&gt;2" display="inline"><mrow><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><mo>&gt;</mo><mn>2</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i19.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I9.i19.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all integers <math id="S3.I9.i19.I2.i3.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i19.I2.i3.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, if <math id="S3.I9.i19.I2.i3.p1.m3" class="ltx_Math" alttext="a\mid(bc)" display="inline"><mrow><mi>a</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="S3.I9.i19.I2.i3.p1.m4" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> or <math id="S3.I9.i19.I2.i3.p1.m5" class="ltx_Math" alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math>.</p>
+</div>
+<div id="S3.I9.i19.I2.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We assume that <math id="S3.I9.i19.I2.i3.p2.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i19.I2.i3.p2.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are integers and that <math id="S3.I9.i19.I2.i3.p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S3.I9.i19.I2.i3.p2.m4" class="ltx_Math" alttext="bc" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></math>. So, there exists an integer <math id="S3.I9.i19.I2.i3.p2.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> such that <math id="S3.I9.i19.I2.i3.p2.m6" class="ltx_Math" alttext="bc=ka" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></math>. We now factor <math id="S3.I9.i19.I2.i3.p2.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> as <math id="S3.I9.i19.I2.i3.p2.m8" class="ltx_Math" alttext="k=mn" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></mrow></math>, where <math id="S3.I9.i19.I2.i3.p2.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="S3.I9.i19.I2.i3.p2.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> are integers. We then see that</p>
+</div>
+<div id="S3.I9.i19.I2.i3.p3" class="ltx_para">
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="bc=mna." display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>a</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.I9.i19.I2.i3.p4" class="ltx_para">
+<p class="ltx_p">This means that <math id="S3.I9.i19.I2.i3.p4.m1" class="ltx_Math" alttext="b=ma" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></math> or <math id="S3.I9.i19.I2.i3.p4.m2" class="ltx_Math" alttext="c=na" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></math> and hence, <math id="S3.I9.i19.I2.i3.p4.m3" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math> or <math id="S3.I9.i19.I2.i3.p4.m4" class="ltx_Math" alttext="a\mid c" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S3.I9.i19.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I9.i19.I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. For all positive integers <math id="S3.I9.i19.I2.i4.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I9.i19.I2.i4.p1.m2" class="ltx_Math" alttext="c,\left(a^{b}\right)^{c}=a^{\left(b^{c}\right)}" display="inline"><mrow><mrow><mi>c</mi><mo>,</mo><msup><mrow><mo>(</mo><msup><mi>a</mi><mi>b</mi></msup><mo>)</mo></mrow><mi>c</mi></msup></mrow><mo>=</mo><msup><mi>a</mi><mrow><mo>(</mo><msup><mi>b</mi><mi>c</mi></msup><mo>)</mo></mrow></msup></mrow></math>.</p>
+</div>
+<div id="S3.I9.i19.I2.i4.p2" class="ltx_para">
+<p class="ltx_p">This proposition is false as is shown by the following counterexample: If we let <math id="S3.I9.i19.I2.i4.p2.m1" class="ltx_Math" alttext="a=2,b=3" display="inline"><mrow><mrow><mi>a</mi><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></mrow></math>, and <math id="S3.I9.i19.I2.i4.p2.m2" class="ltx_Math" alttext="c=2" display="inline"><mrow><mi>c</mi><mo>=</mo><mn>2</mn></mrow></math>, then</p>
+</div>
+<div id="S3.I9.i19.I2.i4.p3" class="ltx_para">
+<table id="S3.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex24.m1" class="ltx_Math" alttext="\displaystyle\left(a^{b}\right)^{c}" display="inline"><msup><mrow><mo>(</mo><msup><mi>a</mi><mi>b</mi></msup><mo>)</mo></mrow><mi>c</mi></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex24.m2" class="ltx_Math" alttext="\displaystyle=a^{\left(b^{c}\right)}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mi>a</mi><mrow><mo>(</mo><msup><mi>b</mi><mi>c</mi></msup><mo>)</mo></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex25.m1" class="ltx_Math" alttext="\displaystyle\left(2^{3}\right)^{2}" display="inline"><msup><mrow><mo>(</mo><msup><mn>2</mn><mn>3</mn></msup><mo>)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex25.m2" class="ltx_Math" alttext="\displaystyle=2^{\left(3^{2}\right)}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mn>2</mn><mrow><mo>(</mo><msup><mn>3</mn><mn>2</mn></msup><mo>)</mo></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex26.m1" class="ltx_Math" alttext="\displaystyle 8^{2}" display="inline"><msup><mn>8</mn><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex26.m2" class="ltx_Math" alttext="\displaystyle=2^{9}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mn>2</mn><mn>9</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex27.m1" class="ltx_Math" alttext="\displaystyle 64" display="inline"><mn>64</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex27.m2" class="ltx_Math" alttext="\displaystyle\neq 512" display="inline"><mrow><mi></mi><mo>≠</mo><mn>512</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S3.SS1.SSS14" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.1.14 </span>Explorations and Activities</h4>
+
+<div id="S3.SS1.SSS14.p1" class="ltx_para">
+<ol id="S3.I10" class="ltx_enumerate">
+<li id="S3.I10.i20" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">20.</span> 
+<div id="S3.I10.i20.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Congruence Modulo 6.</span></p>
+<ol id="S3.I10.i20.I1" class="ltx_enumerate">
+<li id="S3.I10.i20.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i20.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Find several integers that are congruent to 5 modulo 6 and then square each of these integers.</p>
+</div>
+</li>
+<li id="S3.I10.i20.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i20.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I10.i20.I1.i2.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> from Part (20a), determine an integer <math id="S3.I10.i20.I1.i2.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> so that <math id="S3.I10.i20.I1.i2.p1.m3" class="ltx_Math" alttext="0\leq k&lt;6" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>k</mi><mo>&lt;</mo><mn>6</mn></mrow></math> and <math id="S3.I10.i20.I1.i2.p1.m4" class="ltx_Math" alttext="m^{2}\equiv k(\bmod 6)" display="inline"><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>≡</mo><mrow><mi>k</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. What do you observe?</p>
+</div>
+</li>
+<li id="S3.I10.i20.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I10.i20.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Based on the work in Part (20b), complete the following conjecture:</p>
+</div>
+<div id="S3.I10.i20.I1.i3.p2" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S3.I10.i20.I1.i3.p2.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, if <math id="S3.I10.i20.I1.i3.p2.m2" class="ltx_Math" alttext="m\equiv 5(\bmod 6)" display="inline"><mrow><mi>m</mi><mo>≡</mo><mrow><mn>5</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.I10.i20.I1.i3.p2.m3" class="ltx_Math" alttext="\ldots" display="inline"><mi mathvariant="normal">…</mi></math>.</p>
+</div>
+</li>
+<li id="S3.I10.i20.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S3.I10.i20.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Complete a know-show table for the conjecture in Part (20c) or write a proof of the conjecture.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S3.I10.i21" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">21.</span> 
+<div id="S3.I10.i21.p1" class="ltx_para">
+<p class="ltx_p">Pythagorean Triples. Three natural numbers <math id="S3.I10.i21.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>, and <math id="S3.I10.i21.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="S3.I10.i21.p1.m3" class="ltx_Math" alttext="a&lt;b&lt;c" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mi>c</mi></mrow></math> are called a Pythagorean triple provided that <math id="S3.I10.i21.p1.m4" class="ltx_Math" alttext="a^{2}+b^{2}=c^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>. See Exercise (13) in Section 1.2. Three natural numbers are called consecutive natural numbers if they can be written in the form <math id="S3.I10.i21.p1.m5" class="ltx_Math" alttext="m,m+1" display="inline"><mrow><mi>m</mi><mo>,</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>, and <math id="S3.I10.i21.p1.m6" class="ltx_Math" alttext="m+2" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow></math>, where <math id="S3.I10.i21.p1.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a natural number.</p>
+<ol id="S3.I10.i21.I1" class="ltx_enumerate">
+<li id="S3.I10.i21.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I10.i21.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine all Pythagorean triples consisting of three consecutive natural numbers. (State a theorem and prove it.)</p>
+</div>
+</li>
+<li id="S3.I10.i21.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I10.i21.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Determine all Pythagorean triples that can be written in the form <math id="S3.I10.i21.I1.i2.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, <math id="S3.I10.i21.I1.i2.p1.m2" class="ltx_Math" alttext="m+7" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>7</mn></mrow></math>, and <math id="S3.I10.i21.I1.i2.p1.m3" class="ltx_Math" alttext="m+8" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>8</mn></mrow></math>, where <math id="S3.I10.i21.I1.i2.p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a natural number. State a theorem and prove it.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Dec 14 01:53:45 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
