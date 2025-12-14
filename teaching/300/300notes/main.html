@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>0 Before the First Proof</title>
+<!--Generated on Sun Dec 14 22:11:29 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<div id="p1" class="ltx_para">
+<span class="ltx_ERROR undefined">\DocumentMetadata</span>
+<p class="ltx_p">lang = en-US,
+pdfstandard = ua-2,
+pdfstandard = a-4f, tagging=on,
+<span class="ltx_ERROR undefined">\UseName</span>sys_if_engine_opentype:TF
+</p>
+</div>
+<section id="S0" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">0 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Before the First Proof</span>
+</h2>
+
+<section id="S0.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Introduction to the Class</span>
+</h3>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<div class="ltx_block ltx_minipage ltx_align_center ltx_align_middle" style="width:169.1pt;">
+<img src="images/0logic.png" id="S0.SS1.g1" class="ltx_graphics ltx_img_square" width="312" height="311" alt="A logic grid puzzle referenced below">
+</div>
+</div>
+<div id="S0.SS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S0.I1" class="ltx_itemize">
+<li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Motivate the study of logic as a gateway to mathematical discovery</p>
+</div>
+</li>
+<li id="S0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Briefly glimpse into our future trajectory as we embark on our journey</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S0.SS1.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.1 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">There’s Something to Logic</span>
+</h4>
+
+<div id="S0.SS1.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let’s consider the following logic puzzle (thanks to PuzzleBaron for hosting these!):</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">Sal, a newly-hired police offer, has written a number of parking violations this week. She receives an angry email from one of the violators asking why they received a $100 fine. Unfortunately, Sal’s paperwork is all distraught, and she only has some distinct memories of each of the tickets she wrote. Help her sort out her paperwork and find out which car received the $100 fine. (No option in any category will ever be used more than once.)</p>
+</blockquote>
+<ol id="S0.I2" class="ltx_enumerate">
+<li id="S0.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S0.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The automobile that received the $75 fine has the BMG-831 plates.</p>
+</div>
+</li>
+<li id="S0.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S0.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The four cars are the car with the SVZ-880 plates, the automobile that received the $100 fine, the Dartson and the Etsalle.</p>
+</div>
+</li>
+<li id="S0.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S0.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The Etsalle was fined $50.</p>
+</div>
+</li>
+<li id="S0.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S0.I2.i4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The Cavalo is either the automobile with the RBD-337 plates or the automobile that received the $50 fine.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">As a child I remember solving logic puzzles like this in my spare time, but perhaps this is your first time seeing something like this. The goal of these puzzles is to train your brain to follow logical trains of thought and make deductions that aren’t explictly told to you.</p>
+</div>
+<div id="S0.SS1.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">For example, since there are four cars in this problem, item 2 tells us that the Dartson and Etsalle don’t have SVZ-880 plates, and they weren’t the ones that received the $100 fine. Referencing item 4, the Cavalo had to be the one with the RBD-337 plate as item 3 says that Etsalle was the one that was fined $50. Hence combining this with what we know from item 2 again, the Hornet had to be the car with the SVZ-880 plate, and the Cavalo was the one that received the $100 fine.</p>
+</div>
+</section>
+<section id="S0.SS1.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.2 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Training in Logic</span>
+</h4>
+
+<div id="S0.SS1.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Oh my goodness, I forgot you all were there! Did you follow what I was saying? Some of you did (maybe), and some of you didn’t. Even if you have been studying mathematics for a while now, <span class="ltx_text ltx_font_italic">you may not have received formal training in mathematical logic</span>. Up to now it’s largely because the need for you to be trained in logic was minimal, as we instructors have been communicating the logic that other mathematicians have been giving you. But… and let me be frankly honest with you here… <span class="ltx_text ltx_font_bold">we need you to know logic in order to keep advancing your mathematics career</span>.</p>
+</div>
+<div id="S0.SS1.SSS2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">When I say I’m a mathematician to the person on the plane next to me, they are surprised to hear I am <span class="ltx_text ltx_font_italic">researching mathematics</span>. While they don’t vocalize it exactly like this, the reasoning is always about the same: “Isn’t math basically done after calculus and linear algebra?”</p>
+</div>
+<div id="S0.SS1.SSS2.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">But any actuary will tell you that is wrong. They use an enormous amount of mathematical data science in their job which uses a humongous amount of <span class="ltx_text ltx_font_italic">approximation theory</span>, a subject that relies on discoveries in applied and theoretical <span class="ltx_text ltx_font_italic">analysis</span>. Any teacher will tell you they are wrong, because more and more they are discovering that their students are needing to learn subjects like <span class="ltx_text ltx_font_italic">graph theory</span> and data science in order to open up their students’ future vocations in mathematics. Anyone who has opened up the arXiv will be floored at how many papers of new mathematics are being posted by mathematicians around the world every single day. <span class="ltx_text ltx_font_bold">In order to prepare you for the next stage of your mathematical career, we must train you in logic. This is a gateway course into nearly every mathematics class you will take beyond this point.</span></p>
+</div>
+</section>
+<section id="S0.SS1.SSS3" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.3 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Training in Logical Communication</span>
+</h4>
+
+<div id="S0.SS1.SSS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Even if you have received training in logic, <span class="ltx_text ltx_font_italic">you may not have received training in <span class="ltx_text ltx_font_bold">communicating logically</span></span>. That’s the mistake I made in the logic puzzle: while I was explaining the logic that was going on in my head, I could have explained it better. I should have organized my thoughts more clearly so that I could tell you what I was thinking… but <span class="ltx_text ltx_font_italic">how do I do that?</span></p>
+</div>
+<div id="S0.SS1.SSS3.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Well, for one thing, I could have given a deeper explanation for my logical conclusions. Why is the Cavalo the one that received the $100 fine? I’m going to take a deep breath and explain my reasoning below:</p>
+<ul id="S0.I3" class="ltx_itemize">
+<li id="S0.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">We know from the problem that there are four cars: the Cavalo, the Dartson, the Etsalle, and the Hornet. Item 2 lists two of those cars - the Dartson and the Etsalle - but then says that the other two cars are those with the SVZ-880 plate and the $100 fine. I know the cars must be all different in this list because there are four cars and four descriptions, so they must match one-to-one.</p>
+</div>
+</li>
+<li id="S0.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">So which one is the Cavalo: the one with the SVZ-880 plate or the one with the $100 fine? Well, we get a hint from item 4: we know the Cavalo either received the $50 fine or has the RBD-337 plate.</p>
+</div>
+</li>
+<li id="S0.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">But item 3 says that the Etsalle received the $50 fine. Since no fine amount could be used more than once, that means the Cavalo didn’t receive the $50 fine.</p>
+</div>
+</li>
+<li id="S0.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I3.i4.p1" class="ltx_para">
+<p class="ltx_p">So returning to item 4, the Cavalo must have had the RBD-337 license plate.</p>
+</div>
+</li>
+<li id="S0.I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I3.i5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Returning to item 2 now: the Cavalo cannot have had the SVZ-880 plate as we just found out it has the RBD-337 license plate. Therefore, the Cavalo is the car that received the $100 fine.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Notice how much easier it is to follow this train of thought. It may take a few times to read through these items, but hopefully you are now convinced that my reasoning is correct! When I am convincing others that my reasoning is true, <span class="ltx_text ltx_font_italic">I have to take great care in how I communicate to others</span>.</p>
+</div>
+<div id="S0.SS1.SSS3.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Now someone might raise a question: “But John, I understood your <span class="ltx_text ltx_font_italic">first</span> explanation, and I didn’t need the second explanation to understand!” Good! The more you review logical arguments, the more these <span class="ltx_text ltx_font_italic">concise</span> arguments will suffice for understanding even complex ideas. In this course we will learn how to eventually make our arguments concise as well, but first I want to make sure we <span class="ltx_text ltx_font_italic">understand everything that we are writing down by going one step at a time</span>.</p>
+</div>
+</section>
+<section id="S0.SS1.SSS4" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.4 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Proofs and Refutations</span>
+</h4>
+
+<div id="S0.SS1.SSS4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">In 1976 Irme Lakatos wrote a book called <span class="ltx_text ltx_font_italic">Proofs and Refutations: The Logic of Mathematical Discovery</span>. In the book a group of students have dialogue about a concept called the Euler characteristic, which is presented as a conjecture: “for all polyhedra <math id="S0.SS1.SSS4.p1.m1" class="ltx_Math" alttext="V-E+F=2" display="inline"><mrow><mrow><mrow><mi>V</mi><mo>−</mo><mi>E</mi></mrow><mo>+</mo><mi>F</mi></mrow><mo>=</mo><mn>2</mn></mrow></math>, where <math id="S0.SS1.SSS4.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is the number of vertices, <math id="S0.SS1.SSS4.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> the number of edges, and <math id="S0.SS1.SSS4.p1.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> the number of faces.” I have included a tract from Lakatos’s text in this link so you can read some of this conversation.</p>
+</div>
+<figure id="S0.SS1.SSS4.fig1" class="ltx_figure"><img src="images/qrlakatos.png" id="S0.SS1.SSS4.g1" class="ltx_graphics ltx_centering ltx_img_square" width="100" height="100" alt="QR Code for Lakatos Proof and Refutuations">
+</figure>
+<div id="S0.SS1.SSS4.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">It may surprise you that the conversation about something quite well known in mathematical circles very quickly goes off the rails. For something as well-discussed as this Euler characteristic, it is very hard to prove it to be true for <span class="ltx_text ltx_font_italic">all</span> polyhedra. In the text, the teacher presents a “proof” by showing it to be true specifically for cubes, but the students begin to pose several counterarguments. To summarize the students’ questions:</p>
+<ol id="S0.I4" class="ltx_enumerate">
+<li id="S0.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S0.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">What counts as a polyhedron? This is a <span class="ltx_text ltx_font_bold">dispute of definition</span>. This is important, as a sphere has 1 face, no vertices, and no edges, so it does not satisfy the Euler characteristic.</p>
+</div>
+</li>
+<li id="S0.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S0.I4.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Given we have defined polyhedra, why does showing a proof of the fact <math id="S0.I4.i2.p1.m1" class="ltx_Math" alttext="V-E+F=2" display="inline"><mrow><mrow><mrow><mi>V</mi><mo>−</mo><mi>E</mi></mrow><mo>+</mo><mi>F</mi></mrow><mo>=</mo><mn>2</mn></mrow></math> works for a cube mean that it works for <span class="ltx_text ltx_font_italic">all</span> polyhedra? The teacher’s proof is known as a <span class="ltx_text ltx_font_bold">“proof” by example</span>, and it doesn’t work well in mathematics, as there could very well be examples that show the opposite of what we wish to prove.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Some of you may balk at this criticism as being pedantic, because <span class="ltx_text ltx_font_italic">certainly</span> the Euler characteristic <span class="ltx_text ltx_font_italic">has</span> to be true. Why else would we talk about it? But our question boils down to one from the beginning when this formula was first discovered: how do we <span class="ltx_text ltx_font_italic">know</span> that the Euler characteristic is true?</p>
+</div>
+<div id="S0.SS1.SSS4.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">If I am building a car, I must have full faith that the pieces I’m using to build it are sturdy in and of themselves, will withstand all reasonable weather conditions, and will work together no matter what stress I put them under. Otherwise we might find our car breaking while driving down the highway. And we can’t build a car without mathematics… we can’t build much of anything these days without mathematics… so our mathematics must be the most sturdy structure of them all.</p>
+</div>
+</section>
+<section id="S0.SS1.SSS5" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.5 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Proofs and Their Structure</span>
+</h4>
+
+<div id="S0.SS1.SSS5.p1" class="ltx_para">
+<p class="ltx_p">So in this course you will see things follow this pattern: “definition”, “theorem”, and “proof”. We will write our definitions very carefully so that what we say is exactly what we mean. Our very first definition will say the following:</p>
+</div>
+<div id="S0.SS1.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#0000CC;">  </span> (Definition)0.1.1.</h6>
+<div id="S0.SS1.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">An integer <math id="S0.SS1.Thmtheorem1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is <span class="ltx_text ltx_font_bold">even</span> if <math id="S0.SS1.Thmtheorem1.p1.m2" class="ltx_Math" alttext="n=2k" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></mrow></math> for some integer <math id="S0.SS1.Thmtheorem1.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+</div>
+<div id="S0.SS1.SSS5.p2" class="ltx_para">
+<p class="ltx_p">So 2 is an even number because <math id="S0.SS1.SSS5.p2.m1" class="ltx_Math" alttext="2=2\cdot 1" display="inline"><mrow><mn>2</mn><mo>=</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow></mrow></math>. The number 3 is <span class="ltx_text ltx_font_italic">not</span> even because it cannot be written as 2 times an integer. But this definition also means that <math id="S0.SS1.SSS5.p2.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> is even. It also means that <math id="S0.SS1.SSS5.p2.m3" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math> is even. This is not the typical definition that we get for an even number before this point, but what would that definition have been anyway? These may have been “definitions by example” (an even number is a number like 2, 4, 6, 8…), which obviously won’t work for us very well! Plus, many things that we like about even numbers work with this definition:</p>
+</div>
+<div id="S0.SS1.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#006600;">  </span> (Theorem)0.1.2.</h6>
+<div id="S0.SS1.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">The sum of two even numbers is itself even.</p>
+</div>
+</div>
+<div id="S0.SS1.SSS5.p3" class="ltx_para">
+<p class="ltx_p">How do we prove this? Here are some examples of proofs that will <span class="ltx_text ltx_font_italic">not</span> work:</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">“Proof” by Example.</h6>
+<div id="S0.SS1.SSS5.p4" class="ltx_para">
+<p class="ltx_p">The sum <math id="S0.SS1.SSS5.p4.m1" class="ltx_Math" alttext="2+2" display="inline"><mrow><mn>2</mn><mo>+</mo><mn>2</mn></mrow></math> equal 4. The sum <math id="S0.SS1.SSS5.p4.m2" class="ltx_Math" alttext="4+4" display="inline"><mrow><mn>4</mn><mo>+</mo><mn>4</mn></mrow></math> equals 8. The sum <math id="S0.SS1.SSS5.p4.m3" class="ltx_Math" alttext="2+6" display="inline"><mrow><mn>2</mn><mo>+</mo><mn>6</mn></mrow></math> equals 8.∎</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">“Proof” with The Wrong Definition.</h6>
+<div id="S0.SS1.SSS5.p5" class="ltx_para">
+<p class="ltx_p">If we add two numbers together that end in 0, 2, 4, 6, or 8, their sum must also end in 0, 2, 4, 6, or 8. Observe: <math id="S0.SS1.SSS5.p5.m1" class="ltx_Math" alttext="0+0=0" display="inline"><mrow><mrow><mn>0</mn><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>, <math id="S0.SS1.SSS5.p5.m2" class="ltx_Math" alttext="0+2=2" display="inline"><mrow><mrow><mn>0</mn><mo>+</mo><mn>2</mn></mrow><mo>=</mo><mn>2</mn></mrow></math>, <math id="S0.SS1.SSS5.p5.m3" class="ltx_Math" alttext="0+4=4" display="inline"><mrow><mrow><mn>0</mn><mo>+</mo><mn>4</mn></mrow><mo>=</mo><mn>4</mn></mrow></math>… (and so on).∎</p>
+</div>
+</div>
+<div id="S0.SS1.SSS5.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">You might have wondered why I didn’t give “a number that ends in 0, 2, 4, 6, or 8” as the definition of an even number. I very well could have! But it turns out not to be very practical. Not only does the “proof” above illustrate that due to its length and tedious calculations, but we also could stage counterarguments to that second proof: why does only adding the last digits matter when adding two even numbers together? We would be tempted to say “It’s obvious”, but dig deeper than that. Why would we say that? Isn’t it because <span class="ltx_text ltx_font_italic">this is what we’ve always been taught about how to add two numbers</span>? But <span class="ltx_text ltx_font_italic">what reason do we have to believe that?</span> This level of skepticism is very healthy for a mathematician, and we will encourage that during this course as long as it is constructively aimed. (Some people may ask “why” about something without truly trying to learn or understand the answer given, and we will not entertain this in this class.)</p>
+</div>
+<div id="S0.SS1.SSS5.p7" class="ltx_para">
+<p class="ltx_p">This gives us an idea for a very important definition: the definition of <span class="ltx_text ltx_font_bold">proof</span>:</p>
+</div>
+<div id="S0.SS1.Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#0000CC;">  </span> (Definition)0.1.3.</h6>
+<div id="S0.SS1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">proof</span> is a deductive argument that a mathematical statement is true.</p>
+</div>
+</div>
+<div id="S0.SS1.SSS5.p8" class="ltx_para">
+<p class="ltx_p">Notice the word “deductive” - this word carries a lot of weight in this definition. In the proof below we will <span class="ltx_text ltx_font_italic">deduce</span> that the sum of two even numbers is even using only the definition:</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof that the Sum of Two Even Numbers is Even.</h6>
+<div id="S0.SS1.SSS5.p9" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S0.SS1.SSS5.p9.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and <math id="S0.SS1.SSS5.p9.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> be two even numbers. We want to show that <math id="S0.SS1.SSS5.p9.m3" class="ltx_Math" alttext="n+m" display="inline"><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow></math> is an even number.</p>
+</div>
+<div id="S0.SS1.SSS5.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p">By definition, <math id="S0.SS1.SSS5.p10.m1" class="ltx_Math" alttext="n=2k" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></mrow></math> for some integer <math id="S0.SS1.SSS5.p10.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, and <math id="S0.SS1.SSS5.p10.m3" class="ltx_Math" alttext="m=2\ell" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></mrow></math> for some integer <math id="S0.SS1.SSS5.p10.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>. (Sidenote: we are choosing a different label for the integer in this second number <math id="S0.SS1.SSS5.p10.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> because the label <math id="S0.SS1.SSS5.p10.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is already taken. The label itself is not important - only the fact that <math id="S0.SS1.SSS5.p10.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is two times some other integer.)</p>
+</div>
+<div id="S0.SS1.SSS5.p11" class="ltx_para ltx_noindent">
+<p class="ltx_p">Then <math id="S0.SS1.SSS5.p11.m1" class="ltx_Math" alttext="n+m=2k+2\ell=2(k+\ell)" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS1.SSS5.p12" class="ltx_para">
+<p class="ltx_p">Notice that <math id="S0.SS1.SSS5.p12.m1" class="ltx_Math" alttext="k+\ell" display="inline"><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></math> is an integer, as the sum of two integers is an integer. Therefore <math id="S0.SS1.SSS5.p12.m2" class="ltx_Math" alttext="n+m" display="inline"><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow></math> is 2 times an integer, so by definition <math id="S0.SS1.SSS5.p12.m3" class="ltx_Math" alttext="n+m" display="inline"><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow></math> is an even number.∎</p>
+</div>
+</div>
+<div id="S0.SS1.SSS5.p13" class="ltx_para ltx_noindent">
+<p class="ltx_p">I encourage you to look through this proof a few times, as its structure reveals several things I will be looking for in your proofs.</p>
+<ol id="S0.I5" class="ltx_enumerate">
+<li id="S0.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S0.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">The proofs are easy to read. Every statement is written as a complete sentence. Notice my use of spacing where each idea is on its own line and how I give a brief explanation of how each step follows from the last.</p>
+</div>
+</li>
+<li id="S0.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S0.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">Every step contributes to the proof - I didn’t also say something like “the numbers <math id="S0.I5.i2.p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> or <math id="S0.I5.i2.p1.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> could be even or odd”, as that would not contribute anything to my proof.</p>
+</div>
+</li>
+<li id="S0.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S0.I5.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The proof has no meaningful counterargument - I started from a definition we agreed upon, and I ended with a definition we agreed upon, using only deductive techniques from beginning to end. (In this course we will learn several deductive techniques beyond the ones I used here.)</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Some of you may not agree with me that I successfully addressed item 3: “why is the sum of two integers an integer?” you may ask. Truthfully, I must admit that there are some things that we must agree upon without proof for now. As our textbook says in Section 1.5, sometimes “it will not be clear what facts from your prior experience in mathematics you are ‘allowed’ to use. Unfortunately, addressing this issue is difficult and is something we will sort out along the way.” In this case, basic facts about integers - such as the associative property, commutative property, the zero property, and so on - will be assumed to be true without proofs. (These are all actually examples of <span class="ltx_text ltx_font_italic">axioms</span> in our current understanding of the integers, and they are typically accepted without proof. These are discussed at the beginning of MATH 409, and you may find research into basic logic and mathematical axioms to be interesting.)</p>
+</div>
+</section>
+<section id="S0.SS1.SSS6" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.6 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Structure of This Course</span>
+</h4>
+
+<div id="S0.SS1.SSS6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Here is where we are going in this course:</p>
+<ol id="S0.I6" class="ltx_enumerate">
+<li id="S0.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S0.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">We will begin by discussing <span class="ltx_text ltx_font_bold">number theory</span> as a vehicle for <span class="ltx_text ltx_font_bold">propositional logic</span> (Chapters 1 &amp; 2). At this stage we will be very formal about our proofs nearly to the point of tedium, explaining how each step follows from either a definition or a prior step we have made. We will use “know-show” tables and other tools to convince others that our proofs are correct.</p>
+</div>
+</li>
+<li id="S0.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S0.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Our journey into propositional logic will continue into the <span class="ltx_text ltx_font_bold">Principle of Mathematical Induction</span> (Chapter 3), which will help us understand how to prove facts about sequences and series especially (fun fact: we will prove that “the sum of the first <math id="S0.I6.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> positive integers is <math id="S0.I6.i2.p1.m2" class="ltx_Math" alttext="\frac{n(n+1)}{2}" display="inline"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></math>).</p>
+</div>
+</li>
+<li id="S0.I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S0.I6.i3.p1" class="ltx_para">
+<p class="ltx_p">We will then introduce some <span class="ltx_text ltx_font_bold">basic set theory</span> (Chapter 4). Currently all of modern mathematics is built upon our knowledge of sets, so in order to begin constructing useful definitions of mathematics we won’t be able to get started without understanding sets first.</p>
+</div>
+</li>
+<li id="S0.I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S0.I6.i4.p1" class="ltx_para">
+<p class="ltx_p">The first thing we will do with sets is build <span class="ltx_text ltx_font_bold">functions</span> (Chapter 5). These mathematical objects are crucial in order to make math… well, <span class="ltx_text ltx_font_italic">function</span> in nearly every application in the real world.</p>
+</div>
+</li>
+<li id="S0.I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S0.I6.i5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We will end with discussing a bit more <span class="ltx_text ltx_font_bold">number theory</span> (Chapter 6), some <span class="ltx_text ltx_font_bold">relations</span> (Chapter 7) which set up the basis for applications like RSA cryptography, and if time permits we will discuss <span class="ltx_text ltx_font_bold">cardinality</span> (Chapter 8), also known as “the exploration of infinity.” Perhaps “infinity” should be pluralized, as we would be exploring more than one infinity!</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S0.SS1.SSS7" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.7 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">A Few Final Tips for Success</span>
+</h4>
+
+<div id="S0.SS1.SSS7.p1" class="ltx_para ltx_noindent">
+<ol id="S0.I7" class="ltx_enumerate">
+<li id="S0.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S0.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">One of my former students said they found success in a course very similar to this (MATH 409) by doing the following:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">I think some of the things that helped me most were definitely making sure the homeworks got done in a timely manner and really trying my best to absorb that material as I came across it.</p>
+<p class="ltx_p">I kept an updated list of definitions/propositions/theorems/etc in order and went through their proofs the few days leading up to the exams so that they were fresh on my mind and make sure that I was able to do them on my own.</p>
+<p class="ltx_p">It also definitely helped to have a friend in that class to study with, as it’s nice to have different perspectives on how to approach problems!</p>
+</blockquote>
+</div>
+</li>
+<li id="S0.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S0.I7.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The courses that come after this one will take the content from this course for granted. In the case of MATH-409, there <span class="ltx_text ltx_font_italic">may</span> be a one- or two-day review. But MATH-410/415/416/ 423/427/431/433/436/446/447/600+ will assume this content from the beginning. <span class="ltx_text ltx_font_bold">MATH-300 is the gateway to mathematical discovery</span> - it is impossible to access mathematics past this without going through here. By the same token, once you’ve completed this course, the mathematics you can explore busts wide open.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">I’m looking forward to joining you as we explore this mathematical world together!</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Dec 14 22:11:29 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
