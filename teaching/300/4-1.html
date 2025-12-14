@@ -1,0 +1,1692 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Mathematical Induction</title>
+<!--Generated on Sun Dec 14 04:51:12 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  article {
+    font-family: "Arial";
+  }
+</style>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S4" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Mathematical Induction</h1>
+
+<section id="S4.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1 </span>The Principle of Mathematical Induction</h2>
+
+<section id="S4.SS1.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.1 </span>Beginning Activity 1 (Exploring Statements of the Form <math id="S4.SS1.SSS1.m1" class="ltx_Math" data-alttext="(\forall n\in\mathbb{N})(P(n))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>)</h3>
+
+<div id="S4.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">One of the most fundamental sets in mathematics is the set of natural numbers <math id="S4.SS1.SSS1.p1.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>. In this section, we will learn a new proof technique, called mathematical induction, that is often used to prove statements of the form <math id="S4.SS1.SSS1.p1.m2" class="ltx_Math" data-alttext="(\forall n\in\mathbb{N})(P(n))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. In <a href="https://johnweeks03.github.io/teaching/300/4-2.html">Section 4.2</a>, we will learn how to extend this method to statements of the form <math id="S4.SS1.SSS1.p1.m3" class="ltx_Math" data-alttext="(\forall n\in T)(P(n))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, where <math id="S4.SS1.SSS1.p1.m4" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is a certain type of subset of the integers <math id="S4.SS1.SSS1.p1.m5" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+<div id="S4.SS1.SSS1.p2" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.SS1.SSS1.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S4.SS1.SSS1.p2.m2" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the following open sentence:</p>
+</div>
+<div id="S4.SS1.SSS1.p3" class="ltx_para">
+<table id="S4.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex1.m1" class="ltx_Math" data-alttext="4\text{ divides }\left(5^{n}-1\right)" display="block"><mrow><mn>4</mn><mo>⁢</mo><mtext> divides </mtext><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS1.p4" class="ltx_para">
+<ol id="S4.I1" class="ltx_enumerate">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Does this open sentence become a true statement when <math id="S4.I1.i1.p1.m1" class="ltx_Math" data-alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>? That is, is 1 in the truth set of <math id="S4.I1.i1.p1.m2" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> ?</p>
+</div>
+</li>
+<li id="S4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Does this open sentence become a true statement when <math id="S4.I1.i2.p1.m1" class="ltx_Math" data-alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>? That is, is 2 in the truth set of <math id="S4.I1.i2.p1.m2" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> ?</p>
+</div>
+</li>
+<li id="S4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.SSS1.p5" class="ltx_para">
+<p class="ltx_p">All of the examples that were used should provide evidence that the following proposition is true:</p>
+</div>
+<div id="S4.SS1.SSS1.p6" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.SS1.SSS1.p6.m1" class="ltx_Math" data-alttext="n,4" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>4</mn></mrow></math> divides <math id="S4.SS1.SSS1.p6.m2" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS1.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A set <math id="S4.SS1.SSS1.p7.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> that is a subset of <math id="S4.SS1.SSS1.p7.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is an <span class="ltx_text ltx_font_bold">inductive set</span> provided that for each integer <math id="S4.SS1.SSS1.p7.m3" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>, if <math id="S4.SS1.SSS1.p7.m4" class="ltx_Math" data-alttext="k\in T" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>T</mi></mrow></math>, then <math id="S4.SS1.SSS1.p7.m5" class="ltx_Math" data-alttext="k+1\in T" display="inline"><mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS1.p8" class="ltx_para">
+<ol id="S4.I2" class="ltx_enumerate">
+<li id="S4.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Carefully explain what it means to say that a subset <math id="S4.I2.i1.p1.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> of the integers <math id="S4.I2.i1.p1.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is not an inductive set. This description should use an existential quantifier.</p>
+</div>
+</li>
+<li id="S4.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Use the definition of an inductive set to determine which of the following sets are inductive sets and which are not. Do not worry about formal proofs, but if a set is not inductive, be sure to provide a specific counterexample that proves it is not inductive.</p>
+<ol id="S4.I2.i2.I1" class="ltx_enumerate">
+<li id="S4.I2.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I2.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I2.i2.I1.i1.p1.m1" class="ltx_Math" data-alttext="A=\{1,2,3,\ldots,20\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>20</mn><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I2.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I2.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The set of natural numbers, <math id="S4.I2.i2.I1.i2.p1.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math></p>
+</div>
+</li>
+<li id="S4.I2.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I2.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I2.i2.I1.i3.p1.m1" class="ltx_Math" data-alttext="B=\{n\in\mathbb{N}\mid n\geq 5\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>≥</mo><mn>5</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I2.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I2.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I2.i2.I1.i4.p1.m1" class="ltx_Math" data-alttext="S=\{n\in\mathbb{Z}\mid n\geq-3\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>≥</mo><mrow><mo>−</mo><mn>3</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I2.i2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S4.I2.i2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I2.i2.I1.i5.p1.m1" class="ltx_Math" data-alttext="R=\{n\in\mathbb{Z}\mid n\leq 100\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>≤</mo><mn>100</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I2.i2.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S4.I2.i2.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">The set of integers, <math id="S4.I2.i2.I1.i6.p1.m1" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math></p>
+</div>
+</li>
+<li id="S4.I2.i2.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(g)</span> 
+<div id="S4.I2.i2.I1.i7.p1" class="ltx_para">
+<p class="ltx_p">The set of odd natural numbers.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">This part will explore one of the underlying mathematical ideas for a proof by induction. Assume that <math id="S4.I2.i3.p1.m1" class="ltx_Math" data-alttext="T\subseteq\mathbb{N}" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>ℕ</mi></mrow></math> and assume that <math id="S4.I2.i3.p1.m2" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math> and that <math id="S4.I2.i3.p1.m3" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is an inductive set. Use the definition of an inductive set to answer each of the following:</p>
+<ol id="S4.I2.i3.I1" class="ltx_enumerate">
+<li id="S4.I2.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I2.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S4.I2.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="2\in T" display="inline"><mrow><mn>2</mn><mo>∈</mo><mi>T</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S4.I2.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I2.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S4.I2.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="100\in T" display="inline"><mrow><mn>100</mn><mo>∈</mo><mi>T</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S4.I2.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I2.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S4.I2.i3.I1.i3.p1.m1" class="ltx_Math" data-alttext="3\in T" display="inline"><mrow><mn>3</mn><mo>∈</mo><mi>T</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S4.I2.i3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I2.i3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S4.I2.i3.I1.i4.p1.m1" class="ltx_Math" data-alttext="4\in T" display="inline"><mrow><mn>4</mn><mo>∈</mo><mi>T</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+<li id="S4.I2.i3.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S4.I2.i3.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Do you think that <math id="S4.I2.i3.I1.i5.p1.m1" class="ltx_Math" data-alttext="T=\mathbb{N}" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>ℕ</mi></mrow></math>? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S4.SS1.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.2 </span>Inductive Sets</h3>
+
+<div id="S4.SS1.SSS2.p1" class="ltx_para">
+<p class="ltx_p">The two open sentences in Beginning Activity 1 appeared to be true for all values of <math id="S4.SS1.SSS2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> in the set of natural numbers, <math id="S4.SS1.SSS2.p1.m2" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>. That is, the examples in this beginning activity provided evidence that the following two statements are true.</p>
+</div>
+<div id="S4.SS1.SSS2.p2" class="ltx_para">
+<ul id="S4.I3" class="ltx_itemize">
+<li id="S4.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I3.i1.p1.m1" class="ltx_Math" data-alttext="n,4" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>4</mn></mrow></math> divides <math id="S4.I3.i1.p1.m2" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I3.i2.p1.m1" class="ltx_Math" data-alttext="n,1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2n+1)}{6}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.SS1.SSS2.p3" class="ltx_para">
+<p class="ltx_p">One way of proving statements of this form uses the concept of an inductive set introduced in Beginning Activity 2. The idea is to prove that if one natural number
+<br class="ltx_break">makes the open sentence true, then the next one also makes the open sentence true. This is how we handle the phrase "and so on" when dealing with the natural numbers. In Beginning Activity 2, we saw that the number systems <math id="S4.SS1.SSS2.p3.m1" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> and <math id="S4.SS1.SSS2.p3.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> and other sets are inductive. What we are trying to do is somehow distinguish <math id="S4.SS1.SSS2.p3.m3" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> from the other inductive sets. The way to do this was suggested in Part (3) of Beginning Activity 2. Although we will not prove it, the following statement should seem true.</p>
+</div>
+<div id="S4.SS1.SSS2.p4" class="ltx_para">
+<p class="ltx_p">Statement 1: For each subset <math id="S4.SS1.SSS2.p4.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> of <math id="S4.SS1.SSS2.p4.m2" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>, if <math id="S4.SS1.SSS2.p4.m3" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math> and <math id="S4.SS1.SSS2.p4.m4" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is inductive, then <math id="S4.SS1.SSS2.p4.m5" class="ltx_Math" data-alttext="T=\mathbb{N}" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS2.p5" class="ltx_para">
+<p class="ltx_p">Notice that the integers, <math id="S4.SS1.SSS2.p5.m1" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>, and the set <math id="S4.SS1.SSS2.p5.m2" class="ltx_Math" data-alttext="S=\{n\in\mathbb{Z}\mid n\geq-3\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>≥</mo><mrow><mo>−</mo><mn>3</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> both contain 1 and both are inductive, but they both contain numbers other than natural numbers. For example, the following statement is false:</p>
+</div>
+<div id="S4.SS1.SSS2.p6" class="ltx_para">
+<p class="ltx_p">Statement 2: For each subset <math id="S4.SS1.SSS2.p6.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> of <math id="S4.SS1.SSS2.p6.m2" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>, if <math id="S4.SS1.SSS2.p6.m3" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math> and <math id="S4.SS1.SSS2.p6.m4" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is inductive, then <math id="S4.SS1.SSS2.p6.m5" class="ltx_Math" data-alttext="T=\mathbb{Z}" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS2.p7" class="ltx_para">
+<p class="ltx_p">The set <math id="S4.SS1.SSS2.p7.m1" class="ltx_Math" data-alttext="S=\{n\in\mathbb{Z}\mid n\geq-3\}=\{-3,-2,-1,0,1,2,3,\ldots\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>≥</mo><mrow><mo>−</mo><mn>3</mn></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math> is a counterexample that shows that this statement is false.</p>
+</div>
+</section>
+<section id="S4.SS1.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.3 </span>Progress Check 4.1 (Inductive Sets)</h3>
+
+<div id="S4.SS1.SSS3.p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S4.SS1.SSS3.p1.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is an inductive subset of the integers. Which of the following statements are true, which are false, and for which ones is it not possible to tell?</p>
+</div>
+<div id="S4.SS1.SSS3.p2" class="ltx_para">
+<ol id="S4.I4" class="ltx_enumerate">
+<li id="S4.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I4.i1.p1.m1" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math> and <math id="S4.I4.i1.p1.m2" class="ltx_Math" data-alttext="5\in T" display="inline"><mrow><mn>5</mn><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S4.I4.i2.p1.m1" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math>, then <math id="S4.I4.i2.p1.m2" class="ltx_Math" data-alttext="5\in T" display="inline"><mrow><mn>5</mn><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I4.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S4.I4.i3.p1.m1" class="ltx_Math" data-alttext="5\notin T" display="inline"><mrow><mn>5</mn><mo>∉</mo><mi>T</mi></mrow></math>, then <math id="S4.I4.i3.p1.m2" class="ltx_Math" data-alttext="2\notin T" display="inline"><mrow><mn>2</mn><mo>∉</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S4.I4.i4.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S4.I4.i4.p1.m1" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>, if <math id="S4.I4.i4.p1.m2" class="ltx_Math" data-alttext="k\in T" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>T</mi></mrow></math>, then <math id="S4.I4.i4.p1.m3" class="ltx_Math" data-alttext="k+7\in T" display="inline"><mrow><mrow><mi>k</mi><mo>+</mo><mn>7</mn></mrow><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I4.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S4.I4.i5.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S4.I4.i5.p1.m1" class="ltx_Math" data-alttext="k,k\notin T" display="inline"><mrow><mrow><mi>k</mi><mo>,</mo><mi>k</mi></mrow><mo>∉</mo><mi>T</mi></mrow></math> or</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.SSS3.p3" class="ltx_para">
+<table id="S4.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex2.m1" class="ltx_Math" data-alttext="k+1\in T." display="block"><mrow><mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>∈</mo><mi>T</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS3.p4" class="ltx_para">
+<ol id="S4.I5" class="ltx_enumerate">
+<li id="S4.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">There exists an integer <math id="S4.I5.i1.p1.m1" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> such that <math id="S4.I5.i1.p1.m2" class="ltx_Math" data-alttext="k\in T" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>T</mi></mrow></math> and <math id="S4.I5.i1.p1.m3" class="ltx_Math" data-alttext="k+1\notin T" display="inline"><mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>∉</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S4.I5.i2.p1.m1" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>, if <math id="S4.I5.i2.p1.m2" class="ltx_Math" data-alttext="k+1\in T" display="inline"><mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>∈</mo><mi>T</mi></mrow></math>, then <math id="S4.I5.i2.p1.m3" class="ltx_Math" data-alttext="k\in T" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I5.i3.p1" class="ltx_para">
+<p class="ltx_p">For each integer <math id="S4.I5.i3.p1.m1" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>, if <math id="S4.I5.i3.p1.m2" class="ltx_Math" data-alttext="k+1\notin T" display="inline"><mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>∉</mo><mi>T</mi></mrow></math>, then <math id="S4.I5.i3.p1.m3" class="ltx_Math" data-alttext="k\notin T" display="inline"><mrow><mi>k</mi><mo>∉</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S4.SS1.SSS4" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.4 </span>The Principle of Mathematical Induction</h3>
+
+<div id="S4.SS1.SSS4.p1" class="ltx_para">
+<p class="ltx_p">Although we proved that Statement (2) is false, in this text, we will not prove that Statement (1) is true. One reason for this is that we really do not have a formal definition of the natural numbers. However, we should be convinced that</p>
+</div>
+<div id="S4.SS1.SSS4.p2" class="ltx_para">
+<p class="ltx_p">Statement (1) is true. We resolve this by making Statement (1) an axiom for the natural numbers so that this becomes one of the defining characteristics of the natural numbers.</p>
+</div>
+<div id="S4.SS1.SSS4.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The Principle of Mathematical Induction</span>
+If <math id="S4.SS1.SSS4.p3.m1" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> is a subset of <math id="S4.SS1.SSS4.p3.m2" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> such that</p>
+</div>
+<div id="S4.SS1.SSS4.p4" class="ltx_para">
+<ol id="S4.I6" class="ltx_enumerate">
+<li id="S4.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I6.i1.p1.m1" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math>, and</p>
+</div>
+</li>
+<li id="S4.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="S4.I6.i2.p1.m1" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.I6.i2.p1.m2" class="ltx_Math" data-alttext="k\in T" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>T</mi></mrow></math>, then <math id="S4.I6.i2.p1.m3" class="ltx_Math" data-alttext="(k+1)\in T" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>T</mi></mrow></math>,
+then <math id="S4.I6.i2.p1.m4" class="ltx_Math" data-alttext="T=\mathbb{N}" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S4.SS1.SSS5" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.5 </span>Using the Principle of Mathematical Induction</h3>
+
+<div id="S4.SS1.SSS5.p1" class="ltx_para">
+<p class="ltx_p">The primary use of the Principle of Mathematical Induction is to prove statements of the form</p>
+</div>
+<div id="S4.SS1.SSS5.p2" class="ltx_para">
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" data-alttext="(\forall n\in\mathbb{N})(P(n))" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS5.p3" class="ltx_para">
+<p class="ltx_p">where <math id="S4.SS1.SSS5.p3.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is some open sentence. Recall that a universally quantified statement like the preceding one is true if and only if the truth set <math id="S4.SS1.SSS5.p3.m2" class="ltx_Math" data-alttext="T" display="inline"><mi>T</mi></math> of the open sentence <math id="S4.SS1.SSS5.p3.m3" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the set <math id="S4.SS1.SSS5.p3.m4" class="ltx_Math" data-alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>. So our goal is to prove that <math id="S4.SS1.SSS5.p3.m5" class="ltx_Math" data-alttext="T=\mathbb{N}" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>ℕ</mi></mrow></math>, which is the conclusion of the Principle of Mathematical Induction. To verify the hypothesis of the Principle of Mathematical Induction, we must</p>
+</div>
+<div id="S4.SS1.SSS5.p4" class="ltx_para">
+<ol id="S4.I7" class="ltx_enumerate">
+<li id="S4.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S4.I7.i1.p1.m1" class="ltx_Math" data-alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math>. That is, prove that <math id="S4.I7.i1.p1.m2" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+<li id="S4.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I7.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that if <math id="S4.I7.i2.p1.m1" class="ltx_Math" data-alttext="k\in T" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>T</mi></mrow></math>, then <math id="S4.I7.i2.p1.m2" class="ltx_Math" data-alttext="(k+1)\in T" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>T</mi></mrow></math>. That is, prove that if <math id="S4.I7.i2.p1.m3" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.I7.i2.p1.m4" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.SSS5.p5" class="ltx_para">
+<p class="ltx_p">The first step is called the basis step or the initial step, and the second step is called the inductive step. This means that a proof by mathematical induction will have the following form:</p>
+</div>
+</section>
+<section id="S4.SS1.SSS6" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.6 </span>Procedure for a Proof by Mathematical Induction</h3>
+
+<div id="S4.SS1.SSS6.p1" class="ltx_para">
+<p class="ltx_p">To prove: <math id="S4.SS1.SSS6.p1.m1" class="ltx_Math" data-alttext="(\forall n\in\mathbb{N})(P(n))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+<div id="S4.SS1.SSS6.p2" class="ltx_para">
+<p class="ltx_p">Basis step: Prove <math id="S4.SS1.SSS6.p2.m1" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
+<br class="ltx_break">Inductive step: Prove that for each <math id="S4.SS1.SSS6.p2.m2" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.SS1.SSS6.p2.m3" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.SS1.SSS6.p2.m4" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+<div id="S4.SS1.SSS6.p3" class="ltx_para">
+<p class="ltx_p">We can then conclude that <math id="S4.SS1.SSS6.p3.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true for all <math id="S4.SS1.SSS6.p3.m2" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS6.p4" class="ltx_para">
+<p class="ltx_p">Note that in the inductive step, we want to prove that the conditional statement "for each <math id="S4.SS1.SSS6.p4.m1" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.SS1.SSS6.p4.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> then <math id="S4.SS1.SSS6.p4.m3" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>" is true. So we will start the inductive step by assuming that <math id="S4.SS1.SSS6.p4.m4" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. This assumption is called the inductive assumption or the inductive hypothesis.</p>
+</div>
+<div id="S4.SS1.SSS6.p5" class="ltx_para">
+<p class="ltx_p">The key to constructing a proof by induction is to discover how <math id="S4.SS1.SSS6.p5.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is related to <math id="S4.SS1.SSS6.p5.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> for an arbitrary natural number <math id="S4.SS1.SSS6.p5.m3" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>. For example, in Beginning Activity 1, one of the open sentences <math id="S4.SS1.SSS6.p5.m4" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> was</p>
+</div>
+<div id="S4.SS1.SSS6.p6" class="ltx_para">
+<table id="S4.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex4.m1" class="ltx_Math" data-alttext="1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2n+1)}{6}." display="block"><mrow><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p7" class="ltx_para">
+<p class="ltx_p">Sometimes it helps to look at some specific examples such as <math id="S4.SS1.SSS6.p7.m1" class="ltx_Math" data-alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S4.SS1.SSS6.p7.m2" class="ltx_Math" data-alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>. The idea is not just to do the computations, but to see how the statements are related. This can sometimes be done by writing the details instead of immediately doing computations.</p>
+</div>
+<div id="S4.SS1.SSS6.p8" class="ltx_para">
+<table id="S4.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex5.m1" class="ltx_Math" data-alttext="\displaystyle P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">is</span></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex5.m3" class="ltx_Math" data-alttext="\displaystyle 1^{2}+2^{2}" display="inline"><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex5.m4" class="ltx_Math" data-alttext="\displaystyle=\frac{2\cdot 3\cdot 5}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex6.m1" class="ltx_Math" data-alttext="\displaystyle P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">is</span></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex6.m3" class="ltx_Math" data-alttext="\displaystyle 1^{2}+2^{2}+3^{2}" display="inline"><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><msup><mn>3</mn><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex6.m4" class="ltx_Math" data-alttext="\displaystyle=\frac{3\cdot 4\cdot 7}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>7</mn></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p9" class="ltx_para">
+<p class="ltx_p">In this case, the key is the left side of each equation. The left side of <math id="S4.SS1.SSS6.p9.m1" class="ltx_Math" data-alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> is obtained from the left side of <math id="S4.SS1.SSS6.p9.m2" class="ltx_Math" data-alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> by adding one term, which is <math id="S4.SS1.SSS6.p9.m3" class="ltx_Math" data-alttext="3^{2}" display="inline"><msup><mn>3</mn><mn>2</mn></msup></math>. This suggests that we might be able to obtain the equation for <math id="S4.SS1.SSS6.p9.m4" class="ltx_Math" data-alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> by adding <math id="S4.SS1.SSS6.p9.m5" class="ltx_Math" data-alttext="3^{2}" display="inline"><msup><mn>3</mn><mn>2</mn></msup></math> to both sides of the equation in <math id="S4.SS1.SSS6.p9.m6" class="ltx_Math" data-alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>. Now for the general case, if <math id="S4.SS1.SSS6.p9.m7" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, we look at <math id="S4.SS1.SSS6.p9.m8" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and compare it to <math id="S4.SS1.SSS6.p9.m9" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS6.p10" class="ltx_para">
+<table id="S4.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex7.m1" class="ltx_Math" data-alttext="\displaystyle P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">is</span></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex7.m3" class="ltx_Math" data-alttext="\displaystyle 1^{2}+2^{2}+\cdots+k^{2}" display="inline"><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex7.m4" class="ltx_Math" data-alttext="\displaystyle=\frac{k(k+1)(2k+1)}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex8.m1" class="ltx_Math" data-alttext="\displaystyle P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">is</span></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex8.m3" class="ltx_Math" data-alttext="\displaystyle 1^{2}+2^{2}+\cdots+(k+1)^{2}" display="inline"><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex8.m4" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)[(k+1)+1][2(k+1)+1]}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p11" class="ltx_para">
+<p class="ltx_p">The key is to look at the left side of the equation for <math id="S4.SS1.SSS6.p11.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and realize what this notation means. It means that we are adding the squares of the first <math id="S4.SS1.SSS6.p11.m2" class="ltx_Math" data-alttext="(k+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> natural numbers. This means that we can write</p>
+</div>
+<div id="S4.SS1.SSS6.p12" class="ltx_para">
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex9.m1" class="ltx_Math" data-alttext="1^{2}+2^{2}+\cdots+(k+1)^{2}=1^{2}+2^{2}+\cdots+k^{2}+(k+1)^{2}." display="block"><mrow><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p13" class="ltx_para">
+<p class="ltx_p">This shows us that the left side of the equation for <math id="S4.SS1.SSS6.p13.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> can be obtained from the left side of the equation for <math id="S4.SS1.SSS6.p13.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> by adding <math id="S4.SS1.SSS6.p13.m3" class="ltx_Math" data-alttext="(k+1)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>. This is the motivation for proving the inductive step in the following proof.</p>
+</div>
+<div id="S4.SS1.SSS6.p14" class="ltx_para">
+<p class="ltx_p"><span id="Prop_4.2" class="ltx_text ltx_font_bold">Proposition 4.2</span>. For each natural number <math id="S4.SS1.SSS6.p14.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>,</p>
+</div>
+<div id="S4.SS1.SSS6.p15" class="ltx_para">
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex10.m1" class="ltx_Math" data-alttext="1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2n+1)}{6}." display="block"><mrow><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will use a proof by mathematical induction. For each natural number <math id="S4.SS1.SSS6.p16.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, we let <math id="S4.SS1.SSS6.p16.m2" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be</p>
+</div>
+<div id="S4.SS1.SSS6.p17" class="ltx_para">
+<table id="S4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex11.m1" class="ltx_Math" data-alttext="1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2n+1)}{6}" display="block"><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p18" class="ltx_para">
+<p class="ltx_p">We first prove that <math id="S4.SS1.SSS6.p18.m1" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true. Notice that <math id="S4.SS1.SSS6.p18.m2" class="ltx_Math" data-alttext="\frac{1(1+1)(2\cdot 1+1)}{6}=1" display="inline"><mrow><mfrac><mrow><mn>1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac><mo>=</mo><mn>1</mn></mrow></math>. This shows that</p>
+</div>
+<div id="S4.SS1.SSS6.p19" class="ltx_para">
+<table id="S4.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex12.m1" class="ltx_Math" data-alttext="1^{2}=\frac{1(1+1)(2\cdot 1+1)}{6}," display="block"><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p20" class="ltx_para">
+<p class="ltx_p">which proves that <math id="S4.SS1.SSS6.p20.m1" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.
+<br class="ltx_break">For the inductive step, we prove that for each <math id="S4.SS1.SSS6.p20.m2" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.SS1.SSS6.p20.m3" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.SS1.SSS6.p20.m4" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true. So let <math id="S4.SS1.SSS6.p20.m5" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> be a natural number and assume that <math id="S4.SS1.SSS6.p20.m6" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, assume that</p>
+</div>
+<div id="S4.SS1.SSS6.p21" class="ltx_para">
+<table id="S4.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex13.m1" class="ltx_Math" data-alttext="1^{2}+2^{2}+\cdots+k^{2}=\frac{k(k+1)(2k+1)}{6}." display="block"><mrow><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p22" class="ltx_para">
+<p class="ltx_p">The goal now is to prove that <math id="S4.SS1.SSS6.p22.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, it must be proved that</p>
+</div>
+<div id="S4.SS1.SSS6.p23" class="ltx_para">
+<table id="S4.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex14.m1" class="ltx_Math" data-alttext="\displaystyle 1^{2}+2^{2}+\cdots+k^{2}+(k+1)^{2}" display="inline"><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex14.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)[(k+1)+1][2(k+1)+1]}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex15.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)(k+2)(2k+3)}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p24" class="ltx_para">
+<p class="ltx_p">To do this, we add <math id="S4.SS1.SSS6.p24.m1" class="ltx_Math" data-alttext="(k+1)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math> to both sides of equation (1) and algebraically rewrite the right side of the resulting equation. This gives</p>
+</div>
+<div id="S4.SS1.SSS6.p25" class="ltx_para">
+<table id="S4.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex16.m1" class="ltx_Math" data-alttext="\displaystyle 1^{2}+2^{2}+\cdots+k^{2}+(k+1)^{2}" display="inline"><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex16.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{k(k+1)(2k+1)}{6}+(k+1)^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mstyle><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex17.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{k(k+1)(2k+1)+6(k+1)^{2}}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex18.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)[k(2k+1)+6(k+1)]}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex19.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)\left(2k^{2}+7k+6\right)}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex20.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)(k+2)(2k+3)}{6}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS6.p26" class="ltx_para">
+<p class="ltx_p">Comparing this result to equation (2), we see that if <math id="S4.SS1.SSS6.p26.m1" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.SS1.SSS6.p26.m2" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true. Hence, the inductive step has been established, and by the Principle of Mathematical Induction, we have proved that for each natural number <math id="S4.SS1.SSS6.p26.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, <math id="S4.SS1.SSS6.p26.m4" class="ltx_Math" data-alttext="1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2n+1)}{6}" display="inline"><mrow><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow></math>.</p>
+</div>
+</section>
+<section id="S4.SS1.SSS7" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.7 </span>Writing Guideline</h3>
+
+<div id="S4.SS1.SSS7.p1" class="ltx_para">
+<p class="ltx_p">The proof of Proposition 4.2 shows a standard way to write an induction proof. When writing a proof by mathematical induction, we should follow the guideline that we always keep the reader informed. This means that at the beginning of the proof, we should state that a proof by induction will be used. We should then clearly define the open sentence <math id="S4.SS1.SSS7.p1.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> that will be used in the proof.</p>
+</div>
+</section>
+<section id="S4.SS1.SSS8" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.8 </span>Summation Notation</h3>
+
+<div id="S4.SS1.SSS8.p1" class="ltx_para">
+<p class="ltx_p">The result in Proposition 4.2 could be written using summation notation as follows:</p>
+</div>
+<div id="S4.SS1.SSS8.p2" class="ltx_para">
+<table id="S4.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex21.m1" class="ltx_Math" data-alttext="\text{ For each natural number }n,\sum_{j=1}^{n}j^{2}=\frac{n(n+1)(2n+1)}{6}." display="block"><mrow><mrow><mrow><mrow><mtext> For each natural number </mtext><mo>⁢</mo><mi>n</mi></mrow><mo rspace="0em">,</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mi>j</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS8.p3" class="ltx_para">
+<p class="ltx_p">In this case, we use <math id="S4.SS1.SSS8.p3.m1" class="ltx_Math" data-alttext="j" display="inline"><mi>j</mi></math> for the index for the summation, and the notation <math id="S4.SS1.SSS8.p3.m2" class="ltx_Math" data-alttext="\sum_{j=1}^{n}j^{2}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mi>j</mi><mn>2</mn></msup></mrow></math> tells us to add all the values of <math id="S4.SS1.SSS8.p3.m3" class="ltx_Math" data-alttext="j^{2}" display="inline"><msup><mi>j</mi><mn>2</mn></msup></math> for <math id="S4.SS1.SSS8.p3.m4" class="ltx_Math" data-alttext="j" display="inline"><mi>j</mi></math> from 1 to <math id="S4.SS1.SSS8.p3.m5" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, inclusive. That is,</p>
+</div>
+<div id="S4.SS1.SSS8.p4" class="ltx_para">
+<table id="S4.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex22.m1" class="ltx_Math" data-alttext="\sum_{j=1}^{n}j^{2}=1^{2}+2^{2}+\cdots+n^{2}" display="block"><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mi>j</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS8.p5" class="ltx_para">
+<p class="ltx_p">So in the proof of Proposition 4.2, we would let <math id="S4.SS1.SSS8.p5.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be <math id="S4.SS1.SSS8.p5.m2" class="ltx_Math" data-alttext="\sum_{j=1}^{n}j^{2}=\frac{n(n+1)(2n+1)}{6}" display="inline"><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mi>j</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mrow></math>, and we would use the fact that for each natural number <math id="S4.SS1.SSS8.p5.m3" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math>,</p>
+</div>
+<div id="S4.SS1.SSS8.p6" class="ltx_para">
+<table id="S4.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex23.m1" class="ltx_Math" data-alttext="\sum_{j=1}^{k+1}j^{2}=\left(\sum_{j=1}^{k}j^{2}\right)+(k+1)^{2}" display="block"><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></munderover><msup><mi>j</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><munderover><mo lspace="0em" movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><msup><mi>j</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S4.SS1.SSS9" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.9 </span>Progress Check 4.3 (An Example of a Proof by Induction)</h3>
+
+<div id="S4.SS1.SSS9.p1" class="ltx_para">
+<ol id="S4.I8" class="ltx_enumerate">
+<li id="S4.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">Calculate <math id="S4.I8.i1.p1.m1" class="ltx_Math" data-alttext="1+2+3+\cdots+n" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow></math> and <math id="S4.I8.i1.p1.m2" class="ltx_Math" data-alttext="\frac{n(n+1)}{2}" display="inline"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></math> for several natural numbers <math id="S4.I8.i1.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>. What do you observe?</p>
+</div>
+</li>
+<li id="S4.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove that <math id="S4.I8.i2.p1.m1" class="ltx_Math" data-alttext="1+2+3+\cdots+n=\frac{n(n+1)}{2}" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.SSS9.p2" class="ltx_para">
+<p class="ltx_p">To do this, let <math id="S4.SS1.SSS9.p2.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the open sentence," <math id="S4.SS1.SSS9.p2.m2" class="ltx_Math" data-alttext="1+2+3+\cdots+n=\frac{n(n+1)}{2}" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>." For the basis step, notice that the equation <math id="S4.SS1.SSS9.p2.m3" class="ltx_Math" data-alttext="1=\frac{1(1+1)}{2}" display="inline"><mrow><mn>1</mn><mo>=</mo><mfrac><mrow><mn>1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math> shows that <math id="S4.SS1.SSS9.p2.m4" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true. Now let <math id="S4.SS1.SSS9.p2.m5" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> be a natural number and assume that <math id="S4.SS1.SSS9.p2.m6" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, assume that</p>
+</div>
+<div id="S4.SS1.SSS9.p3" class="ltx_para">
+<table id="S4.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex24.m1" class="ltx_Math" data-alttext="1+2+3+\cdots+k=\frac{k(k+1)}{2}" display="block"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>k</mi></mrow><mo>=</mo><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS9.p4" class="ltx_para">
+<p class="ltx_p">and complete the proof.</p>
+</div>
+</section>
+<section id="S4.SS1.SSS10" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.10 </span>Some Comments about Mathematical Induction</h3>
+
+<div id="S4.SS1.SSS10.p1" class="ltx_para">
+<ol id="S4.I9" class="ltx_enumerate">
+<li id="S4.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">The basis step is an essential part of a proof by induction. See Exercise (19) for an example that shows that the basis step is needed in a proof by induction.</p>
+</div>
+</li>
+<li id="S4.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">Exercise (20) provides an example that shows the inductive step is also an essential part of a proof by mathematical induction.</p>
+</div>
+</li>
+<li id="S4.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I9.i3.p1" class="ltx_para">
+<p class="ltx_p">It is important to remember that the inductive step in an induction proof is a proof of a conditional statement. Although we did not explicitly use the forward-backward process in the inductive step for Proposition 4.2, it was implicitly used in the discussion prior to Proposition 4.2. The key question was, "How does knowing the sum of the first <math id="S4.I9.i3.p1.m1" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> squares help us find the sum of the first <math id="S4.I9.i3.p1.m2" class="ltx_Math" data-alttext="(k+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> squares?"</p>
+</div>
+</li>
+<li id="S4.I9.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S4.I9.i4.p1" class="ltx_para">
+<p class="ltx_p">When proving the inductive step in a proof by induction, the key question is,</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.SSS10.p2" class="ltx_para">
+<table id="S4.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex25.m1" class="ltx_Math" data-alttext="\text{ How does knowing }P(k)\text{ help us prove }P(k+1)\text{? }" display="block"><mrow><mtext> How does knowing </mtext><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> help us prove </mtext><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext>? </mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p3" class="ltx_para">
+<p class="ltx_p">In Proposition 4.2, we were able to see that the way to answer this question was to add a certain expression to both sides of the equation given in <math id="S4.SS1.SSS10.p3.m1" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Sometimes the relationship between <math id="S4.SS1.SSS10.p3.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S4.SS1.SSS10.p3.m3" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is not as easy to see. For example, in Beginning Activity 1, we explored the following proposition:</p>
+</div>
+<div id="S4.SS1.SSS10.p4" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.SS1.SSS10.p4.m1" class="ltx_Math" data-alttext="n,4" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>4</mn></mrow></math> divides <math id="S4.SS1.SSS10.p4.m2" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS10.p5" class="ltx_para">
+<p class="ltx_p">This means that the open sentence, <math id="S4.SS1.SSS10.p5.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is "4 divides (<math id="S4.SS1.SSS10.p5.m2" class="ltx_Math" data-alttext="5^{n}-1" display="inline"><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></math>)." So in the inductive step, we assume <math id="S4.SS1.SSS10.p5.m3" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and that 4 divides <math id="S4.SS1.SSS10.p5.m4" class="ltx_Math" data-alttext="\left(5^{k}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>. This means that there exists an integer <math id="S4.SS1.SSS10.p5.m5" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that</p>
+</div>
+<div id="S4.SS1.SSS10.p6" class="ltx_para">
+<table id="S4.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex26.m1" class="ltx_Math" data-alttext="5^{k}-1=4m." display="block"><mrow><mrow><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p7" class="ltx_para">
+<p class="ltx_p">In the backward process, the goal is to prove that 4 divides <math id="S4.SS1.SSS10.p7.m1" class="ltx_Math" data-alttext="\left(5^{k+1}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>. This can be accomplished if we can prove that there exists an integer <math id="S4.SS1.SSS10.p7.m2" class="ltx_Math" data-alttext="s" display="inline"><mi>s</mi></math> such that</p>
+</div>
+<div id="S4.SS1.SSS10.p8" class="ltx_para">
+<table id="S4.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex27.m1" class="ltx_Math" data-alttext="5^{k+1}-1=4s." display="block"><mrow><mrow><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p9" class="ltx_para">
+<p class="ltx_p">We now need to see if there is anything in equation (1) that can be used in equation (2). The key is to find something in the equation <math id="S4.SS1.SSS10.p9.m1" class="ltx_Math" data-alttext="5^{k}-1=4m" display="inline"><mrow><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></math> that is related to something similar in the equation <math id="S4.SS1.SSS10.p9.m2" class="ltx_Math" data-alttext="5^{k+1}-1=4s" display="inline"><mrow><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>s</mi></mrow></mrow></math>. In this case, we notice that</p>
+</div>
+<div id="S4.SS1.SSS10.p10" class="ltx_para">
+<table id="S4.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex28.m1" class="ltx_Math" data-alttext="5^{k+1}=5\cdot 5^{k}" display="block"><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>5</mn><mi>k</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p11" class="ltx_para">
+<p class="ltx_p">So if we can solve <math id="S4.SS1.SSS10.p11.m1" class="ltx_Math" data-alttext="5^{k}-1=4m" display="inline"><mrow><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></math> for <math id="S4.SS1.SSS10.p11.m2" class="ltx_Math" data-alttext="5^{k}" display="inline"><msup><mn>5</mn><mi>k</mi></msup></math>, we could make a substitution for <math id="S4.SS1.SSS10.p11.m3" class="ltx_Math" data-alttext="5^{k}" display="inline"><msup><mn>5</mn><mi>k</mi></msup></math>. This is done in the proof of the following proposition.</p>
+</div>
+<div id="S4.SS1.SSS10.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 4.4.</span> For every natural number <math id="S4.SS1.SSS10.p12.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, 4 divides <math id="S4.SS1.SSS10.p12.m2" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS10.p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. (Proof by Mathematical Induction) For each natural number <math id="S4.SS1.SSS10.p13.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, let <math id="S4.SS1.SSS10.p13.m2" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be "4 divides <math id="S4.SS1.SSS10.p13.m3" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>." We first prove that <math id="S4.SS1.SSS10.p13.m4" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true. Notice that when <math id="S4.SS1.SSS10.p13.m5" class="ltx_Math" data-alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, <math id="S4.SS1.SSS10.p13.m6" class="ltx_Math" data-alttext="\left(5^{n}-1\right)=4" display="inline"><mrow><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mn>4</mn></mrow></math>. Since 4 divides 4, <math id="S4.SS1.SSS10.p13.m7" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+<div id="S4.SS1.SSS10.p14" class="ltx_para">
+<p class="ltx_p">For the inductive step, we prove that for all <math id="S4.SS1.SSS10.p14.m1" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.SS1.SSS10.p14.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.SS1.SSS10.p14.m3" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true. So let <math id="S4.SS1.SSS10.p14.m4" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> be a natural number and assume that <math id="S4.SS1.SSS10.p14.m5" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, assume that</p>
+</div>
+<div id="S4.SS1.SSS10.p15" class="ltx_para">
+<table id="S4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex29.m1" class="ltx_Math" data-alttext="4\text{ divides }\left(5^{k}-1\right)" display="block"><mrow><mn>4</mn><mo>⁢</mo><mtext> divides </mtext><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p16" class="ltx_para">
+<p class="ltx_p">This means that there exists an integer <math id="S4.SS1.SSS10.p16.m1" class="ltx_Math" data-alttext="m" display="inline"><mi>m</mi></math> such that</p>
+</div>
+<div id="S4.SS1.SSS10.p17" class="ltx_para">
+<table id="S4.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex30.m1" class="ltx_Math" data-alttext="5^{k}-1=4m." display="block"><mrow><mrow><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p18" class="ltx_para">
+<p class="ltx_p">Thus,</p>
+</div>
+<div id="S4.SS1.SSS10.p19" class="ltx_para">
+<table id="S4.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex31.m1" class="ltx_Math" data-alttext="5^{k}=4m+1." display="block"><mrow><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p20" class="ltx_para">
+<p class="ltx_p">In order to prove that <math id="S4.SS1.SSS10.p20.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true, we must show that 4 divides <math id="S4.SS1.SSS10.p20.m2" class="ltx_Math" data-alttext="\left(5^{k+1}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>. Since <math id="S4.SS1.SSS10.p20.m3" class="ltx_Math" data-alttext="5^{k+1}=5\cdot 5^{k}" display="inline"><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>5</mn><mi>k</mi></msup></mrow></mrow></math>, we can write</p>
+</div>
+<div id="S4.SS1.SSS10.p21" class="ltx_para">
+<table id="S4.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex32.m1" class="ltx_Math" data-alttext="5^{k+1}-1=5\cdot 5^{k}-1" display="block"><mrow><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mrow><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>5</mn><mi>k</mi></msup></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p22" class="ltx_para">
+<p class="ltx_p">We now substitute the expression for <math id="S4.SS1.SSS10.p22.m1" class="ltx_Math" data-alttext="5^{k}" display="inline"><msup><mn>5</mn><mi>k</mi></msup></math> from equation (1) into equation (2). This gives</p>
+</div>
+<div id="S4.SS1.SSS10.p23" class="ltx_para">
+<table id="S4.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex33.m1" class="ltx_Math" data-alttext="\displaystyle 5^{k+1}-1" display="inline"><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex33.m2" class="ltx_Math" data-alttext="\displaystyle=5\cdot 5^{k}-1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>5</mn><mi>k</mi></msup></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex34.m1" class="ltx_Math" data-alttext="\displaystyle=5(4m+1)-1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex35.m1" class="ltx_Math" data-alttext="\displaystyle=(20m+5)-1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>20</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex36.m1" class="ltx_Math" data-alttext="\displaystyle=20m+4" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>20</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>4</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex37.m1" class="ltx_Math" data-alttext="\displaystyle=4(5m+1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.SSS10.p24" class="ltx_para">
+<p class="ltx_p">Since <math id="S4.SS1.SSS10.p24.m1" class="ltx_Math" data-alttext="(5m+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> is an integer, equation (3) shows that 4 divides <math id="S4.SS1.SSS10.p24.m2" class="ltx_Math" data-alttext="\left(5^{k+1}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>. Therefore, if <math id="S4.SS1.SSS10.p24.m3" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.SS1.SSS10.p24.m4" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true and the inductive step has been established. Thus, by the Principle of Mathematical Induction, for every natural number <math id="S4.SS1.SSS10.p24.m5" class="ltx_Math" data-alttext="n,4" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>4</mn></mrow></math> divides <math id="S4.SS1.SSS10.p24.m6" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS10.p25" class="ltx_para">
+<p class="ltx_p">Proposition 4.4 was stated in terms of "divides." We can use congruence to state a proposition that is equivalent to Proposition 4.4. The idea is that the sentence, 4 divides <math id="S4.SS1.SSS10.p25.m1" class="ltx_Math" data-alttext="\left(5^{n}-1\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math> means that <math id="S4.SS1.SSS10.p25.m2" class="ltx_Math" data-alttext="5^{n}\equiv 1(\bmod 4)" display="inline"><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So the following proposition is equivalent to Proposition 4.4.</p>
+</div>
+<div id="S4.SS1.SSS10.p26" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition 4.5.</span> For every natural number <math id="S4.SS1.SSS10.p26.m1" class="ltx_Math" data-alttext="n,5^{n}\equiv 1(\bmod 4)" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><msup><mn>5</mn><mi>n</mi></msup></mrow><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS10.p27" class="ltx_para">
+<p class="ltx_p">Since we have proved Proposition 4.4, we have in effect proved Proposition 4.5. However, we could have proved Proposition 4.5 first by using the results in <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.28">Theorem 3.28.</a> This will be done in the next progress check.</p>
+</div>
+</section>
+<section id="S4.SS1.SSS11" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.11 </span>Progress Check 4.6 (Proof of Proposition 4.5)</h3>
+
+<div id="S4.SS1.SSS11.p1" class="ltx_para">
+<p class="ltx_p">To prove Proposition 4.5, we let <math id="S4.SS1.SSS11.p1.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be <math id="S4.SS1.SSS11.p1.m2" class="ltx_Math" data-alttext="5^{n}\equiv 1(\bmod 4)" display="inline"><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and notice that <math id="S4.SS1.SSS11.p1.m3" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true since <math id="S4.SS1.SSS11.p1.m4" class="ltx_Math" data-alttext="5\equiv 1(\bmod 4)" display="inline"><mrow><mn>5</mn><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For the inductive step, let <math id="S4.SS1.SSS11.p1.m5" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> be a natural number and assume that <math id="S4.SS1.SSS11.p1.m6" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, assume that <math id="S4.SS1.SSS11.p1.m7" class="ltx_Math" data-alttext="5^{k}\equiv 1(\bmod 4)" display="inline"><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S4.SS1.SSS11.p2" class="ltx_para">
+<ol id="S4.I10" class="ltx_enumerate">
+<li id="S4.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I10.i1.p1" class="ltx_para">
+<p class="ltx_p">What must be proved in order to prove that <math id="S4.I10.i1.p1.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true?</p>
+</div>
+</li>
+<li id="S4.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="S4.I10.i2.p1.m1" class="ltx_Math" data-alttext="5^{k+1}=5\cdot 5^{k}" display="inline"><mrow><msup><mn>5</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mn>5</mn><mi>k</mi></msup></mrow></mrow></math>, multiply both sides of the congruence <math id="S4.I10.i2.p1.m2" class="ltx_Math" data-alttext="5^{k}\equiv 1(\bmod 4)" display="inline"><mrow><msup><mn>5</mn><mi>k</mi></msup><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> by 5. The results in <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.28">Theorem 3.28</a> justify this step.</p>
+</div>
+</li>
+<li id="S4.I10.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I10.i3.p1" class="ltx_para">
+<p class="ltx_p">Now complete the proof that for each <math id="S4.I10.i3.p1.m1" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.I10.i3.p1.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.I10.i3.p1.m3" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true and complete the induction proof of Proposition 4.5.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.SSS11.p3" class="ltx_para">
+<p class="ltx_p">It might be nice to compare the proofs of Propositions 4.4 and 4.5 and decide which one is easier to understand.</p>
+</div>
+</section>
+<section id="S4.SS1.SSS12" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.12 </span>Exercises for Section 4.1</h3>
+
+<div id="S4.SS1.SSS12.p1" class="ltx_para">
+<ol id="S4.I11" class="ltx_enumerate">
+<li id="S4.I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S4.I11.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Which of the following sets are inductive sets? Explain.</p>
+<ol id="S4.I11.i1.I1" class="ltx_enumerate">
+<li id="S4.I11.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i1.I1.i1.p1.m1" class="ltx_Math" data-alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math></p>
+</div>
+</li>
+<li id="S4.I11.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i1.I1.i2.p1.m1" class="ltx_Math" data-alttext="\{x\in\mathbb{N}\mid x\geq 4\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≥</mo><mn>4</mn></mrow><mo stretchy="false">}</mo></mrow></math></p>
+</div>
+</li>
+<li id="S4.I11.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i1.I1.i3.p1.m1" class="ltx_Math" data-alttext="\{x\in\mathbb{Z}\mid x\leq 10\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>≤</mo><mn>10</mn></mrow><mo stretchy="false">}</mo></mrow></math></p>
+</div>
+</li>
+<li id="S4.I11.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I11.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i1.I1.i4.p1.m1" class="ltx_Math" data-alttext="\{1,2,3,\ldots,500\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>500</mn><mo stretchy="false">}</mo></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S4.I11.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i2.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+<ol id="S4.I11.i2.I1" class="ltx_enumerate">
+<li id="S4.I11.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Can a finite, nonempty set be inductive? Explain.</p>
+</div>
+</li>
+<li id="S4.I11.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is the empty set inductive? Explain.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S4.I11.i3.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove each of the following:</p>
+<ol id="S4.I11.i3.I1" class="ltx_enumerate">
+<li id="S4.I11.i3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i3.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each natural number <math id="S4.I11.i3.I1.i1.p1.m2" class="ltx_Math" data-alttext="n,2+5+8+\cdots+(3n-1)=\frac{n(3n+1)}{2}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mrow><mn>2</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>8</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I11.i3.I1.i2.p1.m1" class="ltx_Math" data-alttext="n,1+5+9+\cdots+(4n-3)=n(2n-1)" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mrow><mn>1</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>9</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I11.i3.I1.i3.p1.m1" class="ltx_Math" data-alttext="n,1^{3}+2^{3}+3^{3}+\cdots+n^{3}=\left[\frac{n(n+1)}{2}\right]^{2}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mrow><msup><mn>1</mn><mn>3</mn></msup><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><msup><mn>3</mn><mn>3</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mrow><mo>=</mo><msup><mrow><mo>[</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>]</mo></mrow><mn>2</mn></msup></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S4.I11.i4.p1" class="ltx_para">
+<p class="ltx_p">Based on the results in Progress Check 4.3 and Exercise (3c), if <math id="S4.I11.i4.p1.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, is there any conclusion that can be made about the relationship between the sum <math id="S4.I11.i4.p1.m2" class="ltx_Math" data-alttext="\left(1^{3}+2^{3}+3^{3}+\cdots+n^{3}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mn>1</mn><mn>3</mn></msup><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><msup><mn>3</mn><mn>3</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></math> and the sum <math id="S4.I11.i4.p1.m3" class="ltx_Math" data-alttext="(1+2+3+\cdots+n)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></math>?</p>
+</div>
+</li>
+<li id="S4.I11.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S4.I11.i5.p1" class="ltx_para">
+<p class="ltx_p">Instead of using induction, we can sometimes use previously proven results about a summation to obtain results about a different summation.</p>
+<ol id="S4.I11.i5.I1" class="ltx_enumerate">
+<li id="S4.I11.i5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use the result in Progress Check 4.3 to prove the following proposition:</p>
+</div>
+<div id="S4.I11.i5.I1.i1.p2" class="ltx_para">
+<table id="S4.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex38.m1" class="ltx_Math" data-alttext="\text{ For each natural number }n,3+6+9+\cdots+3n=\frac{3n(n+1)}{2}." display="block"><mrow><mrow><mrow><mrow><mtext> For each natural number </mtext><mo>⁢</mo><mi>n</mi></mrow><mo>,</mo><mrow><mn>3</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>9</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S4.I11.i5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Subtract <math id="S4.I11.i5.I1.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> from each side of the equation in Part (a). On the left side of this equation, explain why this can be done by subtracting 1 from each term in the summation.</p>
+</div>
+</li>
+<li id="S4.I11.i5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Algebraically simplify the right side of the equation in Part (b) to obtain a formula for the sum <math id="S4.I11.i5.I1.i3.p1.m1" class="ltx_Math" data-alttext="2+5+8+\cdots+(3n-1)" display="inline"><mrow><mn>2</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>8</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Compare this to Exercise (3a).</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S4.I11.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i6.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math></p>
+<ol id="S4.I11.i6.I1" class="ltx_enumerate">
+<li id="S4.I11.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Calculate <math id="S4.I11.i6.I1.i1.p1.m1" class="ltx_Math" data-alttext="1+3+5+\cdots+(2n-1)" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>5</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> for several natural numbers <math id="S4.I11.i6.I1.i1.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Based on your work in Exercise (6a), if <math id="S4.I11.i6.I1.i2.p1.m1" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, make a conjecture about the value of the sum <math id="S4.I11.i6.I1.i2.p1.m2" class="ltx_Math" data-alttext="1+3+5+\cdots+(2n-1)=\sum_{j=1}^{n}(2j-1)" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>5</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i6.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i6.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove your conjecture in Exercise (6b).</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="S4.I11.i7.p1" class="ltx_para">
+<p class="ltx_p">In Section 3.1, we defined congruence modulo <math id="S4.I11.i7.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> for a natural number <math id="S4.I11.i7.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, and in Section 3.5, we used the Division Algorithm to prove that each integer is congruent, modulo <math id="S4.I11.i7.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, to precisely one of the integers <math id="S4.I11.i7.p1.m4" class="ltx_Math" data-alttext="0,1,2,\ldots,n-1" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></math> (Corollary 3.32).</p>
+<ol id="S4.I11.i7.I1" class="ltx_enumerate">
+<li id="S4.I11.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Find the value of <math id="S4.I11.i7.I1.i1.p1.m1" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> so that <math id="S4.I11.i7.I1.i1.p1.m2" class="ltx_Math" data-alttext="4\equiv r(\bmod 3)" display="inline"><mrow><mn>4</mn><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S4.I11.i7.I1.i1.p1.m3" class="ltx_Math" data-alttext="r\in\{0,1,2\}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Find the value of <math id="S4.I11.i7.I1.i2.p1.m1" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> so that <math id="S4.I11.i7.I1.i2.p1.m2" class="ltx_Math" data-alttext="4^{2}\equiv r(\bmod 3)" display="inline"><mrow><msup><mn>4</mn><mn>2</mn></msup><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S4.I11.i7.I1.i2.p1.m3" class="ltx_Math" data-alttext="r\in\{0,1,2\}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Find the value of <math id="S4.I11.i7.I1.i3.p1.m1" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> so that <math id="S4.I11.i7.I1.i3.p1.m2" class="ltx_Math" data-alttext="4^{3}\equiv r(\bmod 3)" display="inline"><mrow><msup><mn>4</mn><mn>3</mn></msup><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S4.I11.i7.I1.i3.p1.m3" class="ltx_Math" data-alttext="r\in\{0,1,2\}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i7.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I11.i7.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For two other values of <math id="S4.I11.i7.I1.i4.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, find the value of <math id="S4.I11.i7.I1.i4.p1.m2" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> so that <math id="S4.I11.i7.I1.i4.p1.m3" class="ltx_Math" data-alttext="4^{n}\equiv r(\bmod 3)" display="inline"><mrow><msup><mn>4</mn><mi>n</mi></msup><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S4.I11.i7.I1.i4.p1.m4" class="ltx_Math" data-alttext="r\in\{0,1,2\}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i7.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S4.I11.i7.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i7.I1.i5.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> If <math id="S4.I11.i7.I1.i5.p1.m2" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, make a conjecture concerning the value of <math id="S4.I11.i7.I1.i5.p1.m3" class="ltx_Math" data-alttext="r" display="inline"><mi>r</mi></math> where <math id="S4.I11.i7.I1.i5.p1.m4" class="ltx_Math" data-alttext="4^{n}\equiv r(\bmod 3)" display="inline"><mrow><msup><mn>4</mn><mi>n</mi></msup><mo>≡</mo><mrow><mi>r</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S4.I11.i7.I1.i5.p1.m5" class="ltx_Math" data-alttext="r\in\{0,1,2\}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>. This conjecture should be written as a self-contained proposition including an appropriate quantifier.</p>
+</div>
+</li>
+<li id="S4.I11.i7.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S4.I11.i7.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i7.I1.i6.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Use mathematical induction to prove your conjecture.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="S4.I11.i8.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove each of the following:</p>
+<ol id="S4.I11.i8.I1" class="ltx_enumerate">
+<li id="S4.I11.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i8.I1.i1.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> For each natural number <math id="S4.I11.i8.I1.i1.p1.m2" class="ltx_Math" data-alttext="n,3" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>3</mn></mrow></math> divides (<math id="S4.I11.i8.I1.i1.p1.m3" class="ltx_Math" data-alttext="4^{n}-1" display="inline"><mrow><msup><mn>4</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></math>).</p>
+</div>
+</li>
+<li id="S4.I11.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I11.i8.I1.i2.p1.m1" class="ltx_Math" data-alttext="n,6" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>6</mn></mrow></math> divides <math id="S4.I11.i8.I1.i2.p1.m2" class="ltx_Math" data-alttext="\left(n^{3}-n\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>−</mo><mi>n</mi></mrow><mo>)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="S4.I11.i9.p1" class="ltx_para">
+<p class="ltx_p">In Exercise (7), we proved that for each natural number <math id="S4.I11.i9.p1.m1" class="ltx_Math" data-alttext="n,4^{n}\equiv 1(\bmod 3)" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><msup><mn>4</mn><mi>n</mi></msup></mrow><mo>≡</mo><mrow><mn>1</mn><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Explain how this result is related to the proposition in Exercise (8a).</p>
+</div>
+</li>
+<li id="S4.I11.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="S4.I11.i10.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove that for each natural number <math id="S4.I11.i10.p1.m1" class="ltx_Math" data-alttext="n,3" display="inline"><mrow><mi>n</mi><mo>,</mo><mn>3</mn></mrow></math> divides <math id="S4.I11.i10.p1.m2" class="ltx_Math" data-alttext="n^{3}+23n" display="inline"><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></math>. Compare this proof to the proof from Exercise (19) in Section 3.5.</p>
+</div>
+</li>
+<li id="S4.I11.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="S4.I11.i11.p1" class="ltx_para">
+<ol id="S4.I11.i11.I1" class="ltx_enumerate">
+<li id="S4.I11.i11.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i11.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Calculate the value of <math id="S4.I11.i11.I1.i1.p1.m1" class="ltx_Math" data-alttext="5^{n}-2^{n}" display="inline"><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></math> for <math id="S4.I11.i11.I1.i1.p1.m2" class="ltx_Math" data-alttext="n=1,n=2,n=3,n=4,n=5" display="inline"><mrow><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow><mo>,</mo><mrow><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow><mo>,</mo><mrow><mi>n</mi><mo>=</mo><mn>5</mn></mrow></mrow></mrow></mrow></mrow></math>, and <math id="S4.I11.i11.I1.i1.p1.m3" class="ltx_Math" data-alttext="n=6" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i11.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i11.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Based on your work in Part (a), make a conjecture about the values of <math id="S4.I11.i11.I1.i2.p1.m1" class="ltx_Math" data-alttext="5^{n}-2^{n}" display="inline"><mrow><msup><mn>5</mn><mi>n</mi></msup><mo>−</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></math> for each natural number <math id="S4.I11.i11.I1.i2.p1.m2" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i11.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i11.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove your conjecture in Part (b).</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="S4.I11.i12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.I11.i12.p1.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> and <math id="S4.I11.i12.p1.m2" class="ltx_Math" data-alttext="y" display="inline"><mi>y</mi></math> be distinct integers. Prove that for each natural number <math id="S4.I11.i12.p1.m3" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, <math id="S4.I11.i12.p1.m4" class="ltx_Math" data-alttext="(x-y)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></math> divides <math id="S4.I11.i12.p1.m5" class="ltx_Math" data-alttext="\left(x^{n}-y^{n}\right)" display="inline"><mrow><mo>(</mo><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>−</mo><msup><mi>y</mi><mi>n</mi></msup></mrow><mo>)</mo></mrow></math>. Explain why your conjecture in Exercise (11) is a special case of this result.</p>
+</div>
+</li>
+<li id="S4.I11.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="S4.I11.i13.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i13.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Prove Part (3) of <a href="https://johnweeks03.github.io/teaching/300/3-5.html#Theorem_3.28">Theorem 3.28</a> from Section 3.4. Let <math id="S4.I11.i13.p1.m2" class="ltx_Math" data-alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and let <math id="S4.I11.i13.p1.m3" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> and <math id="S4.I11.i13.p1.m4" class="ltx_Math" data-alttext="b" display="inline"><mi>b</mi></math> be integers. For each <math id="S4.I11.i13.p1.m5" class="ltx_Math" data-alttext="m\in\mathbb{N}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S4.I11.i13.p1.m6" class="ltx_Math" data-alttext="a\equiv b(\bmod n)" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S4.I11.i13.p1.m7" class="ltx_Math" data-alttext="a^{m}\equiv b^{m}(\bmod n)" display="inline"><mrow><msup><mi>a</mi><mi>m</mi></msup><mo>≡</mo><mrow><msup><mi>b</mi><mi>m</mi></msup><mspace style="width:0.3888888888888889em;" width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I11.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="S4.I11.i14.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I11.i14.p1.m1" class="ltx_Math" data-alttext="(\star)" display="inline"><mrow><mo stretchy="false">(</mo><mo lspace="0em" rspace="0em">⋆</mo><mo stretchy="false">)</mo></mrow></math> Use mathematical induction to prove that the sum of the cubes of any three consecutive natural numbers is a multiple of 9.</p>
+</div>
+</li>
+<li id="S4.I11.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="S4.I11.i15.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.I11.i15.p1.m1" class="ltx_Math" data-alttext="a" display="inline"><mi>a</mi></math> be a real number. We will explore the derivatives of the function <math id="S4.I11.i15.p1.m2" class="ltx_Math" data-alttext="f(x)=e^{ax}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup></mrow></math>. By using the chain rule, we see</p>
+</div>
+<div id="S4.I11.i15.p2" class="ltx_para">
+<table id="S4.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex39.m1" class="ltx_Math" data-alttext="\frac{d}{dx}\left(e^{ax}\right)=ae^{ax}" display="block"><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i15.p3" class="ltx_para">
+<p class="ltx_p">Recall that the second derivative of a function is the derivative of the derivative function. Similarly, the third derivative is the derivative of the second derivative.</p>
+<ol id="S4.I11.i15.I1" class="ltx_enumerate">
+<li id="S4.I11.i15.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i15.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">What is <math id="S4.I11.i15.I1.i1.p1.m1" class="ltx_Math" data-alttext="\frac{d^{2}}{dx^{2}}\left(e^{ax}\right)" display="inline"><mrow><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow></math>, the second derivative of <math id="S4.I11.i15.I1.i1.p1.m2" class="ltx_Math" data-alttext="e^{ax}" display="inline"><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup></math>?</p>
+</div>
+</li>
+<li id="S4.I11.i15.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i15.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">What is <math id="S4.I11.i15.I1.i2.p1.m1" class="ltx_Math" data-alttext="\frac{d^{3}}{dx^{3}}\left(e^{ax}\right)" display="inline"><mrow><mfrac><msup><mi>d</mi><mn>3</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow></math>, the third derivative of <math id="S4.I11.i15.I1.i2.p1.m2" class="ltx_Math" data-alttext="e^{ax}" display="inline"><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup></math>?</p>
+</div>
+</li>
+<li id="S4.I11.i15.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i15.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.I11.i15.I1.i3.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> be a natural number. Make a conjecture about the <math id="S4.I11.i15.I1.i3.p1.m2" class="ltx_Math" data-alttext="n^{\text{th }}" display="inline"><msup><mi>n</mi><mtext>th </mtext></msup></math> derivative of the function <math id="S4.I11.i15.I1.i3.p1.m3" class="ltx_Math" data-alttext="f(x)=e^{ax}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup></mrow></math>. That is, what is <math id="S4.I11.i15.I1.i3.p1.m4" class="ltx_Math" data-alttext="\frac{d^{n}}{dx^{n}}\left(e^{ax}\right)" display="inline"><mrow><mfrac><msup><mi>d</mi><mi>n</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow></math>? This conjecture should be written as a self-contained proposition including an appropriate quantifier.</p>
+</div>
+</li>
+<li id="S4.I11.i15.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I11.i15.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove your conjecture.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="S4.I11.i16.p1" class="ltx_para">
+<p class="ltx_p">In calculus, it can be shown that</p>
+</div>
+<div id="S4.I11.i16.p2" class="ltx_para">
+<table id="S4.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex40.m1" class="ltx_Math" data-alttext="\displaystyle\int\sin^{2}xdx=\frac{x}{2}-\frac{1}{2}\sin x\cos x+c\quad\text{ %
+and }" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>x</mi><mn>2</mn></mfrac></mstyle><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mi>c</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex41"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex41.m1" class="ltx_Math" data-alttext="\displaystyle\int\cos^{2}xdx=\frac{x}{2}+\frac{1}{2}\sin x\cos x+c" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>x</mi><mn>2</mn></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow><mo>+</mo><mi>c</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i16.p3" class="ltx_para">
+<p class="ltx_p">Using integration by parts, it is also possible to prove that for each natural number <math id="S4.I11.i16.p3.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>,</p>
+</div>
+<div id="S4.I11.i16.p4" class="ltx_para">
+<table id="S4.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex42.m1" class="ltx_Math" data-alttext="\displaystyle\int\sin^{n}xdx=-\frac{1}{n}\sin^{n-1}x\cos x+\frac{n-1}{n}\int%
+\sin^{n-2}xdx\quad\text{ and }" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><msup><mi>sin</mi><mi>n</mi></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>=</mo><mrow><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mi>n</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><msup><mi>sin</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mstyle></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex43"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex43.m1" class="ltx_Math" data-alttext="\displaystyle\int\cos^{n}xdx=\frac{1}{n}\cos^{n-1}x\sin x+\frac{n-1}{n}\int%
+\cos^{n-2}xdx" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><msup><mi>cos</mi><mi>n</mi></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><msup><mi>cos</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mi>n</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><msup><mi>cos</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i16.p5" class="ltx_para">
+<ol id="S4.I11.i16.I1" class="ltx_enumerate">
+<li id="S4.I11.i16.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i16.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine the values of</p>
+</div>
+<div id="S4.I11.i16.I1.i1.p2" class="ltx_para">
+<table id="S4.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex44.m1" class="ltx_Math" data-alttext="\int_{0}^{\pi/2}\sin^{2}xdx\quad\text{ and }\quad\int_{0}^{\pi/2}\sin^{4}xdx" display="block"><mrow><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></msubsup><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext><mspace style="width:1em;" width="1em"></mspace><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></msubsup><mrow><msup><mi>sin</mi><mn>4</mn></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S4.I11.i16.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i16.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove that for each natural number <math id="S4.I11.i16.I1.i2.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>,</p>
+</div>
+<div id="S4.I11.i16.I1.i2.p2" class="ltx_para">
+<table id="S4.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex45"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex45.m1" class="ltx_Math" data-alttext="\displaystyle\int_{0}^{\pi/2}\sin^{2n}xdx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></msubsup></mstyle><mrow><msup><mi>sin</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex45.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{1\cdot 3\cdot 5\cdots(2n-1)}{2\cdot 4\cdot 6\cdots(2n)}%
+\frac{\pi}{2}\quad\text{ and }" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>2</mn></mfrac></mstyle></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex46"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex46.m1" class="ltx_Math" data-alttext="\displaystyle\int_{0}^{\pi/2}\sin^{2n+1}xdx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></msubsup></mstyle><mrow><msup><mi>sin</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex46.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{2\cdot 4\cdot 6\cdots(2n)}{1\cdot 3\cdot 5\cdots(2n+1)}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i16.I1.i2.p3" class="ltx_para">
+<p class="ltx_p">These are known as the Wallis sine formulas.</p>
+</div>
+</li>
+<li id="S4.I11.i16.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i16.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Use mathematical induction to prove that</p>
+</div>
+<div id="S4.I11.i16.I1.i3.p2" class="ltx_para">
+<table id="S4.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex47"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex47.m1" class="ltx_Math" data-alttext="\displaystyle\int_{0}^{\pi/2}\cos^{2n}xdx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></msubsup></mstyle><mrow><msup><mi>cos</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex47.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{1\cdot 3\cdot 5\cdots(2n-1)}{2\cdot 4\cdot 6\cdots(2n)}%
+\frac{\pi}{2}\quad\text{ and }" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>2</mn></mfrac></mstyle></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex48"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex48.m1" class="ltx_Math" data-alttext="\displaystyle\int_{0}^{\pi/2}\cos^{2n+1}xdx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></msubsup></mstyle><mrow><msup><mi>cos</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo lspace="0.167em">⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex48.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{2\cdot 4\cdot 6\cdots(2n)}{1\cdot 3\cdot 5\cdots(2n+1)}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i16.I1.i3.p3" class="ltx_para">
+<p class="ltx_p">These are known as the Wallis cosine formulas.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="S4.I11.i17.p1" class="ltx_para">
+<ol id="S4.I11.i17.I1" class="ltx_enumerate">
+<li id="S4.I11.i17.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i17.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Why is it not possible to use mathematical induction to prove a proposition of the form</p>
+</div>
+<div id="S4.I11.i17.I1.i1.p2" class="ltx_para">
+<table id="S4.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex49.m1" class="ltx_Math" data-alttext="(\forall x\in\mathbb{Q})(P(x))," display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i17.I1.i1.p3" class="ltx_para">
+<p class="ltx_p">where <math id="S4.I11.i17.I1.i1.p3.m1" class="ltx_Math" data-alttext="P(x)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is some predicate?</p>
+</div>
+</li>
+<li id="S4.I11.i17.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i17.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Why is it not possible to use mathematical induction to prove a proposition of the form</p>
+</div>
+<div id="S4.I11.i17.I1.i2.p2" class="ltx_para">
+<p class="ltx_p">For each real number <math id="S4.I11.i17.I1.i2.p2.m1" class="ltx_Math" data-alttext="x" display="inline"><mi>x</mi></math> with <math id="S4.I11.i17.I1.i2.p2.m2" class="ltx_Math" data-alttext="x\geq 1,P(x)" display="inline"><mrow><mi>x</mi><mo>≥</mo><mrow><mn>1</mn><mo>,</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, where <math id="S4.I11.i17.I1.i2.p2.m3" class="ltx_Math" data-alttext="P(x)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is some predicate?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I11.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="S4.I11.i18.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Evaluation of proofs.</span> See the instructions for Exercise (19) from Section 3.1.</p>
+<ol id="S4.I11.i18.I1" class="ltx_enumerate">
+<li id="S4.I11.i18.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I11.i18.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I11.i18.I1.i1.p1.m1" class="ltx_Math" data-alttext="n,1+4+7+\cdots+(3n-2)=\frac{n(3n-1)}{2}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+<div id="S4.I11.i18.I1.i1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will prove this proposition using mathematical induction. So we let <math id="S4.I11.i18.I1.i1.p2.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the open sentence</p>
+</div>
+<div id="S4.I11.i18.I1.i1.p3" class="ltx_para">
+<table id="S4.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex50.m1" class="ltx_Math" data-alttext="1+4+7+\cdots+(3n-2)" display="block"><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i18.I1.i1.p4" class="ltx_para">
+<p class="ltx_p">Using <math id="S4.I11.i18.I1.i1.p4.m1" class="ltx_Math" data-alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, we see that <math id="S4.I11.i18.I1.i1.p4.m2" class="ltx_Math" data-alttext="3n-2=1" display="inline"><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>1</mn></mrow></math> and hence, <math id="S4.I11.i18.I1.i1.p4.m3" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.
+<br class="ltx_break">We now assume that <math id="S4.I11.i18.I1.i1.p4.m4" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is,</p>
+</div>
+<div id="S4.I11.i18.I1.i1.p5" class="ltx_para">
+<table id="S4.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex51.m1" class="ltx_Math" data-alttext="1+4+7+\cdots+(3k-2)=\frac{k(3k-1)}{2}" display="block"><mrow><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i18.I1.i1.p6" class="ltx_para">
+<p class="ltx_p">We then see that</p>
+</div>
+<div id="S4.I11.i18.I1.i1.p7" class="ltx_para">
+<table id="S4.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex52"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex52.m1" class="ltx_Math" data-alttext="\displaystyle 1+4+7+\cdots+(3k-2)+(3(k+1)-2)" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex52.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)(3k+2)}{2}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex53"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex53.m1" class="ltx_Math" data-alttext="\displaystyle\frac{k(3k-1)}{2}+(3k+1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex53.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)(3k+2)}{2}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex54"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex54.m1" class="ltx_Math" data-alttext="\displaystyle\frac{\left(3k^{2}-k\right)+(6k+2)}{2}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mrow><mo>(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>−</mo><mi>k</mi></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>6</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex54.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{3k^{2}+5k+2}{2}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mn>2</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex55"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex55.m1" class="ltx_Math" data-alttext="\displaystyle\frac{3k^{2}+5k+2}{2}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mn>2</mn></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex55.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{3k^{2}+5k+2}{2}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mn>2</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i18.I1.i1.p8" class="ltx_para">
+<p class="ltx_p">We have thus proved that <math id="S4.I11.i18.I1.i1.p8.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true, and hence, we have proved the proposition.</p>
+</div>
+</li>
+<li id="S4.I11.i18.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I11.i18.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each natural number <math id="S4.I11.i18.I1.i2.p1.m1" class="ltx_Math" data-alttext="n,1+4+7+\cdots+(3n-2)=\frac{n(3n-1)}{2}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+<div id="S4.I11.i18.I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will prove this proposition using mathematical induction. So we let</p>
+</div>
+<div id="S4.I11.i18.I1.i2.p3" class="ltx_para">
+<table id="S4.Ex56" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex56.m1" class="ltx_Math" data-alttext="P(n)=1+4+7+\cdots+(3n-2)." display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Using <math id="S4.I11.i18.I1.i2.p3.m1" class="ltx_Math" data-alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, we see that <math id="S4.I11.i18.I1.i2.p3.m2" class="ltx_Math" data-alttext="P(1)=1" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and hence, <math id="S4.I11.i18.I1.i2.p3.m3" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.
+<br class="ltx_break">We now assume that <math id="S4.I11.i18.I1.i2.p3.m4" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is,</p>
+</div>
+<div id="S4.I11.i18.I1.i2.p4" class="ltx_para">
+<table id="S4.Ex57" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex57.m1" class="ltx_Math" data-alttext="1+4+7+\cdots+(3k-2)=\frac{k(3k-1)}{2}." display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i18.I1.i2.p5" class="ltx_para">
+<p class="ltx_p">We then see that</p>
+</div>
+<div id="S4.I11.i18.I1.i2.p6" class="ltx_para">
+<table id="S4.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex58"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex58.m1" class="ltx_Math" data-alttext="\displaystyle P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex58.m2" class="ltx_Math" data-alttext="\displaystyle=1+4+7+\cdots+(3k-2)+(3(k+1)-2)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex59"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex59.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{k(3k-1)}{2}+3(k+1)-2" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>−</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex60"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex60.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{3k^{2}-k+6k+6-4}{2}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>−</mo><mi>k</mi></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>6</mn></mrow><mo>−</mo><mn>4</mn></mrow><mn>2</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex61"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex61.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{3k^{2}+5k+2}{2}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mn>2</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex62"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex62.m1" class="ltx_Math" data-alttext="\displaystyle=\frac{(k+1)(3k+2)}{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i18.I1.i2.p7" class="ltx_para">
+<p class="ltx_p">We have thus proved that <math id="S4.I11.i18.I1.i2.p7.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true, and hence, we have proved the proposition.</p>
+</div>
+</li>
+<li id="S4.I11.i18.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I11.i18.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">All dogs are the same breed.</p>
+</div>
+<div id="S4.I11.i18.I1.i3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. We will prove this proposition using mathematical induction. For each natural number <math id="S4.I11.i18.I1.i3.p2.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, we let <math id="S4.I11.i18.I1.i3.p2.m2" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be</p>
+</div>
+<div id="S4.I11.i18.I1.i3.p3" class="ltx_para">
+<p class="ltx_p">Any set of <math id="S4.I11.i18.I1.i3.p3.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> dogs consists entirely of dogs of the same breed.
+<br class="ltx_break">We will prove that for each natural number <math id="S4.I11.i18.I1.i3.p3.m2" class="ltx_Math" data-alttext="n,P(n)" display="inline"><mrow><mi>n</mi><mo>,</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is true, which will prove that all dogs are the same breed. A set with only one dog consists entirely of dogs of the same breed and, hence, <math id="S4.I11.i18.I1.i3.p3.m3" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.
+<br class="ltx_break">So we let <math id="S4.I11.i18.I1.i3.p3.m4" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> be a natural number and assume that <math id="S4.I11.i18.I1.i3.p3.m5" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, that is, that every set of <math id="S4.I11.i18.I1.i3.p3.m6" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> dogs consists of dogs of the same breed. Now consider a set <math id="S4.I11.i18.I1.i3.p3.m7" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> of <math id="S4.I11.i18.I1.i3.p3.m8" class="ltx_Math" data-alttext="k+1" display="inline"><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></math> dogs, where</p>
+</div>
+<div id="S4.I11.i18.I1.i3.p4" class="ltx_para">
+<table id="S4.Ex63" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex63.m1" class="ltx_Math" data-alttext="D=\left\{d_{1},d_{2},\ldots,d_{k},d_{k+1}\right\}" display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo>{</mo><msub><mi>d</mi><mn>1</mn></msub><mo>,</mo><msub><mi>d</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>d</mi><mi>k</mi></msub><mo>,</mo><msub><mi>d</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I11.i18.I1.i3.p5" class="ltx_para">
+<p class="ltx_p">If we remove the <math id="S4.I11.i18.I1.i3.p5.m1" class="ltx_Math" data-alttext="\operatorname{dog}d_{1}" display="inline"><mrow><mi>dog</mi><mo lspace="0.167em">⁡</mo><msub><mi>d</mi><mn>1</mn></msub></mrow></math> from the set <math id="S4.I11.i18.I1.i3.p5.m2" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math>, we then have a set <math id="S4.I11.i18.I1.i3.p5.m3" class="ltx_Math" data-alttext="D_{1}" display="inline"><msub><mi>D</mi><mn>1</mn></msub></math> of <math id="S4.I11.i18.I1.i3.p5.m4" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> dogs, and using the assumption that <math id="S4.I11.i18.I1.i3.p5.m5" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, these dogs must all be of the same breed. Similarly, if we remove <math id="S4.I11.i18.I1.i3.p5.m6" class="ltx_Math" data-alttext="d_{k+1}" display="inline"><msub><mi>d</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></math> from the set <math id="S4.I11.i18.I1.i3.p5.m7" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math>, we again have a set <math id="S4.I11.i18.I1.i3.p5.m8" class="ltx_Math" data-alttext="D_{2}" display="inline"><msub><mi>D</mi><mn>2</mn></msub></math> of <math id="S4.I11.i18.I1.i3.p5.m9" class="ltx_Math" data-alttext="k" display="inline"><mi>k</mi></math> dogs, and these dogs must all be of the same
+breed. Since <math id="S4.I11.i18.I1.i3.p5.m10" class="ltx_Math" data-alttext="D=D_{1}\cup D_{2}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>D</mi><mn>2</mn></msub></mrow></mrow></math>, we have proved that all of the dogs in <math id="S4.I11.i18.I1.i3.p5.m11" class="ltx_Math" data-alttext="D" display="inline"><mi>D</mi></math> must be of the same breed.
+<br class="ltx_break">This proves that if <math id="S4.I11.i18.I1.i3.p5.m12" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.I11.i18.I1.i3.p5.m13" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true and, hence, by mathematical induction, we have proved that for each natural number <math id="S4.I11.i18.I1.i3.p5.m14" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math>, any set of <math id="S4.I11.i18.I1.i3.p5.m15" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> dogs consists entirely of dogs of the same breed.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S4.SS1.SSS13" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.13 </span>Explorations and Activities</h3>
+
+<div id="S4.SS1.SSS13.p1" class="ltx_para">
+<ol id="S4.I12" class="ltx_enumerate">
+<li id="S4.I12.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">19.</span> 
+<div id="S4.I12.i19.p1" class="ltx_para">
+<p class="ltx_p">The Importance of the Basis Step. Most of the work done in constructing a proof by induction is usually in proving the inductive step. This was certainly the case in <a href="#Prop_4.2">Proposition 4.2.</a> However, the basis step is an essential part of the proof. Without it, the proof is incomplete. To see this, let <math id="S4.I12.i19.p1.m1" class="ltx_Math" data-alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be</p>
+</div>
+<div id="S4.I12.i19.p2" class="ltx_para">
+<table id="S4.Ex64" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex64.m1" class="ltx_Math" data-alttext="1+2+\cdots+n=\frac{n^{2}+n+1}{2}" display="block"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow><mo>=</mo><mfrac><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I12.i19.p3" class="ltx_para">
+<ol id="S4.I12.i19.I1" class="ltx_enumerate">
+<li id="S4.I12.i19.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I12.i19.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.I12.i19.I1.i1.p1.m1" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. Complete the following proof that if <math id="S4.I12.i19.I1.i1.p1.m2" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S4.I12.i19.I1.i1.p1.m3" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true.
+<br class="ltx_break">Let <math id="S4.I12.i19.I1.i1.p1.m4" class="ltx_Math" data-alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. Assume that <math id="S4.I12.i19.I1.i1.p1.m5" class="ltx_Math" data-alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, assume that</p>
+</div>
+<div id="S4.I12.i19.I1.i1.p2" class="ltx_para">
+<table id="S4.Ex65" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex65.m1" class="ltx_Math" data-alttext="1+2+\cdots+k=\frac{k^{2}+k+1}{2}" display="block"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>k</mi></mrow><mo>=</mo><mfrac><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I12.i19.I1.i1.p3" class="ltx_para">
+<p class="ltx_p">The goal is to prove that <math id="S4.I12.i19.I1.i1.p3.m1" class="ltx_Math" data-alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true. That is, we need to prove that</p>
+</div>
+<div id="S4.I12.i19.I1.i1.p4" class="ltx_para">
+<table id="S4.Ex66" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex66.m1" class="ltx_Math" data-alttext="1+2+\cdots+k+(k+1)=\frac{(k+1)^{2}+(k+1)+1}{2}" display="block"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>k</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.I12.i19.I1.i1.p5" class="ltx_para">
+<p class="ltx_p">To do this, we add <math id="S4.I12.i19.I1.i1.p5.m1" class="ltx_Math" data-alttext="(k+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> to both sides of equation (1). This gives</p>
+</div>
+<div id="S4.I12.i19.I1.i1.p6" class="ltx_para">
+<table id="S4.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex67"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex67.m1" class="ltx_Math" data-alttext="\displaystyle 1+2+\cdots+k+(k+1)" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>k</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex67.m2" class="ltx_Math" data-alttext="\displaystyle=\frac{k^{2}+k+1}{2}+(k+1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mstyle><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex68"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex68.m1" class="ltx_Math" data-alttext="\displaystyle=\cdots" display="inline"><mrow><mi></mi><mo>=</mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S4.I12.i19.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I12.i19.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S4.I12.i19.I1.i2.p1.m1" class="ltx_Math" data-alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> true? Is <math id="S4.I12.i19.I1.i2.p1.m2" class="ltx_Math" data-alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> true? What about <math id="S4.I12.i19.I1.i2.p1.m3" class="ltx_Math" data-alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S4.I12.i19.I1.i2.p1.m4" class="ltx_Math" data-alttext="P(4)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math>? Explain how this shows that the basis step is an essential part of a proof by induction.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="S4.I12.i20" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">20.</span> 
+<div id="S4.I12.i20.p1" class="ltx_para">
+<p class="ltx_p">Regions of a Circle. Place <math id="S4.I12.i20.p1.m1" class="ltx_Math" data-alttext="n" display="inline"><mi>n</mi></math> equally spaced points on a circle and connect each pair of points with the chord of the circle determined by that pair of points. See Figure 4.1.</p>
+</div>
+<figure id="S4.F1" class="ltx_figure"><img src="images/2b656f65-89b4-4b76-be53-fbbcb2f5cf40-19.jpg" id="S4.F1.g1" class="ltx_graphics ltx_centering ltx_img_square" width="250" height="276" alt="Three circles. The first has 2 points connected by a chord forming 2 regions. The second has 3 points connected by chords forming 4 regions. The third has 4 points connected by chords forming 8 regions.">
+<figcaption class="ltx_caption ltx_centering">Figure 4.1: Regions of Circles</figcaption>
+</figure>
+<div id="S4.I12.i20.p2" class="ltx_para">
+<p class="ltx_p">Count the number of distinct regions within each circle. For example, with three points on the circle, there are four distinct regions. Organize your data in a table with two columns: "Number of Points on the Circle" and "Number of Distinct Regions in the Circle."</p>
+<ol id="S4.I12.i20.I1" class="ltx_enumerate">
+<li id="S4.I12.i20.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I12.i20.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">How many regions are there when there are four equally spaced points on the circle?</p>
+</div>
+</li>
+<li id="S4.I12.i20.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I12.i20.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Based on the work so far, make a conjecture about how many distinct regions would you get with five equally spaced points.</p>
+</div>
+</li>
+<li id="S4.I12.i20.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I12.i20.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Based on the work so far, make a conjecture about how many distinct regions would you get with six equally spaced points.</p>
+</div>
+</li>
+<li id="S4.I12.i20.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I12.i20.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Figure 4.2 shows the figures associated with Parts (b) and (c). Count the number of regions in each case. Are your conjectures correct or incorrect?</p>
+</div>
+</li>
+<li id="S4.I12.i20.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S4.I12.i20.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Explain why this activity shows that the inductive step is an essential part of a proof by mathematical induction.</p>
+</div>
+<figure id="S4.F2" class="ltx_figure"><img src="images/2b656f65-89b4-4b76-be53-fbbcb2f5cf40-20.jpg" id="S4.F2.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="250" height="117" alt="Two circles. The first has 5 points connected by chords forming 16 regions. The second has 6 points connected by chords forming 31 regions.">
+<figcaption class="ltx_caption ltx_centering">Figure 4.2: Regions of Circles</figcaption>
+</figure>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://scholarworks.gvsu.edu/books/24/">Mathematical Reasoning: Writing and Proof, Version 3</a> © 2020 by <a href="https://www.tedsundstrom.com/">Ted Sundstrom</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
