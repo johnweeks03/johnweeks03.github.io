@@ -92,3 +92,29 @@ section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
   white-space: nowrap;
   border: 0;
 }
+/* Hide the footer on screen */
+.print-footer {
+  display: none;
+}
+
+/* Show a fixed footer on every printed page */
+@media print {
+  body {
+    margin-bottom: 30px; /* make room so content doesn't overlap footer */
+  }
+
+  .print-footer {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 5px 10px;
+    font-size: 10pt;
+    color: #000;
+    background: #fff;      /* ensures text sits on white, not over content */
+    border-top: 1px solid #000;
+    text-align: left;      /* left-aligned, as requested */
+  }
+}
