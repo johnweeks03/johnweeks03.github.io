@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>0.2 A Taste of Number Theory</title>
+<!--Generated on Sat Dec 20 19:31:58 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">A Taste of Number Theory</span>
+</h2>
+
+<div id="S0.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S0.I1" class="ltx_itemize">
+<li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Introduce the notion of proof through basic number theory</p>
+</div>
+</li>
+<li id="S0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Recognize the struggles of proving theorems rigorously</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S0.SS2.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.2.1 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Even and Odd Integers</span>
+</h3>
+
+<div id="S0.SS2.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Before we get into the basics of propositional logic, let’s start by trying to write a few proofs ourselves. But what should we write proofs about?</p>
+</div>
+<div id="S0.SS2.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">It is typical in a first proof-writing course to start with number theory. The discoveries we will make here date back to ancient civilizations - it seems like the right place to begin.</p>
+</div>
+<div id="S0.SS2.SSS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">We will fix some of our notations to start. We write the set of integers as</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathbb{Z}:=\{\dots,-3,-2,-1,0,1,2,3,\dots\}," display="block"><mrow><mrow><mi>ℤ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and we write the set of natural numbers as</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbb{N}:=\{1,2,3,\dots\}." display="block"><mrow><mrow><mi>ℕ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#0000CC;">  </span> (Definition)0.2.1.</h6>
+<div id="S0.SS2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">An integer <math id="S0.SS2.Thmtheorem1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is <span class="ltx_text ltx_font_bold">even</span> if <math id="S0.SS2.Thmtheorem1.p1.m2" class="ltx_Math" alttext="n=2k" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></mrow></math> for some <math id="S0.SS2.Thmtheorem1.p1.m3" class="ltx_Math" alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>. An integer <math id="S0.SS2.Thmtheorem1.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is <span class="ltx_text ltx_font_bold">odd</span> if <math id="S0.SS2.Thmtheorem1.p1.m5" class="ltx_Math" alttext="n=2k+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> for some <math id="S0.SS2.Thmtheorem1.p1.m6" class="ltx_Math" alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S0.SS2.SSS1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">This definition introduces a new symbol: we will write <math id="S0.SS2.SSS1.p4.m1" class="ltx_Math" alttext="\in" display="inline"><mo>∈</mo></math> to denote “is an element of” or “is a member of”. So in English, our first sentence reads, “An integer <math id="S0.SS2.SSS1.p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is <span class="ltx_text ltx_font_bold">even</span> if <math id="S0.SS2.SSS1.p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is twice some number <math id="S0.SS2.SSS1.p4.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, where <math id="S0.SS2.SSS1.p4.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is an element of the integers.”</p>
+</div>
+<div id="S0.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#006600;">  </span> (Theorem)0.2.2.</h6>
+<div id="S0.SS2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an even integer, then <math id="S0.SS2.Thmtheorem2.p1.m2" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> is an even integer.</p>
+</div>
+</div>
+<div class="ltx_logical-block workbox  front"><div class="prompt">
+<div id="S1.p2" class="ltx_para sr-only">
+<p class="ltx_p"></p>
+</div>
+<div class="ltx_logical-block BigVertspace">
+</div>
+<div class="ltx_logical-block BigVertspace">
+</div>
+<div class="ltx_logical-block BigVertspace">
+</div>
+<div class="ltx_logical-block BigVertspace">
+</div>
+<div class="ltx_logical-block Vertspace">
+</div>
+</div>
+<div id="S0.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#006600;">  </span> (Theorem)0.2.3.</h6>
+<div id="S0.SS2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">The sum of two consecutive integers is odd.</p>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S0.SS2.SSS1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">Notice that to prove these two theorems we had to start general. In Section 0-1 we saw that “proofs by example” don’t hold up to the standard of mathematical rigor. We need to make an argument that holds for all examples we could consider. Hence for our previous theorem, our “two consecutive integers” weren’t just two numbers we chose like “6” and “7”; they were <math id="S0.SS2.SSS1.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and <math id="S0.SS2.SSS1.p5.m2" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> for some integer <math id="S0.SS2.SSS1.p5.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. We could have also chosen <math id="S0.SS2.SSS1.p5.m4" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></math> and <math id="S0.SS2.SSS1.p5.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> as our two consecutive integers, or even <math id="S0.SS2.SSS1.p5.m6" class="ltx_Math" alttext="n+2" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></math> and <math id="S0.SS2.SSS1.p5.m7" class="ltx_Math" alttext="n+3" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>3</mn></mrow></math>, as these descriptions fit the general description of any two consecutive integers.</p>
+</div>
+<div id="S0.SS2.SSS1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">However, to disprove a general statement, like “All cars are red,” we only need to show a counterexample. The existence of one blue car is enough to say that the statement is false. It is easy to fall into a trap here, as you might be tempted to say “there is no reason all cars have to be red”. But this doesn’t disprove the statement. <span class="ltx_text ltx_font_italic">Being suspicious about a whether a statement is true doesn’t mean that the statement is false; it must be disproven with a counterexample.</span></p>
+</div>
+<div id="S0.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#800000;">  </span> (Example)0.2.4.</h6>
+<div id="S0.SS2.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Determine whether the statement below is true or false. If the statement is true, prove it. If the statement is false, provide a counterexample.</p>
+</div>
+</div>
+<div id="S0.SS2.SSS1.p7" class="ltx_para ltx_noindent">
+<blockquote class="ltx_quote">
+<p class="ltx_p">The product of an odd integer and an even integer is odd.</p>
+</blockquote>
+</div>
+</section>
+<section id="S0.SS2.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.2.2 </span><span class="ltx_text" style="--ltx-fg-color:#800000;">Division of Integers</span>
+</h3>
+
+<div id="S0.SS2.SSS2.p1" class="ltx_para">
+<p class="ltx_p">Number theory finds its roots in the study of prime numbers. Euclid was fascinated by these and proved that there were infinitely many prime numbers. We will discuss this in Section 6.2. To discuss prime numbers, we have to discuss what it means for one number to divide evenly into another:</p>
+</div>
+<div id="S0.SS2.Thmtheorem5" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#0000CC;">  </span> (Definition)0.2.5.</h6>
+<div id="S0.SS2.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Given <math id="S0.SS2.Thmtheorem5.p1.m1" class="ltx_Math" alttext="n,m\in\mathbb{Z}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mi>m</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, we say that <math id="S0.SS2.Thmtheorem5.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> <span class="ltx_text ltx_font_bold">divides</span> <math id="S0.SS2.Thmtheorem5.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, written <math id="S0.SS2.Thmtheorem5.p1.m4" class="ltx_Math" alttext="n|m" display="inline"><mrow><mi>n</mi><mo fence="false">|</mo><mi>m</mi></mrow></math>, if there exists <math id="S0.SS2.Thmtheorem5.p1.m5" class="ltx_Math" alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S0.SS2.Thmtheorem5.p1.m6" class="ltx_Math" alttext="m=nk" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>k</mi></mrow></mrow></math>. If <math id="S0.SS2.Thmtheorem5.p1.m7" class="ltx_Math" alttext="n|m" display="inline"><mrow><mi>n</mi><mo fence="false">|</mo><mi>m</mi></mrow></math>, we may also say that <math id="S0.SS2.Thmtheorem5.p1.m8" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is <span class="ltx_text ltx_font_bold">divisible</span> by <math id="S0.SS2.Thmtheorem5.p1.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> or that <math id="S0.SS2.Thmtheorem5.p1.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a <span class="ltx_text ltx_font_bold">factor</span> of <math id="S0.SS2.Thmtheorem5.p1.m11" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+</div>
+<div id="S0.SS2.Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#006600;">  </span> (Theorem)0.2.6.</h6>
+<div id="S0.SS2.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">The sum of any three consecutive integers is always divisible by three.</p>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S0.SS2.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#800000;">  </span> (Example)0.2.7.</h6>
+<div id="S0.SS2.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Determine whether the statements below are true or false. If a statement is true, prove it. If a statement is false, provide a counterexample.</p>
+</div>
+</div>
+<div id="S0.SS2.SSS2.p2" class="ltx_para ltx_noindent">
+<blockquote class="ltx_quote">
+<p class="ltx_p">If <math id="S0.SS2.SSS2.p2.m1" class="ltx_Math" alttext="a,n\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S0.SS2.SSS2.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, then <math id="S0.SS2.SSS2.p2.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p2.m5" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math>.</p>
+</blockquote>
+</div>
+<div id="S0.SS2.SSS2.p3" class="ltx_para ltx_noindent">
+<blockquote class="ltx_quote">
+<p class="ltx_p">If <math id="S0.SS2.SSS2.p3.m1" class="ltx_Math" alttext="a,n\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S0.SS2.SSS2.p3.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p3.m3" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math>, then <math id="S0.SS2.SSS2.p3.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p3.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</blockquote>
+</div>
+<div id="S0.SS2.SSS2.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">The mini-statements “<math id="S0.SS2.SSS2.p4.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>” and “<math id="S0.SS2.SSS2.p4.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p4.m4" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math>” are called <span class="ltx_text ltx_font_bold">predicates</span> in logic. Let’s call “<math id="S0.SS2.SSS2.p4.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p4.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>” Predicate 1 and “<math id="S0.SS2.SSS2.p4.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S0.SS2.SSS2.p4.m8" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math>” Predicate 2. Then both statemenets written above are written in the form “If [Statement x], then [Statement y].” These are called <span class="ltx_text ltx_font_bold">conditional propositions</span>. What’s more, the second statement is the <span class="ltx_text ltx_font_bold">converse</span> of the first, as it flips the order of the two predicates.</p>
+</div>
+<div id="S0.SS2.SSS2.p5" class="ltx_para">
+<p class="ltx_p">We see from the above example that it is not necessarily the case that flipping the order of predicates keeps the statement true. Let’s investigate a bit more:</p>
+</div>
+<div id="S0.SS2.Thmtheorem8" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#006600;">  </span> (Theorem)0.2.8.</h6>
+<div id="S0.SS2.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">If an integer is divisible by 3, then it can be written as the sum of three consecutive integers.</p>
+</div>
+</div>
+<div id="S0.SS2.SSS2.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">Notice that this is the converse of Theorem 3. Even though Theorem 3 is not written using the exact “If… then…” English terms, it can be rewritten into that form using a rephrasing: “If you have the sum of three consecutive integers, then that integer is divisible by three.”</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S0.SS2.SSS2.p7" class="ltx_para">
+<p class="ltx_p">For this next problem, we will need to use the following fact: “Every integer is either odd or even.” In the problem below: since <math id="S0.SS2.SSS2.p7.m1" class="ltx_Math" alttext="n=2k+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> for some integer <math id="S0.SS2.SSS2.p7.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> by definition of odd, see if you can apply the fact above to the integer <math id="S0.SS2.SSS2.p7.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+<div id="S0.SS2.Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="--ltx-fg-color:#006600;">  </span> (Theorem)0.2.9.</h6>
+<div id="S0.SS2.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SS2.Thmtheorem9.p1.m1" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S0.SS2.Thmtheorem9.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is odd, then 8 divides <math id="S0.SS2.Thmtheorem9.p1.m3" class="ltx_Math" alttext="n^{2}-1" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Dec 20 19:31:58 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
