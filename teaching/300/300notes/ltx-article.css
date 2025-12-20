@@ -73,10 +73,11 @@ section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
   background: #fff;
 }
 
-/* Ensure it prints clearly */
-@media print {
-  .answer-space {    background: #fff;
-  }
+.large-answer-space {
+  height: 250px;           /* 100px vertical space */
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
 }
 
 /* Screen-reader-only text */
