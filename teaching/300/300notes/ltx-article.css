@@ -66,6 +66,13 @@ section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
 .ltx_theorem .ltx_title + .ltx_p  { margin-top:0em; }
 
   /* Visible blank space for handwriting */
+.small-answer-space {
+  height: 75px;           /* 100px vertical space */
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+}
+
 .answer-space {
   height: 125px;           /* 100px vertical space */
   margin-top: 0.75rem;
