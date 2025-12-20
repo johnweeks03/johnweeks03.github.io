@@ -75,9 +75,7 @@ section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
 
 /* Ensure it prints clearly */
 @media print {
-  .answer-space {
-    border: 1px solid #000;
-    background: #fff;
+  .answer-space {    background: #fff;
   }
 }
 
