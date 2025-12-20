@@ -88,7 +88,7 @@ section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
 }
 
 .half-answer-space {
-  height: 400px;           /* 100px vertical space */
+  height: 325px;           /* 100px vertical space */
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
   background: #fff;
