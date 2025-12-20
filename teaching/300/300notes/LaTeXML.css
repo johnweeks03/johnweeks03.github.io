@@ -40,6 +40,17 @@
 
 /* Ought to be easily removable/overridable? */
 .ltx_pagination.ltx_role_newpage { height:2em; }
+@media print {
+  .ltx_role_newpage {
+    break-before: page;
+    page-break-before: always; /* legacy */
+  }
+}
+@media screen {
+  .ltx_role_newpage {
+    display: none; /* if LaTeXML doesn't already hide it */
+  }
+}
 /*======================================================================
   Document Structure; Titles & Frontmatter */
 
