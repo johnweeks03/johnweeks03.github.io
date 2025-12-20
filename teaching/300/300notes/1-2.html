@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1.2 Techniques of Proof: Direct Proof</title>
+<!--Generated on Sat Dec 20 23:46:03 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S1.SS2" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span><span class="ltx_text" style="color:#800000;">Techniques of Proof: Direct Proof</span>
+</h1>
+
+<div id="S1.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S1.I1" class="ltx_itemize">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Discover proof techniques for basic conditional propositions</p>
+</div>
+</li>
+<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Apply methods of contrapositive and contradiction to several number theory examples</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.2.1.</h3>
+<div id="S1.SS2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Reword the following so that it reads explicitly as a conditional proposition: “The sum of any three consecutive integers is always divisible by three.”</p>
+</div>
+</div>
+<div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">We will attempt to prove this statement directly. A <span class="ltx_text ltx_font_bold">direct proof</span> is a proof that assumes the antecedents of a conditional statements are true, then deduces from them that the consequences of the conditional statements are also true.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A Skeleton Version of a Direct Proof for <math id="S1.SS2.p3.m1" class="ltx_Math" alttext="A\Rightarrow B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇒</mo><mi>B</mi></mrow></math>.</span></p>
+</div>
+<div id="S1.SS2.p4" class="ltx_para ltx_noindent">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Guidelines</span></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Example</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Assume <math id="S1.SS2.p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Assume <math id="S1.SS2.p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="S1.SS2.p4.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, and <math id="S1.SS2.p4.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> are three consecutive integers.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Use definitions to rewrite <math id="S1.SS2.p4.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. (There is sometimes more than one way to do this.)</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p"><span class="ltx_text ltx_font_bold">Without loss of generality</span> (WLOG) assume <math id="S1.SS2.p4.m6" class="ltx_Math" alttext="n&lt;m&lt;\ell" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mi>m</mi><mo>&lt;</mo><mi mathvariant="normal">ℓ</mi></mrow></math>. Then <math id="S1.SS2.p4.m7" class="ltx_Math" alttext="m=n+1" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></math> and <math id="S1.SS2.p4.m8" class="ltx_Math" alttext="\ell=n+2" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">(Recommended) State what you wish to show in <math id="S1.SS2.p4.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> given what you’ve done so far.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">We want to show that <math id="S1.SS2.p4.m10" class="ltx_Math" alttext="n+m+\ell" display="inline"><mrow><mi>n</mi><mo>+</mo><mi>m</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, or <math id="S1.SS2.p4.m11" class="ltx_Math" alttext="n+(n+1)+(n+2)" display="inline"><mrow><mi>n</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, is divisible by 3.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Connect what you have to the definitions used in <math id="S1.SS2.p4.m12" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">???</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Conclude <math id="S1.SS2.p4.m13" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Then <math id="S1.SS2.p4.m14" class="ltx_Math" alttext="n+m+\ell" display="inline"><mrow><mi>n</mi><mo>+</mo><mi>m</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></math> is divisible by 3 by definition. This concludes the proof.</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S1.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.2.2.</h3>
+<div id="S1.SS2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Fill in the blank box in the skeleton version for <math id="S1.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="A\Rightarrow B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇒</mo><mi>B</mi></mrow></math> to complete the proof of the statement from Example 1.</p>
+</div>
+</div>
+<div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS2.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">Boxes 2 and 4 are where the magic happens. Box 2 requires <span class="ltx_text ltx_font_italic">strong knowledge of definitions</span> so you can apply them directly to the problem provided. Box 4 requires <span class="ltx_text ltx_font_italic">a connection between what you <span class="ltx_text ltx_font_bold">have</span> and what you <span class="ltx_text ltx_font_bold">need</span></span>.</p>
+</div>
+<div id="S1.SS2.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">The stronger one’s understanding of the definition, the more flexible you can be in starting your proofs off right. Perhaps this makes sense of the following quotes:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">In mathematics, the art of proposing a question must be held of higher value than solving it.</p>
+<p class="ltx_p">- Georg Cantor</p>
+</blockquote>
+</div>
+<div id="S1.SS2.p7" class="ltx_para ltx_noindent">
+<blockquote class="ltx_quote">
+<p class="ltx_p">I kept an updated list of definitions/propositions/theorems/etc in order and went through their proofs the few days leading up to the exams so that they were fresh on my mind and make sure that I was able to do them on my own.</p>
+<p class="ltx_p">- A student from a previous proof-based course I taught</p>
+</blockquote>
+</div>
+<div id="S1.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.2.3.</h3>
+<div id="S1.SS2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Prove the following theorem directly: “If <math id="S1.SS2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="a,b,c\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S1.SS2.Thmtheorem3.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S1.SS2.Thmtheorem3.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S1.SS2.Thmtheorem3.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> divides <math id="S1.SS2.Thmtheorem3.p1.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, then <math id="S1.SS2.Thmtheorem3.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> divides <math id="S1.SS2.Thmtheorem3.p1.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.”</p>
+</div>
+</div>
+<div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S1.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.2.4.</h3>
+<div id="S1.SS2.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S1.SS2.Thmtheorem4.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a real number and <math id="S1.SS2.Thmtheorem4.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, <math id="S1.SS2.Thmtheorem4.p1.m3" class="ltx_Math" alttext="m+1" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></math>, and <math id="S1.SS2.Thmtheorem4.p1.m4" class="ltx_Math" alttext="m+2" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow></math> are the lengths of the
+three sides of a right triangle, then <math id="S1.SS2.Thmtheorem4.p1.m5" class="ltx_Math" alttext="m=3" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>3</mn></mrow></math>.</p>
+</div>
+</div>
+<div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS2.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.2.5.</h3>
+<div id="S1.SS2.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Disprove</span> the following conjecture: “If <math id="S1.SS2.Thmtheorem5.p1.m1" class="ltx_Math" alttext="5" display="inline"><mn>5</mn></math> divides <math id="S1.SS2.Thmtheorem5.p1.m2" class="ltx_Math" alttext="n^{2}-1" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></math>, then 5 divides <math id="S1.SS2.Thmtheorem5.p1.m3" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></math>.”</p>
+</div>
+</div>
+<div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
