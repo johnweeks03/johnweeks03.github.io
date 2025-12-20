@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.2 Techniques of Proof: Proof by Contradiction</title>
+<!--Generated on Sun Dec 21 00:31:26 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S2.SS2" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span><span class="ltx_text" style="color:#800000;">Techniques of Proof: Proof by Contradiction</span>
+</h1>
+
+<div id="S2.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Discover proof techniques for basic conditional propositions</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Apply methods of contrapositive and contradiction to several number theory examples</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S2.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.2.1.</h3>
+<div id="S2.SS2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Show that the system of equations</p>
+<table id="S2.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\displaystyle x+2y" display="inline"><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex1.m2" class="ltx_Math" alttext="\displaystyle=3" display="inline"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\displaystyle 2x+4y" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex2.m2" class="ltx_Math" alttext="\displaystyle=5" display="inline"><mrow><mi></mi><mo>=</mo><mn>5</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">has no solution <math id="S2.SS2.Thmtheorem1.p1.m1" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</div>
+<div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S2.SS2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">In the previous example you likely used either the method of substitution or elimination to simplify the system of equations and ended up with an untrue statement. This is a contradiction proof!</p>
+</div>
+<div id="S2.SS2.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A Skeleton Version of a Contradiction Proof for Statement <math id="S2.SS2.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</span></p>
+</div>
+<div id="S2.SS2.p4" class="ltx_para ltx_noindent">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Guidelines</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Examples</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Assume <math id="S2.SS2.p4.m1" class="ltx_Math" alttext="\neg A" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Assume <span class="ltx_text ltx_font_bold">by way of contradiction</span> (BWOC) that there <span class="ltx_text ltx_font_italic">is</span> a solution <math id="S2.SS2.p4.m2" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> to the system of equations given above.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Use definitions to rewrite <math id="S2.SS2.p4.m3" class="ltx_Math" alttext="\neg A" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Then for the values <math id="S2.SS2.p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S2.SS2.p4.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> of this solution, the proposition <math id="S2.SS2.p4.m6" class="ltx_Math" alttext="x+2y=3" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math> is true <span class="ltx_text ltx_font_italic">and</span> the proposition <math id="S2.SS2.p4.m7" class="ltx_Math" alttext="2x+4y=5" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>5</mn></mrow></math> is true.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Use definitions and known results to derive a contradiction (like <math id="S2.SS2.p4.m8" class="ltx_Math" alttext="Q\wedge\neg Q" display="inline"><mrow><mi>Q</mi><mo>∧</mo><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></mrow></math>).</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">But multiplying the first equation by 2 yields <math id="S2.SS2.p4.m9" class="ltx_Math" alttext="2x+4y=6" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>6</mn></mrow></math>. Since <math id="S2.SS2.p4.m10" class="ltx_Math" alttext="2x+4y=5" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>5</mn></mrow></math> and <math id="S2.SS2.p4.m11" class="ltx_Math" alttext="2x+4y=6" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>6</mn></mrow></math>, by substitution we conclude that <math id="S2.SS2.p4.m12" class="ltx_Math" alttext="5=6" display="inline"><mrow><mn>5</mn><mo>=</mo><mn>6</mn></mrow></math>, which is a contradiction.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">(Recommended) Confirm that your only assumption is the statement you wish to disprove.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">The only thing we assumed was that there <span class="ltx_text ltx_font_italic">was</span> a solution <math id="S2.SS2.p4.m13" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> to the system of equations given above.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Conclude <math id="S2.SS2.p4.m14" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Assuming that there is a solution to this system yields a condition, so we are forced to conclude there is <span class="ltx_text ltx_font_italic">no</span> solution.</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S2.SS2.p5" class="ltx_para">
+<p class="ltx_p">Typically contradiction proofs are seen as <span class="ltx_text ltx_font_italic">harder to use</span> and <span class="ltx_text ltx_font_italic">weaker arguments</span> than direct or contrapositive proofs. However, some statements are quite unwieldy to prove using either of these two methods, and a contradiction proof can be much more elegant. Here is what your proofs will be assessed on:</p>
+<ul id="S2.I2" class="ltx_itemize">
+<li id="S2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Clear</span> - your proofs should clearly state your beginning assumptions, your intermediate deductions, and your ending claim.</p>
+</div>
+</li>
+<li id="S2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Comprehensive</span> - your proofs should prove the statement completely - no “proofs by example”! They should also make use predominantly of content we have discussed in class, not outside material such as readings external to our textbook.</p>
+</div>
+</li>
+<li id="S2.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Concise</span> - if you can simplify your proof after writing it, you should. <span class="ltx_text ltx_font_italic">Proof</span>reading (haha) is a crucial part of the writing process. Did you break your proof into cases when it didn’t need cases? Would a different proof approach ease the burden of proof?</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S2.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.2.2.</h3>
+<div id="S2.SS2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Prove by contradiction that, if <math id="S2.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S2.SS2.Thmtheorem2.p1.m2" class="ltx_Math" alttext="\dfrac{1}{x}&gt;0" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle><mo>&gt;</mo><mn>0</mn></mrow></math>. <span class="ltx_text ltx_font_italic">Where did you use that <math id="S2.SS2.Thmtheorem2.p1.m3" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>?</span></p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S2.SS2.p6" class="ltx_para">
+<p class="ltx_p">We will not go through <span class="ltx_text ltx_font_italic">too</span> many examples of contradiction proof… in fact, <span class="ltx_text ltx_font_italic">most</span> proofs you may start as contradiction proofs are actually <span class="ltx_text ltx_font_italic">contrapositive</span> proofs in disguise (like the next example)!</p>
+</div>
+<div id="S2.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.2.3.</h3>
+<div id="S2.SS2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Prove or disprove: if <math id="S2.SS2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> is irrational, then <math id="S2.SS2.Thmtheorem3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is irrational or <math id="S2.SS2.Thmtheorem3.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is irrational.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S2.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.2.4.</h3>
+<div id="S2.SS2.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Prove or disprove: <math id="S2.SS2.Thmtheorem4.p1.m1" class="ltx_Math" alttext="\log_{2}(3)" display="inline"><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> is an irrational number.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
