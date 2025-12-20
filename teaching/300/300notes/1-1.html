@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1 Language, Logic, and Proof</title>
+<!--Generated on Sat Dec 20 22:59:43 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S1" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span><span class="ltx_text" style="color:#800000;">Language, Logic, and Proof</span>
+</h1>
+
+<section id="S1.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span><span class="ltx_text" style="color:#800000;">Introduction to Logic</span>
+</h2>
+
+<div id="S1.SS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S1.I1" class="ltx_itemize">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Identify basic components of propositional logic in mathematical phrases</p>
+</div>
+</li>
+<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Build truth tables to verify truth values of complex propositions</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S1.SS1.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.1.1 </span><span class="ltx_text" style="color:#800000;">Defining Basic Logic Terms</span>
+</h4>
+
+<div id="S1.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In our previous section we no doubt ran into issues with proving these number theory statements. How do we begin, how do we end, and what are the important steps to include in between? Let’s begin unpacking these ideas in this section. Mathematicians wish to be as analytic as is reasonable when proving their statements to make their theorems as robust and sturdy as possible. When we are building large structures, we need to make sure that every piece is solid so that the tools we develop are useful. The basics of this analytic language is called <span class="ltx_text ltx_font_bold">propositional logic</span>, which we discuss now.</p>
+</div>
+<div id="S1.SS1.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>1.1.1.</h3>
+<div id="S1.SS1.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">proposition</span> is a sentence that is either true or false but never both. The <span class="ltx_text ltx_font_bold">truth value</span> of a proposition refers to its attribute of being true or false. (This is also referred to as a <span class="ltx_text ltx_font_bold">statement</span>, like in our readings.)</p>
+</div>
+</div>
+<div id="S1.SS1.SSS1.p2" class="ltx_para">
+<p class="ltx_p">Typically we refer to propositions by capital letters <math id="S1.SS1.SSS1.p2.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, etc. In the definitions to come, you can consider <math id="S1.SS1.SSS1.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to be a statement like “It is raining outside” and <math id="S1.SS1.SSS1.p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to be a statement like “The ground is wet”.</p>
+</div>
+<div id="S1.SS1.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>1.1.2.</h3>
+<div id="S1.SS1.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.SS1.Thmtheorem2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.SS1.Thmtheorem2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be propositions.</p>
+<ol id="S1.I2" class="ltx_enumerate">
+<li id="S1.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S1.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p">The proposition “<span class="ltx_text ltx_font_bold">not <math id="S1.I2.ix1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span>” is true if <math id="S1.I2.ix1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is false.</p>
+<ul id="S1.I2.ix1.I1" class="ltx_itemize">
+<li id="S1.I2.ix1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix1.I1.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">This is expressed symbolically as <math id="S1.I2.ix1.I1.i1.p1.m1" class="ltx_Math" alttext="\neg A" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow></math> (LaTeX <math id="S1.I2.ix1.I1.i1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>neg). The statement <math id="S1.I2.ix1.I1.i1.p1.m3" class="ltx_Math" alttext="\neg A" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow></math> is called the <span class="ltx_text ltx_font_bold">negation</span> of <math id="S1.I2.ix1.I1.i1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="S1.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S1.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p">The proposition “<math id="S1.I2.ix2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> <span class="ltx_text ltx_font_bold">and</span> <math id="S1.I2.ix2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>” is true if both <math id="S1.I2.ix2.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix2.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are true.</p>
+<ul id="S1.I2.ix2.I2" class="ltx_itemize">
+<li id="S1.I2.ix2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix2.I2.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">This is expressed symbolically as <math id="S1.I2.ix2.I2.i1.p1.m1" class="ltx_Math" alttext="A\wedge B" display="inline"><mrow><mi>A</mi><mo>∧</mo><mi>B</mi></mrow></math> (LaTeX <math id="S1.I2.ix2.I2.i1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>wedge). The statement <math id="S1.I2.ix2.I2.i1.p1.m3" class="ltx_Math" alttext="A\wedge B" display="inline"><mrow><mi>A</mi><mo>∧</mo><mi>B</mi></mrow></math> is called the <span class="ltx_text ltx_font_bold">conjunction</span> of <math id="S1.I2.ix2.I2.i1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix2.I2.i1.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="S1.I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S1.I2.ix3.p1" class="ltx_para">
+<p class="ltx_p">The proposition “<math id="S1.I2.ix3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> <span class="ltx_text ltx_font_bold">or</span> <math id="S1.I2.ix3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>” if at <span class="ltx_text ltx_font_italic">least</span> one of <math id="S1.I2.ix3.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> or <math id="S1.I2.ix3.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is true. Even in the case that both <math id="S1.I2.ix3.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix3.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is true, the statement “<math id="S1.I2.ix3.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> or <math id="S1.I2.ix3.p1.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>” has a truth value of “true”.</p>
+<ul id="S1.I2.ix3.I3" class="ltx_itemize">
+<li id="S1.I2.ix3.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix3.I3.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">This is expressed symbolically as <math id="S1.I2.ix3.I3.i1.p1.m1" class="ltx_Math" alttext="A\vee B" display="inline"><mrow><mi>A</mi><mo>∨</mo><mi>B</mi></mrow></math> (LaTeX <math id="S1.I2.ix3.I3.i1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>vee). The statement <math id="S1.I2.ix3.I3.i1.p1.m3" class="ltx_Math" alttext="A\vee B" display="inline"><mrow><mi>A</mi><mo>∨</mo><mi>B</mi></mrow></math> is called the <span class="ltx_text ltx_font_bold">disjunction</span> of <math id="S1.I2.ix3.I3.i1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix3.I3.i1.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="S1.I2.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S1.I2.ix4.p1" class="ltx_para">
+<p class="ltx_p">The proposition “<span class="ltx_text ltx_font_bold">If</span> <math id="S1.I2.ix4.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <span class="ltx_text ltx_font_bold">then</span> <math id="S1.I2.ix4.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>” is true if either both <math id="S1.I2.ix4.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix4.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are true, or <math id="S1.I2.ix4.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is false.</p>
+<ul id="S1.I2.ix4.I4" class="ltx_itemize">
+<li id="S1.I2.ix4.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix4.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">This is expressed symbolically as <math id="S1.I2.ix4.I4.i1.p1.m1" class="ltx_Math" alttext="A\Rightarrow B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇒</mo><mi>B</mi></mrow></math> (LaTeX <math id="S1.I2.ix4.I4.i1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>Rightarrow). The statement <math id="S1.I2.ix4.I4.i1.p1.m3" class="ltx_Math" alttext="A\Rightarrow B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇒</mo><mi>B</mi></mrow></math> is called a <span class="ltx_text ltx_font_bold">conditional proposition</span> or an <span class="ltx_text ltx_font_bold">implication</span> (typically the statement reads “<math id="S1.I2.ix4.I4.i1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> implies <math id="S1.I2.ix4.I4.i1.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>”, but there are several more ways to say the same statement).</p>
+</div>
+</li>
+<li id="S1.I2.ix4.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix4.I4.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Given the statement above, <math id="S1.I2.ix4.I4.i2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is called the <span class="ltx_text ltx_font_bold">hypothesis</span> (or <span class="ltx_text ltx_font_bold">antecedent</span>) and <math id="S1.I2.ix4.I4.i2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is called the <span class="ltx_text ltx_font_bold">conclusion</span> (or <span class="ltx_text ltx_font_bold">consequent</span>).</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="S1.I2.ix5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S1.I2.ix5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The proposition “<math id="S1.I2.ix5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> <span class="ltx_text ltx_font_bold">if and only if</span> <math id="S1.I2.ix5.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>” is true if both <math id="S1.I2.ix5.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix5.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> have the same truth value.</p>
+<ul id="S1.I2.ix5.I5" class="ltx_itemize">
+<li id="S1.I2.ix5.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix5.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">This is expressed symbolically as <math id="S1.I2.ix5.I5.i1.p1.m1" class="ltx_Math" alttext="A\iff B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇔</mo><mi>B</mi></mrow></math> (LaTeX <math id="S1.I2.ix5.I5.i1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>iff or <math id="S1.I2.ix5.I5.i1.p1.m3" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>Leftrightarrow). The statement <math id="S1.I2.ix5.I5.i1.p1.m4" class="ltx_Math" alttext="A\iff B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇔</mo><mi>B</mi></mrow></math> is called a <span class="ltx_text ltx_font_bold">biconditional proposition</span>.</p>
+</div>
+</li>
+<li id="S1.I2.ix5.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.ix5.I5.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If the proposition “<math id="S1.I2.ix5.I5.i2.p1.m1" class="ltx_Math" alttext="A\iff B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇔</mo><mi>B</mi></mrow></math>” is true, we say that <math id="S1.I2.ix5.I5.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.I2.ix5.I5.i2.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are <span class="ltx_text ltx_font_bold">logically equivalent</span>. If <math id="S1.I2.ix5.I5.i2.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is true, <math id="S1.I2.ix5.I5.i2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is true, and vice versa. This is one of the strongest statements we can make in logic, and since it comes up so frequently we abbreviate it as “<math id="S1.I2.ix5.I5.i2.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> iff <math id="S1.I2.ix5.I5.i2.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>”.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S1.SS1.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.1.3.</h3>
+<div id="S1.SS1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.SS1.Thmtheorem3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be the statement “It is raining outside” and <math id="S1.SS1.Thmtheorem3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be the statement “The ground outside is wet”. Which of the following is true at the time you are reading this?</p>
+  
+<ol id="S1.I3" class="ltx_enumerate">
+<li id="S1.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S1.I3.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.I3.i1.p1.m1" class="ltx_Math" alttext="\neg A" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S1.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S1.I3.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.I3.i2.p1.m1" class="ltx_Math" alttext="A\wedge B" display="inline"><mrow><mi>A</mi><mo>∧</mo><mi>B</mi></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S1.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S1.I3.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.I3.i3.p1.m1" class="ltx_Math" alttext="\neg A\vee B" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow><mo>∨</mo><mi>B</mi></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S1.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="S1.I3.i4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.I3.i4.p1.m1" class="ltx_Math" alttext="\neg(\neg A\vee B)" display="inline"><mrow><mo>¬</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">¬</mo><mi>A</mi></mrow><mo>∨</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S1.I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="S1.I3.i5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.I3.i5.p1.m1" class="ltx_Math" alttext="A\Rightarrow B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇒</mo><mi>B</mi></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S1.I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="S1.I3.i6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.I3.i6.p1.m1" class="ltx_Math" alttext="A\Leftrightarrow B" display="inline"><mrow><mi>A</mi><mo stretchy="false">⇔</mo><mi>B</mi></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S1.SS1.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.1.2 </span><span class="ltx_text" style="color:#800000;">Truth Tables</span>
+</h4>
+
+<div id="S1.SS1.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider the following theorem known as the <span class="ltx_text ltx_font_bold">Intermediate Value Theorem</span> from calculus:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">If <math id="S1.SS1.SSS2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a continuous function on a closed interval <math id="S1.SS1.SSS2.p1.m2" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>, and <math id="S1.SS1.SSS2.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is any number between <math id="S1.SS1.SSS2.p1.m4" class="ltx_Math" alttext="f(a)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S1.SS1.SSS2.p1.m5" class="ltx_Math" alttext="f(b)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then there is at least one number <math id="S1.SS1.SSS2.p1.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> in the interval <math id="S1.SS1.SSS2.p1.m7" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> such that <math id="S1.SS1.SSS2.p1.m8" class="ltx_Math" alttext="f(c)=k" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>k</mi></mrow></math>.</p>
+</blockquote>
+</div>
+<div id="S1.SS1.SSS2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">One of our goals in having you take this class is enabling you to prove this theorem yourself. We won’t do this this semester, but we will begin working our way up to it. This very first concept already helps: if we make the statement <math id="S1.SS1.SSS2.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> “<math id="S1.SS1.SSS2.p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a continuous function on a closed interval <math id="S1.SS1.SSS2.p2.m3" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>”, <math id="S1.SS1.SSS2.p2.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is the statement “<math id="S1.SS1.SSS2.p2.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is any number between <math id="S1.SS1.SSS2.p2.m6" class="ltx_Math" alttext="f(a)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S1.SS1.SSS2.p2.m7" class="ltx_Math" alttext="f(b)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>,” and <math id="S1.SS1.SSS2.p2.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the statement “there is at least one number <math id="S1.SS1.SSS2.p2.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> in the interval <math id="S1.SS1.SSS2.p2.m10" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> such that <math id="S1.SS1.SSS2.p2.m11" class="ltx_Math" alttext="f(c)=k" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>k</mi></mrow></math>”, then this statement reads</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="(P\wedge Q)\Rightarrow R." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">⇒</mo><mi>R</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">You may have thought we gave a lot of definitions in the last couple pages. However, notice that we are now able to break down even complicated theorems into simple logical statements. Even complicated propositions can be broken down into simple propositions, each individual statement can have its truth value analyzed, and then we can use these logical operations to rebuild the statement and determine whether the complicated statement is true or false.</p>
+</div>
+<div id="S1.SS1.SSS2.p3" class="ltx_para">
+<p class="ltx_p">But what are the truth values of <math id="S1.SS1.SSS2.p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, <math id="S1.SS1.SSS2.p3.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, and <math id="S1.SS1.SSS2.p3.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> that make this statement true? To do this, we form a <span class="ltx_text ltx_font_bold">truth table</span>, which begins by forming all possible combinations of truth values for <math id="S1.SS1.SSS2.p3.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, <math id="S1.SS1.SSS2.p3.m5" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, and <math id="S1.SS1.SSS2.p3.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>,</p>
+</div>
+<div id="S1.SS1.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.1.4.</h3>
+<div id="S1.SS1.Thmtheorem4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">A coach promises her players, “If we win tonight, then I will buy you pizza tomorrow.” Determine the cases in which the players can rightly claim to have been lied to.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS1.Thmtheorem4.p2" class="ltx_para">
+<p class="ltx_p">Using this information, write the truth table for the statement <math id="S1.SS1.Thmtheorem4.p2.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math>.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S1.SS1.SSS2.p4" class="ltx_para">
+<p class="ltx_p">Notice that the only this statement can be proven false is if we find a case where <math id="S1.SS1.SSS2.p4.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is true but <math id="S1.SS1.SSS2.p4.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is false. This motivates the following result:</p>
+</div>
+<div id="S1.SS1.Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>1.1.5.</h3>
+<div id="S1.SS1.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">The negation of the statement <math id="S1.SS1.Thmtheorem5.p1.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math> is the statement <math id="S1.SS1.Thmtheorem5.p1.m2" class="ltx_Math" alttext="P\wedge\neg Q" display="inline"><mrow><mi>P</mi><mo>∧</mo><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="S1.SS1.SSS2.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">Given this, we can now formulate truth tables for more complicated statements like the one from the previous page:</p>
+</div>
+<div id="S1.SS1.SSS2.p6" class="ltx_para">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="S1.SS1.SSS2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="S1.SS1.SSS2.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="S1.SS1.SSS2.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="S1.SS1.SSS2.m4" class="ltx_Math" alttext="(P\wedge Q)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="S1.SS1.SSS2.m5" class="ltx_Math" alttext="(P\wedge Q)\Rightarrow R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">⇒</mo><mi>R</mi></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_t">T</td>
+<td class="ltx_td ltx_align_center ltx_border_t">T</td>
+<td class="ltx_td ltx_align_center ltx_border_t">T</td>
+<td class="ltx_td ltx_align_center ltx_border_t">T</td>
+<td class="ltx_td ltx_align_center ltx_border_t">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">F</td>
+<td class="ltx_td ltx_align_center">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.SS1.SSS2.p7" class="ltx_para">
+<p class="ltx_p">Let’s keep investigating the conditional statement <math id="S1.SS1.SSS2.p7.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS1.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.1.6.</h3>
+<div id="S1.SS1.Thmtheorem6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider the statement: “If a card has a vowel on one side, it has an even number on the other.”</p>
+</div>
+<div id="S1.SS1.Thmtheorem6.p2" class="ltx_para">
+<p class="ltx_p">Given that each card has a letter on one side and a number on the other side, which card(s) do you <span class="ltx_text ltx_font_bold">have</span> to turn over to verify this statement?</p>
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_framed ltx_framed_rectangle" style="font-size:173%;--ltx-border-color:#000000;">T</span>    <span class="ltx_text ltx_framed ltx_framed_rectangle" style="font-size:173%;--ltx-border-color:#000000;">8</span>    <span class="ltx_text ltx_framed ltx_framed_rectangle" style="font-size:173%;--ltx-border-color:#000000;">3</span>    <span class="ltx_text ltx_framed ltx_framed_rectangle" style="font-size:173%;--ltx-border-color:#000000;">A</span></p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS1.SSS2.p8" class="ltx_para">
+<p class="ltx_p">This seems to motivate the following definition:</p>
+</div>
+<div id="S1.SS1.Thmtheorem7" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>1.1.7.</h3>
+<div id="S1.SS1.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Given a conditional statement <math id="S1.SS1.Thmtheorem7.p1.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">contrapositive</span> of this statement is <math id="S1.SS1.Thmtheorem7.p1.m2" class="ltx_Math" alttext="\neg Q\Rightarrow\neg P" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow><mo stretchy="false">⇒</mo><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S1.SS1.Thmtheorem8" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.1.8.</h3>
+<div id="S1.SS1.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">Form the contrapositive of the statement “If we win tonight, then I will buy you pizza tomorrow.” If this original statement is true, is the contrapositive of the statement true? How does this connect with our previous example?</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS1.SSS2.p9" class="ltx_para">
+<p class="ltx_p">Now to prove the following theorem requires a truth table. However, now we are convinced that this theorem might be true:</p>
+</div>
+<div id="S1.SS1.Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>1.1.9.</h3>
+<div id="S1.SS1.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">The statement <math id="S1.SS1.Thmtheorem9.p1.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math> and its contrapositive <math id="S1.SS1.Thmtheorem9.p1.m2" class="ltx_Math" alttext="\neg Q\Rightarrow\neg P" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow><mo stretchy="false">⇒</mo><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow></mrow></math> are logically equivalent. That is, one statement is true if the other is true, and one statement is false if the other is false.</p>
+</div>
+</div>
+<div id="S1.SS1.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.1.10.</h3>
+<div id="S1.SS1.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">Prove the theorem above by building a truth table.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S1.SS1.SSS2.p10" class="ltx_para">
+<p class="ltx_p">There are two other ways to rework the statement “<math id="S1.SS1.SSS2.p10.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math>”, but neither of them are logically equivalent to this original statement.</p>
+</div>
+<div id="S1.SS1.Thmtheorem11" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>1.1.11.</h3>
+<div id="S1.SS1.Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p">Given the statement <math id="S1.SS1.Thmtheorem11.p1.m1" class="ltx_Math" alttext="P\Rightarrow Q" display="inline"><mrow><mi>P</mi><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">converse</span> of this statement is <math id="S1.SS1.Thmtheorem11.p1.m2" class="ltx_Math" alttext="Q\Rightarrow P" display="inline"><mrow><mi>Q</mi><mo stretchy="false">⇒</mo><mi>P</mi></mrow></math>. The <span class="ltx_text ltx_font_bold">inverse</span> of this statement it <math id="S1.SS1.Thmtheorem11.p1.m3" class="ltx_Math" alttext="\neg P\Rightarrow\neg Q" display="inline"><mrow><mrow><mo rspace="0.167em">¬</mo><mi>P</mi></mrow><mo stretchy="false">⇒</mo><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="S1.SS1.Thmtheorem12" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>1.1.12.</h3>
+<div id="S1.SS1.Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p">Provide an example of a true conditional proposition whose converse is false. Then provide an example of a true conditional proposition whose inverse is false. <span class="ltx_text ltx_font_italic">Could you use the same example for both?</span></p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Dec 20 22:59:43 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
