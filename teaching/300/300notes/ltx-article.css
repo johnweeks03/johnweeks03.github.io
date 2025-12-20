@@ -67,8 +67,7 @@ section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
 
   /* Visible blank space for handwriting */
 .answer-space {
-  height: 100px;           /* 100px vertical space */
-  border: 1px solid #000;  /* visual box; good contrast */
+  height: 125px;           /* 100px vertical space */
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
   background: #fff;
