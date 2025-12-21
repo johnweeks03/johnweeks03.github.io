@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.5 Functions and Sets</title>
+<!--Generated on Sun Dec 21 05:29:03 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S5.SS5" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.5 </span><span class="ltx_text" style="color:#800000;">Functions and Sets</span>
+</h1>
+
+<div id="S5.SS5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S5.I1" class="ltx_itemize">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Define the composition of two functions</p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Connect our understanding of inverse functions with composition of functions</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S5.SS5.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.1 </span><span class="ltx_text" style="color:#800000;">Connecting Two Major Worlds</span>
+</h2>
+
+<div id="S5.SS5.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.5.1.</h3>
+<div id="S5.SS5.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The function <math id="S5.SS5.Thmtheorem1.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> given by <math id="S5.SS5.Thmtheorem1.p1.m2" class="ltx_Math" alttext="f(x)=x^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math> is neither injective nor surjective. Could we restrict the domain and/or codomain of this function to make it bijective?</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS5.Thmtheorem1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">On the domain/codomain you chose, what is the function’s inverse function?</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS5.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">From the above example we see there is great utility in restricting our functions’ domains and codomains. In fact, it is often the only way we can make inverse functions for certain non-bijective functions!</p>
+</div>
+<div id="S5.SS5.SSS1.p2" class="ltx_para">
+<p class="ltx_p">For example, to make non-surjective functions surjective, we merely need to replace the codomain of the function <math id="S5.SS5.SSS1.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> with <math id="S5.SS5.SSS1.p2.m2" class="ltx_Math" alttext="f(X)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. We have used this notation intentionally: this is called the <span class="ltx_text ltx_font_bold">image</span> of the set <math id="S5.SS5.SSS1.p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> under <math id="S5.SS5.SSS1.p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="S5.SS5.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>5.5.2.</h3>
+<div id="S5.SS5.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS5.Thmtheorem2.p1.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> be a function.</p>
+<ol id="S5.I2" class="ltx_enumerate">
+<li id="S5.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.I2.ix1.p1.m1" class="ltx_Math" alttext="S\subseteq X" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>X</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">image</span> of <math id="S5.I2.ix1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> under <math id="S5.I2.ix1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is defined via</p>
+<table id="S5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex1.m1" class="ltx_Math" alttext="f(S):=\{f(x)\mid x\in S\}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S5.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I2.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If <math id="S5.I2.ix2.p1.m1" class="ltx_Math" alttext="T\subseteq Y" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>Y</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">preimage</span> (or <span class="ltx_text ltx_font_bold">inverse image</span>) of <math id="S5.I2.ix2.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> under <math id="S5.I2.ix2.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is defined via</p>
+<table id="S5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex2.m1" class="ltx_Math" alttext="f^{-1}(T):=\{x\in X\mid f(x)\in T\}." display="block"><mrow><mrow><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>T</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS5.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.5.3.</h3>
+<div id="S5.SS5.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS5.Thmtheorem3.p1.m1" class="ltx_Math" alttext="f(x)=x^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>. Find <math id="S5.SS5.Thmtheorem3.p1.m2" class="ltx_Math" alttext="f^{-1}([-1,1])" display="inline"><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S5.SS5.Thmtheorem3.p1.m3" class="ltx_Math" alttext="f^{-1}([-1,4])" display="inline"><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS5.SSS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">There is an interesting thing we should bring up with this notation: <span class="ltx_text ltx_font_italic">even if a function <math id="S5.SS5.SSS1.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is not invertible, we can still take preimages of sets under <math id="S5.SS5.SSS1.p3.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math></span>. The notation <math id="S5.SS5.SSS1.p3.m3" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> can seem a bit unfortunate here, so let us make a quick theorem to help explain the connection between invertibility and preimages.</p>
+</div>
+</section>
+<section id="S5.SS5.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.5.2 </span><span class="ltx_text" style="color:#800000;">Proving with Functions and Sets</span>
+</h2>
+
+<div id="S5.SS5.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>5.5.4.</h3>
+<div id="S5.SS5.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS5.Thmtheorem4.p1.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> be a bijective function. Then for all values <math id="S5.SS5.Thmtheorem4.p1.m2" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math>,</p>
+<table id="S5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex3.m1" class="ltx_Math" alttext="f^{-1}(\{y\})=\{f^{-1}(y)\}." display="block"><mrow><mrow><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS5.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The notation on the left-hand side denotes the <span class="ltx_text ltx_font_bold">preimage</span> of the set <math id="S5.SS5.SSS2.p1.m1" class="ltx_Math" alttext="\{y\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></math> under <math id="S5.SS5.SSS2.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>; the notation on the right-hand side denotes the output of <math id="S5.SS5.SSS2.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> under the <span class="ltx_text ltx_font_bold">inverse function</span> <math id="S5.SS5.SSS2.p1.m4" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math>. Notice that pre-images always are sets, not numbers, even if there is one element in this set.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS5.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.5.5.</h3>
+<div id="S5.SS5.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Define <math id="S5.SS5.Thmtheorem5.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> via <math id="S5.SS5.Thmtheorem5.p1.m2" class="ltx_Math" alttext="f(x)=x^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>.</p>
+<ol id="S5.I3" class="ltx_enumerate">
+<li id="S5.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I3.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Find two nonempty subsets <math id="S5.I3.ix1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I3.ix1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="S5.I3.ix1.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> such that <math id="S5.I3.ix1.p1.m4" class="ltx_Math" alttext="A\cap B=\varnothing" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> but <math id="S5.I3.ix1.p1.m5" class="ltx_Math" alttext="f^{-1}(A)=f^{-1}(B)" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.I3.ix1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Using this, show that the following statement is <span class="ltx_text ltx_font_italic">false</span>: for any function <math id="S5.I3.ix1.p2.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> where <math id="S5.I3.ix1.p2.m2" class="ltx_Math" alttext="C,D\subset Y" display="inline"><mrow><mrow><mi>C</mi><mo>,</mo><mi>D</mi></mrow><mo>⊂</mo><mi>Y</mi></mrow></math>, <math id="S5.I3.ix1.p2.m3" class="ltx_Math" alttext="f(C)\cap f(D)\subset f^{-1}(C\cap D)" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊂</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mo>∩</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S5.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I3.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Find two nonempty subsets <math id="S5.I3.ix2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.I3.ix2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="S5.I3.ix2.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> such that <math id="S5.I3.ix2.p1.m4" class="ltx_Math" alttext="A\cap B=\varnothing" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> but <math id="S5.I3.ix2.p1.m5" class="ltx_Math" alttext="f(A)=f(B)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.I3.ix2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Using this, show that the following statement is <span class="ltx_text ltx_font_italic">false</span>: for any function <math id="S5.I3.ix2.p2.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> where <math id="S5.I3.ix2.p2.m2" class="ltx_Math" alttext="A,B\subset X" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>⊂</mo><mi>X</mi></mrow></math>, <math id="S5.I3.ix2.p2.m3" class="ltx_Math" alttext="f(A)\cap f(B)\subset f(A\cap B)" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊂</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS5.Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>5.5.6.</h3>
+<div id="S5.SS5.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS5.Thmtheorem6.p1.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> be an injective function and let <math id="S5.SS5.Thmtheorem6.p1.m2" class="ltx_Math" alttext="S\subset X" display="inline"><mrow><mi>S</mi><mo>⊂</mo><mi>X</mi></mrow></math>. Then <math id="S5.SS5.Thmtheorem6.p1.m3" class="ltx_Math" alttext="f^{-1}(f(S))=S" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>S</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S5.SS5.Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>5.5.7.</h3>
+<div id="S5.SS5.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS5.Thmtheorem7.p1.m1" class="ltx_Math" alttext="g:X\rightarrow Y" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> be a surjective function and let <math id="S5.SS5.Thmtheorem7.p1.m2" class="ltx_Math" alttext="T\subset Y" display="inline"><mrow><mi>T</mi><mo>⊂</mo><mi>Y</mi></mrow></math>. Then <math id="S5.SS5.Thmtheorem7.p1.m3" class="ltx_Math" alttext="f(f^{-1}(T))=T" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>T</mi></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS5.Thmtheorem8" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>5.5.8.</h3>
+<div id="S5.SS5.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS5.Thmtheorem8.p1.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> be a function and suppose that <math id="S5.SS5.Thmtheorem8.p1.m2" class="ltx_Math" alttext="(A_{\alpha})_{\alpha\in\Delta}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub></math> is a collection of subsets of <math id="S5.SS5.Thmtheorem8.p1.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. Then we have the following:</p>
+<ol id="S5.I4" class="ltx_enumerate">
+<li id="S5.I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I4.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">it is true that <math id="S5.I4.ix1.p1.m1" class="ltx_Math" alttext="f\left(\bigcap_{\alpha\in\Delta}A_{\alpha}\right)\subseteq\bigcap_{\alpha\in%
+\Delta}f(A_{\alpha})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">⊆</mo><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S5.I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I4.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">it is <span class="ltx_text ltx_font_italic">not</span> necessarily true that
+<math id="S5.I4.ix2.p1.m1" class="ltx_Math" alttext="\bigcap_{\alpha\in\Delta}f(A_{\alpha})\subseteq f\left(\bigcap_{\alpha\in%
+\Delta}A_{\alpha}\right)" display="inline"><mrow><mrow><msub><mo>⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊆</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mo lspace="0em">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
