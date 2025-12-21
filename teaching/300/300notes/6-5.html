@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>6.5 Modular Arithmetic</title>
+<!--Generated on Sun Dec 21 05:55:49 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S6.SS5" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">6.5 </span><span class="ltx_text" style="color:#800000;">Modular Arithmetic</span>
+</h1>
+
+<div id="S6.SS5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S6.I1" class="ltx_itemize">
+<li id="S6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Determine properties of modular arithmetic</p>
+</div>
+</li>
+<li id="S6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Compute answers to difficult arithmetic problems using congruence classes</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S6.SS5.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.1.</h3>
+<div id="S6.SS5.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">What is the day of the week (Monday, Tuesday, Wednesday,…) 1000 days after today? Explain how you found your answer.</p>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S6.SS5.p2" class="ltx_para">
+<p class="ltx_p">Before we continue learning about abstract concepts like sets and functions, it is important that we see the connections of these concepts to real-world logic problems. Sometimes large computational problems like the one in the above example can be solved without pulling out several years of calendars and counting to 1000! We can save time and energy using a concept called <span class="ltx_text ltx_font_bold">modular arithmetic</span>.</p>
+</div>
+<div id="S6.SS5.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.2.</h3>
+<div id="S6.SS5.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.SS5.Thmtheorem2.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>,
+define <math id="S6.SS5.Thmtheorem2.p1.m2" class="ltx_Math" alttext="n\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></math> to be the set of all integers that are divisible by <math id="S6.SS5.Thmtheorem2.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. In set-builder notation, we have</p>
+<table id="S6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex1.m1" class="ltx_Math" alttext="n\mathbb{Z}:=\{m\in\mathbb{Z}\mid m=nk\text{ for some }k\in\mathbb{Z}\}." display="block"><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>m</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.3.</h3>
+<div id="S6.SS5.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Write out the set <math id="S6.SS5.Thmtheorem3.p1.m1" class="ltx_Math" alttext="7\mathbb{Z}" display="inline"><mrow><mn>7</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math> in roster notation.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S6.SS5.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.4.</h3>
+<div id="S6.SS5.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Make a conjecture about <math id="S6.SS5.Thmtheorem4.p1.m1" class="ltx_Math" alttext="p\mathbb{Z}\cap q\mathbb{Z}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>ℤ</mi></mrow><mo>∩</mo><mrow><mi>q</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math> where <math id="S6.SS5.Thmtheorem4.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S6.SS5.Thmtheorem4.p1.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are both prime numbers. Explain how you arrive at your answer.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S6.SS5.p3" class="ltx_para">
+<p class="ltx_p">To define what is so “modular” about modular arithmetic, we will need the concept of a relation. We will discuss relations more in Chapter 7. For now, consider it merely as a way to “relate” numbers to one another, categorizing them into various classes of numbers.</p>
+</div>
+<div id="S6.SS5.Thmtheorem5" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.5.</h3>
+<div id="S6.SS5.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">relation</span> <math id="S6.SS5.Thmtheorem5.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> from <math id="S6.SS5.Thmtheorem5.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.SS5.Thmtheorem5.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a subset of <math id="S6.SS5.Thmtheorem5.p1.m4" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem6" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.6.</h3>
+<div id="S6.SS5.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.SS5.Thmtheorem6.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, define the relation <math id="S6.SS5.Thmtheorem6.p1.m2" class="ltx_Math" alttext="\equiv_{n}" display="inline"><msub><mo>≡</mo><mi>n</mi></msub></math> on <math id="S6.SS5.Thmtheorem6.p1.m3" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> via <math id="S6.SS5.Thmtheorem6.p1.m4" class="ltx_Math" alttext="(a,b)\in\equiv_{n}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo rspace="0em">∈</mo><msub><mo lspace="0em">≡</mo><mi>n</mi></msub></mrow></math> if <math id="S6.SS5.Thmtheorem6.p1.m5" class="ltx_Math" alttext="a-b\in n\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>. We typically write <math id="S6.SS5.Thmtheorem6.p1.m6" class="ltx_Math" alttext="a\equiv_{n}b" display="inline"><mrow><mi>a</mi><msub><mo>≡</mo><mi>n</mi></msub><mi>b</mi></mrow></math> and say that “<math id="S6.SS5.Thmtheorem6.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> <span class="ltx_text ltx_font_bold">is congruent to <math id="S6.SS5.Thmtheorem6.p1.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> modulo <math id="S6.SS5.Thmtheorem6.p1.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></span>”.</p>
+</div>
+</div>
+<div id="S6.SS5.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">For example, <math id="S6.SS5.p4.m1" class="ltx_Math" alttext="17\equiv_{5}2" display="inline"><mrow><mn>17</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>2</mn></mrow></math> since <math id="S6.SS5.p4.m2" class="ltx_Math" alttext="17-2=15\in 5\mathbb{Z}" display="inline"><mrow><mrow><mn>17</mn><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mn>15</mn><mo>∈</mo><mrow><mn>5</mn><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>. Another way to think of this: <math id="S6.SS5.p4.m3" class="ltx_Math" alttext="17\equiv_{5}2" display="inline"><mrow><mn>17</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>2</mn></mrow></math> because <span class="ltx_text ltx_font_italic">dividing 17 by 5 yields a remainder of 2</span>.</p>
+</div>
+<div id="S6.SS5.p5" class="ltx_para">
+<p class="ltx_p">Note that <math id="S6.SS5.p5.m1" class="ltx_Math" alttext="a-b\in n\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math> if and only if <math id="S6.SS5.p5.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S6.SS5.p5.m3" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>, which implies that <math id="S6.SS5.p5.m4" class="ltx_Math" alttext="a\equiv_{n}b" display="inline"><mrow><mi>a</mi><msub><mo>≡</mo><mi>n</mi></msub><mi>b</mi></mrow></math> if and only if <math id="S6.SS5.p5.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S6.SS5.p5.m6" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>. Use this in the example below.</p>
+</div>
+<div id="S6.SS5.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.7.</h3>
+<div id="S6.SS5.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Find a number <math id="S6.SS5.Thmtheorem7.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> that satisfies the following conditions:</p>
+<ol id="S6.I2" class="ltx_enumerate">
+<li id="S6.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S6.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.ix1.p1.m1" class="ltx_Math" alttext="0\leq n&lt;4" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mn>4</mn></mrow></math>, and</p>
+</div>
+</li>
+<li id="S6.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S6.I2.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S6.I2.ix2.p1.m1" class="ltx_Math" alttext="311\equiv_{4}n" display="inline"><mrow><mn>311</mn><msub><mo>≡</mo><mn>4</mn></msub><mi>n</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S6.SS5.p6" class="ltx_para">
+<p class="ltx_p">Using this tool we can now define <span class="ltx_text ltx_font_bold">addition and multiplication modulo <math id="S6.SS5.p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></span>.</p>
+</div>
+<div id="S6.SS5.Thmtheorem8" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.8.</h3>
+<div id="S6.SS5.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">We define <math id="S6.SS5.Thmtheorem8.p1.m1" class="ltx_Math" alttext="[k]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math> to be the set of all integers that are congruent to <math id="S6.SS5.Thmtheorem8.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> modulo <math id="S6.SS5.Thmtheorem8.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For example, <math id="S6.SS5.Thmtheorem8.p1.m4" class="ltx_Math" alttext="[0]_{n}=\{\dots,-10,-5,0,5,10\dots\}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>10</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>,</mo><mrow><mn>10</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. The set <math id="S6.SS5.Thmtheorem8.p1.m5" class="ltx_Math" alttext="[5]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math> equals the set <math id="S6.SS5.Thmtheorem8.p1.m6" class="ltx_Math" alttext="[0]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem9" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.9.</h3>
+<div id="S6.SS5.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS5.Thmtheorem9.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. We define the sum and product of congruence classes in <math id="S6.SS5.Thmtheorem9.p1.m2" class="ltx_Math" alttext="\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></math> via</p>
+<table id="S6.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex2.m1" class="ltx_Math" alttext="[a]_{n}+[b]_{n}:=[a+b]_{n}\,\text{and}\,[a]_{n}\cdot[b]_{n}:=[a\cdot b]_{n}." display="block"><mrow><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>+</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>:=</mo><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>⁢</mo><mtext>and</mtext><mo lspace="0.170em">⁢</mo><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo rspace="0.055em" stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo rspace="0.222em">⋅</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>:=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS5.p7" class="ltx_para">
+<p class="ltx_p">Let us see how we can use these relations to categorize numbers.</p>
+</div>
+<div id="S6.SS5.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.10.</h3>
+<div id="S6.SS5.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">Calculate the following without adding the four numbers given below. Write your answer as a number <math id="S6.SS5.Thmtheorem10.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> where <math id="S6.SS5.Thmtheorem10.p1.m2" class="ltx_Math" alttext="0\leq n&lt;10" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mn>10</mn></mrow></math> (the number we are taking mod with respect to). (This is customary in modular arithmetic.)</p>
+<table id="S6.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex3.m1" class="ltx_Math" alttext="[2403+791+688+4339]_{10}." display="block"><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mn>2403</mn><mo>+</mo><mn>791</mn><mo>+</mo><mn>688</mn><mo>+</mo><mn>4339</mn></mrow><mo stretchy="false">]</mo></mrow><mn>10</mn></msub><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">What is this number you calculated in terms of the sum of these four numbers?</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S6.SS5.Thmtheorem11" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.11.</h3>
+<div id="S6.SS5.Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p">Find the remainder when the difference between 60002 and 601 is divided by 6. Use modular arithmetic - do not actually subtract and divide!</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S6.SS5.p8" class="ltx_para">
+<p class="ltx_p">We can also compute powers of numbers quickly using modular arithmetic using the following corollary:</p>
+</div>
+<div id="S6.SS5.Thmtheorem12" class="ltx_theorem ltx_theorem_corollary">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Corollary </span>6.5.12.</h3>
+<div id="S6.SS5.Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS5.Thmtheorem12.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. If <math id="S6.SS5.Thmtheorem12.p1.m2" class="ltx_Math" alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> and <math id="S6.SS5.Thmtheorem12.p1.m3" class="ltx_Math" alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, then <math id="S6.SS5.Thmtheorem12.p1.m4" class="ltx_Math" alttext="([a]_{n})^{k}=[a^{k}]_{n}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><msup><mi>a</mi><mi>k</mi></msup><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem13" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.13.</h3>
+<div id="S6.SS5.Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p">You are given the following:</p>
+<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex4.m1" class="ltx_Math" alttext="\displaystyle 7^{1}" display="inline"><msup><mn>7</mn><mn>1</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex4.m2" class="ltx_Math" alttext="\displaystyle=7" display="inline"><mrow><mi></mi><mo>=</mo><mn>7</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex5.m1" class="ltx_Math" alttext="\displaystyle 7^{2}" display="inline"><msup><mn>7</mn><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex5.m2" class="ltx_Math" alttext="\displaystyle=49" display="inline"><mrow><mi></mi><mo>=</mo><mn>49</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex6.m1" class="ltx_Math" alttext="\displaystyle 7^{3}" display="inline"><msup><mn>7</mn><mn>3</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex6.m2" class="ltx_Math" alttext="\displaystyle=343" display="inline"><mrow><mi></mi><mo>=</mo><mn>343</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex7.m1" class="ltx_Math" alttext="\displaystyle 7^{4}" display="inline"><msup><mn>7</mn><mn>4</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex7.m2" class="ltx_Math" alttext="\displaystyle=2401." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>2401</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Compute <math id="S6.SS5.Thmtheorem13.p1.m1" class="ltx_Math" alttext="[7^{1942}]_{100}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msup><mn>7</mn><mn>1942</mn></msup><mo stretchy="false">]</mo></mrow><mn>100</mn></msub></math>. (Hint: do you see a pattern in the numbers above? How about if you compute what they are equivalent to modulo 100?)</p>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S6.SS5.Thmtheorem14" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.14.</h3>
+<div id="S6.SS5.Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p">Prove that, for all <math id="S6.SS5.Thmtheorem14.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="S6.SS5.Thmtheorem14.p1.m2" class="ltx_Math" alttext="[7^{4n}]_{100}=[1]_{100}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><msup><mn>7</mn><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo stretchy="false">]</mo></mrow><mn>100</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>100</mn></msub></mrow></math>.</p>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
