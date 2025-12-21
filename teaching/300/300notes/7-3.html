@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>7.3 Partitions</title>
+<!--Generated on Sun Dec 21 06:11:17 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S7.SS3" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.3 </span><span class="ltx_text" style="color:#800000;">Partitions</span>
+</h1>
+
+<div id="S7.SS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S7.I1" class="ltx_itemize">
+<li id="S7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Discover a strong connection between equivalence relations and partitions</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S7.SS3.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.1 </span><span class="ltx_text" style="color:#800000;">A New But Familiar Construction</span>
+</h2>
+
+<div id="S7.SS3.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.3.1.</h3>
+<div id="S7.SS3.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">partition</span> of <math id="S7.SS3.Thmtheorem1.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is a (finite or infinite) collection of subsets. These subsets must satisfy the following conditions:</p>
+<ol id="S7.I2" class="ltx_enumerate">
+<li id="S7.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S7.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I2.ix1.p1.m1" class="ltx_Math" alttext="X\in\Omega" display="inline"><mrow><mi>X</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>, <math id="S7.I2.ix1.p1.m2" class="ltx_Math" alttext="X\neq\varnothing" display="inline"><mrow><mi>X</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> (i.e., each subset is nonempty).</p>
+</div>
+</li>
+<li id="S7.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S7.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I2.ix2.p1.m1" class="ltx_Math" alttext="X\neq Y\in\Omega" display="inline"><mrow><mi>X</mi><mo>≠</mo><mi>Y</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>, <math id="S7.I2.ix2.p1.m2" class="ltx_Math" alttext="X\cap Y=\varnothing" display="inline"><mrow><mrow><mi>X</mi><mo>∩</mo><mi>Y</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> (i.e., the collection of sets is <span class="ltx_text ltx_font_bold">pairwise disjoint</span>, meaning that no two sets share any elements).</p>
+</div>
+</li>
+<li id="S7.I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iii)</span> 
+<div id="S7.I2.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S7.I2.ix3.p1.m1" class="ltx_Math" alttext="\bigcup_{X\in\Omega}X=\mathbb{Z}" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></msub><mi>X</mi></mrow><mo>=</mo><mi>ℤ</mi></mrow></math> (i.e., every element of <math id="S7.I2.ix3.p1.m2" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is contained within at least one subset).</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S7.SS3.Thmtheorem1.p2" class="ltx_para">
+<p class="ltx_p">Prove or disprove the following statements:</p>
+<ol id="S7.I3" class="ltx_enumerate">
+<li id="S7.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I3.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S7.I3.ix1.p1.m1" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math> be the set of all odd integers and let <math id="S7.I3.ix1.p1.m2" class="ltx_Math" alttext="A_{2}" display="inline"><msub><mi>A</mi><mn>2</mn></msub></math> be the set of all even integers. Then <math id="S7.I3.ix1.p1.m3" class="ltx_Math" alttext="\{A_{1},A_{2}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></math> is a partition of <math id="S7.I3.ix1.p1.m4" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S7.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I3.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S7.I3.ix2.p1.m1" class="ltx_Math" alttext="A_{n}:=\{m\in\mathbb{Z}\mid m\leq n\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>m</mi><mo>≤</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="S7.I3.ix2.p1.m2" class="ltx_Math" alttext="\{A_{n}\}_{n\in\mathbb{Z}}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></msub></math> is a partition of <math id="S7.I3.ix2.p1.m3" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S7.SS3.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Let us revisit the diagram from the first Example of Section 7.2. Not all of our diagrams might look the same, but perhaps we might have a diagram like this:</p>
+</div>
+<figure id="S7.SS3.SSS1.fig1" class="ltx_figure"><img src="images/equiv.png" id="S7.SS3.SSS1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="399" height="161" alt="A diagram of equivalence classes partitioning a set">
+</figure>
+<div id="S7.SS3.SSS1.p2" class="ltx_para">
+<p class="ltx_p">In this diagram we noted that equivalence relations break up a set into regions. In the last example of Section 7.2 we saw that these regions satisfy a couple interesting properties. Do you see any connections between these properties and the definition of a partition?</p>
+</div>
+<div id="S7.SS3.Thmtheorem2" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.3.2.</h3>
+<div id="S7.SS3.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Draw a diagram of a partition of <math id="S7.SS3.Thmtheorem2.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. You may choose a partition from the previous example, or you may draw a different diagram. Justify that your diagram satisfies all three conditions of a partition.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+<section id="S7.SS3.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.3.2 </span><span class="ltx_text" style="color:#800000;">Connecting Partitions and Equivalence Relations</span>
+</h2>
+
+<div id="S7.SS3.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Our goal in this section is to prove the statement you might be noticing from your diagram: <span class="ltx_text ltx_font_italic">equivalence relations and partitions are not so different from one another</span>. Before we start proving this statement, let us investigate partitions a little further.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S7.SS3.SSS2.p2" class="ltx_para">
+<p class="ltx_p">We begin with a formal definition, which should look very familiar to the definition we gave on the first page:</p>
+</div>
+<div id="S7.SS3.Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>7.3.3.</h3>
+<div id="S7.SS3.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS3.Thmtheorem3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set. A <span class="ltx_text ltx_font_bold">partition</span> <math id="S7.SS3.Thmtheorem3.p1.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> of <math id="S7.SS3.Thmtheorem3.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a (finite or infinite) collection of subsets. These subsets must satisfy the following conditions:</p>
+<ol id="S7.I4" class="ltx_enumerate">
+<li id="S7.I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S7.I4.ix1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S7.I4.ix1.p1.m1" class="ltx_Math" alttext="X\in\Omega" display="inline"><mrow><mi>X</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>, <math id="S7.I4.ix1.p1.m2" class="ltx_Math" alttext="X\neq\varnothing" display="inline"><mrow><mi>X</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> (i.e., each subset is nonempty).</p>
+</div>
+</li>
+<li id="S7.I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S7.I4.ix2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S7.I4.ix2.p1.m1" class="ltx_Math" alttext="X\neq Y\in\Omega" display="inline"><mrow><mi>X</mi><mo>≠</mo><mi>Y</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>, <math id="S7.I4.ix2.p1.m2" class="ltx_Math" alttext="X\cap Y=\varnothing" display="inline"><mrow><mrow><mi>X</mi><mo>∩</mo><mi>Y</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> (i.e., the collection of sets is <span class="ltx_text ltx_font_bold">pairwise disjoint</span>, meaning that no two sets share any elements).</p>
+</div>
+</li>
+<li id="S7.I4.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iii)</span> 
+<div id="S7.I4.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S7.I4.ix3.p1.m1" class="ltx_Math" alttext="\bigcup_{X\in\Omega}X=A" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>X</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></msub><mi>X</mi></mrow><mo>=</mo><mi>A</mi></mrow></math> (i.e., every element of <math id="S7.I4.ix3.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is contained within at least one subset).</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">We will call the subsets of <math id="S7.SS3.Thmtheorem3.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> <span class="ltx_text ltx_font_bold">blocks</span> of the partition.</p>
+</div>
+</div>
+<div id="S7.SS3.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.3.4.</h3>
+<div id="S7.SS3.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Find a partition of <math id="S7.SS3.Thmtheorem4.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> with exactly four blocks.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S7.SS3.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.3.5.</h3>
+<div id="S7.SS3.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Find a partition of <math id="S7.SS3.Thmtheorem5.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> with infinitely many blocks.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S7.SS3.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.3.6.</h3>
+<div id="S7.SS3.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Consider the relation <math id="S7.SS3.Thmtheorem6.p1.m1" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> on <math id="S7.SS3.Thmtheorem6.p1.m2" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> if <math id="S7.SS3.Thmtheorem6.p1.m3" class="ltx_Math" alttext="4|(x-y)" display="inline"><mrow><mn>4</mn><mo fence="false">|</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. It is given that <math id="S7.SS3.Thmtheorem6.p1.m4" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation. Let <math id="S7.SS3.Thmtheorem6.p1.m5" class="ltx_Math" alttext="[n]_{4}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mn>4</mn></msub></math> be the equivalence class of <math id="S7.SS3.Thmtheorem6.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> under this equivalence relation. Show that the set of equivalence classes <math id="S7.SS3.Thmtheorem6.p1.m7" class="ltx_Math" alttext="\{[0]_{4},[1]_{4},[2]_{4},[3]_{4}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mn>4</mn></msub><mo>,</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>4</mn></msub><mo>,</mo><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>4</mn></msub><mo>,</mo><msub><mrow><mo stretchy="false">[</mo><mn>3</mn><mo stretchy="false">]</mo></mrow><mn>4</mn></msub><mo stretchy="false">}</mo></mrow></math> form a partition of <math id="S7.SS3.Thmtheorem6.p1.m8" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S7.SS3.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.3.7.</h3>
+<div id="S7.SS3.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Take your partition of <math id="S7.SS3.Thmtheorem7.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> with infinitely many blocks. Define a relation <math id="S7.SS3.Thmtheorem7.p1.m2" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> on <math id="S7.SS3.Thmtheorem7.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> such that <math id="S7.SS3.Thmtheorem7.p1.m4" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> if <math id="S7.SS3.Thmtheorem7.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S7.SS3.Thmtheorem7.p1.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are both in the same block of the partition. Show that <math id="S7.SS3.Thmtheorem7.p1.m7" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S7.SS3.SSS2.p3" class="ltx_para">
+<p class="ltx_p">In our previous two examples we saw a huge connection between our last two major concepts: “partition” and “equivalence relation”. We are now ready to prove a major connection between these two concepts:</p>
+</div>
+<div id="S7.SS3.Thmtheorem8" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>7.3.8.</h3>
+<div id="S7.SS3.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS3.Thmtheorem8.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set.</p>
+<ol id="S7.I5" class="ltx_enumerate">
+<li id="S7.I5.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I5.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If <math id="S7.I5.ix1.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S7.I5.ix1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then the set of equivalence classes <math id="S7.I5.ix1.p1.m3" class="ltx_math_unparsed" alttext="A/\sim" display="inline"><mrow><mi>A</mi><mo rspace="0em">/</mo><mo lspace="0em">∼</mo></mrow></math> form a partition on <math id="S7.I5.ix1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S7.I5.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I5.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If <math id="S7.I5.ix2.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> is a partition of <math id="S7.I5.ix2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then the relation <math id="S7.I5.ix2.p1.m3" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> defined by <math id="S7.I5.ix2.p1.m4" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> if there exists some <math id="S7.I5.ix2.p1.m5" class="ltx_Math" alttext="X\in\Omega" display="inline"><mrow><mi>X</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math> such that <math id="S7.I5.ix2.p1.m6" class="ltx_Math" alttext="x,y\in X" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>X</mi></mrow></math> is an equivalence relation.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
