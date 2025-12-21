@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.2 Power Sets and Cartesian Products</title>
+<!--Generated on Sun Dec 21 04:03:52 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S4.SS2" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.2 </span><span class="ltx_text" style="color:#800000;">Power Sets and Cartesian Products</span>
+</h1>
+
+<div id="S4.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S4.I1" class="ltx_itemize">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Discover how we can build larger sets from other sets using Cartesian products and power sets</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S4.SS2.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.1 </span><span class="ltx_text" style="color:#800000;">Cartesian Products</span>
+</h2>
+
+<div id="S4.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.2.1.</h3>
+<div id="S4.SS2.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We often see the set <math id="S4.SS2.Thmtheorem1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> as the set of all <math id="S4.SS2.Thmtheorem1.p1.m2" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math>-coordinates, also known as the <math id="S4.SS2.Thmtheorem1.p1.m3" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane. In what sense is <math id="S4.SS2.Thmtheorem1.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> the “square” of the real numbers? Where does the number “2” come into play when defining elements of <math id="S4.SS2.Thmtheorem1.p1.m5" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>?</p>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.Thmtheorem1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Is it possible to define <math id="S4.SS2.Thmtheorem1.p2.m1" class="ltx_Math" alttext="[0,1]^{2}" display="inline"><msup><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>2</mn></msup></math>? If so, how would you define it? Draw a picture of this region.</p>
+</div>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Cartesian products are especially useful when dealing with <span class="ltx_text ltx_font_italic">functions where several variables are involved</span>. Before this class is over we will see several other uses for them as well… we will define <span class="ltx_text ltx_font_italic">relations</span> and even <span class="ltx_text ltx_font_italic">functions</span> themselves as subsets of Cartesian products!</p>
+</div>
+<div id="S4.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.2.2.</h3>
+<div id="S4.SS2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS2.Thmtheorem2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be sets. The <span class="ltx_text ltx_font_bold">Cartesian product</span> <math id="S4.SS2.Thmtheorem2.p1.m3" class="ltx_Math" alttext="\times" display="inline"><mo>×</mo></math> (LaTeX <math id="S4.SS2.Thmtheorem2.p1.m4" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>times) of <math id="S4.SS2.Thmtheorem2.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS2.Thmtheorem2.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is the set</p>
+<table id="S4.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex1.m1" class="ltx_Math" alttext="A\times B:=\{(x,y)\mid x\in A\text{ and }y\in B\}," display="block"><mrow><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="S4.SS2.Thmtheorem2.p1.m7" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> denotes the <span class="ltx_text ltx_font_bold">ordered pair</span> containing <math id="S4.SS2.Thmtheorem2.p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S4.SS2.Thmtheorem2.p1.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in that order.</p>
+</div>
+</div>
+<div id="S4.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.2.3.</h3>
+<div id="S4.SS2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">List all elements in the set <math id="S4.SS2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="\{1,2\}\times\{1,\pi,\{0\}\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo rspace="0.055em" stretchy="false">}</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi>π</mi><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS2.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">It’s possible to repeat this process of taking Cartesian products over and over to get larger and larger sets. For example, if we are considering a rectangular prism of length 3, width 2, and height 1, we might describe this as the following subset in <math id="S4.SS2.SSS1.p2.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>: <math id="S4.SS2.SSS1.p2.m2" class="ltx_Math" alttext="[0,3]\times[0,2]\times[0,1]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo rspace="0.055em" stretchy="false">]</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo rspace="0.055em" stretchy="false">]</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S4.SS2.SSS1.p3" class="ltx_para">
+<p class="ltx_p">To be specific about this definition and extend it to work for any finite number of Cartesian products, we define:</p>
+</div>
+<div id="S4.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.2.4.</h3>
+<div id="S4.SS2.Thmtheorem4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For each <math id="S4.SS2.Thmtheorem4.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, we define an <math id="S4.SS2.Thmtheorem4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math><span class="ltx_text ltx_font_bold">-tuple</span> to be an ordered list of <math id="S4.SS2.Thmtheorem4.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements of the form <math id="S4.SS2.Thmtheorem4.p1.m4" class="ltx_Math" alttext="(a_{1},a_{2},\dots,a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>. We refer to <math id="S4.SS2.Thmtheorem4.p1.m5" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> as the <math id="S4.SS2.Thmtheorem4.p1.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th <span class="ltx_text ltx_font_bold">component</span> (or <span class="ltx_text ltx_font_bold">coordinate</span>) of <math id="S4.SS2.Thmtheorem4.p1.m7" class="ltx_Math" alttext="(a_{1},a_{2},\dots,a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S4.SS2.Thmtheorem4.p2" class="ltx_para">
+<p class="ltx_p">Given <math id="S4.SS2.Thmtheorem4.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> sets <math id="S4.SS2.Thmtheorem4.p2.m2" class="ltx_Math" alttext="A_{1},A_{2},\dots,A_{n}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math>, we define the <span class="ltx_text ltx_font_bold">Cartesian product</span> of these <math id="S4.SS2.Thmtheorem4.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> sets to be the set of all <math id="S4.SS2.Thmtheorem4.p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuples where the <math id="S4.SS2.Thmtheorem4.p2.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th coordinates <math id="S4.SS2.Thmtheorem4.p2.m6" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> come from the set <math id="S4.SS2.Thmtheorem4.p2.m7" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>. That is,</p>
+<table id="S4.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex2.m1" class="ltx_Math" alttext="\prod_{i=1}^{n}A_{i}:=A_{1}\times\cdots\times A_{n}:=\{(a_{1},\dots,a_{n})\mid
+a%
+_{j}\in A_{j}\text{ for all }1\leq j\leq n\}." display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>i</mi></msub></mrow><mo>:=</mo><mrow><msub><mi>A</mi><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">×</mo><mi mathvariant="normal">⋯</mi><mo lspace="0.222em" rspace="0.222em">×</mo><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>∈</mo><mrow><msub><mi>A</mi><mi>j</mi></msub><mo>⁢</mo><mtext> for all </mtext><mo>⁢</mo><mn>1</mn></mrow><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">(The Cartesian Product is written as <math id="S4.SS2.Thmtheorem4.p2.m8" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>prod in LaTeX.) The special case of the set</p>
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" alttext="\underbrace{A\times\cdots\times A}_{n\text{ factors}}" display="block"><munder><munder accentunder="true"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi mathvariant="normal">⋯</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>A</mi></mrow><mo stretchy="true">⏟</mo></munder><mrow><mi>n</mi><mo>⁢</mo><mtext> factors</mtext></mrow></munder></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is referred to as <math id="S4.SS2.Thmtheorem4.p2.m9" class="ltx_Math" alttext="A^{n}" display="inline"><msup><mi>A</mi><mi>n</mi></msup></math>.</p>
+</div>
+</div>
+<div id="S4.SS2.SSS1.p4" class="ltx_para">
+<p class="ltx_p">You will see us start to do fewer and fewer proofs using these concepts in class; indeed, you will have to do more of the proofs utilizing these concepts on your own now. This is important to strengthen your ability to verify mathematical statements yourself. It is a scary step to take… it scared me too when I was at this point in the class. Here is a quote from Leon Henkin, an American logician at UC Berkeley, that addresses why we are making this step:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">One of the big misapprehensions about mathematics that we perpetrate in our classrooms is that the teacher always seems to know the answer to any problem that is discussed. This gives students the idea that there is a book somewhere with all the right answers to all of the interesting questions, and that teachers know those answers. And if one could get hold of the book, one would have everything settled. That’s so unlike the true nature of mathematics.</p>
+</blockquote>
+</div>
+<div id="S4.SS2.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.2.5.</h3>
+<div id="S4.SS2.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Interpret this quote in your own words.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS2.Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>4.2.6.</h3>
+<div id="S4.SS2.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS2.Thmtheorem6.p1.m1" class="ltx_Math" alttext="A,B,C," display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow><mo>,</mo></mrow></math> and <math id="S4.SS2.Thmtheorem6.p1.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> be sets. If <math id="S4.SS2.Thmtheorem6.p1.m3" class="ltx_Math" alttext="A\subseteq C" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>C</mi></mrow></math> and <math id="S4.SS2.Thmtheorem6.p1.m4" class="ltx_Math" alttext="B\subseteq D" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>D</mi></mrow></math>, then <math id="S4.SS2.Thmtheorem6.p1.m5" class="ltx_Math" alttext="A\times B\subseteq C\times D" display="inline"><mrow><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo>⊆</mo><mrow><mi>C</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>D</mi></mrow></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.2.7.</h3>
+<div id="S4.SS2.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS2.Thmtheorem7.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS2.Thmtheorem7.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be sets, each within some universe of discourse. Conjecture a way to rewrite <math id="S4.SS2.Thmtheorem7.p1.m3" class="ltx_Math" alttext="(A\times B)^{C}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mi>C</mi></msup></math> that meaningfully involves <math id="S4.SS2.Thmtheorem7.p1.m4" class="ltx_Math" alttext="A^{C}" display="inline"><msup><mi>A</mi><mi>C</mi></msup></math> and <math id="S4.SS2.Thmtheorem7.p1.m5" class="ltx_Math" alttext="B^{C}" display="inline"><msup><mi>B</mi><mi>C</mi></msup></math>. For homework, prove your conjecture.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S4.SS2.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.2 </span><span class="ltx_text" style="color:#800000;">Power Sets</span>
+</h2>
+
+<div id="S4.SS2.Thmtheorem8" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.2.8.</h3>
+<div id="S4.SS2.Thmtheorem8.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The letters of the word “MAROON” are put into a hat, and a student chooses a letter at random. Write out the set of all letters they could choose this way.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.Thmtheorem8.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">What is the set of all vowels the student could choose?</p>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.Thmtheorem8.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">What about the set of all letters in the second half of the alphabet that the student could choose?</p>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.Thmtheorem8.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">This time, the student can choose any number of letters in the hat, including all of them or none of them. How many possible combinations of letters can the student have? How do you know?</p>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS2.Thmtheorem8.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">What if there are <math id="S4.SS2.Thmtheorem8.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> distinct letters in the hat that the student could choose from? How many possible combinations of letters can the student have?</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS2.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">In the world of probability, it is necessary to calculate how many possible subsets satisfy a certain outcome. If the example from the last page was a game where choosing a vowel could win or lose you some money, you might be quite interested to know how likely the outcome would be of winning!</p>
+</div>
+<div id="S4.SS2.SSS2.p2" class="ltx_para">
+<p class="ltx_p">All of these subsets live in the <span class="ltx_text ltx_font_bold">power set</span> of a set <math id="S4.SS2.SSS2.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. For the definition below, think of the set <math id="S4.SS2.SSS2.p2.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> as the set <math id="S4.SS2.SSS2.p2.m3" class="ltx_Math" alttext="\{M,A,R,O,N\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>M</mi><mo>,</mo><mi>A</mi><mo>,</mo><mi>R</mi><mo>,</mo><mi>O</mi><mo>,</mo><mi>N</mi><mo stretchy="false">}</mo></mrow></math> from the previous example; the set <math id="S4.SS2.SSS2.p2.m4" class="ltx_Math" alttext="\mathcal{P}(S)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the set of all subsets of this set, which we found in the second-to-last example had 32 elements.</p>
+</div>
+<div id="S4.SS2.Thmtheorem9" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.2.9.</h3>
+<div id="S4.SS2.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S4.SS2.Thmtheorem9.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a set, then the <span class="ltx_text ltx_font_bold">power set</span> of <math id="S4.SS2.Thmtheorem9.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is the set of subsets of <math id="S4.SS2.Thmtheorem9.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. The power set is denoted <math id="S4.SS2.Thmtheorem9.p1.m4" class="ltx_Math" alttext="\mathcal{P}(S)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> (LaTeX <math id="S4.SS2.Thmtheorem9.p1.m5" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>mathcal<math id="S4.SS2.Thmtheorem9.p1.m6" class="ltx_Math" alttext="\{" display="inline"><mo stretchy="false">{</mo></math>P<math id="S4.SS2.Thmtheorem9.p1.m7" class="ltx_Math" alttext="\}" display="inline"><mo stretchy="false">}</mo></math>).</p>
+</div>
+</div>
+<div id="S4.SS2.Thmtheorem10" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>4.2.10.</h3>
+<div id="S4.SS2.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS2.Thmtheorem10.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a set with <math id="S4.SS2.Thmtheorem10.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements. Using induction, prove that <math id="S4.SS2.Thmtheorem10.p1.m3" class="ltx_Math" alttext="\mathcal{P}(S)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> has <math id="S4.SS2.Thmtheorem10.p1.m4" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> elements.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
