@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>7.2 Equivalence Relations</title>
+<!--Generated on Sun Dec 21 06:07:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S7.SS2" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.2 </span><span class="ltx_text" style="color:#800000;">Equivalence Relations</span>
+</h1>
+
+<div id="S7.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S7.I1" class="ltx_itemize">
+<li id="S7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Construct a type of relation that partitions elements of a set into blocks</p>
+</div>
+</li>
+<li id="S7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Utilize these categories to renew our understanding of modular arithmetic</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S7.SS2.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.1 </span><span class="ltx_text" style="color:#800000;">A Stronger Relation</span>
+</h2>
+
+<div id="S7.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.2.1.</h3>
+<div id="S7.SS2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Consider the relation on <math id="S7.SS2.Thmtheorem1.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> given by <math id="S7.SS2.Thmtheorem1.p1.m2" class="ltx_Math" alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math> if <math id="S7.SS2.Thmtheorem1.p1.m3" class="ltx_Math" alttext="5" display="inline"><mn>5</mn></math> divides <math id="S7.SS2.Thmtheorem1.p1.m4" class="ltx_Math" alttext="b-a" display="inline"><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow></math>. Let <math id="S7.SS2.Thmtheorem1.p1.m5" class="ltx_Math" alttext="[a]:=\{x\in\mathbb{Z}:a\sim x\}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>a</mi><mo>∼</mo><mi>x</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Describe all unique sets <math id="S7.SS2.Thmtheorem1.p1.m6" class="ltx_Math" alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> (like <math id="S7.SS2.Thmtheorem1.p1.m7" class="ltx_Math" alttext="[0]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></math>, <math id="S7.SS2.Thmtheorem1.p1.m8" class="ltx_Math" alttext="[1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>,…). Draw a diagram showing all of these sets. Do these sets have any intersections, or are they all separate? Are there any integers that <span class="ltx_text ltx_font_italic">aren’t</span> in a set <math id="S7.SS2.Thmtheorem1.p1.m9" class="ltx_Math" alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> or are in a set by themselves?</p>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S7.SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In the next few sections we describe another special type of relation where the following diagrams are possible. Not all relations have this well-partitioned picture; they have to satisfy the conditions of an <span class="ltx_text ltx_font_bold">equivalence relation</span>.</p>
+</div>
+<div id="S7.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>7.2.2.</h3>
+<div id="S7.SS2.Thmtheorem2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">An <span class="ltx_text ltx_font_bold">equivalence relation</span> on <math id="S7.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a relation (that is, a subset <math id="S7.SS2.Thmtheorem2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> of <math id="S7.SS2.Thmtheorem2.p1.m3" class="ltx_Math" alttext="X\times X" display="inline"><mrow><mi>X</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>X</mi></mrow></math>, where <math id="S7.SS2.Thmtheorem2.p1.m4" class="ltx_Math" alttext="(x,y)\in S\iff x\sim y" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">⇔</mo><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></mrow></math>) with the following properties:</p>
+</div>
+<div id="S7.SS2.Thmtheorem2.p2" class="ltx_para">
+<ol id="S7.I2" class="ltx_enumerate">
+<li id="S7.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S7.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">(Reflexivity) <math id="S7.I2.i1.p1.m1" class="ltx_Math" alttext="x\sim x" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>x</mi></mrow></math> for each <math id="S7.I2.i1.p1.m2" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S7.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">(Symmetry) Whenever <math id="S7.I2.i2.p1.m1" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> for <math id="S7.I2.i2.p1.m2" class="ltx_Math" alttext="x,y\in X" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>X</mi></mrow></math>, then <math id="S7.I2.i2.p1.m3" class="ltx_Math" alttext="y\sim x" display="inline"><mrow><mi>y</mi><mo>∼</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S7.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S7.I2.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">(Transitivity) Whenever <math id="S7.I2.i3.p1.m1" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> and <math id="S7.I2.i3.p1.m2" class="ltx_Math" alttext="y\sim z" display="inline"><mrow><mi>y</mi><mo>∼</mo><mi>z</mi></mrow></math> for <math id="S7.I2.i3.p1.m3" class="ltx_Math" alttext="x,y,z\in X" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>X</mi></mrow></math>, then <math id="S7.I2.i3.p1.m4" class="ltx_Math" alttext="x\sim z" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>z</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S7.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.2.3.</h3>
+<div id="S7.SS2.Thmtheorem3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S7.SS2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="\mathbb{Z}^{*}:=\mathbb{Z}\setminus\{0\}" display="inline"><mrow><msup><mi>ℤ</mi><mo>∗</mo></msup><mo>:=</mo><mrow><mi>ℤ</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. Define the relation <math id="S7.SS2.Thmtheorem3.p1.m2" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S7.SS2.Thmtheorem3.p1.m3" class="ltx_Math" alttext="\mathbb{Z}\times\mathbb{Z}^{*}" display="inline"><mrow><mi>ℤ</mi><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math> by, for all <math id="S7.SS2.Thmtheorem3.p1.m4" class="ltx_Math" alttext="a,c\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> and all <math id="S7.SS2.Thmtheorem3.p1.m5" class="ltx_Math" alttext="b,d\in\mathbb{Z}^{*}" display="inline"><mrow><mrow><mi>b</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><msup><mi>ℤ</mi><mo>∗</mo></msup></mrow></math>,</p>
+<table id="S7.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex1.m1" class="ltx_Math" alttext="(a,b)\sim(c,d)\quad\text{iff}\quad ad=bc." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∼</mo><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext>iff</mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Show that <math id="S7.SS2.Thmtheorem3.p1.m6" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S7.SS2.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Given our understanding that relations of this form are similar to how we say two fractions represent the same quantity, this helps us understand why these are called <span class="ltx_text ltx_font_italic">equivalence</span> relations: any two related elements can be considered equivalent.</p>
+</div>
+<div id="S7.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>7.2.4.</h3>
+<div id="S7.SS2.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Consider the relation <math id="S7.SS2.Thmtheorem4.p1.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math> on <math id="S7.SS2.Thmtheorem4.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Show that <math id="S7.SS2.Thmtheorem4.p1.m3" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math> is <span class="ltx_text ltx_font_italic">not</span> an equivalence relation. Then explain why any two related elements cannot be considered equivalent.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S7.SS2.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">7.2.2 </span><span class="ltx_text" style="color:#800000;">Equivalence Classes</span>
+</h2>
+
+<div id="S7.SS2.SSS2.p1" class="ltx_para">
+<p class="ltx_p">We now formalize the notion of what it means for two elements in an equivalence relation to be truly “equivalent”.</p>
+</div>
+<div id="S7.SS2.Thmtheorem5" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>7.2.5.</h3>
+<div id="S7.SS2.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.Thmtheorem5.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on a nonempty set <math id="S7.SS2.Thmtheorem5.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and let <math id="S7.SS2.Thmtheorem5.p1.m3" class="ltx_Math" alttext="a\in X" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>X</mi></mrow></math>. The <span class="ltx_text ltx_font_bold">equivalence class of <math id="S7.SS2.Thmtheorem5.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math></span> is the set</p>
+<table id="S7.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex2.m1" class="ltx_Math" alttext="[a]:=\{x\in X\mid x\sim a\}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∼</mo><mi>a</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The set of all equivalence class of <math id="S7.SS2.Thmtheorem5.p1.m5" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is denoted by</p>
+<table id="S7.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex3.m1" class="ltx_math_unparsed" alttext="X/\sim:=\{[a]\mid a\in X\}." display="block"><mrow><mi>X</mi><mo rspace="0em">/</mo><mo lspace="0em" rspace="0em">∼</mo><mo lspace="0em">:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo lspace="0em" rspace="0.167em">∣</mo><mi>a</mi><mo>∈</mo><mi>X</mi><mo stretchy="false">}</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S7.SS2.SSS2.p2" class="ltx_para">
+<p class="ltx_p">For example, in Example 7.1.3, <math id="S7.SS2.SSS2.p2.m1" class="ltx_Math" alttext="[(1,2)]=\{\dots,(-3,-6),(-2,-4),(-1,-2),(1,2),(2,4),(3,6)\dots\}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>6</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. This equivalence class is typically referred to as <math id="S7.SS2.SSS2.p2.m2" class="ltx_Math" alttext="\frac{1}{2}" display="inline"><mfrac><mn>1</mn><mn>2</mn></mfrac></math> - even without the brackets, it is known to be equivalent to <math id="S7.SS2.SSS2.p2.m3" class="ltx_Math" alttext="\frac{2}{4}" display="inline"><mfrac><mn>2</mn><mn>4</mn></mfrac></math>, <math id="S7.SS2.SSS2.p2.m4" class="ltx_Math" alttext="\frac{-4}{-8}" display="inline"><mfrac><mrow><mo>−</mo><mn>4</mn></mrow><mrow><mo>−</mo><mn>8</mn></mrow></mfrac></math>, and all other elements in its equivalence class.</p>
+</div>
+<div id="S7.SS2.Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>7.2.6.</h3>
+<div id="S7.SS2.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.SS2.Thmtheorem6.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on a set <math id="S7.SS2.Thmtheorem6.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and let <math id="S7.SS2.Thmtheorem6.p1.m3" class="ltx_Math" alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>. Then <math id="S7.SS2.Thmtheorem6.p1.m4" class="ltx_Math" alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> iff <math id="S7.SS2.Thmtheorem6.p1.m5" class="ltx_Math" alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S7.SS2.SSS2.p3" class="ltx_para">
+<p class="ltx_p">The following theorem states that the equivalence classes of <math id="S7.SS2.SSS2.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are distinct from one another (part (b)) and that every element of <math id="S7.SS2.SSS2.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is in its own equivalence class (part (a)).</p>
+</div>
+<div id="S7.SS2.Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>7.2.7.</h3>
+<div id="S7.SS2.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S7.SS2.Thmtheorem7.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on a set <math id="S7.SS2.Thmtheorem7.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then</p>
+<ol id="S7.I3" class="ltx_enumerate">
+<li id="S7.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S7.I3.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S7.I3.ix1.p1.m1" class="ltx_Math" alttext="\bigcup_{a\in A}[a]=A" display="inline"><mrow><mrow><msub><mo>⋃</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></msub><mrow><mo lspace="0em" stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi>A</mi></mrow></math>.</p>
+</div>
+</li>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<li id="S7.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S7.I3.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">for all <math id="S7.I3.ix2.p1.m1" class="ltx_Math" alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, either <math id="S7.I3.ix2.p1.m2" class="ltx_Math" alttext="[a]=[b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> or <math id="S7.I3.ix2.p1.m3" class="ltx_Math" alttext="[a]\cap[b]=\varnothing" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
