@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.2 Injective and Surjective Functions</title>
+<!--Generated on Sun Dec 21 04:53:01 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S5.SS2" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2 </span><span class="ltx_text" style="color:#800000;">Injective and Surjective Functions</span>
+</h1>
+
+<div id="S5.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S5.I1" class="ltx_itemize">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Describe relationships between domains and codomains of functions</p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Relate the definitions of injectivity and surjectivity to whether a function has an inverse</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S5.SS2.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.1 </span><span class="ltx_text" style="color:#800000;">Motivation: Inverse Functions</span>
+</h2>
+
+<div id="S5.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.1.</h3>
+<div id="S5.SS2.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We investigate: <span class="ltx_text ltx_font_bold">what functions have inverses?</span></p>
+</div>
+<div id="S5.SS2.Thmtheorem1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">For each of the following functions, do the following:</p>
+<ul id="S5.I2" class="ltx_itemize">
+<li id="S5.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Graph the function.</p>
+</div>
+</li>
+<li id="S5.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Reflect the graph of the function across the line <math id="S5.I2.i2.p1.m1" class="ltx_Math" alttext="y=x" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I2.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Give a formula for the reflected graph of the function.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.SS2.Thmtheorem1.p3" class="ltx_para">
+<ol id="S5.I3" class="ltx_enumerate">
+<li id="S5.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I3.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S5.I3.ix1.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="S5.I3.ix1.p1.m2" class="ltx_Math" alttext="f(x)=e^{x}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S5.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I3.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S5.I3.ix2.p1.m1" class="ltx_Math" alttext="g:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="S5.I3.ix2.p1.m2" class="ltx_Math" alttext="g(x)=\begin{cases}x&amp;x&lt;0\\
+x+1&amp;x\geq 0\end{cases}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi>x</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S5.I3.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I3.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S5.I3.ix3.p1.m1" class="ltx_Math" alttext="h:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>h</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="S5.I3.ix3.p1.m2" class="ltx_Math" alttext="h(x)=x^{2}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS2.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">In grade school we are typically given two ways to express the inverse of a function:</p>
+<ol id="S5.I4" class="ltx_enumerate">
+<li id="S5.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S5.I4.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If a function rule is given by <math id="S5.I4.i1.p1.m1" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>, then the rule of the inverse function is given by <math id="S5.I4.i1.p1.m2" class="ltx_Math" alttext="f^{-1}(y)=x" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math>. (For example, for the function <math id="S5.I4.i1.p1.m3" class="ltx_Math" alttext="f(x)=2^{x}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mn>2</mn><mi>x</mi></msup></mrow></math>, the point <math id="S5.I4.i1.p1.m4" class="ltx_Math" alttext="(3,8)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></math> is on the function. Similarly, the inverse function <math id="S5.I4.i1.p1.m5" class="ltx_Math" alttext="f^{-1}(x)=\log_{2}(x)" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> has the point <math id="S5.I4.i1.p1.m6" class="ltx_Math" alttext="(8,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>8</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> since <math id="S5.I4.i1.p1.m7" class="ltx_Math" alttext="\log_{2}(8)=3" display="inline"><mrow><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>.)</p>
+</div>
+</li>
+<li id="S5.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S5.I4.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If the graph of a function <math id="S5.I4.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is given, then the graph of the inverse function is the same graph when reflected across the line <math id="S5.I4.i2.p1.m2" class="ltx_Math" alttext="y=x" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>x</mi></mrow></math>. This yields the exponential and logarithmic graphs, as you gave in part (a) of the last example.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S5.SS2.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Notice that parts (b) and (c) are strange when reflected across the line <math id="S5.SS2.SSS1.p2.m1" class="ltx_Math" alttext="y=x" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>x</mi></mrow></math>.</p>
+<ul id="S5.I5" class="ltx_itemize">
+<li id="S5.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I5.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The reflected graph in part (b) has a gap in the domain because the original function has a gap in the codomain. We say that the original function of part (b) is not <span class="ltx_text ltx_font_bold">surjective</span> because <span class="ltx_text ltx_font_italic">its range is not equal to its codomain</span>.</p>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S5.I5.i1.p2" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S5.I5.i1.pic1" class="ltx_picture ltx_centering" height="217.36" overflow="visible" version="1.1" viewBox="0 0 214.54 217.36" width="214.54"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,217.36) matrix(1 0 0 -1 0 0) translate(98.7,0) translate(0,98.7)" fill="#000000" stroke="#000000"><g stroke-width="0.4pt"><g style="--ltx-stroke-color:#808080;" stroke="#808080"><path style="fill:none" d="M -93.44 0 L 93.44 0"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(-1.0 0.0 0.0 -1.0 -93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(1.0 0.0 0.0 1.0 93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 103.31 -10.85)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.57em;--fo_height:0.43em;--fo_depth :0em;" width="7.91" height="5.96" transform="matrix(1 0 0 -1 0 5.96)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span></span></foreignObject></g></g><g style="--ltx-stroke-color:#808080;" stroke-width="0.4pt" stroke="#808080"><path style="fill:none" d="M 0 -93.44 L 0 93.44"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 -1.0 1.0 0.0 0 -93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 1.0 -1.0 0.0 0 93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -2.77 L -78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -86.04 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m2" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -39.37 -2.77 L -39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -46.67 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M 39.37 -2.77 L 39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 35.91 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M 78.74 -2.77 L 78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 75.28 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -78.74 L 2.77 -78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -83.2)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m6" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -39.37 L 2.77 -39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -43.83)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 39.37 L 2.77 39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 34.91)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 78.74 L 2.77 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 74.28)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic1.m9" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g></g><g stroke-width="0.8pt"><path style="fill:none" d="M -74.16 -74.16 L -75.46 -75.46 L -72.18 -72.18 L -68.9 -68.9 L -65.62 -65.62 L -62.34 -62.34 L -59.06 -59.06 L -55.78 -55.78 L -52.5 -52.5 L -49.21 -49.21 L -45.93 -45.93 L -42.65 -42.65 L -39.37 -39.37 L -36.09 -36.09 L -32.81 -32.81 L -29.53 -29.53 L -26.25 -26.25 L -22.97 -22.97 L -19.69 -19.69 L -16.41 -16.41 L -13.13 -13.13 L -9.85 -9.85 L -6.57 -6.57 L -3.29 -3.29 L 0 0"></path><g transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -74.16 -74.16)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g></g><g stroke-width="0.8pt"><path style="fill:none" d="M 0 39.37 L 3.28 42.65 L 6.56 45.93 L 9.84 49.21 L 13.12 52.49 L 16.4 55.77 L 19.68 59.05 L 22.96 62.33 L 26.25 65.62 L 29.53 68.9 L 32.81 72.18 L 36.09 75.46 L 39.37 78.74 L 42.65 82.02 L 45.93 85.3 L 49.21 88.58 L 52.49 91.86 L 55.77 95.14 L 59.05 98.42 L 62.33 101.7 L 65.61 104.98 L 68.89 108.26 L 72.17 111.54 L 75.45 114.82 L 74.16 113.53"></path><g transform="matrix(0.7071 0.7071 -0.7071 0.7071 74.16 113.53)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g></g></g></svg></span>
+<p class="ltx_p ltx_align_center">Original function</p>
+</div>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S5.I5.i1.p3" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S5.I5.i1.pic2" class="ltx_picture ltx_centering" height="197.4" overflow="visible" version="1.1" viewBox="0 0 214.54 197.4" width="214.54"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,197.4) matrix(1 0 0 -1 0 0) translate(98.7,0) translate(0,98.7)" fill="#000000" stroke="#000000"><g stroke-width="0.4pt"><g style="--ltx-stroke-color:#808080;" stroke="#808080"><path style="fill:none" d="M -93.44 0 L 93.44 0"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(-1.0 0.0 0.0 -1.0 -93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(1.0 0.0 0.0 1.0 93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 103.31 -10.85)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.57em;--fo_height:0.43em;--fo_depth :0em;" width="7.91" height="5.96" transform="matrix(1 0 0 -1 0 5.96)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span></span></foreignObject></g></g><g style="--ltx-stroke-color:#808080;" stroke-width="0.4pt" stroke="#808080"><path style="fill:none" d="M 0 -93.44 L 0 93.44"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 -1.0 1.0 0.0 0 -93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 1.0 -1.0 0.0 0 93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -2.77 L -78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -86.04 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m2" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -39.37 -2.77 L -39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -46.67 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M 39.37 -2.77 L 39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 35.91 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M 78.74 -2.77 L 78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 75.28 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -78.74 L 2.77 -78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -83.2)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m6" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -39.37 L 2.77 -39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -43.83)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 39.37 L 2.77 39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 34.91)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 78.74 L 2.77 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 74.28)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i1.pic2.m9" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g></g><g stroke-width="0.8pt"><path style="fill:none" d="M -74.16 -74.16 L -75.46 -75.46 L -72.18 -72.18 L -68.9 -68.9 L -65.62 -65.62 L -62.34 -62.34 L -59.06 -59.06 L -55.78 -55.78 L -52.5 -52.5 L -49.21 -49.21 L -45.93 -45.93 L -42.65 -42.65 L -39.37 -39.37 L -36.09 -36.09 L -32.81 -32.81 L -29.53 -29.53 L -26.25 -26.25 L -22.97 -22.97 L -19.69 -19.69 L -16.41 -16.41 L -13.13 -13.13 L -9.85 -9.85 L -6.57 -6.57 L -3.29 -3.29 L 0 0"></path><g transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -74.16 -74.16)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g></g><g stroke-width="0.8pt"><path style="fill:none" d="M 39.37 0 L 41.01 1.64 L 42.65 3.28 L 44.29 4.92 L 45.93 6.56 L 47.57 8.2 L 49.21 9.84 L 50.85 11.48 L 52.5 13.12 L 54.14 14.77 L 55.78 16.41 L 57.42 18.05 L 59.06 19.69 L 60.7 21.33 L 62.34 22.97 L 63.98 24.61 L 65.62 26.25 L 67.26 27.89 L 68.9 29.53 L 70.54 31.17 L 72.18 32.81 L 73.82 34.45 L 75.46 36.09 L 72.53 33.16"></path><g transform="matrix(0.7071 0.7071 -0.7071 0.7071 72.53 33.16)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g></g></g></svg></span>
+<p class="ltx_p ltx_align_center">Reflected function</p>
+</div>
+</div>
+</li>
+<li id="S5.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I5.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The reflected graph in part (b) fails the vertical line test (and hence is not a function) because the original function fails the <span class="ltx_text ltx_font_bold">horizontal line test</span>. We say the original function of part (c) is not <span class="ltx_text ltx_font_bold">injective</span> because there is <span class="ltx_text ltx_font_italic">more than one input</span> corresponding to the same output.</p>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S5.I5.i2.p2" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S5.I5.i2.pic1" class="ltx_picture ltx_centering" height="197.4" overflow="visible" version="1.1" viewBox="0 0 214.54 197.4" width="214.54"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,197.4) matrix(1 0 0 -1 0 0) translate(98.7,0) translate(0,98.7)" fill="#000000" stroke="#000000"><g stroke-width="0.4pt"><g style="--ltx-stroke-color:#808080;" stroke="#808080"><path style="fill:none" d="M -93.44 0 L 93.44 0"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(-1.0 0.0 0.0 -1.0 -93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(1.0 0.0 0.0 1.0 93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 103.31 -10.85)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.57em;--fo_height:0.43em;--fo_depth :0em;" width="7.91" height="5.96" transform="matrix(1 0 0 -1 0 5.96)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span></span></foreignObject></g></g><g style="--ltx-stroke-color:#808080;" stroke-width="0.4pt" stroke="#808080"><path style="fill:none" d="M 0 -93.44 L 0 93.44"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 -1.0 1.0 0.0 0 -93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 1.0 -1.0 0.0 0 93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -2.77 L -78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -86.04 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m2" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -39.37 -2.77 L -39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -46.67 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M 39.37 -2.77 L 39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 35.91 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M 78.74 -2.77 L 78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 75.28 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -78.74 L 2.77 -78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -83.2)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m6" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -39.37 L 2.77 -39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -43.83)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 39.37 L 2.77 39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 34.91)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 78.74 L 2.77 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 74.28)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic1.m9" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g></g><g stroke-width="0.8pt"><path style="fill:none" d="M -52.86 71.1 L -50.52 64.84 L -45.93 53.59 L -41.34 43.4 L -36.74 34.3 L -32.15 26.26 L -27.56 19.29 L -22.97 13.4 L -18.37 8.57 L -13.78 4.82 L -9.19 2.14 L -4.59 0.54 L 0 0 L 4.59 0.54 L 9.19 2.14 L 13.78 4.82 L 18.37 8.57 L 22.97 13.4 L 27.56 19.29 L 32.15 26.26 L 36.75 34.3 L 41.34 43.41 L 45.93 53.59 L 48.08 58.85"></path><g transform="matrix(-0.34921 0.93706 -0.93706 -0.34921 -52.86 71.1)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g><g transform="matrix(0.37788 0.92586 -0.92586 0.37788 48.08 58.85)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g></g><g stroke-width="1.2pt"><path style="fill:none" d="M -78.74 39.37 L -72.18 39.37 L -65.62 39.37 L -59.05 39.37 L -52.49 39.37 L -45.93 39.37 L -39.37 39.37 L -32.81 39.37 L -26.25 39.37 L -19.68 39.37 L -13.12 39.37 L -6.56 39.37 L 0 39.37 L 6.56 39.37 L 13.13 39.37 L 19.69 39.37 L 26.25 39.37 L 32.81 39.37 L 39.37 39.37 L 45.94 39.37 L 52.5 39.37 L 59.06 39.37 L 65.62 39.37 L 72.18 39.37"></path></g></g></svg></span>
+<p class="ltx_p ltx_align_center">Original function</p>
+</div>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S5.I5.i2.p3" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S5.I5.i2.pic2" class="ltx_picture ltx_centering" height="197.4" overflow="visible" version="1.1" viewBox="0 0 214.54 197.4" width="214.54"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,197.4) matrix(1 0 0 -1 0 0) translate(98.7,0) translate(0,98.7)" fill="#000000" stroke="#000000"><g stroke-width="0.4pt"><g style="--ltx-stroke-color:#808080;" stroke="#808080"><path style="fill:none" d="M -93.44 0 L 93.44 0"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(-1.0 0.0 0.0 -1.0 -93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(1.0 0.0 0.0 1.0 93.44 0)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 103.31 -10.85)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.57em;--fo_height:0.43em;--fo_depth :0em;" width="7.91" height="5.96" transform="matrix(1 0 0 -1 0 5.96)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span></span></foreignObject></g></g><g style="--ltx-stroke-color:#808080;" stroke-width="0.4pt" stroke="#808080"><path style="fill:none" d="M 0 -93.44 L 0 93.44"></path><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 -1.0 1.0 0.0 0 -93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g><g style="--ltx-fill-color:#808080;" fill="#808080" transform="matrix(0.0 1.0 -1.0 0.0 0 93.44)"><path style="stroke:none" d="M 4.98 0 C 3.51 0.28 1.11 1.11 -0.55 2.08 L -0.55 -2.08 C 1.11 -1.11 3.51 -0.28 4.98 0"></path></g></g><g stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -2.77 L -78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -86.04 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m2" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -39.37 -2.77 L -39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -46.67 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M 39.37 -2.77 L 39.37 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 35.91 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M 78.74 -2.77 L 78.74 2.77"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 75.28 -11.04)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -78.74 L 2.77 -78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -83.2)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m6" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 -39.37 L 2.77 -39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -16.73 -43.83)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :1.06em;--fo_height:0.64em;--fo_depth :0em;" width="14.61" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 39.37 L 2.77 39.37"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 34.91)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></span></span></foreignObject></g><path style="fill:none" d="M -2.77 78.74 L 2.77 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -9.04 74.28)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.5em;--fo_height:0.64em;--fo_depth :0em;" width="6.92" height="8.92" transform="matrix(1 0 0 -1 0 8.92)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S5.I5.i2.pic2.m9" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></span></span></foreignObject></g></g><g stroke-width="0.8pt"><path style="fill:none" d="M 71.1 -52.86 L 64.84 -50.52 L 53.59 -45.93 L 43.4 -41.34 L 34.3 -36.74 L 26.26 -32.15 L 19.29 -27.56 L 13.4 -22.97 L 8.57 -18.37 L 4.82 -13.78 L 2.14 -9.19 L 0.54 -4.59 L 0 0 L 0.54 4.59 L 2.14 9.19 L 4.82 13.78 L 8.57 18.37 L 13.4 22.97 L 19.29 27.56 L 26.26 32.15 L 34.3 36.75 L 43.41 41.34 L 53.59 45.93 L 58.85 48.08"></path><g transform="matrix(0.93706 -0.34921 0.34921 0.93706 71.1 -52.86)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g><g transform="matrix(0.92586 0.37788 -0.37788 0.92586 58.85 48.08)"><path style="stroke:none" d="M 6.48 0 C 4.56 0.36 1.44 1.44 -0.72 2.7 L -0.72 -2.7 C 1.44 -1.44 4.56 -0.36 6.48 0"></path></g></g><g stroke-width="1.2pt"><path style="fill:none" d="M 39.37 -78.74 L 39.37 -72.18 L 39.37 -65.62 L 39.37 -59.05 L 39.37 -52.49 L 39.37 -45.93 L 39.37 -39.37 L 39.37 -32.81 L 39.37 -26.25 L 39.37 -19.68 L 39.37 -13.12 L 39.37 -6.56 L 39.37 0 L 39.37 6.56 L 39.37 13.13 L 39.37 19.69 L 39.37 26.25 L 39.37 32.81 L 39.37 39.37 L 39.37 45.94 L 39.37 52.5 L 39.37 59.06 L 39.37 65.62 L 39.37 72.18"></path></g></g></svg></span>
+<p class="ltx_p ltx_align_center">Reflected function</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S5.SS2.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.2 </span><span class="ltx_text" style="color:#800000;">Powerful Functions</span>
+</h2>
+
+<div id="S5.SS2.SSS2.p1" class="ltx_para">
+<p class="ltx_p">This motivates the following definitions:</p>
+</div>
+<div id="S5.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>5.2.2.</h3>
+<div id="S5.SS2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> be a function.</p>
+<ol id="S5.I6" class="ltx_enumerate">
+<li id="S5.I6.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I6.ix1.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S5.I6.ix1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is said to be <span class="ltx_text ltx_font_bold">injective</span> (or <span class="ltx_text ltx_font_bold">one-to-one</span>) if for all <math id="S5.I6.ix1.p1.m2" class="ltx_Math" alttext="y\in f(X)" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, there is a unique <math id="S5.I6.ix1.p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S5.I6.ix1.p1.m4" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I6.ix2.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S5.I6.ix2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is said to be <span class="ltx_text ltx_font_bold">surjective</span> (or <span class="ltx_text ltx_font_bold">onto</span>) if for all <math id="S5.I6.ix2.p1.m2" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math>, there exists <math id="S5.I6.ix2.p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S5.I6.ix2.p1.m4" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S5.I6.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S5.I6.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If <math id="S5.I6.ix3.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is both injective and surjective, we say that <math id="S5.I6.ix3.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_bold">bijective</span>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S5.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.3.</h3>
+<div id="S5.SS2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.SS2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be a function. Fill in the blank with the appropriate word.</p>
+<ol id="S5.I7" class="ltx_enumerate">
+<li id="S5.I7.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S5.I7.ix1.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="S5.I7.ix1.p1.m1" class="ltx_Math" alttext="f:X\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> is <span class="ltx_rule" style="width:108.4pt;height:0.0pt;--ltx-bg-color:black;display:inline-block;"> </span> if and only if every horizontal line hits the graph of <math id="S5.I7.ix1.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> <span class="ltx_text ltx_font_italic">at most once</span>.</p>
+</div>
+</li>
+<li id="S5.I7.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S5.I7.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The function <math id="S5.I7.ix2.p1.m1" class="ltx_Math" alttext="f:X\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> is <span class="ltx_rule" style="width:108.4pt;height:0.0pt;--ltx-bg-color:black;display:inline-block;"> </span> if and only if every horizontal line hits the graph of <math id="S5.I7.ix2.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> <span class="ltx_text ltx_font_italic">at least once</span>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S5.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.4.</h3>
+<div id="S5.SS2.Thmtheorem4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Without using the examples already provided, give an example of a function that is injective but not surjective. Give the formula and sketch its graph.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS2.Thmtheorem4.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Without using the examples already provided, give an example of a function that is surjective but not injective. Give the formula and sketch its graph.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS2.Thmtheorem4.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Without using the examples already provided, give an example of a function that is neither injective nor surjective. Give the formula and sketch its graph.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S5.SS2.SSS3" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.3 </span><span class="ltx_text" style="color:#800000;">Proving with Injective and Surjective Functions</span>
+</h2>
+
+<div id="S5.SS2.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.5.</h3>
+<div id="S5.SS2.Thmtheorem5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Using the skeleton version of the proof below, complete the proof of the statement: the function <math id="S5.SS2.Thmtheorem5.p1.m1" class="ltx_Math" alttext="f(x)=x^{3}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math> is <span class="ltx_text ltx_font_bold">injective</span>.</p>
+</div>
+<div id="S5.SS2.Thmtheorem5.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A Skeleton Version of a Function <math id="S5.SS2.Thmtheorem5.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> Being Injective.</span></p>
+</div>
+<div id="S5.SS2.Thmtheorem5.p3" class="ltx_para ltx_noindent">
+</div>
+<div id="S5.SS2.Thmtheorem5.p4" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Guidelines</span></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Example</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Give the definition of <math id="S5.SS2.Thmtheorem5.p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Let <math id="S5.SS2.Thmtheorem5.p4.m2" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by the rule <math id="S5.SS2.Thmtheorem5.p4.m3" class="ltx_Math" alttext="f(x)=x^{3}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Let <math id="S5.SS2.Thmtheorem5.p4.m4" class="ltx_Math" alttext="x_{1},x_{2}\in X" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>X</mi></mrow></math> and suppose <math id="S5.SS2.Thmtheorem5.p4.m5" class="ltx_Math" alttext="f(x_{1})=f(x_{2})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Let <math id="S5.SS2.Thmtheorem5.p4.m6" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> and <math id="S5.SS2.Thmtheorem5.p4.m7" class="ltx_Math" alttext="x_{2}" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math> be arbitrary real numbers and assume <math id="S5.SS2.Thmtheorem5.p4.m8" class="ltx_Math" alttext="x_{1}^{3}=x_{2}^{3}" display="inline"><mrow><msubsup><mi>x</mi><mn>1</mn><mn>3</mn></msubsup><mo>=</mo><msubsup><mi>x</mi><mn>2</mn><mn>3</mn></msubsup></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">(Recommended) State what you need to show in order to conclude that <math id="S5.SS2.Thmtheorem5.p4.m9" class="ltx_Math" alttext="x_{1}=x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math>.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">We want to show that <math id="S5.SS2.Thmtheorem5.p4.m10" class="ltx_Math" alttext="x_{1}=x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math> - then <span class="ltx_text ltx_font_italic">at most one</span> value of <math id="S5.SS2.Thmtheorem5.p4.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is mapped to each value in the range of <math id="S5.SS2.Thmtheorem5.p4.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Connect the two pieces: what you have (<math id="S5.SS2.Thmtheorem5.p4.m13" class="ltx_Math" alttext="x_{1}^{3}=x_{2}^{3}" display="inline"><mrow><msubsup><mi>x</mi><mn>1</mn><mn>3</mn></msubsup><mo>=</mo><msubsup><mi>x</mi><mn>2</mn><mn>3</mn></msubsup></mrow></math>) and what you need (<math id="S5.SS2.Thmtheorem5.p4.m14" class="ltx_Math" alttext="x_{1}=x_{2}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math>).</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">???</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Conclude that <math id="S5.SS2.Thmtheorem5.p4.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective.</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Since <math id="S5.SS2.Thmtheorem5.p4.m16" class="ltx_Math" alttext="f(x_{1})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> is an arbitrary value in the range of <math id="S5.SS2.Thmtheorem5.p4.m17" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and we have shown that any <math id="S5.SS2.Thmtheorem5.p4.m18" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-value that maps to <math id="S5.SS2.Thmtheorem5.p4.m19" class="ltx_Math" alttext="f(x_{1})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> is equal to <math id="S5.SS2.Thmtheorem5.p4.m20" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math>, we know that <math id="S5.SS2.Thmtheorem5.p4.m21" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective as desired.</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+  <div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS2.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.6.</h3>
+<div id="S5.SS2.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">A student looks at the skeleton proof that a function <math id="S5.SS2.Thmtheorem6.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective and asks, “Wait, doesn’t this show that the function <math id="S5.SS2.Thmtheorem6.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is surjective as well?” How would you respond that this proof does not necessarily show that <math id="S5.SS2.Thmtheorem6.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is surjective?</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S5.SS2.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.7.</h3>
+<div id="S5.SS2.Thmtheorem7.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Using the skeleton version of the proof below, complete the proof of the statement: the function <math id="S5.SS2.Thmtheorem7.p1.m1" class="ltx_Math" alttext="f(x)=x^{3}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math> is <span class="ltx_text ltx_font_bold">surjective</span>.</p>
+</div>
+<div id="S5.SS2.Thmtheorem7.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A Skeleton Version of a Function <math id="S5.SS2.Thmtheorem7.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> Being Surjective.</span></p>
+</div>
+<div id="S5.SS2.Thmtheorem7.p3" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Give the definition of <math id="S5.SS2.Thmtheorem7.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Let <math id="S5.SS2.Thmtheorem7.p3.m2" class="ltx_Math" alttext="f:\mathbb{R}\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be defined by the rule <math id="S5.SS2.Thmtheorem7.p3.m3" class="ltx_Math" alttext="f(x)=x^{3}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Let <math id="S5.SS2.Thmtheorem7.p3.m4" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math>.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Let <math id="S5.SS2.Thmtheorem7.p3.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> be an arbitrary element of <math id="S5.SS2.Thmtheorem7.p3.m6" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">(Recommended) State that you want to show that there exists some <math id="S5.SS2.Thmtheorem7.p3.m7" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S5.SS2.Thmtheorem7.p3.m8" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">We want to show that there exists <span class="ltx_text ltx_font_italic">at least</span> one <math id="S5.SS2.Thmtheorem7.p3.m9" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S5.SS2.Thmtheorem7.p3.m10" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math> - that is, we want to find an <math id="S5.SS2.Thmtheorem7.p3.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that <math id="S5.SS2.Thmtheorem7.p3.m12" class="ltx_Math" alttext="x^{3}=y" display="inline"><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>=</mo><mi>y</mi></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Connect the two pieces: what you have (<math id="S5.SS2.Thmtheorem7.p3.m13" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>) and what you need (<math id="S5.SS2.Thmtheorem7.p3.m14" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>).</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">???</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Conclude that <math id="S5.SS2.Thmtheorem7.p3.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is surjective.</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Since <math id="S5.SS2.Thmtheorem7.p3.m16" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is an arbitrary value in the codomain of <math id="S5.SS2.Thmtheorem7.p3.m17" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and we have shown that there exists an <math id="S5.SS2.Thmtheorem7.p3.m18" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-value that maps to <math id="S5.SS2.Thmtheorem7.p3.m19" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, we know that <math id="S5.SS2.Thmtheorem7.p3.m20" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is surjective as desired.</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S5.SS2.Thmtheorem9" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>5.2.8.</h3>
+<div id="S5.SS2.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">Determine whether the function <math id="S5.SS2.Thmtheorem9.p1.m1" class="ltx_Math" alttext="f(n)=\begin{cases}n+1&amp;n\text{ is even}\\
+2n&amp;n\text{ is odd}\end{cases}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi>n</mi><mo>⁢</mo><mtext> is even</mtext></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi>n</mi><mo>⁢</mo><mtext> is odd</mtext></mrow></mtd></mtr></mtable></mrow></mrow></math> is injective and/or surjective.</p>
+</div>
+</div>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
