@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3.2 Complete Induction and Well-Ordering Principle</title>
+<!--Generated on Sun Dec 21 03:17:12 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S3.SS2" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span><span class="ltx_text" style="color:#800000;">Complete Induction and Well-Ordering Principle</span>
+</h1>
+
+<div id="S3.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S3.I1" class="ltx_itemize">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Utilize the principle of complete induction in proving mathematical statements</p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Apply induction to a new theorem on the natural numbers</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S3.SS2.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.2.1 </span><span class="ltx_text" style="color:#800000;">Building Complete Induction</span>
+</h2>
+
+<div id="S3.SS2.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let’s revisit our infinite list of items to complete from last time:</p>
+</div>
+<div id="S3.SS2.SSS1.p2" class="ltx_para ltx_noindent">
+<ol id="S3.I2" class="ltx_enumerate">
+<li id="S3.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I2.ix1.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true. (Prove a <span class="ltx_text ltx_font_bold">base case</span> is true.)</p>
+</div>
+</li>
+<li id="S3.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p">Prove that, if <math id="S3.I2.ix2.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S3.I2.ix2.p1.m2" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true (i.e., <math id="S3.I2.ix2.p1.m3" class="ltx_Math" alttext="P(1)\Rightarrow P(2)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>)</p>
+</div>
+</li>
+<li id="S3.I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I2.ix3.p1" class="ltx_para">
+<p class="ltx_p">Prove that, if <math id="S3.I2.ix3.p1.m1" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S3.I2.ix3.p1.m2" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true (i.e., <math id="S3.I2.ix3.p1.m3" class="ltx_Math" alttext="P(2)\Rightarrow P(3)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>)…….</p>
+</div>
+</li>
+<li id="S3.I2.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">608981813029.</span> 
+<div id="S3.I2.ix4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Prove that <math id="S3.I2.ix4.p1.m1" class="ltx_Math" alttext="P(608981813028)\Rightarrow P(608981813029)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>608981813028</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>608981813029</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS2.SSS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">From Steps 2 onward we are proving that, if the statement from the previous step has been proven true, then the next step in the sequence should also be true. This is known as the <span class="ltx_text ltx_font_bold">domino effect</span>: if one domino <math id="S3.SS2.SSS1.p3.m1" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> gets knocked down <math id="S3.SS2.SSS1.p3.m2" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then so does the next domino <math id="S3.SS2.SSS1.p3.m3" class="ltx_Math" alttext="P(n+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS2.SSS1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let’s say that we are on Step 3. We know that <math id="S3.SS2.SSS1.p4.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true from Step 1 and that <math id="S3.SS2.SSS1.p4.m2" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true from Step 2. While we are proving the statement <math id="S3.SS2.SSS1.p4.m3" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>, we come to an impasse: <math id="S3.SS2.SSS1.p4.m4" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> does not necessarily imply <math id="S3.SS2.SSS1.p4.m5" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>! But then we start breathing easily again, because <math id="S3.SS2.SSS1.p4.m6" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> implies <math id="S3.SS2.SSS1.p4.m7" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>. Since at Step 3 we know both <math id="S3.SS2.SSS1.p4.m8" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.SS2.SSS1.p4.m9" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> are true we can use one or <span class="ltx_text ltx_font_italic">both</span> of those statements to prove that <math id="S3.SS2.SSS1.p4.m10" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+<div id="S3.SS2.SSS1.p5" class="ltx_para">
+<p class="ltx_p">The same goes for every step: given our algorithm, if we are at Step 5 trying to show <math id="S3.SS2.SSS1.p5.m1" class="ltx_Math" alttext="P(5)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, then we can use any combination of the statements <math id="S3.SS2.SSS1.p5.m2" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S3.SS2.SSS1.p5.m3" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S3.SS2.SSS1.p5.m4" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.SS2.SSS1.p5.m5" class="ltx_Math" alttext="P(4)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math> to prove this statement. This becomes incredibly helpful in some instances and leads us to our next theorem:</p>
+</div>
+<div id="S3.SS2.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>3.2.1.</h3>
+<div id="S3.SS2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.SS2.Thmtheorem1.p1.m1" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a predicate over the natural numbers. Assume the following:</p>
+<ol id="S3.I3" class="ltx_enumerate">
+<li id="S3.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">the statement <math id="S3.I3.i1.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, and</p>
+</div>
+</li>
+<li id="S3.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I3.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">for all <math id="S3.I3.i2.p1.m1" class="ltx_Math" alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S3.I3.i2.p1.m2" class="ltx_Math" alttext="P(j)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true for all <math id="S3.I3.i2.p1.m3" class="ltx_Math" alttext="j\leq k" display="inline"><mrow><mi>j</mi><mo>≤</mo><mi>k</mi></mrow></math>, then <math id="S3.I3.i2.p1.m4" class="ltx_Math" alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Then <math id="S3.SS2.Thmtheorem1.p1.m2" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true for all <math id="S3.SS2.Thmtheorem1.p1.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS2.SSS1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">Our book generalizes this one step further. In an elegant solution like that displayed in the Mr. Beast video from Example 2, we only need to knock over one domino for the rest to get knocked over. Sometimes the dominoes don’t work as nicely and we have to knock over the first couple of dominoes ourselves. But our process totally allows for this!</p>
+</div>
+<div id="S3.SS2.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>3.2.2Complete Induction.</h3>
+<div id="S3.SS2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.SS2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a predicate over the natural numbers. Assume the following:</p>
+<ol id="S3.I4" class="ltx_enumerate">
+<li id="S3.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">the statements <math id="S3.I4.i1.p1.m1" class="ltx_Math" alttext="P(1),P(2),\dots,P(m)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> are true, and</p>
+</div>
+</li>
+<li id="S3.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I4.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">for all <math id="S3.I4.i2.p1.m1" class="ltx_Math" alttext="k\geq m" display="inline"><mrow><mi>k</mi><mo>≥</mo><mi>m</mi></mrow></math>, if <math id="S3.I4.i2.p1.m2" class="ltx_Math" alttext="P(j)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true for all <math id="S3.I4.i2.p1.m3" class="ltx_Math" alttext="m\leq j\leq k" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>k</mi></mrow></math>, then <math id="S3.I4.i2.p1.m4" class="ltx_Math" alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Then <math id="S3.SS2.Thmtheorem2.p1.m2" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true for all <math id="S3.SS2.Thmtheorem2.p1.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S3.SS2.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.3.</h3>
+<div id="S3.SS2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Define a sequence of numbers by <math id="S3.SS2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="a_{1}=1" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math>, <math id="S3.SS2.Thmtheorem3.p1.m2" class="ltx_Math" alttext="a_{2}=3" display="inline"><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mn>3</mn></mrow></math>, and <math id="S3.SS2.Thmtheorem3.p1.m3" class="ltx_Math" alttext="a_{n}=3a_{n-1}-2a_{n-2}" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub></mrow></mrow></mrow></math> for <math id="S3.SS2.Thmtheorem3.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> being a natural number greater than 2. Then show that <math id="S3.SS2.Thmtheorem3.p1.m5" class="ltx_Math" alttext="a_{n}=2^{n}+1" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>+</mo><mn>1</mn></mrow></mrow></math> for all <math id="S3.SS2.Thmtheorem3.p1.m6" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. (Consider how many base cases you have to verify before moving onto the inductive step.)</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS2.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.4.</h3>
+<div id="S3.SS2.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Prove that every amount of postage that is at least 12 cents can be made from 4-cent and 5-cent stamps. (Hint: first prove that the postage amounts of 12 cents, 13 cents, 14 cents, and 15 cents can be done. Then come up with an inductive step.)</p>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.SSS1.p7" class="ltx_para">
+<p class="ltx_p">To get to our next major example, we first need to make a definition that will be prevalent in Chapter 4:</p>
+</div>
+<div id="S3.SS2.Thmtheorem5" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>3.2.5.</h3>
+<div id="S3.SS2.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">set</span> <math id="S3.SS2.Thmtheorem5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a collection of elements.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup><span class="ltx_tag ltx_tag_note">1</span>This definition is quite simple - it turns out to be <span class="ltx_text ltx_font_italic">too</span> simple due to a concept called <span class="ltx_text ltx_font_bold">Russell’s Paradox</span>. We will not run into anything that makes this definition untenable for our working purposes, however.</span></span></span> A <span class="ltx_text ltx_font_bold">subset</span> <math id="S3.SS2.Thmtheorem5.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="S3.SS2.Thmtheorem5.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a set containing some (or none, or all) the elements of <math id="S3.SS2.Thmtheorem5.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. We write <math id="S3.SS2.Thmtheorem5.p1.m5" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math> (LaTeX <math id="S3.SS2.Thmtheorem5.p1.m6" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>subseteq) and say “<math id="S3.SS2.Thmtheorem5.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a subset of <math id="S3.SS2.Thmtheorem5.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>”.</p>
+</div>
+</div>
+<div id="S3.SS2.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.6.</h3>
+<div id="S3.SS2.Thmtheorem6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Pick a subset of <math id="S3.SS2.Thmtheorem6.p1.m1" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>.</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem6.p2" class="ltx_para">
+<p class="ltx_p">Now pick a <span class="ltx_text ltx_font_bold">proper subset</span> of <math id="S3.SS2.Thmtheorem6.p2.m1" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> with infinitely many elements. (A <span class="ltx_text ltx_font_bold">proper subset</span> of <math id="S3.SS2.Thmtheorem6.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a subset which is not equal to <math id="S3.SS2.Thmtheorem6.p2.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.)</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.7.</h3>
+<div id="S3.SS2.Thmtheorem7.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Of the two examples you gave above, what is the <span class="ltx_text ltx_font_italic">least</span> element of each subset?</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem7.p2" class="ltx_para">
+<p class="ltx_p">Can you come up with an example of a subset of <math id="S3.SS2.Thmtheorem7.p2.m1" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> with no least element?</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS2.Thmtheorem8" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.8.</h3>
+<div id="S3.SS2.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">We seem to be pretty convinced in the following statement: “Every nonempty subset of the natural numbers has a least element.” Why is the term “nonempty” important in this statement?</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem9" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.9.</h3>
+<div id="S3.SS2.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">Throughout let’s call <math id="S3.SS2.Thmtheorem9.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> a subset of the natural numbers. Say that I <span class="ltx_text ltx_font_italic">were</span> working with the empty set <math id="S3.SS2.Thmtheorem9.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Would the following statements be true or false? “<math id="S3.SS2.Thmtheorem9.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> is an element of <math id="S3.SS2.Thmtheorem9.p1.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>”, “<math id="S3.SS2.Thmtheorem9.p1.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> is an element of <math id="S3.SS2.Thmtheorem9.p1.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>”, “<math id="S3.SS2.Thmtheorem9.p1.m7" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> is an element of <math id="S3.SS2.Thmtheorem9.p1.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>”,…</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.10.</h3>
+<div id="S3.SS2.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">Now say that we have a set <math id="S3.SS2.Thmtheorem10.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> with <span class="ltx_text ltx_font_italic">no least element</span>? Would the following statements be true or false? This time they are displayed in order - answer each one having answered the previous one, and give your reasoning.</p>
+<ol id="S3.I5" class="ltx_enumerate">
+<li id="S3.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S3.I5.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S3.I5.i1.p1.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> is an element of <math id="S3.I5.i1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S3.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S3.I5.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S3.I5.i2.p1.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> is an element of <math id="S3.I5.i2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S3.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S3.I5.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S3.I5.i3.p1.m1" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> is an element of <math id="S3.I5.i3.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div id="S3.SS2.Thmtheorem11" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.11.</h3>
+<div id="S3.SS2.Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p">Look at the previous two examples. What must be true about a set with no least element? What elements can that set contain?</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem12" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.12.</h3>
+<div id="S3.SS2.Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p">Write your conclusion from the previous statement as a conditional statement. Then take the contrapositive of that statement. What do you notice?</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS2.Thmtheorem13" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.13.</h3>
+<div id="S3.SS2.Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p">We are almost ready to formalize our proof. What would be a good method of proof? So far we have learned “direct”, “contrapositive”, “contradiction”, “induction”, and “complete induction”. Explain your reasoning for your choice - the correct answer is actually a combination of these methods, so more than one of the proof methods points toward the correct answer.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem14" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>3.2.14Well-Ordering Principle.</h3>
+<div id="S3.SS2.Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p">Every nonempty subset of the natural numbers has a least element.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS2.Thmtheorem15" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.2.15.</h3>
+<div id="S3.SS2.Thmtheorem15.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Use the Well-Ordering Principle to prove the following: Every positive integer greater than one has a <span class="ltx_text ltx_font_bold">prime factorization</span> - i.e., it can be factored into a product of primes (see Section 2.3). This is the <span class="ltx_text ltx_font_bold">Fundamental Theorem of Arithmetic.</span> A “proof with gaps” is given below.</p>
+</div>
+<div id="S3.SS2.Thmtheorem15.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S3.SS2.Thmtheorem15.p2.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> be the set of positive integers greater than 1 that <span class="ltx_text ltx_font_italic">cannot</span> be factored into a product of primes.</p>
+</div>
+<div id="S3.SS2.Thmtheorem15.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">We would like to show that <math id="S3.SS2.Thmtheorem15.p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is empty, as this would prove our statement, so assume <math id="S3.SS2.Thmtheorem15.p3.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is non-empty and proceed by contradiction.</p>
+</div>
+<div id="S3.SS2.Thmtheorem15.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">We apply the Well-Ordering Principle to <math id="S3.SS2.Thmtheorem15.p4.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in order to find a least element <math id="S3.SS2.Thmtheorem15.p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in <math id="S3.SS2.Thmtheorem15.p4.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+<div id="S3.SS2.Thmtheorem15.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">Derive a contradiction if <math id="S3.SS2.Thmtheorem15.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is prime with <math id="S3.SS2.Thmtheorem15.p5.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> being in <math id="S3.SS2.Thmtheorem15.p5.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem15.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">Derive a contradiction if <math id="S3.SS2.Thmtheorem15.p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is composite with <math id="S3.SS2.Thmtheorem15.p6.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> being in <math id="S3.SS2.Thmtheorem15.p6.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. (Here you should use that <math id="S3.SS2.Thmtheorem15.p6.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the <span class="ltx_text ltx_font_italic">least</span> element in <math id="S3.SS2.Thmtheorem15.p6.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.)</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS2.Thmtheorem15.p7" class="ltx_para ltx_noindent">
+<p class="ltx_p">Conclude the proof.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
