@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.4 Quantifiers</title>
+<!--Generated on Sun Dec 21 01:12:44 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S2.SS4" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.4 </span><span class="ltx_text" style="color:#800000;">Quantifiers</span>
+</h1>
+
+<div id="S2.SS4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Critically analyze proofs involving quantifiers</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Learn negations of mathematical statements involving quantifiers</p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Apply knowledge of quantifiers to writing mathematical proofs</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S2.SS4.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.4.1 </span><span class="ltx_text" style="color:#800000;">Predicates</span>
+</h2>
+
+<div id="S2.SS4.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">As we saw in the last section, statements like “<math id="S2.SS4.SSS1.p1.m1" class="ltx_Math" alttext="x+2y=3" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>” appear regularly in mathematical writings. But statements like this, as written, are not propositions - they are neither true nor false but <span class="ltx_text ltx_font_italic">depend on the values of <math id="S2.SS4.SSS1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S2.SS4.SSS1.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math></span>. Such statements are called <span class="ltx_text ltx_font_bold">predicates</span>.</p>
+</div>
+<div id="S2.SS4.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.1.</h3>
+<div id="S2.SS4.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Which of the following statements are propositions, and which are predicates? Why?</p>
+</div>
+<div id="S2.SS4.Thmtheorem1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">(1) <math id="S2.SS4.Thmtheorem1.p2.m1" class="ltx_Math" alttext="x^{2}-4=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+<div id="S2.SS4.Thmtheorem1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">(2) For all <math id="S2.SS4.Thmtheorem1.p3.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, <math id="S2.SS4.Thmtheorem1.p3.m2" class="ltx_Math" alttext="x^{2}-4=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S2.SS4.Thmtheorem1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">(3) <math id="S2.SS4.Thmtheorem1.p4.m1" class="ltx_Math" alttext="2&lt;b" display="inline"><mrow><mn>2</mn><mo>&lt;</mo><mi>b</mi></mrow></math>.</p>
+</div>
+<div id="S2.SS4.Thmtheorem1.p5" class="ltx_para">
+<p class="ltx_p">(4) There exists an integer <math id="S2.SS4.Thmtheorem1.p5.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> such that <math id="S2.SS4.Thmtheorem1.p5.m2" class="ltx_Math" alttext="2&lt;b" display="inline"><mrow><mn>2</mn><mo>&lt;</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S2.SS4.SSS1.p2" class="ltx_para">
+<p class="ltx_p">Notice how we were able to turn statements (1) and (3) from predicates to propositions (2) and (4) respectively by adding specific qualifications to what our variables denote. These “qualifications” - “for all” and “there exists” - are called <span class="ltx_text ltx_font_bold">quantifiers</span>.</p>
+</div>
+<div id="S2.SS4.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>2.4.2.</h3>
+<div id="S2.SS4.Thmtheorem2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_phantom"><span style="visibility:hidden"></span></span></p>
+</div>
+<div id="S2.SS4.Thmtheorem2.p2" class="ltx_para">
+<ul id="S2.I2" class="ltx_itemize">
+<li id="S2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">universal quantifier</span> (<math id="S2.I2.i1.p1.m1" class="ltx_Math" alttext="\forall" display="inline"><mo>∀</mo></math>, LaTeX <math id="S2.I2.i1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>forall) denotes “for all”. In logical notation, statement (2) reads <math id="S2.I2.i1.p1.m3" class="ltx_Math" alttext="(\forall x\in\mathbb{R})(x^{2}-4=0)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="S2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">existential quantifier</span> (<math id="S2.I2.i2.p1.m1" class="ltx_Math" alttext="\exists" display="inline"><mo>∃</mo></math>, LaTeX <math id="S2.I2.i2.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>exists) denotes “there exists”. In logical notation, statement (4) reads <math id="S2.I2.i2.p1.m3" class="ltx_Math" alttext="(\exists b\in\mathbb{Z})(2&lt;b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>&lt;</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S2.SS4.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.3.</h3>
+<div id="S2.SS4.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Translate the following statement into logical notation: “for all positive values <math id="S2.SS4.Thmtheorem3.p1.m1" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math>, there exists a positive value <math id="S2.SS4.Thmtheorem3.p1.m2" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> such that, if <math id="S2.SS4.Thmtheorem3.p1.m3" class="ltx_Math" alttext="|x-c|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>−</mo><mi>c</mi></mrow><mo stretchy="false">|</mo></mrow></math> is strictly between 0 and <math id="S2.SS4.Thmtheorem3.p1.m4" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>, then <math id="S2.SS4.Thmtheorem3.p1.m5" class="ltx_Math" alttext="|f(x)-L|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mi>L</mi></mrow><mo stretchy="false">|</mo></mrow></math> is less than <math id="S2.SS4.Thmtheorem3.p1.m6" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math>.” (This is the definition of the limit <math id="S2.SS4.Thmtheorem3.p1.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> of a function <math id="S2.SS4.Thmtheorem3.p1.m8" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> as <math id="S2.SS4.Thmtheorem3.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> approaches <math id="S2.SS4.Thmtheorem3.p1.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.)</p>
+</div>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S2.SS4.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.4.</h3>
+<div id="S2.SS4.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Determine whether the following statements are true, false, or neither. Prove each statement which is true, and disprove each statement which is false.</p>
+<ol id="S2.I3" class="ltx_enumerate">
+<li id="S2.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S2.I3.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">There exists a real number <math id="S2.I3.ix1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that, if <math id="S2.I3.ix1.p1.m2" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S2.I3.ix1.p1.m3" class="ltx_Math" alttext="x^{2}&gt;0" display="inline"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S2.I3.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For all real numbers <math id="S2.I3.ix2.p1.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, if <math id="S2.I3.ix2.p1.m2" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then, <math id="S2.I3.ix2.p1.m3" class="ltx_Math" alttext="x^{2}&gt;0" display="inline"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I3.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S2.I3.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">There exists a natural <math id="S2.I3.ix3.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="S2.I3.ix3.p1.m2" class="ltx_Math" alttext="n+1&gt;3" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>&gt;</mo><mn>3</mn></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I3.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S2.I3.ix4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For all natural numbers <math id="S2.I3.ix4.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="S2.I3.ix4.p1.m2" class="ltx_Math" alttext="n+1&gt;3" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>&gt;</mo><mn>3</mn></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I3.ix5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S2.I3.ix5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For a real number <math id="S2.I3.ix5.p1.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, <math id="S2.I3.ix5.p1.m2" class="ltx_Math" alttext="x^{2}&gt;4" display="inline"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>4</mn></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S2.SS4.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.4.2 </span><span class="ltx_text" style="color:#800000;">Statements with Multiple Predicates</span>
+</h2>
+
+<div id="S2.SS4.SSS2.p1" class="ltx_para">
+<p class="ltx_p">In the next sections we will see plenty of statements that involve multiple quantifiers. Before we get into these, let us experiment with a few examples.</p>
+</div>
+<div id="S2.SS4.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.5.</h3>
+<div id="S2.SS4.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Determine whether the following statements are true, false, or neither. Prove each statement which is true, and provide a counterexample for each statement which is false.</p>
+<ol id="S2.I4" class="ltx_enumerate">
+<li id="S2.I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S2.I4.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S2.I4.ix1.p1.m1" class="ltx_Math" alttext="(\forall x\in\mathbb{Z})(\forall y\in\mathbb{Z})x+y=0" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S2.I4.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S2.I4.ix2.p1.m1" class="ltx_Math" alttext="(\forall x\in\mathbb{Z})(\exists y\in\mathbb{Z})x+y=0" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I4.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S2.I4.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S2.I4.ix3.p1.m1" class="ltx_Math" alttext="(\exists x\in\mathbb{Z})(\forall y\in\mathbb{Z})x+y=0" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I4.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S2.I4.ix4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S2.I4.ix4.p1.m1" class="ltx_Math" alttext="(\exists x\in\mathbb{Z})(\exists y\in\mathbb{Z})x+y=0" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S2.SS4.SSS3" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.4.3 </span><span class="ltx_text" style="color:#800000;">A “Contrapositive” for Quantifiers</span>
+</h2>
+
+<div id="S2.SS4.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.6.</h3>
+<div id="S2.SS4.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Consider what you would have to show to <span class="ltx_text ltx_font_italic">disprove</span> the statement: <math id="S2.SS4.Thmtheorem6.p1.m1" class="ltx_Math" alttext="(\forall x\in\mathbb{Z})(\forall y\in\mathbb{Z})x+y=0" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Write down your idea of a proof below.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S2.SS4.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.7.</h3>
+<div id="S2.SS4.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Consider what you would have to show to <span class="ltx_text ltx_font_italic">disprove</span> the statement: <math id="S2.SS4.Thmtheorem7.p1.m1" class="ltx_Math" alttext="(\exists x\in\mathbb{Z})(\forall y\in\mathbb{Z})x+y=0" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Write down your idea of a proof below.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S2.SS4.SSS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider the following scenario:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">A coach tells her players, “If everyone on the team runs a mile tonight, then I will buy the team pizza tomorrow.”</p>
+</blockquote>
+<p class="ltx_p">What would have to happen for the coach to be justified in <span class="ltx_text ltx_font_italic">not</span> buying them pizza?</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S2.SS4.SSS3.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Now consider the following scenario:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">A coach tells her players, “If one of you runs a mile tonight, then I will buy everyone pizza tomorrow.”</p>
+</blockquote>
+<p class="ltx_p">What would have to happen for the coach to be justified in <span class="ltx_text ltx_font_italic">not</span> buying them pizza?</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S2.SS4.SSS3.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">In each of these examples we are negating a “for all” or “there exists” statements. If <math id="S2.SS4.SSS3.p3.m1" class="ltx_Math" alttext="P(x)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the antecedent statement “player <math id="S2.SS4.SSS3.p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> runs a mile” and <math id="S2.SS4.SSS3.p3.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is the consequence statement “the coach buys the players pizza”, the first logical statement could be written as</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="(\forall x)P(x)\Rightarrow Q." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mi>Q</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Well, what must be true if <math id="S2.SS4.SSS3.p3.m4" class="ltx_Math" alttext="\neg Q" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></math> takes place? By contraposition, we know that <math id="S2.SS4.SSS3.p3.m5" class="ltx_Math" alttext="\neg(\forall x)P(x)" display="inline"><mrow><mo>¬</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a true statement. But this is a bit awkward to say in English: “it is not the case that for all players <math id="S2.SS4.SSS3.p3.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, player <math id="S2.SS4.SSS3.p3.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> ran a mile”. We typically rephrase this in a different way: “there is some player <math id="S2.SS4.SSS3.p3.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> who did <span class="ltx_text ltx_font_italic">not</span> run a mile”. Logically this statement comes out to be <math id="S2.SS4.SSS3.p3.m9" class="ltx_Math" alttext="(\exists x)\neg P(x)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mo rspace="0.167em">¬</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S2.SS4.SSS3.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Similarly, the second statement is written as <math id="S2.SS4.SSS3.p4.m1" class="ltx_Math" alttext="((\exists x)P(x))\Rightarrow Q" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">⇒</mo><mi>Q</mi></mrow></math>. If <math id="S2.SS4.SSS3.p4.m2" class="ltx_Math" alttext="\neg Q" display="inline"><mrow><mo rspace="0.167em">¬</mo><mi>Q</mi></mrow></math> is true, it must be the case that <math id="S2.SS4.SSS3.p4.m3" class="ltx_Math" alttext="\neg(\exists x)P(x)" display="inline"><mrow><mo>¬</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is also true! As we see in our answer, this can be written as “no one on the team runs a mile”. We can write this as <math id="S2.SS4.SSS3.p4.m4" class="ltx_Math" alttext="(\forall x)(\neg P(x))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">¬</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.SS4.SSS3.p5" class="ltx_para">
+<p class="ltx_p">This motivates the following theorem:</p>
+</div>
+<div id="S2.SS4.Thmtheorem8" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>2.4.8.</h3>
+<div id="S2.SS4.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS4.Thmtheorem8.p1.m1" class="ltx_Math" alttext="P(x)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a predicate in some universe of discourse. Then</p>
+<ol id="S2.I5" class="ltx_enumerate">
+<li id="S2.I5.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S2.I5.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S2.I5.ix1.p1.m1" class="ltx_Math" alttext="\neg(\forall x)P(x)" display="inline"><mrow><mo>¬</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is logically equivalent to <math id="S2.I5.ix1.p1.m2" class="ltx_Math" alttext="(\exists x)(\neg P(x))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">¬</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="S2.I5.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S2.I5.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S2.I5.ix2.p1.m1" class="ltx_Math" alttext="\neg(\exists x)P(x)" display="inline"><mrow><mo>¬</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is logically equivalent to <math id="S2.I5.ix2.p1.m2" class="ltx_Math" alttext="(\forall x)(\neg P(x))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo rspace="0.167em">¬</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S2.SS4.Thmtheorem9" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.9.</h3>
+<div id="S2.SS4.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">Negate the following propositions, remembering not to use logical notation in your answers. These are called forming “<span class="ltx_text ltx_font_bold">useful denials</span>” of these propositions.</p>
+<ol id="S2.I6" class="ltx_enumerate">
+<li id="S2.I6.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S2.I6.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For all <math id="S2.I6.ix1.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="S2.I6.ix1.p1.m2" class="ltx_Math" alttext="n^{2}\geq 5" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>≥</mo><mn>5</mn></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I6.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S2.I6.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For all <math id="S2.I6.ix2.p1.m1" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, there exists <math id="S2.I6.ix2.p1.m2" class="ltx_Math" alttext="m\in\mathbb{Z}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="S2.I6.ix2.p1.m3" class="ltx_Math" alttext="n+m=0" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S2.I6.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S2.I6.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S2.I6.ix3.p1.m1" class="ltx_math_unparsed" alttext="(\forall x,y,z\in\mathbb{Z})((xy" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mo rspace="0.167em">∀</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>∈</mo><mi>ℤ</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mi>y</mi></mrow></mrow></mrow></math> is even <math id="S2.I6.ix3.p1.m2" class="ltx_Math" alttext="\wedge\,yz" display="inline"><mrow><mo rspace="0em">∧</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math> is even<math id="S2.I6.ix3.p1.m3" class="ltx_math_unparsed" alttext=")\Rightarrow xz" display="inline"><mrow><mo stretchy="false">)</mo><mo stretchy="false">⇒</mo><mi>x</mi><mi>z</mi></mrow></math> is even<math id="S2.I6.ix3.p1.m4" class="ltx_Math" alttext=")" display="inline"><mo stretchy="false">)</mo></math></p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S2.SS4.SSS4" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.4.4 </span><span class="ltx_text" style="color:#800000;">Proving with Quantifiers</span>
+</h2>
+
+<div id="S2.SS4.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.10.</h3>
+<div id="S2.SS4.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Disprove</span> the following statement. Remember, do not use logical notation in your proof.</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(x-2y=0)." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S2.SS4.Thmtheorem11" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>2.4.11.</h3>
+<div id="S2.SS4.Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p">Consider the statement</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="(\forall y\in\mathbb{N})(\exists x\in\mathbb{N})(x-2y=0)." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">First, prove this statement. Then consider: if we switch the order of quantifiers, is the statement still true? Prove or disprove.</p>
+</div>
+</div>
+<div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
