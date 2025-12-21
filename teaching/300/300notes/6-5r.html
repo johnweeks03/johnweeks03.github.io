@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>6.5 Modular Arithmetic (Reading)</title>
+<!--Generated on Sun Dec 21 05:46:17 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S6.SS5" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">6.5 </span><span class="ltx_text" style="color:#800000;">Modular Arithmetic (Reading)</span>
+</h1>
+
+<div id="S6.SS5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text" style="font-size:80%;">Adapted from Lakins, <span class="ltx_text ltx_font_italic">Tools of Mathematical Reasoning</span>, and Ernst, <span class="ltx_text ltx_font_italic">An Introduction to Proof via Inquiry-Based Learning</span></span></p>
+</div>
+<section id="S6.SS5.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.5.1 </span><span class="ltx_text" style="color:#800000;">Motivation: Clock Arithmetic</span>
+</h2>
+
+<div id="S6.SS5.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In this section, we look at a particular family of equivalence relations on the integers and explore the way in which arithmetic interacts with them.</p>
+</div>
+<div id="S6.SS5.Thmtheorem1" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.5.1.</h3>
+<div id="S6.SS5.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Someone asks you, “How do you determine what time is 5 hours after 8pm?” How would you respond?</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem2" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.5.2.</h3>
+<div id="S6.SS5.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Another asks, “How do you determine what time is 17 hours before 3pm?” How would you respond?</p>
+</div>
+</div>
+<div id="S6.SS5.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">In your explanations of each of these examples, you are doing <span class="ltx_text ltx_font_italic">addition and subtraction modulo <math id="S6.SS5.SSS1.p2.m1" class="ltx_Math" alttext="12" display="inline"><mn>12</mn></math></span>. “Modulo” arithmetic situates the numbers in a circle:</p>
+</div>
+<figure id="S6.SS5.SSS1.fig1" class="ltx_figure"><img src="images/clock.png" id="S6.SS5.SSS1.g1" class="ltx_graphics ltx_centering ltx_img_square" width="299" height="301" alt="[Uncaptioned image]">
+</figure>
+<div id="S6.SS5.SSS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">For example, “adding 5 to 8” yields 13, but “adding 5 to 8 on a clock” means we must also subtract 12 to get “<math id="S6.SS5.SSS1.p3.m1" class="ltx_Math" alttext="5+8\equiv 1" display="inline"><mrow><mrow><mn>5</mn><mo>+</mo><mn>8</mn></mrow><mo>≡</mo><mn>1</mn></mrow></math> modulo 12”. (Modulo arithmetic doesn’t have “am” or “pm”! It also uses <math id="S6.SS5.SSS1.p3.m2" class="ltx_Math" alttext="\equiv" display="inline"><mo>≡</mo></math> to distinguish from <math id="S6.SS5.SSS1.p3.m3" class="ltx_Math" alttext="=" display="inline"><mo>=</mo></math>.)</p>
+</div>
+<div id="S6.SS5.SSS1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">“Subtracting 17 from 3” yields <math id="S6.SS5.SSS1.p4.m1" class="ltx_Math" alttext="-14" display="inline"><mrow><mo>−</mo><mn>14</mn></mrow></math>, but “subtracting 17 from 3 on a clock” means we must add 12 to our answer until we are between 1 and 12. So we must add 12 twice and get “<math id="S6.SS5.SSS1.p4.m2" class="ltx_Math" alttext="3-17\equiv 10" display="inline"><mrow><mrow><mn>3</mn><mo>−</mo><mn>17</mn></mrow><mo>≡</mo><mn>10</mn></mrow></math> modulo 12”.</p>
+</div>
+</section>
+<section id="S6.SS5.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.5.2 </span><span class="ltx_text" style="color:#800000;">Definitions</span>
+</h2>
+
+<div id="S6.SS5.SSS2.p1" class="ltx_para">
+<p class="ltx_p">This motivates the following definitions for modular arithmetic:</p>
+</div>
+<div id="S6.SS5.Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.3.</h3>
+<div id="S6.SS5.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.SS5.Thmtheorem3.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>,
+define <math id="S6.SS5.Thmtheorem3.p1.m2" class="ltx_Math" alttext="n\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></math> to be the set of all integers that are divisible by <math id="S6.SS5.Thmtheorem3.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. In set-builder notation, we have</p>
+<table id="S6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex1.m1" class="ltx_Math" alttext="n\mathbb{Z}:=\{m\in\mathbb{Z}\mid m=nk\text{ for some }k\in\mathbb{Z}\}." display="block"><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>m</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS5.SSS2.p2" class="ltx_para">
+<p class="ltx_p">For example, <math id="S6.SS5.SSS2.p2.m1" class="ltx_Math" alttext="5\mathbb{Z}=\{\dots,-10,-5,0,5,10,\dots\}" display="inline"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>ℤ</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>10</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S6.SS5.SSS2.p2.m2" class="ltx_Math" alttext="2\mathbb{Z}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math> is the set of even integers.</p>
+</div>
+<div id="S6.SS5.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.4.</h3>
+<div id="S6.SS5.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Consider the sets <math id="S6.SS5.Thmtheorem4.p1.m1" class="ltx_Math" alttext="3\mathbb{Z},\,5\mathbb{Z},\,15\mathbb{Z}" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mn> 5</mn><mo>⁢</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mn> 15</mn><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>, and <math id="S6.SS5.Thmtheorem4.p1.m2" class="ltx_Math" alttext="20\mathbb{Z}" display="inline"><mrow><mn>20</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math>.</p>
+<ol id="S6.I1" class="ltx_enumerate">
+<li id="S6.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">a.</span> 
+<div id="S6.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">List at least five elements in each of the above sets.</p>
+</div>
+</li>
+<li id="S6.I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">b.</span> 
+<div id="S6.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">Notice that <math id="S6.I1.ix2.p1.m1" class="ltx_Math" alttext="3\mathbb{Z}\cap 5\mathbb{Z}=n\mathbb{Z}" display="inline"><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>ℤ</mi></mrow><mo>∩</mo><mrow><mn>5</mn><mo>⁢</mo><mi>ℤ</mi></mrow></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math> for some <math id="S6.I1.ix2.p1.m2" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. What is <math id="S6.I1.ix2.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>? Describe <math id="S6.I1.ix2.p1.m4" class="ltx_Math" alttext="15\mathbb{Z}\cap 20\mathbb{Z}" display="inline"><mrow><mrow><mn>15</mn><mo>⁢</mo><mi>ℤ</mi></mrow><mo>∩</mo><mrow><mn>20</mn><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math> in a similar way.</p>
+</div>
+</li>
+<li id="S6.I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">c.</span> 
+<div id="S6.I1.ix3.p1" class="ltx_para">
+<p class="ltx_p">Draw a Venn diagram illustrating how the sets <math id="S6.I1.ix3.p1.m1" class="ltx_Math" alttext="3\mathbb{Z}" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math>, <math id="S6.I1.ix3.p1.m2" class="ltx_Math" alttext="5\mathbb{Z}" display="inline"><mrow><mn>5</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math>, and <math id="S6.I1.ix3.p1.m3" class="ltx_Math" alttext="15\mathbb{Z}" display="inline"><mrow><mn>15</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math> intersect.</p>
+</div>
+</li>
+<li id="S6.I1.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">d.</span> 
+<div id="S6.I1.ix4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Draw a Venn diagram illustrating how the sets <math id="S6.I1.ix4.p1.m1" class="ltx_Math" alttext="5\mathbb{Z}" display="inline"><mrow><mn>5</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math>, <math id="S6.I1.ix4.p1.m2" class="ltx_Math" alttext="15\mathbb{Z}" display="inline"><mrow><mn>15</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math>, and <math id="S6.I1.ix4.p1.m3" class="ltx_Math" alttext="20\mathbb{Z}" display="inline"><mrow><mn>20</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math> intersect.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.5.5.</h3>
+<div id="S6.SS5.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS5.Thmtheorem5.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. If <math id="S6.SS5.Thmtheorem5.p1.m2" class="ltx_Math" alttext="a,b\in n\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>, then <math id="S6.SS5.Thmtheorem5.p1.m3" class="ltx_Math" alttext="-a,\,a+b,\,\text{and }ab" display="inline"><mrow><mrow><mo>−</mo><mi>a</mi></mrow><mo rspace="0.337em">,</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo rspace="0.337em">,</mo><mrow><mtext>and </mtext><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math> are also in <math id="S6.SS5.Thmtheorem5.p1.m4" class="ltx_Math" alttext="n\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem6" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.6.</h3>
+<div id="S6.SS5.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">relation</span> <math id="S6.SS5.Thmtheorem6.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> from <math id="S6.SS5.Thmtheorem6.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to <math id="S6.SS5.Thmtheorem6.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a subset of <math id="S6.SS5.Thmtheorem6.p1.m4" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem7" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.7.</h3>
+<div id="S6.SS5.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S6.SS5.Thmtheorem7.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, define the relation <math id="S6.SS5.Thmtheorem7.p1.m2" class="ltx_Math" alttext="\equiv_{n}" display="inline"><msub><mo>≡</mo><mi>n</mi></msub></math> on <math id="S6.SS5.Thmtheorem7.p1.m3" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> via <math id="S6.SS5.Thmtheorem7.p1.m4" class="ltx_Math" alttext="(a,b)\in\equiv_{n}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo rspace="0em">∈</mo><msub><mo lspace="0em">≡</mo><mi>n</mi></msub></mrow></math> if <math id="S6.SS5.Thmtheorem7.p1.m5" class="ltx_Math" alttext="a-b\in n\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>. We typically write <math id="S6.SS5.Thmtheorem7.p1.m6" class="ltx_Math" alttext="a\equiv_{n}b" display="inline"><mrow><mi>a</mi><msub><mo>≡</mo><mi>n</mi></msub><mi>b</mi></mrow></math> and say that “<math id="S6.SS5.Thmtheorem7.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is congruent to <math id="S6.SS5.Thmtheorem7.p1.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> modulo <math id="S6.SS5.Thmtheorem7.p1.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>”.</p>
+</div>
+</div>
+<div id="S6.SS5.SSS2.p3" class="ltx_para">
+<p class="ltx_p">Note that <math id="S6.SS5.SSS2.p3.m1" class="ltx_Math" alttext="a-b\in n\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>∈</mo><mrow><mi>n</mi><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math> if and only if <math id="S6.SS5.SSS2.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S6.SS5.SSS2.p3.m3" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>, which implies that <math id="S6.SS5.SSS2.p3.m4" class="ltx_Math" alttext="a\equiv_{n}b" display="inline"><mrow><mi>a</mi><msub><mo>≡</mo><mi>n</mi></msub><mi>b</mi></mrow></math> if and only if <math id="S6.SS5.SSS2.p3.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S6.SS5.SSS2.p3.m6" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>.</p>
+</div>
+<div id="S6.SS5.Thmtheorem8" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.8.</h3>
+<div id="S6.SS5.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">We consider the relation <math id="S6.SS5.Thmtheorem8.p1.m1" class="ltx_Math" alttext="\equiv_{5}" display="inline"><msub><mo>≡</mo><mn>5</mn></msub></math>. Then we note that following:</p>
+<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex2.m1" class="ltx_Math" alttext="\displaystyle\cdots\equiv_{5}-10\equiv_{5}-5\equiv_{5}" display="inline"><mrow><mi mathvariant="normal">⋯</mi><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>10</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>5</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex2.m2" class="ltx_Math" alttext="\displaystyle 0\equiv_{5}5\equiv_{5}10\equiv_{5}\cdots" display="inline"><mrow><mn>0</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>5</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>10</mn><msub><mo>≡</mo><mn>5</mn></msub><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex4.m1" class="ltx_Math" alttext="\displaystyle\cdots\equiv_{5}-9\equiv_{5}-4\equiv_{5}" display="inline"><mrow><mi mathvariant="normal">⋯</mi><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>9</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>4</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex4.m2" class="ltx_Math" alttext="\displaystyle 1\equiv_{5}6\equiv_{5}11\equiv_{5}\cdots" display="inline"><mrow><mn>1</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>6</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>11</mn><msub><mo>≡</mo><mn>5</mn></msub><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex6.m1" class="ltx_Math" alttext="\displaystyle\cdots\equiv_{5}-8\equiv_{5}-3\equiv_{5}" display="inline"><mrow><mi mathvariant="normal">⋯</mi><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>8</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>3</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex6.m2" class="ltx_Math" alttext="\displaystyle 2\equiv_{5}7\equiv_{5}12\equiv_{5}\cdots" display="inline"><mrow><mn>2</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>7</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>12</mn><msub><mo>≡</mo><mn>5</mn></msub><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex8.m1" class="ltx_Math" alttext="\displaystyle\cdots\equiv_{5}-7\equiv_{5}-2\equiv_{5}" display="inline"><mrow><mi mathvariant="normal">⋯</mi><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>7</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>2</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex8.m2" class="ltx_Math" alttext="\displaystyle 3\equiv_{5}8\equiv_{5}13\equiv_{5}\cdots" display="inline"><mrow><mn>3</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>8</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>13</mn><msub><mo>≡</mo><mn>5</mn></msub><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex10.m1" class="ltx_Math" alttext="\displaystyle\cdots\equiv_{5}-6\equiv_{5}-1\equiv_{5}" display="inline"><mrow><mi mathvariant="normal">⋯</mi><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>6</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mrow><mo>−</mo><mn>1</mn></mrow><msub><mo>≡</mo><mn>5</mn></msub><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex10.m2" class="ltx_Math" alttext="\displaystyle 4\equiv_{5}9\equiv_{5}14\equiv_{5}\cdots" display="inline"><mrow><mn>4</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>9</mn><msub><mo>≡</mo><mn>5</mn></msub><mn>14</mn><msub><mo>≡</mo><mn>5</mn></msub><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem9" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.9.</h3>
+<div id="S6.SS5.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">We define <math id="S6.SS5.Thmtheorem9.p1.m1" class="ltx_Math" alttext="[k]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math> to be the set of all integers that are congruent to <math id="S6.SS5.Thmtheorem9.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> modulo <math id="S6.SS5.Thmtheorem9.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For example, <math id="S6.SS5.Thmtheorem9.p1.m4" class="ltx_Math" alttext="[0]_{n}=\{\dots,-10,-5,0,5,10\dots\}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>10</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>,</mo><mrow><mn>10</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. The set <math id="S6.SS5.Thmtheorem9.p1.m5" class="ltx_Math" alttext="[5]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math> equals <math id="S6.SS5.Thmtheorem9.p1.m6" class="ltx_Math" alttext="[0]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.10.</h3>
+<div id="S6.SS5.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">Let’s compute <math id="S6.SS5.Thmtheorem10.p1.m1" class="ltx_Math" alttext="[2]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math>. Tracing back through the definitions, we see that</p>
+<table id="S6.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex11.m1" class="ltx_Math" alttext="\displaystyle m\in[2]_{7}" display="inline"><mrow><mi>m</mi><mo>∈</mo><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex11.m2" class="ltx_Math" alttext="\displaystyle\iff m\equiv_{7}2" display="inline"><mrow><mi></mi><mo stretchy="false">⇔</mo><mrow><mi>m</mi><msub><mo>≡</mo><mn>7</mn></msub><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex12.m1" class="ltx_Math" alttext="\displaystyle\iff m-2\in 7\mathbb{Z}" display="inline"><mrow><mi></mi><mo stretchy="false">⇔</mo><mrow><mrow><mi>m</mi><mo>−</mo><mn>2</mn></mrow><mo>∈</mo><mrow><mn>7</mn><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex13.m1" class="ltx_Math" alttext="\displaystyle\iff m-2=7k\text{ for some }k\in\mathbb{Z}" display="inline"><mrow><mi></mi><mo stretchy="false">⇔</mo><mrow><mrow><mi>m</mi><mo>−</mo><mn>2</mn></mrow><mo>=</mo><mrow><mn>7</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex14.m1" class="ltx_Math" alttext="\displaystyle\iff m=7k+2\text{ for some }k\in\mathbb{Z}." display="inline"><mrow><mrow><mi></mi><mo stretchy="false">⇔</mo><mrow><mi>m</mi><mo>=</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>k</mi></mrow></mrow><mo>∈</mo><mi>ℤ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Since the multiples of <math id="S6.SS5.Thmtheorem10.p1.m2" class="ltx_Math" alttext="7" display="inline"><mn>7</mn></math> are <math id="S6.SS5.Thmtheorem10.p1.m3" class="ltx_Math" alttext="7\mathbb{Z}=\{\dots,-14,-7,0,7,14,\dots\}" display="inline"><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>ℤ</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>14</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>14</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math>, we can find <math id="S6.SS5.Thmtheorem10.p1.m4" class="ltx_Math" alttext="[2]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math> by adding <math id="S6.SS5.Thmtheorem10.p1.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> to each element of <math id="S6.SS5.Thmtheorem10.p1.m6" class="ltx_Math" alttext="7\mathbb{Z}" display="inline"><mrow><mn>7</mn><mo>⁢</mo><mi>ℤ</mi></mrow></math> to get</p>
+<table id="S6.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex15.m1" class="ltx_Math" alttext="[2]_{7}=\{\dots,-12,-5,2,9,16,\dots\}." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>12</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo>,</mo><mn>2</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>16</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem11" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.5.11.</h3>
+<div id="S6.SS5.Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p">For each of the following congruence classes, find five elements in the set such that at least one is greater than <math id="S6.SS5.Thmtheorem11.p1.m1" class="ltx_Math" alttext="70" display="inline"><mn>70</mn></math>
+and one is less than <math id="S6.SS5.Thmtheorem11.p1.m2" class="ltx_Math" alttext="70" display="inline"><mn>70</mn></math>.</p>
+<ol id="S6.I2" class="ltx_enumerate">
+<li id="S6.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">a.</span> 
+<div id="S6.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.ix1.p1.m1" class="ltx_Math" alttext="[4]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></p>
+</div>
+</li>
+<li id="S6.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">b.</span> 
+<div id="S6.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I2.ix2.p1.m1" class="ltx_Math" alttext="[-3]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></p>
+</div>
+</li>
+<li id="S6.I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">c.</span> 
+<div id="S6.I2.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S6.I2.ix3.p1.m1" class="ltx_Math" alttext="[7]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>7</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem12" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.5.12.</h3>
+<div id="S6.SS5.Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p">What do the sets <math id="S6.SS5.Thmtheorem12.p1.m1" class="ltx_Math" alttext="[1]_{1}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>1</mn></msub></math>, <math id="S6.SS5.Thmtheorem12.p1.m2" class="ltx_Math" alttext="[2]_{1}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>1</mn></msub></math>, <math id="S6.SS5.Thmtheorem12.p1.m3" class="ltx_Math" alttext="[-1]_{1}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mn>1</mn></msub></math> look like as lists of elements?</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem13" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.5.13.</h3>
+<div id="S6.SS5.Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p">Describe <math id="S6.SS5.Thmtheorem13.p1.m1" class="ltx_Math" alttext="[0]_{3},\,[1]_{3},\,[2]_{3},\,[4]_{3},\text{ and }[-2]_{3}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mn>3</mn></msub><mo rspace="0.337em">,</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>3</mn></msub><mo rspace="0.337em">,</mo><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>3</mn></msub><mo rspace="0.337em">,</mo><msub><mrow><mo stretchy="false">[</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><mn>3</mn></msub><mo>,</mo><mrow><mtext> and </mtext><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">]</mo></mrow><mn>3</mn></msub></mrow></mrow></math> as lists of elements.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem14" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.5.14.</h3>
+<div id="S6.SS5.Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S6.SS5.Thmtheorem14.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and <math id="S6.SS5.Thmtheorem14.p1.m2" class="ltx_Math" alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, <math id="S6.SS5.Thmtheorem14.p1.m3" class="ltx_Math" alttext="[a]_{n}=[b]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> if and only if <math id="S6.SS5.Thmtheorem14.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S6.SS5.Thmtheorem14.p1.m5" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem15" class="ltx_theorem ltx_theorem_corollary">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Corollary </span>6.5.15.</h3>
+<div id="S6.SS5.Thmtheorem15.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S6.SS5.Thmtheorem15.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and <math id="S6.SS5.Thmtheorem15.p1.m2" class="ltx_Math" alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, <math id="S6.SS5.Thmtheorem15.p1.m3" class="ltx_Math" alttext="[a]_{n}=[0]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> if and only if <math id="S6.SS5.Thmtheorem15.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S6.SS5.Thmtheorem15.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem16" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.5.16.</h3>
+<div id="S6.SS5.Thmtheorem16.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S6.SS5.Thmtheorem16.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and <math id="S6.SS5.Thmtheorem16.p1.m2" class="ltx_Math" alttext="a,b\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>, <math id="S6.SS5.Thmtheorem16.p1.m3" class="ltx_Math" alttext="[a]_{n}=[b]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> if and only if <math id="S6.SS5.Thmtheorem16.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S6.SS5.Thmtheorem16.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> have the same remainder when divided by <math id="S6.SS5.Thmtheorem16.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</div>
+</section>
+<section id="S6.SS5.SSS3" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.5.3 </span><span class="ltx_text" style="color:#800000;">Addition and Subtraction Modulo <math id="S6.SS5.SSS3.m1" class="ltx_Math" alttext="n" display="inline"><mi style="color:#800000;" mathcolor="#800000">n</mi></math></span>
+</h2>
+
+<div id="S6.SS5.SSS3.p1" class="ltx_para">
+<p class="ltx_p">We are now ready to define addition and multiplication modulo <math id="S6.SS5.SSS3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For a proof of the theorem below, use one or more of the theorems given above.</p>
+</div>
+<div id="S6.SS5.Thmtheorem17" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.5.17.</h3>
+<div id="S6.SS5.Thmtheorem17.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS5.Thmtheorem17.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and let <math id="S6.SS5.Thmtheorem17.p1.m2" class="ltx_Math" alttext="a_{1},a_{2},b_{1},b_{2}\in\mathbb{Z}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math>. If <math id="S6.SS5.Thmtheorem17.p1.m3" class="ltx_Math" alttext="[a_{1}]_{n}=[a_{2}]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> and <math id="S6.SS5.Thmtheorem17.p1.m4" class="ltx_Math" alttext="[b_{1}]_{n}=[b_{2}]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>b</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>, then</p>
+<ol id="S6.I3" class="ltx_enumerate">
+<li id="S6.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">a.</span> 
+<div id="S6.I3.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I3.ix1.p1.m1" class="ltx_Math" alttext="[a_{1}+b_{1}]_{n}=[a_{2}+b_{2}]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math></p>
+</div>
+</li>
+<li id="S6.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">b.</span> 
+<div id="S6.I3.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S6.I3.ix2.p1.m1" class="ltx_Math" alttext="[a_{1}\cdot b_{1}]_{n}=[a_{2}\cdot b_{2}]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S6.SS5.SSS3.p2" class="ltx_para">
+<p class="ltx_p">The previous theorem allows us to define addition and multiplication in <math id="S6.SS5.SSS3.p2.m1" class="ltx_Math" alttext="\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+<div id="S6.SS5.Thmtheorem18" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>6.5.18.</h3>
+<div id="S6.SS5.Thmtheorem18.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS5.Thmtheorem18.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. We define the sum and product of congruence classes in <math id="S6.SS5.Thmtheorem18.p1.m2" class="ltx_Math" alttext="\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></math> via</p>
+<table id="S6.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex16.m1" class="ltx_Math" alttext="[a]_{n}+[b]_{n}:=[a+b]_{n}\,\text{and}\,[a]_{n}\cdot[b]_{n}:=[a\cdot b]_{n}." display="block"><mrow><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>+</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>:=</mo><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>⁢</mo><mtext>and</mtext><mo lspace="0.170em">⁢</mo><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo rspace="0.055em" stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo rspace="0.222em">⋅</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>:=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS5.Thmtheorem19" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.5.19.</h3>
+<div id="S6.SS5.Thmtheorem19.p1" class="ltx_para">
+<p class="ltx_p">By our above definition, <math id="S6.SS5.Thmtheorem19.p1.m1" class="ltx_Math" alttext="[2]_{7}+[6]_{7}=[2+6]_{7}=[8]_{7}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>+</mo><msub><mrow><mo stretchy="false">[</mo><mn>6</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mn>2</mn><mo>+</mo><mn>6</mn></mrow><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>8</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math>. But we know that <math id="S6.SS5.Thmtheorem19.p1.m2" class="ltx_Math" alttext="[8]_{7}=[1]_{7}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mn>8</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math>, so <math id="S6.SS5.Thmtheorem19.p1.m3" class="ltx_Math" alttext="[2]_{7}+[6]_{7}=[1]_{7}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>+</mo><msub><mrow><mo stretchy="false">[</mo><mn>6</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math>. Similarly, <math id="S6.SS5.Thmtheorem19.p1.m4" class="ltx_Math" alttext="[2]_{7}\cdot[6]_{7}=[12]_{7}=[5]_{7}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mrow><mo stretchy="false">[</mo><mn>6</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>12</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS5.SSS3.p3" class="ltx_para">
+<p class="ltx_p">Addition and multiplication for
+<math id="S6.SS5.SSS3.p3.m1" class="ltx_Math" alttext="\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></math> has many familiar - and some not so familiar - properties. For example, addition and multiplication of congruence classes are both associative and commutative. However, it is possible for <math id="S6.SS5.SSS3.p3.m2" class="ltx_Math" alttext="[a]_{n}\cdot[b]_{n}=[0]_{n}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> even when <math id="S6.SS5.SSS3.p3.m3" class="ltx_Math" alttext="[a]_{n}\neq[0]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>≠</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> and <math id="S6.SS5.SSS3.p3.m4" class="ltx_Math" alttext="[b]_{n}\neq[0]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>≠</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>.
+Use induction to prove the statements in the theorem below:</p>
+</div>
+<div id="S6.SS5.Thmtheorem20" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.5.20.</h3>
+<div id="S6.SS5.Thmtheorem20.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS5.Thmtheorem20.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. For all <math id="S6.SS5.Thmtheorem20.p1.m2" class="ltx_Math" alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, if <math id="S6.SS5.Thmtheorem20.p1.m3" class="ltx_Math" alttext="[a_{1}]_{n},\,[a_{2}]_{n},\,\dots,\,[a_{k}]_{n}\in\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo rspace="0.337em">,</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo rspace="0.337em">,</mo><mi mathvariant="normal">…</mi><mo rspace="0.337em">,</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>∈</mo><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>, then</p>
+<ol id="S6.I4" class="ltx_enumerate">
+<li id="S6.I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">a.</span> 
+<div id="S6.I4.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I4.ix1.p1.m1" class="ltx_Math" alttext="[a_{1}]_{n}+[a_{2}]_{n}+\cdots+[a_{k}]_{n}=[a_{1}+a_{2}+\cdots+a_{k}]_{n}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>+</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>a</mi><mi>k</mi></msub></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>, and</p>
+</div>
+</li>
+<li id="S6.I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">b.</span> 
+<div id="S6.I4.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S6.I4.ix2.p1.m1" class="ltx_Math" alttext="[a_{1}]_{n}[a_{2}]_{n}\cdots[a_{k}]_{n}=[a_{1}a_{2}\cdots a_{k}]_{n}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mi>k</mi></msub></mrow><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+  <section id="S6.SS4.SSS4" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">6.4.4 </span><span class="ltx_text" style="color:#800000;">Computing with Modular Arithmetic</span>
+</h2>
+
+<div id="S6.SS4.SSS4.p1" class="ltx_para">
+<p class="ltx_p">The next result is a special case of statement (b) in the theorem above.</p>
+</div>
+<div id="S6.SS4.Thmtheorem1" class="ltx_theorem ltx_theorem_corollary">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Corollary </span>6.4.1.</h3>
+<div id="S6.SS4.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.SS4.Thmtheorem1.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. If <math id="S6.SS4.Thmtheorem1.p1.m2" class="ltx_Math" alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> and <math id="S6.SS4.Thmtheorem1.p1.m3" class="ltx_Math" alttext="k\in\mathbb{N}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, then <math id="S6.SS4.Thmtheorem1.p1.m4" class="ltx_Math" alttext="([a]_{n})^{k}=[a^{k}]_{n}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><msup><mi>a</mi><mi>k</mi></msup><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS4.Thmtheorem2" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>6.4.2.</h3>
+<div id="S6.SS4.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let’s compute <math id="S6.SS4.Thmtheorem2.p1.m1" class="ltx_Math" alttext="[8^{179}]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msup><mn>8</mn><mn>179</mn></msup><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math>. We see that</p>
+<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S6.Ex1.m1" class="ltx_Math" alttext="\displaystyle[8^{179}]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msup><mn>8</mn><mn>179</mn></msup><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex1.m2" class="ltx_Math" alttext="\displaystyle=([8]_{7})^{179}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">[</mo><mn>8</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo stretchy="false">)</mo></mrow><mn>179</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex2.m1" class="ltx_Math" alttext="\displaystyle=([1]_{7})^{179}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo stretchy="false">)</mo></mrow><mn>179</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex3.m1" class="ltx_Math" alttext="\displaystyle=[1^{179}]_{7}" display="inline"><mrow><mi></mi><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><msup><mn>1</mn><mn>179</mn></msup><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S6.Ex4.m1" class="ltx_Math" alttext="\displaystyle=[1]_{7}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS4.SSS4.p2" class="ltx_para">
+<p class="ltx_p">For Part (a) in the next problem, use the fact that <math id="S6.SS4.SSS4.p2.m1" class="ltx_Math" alttext="[6]_{7}=[-1]_{7}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mn>6</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math>. For Part (b), use the fact that <math id="S6.SS4.SSS4.p2.m2" class="ltx_Math" alttext="[2^{3}]_{7}=[1]_{7}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>3</mn></msup><mo stretchy="false">]</mo></mrow><mn>7</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></mrow></math>.</p>
+</div>
+<div id="S6.SS4.Thmtheorem3" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.4.3.</h3>
+<div id="S6.SS4.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">For each of the following, find a number <math id="S6.SS4.Thmtheorem3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> with <math id="S6.SS4.Thmtheorem3.p1.m2" class="ltx_Math" alttext="0\leq a\leq 6" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>a</mi><mo>≤</mo><mn>6</mn></mrow></math> such that the given quantity is equal to <math id="S6.SS4.Thmtheorem3.p1.m3" class="ltx_Math" alttext="[a]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math>.</p>
+<ol id="S6.I1" class="ltx_enumerate">
+<li id="S6.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">a.</span> 
+<div id="S6.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I1.ix1.p1.m1" class="ltx_Math" alttext="[6^{179}]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msup><mn>6</mn><mn>179</mn></msup><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></p>
+</div>
+</li>
+<li id="S6.I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">b.</span> 
+<div id="S6.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S6.I1.ix2.p1.m1" class="ltx_Math" alttext="[2^{300}]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>300</mn></msup><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></p>
+</div>
+</li>
+<li id="S6.I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">c.</span> 
+<div id="S6.I1.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S6.I1.ix3.p1.m1" class="ltx_Math" alttext="[2^{301}+5]_{7}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mrow><msup><mn>2</mn><mn>301</mn></msup><mo>+</mo><mn>5</mn></mrow><mo stretchy="false">]</mo></mrow><mn>7</mn></msub></math></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S6.SS4.Thmtheorem4" class="ltx_theorem ltx_theorem_problem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#333300;">  Problem </span>6.4.4.</h3>
+<div id="S6.SS4.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Find <math id="S6.SS4.Thmtheorem4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S6.SS4.Thmtheorem4.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> such that <math id="S6.SS4.Thmtheorem4.p1.m3" class="ltx_Math" alttext="[a]_{6}\cdot[b]_{6}=[0]_{6}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mn>6</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mn>6</mn></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mn>6</mn></msub></mrow></math> but <math id="S6.SS4.Thmtheorem4.p1.m4" class="ltx_Math" alttext="[a]_{6}\neq[0]_{6}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mn>6</mn></msub><mo>≠</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mn>6</mn></msub></mrow></math> and <math id="S6.SS4.Thmtheorem4.p1.m5" class="ltx_Math" alttext="[b]_{6}\neq[0]_{6}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mn>6</mn></msub><mo>≠</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mn>6</mn></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS4.Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.4.5.</h3>
+<div id="S6.SS4.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S6.SS4.Thmtheorem5.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="S6.SS4.Thmtheorem5.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is not prime, then there exists <math id="S6.SS4.Thmtheorem5.p1.m3" class="ltx_Math" alttext="[a]_{n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></math>, <math id="S6.SS4.Thmtheorem5.p1.m4" class="ltx_Math" alttext="[b]_{n}\in\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>∈</mo><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math> such that <math id="S6.SS4.Thmtheorem5.p1.m5" class="ltx_Math" alttext="[a]_{n}\cdot[b]_{n}=[0]_{n}" display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> while <math id="S6.SS4.Thmtheorem5.p1.m6" class="ltx_Math" alttext="[a]_{n}\neq[0]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>≠</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math> and <math id="S6.SS4.Thmtheorem5.p1.m7" class="ltx_Math" alttext="[b]_{n}\neq[0]_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msub><mo>≠</mo><msub><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="S6.SS4.SSS4.p3" class="ltx_para">
+<p class="ltx_p">We finish this section with the proof of a popular divisibility rule.</p>
+</div>
+<div id="S6.SS4.Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>6.4.6.</h3>
+<div id="S6.SS4.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S6.SS4.Thmtheorem6.p1.m1" class="ltx_Math" alttext="m\in\mathbb{N}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that</p>
+<table id="S6.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex5.m1" class="ltx_Math" alttext="m=a_{k}10^{k}+a_{k-1}10^{k-1}+\cdots+a_{1}10+a_{0}," display="block"><mrow><mrow><mi>m</mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mn>10</mn><mi>k</mi></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mn>10</mn><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mn>10</mn></mrow><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="S6.SS4.Thmtheorem6.p1.m2" class="ltx_Math" alttext="a_{k},a_{k-1},\dots,a_{1},a_{0}\in\{0,1,\dots,9\}" display="inline"><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow></mrow></math> (i.e., <math id="S6.SS4.Thmtheorem6.p1.m3" class="ltx_Math" alttext="a_{k},a_{k-1},\dots,a_{1},a_{0}" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></math> are the digits of <math id="S6.SS4.Thmtheorem6.p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>), then</p>
+<table id="S6.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex6.m1" class="ltx_Math" alttext="[m]_{3}=[a_{k}+a_{k-1}+\cdots+a_{1}+a_{0}]_{3}." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>m</mi><mo stretchy="false">]</mo></mrow><mn>3</mn></msub><mo>=</mo><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><mo stretchy="false">]</mo></mrow><mn>3</mn></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="S6.SS4.Thmtheorem7" class="ltx_theorem ltx_theorem_corollary">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Corollary </span>6.4.7.</h3>
+<div id="S6.SS4.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">An integer is divisible by 3 if any only if the sum of its digits is divisible by 3.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
