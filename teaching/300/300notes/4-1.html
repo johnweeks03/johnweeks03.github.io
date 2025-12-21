@@ -1,0 +1,573 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4 Sets</title>
+<!--Generated on Sun Dec 21 03:28:45 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S4" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span><span class="ltx_text" style="color:#800000;">Sets</span>
+</h1>
+
+<section id="S4.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1 </span><span class="ltx_text" style="color:#800000;">The Language of Sets</span>
+</h2>
+
+<div id="S4.SS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S4.I1" class="ltx_itemize">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Discover the fundamental building blocks of mathematics</p>
+</div>
+</li>
+<li id="S4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Create examples involving important sets in mathematical proof</p>
+</div>
+</li>
+<li id="S4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Learn DeMorgan’s Laws and distributive properties of sets</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.SS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">From this point onward we will begin setting this course up as a class in <span class="ltx_text ltx_font_italic">formal mathematics</span>. In your classes before we have been focused nearly entirely on <span class="ltx_text ltx_font_italic">examples</span>. From here on we will focus much more on the <span class="ltx_text ltx_font_italic">definitions</span>, <span class="ltx_text ltx_font_italic">theorems</span>, and <span class="ltx_text ltx_font_italic">proofs</span>. This does not mean that examples have no place in mathematics - we will still use them to get an idea of what our definitions and theorems are all about! But these will take a backseat to the more overarching concepts in each section.</p>
+</div>
+<div id="S4.SS1.p3" class="ltx_para">
+<p class="ltx_p">Here are some tips about how to navigate a rigorous class in mathematics:</p>
+<ul id="S4.I2" class="ltx_itemize">
+<li id="S4.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remember your fundamentals.</span> Everything you have learned up to this point will assist you. You will use several different kinds of proving techniques in each day of lecture.</p>
+</div>
+</li>
+<li id="S4.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">When in doubt, come up with an example.</span> If you are uncertain about what a definition says or what a theorem means, come up with a few different examples and see if you can make sense of what the definition/theorem is saying. As you continue to strengthen in mathematics, try to “break” the theorems you see and come up with examples that might make it untrue. (This will be difficult now, so just use common examples for now.)</p>
+</div>
+</li>
+<li id="S4.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I2.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Read along with others in the class.</span> You will see that the textbook and the notes supply two different perspectives on the same concepts, but often two perspectives is not enough to get a full understanding. You need to hear from your peers and get their perspective. Likewise, your peers need to hear from you. Discuss mathematics with one another, and this will certainly make you stronger.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">We begin by discussing <span class="ltx_text ltx_font_italic">sets</span>, which are the foundational tool that all of modern-day mathematics is built upon. Numbers, functions, rectangles, polygons, vectors, and more can all be written in terms of sets and their elements.</p>
+</div>
+<div id="S4.SS1.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.1.1.</h3>
+<div id="S4.SS1.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">set</span> is a collection of objects called <span class="ltx_text ltx_font_bold">elements</span>. If <math id="S4.SS1.Thmtheorem1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a set and <math id="S4.SS1.Thmtheorem1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is an element of <math id="S4.SS1.Thmtheorem1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, we write <math id="S4.SS1.Thmtheorem1.p1.m4" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> (LaTeX <math id="S4.SS1.Thmtheorem1.p1.m5" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>in). Otherwise, we write <math id="S4.SS1.Thmtheorem1.p1.m6" class="ltx_Math" alttext="x\notin A" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>A</mi></mrow></math> (LaTeX <math id="S4.SS1.Thmtheorem1.p1.m7" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>notin).</p>
+</div>
+<div id="S4.SS1.Thmtheorem1.p2" class="ltx_para">
+<p class="ltx_p">The set containing no elements is called the <span class="ltx_text ltx_font_bold">empty set</span> and is denoted by either <math id="S4.SS1.Thmtheorem1.p2.m1" class="ltx_Math" alttext="\varnothing" display="inline"><mi mathvariant="normal">∅</mi></math> (LaTeX <math id="S4.SS1.Thmtheorem1.p2.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>varnothing) or <math id="S4.SS1.Thmtheorem1.p2.m3" class="ltx_Math" alttext="\{\}" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">}</mo></mrow></math>. Any set that contains at least one element is referred to as a <span class="ltx_text ltx_font_bold">nonempty set</span>.</p>
+</div>
+</div>
+<div id="S4.SS1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">The most common way to express sets is in terms of <span class="ltx_text ltx_font_bold">set-builder notation</span>:</p>
+<table id="S4.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex1.m1" class="ltx_Math" alttext="S=\{x\in A\mid P(x)\}," display="block"><mrow><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="S4.SS1.p4.m1" class="ltx_Math" alttext="P(x)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is some predicate statement involving <math id="S4.SS1.p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+<div id="S4.SS1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">The first part <math id="S4.SS1.p5.m1" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> denote what type of <math id="S4.SS1.p5.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is being considered. For example, the set <math id="S4.SS1.p5.m3" class="ltx_Math" alttext="\{x\in\mathbb{N}|x\text{ is even and }x\geq 8\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo lspace="0em" rspace="0em">|</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mtext> is even and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>≥</mo><mn>8</mn></mrow><mo stretchy="false">}</mo></mrow></math> requires that the number <math id="S4.SS1.p5.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> be a natural number before continuing to the set’s conditions.</p>
+</div>
+<div id="S4.SS1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">The second part puts conditions on the <math id="S4.SS1.p6.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> being considered. In the set <math id="S4.SS1.p6.m2" class="ltx_Math" alttext="\{x\in\mathbb{N}|x\text{ is even and }x\geq 8\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo lspace="0em" rspace="0em">|</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mtext> is even and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>≥</mo><mn>8</mn></mrow><mo stretchy="false">}</mo></mrow></math>, the conditions are two-fold: <math id="S4.SS1.p6.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> must be even, and <math id="S4.SS1.p6.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> must be a number greater than or equal to 8. This is a more formal notation for the same set, using what is known as <span class="ltx_text ltx_font_bold">roster notation</span>:</p>
+<table id="S4.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex2.m1" class="ltx_Math" alttext="\{8,10,12,14,...\}" display="block"><mrow><mo stretchy="false">{</mo><mn>8</mn><mo>,</mo><mn>10</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>14</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This notation supposes a pattern that is not that is not clarified in the set’s definition. <span class="ltx_text ltx_font_italic">It is easier to prove statements about a set when that set has already been written in set-builder notation</span> (such as the rational numbers below).</p>
+</div>
+<div id="S4.SS1.p7" class="ltx_para">
+<p class="ltx_p">The following sets are very common in mathematics:</p>
+<ul id="S4.I3" class="ltx_itemize">
+<li id="S4.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I3.i1.p1.m1" class="ltx_Math" alttext="\mathbb{N}:=\{1,2,3,\dots\}" display="inline"><mrow><mi>ℕ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math> is the set of natural numbers. Some mathematicians consider 0 to be a natural number; we will not.</p>
+</div>
+</li>
+<li id="S4.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I3.i2.p1.m1" class="ltx_Math" alttext="\mathbb{Z}:=\{\dots,-3,-2,-1,0,1,2,3,\dots\}" display="inline"><mrow><mi>ℤ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math> is the set of integers.</p>
+</div>
+</li>
+<li id="S4.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I3.i3.p1.m1" class="ltx_Math" alttext="\mathbb{Q}:=\{a/b\mid a\in\mathbb{Z},b\in\mathbb{N}\}" display="inline"><mrow><mi>ℚ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>/</mo><mi>b</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>∈</mo><mi>ℕ</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is the set of rational numbers. (Note that my writing of <math id="S4.I3.i3.p1.m2" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> differs from the book’s. However, the two sets are identical. There are multiple ways to write the same set. In a while we will prove these two sets are the same.)</p>
+</div>
+</li>
+<li id="S4.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I3.i4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S4.I3.i4.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> denotes the set of real numbers.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.SS1.Thmtheorem2" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.2.</h3>
+<div id="S4.SS1.Thmtheorem2.p1" class="ltx_para">
+<ol id="S4.I4" class="ltx_enumerate">
+<li id="S4.I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I4.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Use roster notation to provide a description of the elements of the set below.</p>
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" alttext="\left\{m\in\mathbb{R}\,\middle|\,m=1-\frac{1}{n}\text{ where }n\in\mathbb{N}%
+\right\}." display="block"><mrow><mrow><mo>{</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo lspace="0.170em" rspace="0.170em" stretchy="true">|</mo><mrow><mi>m</mi><mo>=</mo><mrow><mn>1</mn><mo>−</mo><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>⁢</mo><mtext> where </mtext><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo>}</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S4.I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I4.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Write the following set description in terms of set-builder notation: “the set of all even integers”. (There is more than one correct answer… can you find multiple answers?)</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS1.p8" class="ltx_para ltx_noindent">
+<p class="ltx_p">We can make sets out of much more than numbers - we can take sets of vectors, functions, variables, and any combination of these three! Sometimes we will refer to sets using arbitrary variables <math id="S4.SS1.p8.m1" class="ltx_Math" alttext="a,b,c,\dots" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> to denote that the elements can be of any variety.</p>
+</div>
+<div id="S4.SS1.p9" class="ltx_para">
+<p class="ltx_p">When we are discussing sets containing numbers, we will be specific: we will say they are <span class="ltx_text ltx_font_bold">subsets</span> of any of the sets we have discussed above.</p>
+</div>
+<div id="S4.SS1.Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.1.3.</h3>
+<div id="S4.SS1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S4.SS1.Thmtheorem3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS1.Thmtheorem3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are sets, then we say that <math id="S4.SS1.Thmtheorem3.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a <span class="ltx_text ltx_font_bold">subset</span> of <math id="S4.SS1.Thmtheorem3.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, written <math id="S4.SS1.Thmtheorem3.p1.m5" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> (LaTeX <math id="S4.SS1.Thmtheorem3.p1.m6" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>subseteq) provided that every element of <math id="S4.SS1.Thmtheorem3.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an element of <math id="S4.SS1.Thmtheorem3.p1.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</div>
+<div id="S4.SS1.p10" class="ltx_para">
+<p class="ltx_p">For the purposes of learning about what sets can do, we will stick to numbers for now. Notice that each of the intervals defined below are subsets of the real numbers (how can you tell?):</p>
+</div>
+<div id="S4.SS1.Thmtheorem4" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.1.4.</h3>
+<div id="S4.SS1.Thmtheorem4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For <math id="S4.SS1.Thmtheorem4.p1.m1" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> with <math id="S4.SS1.Thmtheorem4.p1.m2" class="ltx_Math" alttext="a&lt;b" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math>, we define the following sets, referred to as <span class="ltx_text ltx_font_bold">intervals</span>.</p>
+<ol id="S4.I5" class="ltx_enumerate">
+<li id="S4.I5.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I5.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I5.ix1.p1.m1" class="ltx_Math" alttext="(a,b):=\{x\in\mathbb{R}\mid a&lt;x&lt;b\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>b</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I5.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I5.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I5.ix2.p1.m1" class="ltx_Math" alttext="[a,b]:=\{x\in\mathbb{R}\mid a\leq x\leq b\}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≤</mo><mi>x</mi><mo>≤</mo><mi>b</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I5.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I5.ix3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I5.ix3.p1.m1" class="ltx_Math" alttext="[a,b):=\{x\in\mathbb{R}\mid a\leq x&lt;b\}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mi>b</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I5.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="S4.I5.ix4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I5.ix4.p1.m1" class="ltx_Math" alttext="(a,\infty):=\{x\in\mathbb{R}\mid a&lt;x\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>a</mi><mo>&lt;</mo><mi>x</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I5.ix5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(e)</span> 
+<div id="S4.I5.ix5.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I5.ix5.p1.m1" class="ltx_Math" alttext="(-\infty,b):=\{x\in\mathbb{R}\mid x&lt;b\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>&lt;</mo><mi>b</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="S4.I5.ix6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(f)</span> 
+<div id="S4.I5.ix6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S4.I5.ix6.p1.m1" class="ltx_Math" alttext="(-\infty,\infty):=\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mi>ℝ</mi></mrow></math></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Intervals of the form <math id="S4.SS1.Thmtheorem4.p1.m3" class="ltx_Math" alttext="(a,b),(-\infty,b),(a,\infty)," display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math> and <math id="S4.SS1.Thmtheorem4.p1.m4" class="ltx_Math" alttext="(-\infty,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math> are called <span class="ltx_text ltx_font_bold">open intervals</span> while <math id="S4.SS1.Thmtheorem4.p1.m5" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> is referred to as a <span class="ltx_text ltx_font_bold">closed interval</span>.</p>
+</div>
+<div id="S4.SS1.Thmtheorem4.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">bounded interval</span> is any interval of the form <math id="S4.SS1.Thmtheorem4.p2.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>, <math id="S4.SS1.Thmtheorem4.p2.m2" class="ltx_Math" alttext="[a,b)" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>, <math id="S4.SS1.Thmtheorem4.p2.m3" class="ltx_Math" alttext="(a,b]" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>, and <math id="S4.SS1.Thmtheorem4.p2.m4" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+<div id="S4.SS1.Thmtheorem4.p3" class="ltx_para">
+<p class="ltx_p">For bounded intervals, <math id="S4.SS1.Thmtheorem4.p3.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S4.SS1.Thmtheorem4.p3.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are called the <span class="ltx_text ltx_font_bold">endpoints</span> of the interval.</p>
+</div>
+</div>
+<div id="S4.SS1.p11" class="ltx_para">
+<p class="ltx_p">Here and elsewhere, whenever we write intervals with both <math id="S4.SS1.p11.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S4.SS1.p11.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> as above, we will assume <math id="S4.SS1.p11.m3" class="ltx_Math" alttext="a&lt;b" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS1.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.5.</h3>
+<div id="S4.SS1.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Give three meaningfully different examples of infinite sets that are <span class="ltx_text ltx_font_italic">not</span> intervals.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<section id="S4.SS1.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.1.1 </span>Proving with Sets</h4>
+
+<div id="S4.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">We are now ready to begin proving with sets. For the rest of this subsection, let’s make the following definitions for subsets <math id="S4.SS1.SSS1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="S4.SS1.SSS1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and <math id="S4.SS1.SSS1.p1.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> of the real numbers:</p>
+<table id="S4.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex4.m1" class="ltx_Math" alttext="A=[-3,-1),\quad B=(-2.5,2),\quad C=(-2,0]." display="block"><mrow><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2.5</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.SS1.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.6.</h3>
+<div id="S4.SS1.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="S4.SS1.Thmtheorem6.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> a subset of <math id="S4.SS1.Thmtheorem6.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>? Explain your reasoning using a number line.</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS1.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">In future problems we will be unable to use a number line to neatly show one set is a subset of another. We need a way to write a formal proof for this statement.</p>
+</div>
+<div id="S4.SS1.SSS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A Skeleton Version of a Direct Proof for <math id="S4.SS1.SSS1.p3.m1" class="ltx_Math" alttext="C\subseteq B" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</span></p>
+</div>
+<div id="S4.SS1.SSS1.p4" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Guidelines</span></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Example</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Let <math id="S4.SS1.SSS1.p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> be an element of <math id="S4.SS1.SSS1.p4.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Assume that <math id="S4.SS1.SSS1.p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is an element of <math id="S4.SS1.SSS1.p4.m4" class="ltx_Math" alttext="(-2,0]" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Use definitions to describe relevant properties of <math id="S4.SS1.SSS1.p4.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. (There is sometimes more than one way to do this.)</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Then <math id="S4.SS1.SSS1.p4.m6" class="ltx_Math" alttext="-2&lt;x\leq 0" display="inline"><mrow><mrow><mo>−</mo><mn>2</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>0</mn></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">(Recommended) State what you need to show in order to conclude <math id="S4.SS1.SSS1.p4.m7" class="ltx_Math" alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>.</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">We want to show that <math id="S4.SS1.SSS1.p4.m8" class="ltx_Math" alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>, or that <math id="S4.SS1.SSS1.p4.m9" class="ltx_Math" alttext="-2.5&lt;x&lt;2" display="inline"><mrow><mrow><mo>−</mo><mn>2.5</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Connect the two pieces: what you have (<math id="S4.SS1.SSS1.p4.m10" class="ltx_Math" alttext="x\in C" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow></math>) and what you need (<math id="S4.SS1.SSS1.p4.m11" class="ltx_Math" alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>).</span>
+</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">???</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Conclude <math id="S4.SS1.SSS1.p4.m12" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<span class="ltx_inline-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<span class="ltx_p">Since <math id="S4.SS1.SSS1.p4.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> was an arbitrary element of <math id="S4.SS1.SSS1.p4.m14" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and was found to also be in <math id="S4.SS1.SSS1.p4.m15" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, we may conclude that <math id="S4.SS1.SSS1.p4.m16" class="ltx_Math" alttext="C\subseteq B" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>B</mi></mrow></math>, as desired.</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S4.SS1.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.7.</h3>
+<div id="S4.SS1.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Fill in the blank box in the skeleton version for <math id="S4.SS1.Thmtheorem7.p1.m1" class="ltx_Math" alttext="C\subseteq B" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>B</mi></mrow></math> to complete the proof of the statement from Example 4.1.6.</p>
+</div>
+</div>
+  <div class="small-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS1.SSS1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">You may notice that this models proving a conditional proposition using direct methods. This leads to the question: <span class="ltx_text ltx_font_italic">is there a version of the contrapositive for direct proofs for sets?</span> We can absolutely say <span class="ltx_text ltx_font_italic">yes</span>!</p>
+</div>
+<div id="S4.SS1.SSS1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">To do this, we have to understand what it means to <span class="ltx_text ltx_font_italic">not</span> be in a set. Say we are <span class="ltx_text ltx_font_italic">not</span> in the set <math id="S4.SS1.SSS1.p6.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> from the previous page. What are examples of elements <span class="ltx_text ltx_font_italic">not</span> in <math id="S4.SS1.SSS1.p6.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>? Certainly positive numbers are not in <math id="S4.SS1.SSS1.p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. But what about vectors and functions? Those aren’t in <math id="S4.SS1.SSS1.p6.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> either, right?</p>
+</div>
+<div id="S4.SS1.SSS1.p7" class="ltx_para">
+<p class="ltx_p">We must rein in our <span class="ltx_text ltx_font_bold">universe of discourse</span> to be specifically about <span class="ltx_text ltx_font_italic">real numbers</span> when considering elements not in <math id="S4.SS1.SSS1.p7.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. This leads us to our next definition:</p>
+</div>
+<div id="S4.SS1.Thmtheorem8" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.1.8.</h3>
+<div id="S4.SS1.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS1.Thmtheorem8.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set in some universe of discourse <math id="S4.SS1.Thmtheorem8.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. Then the <span class="ltx_text ltx_font_bold">complement</span> of <math id="S4.SS1.Thmtheorem8.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> (relative to <math id="S4.SS1.Thmtheorem8.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>) is the set</p>
+<table id="S4.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex5.m1" class="ltx_Math" alttext="A^{c}:=U\setminus A=\{x\in U\mid x\notin A\}." display="block"><mrow><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>:=</mo><mrow><mi>U</mi><mo>∖</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∉</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In LaTeX, <math id="S4.SS1.Thmtheorem8.p1.m5" class="ltx_Math" alttext="\setminus" display="inline"><mo>∖</mo></math> is written as <math id="S4.SS1.Thmtheorem8.p1.m6" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>setminus.</p>
+</div>
+</div>
+<div id="S4.SS1.Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>4.1.9.</h3>
+<div id="S4.SS1.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">Prove that, if <math id="S4.SS1.Thmtheorem9.p1.m1" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>, then <math id="S4.SS1.Thmtheorem9.p1.m2" class="ltx_Math" alttext="B^{c}\subseteq A^{c}" display="inline"><mrow><msup><mi>B</mi><mi>c</mi></msup><mo>⊆</mo><msup><mi>A</mi><mi>c</mi></msup></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS1.SSS1.p8" class="ltx_para ltx_noindent">
+<p class="ltx_p">There is also a version of biconditional proof: if we show that <math id="S4.SS1.SSS1.p8.m1" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> and <math id="S4.SS1.SSS1.p8.m2" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>, then both sets are <span class="ltx_text ltx_font_bold">equal</span>!</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS1.SSS1.p9" class="ltx_para ltx_noindent">
+<p class="ltx_p">It is just as important that we learn how to show that something is <span class="ltx_text ltx_font_italic">not</span> a subset as we show something is a subset. To do this, we observe how the definition of “is a subset of” can be written using quantifiers.</p>
+</div>
+<div id="S4.SS1.SSS1.p10" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p">We say <math id="S4.SS1.SSS1.p10.m1" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> if every element of <math id="S4.SS1.SSS1.p10.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an element of <math id="S4.SS1.SSS1.p10.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</blockquote>
+<table id="S4.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex6.m1" class="ltx_Math" alttext="A\subseteq B\iff(\forall x\in A)(x\in B)." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><mo stretchy="false">⇔</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This means that to say that something is <span class="ltx_text ltx_font_italic">not</span> a subset of <math id="S4.SS1.SSS1.p10.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> entails negating this statement:</p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex7.m1" class="ltx_Math" alttext="A\not\subseteq B\iff(\exists x\in A)(x\notin B)." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow><mo stretchy="false">⇔</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∉</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Specifically, to show that something is <span class="ltx_text ltx_font_italic">not</span> a subset is a “there exists” statement, not a “for all” statement!</p>
+</div>
+<div id="S4.SS1.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.10.</h3>
+<div id="S4.SS1.Thmtheorem10.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S4.SS1.Thmtheorem10.p1.m1" class="ltx_Math" alttext="A=\{n\in\mathbb{Z}\mid(\exists k\in\mathbb{Z})(n=4k+1)\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∃</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S4.SS1.Thmtheorem10.p1.m2" class="ltx_Math" alttext="B=\{n\in\mathbb{Z}\mid n\text{ is odd}\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>n</mi><mo>⁢</mo><mtext> is odd</mtext></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S4.SS1.Thmtheorem10.p2" class="ltx_para">
+<p class="ltx_p">Show that <math id="S4.SS1.Thmtheorem10.p2.m1" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> but <math id="S4.SS1.Thmtheorem10.p2.m2" class="ltx_Math" alttext="B\not\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊈</mo><mi>A</mi></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS1.Thmtheorem11" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.11.</h3>
+<div id="S4.SS1.Thmtheorem11.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">For each of the set operations given below, describe the set using the Venn diagram provided.</p>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S4.SS1.Thmtheorem12" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.1.12.</h3>
+<div id="S4.SS1.Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS1.Thmtheorem12.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS1.Thmtheorem12.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be sets in some universe of discourse <math id="S4.SS1.Thmtheorem12.p1.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.</p>
+<ol id="S4.I6" class="ltx_enumerate">
+<li id="S4.I6.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I6.ix1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">union</span> <math id="S4.I6.ix1.p1.m1" class="ltx_Math" alttext="\cup" display="inline"><mo>∪</mo></math> (LaTeX <math id="S4.I6.ix1.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>cup) of the sets <math id="S4.I6.ix1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.I6.ix1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is</p>
+<table id="S4.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex8.m1" class="ltx_Math" alttext="A\cup B:=\{x\in U\mid x\in A\text{ or }x\in B\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> or </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S4.I6.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I6.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">intersection</span> <math id="S4.I6.ix2.p1.m1" class="ltx_Math" alttext="\cap" display="inline"><mo>∩</mo></math> (LaTeX <math id="S4.I6.ix2.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>cap) of the sets <math id="S4.I6.ix2.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.I6.ix2.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is</p>
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex9.m1" class="ltx_Math" alttext="A\cap B:=\{x\in U\mid x\in A\text{ and }x\in B\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="S4.I6.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S4.I6.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">set difference</span> <math id="S4.I6.ix3.p1.m1" class="ltx_Math" alttext="A\setminus B" display="inline"><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow></math> of the sets <math id="S4.I6.ix3.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.I6.ix3.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex10.m1" class="ltx_Math" alttext="A\setminus B:=\{x\in U\mid x\in A\text{ and }x\notin B\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∉</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S4.SS1.Thmtheorem11.p2" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S4.SS1.Thmtheorem11.pic1" class="ltx_picture ltx_centering" height="158.03" overflow="visible" version="1.1" viewBox="0 0 217.09 158.03" width="217.09"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,158.03) matrix(1 0 0 -1 0 0) translate(79.02,0) translate(0,79.02)" fill="#000000" stroke="#000000" stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -78.74 M -78.74 -78.74 L -78.74 78.74 L 137.8 78.74 L 137.8 -78.74 Z M 137.8 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -5.19 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.75em;--fo_height:0.68em;--fo_depth :0em;" width="10.38" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.Thmtheorem11.pic1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span></span></foreignObject></g><path style="fill:none" d="M 0 0 M 59.06 0 C 59.06 32.62 32.62 59.06 0 59.06 C -32.62 59.06 -59.06 32.62 -59.06 0 C -59.06 -32.62 -32.62 -59.06 0 -59.06 C 32.62 -59.06 59.06 -32.62 59.06 0 Z M 0 0 M 59.06 0 M 118.11 0 C 118.11 32.62 91.67 59.06 59.06 59.06 C 26.44 59.06 0 32.62 0 0 C 0 -32.62 26.44 -59.06 59.06 -59.06 C 91.67 -59.06 118.11 -32.62 118.11 0 Z M 59.06 0"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 53.46 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.81em;--fo_height:0.68em;--fo_depth :0em;" width="11.19" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.Thmtheorem11.pic1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></span></span></foreignObject></g></g></svg></span><span class="ltx_inline-block"><svg id="S4.SS1.Thmtheorem11.pic2" class="ltx_picture ltx_centering" height="158.03" overflow="visible" version="1.1" viewBox="0 0 217.09 158.03" width="217.09"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,158.03) matrix(1 0 0 -1 0 0) translate(79.02,0) translate(0,79.02)" fill="#000000" stroke="#000000" stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -78.74 M -78.74 -78.74 L -78.74 78.74 L 137.8 78.74 L 137.8 -78.74 Z M 137.8 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -5.19 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.75em;--fo_height:0.68em;--fo_depth :0em;" width="10.38" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.Thmtheorem11.pic2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span></span></foreignObject></g><path style="fill:none" d="M 0 0 M 59.06 0 C 59.06 32.62 32.62 59.06 0 59.06 C -32.62 59.06 -59.06 32.62 -59.06 0 C -59.06 -32.62 -32.62 -59.06 0 -59.06 C 32.62 -59.06 59.06 -32.62 59.06 0 Z M 0 0 M 59.06 0 M 118.11 0 C 118.11 32.62 91.67 59.06 59.06 59.06 C 26.44 59.06 0 32.62 0 0 C 0 -32.62 26.44 -59.06 59.06 -59.06 C 91.67 -59.06 118.11 -32.62 118.11 0 Z M 59.06 0"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 53.46 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.81em;--fo_height:0.68em;--fo_depth :0em;" width="11.19" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.Thmtheorem11.pic2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></span></span></foreignObject></g></g></svg></span><span class="ltx_inline-block"><svg id="S4.SS1.Thmtheorem11.pic3" class="ltx_picture ltx_centering" height="158.03" overflow="visible" version="1.1" viewBox="0 0 217.09 158.03" width="217.09"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,158.03) matrix(1 0 0 -1 0 0) translate(79.02,0) translate(0,79.02)" fill="#000000" stroke="#000000" stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -78.74 M -78.74 -78.74 L -78.74 78.74 L 137.8 78.74 L 137.8 -78.74 Z M 137.8 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -5.19 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.75em;--fo_height:0.68em;--fo_depth :0em;" width="10.38" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.Thmtheorem11.pic3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span></span></foreignObject></g><path style="fill:none" d="M 0 0 M 59.06 0 C 59.06 32.62 32.62 59.06 0 59.06 C -32.62 59.06 -59.06 32.62 -59.06 0 C -59.06 -32.62 -32.62 -59.06 0 -59.06 C 32.62 -59.06 59.06 -32.62 59.06 0 Z M 0 0 M 59.06 0 M 118.11 0 C 118.11 32.62 91.67 59.06 59.06 59.06 C 26.44 59.06 0 32.62 0 0 C 0 -32.62 26.44 -59.06 59.06 -59.06 C 91.67 -59.06 118.11 -32.62 118.11 0 Z M 59.06 0"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 53.46 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.81em;--fo_height:0.68em;--fo_depth :0em;" width="11.19" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.Thmtheorem11.pic3.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></span></span></foreignObject></g></g></svg></span>
+</div>
+</div>
+</div>
+<div id="S4.SS1.Thmtheorem13" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.13.</h3>
+<div id="S4.SS1.Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p">Fill in the Venn diagrams below to represent <math id="S4.SS1.Thmtheorem13.p1.m1" class="ltx_Math" alttext="(A\cup B)^{c}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mi>c</mi></msup></math> and <math id="S4.SS1.Thmtheorem13.p1.m2" class="ltx_Math" alttext="A^{c}\cap B^{c}" display="inline"><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S4.SS1.SSS1.p11" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S4.SS1.SSS1.pic1" class="ltx_picture ltx_centering" height="158.03" overflow="visible" version="1.1" viewBox="0 0 217.09 158.03" width="217.09"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,158.03) matrix(1 0 0 -1 0 0) translate(79.02,0) translate(0,79.02)" fill="#000000" stroke="#000000" stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -78.74 M -78.74 -78.74 L -78.74 78.74 L 137.8 78.74 L 137.8 -78.74 Z M 137.8 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -5.19 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.75em;--fo_height:0.68em;--fo_depth :0em;" width="10.38" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.SSS1.pic1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span></span></foreignObject></g><path style="fill:none" d="M 0 0 M 59.06 0 C 59.06 32.62 32.62 59.06 0 59.06 C -32.62 59.06 -59.06 32.62 -59.06 0 C -59.06 -32.62 -32.62 -59.06 0 -59.06 C 32.62 -59.06 59.06 -32.62 59.06 0 Z M 0 0 M 59.06 0 M 118.11 0 C 118.11 32.62 91.67 59.06 59.06 59.06 C 26.44 59.06 0 32.62 0 0 C 0 -32.62 26.44 -59.06 59.06 -59.06 C 91.67 -59.06 118.11 -32.62 118.11 0 Z M 59.06 0"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 53.46 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.81em;--fo_height:0.68em;--fo_depth :0em;" width="11.19" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.SSS1.pic1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></span></span></foreignObject></g></g></svg></span>
+<p class="ltx_p ltx_align_center"><math id="S4.SS1.SSS1.m1" class="ltx_Math" alttext="(A\cup B)^{c}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mi>c</mi></msup></math></p>
+</div>
+</div>
+<div class="ltx_logical-block ltx_minipage ltx_align_middle" style="width:169.1pt;">
+<div id="S4.SS1.SSS1.p12" class="ltx_para">
+<span class="ltx_inline-block"><svg id="S4.SS1.SSS1.pic2" class="ltx_picture ltx_centering" height="158.03" overflow="visible" version="1.1" viewBox="0 0 217.09 158.03" width="217.09"><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="translate(0,158.03) matrix(1 0 0 -1 0 0) translate(79.02,0) translate(0,79.02)" fill="#000000" stroke="#000000" stroke-width="0.4pt"><path style="fill:none" d="M -78.74 -78.74 M -78.74 -78.74 L -78.74 78.74 L 137.8 78.74 L 137.8 -78.74 Z M 137.8 78.74"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 -5.19 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.75em;--fo_height:0.68em;--fo_depth :0em;" width="10.38" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.SSS1.pic2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span></span></foreignObject></g><path style="fill:none" d="M 0 0 M 59.06 0 C 59.06 32.62 32.62 59.06 0 59.06 C -32.62 59.06 -59.06 32.62 -59.06 0 C -59.06 -32.62 -32.62 -59.06 0 -59.06 C 32.62 -59.06 59.06 -32.62 59.06 0 Z M 0 0 M 59.06 0 M 118.11 0 C 118.11 32.62 91.67 59.06 59.06 59.06 C 26.44 59.06 0 32.62 0 0 C 0 -32.62 26.44 -59.06 59.06 -59.06 C 91.67 -59.06 118.11 -32.62 118.11 0 Z M 59.06 0"></path><g style="--ltx-stroke-color:#000000;--ltx-fill-color:#000000;" transform="matrix(1.0 0.0 0.0 1.0 53.46 42.52)" fill="#000000" stroke="#000000"><foreignObject style="--fo_width :0.81em;--fo_height:0.68em;--fo_depth :0em;" width="11.19" height="9.46" transform="matrix(1 0 0 -1 0 9.46)" overflow="visible"><span class="ltx_foreignobject_container"><span class="ltx_foreignobject_content"><math id="S4.SS1.SSS1.pic2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></span></span></foreignObject></g></g></svg></span>
+<p class="ltx_p ltx_align_center"><math id="S4.SS1.SSS1.m2" class="ltx_Math" alttext="(A^{c}\cap B^{c})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</div>
+<div id="S4.SS1.SSS1.p13" class="ltx_para ltx_noindent">
+<p class="ltx_p">What do you notice?</p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS1.SSS1.p14" class="ltx_para">
+<p class="ltx_p">To prove two sets <math id="S4.SS1.SSS1.p14.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS1.SSS1.p14.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are equal, we must show that <span class="ltx_text ltx_font_italic">each set is a subset of the other</span>. We will prove this using the following two-step process:</p>
+<ol id="S4.I7" class="ltx_enumerate">
+<li id="S4.I7.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S4.I7.ix1.p1" class="ltx_para">
+<p class="ltx_p">First show <math id="S4.I7.ix1.p1.m1" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S4.I7.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S4.I7.ix2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Then show <math id="S4.I7.ix2.p1.m1" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S4.SS1.Thmtheorem14" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>4.1.14.</h3>
+<div id="S4.SS1.Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p">Prove one of <span class="ltx_text ltx_font_bold">DeMorgan’s Laws</span>: for sets <math id="S4.SS1.Thmtheorem14.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS1.Thmtheorem14.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, <math id="S4.SS1.Thmtheorem14.p1.m3" class="ltx_Math" alttext="(A\cup B)^{c}=A^{c}\cap B^{c}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mi>c</mi></msup><mo>=</mo><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>∩</mo><msup><mi>B</mi><mi>c</mi></msup></mrow></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS1.Thmtheorem15" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.1.15.</h3>
+<div id="S4.SS1.Thmtheorem15.p1" class="ltx_para">
+<p class="ltx_p">Prove the following statement:</p>
+<table id="S4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex11.m1" class="ltx_Math" alttext="\left\{\frac{a}{b}\,\middle|\,a,b\in\mathbb{Z},b\neq 0\right\}=\left\{\frac{a}%
+{b}\,\middle|\,a\in\mathbb{Z},b\in\mathbb{N}\right\}." display="block"><mrow><mrow><mrow><mo>{</mo><mfrac><mi>a</mi><mi>b</mi></mfrac><mo lspace="0.170em" rspace="0.170em" stretchy="true">|</mo><mrow><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow></mrow><mo>}</mo></mrow><mo>=</mo><mrow><mo>{</mo><mfrac><mi>a</mi><mi>b</mi></mfrac><mo lspace="0.170em" rspace="0.170em" stretchy="true">|</mo><mrow><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>∈</mo><mi>ℕ</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Either set can be used in the definition of the <span class="ltx_text ltx_font_bold">rational numbers</span> <math id="S4.SS1.Thmtheorem15.p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+</div>
+<div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
