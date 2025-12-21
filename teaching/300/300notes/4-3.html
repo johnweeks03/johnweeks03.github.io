@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.3 Arbitrary Unions and Intersections</title>
+<!--Generated on Sun Dec 21 04:23:16 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S4.SS3" class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.3 </span><span class="ltx_text" style="color:#800000;">Arbitrary Unions and Intersections</span>
+</h1>
+
+<div id="S4.SS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S4.I1" class="ltx_itemize">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Generalize the definition of unions and intersections to apply to infinite collections of sets</p>
+</div>
+</li>
+<li id="S4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Apply arbitrary unions and intersections to statements involving infinitely many sets</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="S4.SS3.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.3.1 </span><span class="ltx_text" style="color:#800000;">Reaching Into the Infinite</span>
+</h2>
+
+<div id="S4.SS3.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.3.1.</h3>
+<div id="S4.SS3.Thmtheorem1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider the list of sets below. Let’s say we took all the elements of each of these sets <math id="S4.SS3.Thmtheorem1.p1.m1" class="ltx_Math" alttext="A_{1},A_{2},A_{3},\dots" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><msub><mi>A</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> and threw them together into one big set - something like an <span class="ltx_text ltx_font_italic">infinite union</span> of sets. What would this set look like? What numbers would it contain?</p>
+</div>
+<div id="S4.SS3.Thmtheorem1.p2" class="ltx_para ltx_noindent">
+<table id="S4.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex1.m1" class="ltx_Math" alttext="A_{1}=\{0\},\quad A_{2}=\left[0,\frac{1}{2}\right],\quad A_{3}=\left[0,\frac{2%
+}{3}\right],\quad\dots,\quad A_{n}=\left[0,1-\frac{1}{n}\right],\dots" display="block"><mrow><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>]</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>=</mo><mrow><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>]</mo></mrow><mo rspace="1.167em">,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo rspace="1.167em">,</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mrow><mn>1</mn><mo>−</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo>]</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS3.Thmtheorem1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Now consider the following list of sets. What elements of <math id="S4.SS3.Thmtheorem1.p3.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> are in <span class="ltx_text ltx_font_italic">all</span> of these sets? What would this “infinite intersection” look like?</p>
+</div>
+<div id="S4.SS3.Thmtheorem1.p4" class="ltx_para ltx_noindent">
+<table id="S4.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex2.m1" class="ltx_Math" alttext="B_{1}=\left[0,\frac{1}{2}\right),\quad B_{2}=\left[0,\frac{1}{4}\right),\quad B%
+_{3}=\left[0,\frac{1}{8}\right),\quad\dots,B_{n}=\left[0,\frac{1}{2^{n}}\right%
+),\dots" display="block"><mrow><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>)</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mrow><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>)</mo></mrow><mo rspace="1.167em">,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>B</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><mo>[</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><msup><mn>2</mn><mi>n</mi></msup></mfrac><mo>)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS3.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Mathematics begins to defy our expectations when we start dealing with infinite numbers of sets. Truthfully, we do not have a good grasp of what an infinite number of objects looks like. There are not an infinite number of atoms in our universe, not an infinite number of seconds in our universe’s history, and not an infinite number of possibilities that can take place in any billions of years beyond this point in time.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS3.SSS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">But there is nothing better equipped to handle the infinite than mathematics. Indeed, “limits at infinity” help us approximate end behavior of functions by describing what happens as <math id="S4.SS3.SSS1.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> grows infinitely large or infinitely more negative. We can calculate the sum of an infinite number of terms, which we call an <span class="ltx_text ltx_font_italic">infinite series</span>. We can determine which sequences of infinitely many numbers converge and which diverge. We even use an infinite number of functions added together to define a function using <span class="ltx_text ltx_font_italic">Taylor series</span> and <span class="ltx_text ltx_font_italic">Maclaurin Series</span>.</p>
+</div>
+<div id="S4.SS3.SSS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Why do we not like these topics very much? Perhaps it is exactly because of this notion of infinity that we don’t understand very well. But these very topics are why mathematics is incredibly useful in computing huge amounts of data quickly and accurately. It is why we can be sure our actuarial methods are solid no matter how big the accounts, no matter how long we use them. We can do this all day… for an infinite amount of time… and mathematics will still hold firm.</p>
+</div>
+<div id="S4.SS3.SSS1.p4" class="ltx_para">
+<p class="ltx_p">For these reasons we dare to breach the infinite, just like we did in the previous example. Let’s make rigorous this notion of “infinite union” and “infinite intersection”.</p>
+</div>
+<div id="S4.SS3.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#0000CC;">  Definition </span>4.3.2.</h3>
+<div id="S4.SS3.Thmtheorem2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">An <span class="ltx_text ltx_font_bold">index set</span> <math id="S4.SS3.Thmtheorem2.p1.m1" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math> is an arbitrary collection of elements where each element <math id="S4.SS3.Thmtheorem2.p1.m2" class="ltx_Math" alttext="i\in\Delta" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></math> has a set <math id="S4.SS3.Thmtheorem2.p1.m3" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math> defined for that element.</p>
+</div>
+<div id="S4.SS3.Thmtheorem2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS3.Thmtheorem2.p2.m1" class="ltx_Math" alttext="\{A_{\alpha}\}_{\alpha\in\Delta}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub></math> be a collection of sets for some index set <math id="S4.SS3.Thmtheorem2.p2.m2" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math>. Then the <span class="ltx_text ltx_font_bold">union of the entire collection of sets</span> <math id="S4.SS3.Thmtheorem2.p2.m3" class="ltx_Math" alttext="\{A_{\alpha}\}_{\alpha\in\Delta}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub></math> is defined to be</p>
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" alttext="\bigcup_{\alpha\in\Delta}A_{\alpha}:=\{x\mid x\in A_{\alpha}\text{ for {at %
+least one }}\alpha\in\Delta\}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>⁢</mo><mrow><mtext> for </mtext><mtext class="ltx_mathvariant_italic">at least one </mtext></mrow><mo>⁢</mo><mi>α</mi></mrow><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We define the <span class="ltx_text ltx_font_bold">intersection of the entire collection of sets</span> <math id="S4.SS3.Thmtheorem2.p2.m4" class="ltx_Math" alttext="\{A_{\alpha}\}_{\alpha\in\Delta}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></msub></math> to be</p>
+<table id="S4.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex4.m1" class="ltx_Math" alttext="\bigcap_{\alpha\in\Delta}A_{\alpha}:=\{x\mid x\in A_{\alpha}\text{ for {all} }%
+\alpha\in\Delta\}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">⋂</mo><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow></munder><msub><mi>A</mi><mi>α</mi></msub></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>⁢</mo><mrow><mtext> for </mtext><mtext class="ltx_mathvariant_italic">all</mtext><mtext> </mtext></mrow><mo>⁢</mo><mi>α</mi></mrow><mo>∈</mo><mi mathvariant="normal">Δ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In the special case that <math id="S4.SS3.Thmtheorem2.p2.m5" class="ltx_Math" alttext="\Delta=\mathbb{N}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><mi>ℕ</mi></mrow></math>, we write</p>
+<table id="S4.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex5.m1" class="ltx_Math" alttext="\bigcup_{n=1}^{\infty}A_{n}=\{x\mid x\in A_{n}\text{ for {at least one} }n\in%
+\mathbb{N}\}" display="block"><mrow><mrow><munderover><mo movablelimits="false">⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mtext> for </mtext><mtext class="ltx_mathvariant_italic">at least one</mtext><mtext> </mtext></mrow><mo>⁢</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="S4.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex6.m1" class="ltx_Math" alttext="\bigcap_{n=1}^{\infty}A_{n}:=\{x\mid x\in A_{\alpha}\text{ for {all} }n\in%
+\mathbb{N}\}." display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">⋂</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mi>x</mi><mo>∈</mo><mrow><msub><mi>A</mi><mi>α</mi></msub><mo>⁢</mo><mrow><mtext> for </mtext><mtext class="ltx_mathvariant_italic">all</mtext><mtext> </mtext></mrow><mo>⁢</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The LaTeX for these symbols: <math id="S4.SS3.Thmtheorem2.p2.m6" class="ltx_Math" alttext="\bigcup" display="inline"><mo>⋃</mo></math> is <math id="S4.SS3.Thmtheorem2.p2.m7" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>bigcup, and <math id="S4.SS3.Thmtheorem2.p2.m8" class="ltx_Math" alttext="\bigcap" display="inline"><mo>⋂</mo></math> is <math id="S4.SS3.Thmtheorem2.p2.m9" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>bigcap.</p>
+</div>
+</div>
+<div id="S4.SS3.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.3.3.</h3>
+<div id="S4.SS3.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS3.Thmtheorem3.p1.m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> be the set containing the first <math id="S4.SS3.Thmtheorem3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> letters of the modern English alphabet, for <math id="S4.SS3.Thmtheorem3.p1.m3" class="ltx_Math" alttext="n\in\{1,2,3,\dots,26\}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>26</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Describe the following sets using roster notation:</p>
+<ol id="S4.I2" class="ltx_enumerate">
+<li id="S4.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I2.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S4.I2.i1.p1.m1" class="ltx_Math" alttext="\bigcup_{n=1}^{13}A_{n}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>13</mn></msubsup><msub><mi>A</mi><mi>n</mi></msub></mrow></math></p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S4.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I2.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S4.I2.i2.p1.m1" class="ltx_Math" alttext="\bigcap_{n=1}^{26}A_{n}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>26</mn></msubsup><msub><mi>A</mi><mi>n</mi></msub></mrow></math></p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS3.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.3.4.</h3>
+<div id="S4.SS3.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.SS3.Thmtheorem4.p1.m1" class="ltx_Math" alttext="S_{n}:=\{x\in\mathbb{R}|n-1&lt;x&lt;n\}" display="inline"><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo lspace="0em" rspace="0em">|</mo><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>n</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> for <math id="S4.SS3.Thmtheorem4.p1.m2" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. Describe the following using set-builder notation:</p>
+<ol id="S4.I3" class="ltx_enumerate">
+<li id="S4.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I3.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S4.I3.i1.p1.m1" class="ltx_Math" alttext="\bigcup_{n=1}^{\infty}S_{n}" display="inline"><mrow><msubsup><mo>⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>S</mi><mi>n</mi></msub></mrow></math></p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+<li id="S4.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I3.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S4.I3.i2.p1.m1" class="ltx_Math" alttext="\bigcap_{n=1}^{\infty}S_{n}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>S</mi><mi>n</mi></msub></mrow></math></p>
+</div>
+  <div class="tiny-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="S4.SS3.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.3.2 </span><span class="ltx_text" style="color:#800000;">Proving with Arbitrary Collections of Sets</span>
+</h2>
+
+<div id="S4.SS3.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.3.5.</h3>
+<div id="S4.SS3.Thmtheorem5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <math id="S4.SS3.Thmtheorem5.p1.m1" class="ltx_Math" alttext="A_{1}=\{1,2\}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S4.SS3.Thmtheorem5.p1.m2" class="ltx_Math" alttext="A_{2}=\{2,3\}" display="inline"><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S4.SS3.Thmtheorem5.p1.m3" class="ltx_Math" alttext="A_{3}=\{3,4\}" display="inline"><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S4.SS3.Thmtheorem5.p1.m4" class="ltx_Math" alttext="\dots" display="inline"><mi mathvariant="normal">…</mi></math>, <math id="S4.SS3.Thmtheorem5.p1.m5" class="ltx_Math" alttext="A_{n}=\{n,n+1\}" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S4.SS3.Thmtheorem5.p1.m6" class="ltx_Math" alttext="\dots" display="inline"><mi mathvariant="normal">…</mi></math>.</p>
+</div>
+<div id="S4.SS3.Thmtheorem5.p2" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S4.SS3.Thmtheorem5.p2.m1" class="ltx_Math" alttext="\bigcup_{n=1}^{\infty}A_{n}=\mathbb{N}" display="inline"><mrow><mrow><msubsup><mo>⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS3.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Prove that <math id="S4.SS3.SSS2.p1.m1" class="ltx_Math" alttext="\bigcap_{n=1}^{\infty}A_{n}=\varnothing" display="inline"><mrow><mrow><msubsup><mo>⋂</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S4.SS3.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>4.3.6.</h3>
+<div id="S4.SS3.Thmtheorem6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider the following sets:</p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex7.m1" class="ltx_Math" alttext="Q_{1}:=\{0,1\},\quad Q_{2}:=\left\{0,\frac{1}{2},1\right\},\quad Q_{3}:=\left%
+\{0,\frac{1}{3},\frac{2}{3},1\right\},\dots" display="block"><mrow><mrow><msub><mi>Q</mi><mn>1</mn></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msub><mi>Q</mi><mn>2</mn></msub><mo>:=</mo><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mn>1</mn><mo>}</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><msub><mi>Q</mi><mn>3</mn></msub><mo>:=</mo><mrow><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>,</mo><mn>1</mn><mo>}</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<table id="S4.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex8.m1" class="ltx_Math" alttext="Q_{n}=\left\{\frac{m}{n}:m\in\{0,1,2,\dots,n\}\right\},\dots" display="block"><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><mo>{</mo><mfrac><mi>m</mi><mi>n</mi></mfrac><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>m</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow><mo>}</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Show that <math id="S4.SS3.Thmtheorem6.p1.m1" class="ltx_Math" alttext="\bigcup_{n=1}^{\infty}Q_{n}=\mathbb{Q}" display="inline"><mrow><mrow><msubsup><mo>⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>Q</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>ℚ</mi></mrow></math>.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S4.SS3.Thmtheorem6.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">What is the set <math id="S4.SS3.Thmtheorem6.p2.m1" class="ltx_Math" alttext="\bigcap_{n=1}^{\infty}Q_{n}" display="inline"><mrow><msubsup><mo>⋂</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>Q</mi><mi>n</mi></msub></mrow></math> in roster or set-builder notation? Prove your answer.</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
