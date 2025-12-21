@@ -121,7 +121,7 @@ td.ltx_subfloat { width:50%; }
 .ltx_td.ltx_align_center.ltx_wrap, .ltx_th.ltx_align_center.ltx_wrap,
 .ltx_td.ltx_align_justify,  .ltx_th.ltx_align_justify { white-space:normal; }
 
-.ltx_tabular .ltx_tabular { width:100%; }
+.ltx_tabular .ltx_tabular { margin-top: 2em; margin-bottom: 2em; width:100%; }
 .ltx_inline-block { display:inline-block; }
 
 /* equations in non-aligned mode (not normally used) */
