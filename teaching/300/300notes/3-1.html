@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3 Iterative Proof Techniques</title>
+<!--Generated on Sun Dec 21 01:39:54 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="S3" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span><span class="ltx_text" style="color:#800000;">Iterative Proof Techniques</span>
+</h1>
+
+<section id="S3.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span><span class="ltx_text" style="color:#800000;">Proof by Induction</span>
+</h2>
+
+<div id="S3.SS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Objectives:</span></p>
+<ul id="S3.I1" class="ltx_itemize">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Learn how to prove statements concerning infinite subsets of natural numbers</p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Apply induction to arguments of natural numbers</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS1.Thmtheorem1" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.1.1.</h3>
+<div id="S3.SS1.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Below is a “proof without words” giving a closed form for the sum of the first <math id="S3.SS1.Thmtheorem1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> natural numbers (credit to Art of Problem Solving for the image):</p>
+<table id="S3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex1.m1" class="ltx_Math" alttext="1+2+3+\cdots+n=\frac{n(n+1)}{2}." display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<figure id="S3.SS1.Thmtheorem1.fig1" class="ltx_figure"><img src="images/sumofnaturalnumbers.png" id="S3.SS1.Thmtheorem1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="399" height="194" alt="An n by n plus 1 grid of dots divided in two diagonally into two right triangles of dots">
+</figure>
+<div id="S3.SS1.Thmtheorem1.p2" class="ltx_para">
+<p class="ltx_p">Put this “proof without words” into words. What is happening in this picture, and how could it be made into a formal proof of the equation above?</p>
+</div>
+</div>
+  <div class="answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">The natural numbers have a special structure that allows us to prove statements involving natural numbers in a different way: the <span class="ltx_text ltx_font_bold">induction proof</span>. The dictionary defines induction as “The process of deriving general principles from particular facts or instances.” We have used another term for this in this class: “proof by example!” But we know that proofs by example are by no means welcome in the world of mathematics.</p>
+</div>
+<div id="S3.SS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">The process we take for these proofs, which we will still begrudgingly call induction proofs, would be better described as “iterative proofs”. An <span class="ltx_text ltx_font_bold">iteration</span> is “a computational procedure in which a cycle of operations is repeated”.</p>
+</div>
+<div id="S3.SS1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">So let <math id="S3.SS1.p4.m1" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> be the universe of discourse and <math id="S3.SS1.p4.m2" class="ltx_Math" alttext="P(x)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a given predicate. If we would like to prove the statement <math id="S3.SS1.p4.m3" class="ltx_Math" alttext="(\forall n\in\mathbb{N})P(n)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then here is how we could do it:</p>
+</div>
+<div id="S3.SS1.p5" class="ltx_para ltx_minipage ltx_align_middle" style="width:82.8pt;">
+<p class="ltx_p"><span class="ltx_text ltx_phantom"><span style="visibility:hidden"><span class="ltx_rule" style="width:72.3pt;height:0.0pt;--ltx-bg-color:black;display:inline-block;"> </span></span></span></p>
+</div>
+<div id="S3.SS1.p6" class="ltx_para ltx_minipage ltx_align_middle" style="width:258.8pt;">
+<ol id="S3.I2" class="ltx_enumerate">
+<li id="S3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I2.i1.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+<li id="S3.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I2.i2.p1.m1" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+<li id="S3.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I2.i3.p1.m1" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+<li id="S3.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="S3.I2.ix1.m1" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></span> 
+<div id="S3.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I2.ix1.p1.m1" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></p>
+</div>
+</li>
+<li id="S3.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">608981813029.</span> 
+<div id="S3.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I2.ix2.p1.m1" class="ltx_Math" alttext="P(608981813029)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>608981813029</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+<li id="S3.I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="S3.I2.ix3.m1" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></span> 
+<div id="S3.I2.ix3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S3.I2.ix3.p1.m1" class="ltx_Math" alttext="\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS1.p7" class="ltx_para ltx_noindent">
+<p class="ltx_p">Oh no! This looks awful! This is an infinite process that would take an infinite amount of time for anyone to solve. How would we have time to do anything else in this class?!</p>
+</div>
+<div id="S3.SS1.p8" class="ltx_para ltx_noindent">
+<p class="ltx_p">Perhaps we can save ourselves some time. Let’s rewrite this process slightly. To prove the statement <math id="S3.SS1.p8.m1" class="ltx_Math" alttext="(\forall n\in\mathbb{N})P(n)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we could prove the following:</p>
+</div>
+<div id="S3.SS1.p9" class="ltx_para ltx_noindent">
+<ol id="S3.I3" class="ltx_enumerate">
+<li id="S3.I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I3.ix1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I3.ix1.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true. (Prove a <span class="ltx_text ltx_font_bold">base case</span> is true.)</p>
+</div>
+</li>
+<li id="S3.I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I3.ix2.p1" class="ltx_para">
+<p class="ltx_p">Prove that, if <math id="S3.I3.ix2.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S3.I3.ix2.p1.m2" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true (i.e., <math id="S3.I3.ix2.p1.m3" class="ltx_Math" alttext="P(1)\Rightarrow P(2)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>)</p>
+</div>
+</li>
+<li id="S3.I3.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S3.I3.ix3.p1" class="ltx_para">
+<p class="ltx_p">Prove that, if <math id="S3.I3.ix3.p1.m1" class="ltx_Math" alttext="P(2)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S3.I3.ix3.p1.m2" class="ltx_Math" alttext="P(3)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true (i.e., <math id="S3.I3.ix3.p1.m3" class="ltx_Math" alttext="P(2)\Rightarrow P(3)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>)…….</p>
+</div>
+</li>
+<li id="S3.I3.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">608981813029.</span> 
+<div id="S3.I3.ix4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Prove that <math id="S3.I3.ix4.p1.m1" class="ltx_Math" alttext="P(608981813028)\Rightarrow P(608981813029)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>608981813028</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>608981813029</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS1.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p">From Steps 2 onward we are proving that, if the statement from the previous step has been proven true, then the next step in the sequence should also be true. This is known as the <span class="ltx_text ltx_font_bold">domino effect</span>: if one domino <math id="S3.SS1.p10.m1" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> gets knocked down, then so does the next domino <math id="S3.SS1.p10.m2" class="ltx_Math" alttext="P(n+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S3.SS1.p11" class="ltx_para ltx_noindent">
+<p class="ltx_p">This is an interesting process. In terms of time to complete it is not any better, but it does set up an interesting structure. In fact, we can shorten everything in steps 2 onward into one step: <span class="ltx_text ltx_font_italic">prove that the truth of the previous statement implies the truth of the statement with the next number in line</span>.</p>
+</div>
+<div id="S3.SS1.p12" class="ltx_para ltx_noindent">
+<ol id="S3.I4" class="ltx_enumerate">
+<li id="S3.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="S3.I4.i1.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true. (<span class="ltx_text ltx_font_bold">Base case</span>)</p>
+</div>
+</li>
+<li id="S3.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I4.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Prove that (<math id="S3.I4.i2.p1.m1" class="ltx_Math" alttext="\forall k\in\mathbb{N}" display="inline"><mrow><mrow><mo rspace="0.167em">∀</mo><mi>k</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>) <math id="S3.I4.i2.p1.m2" class="ltx_Math" alttext="P(k)\Rightarrow P(k+1)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⇒</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is true. (<span class="ltx_text ltx_font_bold">Inductive step</span>)</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S3.SS1.p13" class="ltx_para">
+<p class="ltx_p">This yields the Principle of Mathematical Induction:</p>
+</div>
+<div id="S3.SS1.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#006600;">  Theorem </span>3.1.2.</h3>
+<div id="S3.SS1.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.SS1.Thmtheorem2.p1.m1" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a predicate over the natural numbers. Assume the following:</p>
+<ol id="S3.I5" class="ltx_enumerate">
+<li id="S3.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S3.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">the statement <math id="S3.I5.i1.p1.m1" class="ltx_Math" alttext="P(1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is true, and</p>
+</div>
+</li>
+<li id="S3.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S3.I5.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">for all <math id="S3.I5.i2.p1.m1" class="ltx_Math" alttext="k\geq 1" display="inline"><mrow><mi>k</mi><mo>≥</mo><mn>1</mn></mrow></math>, if <math id="S3.I5.i2.p1.m2" class="ltx_Math" alttext="P(k)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true, then <math id="S3.I5.i2.p1.m3" class="ltx_Math" alttext="P(k+1)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Then <math id="S3.SS1.Thmtheorem2.p1.m2" class="ltx_Math" alttext="P(n)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true for all <math id="S3.SS1.Thmtheorem2.p1.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S3.SS1.Thmtheorem3" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.1.3.</h3>
+<div id="S3.SS1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Watch the following Mr. Beast video and describe how it relates to induction. How many dominoes does Mr. Beast physically knock over? Why do <span class="ltx_text ltx_font_italic">all</span> of the dominoes knock over?</p>
+</div>
+</div>
+  <div class="large-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<figure id="S3.SS1.fig1" class="ltx_figure"><img src="images/qrbeast.png" id="S3.SS1.g1" class="ltx_graphics ltx_img_square" width="100" height="100" alt="QR Code for Mr Beast Domino video">
+</figure>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS1.Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.1.4.</h3>
+<div id="S3.SS1.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Prove that, for all <math id="S3.SS1.Thmtheorem4.p1.m1" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>,</p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\sum_{i=1}^{n}i=\frac{n(n+1)}{2}." display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>i</mi></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS1.Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.1.5.</h3>
+<div id="S3.SS1.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Fix a real number <math id="S3.SS1.Thmtheorem5.p1.m1" class="ltx_Math" alttext="r\neq 1" display="inline"><mrow><mi>r</mi><mo>≠</mo><mn>1</mn></mrow></math>. Prove that, for all integers <math id="S3.SS1.Thmtheorem5.p1.m2" class="ltx_Math" alttext="n\geq 0" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></math>,</p>
+<table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex3.m1" class="ltx_Math" alttext="1+r^{1}+r^{2}+\cdots+r^{n}=\dfrac{r^{n+1}-1}{r-1}." display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>r</mi><mn>1</mn></msup><mo>+</mo><msup><mi>r</mi><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>r</mi><mi>n</mi></msup></mrow><mo>=</mo><mfrac><mrow><msup><mi>r</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">(Note that we are no longer proving something is true on the natural numbers alone. What has to change?)</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS1.Thmtheorem6" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.1.6.</h3>
+<div id="S3.SS1.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Prove the following statement: “For all integers <math id="S3.SS1.Thmtheorem6.p1.m1" class="ltx_Math" alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math>, <math id="S3.SS1.Thmtheorem6.p1.m2" class="ltx_Math" alttext="2^{n}&gt;n+1" display="inline"><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>&gt;</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>.”</p>
+</div>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div id="S3.SS1.p14" class="ltx_para ltx_noindent">
+<p class="ltx_p">Is this statement true when reframed as follows? “For all natural numbers <math id="S3.SS1.p14.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="S3.SS1.p14.m2" class="ltx_Math" alttext="2^{n}&gt;n+1" display="inline"><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>&gt;</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>.” Prove or disprove.</p>
+</div>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="S3.SS1.Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h3 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_text" style="color:#800000;">  Example </span>3.1.7.</h3>
+<div id="S3.SS1.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Consider a grid of squares that is <math id="S3.SS1.Thmtheorem7.p1.m1" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> squares wide by <math id="S3.SS1.Thmtheorem7.p1.m2" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> squares long, where <math id="S3.SS1.Thmtheorem7.p1.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. The number <math id="S3.SS1.Thmtheorem7.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> could be any value, so this could be a <math id="S3.SS1.Thmtheorem7.p1.m5" class="ltx_Math" alttext="2\times 2" display="inline"><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>2</mn></mrow></math>, <math id="S3.SS1.Thmtheorem7.p1.m6" class="ltx_Math" alttext="4\times 4" display="inline"><mrow><mn>4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>4</mn></mrow></math>, <math id="S3.SS1.Thmtheorem7.p1.m7" class="ltx_Math" alttext="8\times 8" display="inline"><mrow><mn>8</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>8</mn></mrow></math>, … grid. One of the squares in the grid has been cut out - in the example below, say it’s the one with the arrow. You have a bunch of L-shaped “triominos” made up of 3 squares. Prove that you can perfectly cover this chessboard with the L-shaped triominos (with no overlap) for any <math id="S3.SS1.Thmtheorem7.p1.m8" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <span class="ltx_text ltx_font_italic">regardless of where the cut-out square is</span>. (To clarify, once you’re given the board to cover, you can see the cut-out square, but you do not get to choose where the cut-out square is.)</p>
+</div>
+</div>
+<figure id="S3.SS1.fig2" class="ltx_figure"><img src="images/triominos.png" id="S3.SS1.g2" class="ltx_graphics ltx_img_square" width="200" height="199" alt="A 4-by-4 grid filled with triominoes save for one grid square">
+</figure>
+  <div class="half-answer-space" aria-hidden="true"></div>
+  <span class="sr-only">Blank space for you to write your work.</span>
+</section>
+</section>
+</article>
+</div>
+</div>
+</body>
+</html>
