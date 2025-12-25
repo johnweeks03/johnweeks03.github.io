@@ -1,10 +1,4 @@
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-<style>
-    .resize {
-  max-width:20%;
-  max-height:auto;
-}
-</style>
 </head>
 
 <body>
@@ -20,52 +14,57 @@
  <p><br style="clear: both;"/></p> 
 
 <h1>Some Music I Like</h1>
+<h2>My Five-Star Albums</h2>
+<ol>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/33f1dc3029f674248e3a6ffdc57b7b17/10529939/the-avalanches-since-i-left-you-Cover-Art.jpg"> The Avalanches, <a href="https://rateyourmusic.com/release/album/the-avalanches/since-i-left-you/">Since I Left You</a><br><br>
+My newest 5-star from 2025 - so new I do not have a review for it yet!</li><br><br>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/00414ea8831b305e7c1a87e62453a0f0/9935583/bjork-vespertine-Cover-Art.jpg"> Björk, <a href="https://rateyourmusic.com/release/album/bjork/homogenic/">Homogenic</a> and <a href="https://rateyourmusic.com/release/album/bjork/vespertine/">Vespertine</a><br><br>
+(Vespertine) When she pauses, the world takes a breath. "Cocoon" strips everything away so that as the song closes and she struggles to compose herself to end it, you can hear her beats with the beat of your heart. "It's Not Up to You" lifts you of your agency - it allows you to just settle for the beauty before you, the most beautiful thing in the world, because why wouldn't you.<br><br>
+
+The recurring dreams you've had are all about her. You love her, you love her. In her vulnerability she is always a second away from being less than a portal to heaven - but she is her. She cannot deny herself.<br><br>
+
+The icyness of Homogenic hasn't completely thawed. Chilly violin passages still echo in these aortic corridors. But the realm now has feeling - the organ is pumping, and you are its ventricles.<br><br>
+
+(Homogenic) On Debut, Bjork makes a very good pop album. On Post, Bjork makes a very wild pop album. On Homogenic, Bjork has transcended pop music. Homogenic is certainly pop music - but only in an otherworldly way.<br><br>
+
+When I first sat down to write this review I started with a track-by-track review. I am ashamed to only be able to review an album based on its particulars rather than on the fabric it creates. But I must admit that it is too big of a concept to me. I listen to it frequently but I have not been able to grasp it. Yet the more I consume the more I'm convinced there is everything to grasp here. It's cold to the touch, so it's hard to keep around for a while. But every point of contact reaches in and goes deeper until I go numb and can feel nothing but the love this album offers.<br><br>
+
+This is the most visceral album I know of. It has the most emotion, the most visual landscapes, the most gospel of any album I know. A listen through leaves me with fewer words rather than more, with less coherence and understanding. But I am okay to simply listen and go dumb.<br><br>
+</li>
+<li> <img width="200" height="200" src="https://e.snmc.io/i/600/w/be7da76170839067571a357ba46fb358/12319332/leonard-cohen-songs-of-leonard-cohen-Cover-Art.jpg">Leonard Cohen, <a href="https://rateyourmusic.com/release/album/leonard-cohen/songs-of-leonard-cohen/">Songs of Leonard Cohen</a></li><br><br>
+It must be a special blessing to make a classic on a debut. To be fully realized at your inception as an artist.<br><br>
+
+Leonard travelled as a poet for several years before adding his bard's lute. The acoustic guitar is a backing track for his deadpan delivery, word-for-word, of his transcendent poetry. Songs of Leonard Cohen sets the tone for his entire career as a musician: his music is full of subtle shifts that make each lyric come across on all its different levels of meaning. Each song is a story all on its own, of power and influence, of religion and atheism, of commitment and rambling. And each one stands on its own.</li><br><br>
+<li> <img width="200" height="200" src="https://e.snmc.io/i/600/w/21708f1bca675b287ec5dee1af6ce7a5/2531262/depeche-mode-violator-Cover-Art.jpg">Depeche Mode, <a href="https://rateyourmusic.com/release/album/depeche-mode/violator/">Violator</a>.<br><br>
+
+Although the rhythms are simple and catchy, something foul is at play. The narrator is deeply jaded, like they took Joy Division seriously or something. Each song brings the object of their desire deeper into a strongly banal devotion, a religious experience within someone else. The vibe is haunting rather than jarring (see Pretty Hate Machine). In fact, that's the idea of the entire album: it's a monolithic study of deep infatuation. And it's done beautifully.<br><br>
+
+An extremely cohesive project. If it doesn't click first let it grow on you. It's a new movement all on its own.</li><br><br>
+<li> <img width="200" height="200" src="https://e.snmc.io/i/600/w/a47f7eef08776272f5525d5a1f7c9c6a/8121875/kendrick-lamar-to-pimp-a-butterfly-Cover-Art.jpg">Kendrick Lamar, <a href="https://rateyourmusic.com/release/album/kendrick-lamar/to-pimp-a-butterfly/">To Pimp a Butterfly</a>.<br><br>
+
+(2025 Update) Quite surprised this one hasn't gotten a review yet. It will happen soon.</li><br><br>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/1d5fe7253c8c444526eda247c895456e/10956120/massive-attack-mezzanine-Cover-Art.jpg">Massive Attack, <a href="https://rateyourmusic.com/release/album/massive-attack/mezzanine/">Mezzanine</a>.<br><br>
+
+Mezzanine is a haunting album through and through. As beautiful as Angel is, you can never shake the uneasiness. Risingson's consistent switchups and creative sampling sound like it could still push the hip-hop genre forward today. Even deep cuts like Dissolved Girl should not be possible - a hardcore industrial piece that could just as well fit on Persona 5's soundtrack?<br><br>
+
+The atmosphere is inimitable. Listen to Teardrop and become entranced. Let these be the sounds to launch you through the final act of 2001: A Space Odyssey.</li><br><br>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/076215c80b1810341e978bbdbf47af69/12580450/radiohead-kid-a-Cover-Art.jpg">Radiohead, <a href="https://rateyourmusic.com/release/album/radiohead/kid-a/">Kid A</a>.<br><br>
+
+My oldest 5-star album, which I keep at 5 stars without reviewing. If I did review it today I might dock it a half-star, but it holds sentimental value to me, so I keep it here. </li>
+</ol>
 <h2>Music on My Journey to Flourishing</h2>
+<ol>
 <li><img width="200" height="200" src="https://e.snmc.io/i/600/w/237b27de7237ae4f33887ce1fcfc62df/6681350/eden-end-credits-Cover-Art.png"> EDEN,  <a href="https://rateyourmusic.com/release/ep/eden/end-credits/">End Credits</a>. 3/5.
 This one was there when I felt underwater in a isolated time of my life. It started with End Credits then became a repeat with Nocturne and ended with a creative dream to Wake Up.<br><br>
 
-In 2015 I truly wanted to see God in everything to the point that it was hard to see God in anything. My logical self fell apart, it needed complete restructuring. My emotional self had to carry me for a while, there was no choice. And EDEN helped me see <i>images</i> in my emotions. I had recaptured the feeling of transcendence from the years when I went to church revivals. End Credits was the new reason to raise my hands.<br><br>
-
-During this point I leaned harder than ever into my work, with these songs blaring into my head. I wasn't working, and I wasn't listening - I was in a secret third mode where I was the thing I was working on, and I was listening to myself. That's the mode I've lived in for years now.<br><br>
-
-The music is a slightly better Blackbear and a slightly worse first-album-era Bastille. EDEN never truly established their sound in the scene, and brakence and ericdoa ended up nearly co-opting EDEN's spot completely. But while Wake Up is a hackneyed story with an obnoxious ending (that I still cried to the second time I heard it), many of the other tracks show promise. The production on Nocturne creates a special atmosphere, while Gravity shows the spark of a singer-songwriter with enough honesty to swing the story. Neither song completely lands, but they get very close - give this the production EDEN's next EP and you have a good EP.
-
 Let's run. Make a great escape.</li><br><br>
-<li>James Blake, <a href="https://rateyourmusic.com/release/album/james-blake/james-blake/">James Blake</a>. 3.5/5.<br><br>
-The dubstep world exploded after Burial. No piece of art can touch the world of music and not leave a beautiful scar. James Blake, another Londonite, had to have quickly connected the music of Untrue to the rainy streets of London. But where Bevan sees these streets as full of lonesome activity, Blake can only envision himself in the midst of a ghost town. Specters plague the streets of his solo EPs, adding the vinyl purrs and scant percussion on "I Only Know (What I Know Now)". This music takes Burial on a challenge to create that level of atmosphere with as little as possible - but just as much fastidiousness to detail.<br><br>
-
-This is where eponymous finds us. "Limit to Your Love" is dubstep's answer to pop: Blake's emotional vocals find accompaniment with both solo piano and solo subwoofer wubs, each creating a sense of general uncertainty present in the song's very lyrics. This is Feist turned on its head, with what sounds like a barely a breath of effort but with plenty of hours behind the soundboard.<br><br>
-
-Much else of this album turns to talk to the world of electronica instead. The influence of post-industrial IDM (Autechre, M83, etc) pops its head up here. Although it certainly is not as impactful as these other acts, this album doesn't seek to overcome them with earnest (future albums of his do put on flairs, to their demise). The album peaks just long enough in songs like "The Wilhelm Scream" to let the album say its piece as the voice of an empty void, but then it backs away and exists as a simple bed of ideas. Most of the album is lyrical, but their words pass through you - they are ephemeral.<br><br>
-
-This spectre of an album never feels orthodox - the vocal overlaps of "Measurements", the syncopated beats on "I Mind", the pristine complementarity of "Lindisfarne"'s two parts, all make this album feel stitched together out of love. It is hard to make an album sound like this with the main tools being a singular synth, an 808, and Auto-Tune. No wonder Blake entered the hip-hop world from this release - his style blended with the sound of the time while moving it forward into a wild and unique direction.<br><br>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/15e9957394d19ac39009859da93f5a91/12530047/james-blake-james-blake-Cover-Art.jpg">James Blake, <a href="https://rateyourmusic.com/release/album/james-blake/james-blake/">James Blake</a>. 3.5/5.<br><br>
 
 Although this album is more-or-less just a collection of ideas put on a disc, it fits together in its totally unique style. Not every song contributes something, and the listens can be a bit grating at first - but after a while it becomes a wonderful piece to put on in the background of a night alone, just like Burial.</li><br><br>
-<li>Coldplay, <a href="https://rateyourmusic.com/release/album/coldplay/parachutes/">Parachutes</a>. 3.5/5.<br><br>
-This album is a Bon Iver album if Justin Vernon hadn't gone all "stream of consciousness" on us. It's a humble beginning; they became famous for perhaps the wrong reason; and their fame turned them into crafty art "innovators" with little integrity to their original sound or direction.<br><br>
-
-But Parachutes is a good start. It's a beautiful start. It's a bunch of words that feel simple with that characteristic late 90's early 00's bland guitar backing that portrays less than no nuance. It's loud all the time, just like Matchbox Twenty or Travis or Daniel Powter or The Fray or James Blunt or (the list continues).<br><br>
-
-But Parachutes does have the flexibility to go a little quiet. Sparks is the prodigy of the bunch here - it uses the tools of a quiet jazz to promise faithfulness in simple love. The rest is flames. Then there's We Never Change, a favorite from my growing-up years to help me centered on things that mattered to me. Friends, and cabins.<br><br>
-
-"Yellow" is pretty lame. It's not just Yellow; many of the songs default to this blast of musical pressure to create a fake sense of pressure to lyrics that just don't push forward any imagery at all. You wish there was actually less pretension to an album that doesn't seem to be putting up much of a front at all... to come across like a Mount Eerie album about living up in Alberta somewhere.<br><br>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/eaae99e2c72d8e68b28521761adf449d/8915093/coldplay-parachutes-Cover-Art.jpg">Coldplay, <a href="https://rateyourmusic.com/release/album/coldplay/parachutes/">Parachutes</a>. 3.5/5.<br><br>
+Parachutes is a good start. It's a beautiful start. It's a bunch of words that feel simple with that characteristic late 90's early 00's bland guitar backing that portrays less than no nuance. It's loud all the time, just like Matchbox Twenty or Travis or Daniel Powter or The Fray or James Blunt or (the list continues).<br><br>
 
 The end is where the album hits its stride... when it's not trying to ham itself up as much. Imagine if Trouble were stripped, if Yellow got some Don't Panic treatment. But if you do this you're pretty close to a classic album. If you take off the nostalgia glasses, the album truly sounds better.</li><br><br>
-<li>Nine Inch Nails, <a href="https://rateyourmusic.com/release/album/nine-inch-nails/the-fragile/">The Fragile</a>. 3.5/5. (What can I say, I was an "edgy" "tweenager".)<br><br>
-If you haven't caught the <a href="https://pitchfork.com/reviews/albums/5799-the-fragile/">famous Pitchfork review for this album</a> yet, don't miss it. The writers clearly come in with a bias against Reznor's lyricism (which is admittedly terrible) and tendency toward incorporating the same monolithic song structure everywhere (which admittedly rocks so hard). Certainly double albums are more times than not a mistake for any artist, especially when every song has this excruciating layer-upon-layer build of faux dread, followed by r/im14andthisisdeep lyrics and incredible amounts of amp gain.<br><br>
+<li><img width="200" height="200" src="https://e.snmc.io/i/600/w/43c1434330e8d0884201c8306a3c85f6/2087906/jon-foreman-fall-Cover-Art.jpg">Jon Foreman, <a href="https://rateyourmusic.com/release/comp/jon-foreman/fall-winter-spring-summer/">Fall Winter Spring Summer</a>. 3/5.<br><br>
 
-While this take is incredibly reductionist, it's also not wrong. Any time I put The Fragile on my playlist, I know I'm going to have to sit through long build-ups and blaring choruses that don't have much to latch onto except some incredible screams and angst. Especially on the second disc, the songs have this eerie sameness to each other. While the album takes plenty of inspiration from 90s shoegaze, it does not carry itself with any of the careful poise that loveless does. Nine Inch Nails brought the inventive instrumentation of industrial music to the mainstream, yet The Fragile largely lacking the nuance and intricacy of IDM championed by Aphex Twin and Autechre.<br><br>
-
-Is what I would like to say. But then "The Day The World Went Away" comes on. All of the elements I've said above are there - its layering is simplistic, the story is your typical emo slop, and there's blatant shock value from the instant strip-downs and guitar blades. But each layer carries this incredible soul, this deathly sense of barren landscape. This album carries itself incredibly well for relying on these simplistic tropes, and the secret is in the industrial. Just like The Downward Spiral, the instrumentals are from an entirely other world; Trent is just doing his damnedest to make sure the songs are palatable enough to make it on the radio.<br><br>
-
-The first album carries us through this barren place and shows all of its incredible facets. Life with another is portrayed fatalistically - you are bound together, nothing will change that, for better or for worse. On paper "We're In This Together" should be this incredibly powerful and inspirational hymn of strength through union, but the experience is the exact opposite. "The Wretched" puts this steady-rhythm guitar riff through just an astounding amount of dynamic hi-pass filtering which gives a musical experience equivalent to listening with dirt in your ears. And the sounds just keep coming - this first album is chock full of ideas.<br><br>
-
-The second album is a significant fall-off in quality compared to the first, but it sets the stage for Nine Inch Nails's future releases. Trent wanted to make the case that these weird sounds didn't need to stay underground - you could put these anywhere! This album sounds much more like With Teeth than the first album in this project. It's not a work in concept art; it's just... normal. The second album accomplishes a grand feat for industrial music, even if the music quality here can't bear the burden of being primarily consumer-focused content.<br><br>
-
-The Fragile is a case that a 7/10 album can still be a classic album. Each half plays into a larger theme and makes a tremendous impact. While the second half's goal creates a mixed bag, it also likely played a pivotal role in the hyperpop explosion a decade later (where else could those SOPHIE snares come from?). Disc 1 is a self-contained entity that sobers out the maniacal fantasies of The Downward Spiral into a massive hangover - the result is barren but is still so, so beautiful.</li><br><br>
-<li>Jon Foreman, <a href="https://rateyourmusic.com/release/comp/jon-foreman/fall-winter-spring-summer/">Fall Winter Spring Summer</a>. 3/5.<br><br>
-During my junior year of high school I felt challenged to listen exclusively to Christian music. The whole year. Which sucked, because James Blake had just released his eponymous debut and that style of song broke apart every Verse-Refrain-Verse structure that CCM had taught me. That was all I wanted to listen to, but nope - not Christian enough.<br><br>
-
-I've spoken highly about Switchfoot in my The Beautiful Letdown review: the group felt so authentic to themselves in that era. Few other artists could claim cultural authenticity and CCM radio play in this era - maybe Mae is on this short list? So discovering the Switchfoot headman's solo work was like a goldmine, and the first precious jewel of "The Cure For Pain" keeps its amber glint today. The Elliott Smith influence is insane, yes. The music is a bit worse, yes, but it's honest. If I couldn't listen to For Emma, Forever Ago and its heathen ilk in 2007, this is the stuff I would want in my ears instead.<br><br>
-
-There is something to appreciate in every EP. "Learning How to Die"/"I Am Still Running" in Winter, "Love Isn't Made" in Spring... okay maybe Summer isn't all that good ("Resurrect Me" sounds out of place for the project). Even though CCM is wild and sprawling, these 24 songs were my bread and butter while studying for AP exams and in my daily prayers.</li>
+There is something to appreciate in every EP. "Learning How to Die"/"I Am Still Running" in Winter, "Love Isn't Made" in Spring... okay maybe Summer isn't all that good ("Resurrect Me" sounds out of place for the project). Even though CCM is wild and sprawling, these 24 songs were my bread and butter while studying for AP exams and in my daily prayers.</li></ol>
