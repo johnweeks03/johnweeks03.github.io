@@ -14,7 +14,6 @@
  <p><br style="clear: both;"/></p> 
 
 <h1>Some Books I Like</h1>
-I like several more books than these. These books are listed because they changed the course of my life.
 
 <h2>Books From 2025</h2>
 Near the end of the year I got tired of making excuses not to read and started picking up a few more titles. Here were some of my favorites.
