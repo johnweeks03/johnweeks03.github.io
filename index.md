@@ -49,7 +49,7 @@
 </tr>
 <tr><!-- Link to your CV --> 
 <th style="text-align: right">CV:</th> 
-<td><a href="johnweeks_cv.pdf">johnweeks_cv.pdf</a></td> 
+<td><a href="johnweeks_cv.html">John Weeks CV</a></td> 
 <!-- <td><a href="misc/cv.pdf">John Weeks</a></td> --> 
 </tr> 
 </table>
