@@ -13,8 +13,7 @@
   </div>
  <p><br style="clear: both;"/></p> 
   
-<li><a href="https://rateyourmusic.com/~greamath">My RateYourMusic Profile</a></li>
-<li><a href="https://www.ewg.org/">Environmental Working Group</a></li>
-<li><a href="https://ximera.osu.edu/johnweeks03-test">A Ximera Course I'm Working On</a></li>
+<li><a href="/links/music/">Some Music I Like</a></li>
 <li><a href="/links/books/">Some Books I Like</a></li>
+<li>Some Movies I Like (coming soon!)</li>
 </body>
