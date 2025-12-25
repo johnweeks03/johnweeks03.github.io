@@ -1,4 +1,10 @@
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<style>
+    img.resize {
+  max-width:50%;
+  max-height:50%;
+}
+</style>
 </head>
 
 <body>
@@ -15,7 +21,7 @@
 
 <h1>Some Music I Like</h1>
 <h2>Music on My Journey to Flourishing</h2>
-<li>EDEN, <img alt="" src="https://e.snmc.io/i/600/w/237b27de7237ae4f33887ce1fcfc62df/6681350/eden-end-credits-Cover-Art.png"></img> <a href="https://rateyourmusic.com/release/ep/eden/end-credits/">EDEN</a>. 3/5.
+<li><img class="resize" alt="" src="https://e.snmc.io/i/600/w/237b27de7237ae4f33887ce1fcfc62df/6681350/eden-end-credits-Cover-Art.png"> EDEN,  <a href="https://rateyourmusic.com/release/ep/eden/end-credits/">EDEN</a>. 3/5.
 This one was there when I went under. It started with End Credits then became a repeat with Nocturne and ended with a creative dream to Wake Up.
 
 In 2015 I truly wanted to see God in everything to the point that it was hard to see God in anything. My logical self fell apart, it needed complete restructuring. My emotional self had to carry me for a while, there was no choice. And EDEN helped me see <i>images</i> in my emotions. I had recaptured the feeling of transcendence from the years when I went to church revivals. End Credits was the new reason to raise my hands.
