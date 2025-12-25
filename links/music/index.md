@@ -1,8 +1,8 @@
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 <style>
-    img.resize {
+    .resize {
   max-width:50%;
-  max-height:50%;
+  max-height:auto;
 }
 </style>
 </head>
