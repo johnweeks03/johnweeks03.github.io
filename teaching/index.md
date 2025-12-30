@@ -23,8 +23,43 @@ visibility:hidden;
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
-<h1>Past Teaching and Resources</h1>
-<h2>MATH-140 Hands On, Grades Up - Fall 2024</h2>
+<h1>Current Teaching and Resources</h1>
+
+<h2>MATH-300-901,902 - Introduction to Mathematical Logic and Sets</h2>
+
+I developed a <a href="/300notes/0-1.html">set of notes</a> and developed a <a href="/300readings/1-1.html">partial HTML version of Sundstrom's Mathematical Reasoning: Writing and Proof v3</a> for use in this highly interactive course.
+
+<h1>Past Teaching and Resources (Archived)</h1>
+
+<h2>Fall 2025 - MATH-251-501,503 - Several Variables Calculus for Engineers</h2>
+
+<p>I took on an extra course this semester as part of a departmental overload.</p>
+
+<li><a href="251/251notes.pdf">251 Notes</a></li>
+
+<p> This course uses a collection of online models courtesy of <a href="https://math3d.org/">Math3D</a>.</p>
+
+<li><a href="https://docs.google.com/spreadsheets/d/1-of-2I-hfLJv3ufFSmgZt_fkHUqwwNDOy2eupNV6HWs/edit?usp=sharing">Online Models for MATH-251</a></li>
+
+<h2>Fall 2025 - MATH-632-700 - Transition to Graduate Level Mathematics</h2>
+
+<p>This course is completely online asynchronous to distance students. The course is an intermediary between undergraduate mathematics and graduate-level course work. The content exposes students to higher abstractions of concepts covered in a typical undergraduate education and expects a higher rigor of solutions than students are typically exposed to. The subjects covered in this course include but are not limited to linear algebra, advanced calculus, several variables calculus, and ordinary differential equations.</p>
+
+<p>The link below is a playlist to the lecture videos for this course.</p>
+
+<li><a href="https://www.youtube.com/playlist?list=PLwqnTt0gBi8C-eAjaUtwZf1x6-EqHIp7C">MATH-632 Online - Video Lecture Playlist</a></li>
+
+<h2>Summer 2025 - MATH-409 Advanced Calculus</h2>
+
+<p>This was my first semester experiment with active learning strategies in the classroom. Students were constantly solving problems on the board and interacting with curated AI conversations. The students' overall sentiment was that AI was "kinda helpful," with which I concur. Here is <a href="/409/25mathfest_adventuresin409.pdf">a talk I gave at MathFest 2025</a> on the subject.</p>
+
+<h2>Summer 2025 - MATH-696 Mathematics Communication and Technology</h2>
+
+<p>This course trains Ph.D. students to become recitation teaching assistants in engineering calculus courses while also preparing them for any teaching-focused or client-facing component of their future vocation. This year I began discussing artificial intelligence in the classroom - its positives and its negatives. Here is <a href="/696/696project.pdf">a project where students teach their peers</a> as if they are recitation leaders in an engineering calculus course.</p>
+
+<h2>Spring 2025 - MATH-304-507,508 Linear Algebra for Engineers</h2>
+
+<h2>Fall 2024 - MATH-140 Hands On, Grades Up</h2>
 
 <p>Hands-on, Grades Up sessions consist of active-learning structured activities dedicated to selected courses. Just as in athletic programs, the basic premise here is that to achieve success you need to learn by practicing exercises, discussing problems and unraveling the precise meaning of concepts and how they relate to the problems being solved and to applications.</p>
 
@@ -39,30 +74,17 @@ visibility:hidden;
 <li><a href="2024hogu/202431hogu2.pdf">HOGU 2</a>, <a href="2024hogu/24f140hogu2ans.pdf">HOGU 2 Solutions</a></li>
 <li><a href="2024hogu/202431hogu1.pdf">HOGU 1</a>, <a href="2024hogu/24f140hogu1ans.pdf">HOGU 1 Solutions</a></li>
 
-<h1>Fall 2024 Teaching</h1>
-<h2>MATH-140-529,532 - Mathematics for Business and Social Science</h2>
-<h2>ARSC-101-503 - Hullabaloo U for Math Majors</h2>
+<h2>Fall 2024 - MATH-140-529,532 - Mathematics for Business and Social Science</h2>
+
+<h2>Fall 2024 - ARSC-101-503 - Hullabaloo U for Math Majors</h2>
 
 <p>This is a university orientation course for first-semester freshmen who declared a mathematics major at Texas A&M.</p>
 
-<h2>MATH-632-700 - Introduction to Graduate-Level Mathematics</h2>
+<h2>Fall 2024 - MATH-632-700 - Introduction to Graduate-Level Mathematics</h2>
 
-<p>This course is completely online asynchronous to distance students. The course is an intermediary between undergraduate mathematics and graduate-level course work. The content exposes students to higher abstractions of concepts covered in a typical undergraduate education and expects a higher rigor of solutions than students are typically exposed to. The subjects covered in this course include but are not limited to linear algebra, advanced calculus, several variables calculus, and ordinary differential equations.</p>
+<h2> Summer 2024 - MATH-251-399 - Engineering Calculus III, Online Synchronous</h2>
 
-<p>The link below is a playlist to the lecture videos for this course.</p>
-
-<li><a href="https://www.youtube.com/playlist?list=PLwqnTt0gBi8C-eAjaUtwZf1x6-EqHIp7C">MATH-632 Online - Video Lecture Playlist</a></li>
-
-<h1> Summer 2024 Teaching </h1>
-<h2> MATH-251-399 - Engineering Calculus III, Online Synchronous</h2>
-
-<li><a href="251/251notes.pdf">251 Notes</a></li>
-
-<p> This course uses a collection of online models courtesy of <a href="https://math3d.org/">Math3D</a>.</p>
-
-<li><a href="https://docs.google.com/spreadsheets/d/1-of-2I-hfLJv3ufFSmgZt_fkHUqwwNDOy2eupNV6HWs/edit?usp=sharing">Online Models for MATH-251</a></li>
-
-<h2> MATH-615-700 - Introduction to Classical Analysis, Online Asynchronous</h2>
+<h2> Summer 2024 - MATH-615-700 - Introduction to Classical Analysis, Online Asynchronous</h2>
 
 <p> This course is intended as a second course in analysis, taken after a typical undergraduate course in real variables and before a measure theory course.</p>
 
@@ -70,57 +92,48 @@ visibility:hidden;
 
 <li><a href="https://www.youtube.com/playlist?list=PLwqnTt0gBi8Aes0IXkQa4kxsEmyDbkTl5">MATH-615 Online - Video Lecture Playlist</a></li>
 
-<h1> Spring 2024 Teaching </h1>
-
-<h2>MATH-304-509,511 - Linear Algebra for Engineers</h2>
+<h2>Spring 2024 - MATH-304-509,511 - Linear Algebra for Engineers</h2>
 
 <li><a href="304/304notes.pdf">304 Notes</a></li>
 
-<h2>MATH-309-501 - Linear Algebra for Differential Equations</h2>
+<h2>Spring 2024 - MATH-309-501 - Linear Algebra for Differential Equations</h2>
 
 <p>This course combines the theory of linear algebra with the application of the heat equation. A strong emphasis is placed on Fourier series for continuous functions. A selection of the notes for MATH-304 is used, on top of a few extra sections.</p>
 
 <li><a href="304/309notes.pdf">309 Notes</a></li>
 
-<h1> Fall 2023 Teaching</h1>
-<h2> MATH-140-519,700 - Mathematics for Business and Social Science</h2>
+<h2>Fall 2023 - MATH-140-519,700 - Mathematics for Business and Social Science</h2>
 
 <p>One of these two sections was taught online asynchronous.</p>
 
-<h2> MATH-632-700</h2>
+<h2>Fall 2023 - MATH-632-700</h2>
 
-<h1> Summer 2023 Teaching</h1>
+<h2>Summer 2023 - MATH-251-302 - Calculus III for Engineers </p>
 
-<h2>MATH-251-302 - Calculus III for Engineers </p>
-
-<h2>MATH-409-301 - Advanced Calculus</h2>
+<h2>Summer 2023 - MATH-409-301 - Advanced Calculus</h2>
 
 Students were asked to present a proof from their completion of a communal proof packet as part of a participation grade.
 
 <li><a href="409/409slides.pdf">Slides for Class</a></li>
 <li><a href="409/409packet.pdf">Proof Packet</a></li>
 
-<h1> Spring 2023 Teaching</h1>
-<h2> MATH-251-501,502,506 - Calculus III for Engineering</h2>
+<h2>Spring 2023 - MATH-251-501,502,506 - Calculus III for Engineering</h2>
 
-<h1> Fall 2022 Teaching</h1>
-<h2> MATH-140-518,519,700</h2>
+<h2>Fall 2022 - MATH-140-518,519,700</h2>
 
 <p>One of these three sections was taught online asynchronous.</p>
 
-<h1>Summer 2022 Teaching</h1>
-<h2>MATH-663, Real Analysis Qualifier Prep</h2>
+<h2>Summer 2022 - MATH-663, Real Analysis Qualifier Prep</h2>
 
 <p>This course prepares graduate students for taking the qualfier exam for Real Analysis. Previous qualifying exams can be found on the <a href="https://www.math.tamu.edu/graduate/phd/quals.html">Texas A&M Math Department website</a>. </p>
 
 <li><a href="qualprep/realqualssolutions.pdf">Student Solutions to Previous Qualifying Exams in Real Analysis</a></li>
 
-<h1>Fall 2021 Teaching</h1>
-<h2>MATH-142-504 - Business Calculus</h2>
+<h2>Fall 2021 - MATH-142-504 - Business Calculus</h2>
 
-<h1>Spring 2020 Teaching</h1>
-<h2>MATH-142-504 - Business Calculus</h2>
+<h2>Spring 2020 - MATH-142-504 - Business Calculus</h2>
 
+<p>Below is my personal webpage set-up for this course.</p>
 <h3>Important Links</h3> 
 <ul style="margin-top: 2px"> 
 <!-- 
