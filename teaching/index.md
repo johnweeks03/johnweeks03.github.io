@@ -27,7 +27,7 @@ visibility:hidden;
 
 <h2>MATH-300-901,902 - Introduction to Mathematical Logic and Sets</h2>
 
-I developed a <a href="/300/300notes/0-1.html">set of notes</a> and developed a <a href="/300/300readings/1-1.html">partial HTML version of Sundstrom's Mathematical Reasoning: Writing and Proof v3</a> for use in this highly interactive course.
+I developed a <a href="300/300notes/0-1.html">set of notes</a> and developed a <a href="300/300readings/1-1.html">partial HTML version of Sundstrom's Mathematical Reasoning: Writing and Proof v3</a> for use in this highly interactive course.
 
 <h1>Past Teaching and Resources (Archived)</h1>
 
