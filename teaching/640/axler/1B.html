@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1B Definition of Vector Space</title>
+<!--Generated on Wed Dec 31 21:00:34 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="Sx1" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">1B Definition of Vector Space</h1>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">The motivation for the definition of a vector space comes from properties of addition and scalar multiplication in <math id="Sx1.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>: Addition is commutative, associative, and has an identity. Every element has an additive inverse. Scalar multiplication is associative. Scalar multiplication by 1 acts as expected. Addition and scalar multiplication are connected by distributive properties.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">We will define a vector space to be a set <math id="Sx1.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> with an addition and a scalar multiplication on <math id="Sx1.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> that satisfy the properties in the paragraph above.</p>
+</div>
+<section id="S1.SS19" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.19 </span>Definition: Addition, Scalar Multiplication</h2>
+
+<div id="S1.SS19.p1" class="ltx_para">
+<ul id="S1.I1" class="ltx_itemize">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">An addition on a set <math id="S1.I1.i1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a function that assigns an element <math id="S1.I1.i1.p1.m2" class="ltx_Math" alttext="u+v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> to each pair of elements <math id="S1.I1.i1.p1.m3" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">A scalar multiplication on a set <math id="S1.I1.i2.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a function that assigns an element <math id="S1.I1.i2.p1.m2" class="ltx_Math" alttext="\lambda v\in V" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> to each <math id="S1.I1.i2.p1.m3" class="ltx_Math" alttext="\lambda\in\mathbf{F}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> and each <math id="S1.I1.i2.p1.m4" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.SS19.p2" class="ltx_para">
+<p class="ltx_p">Now we are ready to give the formal definition of a vector space.</p>
+</div>
+</section>
+<section id="S1.SS20" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.20 </span>Definition: Vector Space</h2>
+
+<div id="S1.SS20.p1" class="ltx_para">
+<p class="ltx_p">A vector space is a set <math id="S1.SS20.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> along with an addition on <math id="S1.SS20.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and a scalar multiplication on <math id="S1.SS20.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> such that the following properties hold.</p>
+</div>
+<div id="S1.SS20.p2" class="ltx_para">
+<ul id="S1.I2" class="ltx_itemize">
+<li id="S1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">commutativity</span> 
+<br class="ltx_break"><math id="S1.I2.i1.p1.m1" class="ltx_Math" alttext="u+v=v+u" display="inline"><mrow><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mi>u</mi></mrow></mrow></math> for all <math id="S1.I2.i1.p1.m2" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">associativity</span> 
+<br class="ltx_break"><math id="S1.I2.i2.p1.m1" class="ltx_Math" alttext="(u+v)+w=u+(v+w)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>w</mi></mrow><mo>=</mo><mrow><mi>u</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S1.I2.i2.p1.m2" class="ltx_Math" alttext="(ab)v=a(bv)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S1.I2.i2.p1.m3" class="ltx_Math" alttext="u,v,w\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> and for all <math id="S1.I2.i2.p1.m4" class="ltx_Math" alttext="a,b\in\mathbf{F}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">additive identity</span> 
+<br class="ltx_break">There exists an element <math id="S1.I2.i3.p1.m1" class="ltx_Math" alttext="0\in V" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>V</mi></mrow></math> such that <math id="S1.I2.i3.p1.m2" class="ltx_Math" alttext="v+0=v" display="inline"><mrow><mrow><mi>v</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mi>v</mi></mrow></math> for all <math id="S1.I2.i3.p1.m3" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">additive inverse</span> 
+<br class="ltx_break">For every <math id="S1.I2.i4.p1.m1" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>, there exists <math id="S1.I2.i4.p1.m2" class="ltx_Math" alttext="w\in V" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></math> such that <math id="S1.I2.i4.p1.m3" class="ltx_Math" alttext="v+w=0" display="inline"><mrow><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">multiplicative identity</span> 
+<br class="ltx_break"><math id="S1.I2.i5.p1.m1" class="ltx_Math" alttext="1v=v" display="inline"><mrow><mrow><mn>1</mn><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mi>v</mi></mrow></math> for all <math id="S1.I2.i5.p1.m2" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">distributive properties</span> 
+<br class="ltx_break"><math id="S1.I2.i6.p1.m1" class="ltx_Math" alttext="a(u+v)=au+av" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math> and <math id="S1.I2.i6.p1.m2" class="ltx_Math" alttext="(a+b)v=av+bv" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math> for all <math id="S1.I2.i6.p1.m3" class="ltx_Math" alttext="a,b\in\mathbf{F}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> and all <math id="S1.I2.i6.p1.m4" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.SS20.p3" class="ltx_para">
+<p class="ltx_p">The following geometric language sometimes aids our intuition.</p>
+</div>
+</section>
+<section id="S1.SS21" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.21 </span>Definition: Vector, Point</h2>
+
+<div id="S1.SS21.p1" class="ltx_para">
+<p class="ltx_p">Elements of a vector space are called vectors or points.</p>
+</div>
+<div id="S1.SS21.p2" class="ltx_para">
+<p class="ltx_p">The scalar multiplication in a vector space depends on <math id="S1.SS21.p2.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>. Thus when we need to be precise, we will say that <math id="S1.SS21.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a vector space over <math id="S1.SS21.p2.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> instead of saying simply that <math id="S1.SS21.p2.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a vector space. For example, <math id="S1.SS21.p2.m5" class="ltx_Math" alttext="\mathbf{R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math> is a vector space over <math id="S1.SS21.p2.m6" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math>, and <math id="S1.SS21.p2.m7" class="ltx_Math" alttext="\mathbf{C}^{n}" display="inline"><msup><mi>𝐂</mi><mi>n</mi></msup></math> is a vector space over <math id="S1.SS21.p2.m8" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>.</p>
+</div>
+</section>
+<section id="S1.SS22" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.22 </span>Definition: Real Vector Space, Complex Vector Space</h2>
+
+<div id="S1.SS22.p1" class="ltx_para">
+<ul id="S1.I3" class="ltx_itemize">
+<li id="S1.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">A vector space over <math id="S1.I3.i1.p1.m1" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> is called a real vector space.</p>
+</div>
+</li>
+<li id="S1.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">A vector space over <math id="S1.I3.i2.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> is called a complex vector space.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.SS22.p2" class="ltx_para">
+<p class="ltx_p">Usually the choice of <math id="S1.SS22.p2.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is either clear from the context or irrelevant. Thus we often assume that <math id="S1.SS22.p2.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is lurking in the background without specifically mentioning it.</p>
+</div>
+<div id="S1.SS22.p3" class="ltx_para">
+<p class="ltx_p">With the usual operations of addition and scalar multiplication, <math id="S1.SS22.p3.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is a vector space over <math id="S1.SS22.p3.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>, as you should verify. The example of <math id="S1.SS22.p3.m3" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> motivated our definition of vector space.</p>
+</div>
+<div id="S1.SS22.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The simplest vector space is <math id="S1.SS22.p4.m1" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>, which contains only one point.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="S1.SS23" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.23 </span>Example: <math id="S1.SS23.m1" class="ltx_Math" alttext="\mathbf{F}^{\infty}" display="inline"><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup></math>
+</h2>
+
+<div id="S1.SS23.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS23.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{\infty}" display="inline"><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup></math> is defined to be the set of all sequences of elements of <math id="S1.SS23.p1.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>:</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\mathbf{F}^{\infty}=\left\{\left(x_{1},x_{2},\ldots\right):x_{k}\in\mathbf{F}%
+\text{ for }k=1,2,\ldots\right\}." display="block"><mrow><mrow><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup><mo>=</mo><mrow><mo>{</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo rspace="0.278em">)</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>∈</mo><mrow><mi>𝐅</mi><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Addition and scalar multiplication on <math id="S1.SS23.p1.m3" class="ltx_Math" alttext="\mathbf{F}^{\infty}" display="inline"><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup></math> are defined as expected:</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\begin{gathered}\left(x_{1},x_{2},\ldots\right)+\left(y_{1},y_{2},\ldots\right%
+)=\left(x_{1}+y_{1},x_{2}+y_{2},\ldots\right),\\
+\lambda\left(x_{1},x_{2},\ldots\right)=\left(\lambda x_{1},\lambda x_{2},%
+\ldots\right).\end{gathered}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mrow><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">With these definitions, <math id="S1.SS23.p1.m4" class="ltx_Math" alttext="\mathbf{F}^{\infty}" display="inline"><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup></math> becomes a vector space over <math id="S1.SS23.p1.m5" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>, as you should verify. The additive identity in this vector space is the sequence of all 0’s.</p>
+</div>
+<div id="S1.SS23.p2" class="ltx_para">
+<p class="ltx_p">Our next example of a vector space involves a set of functions.</p>
+</div>
+</section>
+<section id="S1.SS24" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.24 </span>Notation: <math id="S1.SS24.m1" class="ltx_Math" alttext="\mathbf{F}^{S}" display="inline"><msup><mi>𝐅</mi><mi>S</mi></msup></math>
+</h2>
+
+<div id="S1.SS24.p1" class="ltx_para">
+<ul id="S1.I4" class="ltx_itemize">
+<li id="S1.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S1.I4.i1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a set, then <math id="S1.I4.i1.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{S}" display="inline"><msup><mi>𝐅</mi><mi>S</mi></msup></math> denotes the set of functions from <math id="S1.I4.i1.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> to <math id="S1.I4.i1.p1.m4" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+</li>
+<li id="S1.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I4.i2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S1.I4.i2.p1.m1" class="ltx_Math" alttext="f,g\in\mathbf{F}^{S}" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>S</mi></msup></mrow></math>, the sum <math id="S1.I4.i2.p1.m2" class="ltx_Math" alttext="f+g\in\mathbf{F}^{S}" display="inline"><mrow><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>S</mi></msup></mrow></math> is the function defined by</p>
+</div>
+</li>
+</ul>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="(f+g)(x)=f(x)+g(x)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="S1.SS24.p1.m1" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+<ul id="S1.I5" class="ltx_itemize">
+<li id="S1.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S1.I5.i1.p1.m1" class="ltx_Math" alttext="\lambda\in\mathbf{F}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> and <math id="S1.I5.i1.p1.m2" class="ltx_Math" alttext="f\in\mathbf{F}^{S}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>S</mi></msup></mrow></math>, the product <math id="S1.I5.i1.p1.m3" class="ltx_Math" alttext="\lambda f\in\mathbf{F}^{S}" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>S</mi></msup></mrow></math> is the function defined by</p>
+</div>
+</li>
+</ul>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="(\lambda f)(x)=\lambda f(x)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="S1.SS24.p1.m2" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS24.p2" class="ltx_para">
+<p class="ltx_p">As an example of the notation above, if <math id="S1.SS24.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is the interval <math id="S1.SS24.p2.m2" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math> and <math id="S1.SS24.p2.m3" class="ltx_Math" alttext="\mathbf{F}=\mathbf{R}" display="inline"><mrow><mi>𝐅</mi><mo>=</mo><mi>𝐑</mi></mrow></math>, then <math id="S1.SS24.p2.m4" class="ltx_Math" alttext="\mathbf{R}^{[0,1]}" display="inline"><msup><mi>𝐑</mi><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msup></math> is the set of real-valued functions on the interval <math id="S1.SS24.p2.m5" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS24.p3" class="ltx_para">
+<p class="ltx_p">You should verify all three bullet points in the next example.</p>
+</div>
+</section>
+<section id="S1.SS25" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.25 </span>Example: <math id="S1.SS25.m1" class="ltx_Math" alttext="\mathbf{F}^{S}" display="inline"><msup><mi>𝐅</mi><mi>S</mi></msup></math> is a Vector Space</h2>
+
+<div id="S1.SS25.p1" class="ltx_para">
+<ul id="S1.I6" class="ltx_itemize">
+<li id="S1.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S1.I6.i1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a nonempty set, then <math id="S1.I6.i1.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{S}" display="inline"><msup><mi>𝐅</mi><mi>S</mi></msup></math> (with the operations of addition and scalar multiplication as defined above) is a vector space over <math id="S1.I6.i1.p1.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+</li>
+<li id="S1.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">The additive identity of <math id="S1.I6.i2.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{S}" display="inline"><msup><mi>𝐅</mi><mi>S</mi></msup></math> is the function <math id="S1.I6.i2.p1.m2" class="ltx_Math" alttext="0:S\rightarrow\mathbf{F}" display="inline"><mrow><mn>0</mn><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>S</mi><mo stretchy="false">→</mo><mi>𝐅</mi></mrow></mrow></math> defined by</p>
+</div>
+</li>
+</ul>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="0(x)=0" display="block"><mrow><mrow><mn>0</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="S1.SS25.p1.m1" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+<ul id="S1.I7" class="ltx_itemize">
+<li id="S1.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S1.I7.i1.p1.m1" class="ltx_Math" alttext="f\in\mathbf{F}^{S}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>S</mi></msup></mrow></math>, the additive inverse of <math id="S1.I7.i1.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is the function <math id="S1.I7.i1.p1.m3" class="ltx_Math" alttext="-f:S\rightarrow\mathbf{F}" display="inline"><mrow><mrow><mo>−</mo><mi>f</mi></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>S</mi><mo stretchy="false">→</mo><mi>𝐅</mi></mrow></mrow></math> defined by</p>
+</div>
+</li>
+</ul>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="(-f)(x)=-f(x)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="S1.SS25.p1.m2" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS25.p2" class="ltx_para">
+<p class="ltx_p">The vector space <math id="S1.SS25.p2.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is a special case of the vector space <math id="S1.SS25.p2.m2" class="ltx_Math" alttext="\mathbf{F}^{S}" display="inline"><msup><mi>𝐅</mi><mi>S</mi></msup></math> because each <math id="S1.SS25.p2.m3" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math> can be thought of as a function <math id="S1.SS25.p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> from the set <math id="S1.SS25.p2.m5" class="ltx_Math" alttext="\{1,2,\ldots,n\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math> to <math id="S1.SS25.p2.m6" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> by writing <math id="S1.SS25.p2.m7" class="ltx_Math" alttext="x(k)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> instead of <math id="S1.SS25.p2.m8" class="ltx_Math" alttext="x_{k}" display="inline"><msub><mi>x</mi><mi>k</mi></msub></math> for the <math id="S1.SS25.p2.m9" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> coordinate of <math id="S1.SS25.p2.m10" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)" display="inline"><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></math>. In other words, we can think of <math id="S1.SS25.p2.m11" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> as <math id="S1.SS25.p2.m12" class="ltx_Math" alttext="\mathbf{F}^{\{1,2,\ldots,n\}}" display="inline"><msup><mi>𝐅</mi><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></msup></math>. Similarly, we can think of <math id="S1.SS25.p2.m13" class="ltx_Math" alttext="\mathbf{F}^{\infty}" display="inline"><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup></math> as <math id="S1.SS25.p2.m14" class="ltx_Math" alttext="\mathbf{F}^{\{1,2,\ldots\}}" display="inline"><msup><mi>𝐅</mi><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></msup></math>.</p>
+</div>
+<div id="S1.SS25.p3" class="ltx_para">
+<p class="ltx_p">Soon we will see further examples of vector spaces, but first we need to develop some of the elementary properties of vector spaces.</p>
+</div>
+<div id="S1.SS25.p4" class="ltx_para">
+<p class="ltx_p">The definition of a vector space requires it to have an additive identity. The next result states that this identity is unique.</p>
+</div>
+</section>
+<section id="S1.SS26" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.26 </span>Unique Additive Identity</h2>
+
+<div id="S1.SS26.p1" class="ltx_para">
+<p class="ltx_p">A vector space has a unique additive identity.</p>
+</div>
+<div id="S1.SS26.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Suppose 0 and <math id="S1.SS26.p2.m1" class="ltx_Math" alttext="0^{\prime}" display="inline"><msup><mn>0</mn><mo>′</mo></msup></math> are both additive identities for some vector space <math id="S1.SS26.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Then</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="0^{\prime}=0^{\prime}+0=0+0^{\prime}=0," display="block"><mrow><mrow><msup><mn>0</mn><mo>′</mo></msup><mo>=</mo><mrow><msup><mn>0</mn><mo>′</mo></msup><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mrow><mn>0</mn><mo>+</mo><msup><mn>0</mn><mo>′</mo></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the first equality holds because 0 is an additive identity, the second equality comes from commutativity, and the third equality holds because <math id="S1.SS26.p2.m3" class="ltx_Math" alttext="0^{\prime}" display="inline"><msup><mn>0</mn><mo>′</mo></msup></math> is an additive identity. Thus <math id="S1.SS26.p2.m4" class="ltx_Math" alttext="0^{\prime}=0" display="inline"><mrow><msup><mn>0</mn><mo>′</mo></msup><mo>=</mo><mn>0</mn></mrow></math>, proving that <math id="S1.SS26.p2.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has only one additive identity.  <math id="S1.SS26.p2.m6" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S1.SS26.p3" class="ltx_para">
+<p class="ltx_p">Each element <math id="S1.SS26.p3.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> in a vector space has an additive inverse, an element <math id="S1.SS26.p3.m2" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> in the vector space such that <math id="S1.SS26.p3.m3" class="ltx_Math" alttext="v+w=0" display="inline"><mrow><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. The next result shows that each element in a vector space has only one additive inverse.</p>
+</div>
+<div id="S1.SS26.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The elements of the vector space <math id="S1.SS26.p4.m1" class="ltx_Math" alttext="\mathbf{R}^{[0,1]}" display="inline"><msup><mi>𝐑</mi><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msup></math> are real-valued functions on <math id="S1.SS26.p4.m2" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>, not lists. In general, a vector space is an abstract entity whose elements might be lists, functions, or weird objects.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="S1.SS27" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.27 </span>Unique Additive Inverse</h2>
+
+<div id="S1.SS27.p1" class="ltx_para">
+<p class="ltx_p">Every element in a vector space has a unique additive inverse.</p>
+</div>
+<div id="S1.SS27.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Suppose <math id="S1.SS27.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a vector space. Let <math id="S1.SS27.p2.m2" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>. Suppose <math id="S1.SS27.p2.m3" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and <math id="S1.SS27.p2.m4" class="ltx_Math" alttext="w^{\prime}" display="inline"><msup><mi>w</mi><mo>′</mo></msup></math> are additive inverses of <math id="S1.SS27.p2.m5" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>. Then</p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="w=w+0=w+\left(v+w^{\prime}\right)=(w+v)+w^{\prime}=0+w^{\prime}=w^{\prime}." display="block"><mrow><mrow><mi>w</mi><mo>=</mo><mrow><mi>w</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mrow><mi>w</mi><mo>+</mo><mrow><mo>(</mo><mrow><mi>v</mi><mo>+</mo><msup><mi>w</mi><mo>′</mo></msup></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><msup><mi>w</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><mn>0</mn><mo>+</mo><msup><mi>w</mi><mo>′</mo></msup></mrow><mo>=</mo><msup><mi>w</mi><mo>′</mo></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus <math id="S1.SS27.p2.m6" class="ltx_Math" alttext="w=w^{\prime}" display="inline"><mrow><mi>w</mi><mo>=</mo><msup><mi>w</mi><mo>′</mo></msup></mrow></math>, as desired.  <math id="S1.SS27.p2.m7" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S1.SS27.p3" class="ltx_para">
+<p class="ltx_p">Because additive inverses are unique, the following notation now makes sense.</p>
+</div>
+</section>
+<section id="S1.SS28" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.28 </span>Notation: <math id="S1.SS28.m1" class="ltx_Math" alttext="-v,w-v" display="inline"><mrow><mrow><mo>−</mo><mi>v</mi></mrow><mo>,</mo><mrow><mi>w</mi><mo>−</mo><mi>v</mi></mrow></mrow></math>
+</h2>
+
+<div id="S1.SS28.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.SS28.p1.m1" class="ltx_Math" alttext="v,w\in V" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>. Then</p>
+<ul id="S1.I8" class="ltx_itemize">
+<li id="S1.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I8.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I8.i1.p1.m1" class="ltx_Math" alttext="-v" display="inline"><mrow><mo>−</mo><mi>v</mi></mrow></math> denotes the additive inverse of <math id="S1.I8.i1.p1.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>;</p>
+</div>
+</li>
+<li id="S1.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I8.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I8.i2.p1.m1" class="ltx_Math" alttext="w-v" display="inline"><mrow><mi>w</mi><mo>−</mo><mi>v</mi></mrow></math> is defined to be <math id="S1.I8.i2.p1.m2" class="ltx_Math" alttext="w+(-v)" display="inline"><mrow><mi>w</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.SS28.p2" class="ltx_para">
+<p class="ltx_p">Almost all results in this book involve some vector space. To avoid having to restate frequently that <math id="S1.SS28.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a vector space, we now make the necessary declaration once and for all.</p>
+</div>
+</section>
+<section id="S1.SS29" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.29 </span>Notation: <math id="S1.SS29.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+</h2>
+
+<div id="S1.SS29.p1" class="ltx_para">
+<p class="ltx_p">For the rest of this book, <math id="S1.SS29.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> denotes a vector space over <math id="S1.SS29.p1.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+<div id="S1.SS29.p2" class="ltx_para">
+<p class="ltx_p">In the next result, 0 denotes a scalar (the number <math id="S1.SS29.p2.m1" class="ltx_Math" alttext="0\in\mathbf{F}" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>𝐅</mi></mrow></math>) on the left side of the equation and a vector (the additive identity of <math id="S1.SS29.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>) on the right side of the equation.</p>
+</div>
+</section>
+<section id="S1.SS30" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.30 </span>The Number 0 Times a Vector</h2>
+
+<div id="S1.SS30.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS30.p1.m1" class="ltx_Math" alttext="0v=0" display="inline"><mrow><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> for every <math id="S1.SS30.p1.m2" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS30.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: For <math id="S1.SS30.p2.m1" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>, we have</p>
+<table id="S1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex9.m1" class="ltx_Math" alttext="0v=(0+0)v=0v+0v." display="block"><mrow><mrow><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo>+</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Adding the additive inverse of <math id="S1.SS30.p2.m2" class="ltx_Math" alttext="0v" display="inline"><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow></math> to both sides of the equation above gives <math id="S1.SS30.p2.m3" class="ltx_Math" alttext="0=0v" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow></mrow></math>, as desired.  <math id="S1.SS30.p2.m4" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S1.SS30.p3" class="ltx_para">
+<p class="ltx_p">In the next result, 0 denotes the additive identity of <math id="S1.SS30.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Although their proofs are similar, 1.30 and 1.31 are not identical. More precisely, 1.30 states that the product of the scalar 0 and any vector equals the vector 0, whereas 1.31 states that the product of any scalar and the vector 0 equals the vector 0.</p>
+</div>
+<div id="S1.SS30.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The result in 1.30 involves the additive identity of <math id="S1.SS30.p4.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and scalar multiplication. The only part of the definition of a vector space that connects vector addition and scalar multiplication is the distributive property. Thus the distributive property must be used in the proof of 1.30.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="S1.SS31" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.31 </span>A Number Times the Vector 0</h2>
+
+<div id="S1.SS31.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS31.p1.m1" class="ltx_Math" alttext="a0=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mn>0</mn></mrow><mo>=</mo><mn>0</mn></mrow></math> for every <math id="S1.SS31.p1.m2" class="ltx_Math" alttext="a\in\mathbf{F}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>𝐅</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS31.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: For <math id="S1.SS31.p2.m1" class="ltx_Math" alttext="a\in\mathbf{F}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>𝐅</mi></mrow></math>, we have</p>
+<table id="S1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex10.m1" class="ltx_Math" alttext="a0=a(0+0)=a0+a0." display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mn>0</mn></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo>+</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mn>0</mn></mrow><mo>+</mo><mrow><mi>a</mi><mo>⁢</mo><mn>0</mn></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Adding the additive inverse of <math id="S1.SS31.p2.m2" class="ltx_Math" alttext="a0" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mn>0</mn></mrow></math> to both sides of the equation above gives <math id="S1.SS31.p2.m3" class="ltx_Math" alttext="0=a0" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mn>0</mn></mrow></mrow></math>, as desired.  <math id="S1.SS31.p2.m4" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S1.SS31.p3" class="ltx_para">
+<p class="ltx_p">Now we show that if an element of <math id="S1.SS31.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is multiplied by the scalar <math id="S1.SS31.p3.m2" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>, then the result is the additive inverse of the element of <math id="S1.SS31.p3.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</section>
+<section id="S1.SS32" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.32 </span>The Number <math id="S1.SS32.m1" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> Times a Vector</h2>
+
+<div id="S1.SS32.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.SS32.p1.m1" class="ltx_Math" alttext="(-1)v=-v" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mo>−</mo><mi>v</mi></mrow></mrow></math> for every <math id="S1.SS32.p1.m2" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+<div id="S1.SS32.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: For <math id="S1.SS32.p2.m1" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>, we have</p>
+<table id="S1.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex11.m1" class="ltx_Math" alttext="v+(-1)v=1v+(-1)v=(1+(-1))v=0v=0." display="block"><mrow><mrow><mrow><mi>v</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>=</mo><mrow><mrow><mn>1</mn><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This equation says that <math id="S1.SS32.p2.m2" class="ltx_Math" alttext="(-1)v" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></math>, when added to <math id="S1.SS32.p2.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, gives 0. Thus <math id="S1.SS32.p2.m4" class="ltx_Math" alttext="(-1)v" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></math> is the additive inverse of <math id="S1.SS32.p2.m5" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, as desired.  <math id="S1.SS32.p2.m6" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+</section>
+</section>
+<section id="Sx2" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Exercises 1B</h1>
+
+<div id="Sx2.p1" class="ltx_para">
+<ol id="Sx2.I9" class="ltx_enumerate">
+<li id="Sx2.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="Sx2.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="Sx2.I9.i1.p1.m1" class="ltx_Math" alttext="-(-v)=v" display="inline"><mrow><mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>v</mi></mrow></math> for every <math id="Sx2.I9.i1.p1.m2" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx2.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="Sx2.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.I9.i2.p1.m1" class="ltx_Math" alttext="a\in\mathbf{F},v\in V" display="inline"><mrow><mrow><mi>a</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>,</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></mrow></math>, and <math id="Sx2.I9.i2.p1.m2" class="ltx_Math" alttext="av=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Prove that <math id="Sx2.I9.i2.p1.m3" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="Sx2.I9.i2.p1.m4" class="ltx_Math" alttext="v=0" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx2.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="Sx2.I9.i3.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.I9.i3.p1.m1" class="ltx_Math" alttext="v,w\in V" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>. Explain why there exists a unique <math id="Sx2.I9.i3.p1.m2" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math> such that <math id="Sx2.I9.i3.p1.m3" class="ltx_Math" alttext="v+3x=w" display="inline"><mrow><mrow><mi>v</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mi>w</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx2.I9.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="Sx2.I9.i4.p1" class="ltx_para">
+<p class="ltx_p">The empty set is not a vector space. The empty set fails to satisfy only one of the requirements listed in the definition of a vector space (1.20). Which one?</p>
+</div>
+</li>
+<li id="Sx2.I9.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="Sx2.I9.i5.p1" class="ltx_para">
+<p class="ltx_p">Show that in the definition of a vector space (1.20), the additive inverse condition can be replaced with the condition that</p>
+<table id="Sx2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex12.m1" class="ltx_Math" alttext="0v=0\text{ for all }v\in V." display="block"><mrow><mrow><mrow><mn>0</mn><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mn>0</mn><mo>⁢</mo><mtext> for all </mtext><mo>⁢</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Here the 0 on the left side is the number 0, and the 0 on the right side is the additive identity of <math id="Sx2.I9.i5.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The phrase a “condition can be replaced” in a definition means that the collection of objects satisfying the definition is unchanged if the original condition is replaced with the new condition.</span></p>
+</blockquote>
+</div>
+</li>
+<li id="Sx2.I9.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="Sx2.I9.i6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx2.I9.i6.p1.m1" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> and <math id="Sx2.I9.i6.p1.m2" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></math> denote two distinct objects, neither of which is in <math id="Sx2.I9.i6.p1.m3" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math>. Define an addition and scalar multiplication on <math id="Sx2.I9.i6.p1.m4" class="ltx_Math" alttext="\mathbf{R}\cup\{\infty,-\infty\}" display="inline"><mrow><mi>𝐑</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∞</mi><mo>,</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> as you could guess from the notation. Specifically, the sum and product of two real numbers is as usual, and for <math id="Sx2.I9.i6.p1.m5" class="ltx_Math" alttext="t\in\mathbf{R}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>𝐑</mi></mrow></math> define</p>
+<table id="Sx2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex13.m1" class="ltx_Math" alttext="t(\infty)=\begin{cases}-\infty&amp;\text{if }t&lt;0,\\
+0&amp;\text{if }t=0,\\
+\infty&amp;\text{if }t&gt;0,\end{cases}\quad\text{and}\quad t(-\infty)=\begin{cases}%
+\infty&amp;\text{if }t&lt;0,\\
+0&amp;\text{if }t=0,\\
+-\infty&amp;\text{if }t&gt;0,\end{cases}" display="block"><mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>t</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mn>0</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mi mathvariant="normal">∞</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>t</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr></mtable></mrow><mspace style="width:1em;" width="1em"></mspace><mtext>and</mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi mathvariant="normal">∞</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>t</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mn>0</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>t</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr></mtable></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="Sx2.Ex14" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx2.Ex14X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex14X.m2" class="ltx_Math" alttext="\displaystyle t+\infty" display="inline"><mrow><mi>t</mi><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex14X.m3" class="ltx_Math" alttext="\displaystyle=\infty+t=\infty+\infty=\infty," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi mathvariant="normal">∞</mi><mo>+</mo><mi>t</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">∞</mi><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx2.Ex14Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex14Xa.m2" class="ltx_Math" alttext="\displaystyle t+(-\infty)" display="inline"><mrow><mi>t</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex14Xa.m3" class="ltx_Math" alttext="\displaystyle=(-\infty)+t=(-\infty)+(-\infty)=-\infty," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>t</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx2.Ex14Xb"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex14Xb.m2" class="ltx_Math" alttext="\displaystyle\infty+(-\infty)" display="inline"><mrow><mi mathvariant="normal">∞</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex14Xb.m3" class="ltx_Math" alttext="\displaystyle=(-\infty)+\infty=0." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">With these operations of addition and scalar multiplication, is <math id="Sx2.I9.i6.p1.m6" class="ltx_Math" alttext="\mathbf{R}\cup\{\infty,-\infty\}" display="inline"><mrow><mi>𝐑</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∞</mi><mo>,</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> a vector space over <math id="Sx2.I9.i6.p1.m7" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math>? Explain.</p>
+</div>
+</li>
+<li id="Sx2.I9.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="Sx2.I9.i7.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.I9.i7.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a nonempty set. Let <math id="Sx2.I9.i7.p1.m2" class="ltx_Math" alttext="V^{S}" display="inline"><msup><mi>V</mi><mi>S</mi></msup></math> denote the set of functions from <math id="Sx2.I9.i7.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> to <math id="Sx2.I9.i7.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Define a natural addition and scalar multiplication on <math id="Sx2.I9.i7.p1.m5" class="ltx_Math" alttext="V^{S}" display="inline"><msup><mi>V</mi><mi>S</mi></msup></math>, and show that <math id="Sx2.I9.i7.p1.m6" class="ltx_Math" alttext="V^{S}" display="inline"><msup><mi>V</mi><mi>S</mi></msup></math> is a vector space with these definitions.</p>
+</div>
+</li>
+<li id="Sx2.I9.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="Sx2.I9.i8.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.I9.i8.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space.</p>
+<ul id="Sx2.I9.i8.I1" class="ltx_itemize">
+<li id="Sx2.I9.i8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx2.I9.i8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The complexification of <math id="Sx2.I9.i8.I1.i1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, denoted by <math id="Sx2.I9.i8.I1.i1.p1.m2" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math>, equals <math id="Sx2.I9.i8.I1.i1.p1.m3" class="ltx_Math" alttext="V\times V" display="inline"><mrow><mi>V</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>V</mi></mrow></math>. An element of <math id="Sx2.I9.i8.I1.i1.p1.m4" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math> is an ordered pair <math id="Sx2.I9.i8.I1.i1.p1.m5" class="ltx_Math" alttext="(u,v)" display="inline"><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="Sx2.I9.i8.I1.i1.p1.m6" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>, but we write this as <math id="Sx2.I9.i8.I1.i1.p1.m7" class="ltx_Math" alttext="u+iv" display="inline"><mrow><mi>u</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx2.I9.i8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx2.I9.i8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Addition on <math id="Sx2.I9.i8.I1.i2.p1.m1" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math> is defined by</p>
+<table id="Sx2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex15.m1" class="ltx_Math" alttext="\left(u_{1}+iv_{1}\right)+\left(u_{2}+iv_{2}\right)=\left(u_{1}+u_{2}\right)+i%
+\left(v_{1}+v_{2}\right)" display="block"><mrow><mrow><mrow><mo>(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>+</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx2.I9.i8.I1.i2.p1.m2" class="ltx_Math" alttext="u_{1},v_{1},u_{2},v_{2}\in V" display="inline"><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>u</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx2.I9.i8.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx2.I9.i8.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Complex scalar multiplication on <math id="Sx2.I9.i8.I1.i3.p1.m1" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math> is defined by</p>
+<table id="Sx2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex16.m1" class="ltx_Math" alttext="(a+bi)(u+iv)=(au-bv)+i(av+bu)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>u</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx2.I9.i8.I1.i3.p1.m2" class="ltx_Math" alttext="a,b\in\mathbf{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow></math> and all <math id="Sx2.I9.i8.I1.i3.p1.m3" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Prove that with the definitions of addition and scalar multiplication as above, <math id="Sx2.I9.i8.p1.m2" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math> is a complex vector space.</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Think of <math id="Sx2.I9.i8.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> as a subset of <math id="Sx2.I9.i8.p1.m4" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math> by identifying <math id="Sx2.I9.i8.p1.m5" class="ltx_Math" alttext="u\in V" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>V</mi></mrow></math> with <math id="Sx2.I9.i8.p1.m6" class="ltx_Math" alttext="u+i0" display="inline"><mrow><mi>u</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mn>0</mn></mrow></mrow></math>. The construction of <math id="Sx2.I9.i8.p1.m7" class="ltx_Math" alttext="V_{\mathbf{C}}" display="inline"><msub><mi>V</mi><mi>𝐂</mi></msub></math> from <math id="Sx2.I9.i8.p1.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> can then be thought of as generalizing the construction of <math id="Sx2.I9.i8.p1.m9" class="ltx_Math" alttext="\mathbf{C}^{n}" display="inline"><msup><mi>𝐂</mi><mi>n</mi></msup></math> from <math id="Sx2.I9.i8.p1.m10" class="ltx_Math" alttext="\mathbf{R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math>.</span></p>
+</blockquote>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://linear.axler.net/">Linear Algebra Done Right, 4th Edition</a> © 2024 by <a href="https://sheldonaxler.net/">Sheldon Axler</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
