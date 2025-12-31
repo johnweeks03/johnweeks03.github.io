@@ -1,0 +1,1055 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Chapter 2</title>
+<!--Generated on Wed Dec 31 21:03:37 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="Sx1" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Chapter 2</h1>
+
+</section>
+<section id="Sx2" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Finite-Dimensional Vector Spaces</h1>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">In the last chapter we learned about vector spaces. Linear algebra focuses not on arbitrary vector spaces, but on finite-dimensional vector spaces, which we introduce in this chapter.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">We begin this chapter by considering linear combinations of lists of vectors. This leads us to the crucial concept of linear independence. The linear dependence lemma will become one of our most useful tools.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p">A list of vectors in a vector space that is small enough to be linearly independent and big enough so the linear combinations of the list fill up the vector space is called a basis of the vector space. We will see that every basis of a vector space has the same length, which will allow us to define the dimension of a vector space.</p>
+</div>
+<div id="Sx2.p4" class="ltx_para">
+<p class="ltx_p">This chapter ends with a formula for the dimension of the sum of two subspaces.</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Standing Assumptions for This Chapter</h1>
+
+<div id="Sx3.p1" class="ltx_para">
+<ul id="Sx3.I1" class="ltx_itemize">
+<li id="Sx3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx3.I1.i1.p1.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> denotes <math id="Sx3.I1.i1.p1.m2" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> or <math id="Sx3.I1.i1.p1.m3" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>.</p>
+</div>
+</li>
+<li id="Sx3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx3.I1.i2.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> denotes a vector space over <math id="Sx3.I1.i2.p1.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<img src="images/ch1.jpg" id="Sx3.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="1443" height="847" alt="[Uncaptioned image]">
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The main building of the Institute for Advanced Study, in Princeton, New Jersey. Paul Halmos (1916–2006) wrote the first modern linear algebra book in this building. Halmos’s linear algebra book was published in 1942 (second edition published in 1958). The title of Halmos’s book was the same as the title of this chapter.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">2A Span and Linear Independence</h1>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">We have been writing lists of numbers surrounded by parentheses, and we will continue to do so for elements of <math id="Sx4.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>; for example, <math id="Sx4.p1.m2" class="ltx_Math" alttext="(2,-7,8)\in\mathbf{F}^{3}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mrow><mo>−</mo><mn>7</mn></mrow><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow></math>. However, now we need to consider lists of vectors (which may be elements of <math id="Sx4.p1.m3" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> or of other vector spaces). To avoid confusion, we will usually write lists of vectors without surrounding parentheses. For example, <math id="Sx4.p1.m4" class="ltx_Math" alttext="(4,1,6),(9,5,7)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>6</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>9</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></math> is a list of length two of vectors in <math id="Sx4.p1.m5" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>.</p>
+</div>
+<section id="Sx4.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Notation: List of Vectors</h2>
+
+<div id="Sx4.SS1.p1" class="ltx_para">
+<p class="ltx_p">We will usually write lists of vectors without surrounding parentheses.</p>
+</div>
+</section>
+</section>
+<section id="Sx5" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Linear Combinations and Span</h1>
+
+<div id="Sx5.p1" class="ltx_para">
+<p class="ltx_p">A sum of scalar multiples of the vectors in a list is called a linear combination of the list. Here is the formal definition.</p>
+</div>
+<section id="Sx5.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Definition: Linear Combination</h2>
+
+<div id="Sx5.SS2.p1" class="ltx_para">
+<p class="ltx_p">A linear combination of a list <math id="Sx5.SS2.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> of vectors in <math id="Sx5.SS2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a vector of the form</p>
+<table id="Sx5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex1.m1" class="ltx_Math" alttext="a_{1}v_{1}+\cdots+a_{m}v_{m}," display="block"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="Sx5.SS2.p1.m3" class="ltx_Math" alttext="a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3 </span>Example: Linear Combinations in <math id="Sx5.SS3.m1" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>
+</h2>
+
+<div id="Sx5.SS3.p1" class="ltx_para">
+<ul id="Sx5.I2" class="ltx_itemize">
+<li id="Sx5.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.I2.i1.p1.m1" class="ltx_Math" alttext="(17,-4,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>17</mn><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math> is a linear combination of <math id="Sx5.I2.i1.p1.m2" class="ltx_Math" alttext="(2,1,-3),(1,-2,4)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math>, which is a list of length two of vectors in <math id="Sx5.I2.i1.p1.m3" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>, because</p>
+<table id="Sx5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex2.m1" class="ltx_Math" alttext="(17,-4,2)=6(2,1,-3)+5(1,-2,4)." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>17</mn><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mn>6</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx5.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.I2.i2.p1.m1" class="ltx_Math" alttext="(17,-4,5)" display="inline"><mrow><mo stretchy="false">(</mo><mn>17</mn><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math> is not a linear combination of <math id="Sx5.I2.i2.p1.m2" class="ltx_Math" alttext="(2,1,-3),(1,-2,4)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math>, which is a list of length two of vectors in <math id="Sx5.I2.i2.p1.m3" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>, because there do not exist numbers <math id="Sx5.I2.i2.p1.m4" class="ltx_Math" alttext="a_{1},a_{2}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> such that</p>
+<table id="Sx5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex3.m1" class="ltx_Math" alttext="(17,-4,5)=a_{1}(2,1,-3)+a_{2}(1,-2,4)." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>17</mn><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In other words, the system of equations</p>
+<table id="Sx5.Ex4" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx5.Ex4X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx5.Ex4X.m2" class="ltx_Math" alttext="\displaystyle 7" display="inline"><mn>17</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex4X.m3" class="ltx_Math" alttext="\displaystyle=2a_{1}+a_{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx5.Ex4Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx5.Ex4Xa.m2" class="ltx_Math" alttext="\displaystyle-4" display="inline"><mrow><mo>−</mo><mn>4</mn></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex4Xa.m3" class="ltx_Math" alttext="\displaystyle=a_{1}-2a_{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx5.Ex4Xb"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx5.Ex4Xb.m2" class="ltx_Math" alttext="\displaystyle 5" display="inline"><mn>5</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex4Xb.m3" class="ltx_Math" alttext="\displaystyle=-3a_{1}+4a_{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">has no solutions (as you should verify).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="Sx5.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.4 </span>Definition: Span</h2>
+
+<div id="Sx5.SS4.p1" class="ltx_para">
+<p class="ltx_p">The set of all linear combinations of a list of vectors <math id="Sx5.SS4.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> in <math id="Sx5.SS4.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is called the span of <math id="Sx5.SS4.p1.m3" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>, denoted by <math id="Sx5.SS4.p1.m4" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math>. In other words,</p>
+<table id="Sx5.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex5.m1" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)=\left\{a_{1}v_{1}+\cdots+a_%
+{m}v_{m}:a_{1},\ldots,a_{m}\in\mathbf{F}\right\}." display="block"><mrow><mrow><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The span of the empty list ( ) is defined to be <math id="Sx5.SS4.p1.m5" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.5 </span>Example: Span</h2>
+
+<div id="Sx5.SS5.p1" class="ltx_para">
+<p class="ltx_p">The previous example shows that in <math id="Sx5.SS5.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math>,</p>
+<ul id="Sx5.I3" class="ltx_itemize">
+<li id="Sx5.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.I3.i1.p1.m1" class="ltx_Math" alttext="(17,-4,2)\in\operatorname{span}((2,1,-3),(1,-2,4))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>17</mn><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="Sx5.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.I3.i2.p1.m1" class="ltx_Math" alttext="(17,-4,5)\notin\operatorname{span}((2,1,-3),(1,-2,4))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>17</mn><mo>,</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo>∉</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx5.SS5.p2" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Some mathematicians use the term linear span, which means the same as span.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx5.SS6" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.6 </span>Span is the Smallest Containing Subspace</h2>
+
+<div id="Sx5.SS6.p1" class="ltx_para">
+<p class="ltx_p">The span of a list of vectors in <math id="Sx5.SS6.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is the smallest subspace of <math id="Sx5.SS6.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing all vectors in the list.</p>
+</div>
+<div id="Sx5.SS6.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Suppose <math id="Sx5.SS6.p2.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is a list of vectors in <math id="Sx5.SS6.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="Sx5.SS6.p3" class="ltx_para">
+<p class="ltx_p">First we show that <math id="Sx5.SS6.p3.m1" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> is a subspace of <math id="Sx5.SS6.p3.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. The additive identity is in <math id="Sx5.SS6.p3.m3" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> because</p>
+<table id="Sx5.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex6.m1" class="ltx_Math" alttext="0=0v_{1}+\cdots+0v_{m}." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mn>0</mn><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Also, <math id="Sx5.SS6.p3.m4" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> is closed under addition because</p>
+<table id="Sx5.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex7.m1" class="ltx_Math" alttext="\left(a_{1}v_{1}+\cdots+a_{m}v_{m}\right)+\left(c_{1}v_{1}+\cdots+c_{m}v_{m}%
+\right)=\left(a_{1}+c_{1}\right)v_{1}+\cdots+\left(a_{m}+c_{m}\right)v_{m}." display="block"><mrow><mrow><mrow><mrow><mo>(</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo>(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>+</mo><msub><mi>c</mi><mi>m</mi></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Furthermore, <math id="Sx5.SS6.p3.m5" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> is closed under scalar multiplication because</p>
+<table id="Sx5.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex8.m1" class="ltx_Math" alttext="\lambda\left(a_{1}v_{1}+\cdots+a_{m}v_{m}\right)=\lambda a_{1}v_{1}+\cdots+%
+\lambda a_{m}v_{m}." display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus <math id="Sx5.SS6.p3.m6" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> is a subspace of <math id="Sx5.SS6.p3.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> (by 1.34).</p>
+</div>
+<div id="Sx5.SS6.p4" class="ltx_para">
+<p class="ltx_p">Each <math id="Sx5.SS6.p4.m1" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> is a linear combination of <math id="Sx5.SS6.p4.m2" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> (to show this, set <math id="Sx5.SS6.p4.m3" class="ltx_Math" alttext="a_{k}=1" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>=</mo><mn>1</mn></mrow></math> and let the other <math id="Sx5.SS6.p4.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>’s in 2.2 equal 0). Thus <math id="Sx5.SS6.p4.m5" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> contains each <math id="Sx5.SS6.p4.m6" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math>. Conversely, because subspaces are closed under scalar multiplication and addition, every subspace of <math id="Sx5.SS6.p4.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> that contains each <math id="Sx5.SS6.p4.m8" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> contains <math id="Sx5.SS6.p4.m9" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math>. Thus <math id="Sx5.SS6.p4.m10" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> is the smallest subspace of <math id="Sx5.SS6.p4.m11" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing all the vectors <math id="Sx5.SS6.p4.m12" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>.  <math id="Sx5.SS6.p4.m13" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+</section>
+<section id="Sx5.SS7" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.7 </span>Definition: Spans</h2>
+
+<div id="Sx5.SS7.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx5.SS7.p1.m1" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> equals <math id="Sx5.SS7.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, we say that the list <math id="Sx5.SS7.p1.m3" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> spans <math id="Sx5.SS7.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS8" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.8 </span>Example: A List That Spans <math id="Sx5.SS8.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>
+</h2>
+
+<div id="Sx5.SS8.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx5.SS8.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a positive integer. We want to show that</p>
+<table id="Sx5.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex9.m1" class="ltx_Math" alttext="(1,0,\ldots,0),(0,1,0,\ldots,0),\ldots,(0,\ldots,0,1)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">spans <math id="Sx5.SS8.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>. Here the <math id="Sx5.SS8.p1.m3" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> vector in the list above has 1 in the <math id="Sx5.SS8.p1.m4" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> slot and 0 in all other slots.</p>
+</div>
+<div id="Sx5.SS8.p2" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx5.SS8.p2.m1" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>. Then</p>
+<table id="Sx5.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex10.m1" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)=x_{1}(1,0,\ldots,0)+x_{2}(0,1,0,\ldots,0)+%
+\cdots+x_{n}(0,\ldots,0,1)." display="block"><mrow><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus <math id="Sx5.SS8.p2.m2" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)\in\operatorname{span}((1,0,\ldots,0),(0,1,0,%
+\ldots,0),\ldots,(0,\ldots,0,1))" display="inline"><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, as desired.</p>
+</div>
+<div id="Sx5.SS8.p3" class="ltx_para">
+<p class="ltx_p">Now we can make one of the key definitions in linear algebra.</p>
+</div>
+</section>
+<section id="Sx5.SS9" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.9 </span>Definition: Finite-Dimensional Vector Space</h2>
+
+<div id="Sx5.SS9.p1" class="ltx_para">
+<p class="ltx_p">A vector space is called finite-dimensional if some list of vectors in it spans the space.</p>
+</div>
+<div id="Sx5.SS9.p2" class="ltx_para">
+<p class="ltx_p">Example 2.8 above shows that <math id="Sx5.SS9.p2.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is a finite-dimensional vector space for every positive integer <math id="Sx5.SS9.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="Sx5.SS9.p3" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Recall that by definition every list has finite length.</span></p>
+</blockquote>
+</div>
+<div id="Sx5.SS9.p4" class="ltx_para">
+<p class="ltx_p">The definition of a polynomial is no doubt already familiar to you.</p>
+</div>
+</section>
+<section id="Sx5.SS10" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.10 </span>Definition: Polynomial, <math id="Sx5.SS10.m1" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h2>
+
+<div id="Sx5.SS10.p1" class="ltx_para">
+<ul id="Sx5.I4" class="ltx_itemize">
+<li id="Sx5.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">A function <math id="Sx5.I4.i1.p1.m1" class="ltx_Math" alttext="p:\mathbf{F}\rightarrow\mathbf{F}" display="inline"><mrow><mi>p</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>𝐅</mi><mo stretchy="false">→</mo><mi>𝐅</mi></mrow></mrow></math> is called a polynomial with coefficients in <math id="Sx5.I4.i1.p1.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> if there exist <math id="Sx5.I4.i1.p1.m3" class="ltx_Math" alttext="a_{0},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> such that</p>
+<table id="Sx5.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex11.m1" class="ltx_Math" alttext="p(z)=a_{0}+a_{1}z+a_{2}z^{2}+\cdots+a_{m}z^{m}" display="block"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>m</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx5.I4.i1.p1.m4" class="ltx_Math" alttext="z\in\mathbf{F}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>𝐅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx5.I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.I4.i2.p1.m1" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the set of all polynomials with coefficients in <math id="Sx5.I4.i2.p1.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx5.SS10.p2" class="ltx_para">
+<p class="ltx_p">With the usual operations of addition and scalar multiplication, <math id="Sx5.SS10.p2.m1" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a vector space over <math id="Sx5.SS10.p2.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>, as you should verify. Hence <math id="Sx5.SS10.p2.m3" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a subspace of <math id="Sx5.SS10.p2.m4" class="ltx_Math" alttext="\mathbf{F}^{\mathbf{F}}" display="inline"><msup><mi>𝐅</mi><mi>𝐅</mi></msup></math>, the vector space of functions from <math id="Sx5.SS10.p2.m5" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> to <math id="Sx5.SS10.p2.m6" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+<div id="Sx5.SS10.p3" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">If a polynomial (thought of as a function from <math id="Sx5.SS10.p3.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> to <math id="Sx5.SS10.p3.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>) is represented by two sets of coefficients, then subtracting one representation of the polynomial from the other produces a polynomial that is identically zero as a function on <math id="Sx5.SS10.p3.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> and hence has all zero coefficients (if you are unfamiliar with this fact, just believe it for now; we will prove it later—see 4.8). Conclusion: the coefficients of a polynomial are uniquely determined by the polynomial. Thus the next definition uniquely defines the degree of a polynomial.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx5.SS11" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.11 </span>Definition: Degree of a Polynomial, <math id="Sx5.SS11.m1" class="ltx_Math" alttext="\operatorname{deg}p" display="inline"><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>p</mi></mrow></math>
+</h2>
+
+<div id="Sx5.SS11.p1" class="ltx_para">
+<ul id="Sx5.I5" class="ltx_itemize">
+<li id="Sx5.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">A polynomial <math id="Sx5.I5.i1.p1.m1" class="ltx_Math" alttext="p\in\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi>p</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is said to have degree <math id="Sx5.I5.i1.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> if there exist scalars <math id="Sx5.I5.i1.p1.m3" class="ltx_Math" alttext="a_{0},a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> with <math id="Sx5.I5.i1.p1.m4" class="ltx_Math" alttext="a_{m}\neq 0" display="inline"><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>≠</mo><mn>0</mn></mrow></math> such that for every <math id="Sx5.I5.i1.p1.m5" class="ltx_Math" alttext="z\in\mathbf{F}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>𝐅</mi></mrow></math>, we have</p>
+<table id="Sx5.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex12.m1" class="ltx_Math" alttext="p(z)=a_{0}+a_{1}z+\cdots+a_{m}z^{m}." display="block"><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>m</mi></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx5.I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I5.i2.p1" class="ltx_para">
+<p class="ltx_p">The polynomial that is identically 0 is said to have degree <math id="Sx5.I5.i2.p1.m1" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx5.I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx5.I5.i3.p1" class="ltx_para">
+<p class="ltx_p">The degree of a polynomial <math id="Sx5.I5.i3.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is denoted by <math id="Sx5.I5.i3.p1.m2" class="ltx_Math" alttext="\operatorname{deg}p" display="inline"><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>p</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx5.SS11.p2" class="ltx_para">
+<p class="ltx_p">In the next definition, we use the convention that <math id="Sx5.SS11.p2.m1" class="ltx_Math" alttext="-\infty&lt;m" display="inline"><mrow><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>&lt;</mo><mi>m</mi></mrow></math>, which means that the polynomial 0 is in <math id="Sx5.SS11.p2.m2" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS12" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.12 </span>Notation: <math id="Sx5.SS12.m1" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h2>
+
+<div id="Sx5.SS12.p1" class="ltx_para">
+<p class="ltx_p">For <math id="Sx5.SS12.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> a nonnegative integer, <math id="Sx5.SS12.p1.m2" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the set of all polynomials with coefficients in <math id="Sx5.SS12.p1.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> and degree at most <math id="Sx5.SS12.p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+<div id="Sx5.SS12.p2" class="ltx_para">
+<p class="ltx_p">If <math id="Sx5.SS12.p2.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a nonnegative integer, then <math id="Sx5.SS12.p2.m2" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})=\operatorname{span}\left(1,z,\ldots,z^{m}\right)" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mi>z</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>z</mi><mi>m</mi></msup><mo>)</mo></mrow></mrow></mrow></math> [here we slightly abuse notation by letting <math id="Sx5.SS12.p2.m3" class="ltx_Math" alttext="z^{k}" display="inline"><msup><mi>z</mi><mi>k</mi></msup></math> denote a function]. Thus <math id="Sx5.SS12.p2.m4" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a finite-dimensional vector space for each nonnegative integer <math id="Sx5.SS12.p2.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS13" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.13 </span>Definition: Infinite-Dimensional Vector Space</h2>
+
+<div id="Sx5.SS13.p1" class="ltx_para">
+<p class="ltx_p">A vector space is called infinite-dimensional if it is not finite-dimensional.</p>
+</div>
+</section>
+<section id="Sx5.SS14" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.14 </span>Example: <math id="Sx5.SS14.m1" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> is Infinite-Dimensional</h2>
+
+<div id="Sx5.SS14.p1" class="ltx_para">
+<p class="ltx_p">Consider any list of elements of <math id="Sx5.SS14.p1.m1" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Let <math id="Sx5.SS14.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> denote the highest degree of the polynomials in this list. Then every polynomial in the span of this list has degree at most <math id="Sx5.SS14.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>. Thus <math id="Sx5.SS14.p1.m4" class="ltx_Math" alttext="z^{m+1}" display="inline"><msup><mi>z</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msup></math> is not in the span of our list. Hence no list spans <math id="Sx5.SS14.p1.m5" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Thus <math id="Sx5.SS14.p1.m6" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> is infinite-dimensional.</p>
+</div>
+</section>
+</section>
+<section id="Sx6" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Linear Independence</h1>
+
+<div id="Sx6.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx6.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}\in V" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>V</mi></mrow></math> and <math id="Sx6.p1.m2" class="ltx_Math" alttext="v\in\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></mrow></math>. By the definition of span, there exist <math id="Sx6.p1.m3" class="ltx_Math" alttext="a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> such that</p>
+<table id="Sx6.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex13.m1" class="ltx_Math" alttext="v=a_{1}v_{1}+\cdots+a_{m}v_{m}." display="block"><mrow><mrow><mi>v</mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Consider the question of whether the choice of scalars in the equation above is unique. Suppose <math id="Sx6.p1.m4" class="ltx_Math" alttext="c_{1},\ldots,c_{m}" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>c</mi><mi>m</mi></msub></mrow></math> is another set of scalars such that</p>
+<table id="Sx6.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex14.m1" class="ltx_Math" alttext="v=c_{1}v_{1}+\cdots+c_{m}v_{m}." display="block"><mrow><mrow><mi>v</mi><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Subtracting the last two equations, we have</p>
+<table id="Sx6.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex15.m1" class="ltx_Math" alttext="0=\left(a_{1}-c_{1}\right)v_{1}+\cdots+\left(a_{m}-c_{m}\right)v_{m}." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mrow><mo>(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>−</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>−</mo><msub><mi>c</mi><mi>m</mi></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus we have written 0 as a linear combination of <math id="Sx6.p1.m5" class="ltx_Math" alttext="(v_{1},\ldots,v_{m})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></math>. If the only way to do this is by using 0 for all the scalars in the linear combination, then each <math id="Sx6.p1.m6" class="ltx_Math" alttext="a_{k}-c_{k}" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>−</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></math> equals 0, which means that each <math id="Sx6.p1.m7" class="ltx_Math" alttext="a_{k}" display="inline"><msub><mi>a</mi><mi>k</mi></msub></math> equals <math id="Sx6.p1.m8" class="ltx_Math" alttext="c_{k}" display="inline"><msub><mi>c</mi><mi>k</mi></msub></math> (and thus the choice of scalars was indeed unique). This situation is so important that we give it a special name—linear independence—which we now define.</p>
+</div>
+<section id="Sx6.SS15" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.15 </span>Definition: Linearly Independent</h2>
+
+<div id="Sx6.SS15.p1" class="ltx_para">
+<ul id="Sx6.I6" class="ltx_itemize">
+<li id="Sx6.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">A list <math id="Sx6.I6.i1.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> of vectors in <math id="Sx6.I6.i1.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is called linearly independent if the only choice of <math id="Sx6.I6.i1.p1.m3" class="ltx_Math" alttext="a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> that makes</p>
+<table id="Sx6.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex16.m1" class="ltx_Math" alttext="a_{1}v_{1}+\cdots+a_{m}v_{m}=0" display="block"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is <math id="Sx6.I6.i1.p1.m4" class="ltx_Math" alttext="a_{1}=\cdots=a_{m}=0" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>a</mi><mi>m</mi></msub><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx6.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I6.i2.p1" class="ltx_para">
+<p class="ltx_p">The empty list ( ) is also declared to be linearly independent.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx6.SS15.p2" class="ltx_para">
+<p class="ltx_p">The reasoning above shows that <math id="Sx6.SS15.p2.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is linearly independent if and only if each vector in <math id="Sx6.SS15.p2.m2" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math> has only one representation as a linear combination of <math id="Sx6.SS15.p2.m3" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx6.SS16" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.16 </span>Example: Linearly Independent Lists</h2>
+
+<div id="Sx6.SS16.p1" class="ltx_para">
+<ol id="Sx6.I7" class="ltx_enumerate">
+<li id="Sx6.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="Sx6.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">To see that the list <math id="Sx6.I7.i1.p1.m1" class="ltx_Math" alttext="(1,0,0,0),(0,1,0,0),(0,0,1,0)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> is linearly independent in <math id="Sx6.I7.i1.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math>, suppose <math id="Sx6.I7.i1.p1.m3" class="ltx_Math" alttext="a_{1},a_{2},a_{3}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> and</p>
+<table id="Sx6.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex17.m1" class="ltx_Math" alttext="a_{1}(1,0,0,0)+a_{2}(0,1,0,0)+a_{3}(0,0,1,0)=(0,0,0,0)." display="block"><mrow><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus</p>
+<table id="Sx6.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex18.m1" class="ltx_Math" alttext="\left(a_{1},a_{2},a_{3},0\right)=(0,0,0,0)." display="block"><mrow><mrow><mrow><mo>(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub><mo>,</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Hence <math id="Sx6.I7.i1.p1.m4" class="ltx_Math" alttext="a_{1}=a_{2}=a_{3}=0" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><msub><mi>a</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow></math>. Thus the list <math id="Sx6.I7.i1.p1.m5" class="ltx_Math" alttext="(1,0,0,0),(0,1,0,0),(0,0,1,0)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> is linearly independent in <math id="Sx6.I7.i1.p1.m6" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math>.</p>
+</div>
+</li>
+<li id="Sx6.I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="Sx6.I7.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx6.I7.i2.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a nonnegative integer. To see that the list <math id="Sx6.I7.i2.p1.m2" class="ltx_Math" alttext="1,z,\ldots,z^{m}" display="inline"><mrow><mn>1</mn><mo>,</mo><mi>z</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>z</mi><mi>m</mi></msup></mrow></math> is linearly independent in <math id="Sx6.I7.i2.p1.m3" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>, suppose <math id="Sx6.I7.i2.p1.m4" class="ltx_Math" alttext="a_{0},a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> and</p>
+<table id="Sx6.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex19.m1" class="ltx_Math" alttext="a_{0}+a_{1}z+\cdots+a_{m}z^{m}=0" display="block"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>m</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where we think of both sides as elements of <math id="Sx6.I7.i2.p1.m5" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Then</p>
+<table id="Sx6.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex20.m1" class="ltx_Math" alttext="a_{0}+a_{1}z+\cdots+a_{m}z^{m}=0" display="block"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>m</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx6.I7.i2.p1.m6" class="ltx_Math" alttext="z\in\mathbf{F}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>𝐅</mi></mrow></math>. As discussed earlier (and as follows from 4.8), this implies that <math id="Sx6.I7.i2.p1.m7" class="ltx_Math" alttext="a_{0}=a_{1}=\cdots=a_{m}=0" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>a</mi><mi>m</mi></msub><mo>=</mo><mn>0</mn></mrow></math>. Thus <math id="Sx6.I7.i2.p1.m8" class="ltx_Math" alttext="1,z,\ldots,z^{m}" display="inline"><mrow><mn>1</mn><mo>,</mo><mi>z</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>z</mi><mi>m</mi></msup></mrow></math> is a linearly independent list in <math id="Sx6.I7.i2.p1.m9" class="ltx_Math" alttext="\mathcal{P}(\mathbf{F})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx6.I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="Sx6.I7.i3.p1" class="ltx_para">
+<p class="ltx_p">A list of length one in a vector space is linearly independent if and only if the vector in the list is not 0.</p>
+</div>
+</li>
+<li id="Sx6.I7.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="Sx6.I7.i4.p1" class="ltx_para">
+<p class="ltx_p">A list of length two in a vector space is linearly independent if and only if neither of the two vectors in the list is a scalar multiple of the other.</p>
+</div>
+</li>
+</ol>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">If some vectors are removed from a linearly independent list, the remaining list is also linearly independent, as you should verify.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx6.SS17" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.17 </span>Definition: Linearly Dependent</h2>
+
+<div id="Sx6.SS17.p1" class="ltx_para">
+<ul id="Sx6.I8" class="ltx_itemize">
+<li id="Sx6.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">A list of vectors in <math id="Sx6.I8.i1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is called linearly dependent if it is not linearly independent.</p>
+</div>
+</li>
+<li id="Sx6.I8.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I8.i2.p1" class="ltx_para">
+<p class="ltx_p">In other words, a list <math id="Sx6.I8.i2.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> of vectors in <math id="Sx6.I8.i2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is linearly dependent if there exist <math id="Sx6.I8.i2.p1.m3" class="ltx_Math" alttext="a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>, not all 0, such that <math id="Sx6.I8.i2.p1.m4" class="ltx_Math" alttext="a_{1}v_{1}+\cdots+a_{m}v_{m}=0" display="inline"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="Sx6.SS18" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.18 </span>Example: Linearly Dependent Lists</h2>
+
+<div id="Sx6.SS18.p1" class="ltx_para">
+<ul id="Sx6.I9" class="ltx_itemize">
+<li id="Sx6.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I9.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx6.I9.i1.p1.m1" class="ltx_Math" alttext="(2,3,1),(1,-1,2),(7,3,8)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow></math> is linearly dependent in <math id="Sx6.I9.i1.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> because</p>
+<table id="Sx6.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex21.m1" class="ltx_Math" alttext="2(2,3,1)+3(1,-1,2)+(-1)(7,3,8)=(0,0,0)." display="block"><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx6.I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I9.i2.p1" class="ltx_para">
+<p class="ltx_p">The list <math id="Sx6.I9.i2.p1.m1" class="ltx_Math" alttext="(2,3,1),(1,-1,2),(7,3,c)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> is linearly dependent in <math id="Sx6.I9.i2.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> if and only if <math id="Sx6.I9.i2.p1.m3" class="ltx_Math" alttext="c=8" display="inline"><mrow><mi>c</mi><mo>=</mo><mn>8</mn></mrow></math>, as you should verify.</p>
+</div>
+</li>
+<li id="Sx6.I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I9.i3.p1" class="ltx_para">
+<p class="ltx_p">If some vector in a list of vectors in <math id="Sx6.I9.i3.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a linear combination of the other vectors, then the list is linearly dependent. (<span class="ltx_text ltx_font_bold">Proof</span>: After writing one vector in the list as equal to a linear combination of the other vectors, move that vector to the other side of the equation, where it will be multiplied by <math id="Sx6.I9.i3.p1.m2" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>.)</p>
+</div>
+</li>
+<li id="Sx6.I9.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx6.I9.i4.p1" class="ltx_para">
+<p class="ltx_p">Every list of vectors in <math id="Sx6.I9.i4.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing the 0 vector is linearly dependent. (This is a special case of the previous bullet point.)</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx6.SS18.p2" class="ltx_para">
+<p class="ltx_p">The next lemma is a terrific tool. It states that given a linearly dependent list of vectors, one of the vectors is in the span of the previous ones. Furthermore, we can throw out that vector without changing the span of the original list.</p>
+</div>
+</section>
+<section id="Sx6.SS19" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.19 </span>Linear Dependence Lemma</h2>
+
+<div id="Sx6.SS19.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx6.SS19.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is a linearly dependent list in <math id="Sx6.SS19.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Then there exists <math id="Sx6.SS19.p1.m3" class="ltx_Math" alttext="k\in\{1,2,\ldots,m\}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></mrow></math> such that</p>
+<table id="Sx6.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex22.m1" class="ltx_Math" alttext="v_{k}\in\operatorname{span}\left(v_{1},\ldots,v_{k-1}\right)." display="block"><mrow><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Furthermore, if <math id="Sx6.SS19.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> satisfies the condition above and the <math id="Sx6.SS19.p1.m5" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> term is removed from <math id="Sx6.SS19.p1.m6" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>, then the span of the remaining list equals <math id="Sx6.SS19.p1.m7" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Sx6.SS19.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Because the list <math id="Sx6.SS19.p2.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is linearly dependent, there exist numbers <math id="Sx6.SS19.p2.m2" class="ltx_Math" alttext="a_{1},\ldots,a_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>, not all 0, such that</p>
+<table id="Sx6.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex23.m1" class="ltx_Math" alttext="a_{1}v_{1}+\cdots+a_{m}v_{m}=0." display="block"><mrow><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let <math id="Sx6.SS19.p2.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> be the largest element of <math id="Sx6.SS19.p2.m4" class="ltx_Math" alttext="\{1,\ldots,m\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></math> such that <math id="Sx6.SS19.p2.m5" class="ltx_Math" alttext="a_{k}\neq 0" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>. Then</p>
+<table id="Sx6.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex24.m1" class="ltx_Math" alttext="v_{k}=-\frac{a_{1}}{a_{k}}v_{1}-\cdots-\frac{a_{k-1}}{a_{k}}v_{k-1}," display="block"><mrow><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mi>k</mi></msub></mfrac><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mrow><mo>−</mo><mi mathvariant="normal">⋯</mi><mo>−</mo><mrow><mfrac><msub><mi>a</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><msub><mi>a</mi><mi>k</mi></msub></mfrac><mo>⁢</mo><msub><mi>v</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which proves that <math id="Sx6.SS19.p2.m6" class="ltx_Math" alttext="v_{k}\in\operatorname{span}\left(v_{1},\ldots,v_{k-1}\right)" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow></math>, as desired.</p>
+</div>
+<div id="Sx6.SS19.p3" class="ltx_para">
+<p class="ltx_p">Now suppose <math id="Sx6.SS19.p3.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is any element of <math id="Sx6.SS19.p3.m2" class="ltx_Math" alttext="\{1,\ldots,m\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></math> such that <math id="Sx6.SS19.p3.m3" class="ltx_Math" alttext="v_{k}\in\operatorname{span}\left(v_{1},\ldots,v_{k-1}\right)" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow></math>. Let <math id="Sx6.SS19.p3.m4" class="ltx_Math" alttext="b_{1},\ldots,b_{k-1}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> be such that</p>
+<table id="Sx6.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex25.m1" class="ltx_Math" alttext="v_{k}=b_{1}v_{1}+\cdots+b_{k-1}v_{k-1}." display="block"><mrow><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>v</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Suppose <math id="Sx6.SS19.p3.m5" class="ltx_Math" alttext="u\in\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></mrow></math>. Then there exist <math id="Sx6.SS19.p3.m6" class="ltx_Math" alttext="c_{1},\ldots,c_{m}\in\mathbf{F}" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>c</mi><mi>m</mi></msub></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> such that</p>
+<table id="Sx6.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex27.m1" class="ltx_Math" alttext="u=c_{1}v_{1}+\cdots+c_{m}v_{m}." display="block"><mrow><mrow><mi>u</mi><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>m</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In the equation above, we can replace <math id="Sx6.SS19.p3.m7" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> with the right side of 2.20, which shows that <math id="Sx6.SS19.p3.m8" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> is in the span of the list obtained by removing the <math id="Sx6.SS19.p3.m9" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> term from <math id="Sx6.SS19.p3.m10" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>. Thus removing the <math id="Sx6.SS19.p3.m11" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> term of the list <math id="Sx6.SS19.p3.m12" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> does not change the span of the list.  <math id="Sx6.SS19.p3.m13" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="Sx6.SS19.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">If <math id="Sx6.SS19.p4.m1" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math> in the linear dependence lemma, then <math id="Sx6.SS19.p4.m2" class="ltx_Math" alttext="v_{k}\in\operatorname{span}\left(v_{1},\ldots,v_{k-1}\right)" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow></math> means that <math id="Sx6.SS19.p4.m3" class="ltx_Math" alttext="v_{1}=0" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>, because <math id="Sx6.SS19.p4.m4" class="ltx_Math" alttext="\operatorname{span}()=\{0\}" display="inline"><mrow><mrow><mi>span</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Note also that parts of the proof of the linear dependence lemma need to be modified if <math id="Sx6.SS19.p4.m5" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math>. In general, the proofs in the rest of the book will not call attention to special cases that must be considered involving lists of length 0, the subspace <math id="Sx6.SS19.p4.m6" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>, or other trivial cases for which the result is true but needs a slightly different proof. Be sure to check these special cases yourself.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx6.SS21" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.21 </span>Example: Smallest <math id="Sx6.SS21.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> in Linear Dependence Lemma</h2>
+
+<div id="Sx6.SS21.p1" class="ltx_para">
+<p class="ltx_p">Consider the list</p>
+<table id="Sx6.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex28.m1" class="ltx_Math" alttext="(1,2,3),(6,5,4),(15,16,17),(8,9,7)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>15</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>17</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>8</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">in <math id="Sx6.SS21.p1.m1" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>. This list of length four is linearly dependent, as we will soon see. Thus the linear dependence lemma implies that there exists <math id="Sx6.SS21.p1.m2" class="ltx_Math" alttext="k\in\{1,2,3,4\}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></mrow></math> such that the <math id="Sx6.SS21.p1.m3" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> vector in this list is a linear combination of the previous vectors in the list. Let’s see how to find the smallest value of <math id="Sx6.SS21.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> that works.</p>
+</div>
+<div id="Sx6.SS21.p2" class="ltx_para">
+<p class="ltx_p">Taking <math id="Sx6.SS21.p2.m1" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math> in the linear dependence lemma works if and only if the first vector in the list equals 0. Because <math id="Sx6.SS21.p2.m2" class="ltx_Math" alttext="(1,2,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> is not the 0 vector, we cannot take <math id="Sx6.SS21.p2.m3" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math> for this list.</p>
+</div>
+<div id="Sx6.SS21.p3" class="ltx_para">
+<p class="ltx_p">Taking <math id="Sx6.SS21.p3.m1" class="ltx_Math" alttext="k=2" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></math> in the linear dependence lemma works if and only if the second vector in the list is a scalar multiple of the first vector. However, there does not exist <math id="Sx6.SS21.p3.m2" class="ltx_Math" alttext="c\in\mathbf{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>𝐑</mi></mrow></math> such that <math id="Sx6.SS21.p3.m3" class="ltx_Math" alttext="(6,5,4)=c(1,2,3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Thus we cannot take <math id="Sx6.SS21.p3.m4" class="ltx_Math" alttext="k=2" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></math> for this list.</p>
+</div>
+<div id="Sx6.SS21.p4" class="ltx_para">
+<p class="ltx_p">Taking <math id="Sx6.SS21.p4.m1" class="ltx_Math" alttext="k=3" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></math> in the linear dependence lemma works if and only if the third vector in the list is a linear combination of the first two vectors. Thus for the list in this example, we want to know whether there exist <math id="Sx6.SS21.p4.m2" class="ltx_Math" alttext="a,b\in\mathbf{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow></math> such that</p>
+<table id="Sx6.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex29.m1" class="ltx_Math" alttext="(15,16,17)=a(1,2,3)+b(6,5,4)." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>15</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>17</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The equation above is equivalent to a system of three linear equations in the two unknowns <math id="Sx6.SS21.p4.m3" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>. Using Gaussian elimination or appropriate software, we find that <math id="Sx6.SS21.p4.m4" class="ltx_Math" alttext="a=3,b=2" display="inline"><mrow><mrow><mi>a</mi><mo>=</mo><mn>3</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></mrow></math> is a solution of the equation above, as you can verify. Thus for the list in this example, taking <math id="Sx6.SS21.p4.m5" class="ltx_Math" alttext="k=3" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></math> is the smallest value of <math id="Sx6.SS21.p4.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> that works in the linear dependence lemma.</p>
+</div>
+<div id="Sx6.SS21.p5" class="ltx_para">
+<p class="ltx_p">Now we come to a key result. It says that no linearly independent list in <math id="Sx6.SS21.p5.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is longer than a spanning list in <math id="Sx6.SS21.p5.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</section>
+<section id="Sx6.SS22" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.22 </span>Length of Linearly Independent List <math id="Sx6.SS22.m1" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> Length of Spanning List</h2>
+
+<div id="Sx6.SS22.p1" class="ltx_para">
+<p class="ltx_p">In a finite-dimensional vector space, the length of every linearly independent list of vectors is less than or equal to the length of every spanning list of vectors.</p>
+</div>
+<div id="Sx6.SS22.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Suppose that <math id="Sx6.SS22.p2.m1" class="ltx_Math" alttext="u_{1},\ldots,u_{m}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>m</mi></msub></mrow></math> is linearly independent in <math id="Sx6.SS22.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Suppose also that <math id="Sx6.SS22.p2.m3" class="ltx_Math" alttext="w_{1},\ldots,w_{n}" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow></math> spans <math id="Sx6.SS22.p2.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. We need to prove that <math id="Sx6.SS22.p2.m5" class="ltx_Math" alttext="m\leq n" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>n</mi></mrow></math>. We do so through the process described below with <math id="Sx6.SS22.p2.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> steps; note that in each step we add one of the <math id="Sx6.SS22.p2.m7" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>’s and remove one of the <math id="Sx6.SS22.p2.m8" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>’s.</p>
+</div>
+<div id="Sx6.SS22.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 1</span> 
+<br class="ltx_break">Let <math id="Sx6.SS22.p3.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be the list <math id="Sx6.SS22.p3.m2" class="ltx_Math" alttext="w_{1},\ldots,w_{n}" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow></math>, which spans <math id="Sx6.SS22.p3.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Adjoining <math id="Sx6.SS22.p3.m4" class="ltx_Math" alttext="u_{1}" display="inline"><msub><mi>u</mi><mn>1</mn></msub></math> at the beginning of this list produces a linearly dependent list (because <math id="Sx6.SS22.p3.m5" class="ltx_Math" alttext="u_{1}" display="inline"><msub><mi>u</mi><mn>1</mn></msub></math> can be written as a linear combination of <math id="Sx6.SS22.p3.m6" class="ltx_Math" alttext="w_{1},\ldots,w_{n}" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow></math>). In other words, the list</p>
+<table id="Sx6.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex30.m1" class="ltx_Math" alttext="u_{1},w_{1},\ldots,w_{n}" display="block"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is linearly dependent.
+Thus by the linear dependence lemma (2.19), one of the vectors in the list above is a linear combination of the previous vectors in the list. We know that <math id="Sx6.SS22.p3.m7" class="ltx_Math" alttext="u_{1}\neq 0" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>≠</mo><mn>0</mn></mrow></math> because the list <math id="Sx6.SS22.p3.m8" class="ltx_Math" alttext="u_{1},\ldots,u_{m}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>m</mi></msub></mrow></math> is linearly independent. Thus <math id="Sx6.SS22.p3.m9" class="ltx_Math" alttext="u_{1}" display="inline"><msub><mi>u</mi><mn>1</mn></msub></math> is not in the span of the previous vectors in the list above (because <math id="Sx6.SS22.p3.m10" class="ltx_Math" alttext="u_{1}" display="inline"><msub><mi>u</mi><mn>1</mn></msub></math> is not in <math id="Sx6.SS22.p3.m11" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>, which is the span of the empty list). Hence the linear dependence lemma implies that we can remove one of the <math id="Sx6.SS22.p3.m12" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>’s so that the new list <math id="Sx6.SS22.p3.m13" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> (of length <math id="Sx6.SS22.p3.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>) consisting of <math id="Sx6.SS22.p3.m15" class="ltx_Math" alttext="u_{1}" display="inline"><msub><mi>u</mi><mn>1</mn></msub></math> and the remaining <math id="Sx6.SS22.p3.m16" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>’s spans <math id="Sx6.SS22.p3.m17" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="Sx6.SS22.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step <math id="Sx6.SS22.p4.m1" class="ltx_Math" alttext="\boldsymbol{k}" display="inline"><mi>k</mi></math>, for <math id="Sx6.SS22.p4.m2" class="ltx_Math" alttext="\boldsymbol{k}=\mathbf{2},\ldots,\boldsymbol{m}" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>𝟐</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi></mrow></mrow></math></span> 
+<br class="ltx_break">The list <math id="Sx6.SS22.p4.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> (of length <math id="Sx6.SS22.p4.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>) from step <math id="Sx6.SS22.p4.m5" class="ltx_Math" alttext="k-1" display="inline"><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></math> spans <math id="Sx6.SS22.p4.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. In particular, <math id="Sx6.SS22.p4.m7" class="ltx_Math" alttext="u_{k}" display="inline"><msub><mi>u</mi><mi>k</mi></msub></math> is in the span of the list <math id="Sx6.SS22.p4.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Thus the list of length <math id="Sx6.SS22.p4.m9" class="ltx_Math" alttext="(n+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> obtained by adjoining <math id="Sx6.SS22.p4.m10" class="ltx_Math" alttext="u_{k}" display="inline"><msub><mi>u</mi><mi>k</mi></msub></math> to <math id="Sx6.SS22.p4.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, placing it just after <math id="Sx6.SS22.p4.m12" class="ltx_Math" alttext="u_{1},\ldots,u_{k-1}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math>, is linearly dependent. By the linear dependence lemma (2.19), one of the vectors in this list is in the span of the previous ones, and because <math id="Sx6.SS22.p4.m13" class="ltx_Math" alttext="u_{1},\ldots,u_{k}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>k</mi></msub></mrow></math> is linearly independent, this vector cannot be one of the <math id="Sx6.SS22.p4.m14" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>’s.</p>
+</div>
+<div id="Sx6.SS22.p5" class="ltx_para">
+<p class="ltx_p">Hence there still must be at least one remaining <math id="Sx6.SS22.p5.m1" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> at this step. We can remove from our new list (after adjoining <math id="Sx6.SS22.p5.m2" class="ltx_Math" alttext="u_{k}" display="inline"><msub><mi>u</mi><mi>k</mi></msub></math> in the proper place) a <math id="Sx6.SS22.p5.m3" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> that is a linear combination of the previous vectors in the list, so that the new list <math id="Sx6.SS22.p5.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> (of length <math id="Sx6.SS22.p5.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>) consisting of <math id="Sx6.SS22.p5.m6" class="ltx_Math" alttext="u_{1},\ldots,u_{k}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>k</mi></msub></mrow></math> and the remaining <math id="Sx6.SS22.p5.m7" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>’s spans <math id="Sx6.SS22.p5.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="Sx6.SS22.p6" class="ltx_para">
+<p class="ltx_p">After step <math id="Sx6.SS22.p6.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, we have added all the <math id="Sx6.SS22.p6.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>’s and the process stops. At each step as we add a <math id="Sx6.SS22.p6.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> to <math id="Sx6.SS22.p6.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, the linear dependence lemma implies that there is some <math id="Sx6.SS22.p6.m5" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> to remove. Thus there are at least as many <math id="Sx6.SS22.p6.m6" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>’s as <math id="Sx6.SS22.p6.m7" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>’s.  <math id="Sx6.SS22.p6.m8" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="Sx6.SS22.p7" class="ltx_para">
+<p class="ltx_p">The next two examples show how the result above can be used to show, without any computations, that certain lists are not linearly independent and that certain lists do not span a given vector space.</p>
+</div>
+</section>
+<section id="Sx6.SS23" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.23 </span>Example: No List of Length 4 is Linearly Independent in <math id="Sx6.SS23.m1" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>
+</h2>
+
+<div id="Sx6.SS23.p1" class="ltx_para">
+<p class="ltx_p">The list <math id="Sx6.SS23.p1.m1" class="ltx_Math" alttext="(1,0,0),(0,1,0),(0,0,1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, which has length three, spans <math id="Sx6.SS23.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>. Thus no list of length larger than three is linearly independent in <math id="Sx6.SS23.p1.m3" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>.</p>
+</div>
+<div id="Sx6.SS23.p2" class="ltx_para">
+<p class="ltx_p">For example, we now know that <math id="Sx6.SS23.p2.m1" class="ltx_Math" alttext="(1,2,3),(4,5,8),(9,6,7),(-3,2,8)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>9</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mn>2</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow></math>, which is a list of length four, is not linearly independent in <math id="Sx6.SS23.p2.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>.</p>
+</div>
+</section>
+<section id="Sx6.SS24" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.24 </span>Example: No List of Length 3 Spans <math id="Sx6.SS24.m1" class="ltx_Math" alttext="\mathbf{R}^{4}" display="inline"><msup><mi>𝐑</mi><mn>4</mn></msup></math>
+</h2>
+
+<div id="Sx6.SS24.p1" class="ltx_para">
+<p class="ltx_p">The list <math id="Sx6.SS24.p1.m1" class="ltx_Math" alttext="(1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, which has length four, is linearly independent in <math id="Sx6.SS24.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{4}" display="inline"><msup><mi>𝐑</mi><mn>4</mn></msup></math>. Thus no list of length less than four spans <math id="Sx6.SS24.p1.m3" class="ltx_Math" alttext="\mathbf{R}^{4}" display="inline"><msup><mi>𝐑</mi><mn>4</mn></msup></math>.</p>
+</div>
+<div id="Sx6.SS24.p2" class="ltx_para">
+<p class="ltx_p">For example, we now know that <math id="Sx6.SS24.p2.m1" class="ltx_Math" alttext="(1,2,3,-5),(4,5,8,3),(9,6,7,-1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mrow><mo>−</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>9</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, which is a list of length three, does not span <math id="Sx6.SS24.p2.m2" class="ltx_Math" alttext="\mathbf{R}^{4}" display="inline"><msup><mi>𝐑</mi><mn>4</mn></msup></math>.</p>
+</div>
+<div id="Sx6.SS24.p3" class="ltx_para">
+<p class="ltx_p">Our intuition suggests that every subspace of a finite-dimensional vector space should also be finite-dimensional. We now prove that this intuition is correct.</p>
+</div>
+</section>
+<section id="Sx6.SS25" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.25 </span>Finite-Dimensional Subspaces</h2>
+
+<div id="Sx6.SS25.p1" class="ltx_para">
+<p class="ltx_p">Every subspace of a finite-dimensional vector space is finite-dimensional.</p>
+</div>
+<div id="Sx6.SS25.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Suppose <math id="Sx6.SS25.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is finite-dimensional and <math id="Sx6.SS25.p2.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a subspace of <math id="Sx6.SS25.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. We need to prove that <math id="Sx6.SS25.p2.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is finite-dimensional. We do this through the following multistep construction.</p>
+</div>
+<div id="Sx6.SS25.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 1</span> 
+<br class="ltx_break">If <math id="Sx6.SS25.p3.m1" class="ltx_Math" alttext="U=\{0\}" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>, then <math id="Sx6.SS25.p3.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is finite-dimensional and we are done. If <math id="Sx6.SS25.p3.m3" class="ltx_Math" alttext="U\neq\{0\}" display="inline"><mrow><mi>U</mi><mo>≠</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>, then choose a nonzero vector <math id="Sx6.SS25.p3.m4" class="ltx_Math" alttext="u_{1}\in U" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+</div>
+<div id="Sx6.SS25.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step <math id="Sx6.SS25.p4.m1" class="ltx_Math" alttext="\boldsymbol{k}" display="inline"><mi>k</mi></math></span> 
+<br class="ltx_break">If <math id="Sx6.SS25.p4.m2" class="ltx_Math" alttext="U=\operatorname{span}\left(u_{1},\ldots,u_{k-1}\right)" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow></math>, then <math id="Sx6.SS25.p4.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is finite-dimensional and we are done. If <math id="Sx6.SS25.p4.m4" class="ltx_Math" alttext="U\neq\operatorname{span}\left(u_{1},\ldots,u_{k-1}\right)" display="inline"><mrow><mi>U</mi><mo>≠</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow></math>, then choose a vector <math id="Sx6.SS25.p4.m5" class="ltx_Math" alttext="u_{k}\in U" display="inline"><mrow><msub><mi>u</mi><mi>k</mi></msub><mo>∈</mo><mi>U</mi></mrow></math> such that</p>
+<table id="Sx6.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex31.m1" class="ltx_Math" alttext="u_{k}\notin\operatorname{span}\left(u_{1},\ldots,u_{k-1}\right)." display="block"><mrow><mrow><msub><mi>u</mi><mi>k</mi></msub><mo>∉</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">After each step, as long as the process continues, we have constructed a list of vectors such that no vector in this list is in the span of the previous vectors. Thus after each step we have constructed a linearly independent list, by the linear dependence lemma (2.19). This linearly independent list cannot be longer than any spanning list of <math id="Sx6.SS25.p4.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> (by 2.22). Thus the process eventually terminates, which means that <math id="Sx6.SS25.p4.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is finite-dimensional.  <math id="Sx6.SS25.p4.m8" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+</section>
+</section>
+<section id="Sx7" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Exercises 2A</h1>
+
+<div id="Sx7.p1" class="ltx_para">
+<ol id="Sx7.I10" class="ltx_enumerate">
+<li id="Sx7.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="Sx7.I10.i1.p1" class="ltx_para">
+<p class="ltx_p">Find a list of four distinct vectors in <math id="Sx7.I10.i1.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> whose span equals</p>
+<table id="Sx7.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex32.m1" class="ltx_Math" alttext="\left\{(x,y,z)\in\mathbf{F}^{3}:x+y+z=0\right\}." display="block"><mrow><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>}</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx7.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="Sx7.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx7.I10.i2.p1.m1" class="ltx_Math" alttext="v_{1},v_{2},v_{3},v_{4}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>3</mn></msub><mo>,</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></math> spans <math id="Sx7.I10.i2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, then the list</p>
+<table id="Sx7.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex33.m1" class="ltx_Math" alttext="v_{1}-v_{2},v_{2}-v_{3},v_{3}-v_{4},v_{4}" display="block"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>−</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>−</mo><msub><mi>v</mi><mn>3</mn></msub></mrow><mo>,</mo><mrow><msub><mi>v</mi><mn>3</mn></msub><mo>−</mo><msub><mi>v</mi><mn>4</mn></msub></mrow><mo>,</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">also spans <math id="Sx7.I10.i2.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="Sx7.I10.i3.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx7.I10.i3.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is a list of vectors in <math id="Sx7.I10.i3.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. For <math id="Sx7.I10.i3.p1.m3" class="ltx_Math" alttext="k\in\{1,\ldots,m\}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></mrow></math>, let</p>
+<table id="Sx7.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex34.m1" class="ltx_Math" alttext="w_{k}=v_{1}+\cdots+v_{k}." display="block"><mrow><mrow><msub><mi>w</mi><mi>k</mi></msub><mo>=</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Show that <math id="Sx7.I10.i3.p1.m4" class="ltx_Math" alttext="\operatorname{span}\left(v_{1},\ldots,v_{m}\right)=\operatorname{span}\left(w_%
+{1},\ldots,w_{m}\right)" display="inline"><mrow><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="Sx7.I10.i4.p1" class="ltx_para">
+<ol id="Sx7.I10.i4.I1" class="ltx_enumerate">
+<li id="Sx7.I10.i4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="Sx7.I10.i4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Show that a list of length one in a vector space is linearly independent if and only if the vector in the list is not 0.</p>
+</div>
+</li>
+<li id="Sx7.I10.i4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="Sx7.I10.i4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Show that a list of length two in a vector space is linearly independent if and only if neither of the two vectors in the list is a scalar multiple of the other.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="Sx7.I10.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="Sx7.I10.i5.p1" class="ltx_para">
+<p class="ltx_p">Find a number <math id="Sx7.I10.i5.p1.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> such that</p>
+<table id="Sx7.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex35.m1" class="ltx_Math" alttext="(3,1,4),(2,-3,5),(5,9,t)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>9</mn><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is not linearly independent in <math id="Sx7.I10.i5.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="Sx7.I10.i6.p1" class="ltx_para">
+<p class="ltx_p">Show that the list <math id="Sx7.I10.i6.p1.m1" class="ltx_Math" alttext="(2,3,1),(1,-1,2),(7,3,c)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> is linearly dependent in <math id="Sx7.I10.i6.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> if and only if <math id="Sx7.I10.i6.p1.m3" class="ltx_Math" alttext="c=8" display="inline"><mrow><mi>c</mi><mo>=</mo><mn>8</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="Sx7.I10.i7.p1" class="ltx_para">
+<ol id="Sx7.I10.i7.I1" class="ltx_enumerate">
+<li id="Sx7.I10.i7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="Sx7.I10.i7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Show that if we think of <math id="Sx7.I10.i7.I1.i1.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> as a vector space over <math id="Sx7.I10.i7.I1.i1.p1.m2" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math>, then the list <math id="Sx7.I10.i7.I1.i1.p1.m3" class="ltx_Math" alttext="1+i,1-i" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow><mo>,</mo><mrow><mn>1</mn><mo>−</mo><mi>i</mi></mrow></mrow></math> is linearly independent.</p>
+</div>
+</li>
+<li id="Sx7.I10.i7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="Sx7.I10.i7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Show that if we think of <math id="Sx7.I10.i7.I1.i2.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> as a vector space over <math id="Sx7.I10.i7.I1.i2.p1.m2" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>, then the list <math id="Sx7.I10.i7.I1.i2.p1.m3" class="ltx_Math" alttext="1+i,1-i" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow><mo>,</mo><mrow><mn>1</mn><mo>−</mo><mi>i</mi></mrow></mrow></math> is linearly dependent.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="Sx7.I10.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="Sx7.I10.i8.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx7.I10.i8.p1.m1" class="ltx_Math" alttext="v_{1},v_{2},v_{3},v_{4}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>3</mn></msub><mo>,</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></math> is linearly independent in <math id="Sx7.I10.i8.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Prove that the list</p>
+<table id="Sx7.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex36.m1" class="ltx_Math" alttext="v_{1}-v_{2},v_{2}-v_{3},v_{3}-v_{4},v_{4}" display="block"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>−</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>−</mo><msub><mi>v</mi><mn>3</mn></msub></mrow><mo>,</mo><mrow><msub><mi>v</mi><mn>3</mn></msub><mo>−</mo><msub><mi>v</mi><mn>4</mn></msub></mrow><mo>,</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is also linearly independent.</p>
+</div>
+</li>
+<li id="Sx7.I10.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="Sx7.I10.i9.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx7.I10.i9.p1.m1" class="ltx_Math" alttext="v_{1},v_{2},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is a linearly independent list of vectors in <math id="Sx7.I10.i9.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, then</p>
+<table id="Sx7.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex37.m1" class="ltx_Math" alttext="5v_{1}-4v_{2},v_{2},v_{3},\ldots,v_{m}" display="block"><mrow><mrow><mrow><mn>5</mn><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is linearly independent.</p>
+</div>
+</li>
+<li id="Sx7.I10.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="Sx7.I10.i10.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx7.I10.i10.p1.m1" class="ltx_Math" alttext="v_{1},v_{2},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is a linearly independent list of vectors in <math id="Sx7.I10.i10.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="Sx7.I10.i10.p1.m3" class="ltx_Math" alttext="\lambda\in\mathbf{F}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> with <math id="Sx7.I10.i10.p1.m4" class="ltx_Math" alttext="\lambda\neq 0" display="inline"><mrow><mi>λ</mi><mo>≠</mo><mn>0</mn></mrow></math>, then <math id="Sx7.I10.i10.p1.m5" class="ltx_Math" alttext="\lambda v_{1},\lambda v_{2},\ldots,\lambda v_{m}" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></math> is linearly independent.</p>
+</div>
+</li>
+<li id="Sx7.I10.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="Sx7.I10.i11.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx7.I10.i11.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> and <math id="Sx7.I10.i11.p1.m2" class="ltx_Math" alttext="w_{1},\ldots,w_{m}" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>m</mi></msub></mrow></math> are linearly independent lists of vectors in <math id="Sx7.I10.i11.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, then the list <math id="Sx7.I10.i11.p1.m4" class="ltx_Math" alttext="v_{1}+w_{1},\ldots,v_{m}+w_{m}" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><msub><mi>w</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>+</mo><msub><mi>w</mi><mi>m</mi></msub></mrow></mrow></math> is linearly independent.</p>
+</div>
+</li>
+<li id="Sx7.I10.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="Sx7.I10.i12.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx7.I10.i12.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is linearly independent in <math id="Sx7.I10.i12.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="Sx7.I10.i12.p1.m3" class="ltx_Math" alttext="w\in V" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></math>. Prove that if <math id="Sx7.I10.i12.p1.m4" class="ltx_Math" alttext="v_{1}+w,\ldots,v_{m}+w" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi>w</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>+</mo><mi>w</mi></mrow></mrow></math> is linearly dependent, then <math id="Sx7.I10.i12.p1.m5" class="ltx_Math" alttext="w\in\operatorname{span}\left(v_{1},\ldots,v_{m}\right)" display="inline"><mrow><mi>w</mi><mo>∈</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="Sx7.I10.i13.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx7.I10.i13.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is linearly independent in <math id="Sx7.I10.i13.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="Sx7.I10.i13.p1.m3" class="ltx_Math" alttext="w\in V" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></math>. Show that</p>
+<table id="Sx7.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex38.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m},w\text{ is linearly independent }\Longleftrightarrow w%
+\notin\operatorname{span}\left(v_{1},\ldots,v_{m}\right)." display="block"><mrow><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>,</mo><mrow><mi>w</mi><mo>⁢</mo><mtext> is linearly independent </mtext></mrow></mrow><mo stretchy="false">⟺</mo><mrow><mi>w</mi><mo>∉</mo><mrow><mi>span</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx7.I10.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="Sx7.I10.i14.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx7.I10.i14.p1.m1" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is a list of vectors in <math id="Sx7.I10.i14.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. For <math id="Sx7.I10.i14.p1.m3" class="ltx_Math" alttext="k\in\{1,\ldots,m\}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></mrow></math>, let</p>
+<table id="Sx7.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex39.m1" class="ltx_Math" alttext="w_{k}=v_{1}+\cdots+v_{k}." display="block"><mrow><mrow><msub><mi>w</mi><mi>k</mi></msub><mo>=</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Show that the list <math id="Sx7.I10.i14.p1.m4" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is linearly independent if and only if the list <math id="Sx7.I10.i14.p1.m5" class="ltx_Math" alttext="w_{1},\ldots,w_{m}" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>m</mi></msub></mrow></math> is linearly independent.</p>
+</div>
+</li>
+<li id="Sx7.I10.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="Sx7.I10.i15.p1" class="ltx_para">
+<p class="ltx_p">Explain why there does not exist a list of six polynomials that is linearly independent in <math id="Sx7.I10.i15.p1.m1" class="ltx_Math" alttext="\mathcal{P}_{4}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="Sx7.I10.i16.p1" class="ltx_para">
+<p class="ltx_p">Explain why no list of four polynomials spans <math id="Sx7.I10.i16.p1.m1" class="ltx_Math" alttext="\mathcal{P}_{4}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="Sx7.I10.i17.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="Sx7.I10.i17.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is infinite-dimensional if and only if there is a sequence <math id="Sx7.I10.i17.p1.m2" class="ltx_Math" alttext="v_{1},v_{2},\ldots" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> of vectors in <math id="Sx7.I10.i17.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> such that <math id="Sx7.I10.i17.p1.m4" class="ltx_Math" alttext="v_{1},\ldots,v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> is linearly independent for every positive integer <math id="Sx7.I10.i17.p1.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+</li>
+<li id="Sx7.I10.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="Sx7.I10.i18.p1" class="ltx_para">
+<p class="ltx_p">Prove that <math id="Sx7.I10.i18.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{\infty}" display="inline"><msup><mi>𝐅</mi><mi mathvariant="normal">∞</mi></msup></math> is infinite-dimensional.</p>
+</div>
+</li>
+<li id="Sx7.I10.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">19.</span> 
+<div id="Sx7.I10.i19.p1" class="ltx_para">
+<p class="ltx_p">Prove that the real vector space of all continuous real-valued functions on the interval <math id="Sx7.I10.i19.p1.m1" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math> is infinite-dimensional.</p>
+</div>
+</li>
+<li id="Sx7.I10.i20" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">20.</span> 
+<div id="Sx7.I10.i20.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx7.I10.i20.p1.m1" class="ltx_Math" alttext="p_{0},p_{1},\ldots,p_{m}" display="inline"><mrow><msub><mi>p</mi><mn>0</mn></msub><mo>,</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>m</mi></msub></mrow></math> are polynomials in <math id="Sx7.I10.i20.p1.m2" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="Sx7.I10.i20.p1.m3" class="ltx_Math" alttext="p_{k}(2)=0" display="inline"><mrow><mrow><msub><mi>p</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for each <math id="Sx7.I10.i20.p1.m4" class="ltx_Math" alttext="k\in\{0,\ldots,m\}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Prove that <math id="Sx7.I10.i20.p1.m5" class="ltx_Math" alttext="p_{0},p_{1},\ldots,p_{m}" display="inline"><mrow><msub><mi>p</mi><mn>0</mn></msub><mo>,</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>m</mi></msub></mrow></math> is not linearly independent in <math id="Sx7.I10.i20.p1.m6" class="ltx_Math" alttext="\mathcal{P}_{m}(\mathbf{F})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐅</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://linear.axler.net/">Linear Algebra Done Right, 4th Edition</a> © 2024 by <a href="https://sheldonaxler.net/">Sheldon Axler</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
