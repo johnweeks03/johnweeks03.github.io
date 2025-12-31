@@ -1,0 +1,803 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1C Subspaces</title>
+<!--Generated on Wed Dec 31 21:02:29 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="Sx1" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">1C Subspaces</h1>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">By considering subspaces, we can greatly expand our examples of vector spaces.</p>
+</div>
+<section id="S1.SS33" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.33 </span>Definition: Subspace</h2>
+
+<div id="S1.SS33.p1" class="ltx_para">
+<p class="ltx_p">A subset <math id="S1.SS33.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="S1.SS33.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is called a subspace of <math id="S1.SS33.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> if <math id="S1.SS33.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is also a vector space with the same additive identity, addition, and scalar multiplication as on <math id="S1.SS33.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S1.SS33.p2" class="ltx_para">
+<p class="ltx_p">The next result gives the easiest way to check whether a subset of a vector space is a subspace.</p>
+</div>
+<div id="S1.SS33.p3" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Some people use the terminology linear subspace, which means the same as subspace.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="S1.SS34" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.34 </span>Conditions for a Subspace</h2>
+
+<div id="S1.SS34.p1" class="ltx_para">
+<p class="ltx_p">A subset <math id="S1.SS34.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="S1.SS34.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a subspace of <math id="S1.SS34.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> if and only if <math id="S1.SS34.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> satisfies the following three conditions.</p>
+</div>
+<div id="S1.SS34.p2" class="ltx_para">
+<ul id="S1.I1" class="ltx_itemize">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">additive identity</span> 
+<br class="ltx_break"><math id="S1.I1.i1.p1.m1" class="ltx_Math" alttext="0\in U" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">closed under addition</span> 
+<br class="ltx_break"><math id="S1.I1.i2.p1.m1" class="ltx_Math" alttext="u,w\in U\text{ implies }u+w\in U" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mrow><mrow><mi>U</mi><mo>⁢</mo><mtext> implies </mtext><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mi>w</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">closed under scalar multiplication</span> 
+<br class="ltx_break"><math id="S1.I1.i3.p1.m1" class="ltx_Math" alttext="a\in\mathbf{F}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> and <math id="S1.I1.i3.p1.m2" class="ltx_Math" alttext="u\in U" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow></math> implies <math id="S1.I1.i3.p1.m3" class="ltx_Math" alttext="au\in U" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.SS34.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: If <math id="S1.SS34.p3.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a subspace of <math id="S1.SS34.p3.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, then <math id="S1.SS34.p3.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> satisfies the three conditions above by the definition of vector space.</p>
+</div>
+<div id="S1.SS34.p4" class="ltx_para">
+<p class="ltx_p">Conversely, suppose <math id="S1.SS34.p4.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> satisfies the three conditions above. The first condition ensures that the additive identity of <math id="S1.SS34.p4.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is in <math id="S1.SS34.p4.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. The second condition ensures that addition makes sense on <math id="S1.SS34.p4.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. The third condition ensures that scalar multiplication makes sense on <math id="S1.SS34.p4.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.</p>
+</div>
+<div id="S1.SS34.p5" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The additive identity condition above could be replaced with the condition that <math id="S1.SS34.p5.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is nonempty (because then taking <math id="S1.SS34.p5.m2" class="ltx_Math" alttext="u\in U" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow></math> and multiplying it by 0 would imply that <math id="S1.SS34.p5.m3" class="ltx_Math" alttext="0\in U" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>U</mi></mrow></math>). However, if a subset <math id="S1.SS34.p5.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="S1.SS34.p5.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is indeed a subspace, then usually the quickest way to show that <math id="S1.SS34.p5.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is nonempty is to show that <math id="S1.SS34.p5.m7" class="ltx_Math" alttext="0\in U" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>U</mi></mrow></math>.</span></p>
+</blockquote>
+</div>
+<div id="S1.SS34.p6" class="ltx_para">
+<p class="ltx_p">If <math id="S1.SS34.p6.m1" class="ltx_Math" alttext="u\in U" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow></math>, then <math id="S1.SS34.p6.m2" class="ltx_Math" alttext="-u" display="inline"><mrow><mo>−</mo><mi>u</mi></mrow></math> [which equals <math id="S1.SS34.p6.m3" class="ltx_Math" alttext="(-1)u" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>u</mi></mrow></math> by 1.32] is also in <math id="S1.SS34.p6.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> by the third condition above. Hence every element of <math id="S1.SS34.p6.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> has an additive inverse in <math id="S1.SS34.p6.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.</p>
+</div>
+<div id="S1.SS34.p7" class="ltx_para">
+<p class="ltx_p">The other parts of the definition of a vector space, such as associativity and commutativity, are automatically satisfied for <math id="S1.SS34.p7.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> because they hold on the larger space <math id="S1.SS34.p7.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Thus <math id="S1.SS34.p7.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a vector space and hence is a subspace of <math id="S1.SS34.p7.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.  <math id="S1.SS34.p7.m5" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S1.SS34.p8" class="ltx_para">
+<p class="ltx_p">The three conditions in the result above usually enable us to determine quickly whether a given subset of <math id="S1.SS34.p8.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a subspace of <math id="S1.SS34.p8.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. You should verify all assertions in the next example.</p>
+</div>
+</section>
+<section id="S1.SS35" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.35 </span>Example: Subspaces</h2>
+
+<div id="S1.SS35.p1" class="ltx_para">
+<p class="ltx_p">(a) If <math id="S1.SS35.p1.m1" class="ltx_Math" alttext="b\in\mathbf{F}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>𝐅</mi></mrow></math>, then</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\left\{\left(x_{1},x_{2},x_{3},x_{4}\right)\in\mathbf{F}^{4}:x_{3}=5x_{4}+b\right\}" display="block"><mrow><mo>{</mo><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>,</mo><msub><mi>x</mi><mn>4</mn></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>4</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><mo>+</mo><mi>b</mi></mrow></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is a subspace of <math id="S1.SS35.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math> if and only if <math id="S1.SS35.p1.m3" class="ltx_Math" alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S1.SS35.p2" class="ltx_para">
+<p class="ltx_p">(b) The set of continuous real-valued functions on the interval <math id="S1.SS35.p2.m1" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math> is a subspace of <math id="S1.SS35.p2.m2" class="ltx_Math" alttext="\mathbf{R}^{[0,1]}" display="inline"><msup><mi>𝐑</mi><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msup></math>.</p>
+</div>
+<div id="S1.SS35.p3" class="ltx_para">
+<p class="ltx_p">(c) The set of differentiable real-valued functions on <math id="S1.SS35.p3.m1" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> is a subspace of <math id="S1.SS35.p3.m2" class="ltx_Math" alttext="\mathbf{R}^{\mathbf{R}}" display="inline"><msup><mi>𝐑</mi><mi>𝐑</mi></msup></math>.</p>
+</div>
+<div id="S1.SS35.p4" class="ltx_para">
+<p class="ltx_p">(d) The set of differentiable real-valued functions <math id="S1.SS35.p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on the interval <math id="S1.SS35.p4.m2" class="ltx_Math" alttext="(0,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> such that <math id="S1.SS35.p4.m3" class="ltx_Math" alttext="f^{\prime}(2)=b" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math> is a subspace of <math id="S1.SS35.p4.m4" class="ltx_Math" alttext="\mathbf{R}^{(0,3)}" display="inline"><msup><mi>𝐑</mi><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></math> if and only if <math id="S1.SS35.p4.m5" class="ltx_Math" alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S1.SS35.p5" class="ltx_para">
+<p class="ltx_p">(e) The set of all sequences of complex numbers with limit 0 is a subspace of <math id="S1.SS35.p5.m1" class="ltx_Math" alttext="\mathbf{C}^{\infty}" display="inline"><msup><mi>𝐂</mi><mi mathvariant="normal">∞</mi></msup></math>.</p>
+</div>
+<div id="S1.SS35.p6" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Verifying some of the items above shows the linear structure underlying parts of calculus. For example, (b) above requires the result that the sum of two continuous functions is continuous. As another example, (d) above requires the result that for a constant <math id="S1.SS35.p6.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, the derivative of <math id="S1.SS35.p6.m2" class="ltx_Math" alttext="cf" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mi>f</mi></mrow></math> equals <math id="S1.SS35.p6.m3" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> times the derivative of <math id="S1.SS35.p6.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</span></p>
+</blockquote>
+</div>
+<div id="S1.SS35.p7" class="ltx_para">
+<p class="ltx_p">The set <math id="S1.SS35.p7.m1" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math> is the smallest subspace of <math id="S1.SS35.p7.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, and <math id="S1.SS35.p7.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> itself is the largest subspace of <math id="S1.SS35.p7.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. The empty set is not a subspace of <math id="S1.SS35.p7.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> because a subspace must be a vector space and hence must contain at least one element, namely, an additive identity.</p>
+</div>
+<div id="S1.SS35.p8" class="ltx_para">
+<p class="ltx_p">The subspaces of <math id="S1.SS35.p8.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> are precisely <math id="S1.SS35.p8.m2" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>, all lines in <math id="S1.SS35.p8.m3" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> containing the origin, and <math id="S1.SS35.p8.m4" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>. The subspaces of <math id="S1.SS35.p8.m5" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math> are precisely <math id="S1.SS35.p8.m6" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>, all lines in <math id="S1.SS35.p8.m7" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math> containing the origin, all planes in <math id="S1.SS35.p8.m8" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math> containing the origin, and <math id="S1.SS35.p8.m9" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>. To prove that all these objects are indeed subspaces is straightforward—the hard part is to show that they are the only subspaces of <math id="S1.SS35.p8.m10" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> and <math id="S1.SS35.p8.m11" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>. That task will be easier after we introduce some additional tools in the next chapter.</p>
+</div>
+</section>
+</section>
+<section id="Sx2" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Sums of Subspaces</h1>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">When dealing with vector spaces, we are usually interested only in subspaces, as opposed to arbitrary subsets. The notion of the sum of subspaces will be useful.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The union of subspaces is rarely a subspace (see Exercise 12), which is why we usually work with sums rather than unions.</span></p>
+</blockquote>
+</div>
+<section id="Sx2.SS36" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.36 </span>Definition: Sum of Subspaces</h2>
+
+<div id="Sx2.SS36.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.SS36.p1.m1" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> are subspaces of <math id="Sx2.SS36.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. The sum of <math id="Sx2.SS36.p1.m3" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math>, denoted by <math id="Sx2.SS36.p1.m4" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math>, is the set of all possible sums of elements of <math id="Sx2.SS36.p1.m5" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math>. More precisely,</p>
+<table id="Sx2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex2.m1" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}=\left\{v_{1}+\cdots+v_{m}:v_{1}\in V_{1},\ldots,v_{m}\in V_%
+{m}\right\}." display="block"><mrow><mrow><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>∈</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Sx2.SS36.p2" class="ltx_para">
+<p class="ltx_p">Let’s look at some examples of sums of subspaces.</p>
+</div>
+</section>
+<section id="Sx2.SS37" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.37 </span>Example: A Sum of Subspaces of <math id="Sx2.SS37.m1" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math>
+</h2>
+
+<div id="Sx2.SS37.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.SS37.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is the set of all elements of <math id="Sx2.SS37.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> whose second and third coordinates equal 0, and <math id="Sx2.SS37.p1.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is the set of all elements of <math id="Sx2.SS37.p1.m4" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> whose first and third coordinates equal 0:</p>
+<table id="Sx2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex3.m1" class="ltx_Math" alttext="U=\left\{(x,0,0)\in\mathbf{F}^{3}:x\in\mathbf{F}\right\}\quad\text{ and }\quad
+W%
+=\left\{(0,y,0)\in\mathbf{F}^{3}:y\in\mathbf{F}\right\}." display="block"><mrow><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>W</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>y</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>y</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Then</p>
+<table id="Sx2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex4.m1" class="ltx_Math" alttext="U+W=\left\{(x,y,0)\in\mathbf{F}^{3}:x,y\in\mathbf{F}\right\}," display="block"><mrow><mrow><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">as you should verify.</p>
+</div>
+</section>
+<section id="Sx2.SS38" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.38 </span>Example: A Sum of Subspaces of <math id="Sx2.SS38.m1" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math>
+</h2>
+
+<div id="Sx2.SS38.p1" class="ltx_para">
+<p class="ltx_p">Suppose</p>
+<table id="Sx2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex5.m1" class="ltx_Math" alttext="U=\left\{(x,x,y,y)\in\mathbf{F}^{4}:x,y\in\mathbf{F}\right\}\quad\text{ and }%
+\quad W=\left\{(x,x,x,y)\in\mathbf{F}^{4}:x,y\in\mathbf{F}\right\}." display="block"><mrow><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>4</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>W</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>4</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Using words rather than symbols, we could say that <math id="Sx2.SS38.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is the set of elements of <math id="Sx2.SS38.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math> whose first two coordinates equal each other and whose third and fourth coordinates equal each other. Similarly, <math id="Sx2.SS38.p1.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is the set of elements of <math id="Sx2.SS38.p1.m4" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math> whose first three coordinates equal each other.</p>
+</div>
+<div id="Sx2.SS38.p2" class="ltx_para">
+<p class="ltx_p">To find a description of <math id="Sx2.SS38.p2.m1" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math>, consider a typical element <math id="Sx2.SS38.p2.m2" class="ltx_Math" alttext="(a,a,b,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> of <math id="Sx2.SS38.p2.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and a typical element <math id="Sx2.SS38.p2.m4" class="ltx_Math" alttext="(c,c,c,d)" display="inline"><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></math> of <math id="Sx2.SS38.p2.m5" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>, where <math id="Sx2.SS38.p2.m6" class="ltx_Math" alttext="a,b,c,d\in\mathbf{F}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>. We have</p>
+<table id="Sx2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex6.m1" class="ltx_Math" alttext="(a,a,b,b)+(c,c,c,d)=(a+c,a+c,b+c,b+d)," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>+</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which shows that every element of <math id="Sx2.SS38.p2.m7" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> has its first two coordinates equal to each other. Thus</p>
+</div>
+</section>
+<section id="Sx2.SS39" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.39 </span>An Inclusion Used Later</h2>
+
+<div id="Sx2.SS39.p1" class="ltx_para">
+<table id="Sx2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex7.m1" class="ltx_Math" alttext="U+W\subseteq\left\{(x,x,y,z)\in\mathbf{F}^{4}:x,y,z\in\mathbf{F}\right\}." display="block"><mrow><mrow><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow><mo>⊆</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>4</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">To prove the inclusion in the other direction, suppose <math id="Sx2.SS39.p1.m1" class="ltx_Math" alttext="x,y,z\in\mathbf{F}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>. Then</p>
+<table id="Sx2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex8.m1" class="ltx_Math" alttext="(x,x,y,z)=(x,x,y,y)+(0,0,0,z-y)," display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mrow><mi>z</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the first vector on the right is in <math id="Sx2.SS39.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and the second vector on the right is in <math id="Sx2.SS39.p1.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>. Thus <math id="Sx2.SS39.p1.m4" class="ltx_Math" alttext="(x,x,y,z)\in U+W" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></mrow></math>, showing that the inclusion 1.39 also holds in the opposite direction. Hence</p>
+<table id="Sx2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex9.m1" class="ltx_Math" alttext="U+W=\left\{(x,x,y,z)\in\mathbf{F}^{4}:x,y,z\in\mathbf{F}\right\}," display="block"><mrow><mrow><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>4</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which shows that <math id="Sx2.SS39.p1.m5" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> is the set of elements of <math id="Sx2.SS39.p1.m6" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math> whose first two coordinates equal each other.</p>
+</div>
+<div id="Sx2.SS39.p2" class="ltx_para">
+<p class="ltx_p">The next result states that the sum of subspaces is a subspace, and is in fact the smallest subspace containing all the summands (which means that every subspace containing all the summands also contains the sum).</p>
+</div>
+</section>
+<section id="Sx2.SS40" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.40 </span>Sum of Subspaces is the Smallest Containing Subspace</h2>
+
+<div id="Sx2.SS40.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx2.SS40.p1.m1" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> are subspaces of <math id="Sx2.SS40.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Then <math id="Sx2.SS40.p1.m3" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is the smallest subspace of <math id="Sx2.SS40.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing <math id="Sx2.SS40.p1.m5" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math>.</p>
+</div>
+<div id="Sx2.SS40.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: The reader can verify that <math id="Sx2.SS40.p2.m1" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> contains the additive identity 0 and is closed under addition and scalar multiplication. Thus 1.34 implies that <math id="Sx2.SS40.p2.m2" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is a subspace of <math id="Sx2.SS40.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="Sx2.SS40.p3" class="ltx_para">
+<p class="ltx_p">The subspaces <math id="Sx2.SS40.p3.m1" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> are all contained in <math id="Sx2.SS40.p3.m2" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> (to see this, consider sums <math id="Sx2.SS40.p3.m3" class="ltx_Math" alttext="v_{1}+\cdots+v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math> where all except one of the <math id="Sx2.SS40.p3.m4" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> ’s are 0). Conversely, every subspace of <math id="Sx2.SS40.p3.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing <math id="Sx2.SS40.p3.m6" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> contains <math id="Sx2.SS40.p3.m7" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> (because subspaces must contain all finite sums of their elements). Thus <math id="Sx2.SS40.p3.m8" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is the smallest subspace of <math id="Sx2.SS40.p3.m9" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing <math id="Sx2.SS40.p3.m10" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math>.  <math id="Sx2.SS40.p3.m11" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="Sx2.SS40.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Sums of subspaces in the theory of vector spaces are analogous to unions of subsets in set theory. Given two subspaces of a vector space, the smallest subspace containing them is their sum. Analogously, given two subsets of a set, the smallest subset containing them is their union.</span></p>
+</blockquote>
+</div>
+</section>
+</section>
+<section id="Sx3" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Direct Sums</h1>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.p1.m1" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> are subspaces of <math id="Sx3.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Every element of <math id="Sx3.p1.m3" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> can be written in the form</p>
+<table id="Sx3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex10.m1" class="ltx_Math" alttext="v_{1}+\cdots+v_{m}," display="block"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where each <math id="Sx3.p1.m4" class="ltx_Math" alttext="v_{k}\in V_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></math>. Of special interest are cases in which each vector in <math id="Sx3.p1.m5" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> can be represented in the form above in only one way. This situation is so important that it gets a special name (direct sum) and a special symbol (<math id="Sx3.p1.m6" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math>).</p>
+</div>
+<section id="Sx3.SS41" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.41 </span>Definition: Direct Sum, <math id="Sx3.SS41.m1" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math>
+</h2>
+
+<div id="Sx3.SS41.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SS41.p1.m1" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> are subspaces of <math id="Sx3.SS41.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+<ul id="Sx3.I2" class="ltx_itemize">
+<li id="Sx3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The sum <math id="Sx3.I2.i1.p1.m1" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is called a direct sum if each element of <math id="Sx3.I2.i1.p1.m2" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> can be written in only one way as a sum <math id="Sx3.I2.i1.p1.m3" class="ltx_Math" alttext="v_{1}+\cdots+v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>, where each <math id="Sx3.I2.i1.p1.m4" class="ltx_Math" alttext="v_{k}\in V_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx3.I2.i2.p1.m1" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is a direct sum, then <math id="Sx3.I2.i2.p1.m2" class="ltx_Math" alttext="V_{1}\oplus\cdots\oplus V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>⊕</mo><mi mathvariant="normal">⋯</mi><mo>⊕</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> denotes <math id="Sx3.I2.i2.p1.m3" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math>, with the <math id="Sx3.I2.i2.p1.m4" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math> notation serving as an indication that this is a direct sum.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="Sx3.SS42" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.42 </span>Example: A Direct Sum of Two Subspaces</h2>
+
+<div id="Sx3.SS42.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SS42.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is the subspace of <math id="Sx3.SS42.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> of those vectors whose last coordinate equals 0, and <math id="Sx3.SS42.p1.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is the subspace of <math id="Sx3.SS42.p1.m4" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> of those vectors whose first two coordinates equal 0:</p>
+<table id="Sx3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex11.m1" class="ltx_Math" alttext="U=\left\{(x,y,0)\in\mathbf{F}^{3}:x,y\in\mathbf{F}\right\}\quad\text{ and }%
+\quad W=\left\{(0,0,z)\in\mathbf{F}^{3}:z\in\mathbf{F}\right\}." display="block"><mrow><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>W</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>z</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Then <math id="Sx3.SS42.p1.m5" class="ltx_Math" alttext="\mathbf{F}^{3}=U\oplus W" display="inline"><mrow><msup><mi>𝐅</mi><mn>3</mn></msup><mo>=</mo><mrow><mi>U</mi><mo>⊕</mo><mi>W</mi></mrow></mrow></math>, as you should verify.</p>
+</div>
+</section>
+<section id="Sx3.SS43" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.43 </span>Example: A Direct Sum of Multiple Subspaces</h2>
+
+<div id="Sx3.SS43.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SS43.p1.m1" class="ltx_Math" alttext="V_{k}" display="inline"><msub><mi>V</mi><mi>k</mi></msub></math> is the subspace of <math id="Sx3.SS43.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> of those vectors whose coordinates are all 0, except possibly in the <math id="Sx3.SS43.p1.m3" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> slot; for example, <math id="Sx3.SS43.p1.m4" class="ltx_Math" alttext="V_{2}=\left\{(0,x,0,\ldots,0)\in\mathbf{F}^{n}:x\in\mathbf{F}\right\}" display="inline"><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow></math>. Then</p>
+<table id="Sx3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex12.m1" class="ltx_Math" alttext="\mathbf{F}^{n}=V_{1}\oplus\cdots\oplus V_{n}" display="block"><mrow><msup><mi>𝐅</mi><mi>n</mi></msup><mo>=</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>⊕</mo><mi mathvariant="normal">⋯</mi><mo>⊕</mo><msub><mi>V</mi><mi>n</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">as you should verify.</p>
+</div>
+<div id="Sx3.SS43.p2" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">To produce <math id="Sx3.SS43.p2.m1" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math> in <span class="ltx_text ltx_TeX_logo" style="letter-spacing:-0.2em; margin-right:0.2em;">T<span class="ltx_text" style="position:relative; bottom:-0.2ex;font-variant:small-caps;font-size:120%;;">e</span>X</span>, type <span class="ltx_text ltx_font_typewriter">\oplus</span>.</span></p>
+</blockquote>
+</div>
+<div id="Sx3.SS43.p3" class="ltx_para">
+<p class="ltx_p">Sometimes nonexamples add to our understanding as much as examples.</p>
+</div>
+</section>
+<section id="Sx3.SS44" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.44 </span>Example: A Sum That is Not a Direct Sum</h2>
+
+<div id="Sx3.SS44.p1" class="ltx_para">
+<p class="ltx_p">Suppose</p>
+<table id="Sx3.Ex13" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx3.Ex13X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex13X.m2" class="ltx_Math" alttext="\displaystyle V_{1}=\left\{(x,y,0)\in\mathbf{F}^{3}:x,y\in\mathbf{F}\right\}," display="inline"><mrow><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex13Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex13Xa.m2" class="ltx_Math" alttext="\displaystyle V_{2}=\left\{(0,0,z)\in\mathbf{F}^{3}:z\in\mathbf{F}\right\}," display="inline"><mrow><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>z</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex13Xb"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex13Xb.m2" class="ltx_Math" alttext="\displaystyle V_{3}=\left\{(0,y,y)\in\mathbf{F}^{3}:y\in\mathbf{F}\right\}." display="inline"><mrow><mrow><msub><mi>V</mi><mn>3</mn></msub><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>y</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>y</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Then <math id="Sx3.SS44.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{3}=V_{1}+V_{2}+V_{3}" display="inline"><mrow><msup><mi>𝐅</mi><mn>3</mn></msup><mo>=</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><msub><mi>V</mi><mn>2</mn></msub><mo>+</mo><msub><mi>V</mi><mn>3</mn></msub></mrow></mrow></math> because every vector <math id="Sx3.SS44.p1.m2" class="ltx_Math" alttext="(x,y,z)\in\mathbf{F}^{3}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow></math> can be written as</p>
+<table id="Sx3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex14.m1" class="ltx_Math" alttext="(x,y,z)=(x,y,0)+(0,0,z)+(0,0,0)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the first vector on the right side is in <math id="Sx3.SS44.p1.m3" class="ltx_Math" alttext="V_{1}" display="inline"><msub><mi>V</mi><mn>1</mn></msub></math>, the second vector is in <math id="Sx3.SS44.p1.m4" class="ltx_Math" alttext="V_{2}" display="inline"><msub><mi>V</mi><mn>2</mn></msub></math>, and the third vector is in <math id="Sx3.SS44.p1.m5" class="ltx_Math" alttext="V_{3}" display="inline"><msub><mi>V</mi><mn>3</mn></msub></math>.</p>
+</div>
+<div id="Sx3.SS44.p2" class="ltx_para">
+<p class="ltx_p">However, <math id="Sx3.SS44.p2.m1" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math> does not equal the direct sum of <math id="Sx3.SS44.p2.m2" class="ltx_Math" alttext="V_{1},V_{2},V_{3}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><msub><mi>V</mi><mn>2</mn></msub><mo>,</mo><msub><mi>V</mi><mn>3</mn></msub></mrow></math>, because the vector <math id="Sx3.SS44.p2.m3" class="ltx_Math" alttext="(0,0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> can be written in more than one way as a sum <math id="Sx3.SS44.p2.m4" class="ltx_Math" alttext="v_{1}+v_{2}+v_{3}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><msub><mi>v</mi><mn>2</mn></msub><mo>+</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></math>, with each <math id="Sx3.SS44.p2.m5" class="ltx_Math" alttext="v_{k}\in V_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></math>. Specifically, we have</p>
+<table id="Sx3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex15.m1" class="ltx_Math" alttext="(0,0,0)=(0,1,0)+(0,0,1)+(0,-1,-1)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and, of course,</p>
+<table id="Sx3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex16.m1" class="ltx_Math" alttext="(0,0,0)=(0,0,0)+(0,0,0)+(0,0,0)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the first vector on the right side of each equation above is in <math id="Sx3.SS44.p2.m6" class="ltx_Math" alttext="V_{1}" display="inline"><msub><mi>V</mi><mn>1</mn></msub></math>, the second vector is in <math id="Sx3.SS44.p2.m7" class="ltx_Math" alttext="V_{2}" display="inline"><msub><mi>V</mi><mn>2</mn></msub></math>, and the third vector is in <math id="Sx3.SS44.p2.m8" class="ltx_Math" alttext="V_{3}" display="inline"><msub><mi>V</mi><mn>3</mn></msub></math>. Thus the sum <math id="Sx3.SS44.p2.m9" class="ltx_Math" alttext="V_{1}+V_{2}+V_{3}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><msub><mi>V</mi><mn>2</mn></msub><mo>+</mo><msub><mi>V</mi><mn>3</mn></msub></mrow></math> is not a direct sum.</p>
+</div>
+<div id="Sx3.SS44.p3" class="ltx_para">
+<p class="ltx_p">The definition of direct sum requires every vector in the sum to have a unique representation as an appropriate sum. The next result shows that when deciding whether a sum of subspaces is a direct sum, we only need to consider whether 0 can be uniquely written as an appropriate sum.</p>
+</div>
+<div id="Sx3.SS44.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The symbol <math id="Sx3.SS44.p4.m1" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math>, which is a plus sign inside a circle, reminds us that we are dealing with a special type of sum of subspaces—each element in the direct sum can be represented in only one way as a sum of elements from the specified subspaces.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx3.SS45" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.45 </span>Condition for a Direct Sum</h2>
+
+<div id="Sx3.SS45.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SS45.p1.m1" class="ltx_Math" alttext="V_{1},\ldots,V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> are subspaces of <math id="Sx3.SS45.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Then <math id="Sx3.SS45.p1.m3" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is a direct sum if and only if the only way to write 0 as a sum <math id="Sx3.SS45.p1.m4" class="ltx_Math" alttext="v_{1}+\cdots+v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>, where each <math id="Sx3.SS45.p1.m5" class="ltx_Math" alttext="v_{k}\in V_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></math>, is by taking each <math id="Sx3.SS45.p1.m6" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> equal to 0.</p>
+</div>
+<div id="Sx3.SS45.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: First suppose <math id="Sx3.SS45.p2.m1" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is a direct sum. Then the definition of direct sum implies that the only way to write 0 as a sum <math id="Sx3.SS45.p2.m2" class="ltx_Math" alttext="v_{1}+\cdots+v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>, where each <math id="Sx3.SS45.p2.m3" class="ltx_Math" alttext="v_{k}\in V_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></math>, is by taking each <math id="Sx3.SS45.p2.m4" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> equal to 0.</p>
+</div>
+<div id="Sx3.SS45.p3" class="ltx_para">
+<p class="ltx_p">Now suppose that the only way to write 0 as a sum <math id="Sx3.SS45.p3.m1" class="ltx_Math" alttext="v_{1}+\cdots+v_{m}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></math>, where each <math id="Sx3.SS45.p3.m2" class="ltx_Math" alttext="v_{k}\in V_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></math>, is by taking each <math id="Sx3.SS45.p3.m3" class="ltx_Math" alttext="v_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math> equal to 0. To show that <math id="Sx3.SS45.p3.m4" class="ltx_Math" alttext="V_{1}+\cdots+V_{m}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></math> is a direct sum, let <math id="Sx3.SS45.p3.m5" class="ltx_Math" alttext="v\in V_{1}+\cdots+V_{m}" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></mrow></math>. We can write</p>
+<table id="Sx3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex17.m1" class="ltx_Math" alttext="v=v_{1}+\cdots+v_{m}" display="block"><mrow><mi>v</mi><mo>=</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>v</mi><mi>m</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for some <math id="Sx3.SS45.p3.m6" class="ltx_Math" alttext="v_{1}\in V_{1},\ldots,v_{m}\in V_{m}" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>∈</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></mrow></math>. To show that this representation is unique, suppose we also have</p>
+<table id="Sx3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex18.m1" class="ltx_Math" alttext="v=u_{1}+\cdots+u_{m}" display="block"><mrow><mi>v</mi><mo>=</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>u</mi><mi>m</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="Sx3.SS45.p3.m7" class="ltx_Math" alttext="u_{1}\in V_{1},\ldots,u_{m}\in V_{m}" display="inline"><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>∈</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>u</mi><mi>m</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></mrow></math>. Subtracting these two equations, we have</p>
+<table id="Sx3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex19.m1" class="ltx_Math" alttext="0=\left(v_{1}-u_{1}\right)+\cdots+\left(v_{m}-u_{m}\right)." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>−</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mo>(</mo><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>−</mo><msub><mi>u</mi><mi>m</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Because <math id="Sx3.SS45.p3.m8" class="ltx_Math" alttext="v_{1}-u_{1}\in V_{1},\ldots,v_{m}-u_{m}\in V_{m}" display="inline"><mrow><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>−</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><mo>∈</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>−</mo><msub><mi>u</mi><mi>m</mi></msub></mrow><mo>∈</mo><msub><mi>V</mi><mi>m</mi></msub></mrow></mrow></math>, the equation above implies that each <math id="Sx3.SS45.p3.m9" class="ltx_Math" alttext="v_{k}-u_{k}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>−</mo><msub><mi>u</mi><mi>k</mi></msub></mrow></math> equals 0. Thus <math id="Sx3.SS45.p3.m10" class="ltx_Math" alttext="v_{1}=u_{1},\ldots,v_{m}=u_{m}" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>v</mi><mi>m</mi></msub><mo>=</mo><msub><mi>u</mi><mi>m</mi></msub></mrow></mrow></math>, as desired.  <math id="Sx3.SS45.p3.m11" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="Sx3.SS45.p4" class="ltx_para">
+<p class="ltx_p">The next result gives a simple condition for testing whether a sum of two subspaces is a direct sum.</p>
+</div>
+<div id="Sx3.SS45.p5" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The symbol <math id="Sx3.SS45.p5.m1" class="ltx_Math" alttext="\iff" display="inline"><mo stretchy="false">⇔</mo></math> used below means "if and only if"; this symbol could also be read to mean "is equivalent to".</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx3.SS46" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.46 </span>Direct Sum of Two Subspaces</h2>
+
+<div id="Sx3.SS46.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SS46.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="Sx3.SS46.p1.m2" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> are subspaces of <math id="Sx3.SS46.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Then</p>
+<table id="Sx3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex20.m1" class="ltx_Math" alttext="U+W\text{ is a direct sum }\Longleftrightarrow U\cap W=\{0\}" display="block"><mrow><mrow><mi>U</mi><mo>+</mo><mrow><mi>W</mi><mo>⁢</mo><mtext> is a direct sum </mtext></mrow></mrow><mo stretchy="false">⟺</mo><mrow><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Sx3.SS46.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: First suppose that <math id="Sx3.SS46.p2.m1" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> is a direct sum. If <math id="Sx3.SS46.p2.m2" class="ltx_Math" alttext="v\in U\cap W" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow></mrow></math>, then <math id="Sx3.SS46.p2.m3" class="ltx_Math" alttext="0=v+(-v)" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="Sx3.SS46.p2.m4" class="ltx_Math" alttext="v\in U" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>U</mi></mrow></math> and <math id="Sx3.SS46.p2.m5" class="ltx_Math" alttext="-v\in W" display="inline"><mrow><mrow><mo>−</mo><mi>v</mi></mrow><mo>∈</mo><mi>W</mi></mrow></math>. By the unique representation of 0 as the sum of a vector in <math id="Sx3.SS46.p2.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and a vector in <math id="Sx3.SS46.p2.m7" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>, we have <math id="Sx3.SS46.p2.m8" class="ltx_Math" alttext="v=0" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow></math>. Thus <math id="Sx3.SS46.p2.m9" class="ltx_Math" alttext="U\cap W=\{0\}" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>, completing the proof in one direction.</p>
+</div>
+<div id="Sx3.SS46.p3" class="ltx_para">
+<p class="ltx_p">To prove the other direction, now suppose <math id="Sx3.SS46.p3.m1" class="ltx_Math" alttext="U\cap W=\{0\}" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>. To prove that <math id="Sx3.SS46.p3.m2" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> is a direct sum, suppose <math id="Sx3.SS46.p3.m3" class="ltx_Math" alttext="u\in U,w\in W" display="inline"><mrow><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow><mo>,</mo><mrow><mi>w</mi><mo>∈</mo><mi>W</mi></mrow></mrow></math>, and</p>
+<table id="Sx3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex21.m1" class="ltx_Math" alttext="0=u+w" display="block"><mrow><mn>0</mn><mo>=</mo><mrow><mi>u</mi><mo>+</mo><mi>w</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">To complete the proof, we only need to show that <math id="Sx3.SS46.p3.m4" class="ltx_Math" alttext="u=w=0" display="inline"><mrow><mi>u</mi><mo>=</mo><mi>w</mi><mo>=</mo><mn>0</mn></mrow></math> (by 1.45). The equation above implies that <math id="Sx3.SS46.p3.m5" class="ltx_Math" alttext="u=-w\in W" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo>−</mo><mi>w</mi></mrow><mo>∈</mo><mi>W</mi></mrow></math>. Thus <math id="Sx3.SS46.p3.m6" class="ltx_Math" alttext="u\in U\cap W" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow></mrow></math>. Hence <math id="Sx3.SS46.p3.m7" class="ltx_Math" alttext="u=0" display="inline"><mrow><mi>u</mi><mo>=</mo><mn>0</mn></mrow></math>, which by the equation above implies that <math id="Sx3.SS46.p3.m8" class="ltx_Math" alttext="w=0" display="inline"><mrow><mi>w</mi><mo>=</mo><mn>0</mn></mrow></math>, completing the proof.  <math id="Sx3.SS46.p3.m9" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="Sx3.SS46.p4" class="ltx_para">
+<p class="ltx_p">The result above deals only with the case of two subspaces. When asking about a possible direct sum with more than two subspaces, it is not enough to test that each pair of the subspaces intersect only at 0. To see this, consider Example 1.44. In that nonexample of a direct sum, we have <math id="Sx3.SS46.p4.m1" class="ltx_Math" alttext="V_{1}\cap V_{2}=V_{1}\cap V_{3}=V_{2}\cap V_{3}=\{0\}" display="inline"><mrow><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>V</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>V</mi><mn>3</mn></msub></mrow><mo>=</mo><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>∩</mo><msub><mi>V</mi><mn>3</mn></msub></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Sx3.SS46.p5" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Sums of subspaces are analogous to unions of subsets. Similarly, direct sums of subspaces are analogous to disjoint unions of subsets. No two subspaces of a vector space can be disjoint, because both contain 0. So disjointness is replaced, at least in the case of two subspaces, with the requirement that the intersection equal <math id="Sx3.SS46.p5.m1" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>.</span></p>
+</blockquote>
+</div>
+</section>
+</section>
+<section id="Sx4" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">Exercises 1C</h1>
+
+<div id="Sx4.p1" class="ltx_para">
+<ol id="Sx4.I3" class="ltx_enumerate">
+<li id="Sx4.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="Sx4.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">For each of the following subsets of <math id="Sx4.I3.i1.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math>, determine whether it is a subspace of <math id="Sx4.I3.i1.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{3}" display="inline"><msup><mi>𝐅</mi><mn>3</mn></msup></math>.</p>
+<ol id="Sx4.I3.i1.I1" class="ltx_enumerate">
+<li id="Sx4.I3.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="Sx4.I3.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx4.I3.i1.I1.i1.p1.m1" class="ltx_Math" alttext="\left\{\left(x_{1},x_{2},x_{3}\right)\in\mathbf{F}^{3}:x_{1}+2x_{2}+3x_{3}=0\right\}" display="inline"><mrow><mo>{</mo><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>}</mo></mrow></math></p>
+</div>
+</li>
+<li id="Sx4.I3.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="Sx4.I3.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx4.I3.i1.I1.i2.p1.m1" class="ltx_Math" alttext="\left\{\left(x_{1},x_{2},x_{3}\right)\in\mathbf{F}^{3}:x_{1}+2x_{2}+3x_{3}=4\right\}" display="inline"><mrow><mo>{</mo><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mn>4</mn></mrow><mo>}</mo></mrow></math></p>
+</div>
+</li>
+<li id="Sx4.I3.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="Sx4.I3.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx4.I3.i1.I1.i3.p1.m1" class="ltx_Math" alttext="\left\{\left(x_{1},x_{2},x_{3}\right)\in\mathbf{F}^{3}:x_{1}x_{2}x_{3}=0\right\}" display="inline"><mrow><mo>{</mo><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow><mo>}</mo></mrow></math></p>
+</div>
+</li>
+<li id="Sx4.I3.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(d)</span> 
+<div id="Sx4.I3.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx4.I3.i1.I1.i4.p1.m1" class="ltx_Math" alttext="\left\{\left(x_{1},x_{2},x_{3}\right)\in\mathbf{F}^{3}:x_{1}=5x_{3}\right\}" display="inline"><mrow><mo>{</mo><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>}</mo></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="Sx4.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="Sx4.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Verify all assertions about subspaces in Example 1.35.</p>
+</div>
+</li>
+<li id="Sx4.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="Sx4.I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Show that the set of differentiable real-valued functions <math id="Sx4.I3.i3.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on the interval <math id="Sx4.I3.i3.p1.m2" class="ltx_Math" alttext="(-4,4)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math> such that <math id="Sx4.I3.i3.p1.m3" class="ltx_Math" alttext="f^{\prime}(-1)=3f(2)" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a subspace of <math id="Sx4.I3.i3.p1.m4" class="ltx_Math" alttext="\mathbf{R}^{(-4,4)}" display="inline"><msup><mi>𝐑</mi><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></msup></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="Sx4.I3.i4.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx4.I3.i4.p1.m1" class="ltx_Math" alttext="b\in\mathbf{R}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>𝐑</mi></mrow></math>. Show that the set of continuous real-valued functions <math id="Sx4.I3.i4.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on the interval <math id="Sx4.I3.i4.p1.m3" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math> such that <math id="Sx4.I3.i4.p1.m4" class="ltx_Math" alttext="\int_{0}^{1}f=b" display="inline"><mrow><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mi>f</mi></mrow><mo>=</mo><mi>b</mi></mrow></math> is a subspace of <math id="Sx4.I3.i4.p1.m5" class="ltx_Math" alttext="\mathbf{R}^{[0,1]}" display="inline"><msup><mi>𝐑</mi><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msup></math> if and only if <math id="Sx4.I3.i4.p1.m6" class="ltx_Math" alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="Sx4.I3.i5.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx4.I3.i5.p1.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> a subspace of the complex vector space <math id="Sx4.I3.i5.p1.m2" class="ltx_Math" alttext="\mathbf{C}^{2}" display="inline"><msup><mi>𝐂</mi><mn>2</mn></msup></math>?</p>
+</div>
+</li>
+<li id="Sx4.I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="Sx4.I3.i6.p1" class="ltx_para">
+<ol id="Sx4.I3.i6.I1" class="ltx_enumerate">
+<li id="Sx4.I3.i6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="Sx4.I3.i6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx4.I3.i6.I1.i1.p1.m1" class="ltx_Math" alttext="\left\{(a,b,c)\in\mathbf{R}^{3}:a^{3}=b^{3}\right\}" display="inline"><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐑</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>=</mo><msup><mi>b</mi><mn>3</mn></msup></mrow><mo>}</mo></mrow></math> a subspace of <math id="Sx4.I3.i6.I1.i1.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>?</p>
+</div>
+</li>
+<li id="Sx4.I3.i6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="Sx4.I3.i6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx4.I3.i6.I1.i2.p1.m1" class="ltx_Math" alttext="\left\{(a,b,c)\in\mathbf{C}^{3}:a^{3}=b^{3}\right\}" display="inline"><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐂</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>=</mo><msup><mi>b</mi><mn>3</mn></msup></mrow><mo>}</mo></mrow></math> a subspace of <math id="Sx4.I3.i6.I1.i2.p1.m2" class="ltx_Math" alttext="\mathbf{C}^{3}" display="inline"><msup><mi>𝐂</mi><mn>3</mn></msup></math>?</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="Sx4.I3.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="Sx4.I3.i7.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx4.I3.i7.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a nonempty subset of <math id="Sx4.I3.i7.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> such that <math id="Sx4.I3.i7.p1.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is closed under addition and under taking additive inverses (meaning <math id="Sx4.I3.i7.p1.m4" class="ltx_Math" alttext="-u\in U" display="inline"><mrow><mrow><mo>−</mo><mi>u</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math> whenever <math id="Sx4.I3.i7.p1.m5" class="ltx_Math" alttext="u\in U" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow></math>), then <math id="Sx4.I3.i7.p1.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a subspace of <math id="Sx4.I3.i7.p1.m7" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="Sx4.I3.i8.p1" class="ltx_para">
+<p class="ltx_p">Give an example of a nonempty subset <math id="Sx4.I3.i8.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="Sx4.I3.i8.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> such that <math id="Sx4.I3.i8.p1.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is closed under scalar multiplication, but <math id="Sx4.I3.i8.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is not a subspace of <math id="Sx4.I3.i8.p1.m5" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="Sx4.I3.i9.p1" class="ltx_para">
+<p class="ltx_p">A function <math id="Sx4.I3.i9.p1.m1" class="ltx_Math" alttext="f:\mathbf{R}\rightarrow\mathbf{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>𝐑</mi><mo stretchy="false">→</mo><mi>𝐑</mi></mrow></mrow></math> is called periodic if there exists a positive number <math id="Sx4.I3.i9.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="Sx4.I3.i9.p1.m3" class="ltx_Math" alttext="f(x)=f(x+p)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="Sx4.I3.i9.p1.m4" class="ltx_Math" alttext="x\in\mathbf{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝐑</mi></mrow></math>. Is the set of periodic functions from <math id="Sx4.I3.i9.p1.m5" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> to <math id="Sx4.I3.i9.p1.m6" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> a subspace of <math id="Sx4.I3.i9.p1.m7" class="ltx_Math" alttext="\mathbf{R}^{\mathbf{R}}" display="inline"><msup><mi>𝐑</mi><mi>𝐑</mi></msup></math>? Explain.</p>
+</div>
+</li>
+<li id="Sx4.I3.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="Sx4.I3.i10.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx4.I3.i10.p1.m1" class="ltx_Math" alttext="V_{1}" display="inline"><msub><mi>V</mi><mn>1</mn></msub></math> and <math id="Sx4.I3.i10.p1.m2" class="ltx_Math" alttext="V_{2}" display="inline"><msub><mi>V</mi><mn>2</mn></msub></math> are subspaces of <math id="Sx4.I3.i10.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Prove that the intersection <math id="Sx4.I3.i10.p1.m4" class="ltx_Math" alttext="V_{1}\cap V_{2}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>V</mi><mn>2</mn></msub></mrow></math> is a subspace of <math id="Sx4.I3.i10.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="Sx4.I3.i11.p1" class="ltx_para">
+<p class="ltx_p">Prove that the intersection of every collection of subspaces of <math id="Sx4.I3.i11.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a subspace of <math id="Sx4.I3.i11.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="Sx4.I3.i12.p1" class="ltx_para">
+<p class="ltx_p">Prove that the union of two subspaces of <math id="Sx4.I3.i12.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a subspace of <math id="Sx4.I3.i12.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> if and only if one of the subspaces is contained in the other.</p>
+</div>
+</li>
+<li id="Sx4.I3.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="Sx4.I3.i13.p1" class="ltx_para">
+<p class="ltx_p">Prove that the union of three subspaces of <math id="Sx4.I3.i13.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a subspace of <math id="Sx4.I3.i13.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> if and only if one of the subspaces contains the other two.</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">This exercise is surprisingly harder than Exercise 12, possibly because this exercise is not true if we replace <math id="Sx4.I3.i13.p1.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> with a field containing only two elements.</span></p>
+</blockquote>
+</div>
+</li>
+<li id="Sx4.I3.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="Sx4.I3.i14.p1" class="ltx_para">
+<p class="ltx_p">Suppose</p>
+<table id="Sx4.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex22.m1" class="ltx_Math" alttext="U=\left\{(x,-x,2x)\in\mathbf{F}^{3}:x\in\mathbf{F}\right\}\quad\text{ and }%
+\quad W=\left\{(x,x,2x)\in\mathbf{F}^{3}:x\in\mathbf{F}\right\}." display="block"><mrow><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>,</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>W</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>3</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Describe <math id="Sx4.I3.i14.p1.m1" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> using symbols, and also give a description of <math id="Sx4.I3.i14.p1.m2" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> that uses no symbols.</p>
+</div>
+</li>
+<li id="Sx4.I3.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="Sx4.I3.i15.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx4.I3.i15.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a subspace of <math id="Sx4.I3.i15.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. What is <math id="Sx4.I3.i15.p1.m3" class="ltx_Math" alttext="U+U" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>U</mi></mrow></math>?</p>
+</div>
+</li>
+<li id="Sx4.I3.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">16.</span> 
+<div id="Sx4.I3.i16.p1" class="ltx_para">
+<p class="ltx_p">Is the operation of addition on the subspaces of <math id="Sx4.I3.i16.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> commutative? In other words, if <math id="Sx4.I3.i16.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="Sx4.I3.i16.p1.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> are subspaces of <math id="Sx4.I3.i16.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, is <math id="Sx4.I3.i16.p1.m5" class="ltx_Math" alttext="U+W=W+U" display="inline"><mrow><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow><mo>=</mo><mrow><mi>W</mi><mo>+</mo><mi>U</mi></mrow></mrow></math>?</p>
+</div>
+</li>
+<li id="Sx4.I3.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">17.</span> 
+<div id="Sx4.I3.i17.p1" class="ltx_para">
+<p class="ltx_p">Is the operation of addition on the subspaces of <math id="Sx4.I3.i17.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> associative? In other words, if <math id="Sx4.I3.i17.p1.m2" class="ltx_Math" alttext="V_{1},V_{2},V_{3}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><msub><mi>V</mi><mn>2</mn></msub><mo>,</mo><msub><mi>V</mi><mn>3</mn></msub></mrow></math> are subspaces of <math id="Sx4.I3.i17.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, is</p>
+<table id="Sx4.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex23.m1" class="ltx_Math" alttext="\left(V_{1}+V_{2}\right)+V_{3}=V_{1}+\left(V_{2}+V_{3}\right)?" display="block"><mrow><mrow><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><msub><mi>V</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mo>+</mo><msub><mi>V</mi><mn>3</mn></msub></mrow><mo>=</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>+</mo><msub><mi>V</mi><mn>3</mn></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">?</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx4.I3.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">18.</span> 
+<div id="Sx4.I3.i18.p1" class="ltx_para">
+<p class="ltx_p">Does the operation of addition on the subspaces of <math id="Sx4.I3.i18.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> have an additive identity? Which subspaces have additive inverses?</p>
+</div>
+</li>
+<li id="Sx4.I3.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">19.</span> 
+<div id="Sx4.I3.i19.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx4.I3.i19.p1.m1" class="ltx_Math" alttext="V_{1},V_{2},U" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><msub><mi>V</mi><mn>2</mn></msub><mo>,</mo><mi>U</mi></mrow></math> are subspaces of <math id="Sx4.I3.i19.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> such that</p>
+<table id="Sx4.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex24.m1" class="ltx_Math" alttext="V_{1}+U=V_{2}+U," display="block"><mrow><mrow><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi>U</mi></mrow><mo>=</mo><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>+</mo><mi>U</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">then <math id="Sx4.I3.i19.p1.m3" class="ltx_Math" alttext="V_{1}=V_{2}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><msub><mi>V</mi><mn>2</mn></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i20" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">20.</span> 
+<div id="Sx4.I3.i20.p1" class="ltx_para">
+<p class="ltx_p">Suppose</p>
+<table id="Sx4.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex25.m1" class="ltx_Math" alttext="U=\left\{(x,x,y,y)\in\mathbf{F}^{4}:x,y\in\mathbf{F}\right\}." display="block"><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>4</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Find a subspace <math id="Sx4.I3.i20.p1.m1" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> of <math id="Sx4.I3.i20.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{4}" display="inline"><msup><mi>𝐅</mi><mn>4</mn></msup></math> such that <math id="Sx4.I3.i20.p1.m3" class="ltx_Math" alttext="\mathbf{F}^{4}=U\oplus W" display="inline"><mrow><msup><mi>𝐅</mi><mn>4</mn></msup><mo>=</mo><mrow><mi>U</mi><mo>⊕</mo><mi>W</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i21" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">21.</span> 
+<div id="Sx4.I3.i21.p1" class="ltx_para">
+<p class="ltx_p">Suppose</p>
+<table id="Sx4.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex26.m1" class="ltx_Math" alttext="U=\left\{(x,y,x+y,x-y,2x)\in\mathbf{F}^{5}:x,y\in\mathbf{F}\right\}." display="block"><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>,</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>5</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Find a subspace <math id="Sx4.I3.i21.p1.m1" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> of <math id="Sx4.I3.i21.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{5}" display="inline"><msup><mi>𝐅</mi><mn>5</mn></msup></math> such that <math id="Sx4.I3.i21.p1.m3" class="ltx_Math" alttext="\mathbf{F}^{5}=U\oplus W" display="inline"><mrow><msup><mi>𝐅</mi><mn>5</mn></msup><mo>=</mo><mrow><mi>U</mi><mo>⊕</mo><mi>W</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i22" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">22.</span> 
+<div id="Sx4.I3.i22.p1" class="ltx_para">
+<p class="ltx_p">Suppose</p>
+<table id="Sx4.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex27.m1" class="ltx_Math" alttext="U=\left\{(x,y,x+y,x-y,2x)\in\mathbf{F}^{5}:x,y\in\mathbf{F}\right\}." display="block"><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mo>{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>,</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mn>5</mn></msup></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Find three subspaces <math id="Sx4.I3.i22.p1.m1" class="ltx_Math" alttext="W_{1},W_{2},W_{3}" display="inline"><mrow><msub><mi>W</mi><mn>1</mn></msub><mo>,</mo><msub><mi>W</mi><mn>2</mn></msub><mo>,</mo><msub><mi>W</mi><mn>3</mn></msub></mrow></math> of <math id="Sx4.I3.i22.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{5}" display="inline"><msup><mi>𝐅</mi><mn>5</mn></msup></math>, none of which equals <math id="Sx4.I3.i22.p1.m3" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>, such that <math id="Sx4.I3.i22.p1.m4" class="ltx_Math" alttext="\mathbf{F}^{5}=U\oplus W_{1}\oplus W_{2}\oplus W_{3}" display="inline"><mrow><msup><mi>𝐅</mi><mn>5</mn></msup><mo>=</mo><mrow><mi>U</mi><mo>⊕</mo><msub><mi>W</mi><mn>1</mn></msub><mo>⊕</mo><msub><mi>W</mi><mn>2</mn></msub><mo>⊕</mo><msub><mi>W</mi><mn>3</mn></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx4.I3.i23" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">23.</span> 
+<div id="Sx4.I3.i23.p1" class="ltx_para">
+<p class="ltx_p">Prove or give a counterexample: If <math id="Sx4.I3.i23.p1.m1" class="ltx_Math" alttext="V_{1},V_{2},U" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><msub><mi>V</mi><mn>2</mn></msub><mo>,</mo><mi>U</mi></mrow></math> are subspaces of <math id="Sx4.I3.i23.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> such that</p>
+<table id="Sx4.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex28.m1" class="ltx_Math" alttext="V=V_{1}\oplus U\quad\text{ and }\quad V=V_{2}\oplus U," display="block"><mrow><mrow><mrow><mi>V</mi><mo>=</mo><mrow><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>⊕</mo><mi>U</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>V</mi><mo>=</mo><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>⊕</mo><mi>U</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">then <math id="Sx4.I3.i23.p1.m3" class="ltx_Math" alttext="V_{1}=V_{2}" display="inline"><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><msub><mi>V</mi><mn>2</mn></msub></mrow></math>.</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Hint: When trying to discover whether a conjecture in linear algebra is true or false, it is often useful to start by experimenting in <math id="Sx4.I3.i23.p1.m4" class="ltx_Math" alttext="\mathbf{F}^{2}" display="inline"><msup><mi>𝐅</mi><mn>2</mn></msup></math>.</span></p>
+</blockquote>
+</div>
+</li>
+<li id="Sx4.I3.i24" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">24.</span> 
+<div id="Sx4.I3.i24.p1" class="ltx_para">
+<p class="ltx_p">A function <math id="Sx4.I3.i24.p1.m1" class="ltx_Math" alttext="f:\mathbf{R}\rightarrow\mathbf{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>𝐑</mi><mo stretchy="false">→</mo><mi>𝐑</mi></mrow></mrow></math> is called even if</p>
+<table id="Sx4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex29.m1" class="ltx_Math" alttext="f(-x)=f(x)" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx4.I3.i24.p1.m2" class="ltx_Math" alttext="x\in\mathbf{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝐑</mi></mrow></math>. A function <math id="Sx4.I3.i24.p1.m3" class="ltx_Math" alttext="f:\mathbf{R}\rightarrow\mathbf{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>𝐑</mi><mo stretchy="false">→</mo><mi>𝐑</mi></mrow></mrow></math> is called odd if</p>
+<table id="Sx4.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex30.m1" class="ltx_Math" alttext="f(-x)=-f(x)" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx4.I3.i24.p1.m4" class="ltx_Math" alttext="x\in\mathbf{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝐑</mi></mrow></math>. Let <math id="Sx4.I3.i24.p1.m5" class="ltx_Math" alttext="V_{\mathrm{e}}" display="inline"><msub><mi>V</mi><mi mathvariant="normal">e</mi></msub></math> denote the set of real-valued even functions on <math id="Sx4.I3.i24.p1.m6" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> and let <math id="Sx4.I3.i24.p1.m7" class="ltx_Math" alttext="V_{\mathrm{o}}" display="inline"><msub><mi>V</mi><mi mathvariant="normal">o</mi></msub></math> denote the set of real-valued odd functions on <math id="Sx4.I3.i24.p1.m8" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math>. Show that <math id="Sx4.I3.i24.p1.m9" class="ltx_Math" alttext="\mathbf{R}^{\mathbf{R}}=V_{\mathrm{e}}\oplus V_{\mathrm{o}}" display="inline"><mrow><msup><mi>𝐑</mi><mi>𝐑</mi></msup><mo>=</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">e</mi></msub><mo>⊕</mo><msub><mi>V</mi><mi mathvariant="normal">o</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://linear.axler.net/">Linear Algebra Done Right, 4th Edition</a> © 2024 by <a href="https://sheldonaxler.net/">Sheldon Axler</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
