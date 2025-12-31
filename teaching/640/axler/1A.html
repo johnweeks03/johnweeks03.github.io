@@ -1,0 +1,900 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Chapter 1: Vector Spaces</title>
+<!--Generated on Wed Dec 31 20:31:31 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Chapter 1: Vector Spaces</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Linear algebra is the study of linear maps on finite-dimensional vector spaces. Eventually we will learn what all these terms mean. In this chapter we will define vector spaces and discuss their elementary properties.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">In linear algebra, better theorems and more insight emerge if complex numbers are investigated along with real numbers. Thus we will begin by introducing the complex numbers and their basic properties.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">We will generalize the examples of a plane and of ordinary space to <math id="Sx1.p3.m1" class="ltx_Math" alttext="\mathbf{R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math> and <math id="Sx1.p3.m2" class="ltx_Math" alttext="\mathbf{C}^{n}" display="inline"><msup><mi>𝐂</mi><mi>n</mi></msup></math>, which we then will generalize to the notion of a vector space. As we will see, a vector space is a set with operations of addition and scalar multiplication that satisfy natural algebraic properties.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Then our next topic will be subspaces, which play a role for vector spaces analogous to the role played by subsets for sets. Finally, we will look at sums of subspaces (analogous to unions of subsets) and direct sums of subspaces (analogous to unions of disjoint sets).</p>
+</div>
+<figure id="S1.F1" class="ltx_figure"><img src="images/980c34a9-a58b-4031-807a-5af074d42819-01.jpg" id="S1.F1.g1" class="ltx_graphics ltx_centering ltx_img_square" width="1157" height="1035" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure"><span class="ltx_text" style="font-size:90%;">Figure 1</span>: </span><span class="ltx_text" style="font-size:90%;">René Descartes explaining his work to Queen Christina of Sweden. Vector spaces are a generalization of the description of a plane using two coordinates, as published by Descartes in 1637.</span></figcaption>
+</figure>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">1A <math id="Sx2.m1" class="ltx_Math" alttext="\mathbf{R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math> and <math id="Sx2.m2" class="ltx_Math" alttext="\mathbf{C}^{n}" display="inline"><msup><mi>𝐂</mi><mi>n</mi></msup></math>
+</h2>
+
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Complex Numbers</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">You should already be familiar with basic properties of the set <math id="Sx3.p1.m1" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> of real numbers. Complex numbers were invented so that we can take square roots of negative numbers. The idea is to assume we have a square root of <math id="Sx3.p1.m2" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>, denoted by <math id="Sx3.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, that obeys the usual rules of arithmetic. Here are the formal definitions.</p>
+</div>
+<section id="Sx3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Definition: Complex Numbers, C</h3>
+
+<div id="Sx3.SS1.p1" class="ltx_para">
+<ul id="Sx3.I1" class="ltx_itemize">
+<li id="Sx3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A complex number is an ordered pair <math id="Sx3.I1.i1.p1.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="Sx3.I1.i1.p1.m2" class="ltx_Math" alttext="a,b\in\mathbf{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow></math>, but we will write this as <math id="Sx3.I1.i1.p1.m3" class="ltx_Math" alttext="a+bi" display="inline"><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The set of all complex numbers is denoted by <math id="Sx3.I1.i2.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>:</p>
+</div>
+</li>
+</ul>
+<table id="Sx3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex1.m1" class="ltx_Math" alttext="\mathbf{C}=\{a+bi:a,b\in\mathbf{R}\}." display="block"><mrow><mrow><mi>𝐂</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<ul id="Sx3.I2" class="ltx_itemize">
+<li id="Sx3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Addition and multiplication on <math id="Sx3.I2.i1.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> are defined by</p>
+</div>
+</li>
+</ul>
+<table id="Sx3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex2.m1" class="ltx_Math" alttext="\begin{gathered}(a+bi)+(c+di)=(a+c)+(b+d)i,\\
+(a+bi)(c+di)=(ac-bd)+(ad+bc)i\end{gathered}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">here <math id="Sx3.SS1.p1.m1" class="ltx_Math" alttext="a,b,c,d\in\mathbf{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow></math>.</p>
+</div>
+<div id="Sx3.SS1.p2" class="ltx_para">
+<p class="ltx_p">If <math id="Sx3.SS1.p2.m1" class="ltx_Math" alttext="a\in\mathbf{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>𝐑</mi></mrow></math>, we identify <math id="Sx3.SS1.p2.m2" class="ltx_Math" alttext="a+0i" display="inline"><mrow><mi>a</mi><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>i</mi></mrow></mrow></math> with the real number <math id="Sx3.SS1.p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. Thus we think of <math id="Sx3.SS1.p2.m4" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> as a subset of <math id="Sx3.SS1.p2.m5" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>. We usually write <math id="Sx3.SS1.p2.m6" class="ltx_Math" alttext="0+bi" display="inline"><mrow><mn>0</mn><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></math> as just <math id="Sx3.SS1.p2.m7" class="ltx_Math" alttext="bi" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></math>, and we usually write <math id="Sx3.SS1.p2.m8" class="ltx_Math" alttext="0+1i" display="inline"><mrow><mn>0</mn><mo>+</mo><mrow><mn>1</mn><mo>⁢</mo><mi>i</mi></mrow></mrow></math> as just <math id="Sx3.SS1.p2.m9" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>.</p>
+</div>
+<div id="Sx3.SS1.p3" class="ltx_para">
+<p class="ltx_p">To motivate the definition of complex multiplication given above, pretend that we knew that <math id="Sx3.SS1.p3.m1" class="ltx_Math" alttext="i^{2}=-1" display="inline"><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math> and then use the usual rules of arithmetic to derive the formula above for the product of two complex numbers. Then use that formula to verify that we indeed have</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">The symbol <math id="Sx3.SS1.p3.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> was first used to denote <math id="Sx3.SS1.p3.m3" class="ltx_Math" alttext="\sqrt{-1}" display="inline"><msqrt><mrow><mo>−</mo><mn>1</mn></mrow></msqrt></math> by Leonhard Euler in 1777.</span></p>
+</blockquote>
+<table id="Sx3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex3.m1" class="ltx_Math" alttext="i^{2}=-1." display="block"><mrow><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Sx3.SS1.p4" class="ltx_para">
+<p class="ltx_p">Do not memorize the formula for the product of two complex numbers—you can always rederive it by recalling that <math id="Sx3.SS1.p4.m1" class="ltx_Math" alttext="i^{2}=-1" display="inline"><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math> and then using the usual rules of arithmetic (as given by 1.3). The next example illustrates this procedure.</p>
+</div>
+</section>
+<section id="Sx3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Example: Complex Arithmetic</h3>
+
+<div id="Sx3.SS2.p1" class="ltx_para">
+<p class="ltx_p">The product <math id="Sx3.SS2.p1.m1" class="ltx_Math" alttext="(2+3i)(4+5i)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> can be evaluated by applying the distributive and commutative properties from 1.3:</p>
+<table id="Sx3.Ex4" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx3.Ex4X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex4X.m2" class="ltx_Math" alttext="\displaystyle(2+3i)(4+5i)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex4X.m3" class="ltx_Math" alttext="\displaystyle=2\cdot(4+5i)+(3i)(4+5i)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex4Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex4Xa.m2" class="ltx_Math" alttext="\displaystyle=2\cdot 4+2\cdot 5i+3i\cdot 4+(3i)(5i)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn></mrow><mo>+</mo><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi>i</mi></mrow><mo>+</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>5</mn><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex4Xb"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex4Xb.m2" class="ltx_Math" alttext="\displaystyle=8+0i+2i-5" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>8</mn><mo>+</mo><mrow><mn>10</mn><mo>⁢</mo><mi>i</mi></mrow><mo>+</mo><mrow><mn>12</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>−</mo><mn>15</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex4Xc"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex4Xc.m2" class="ltx_Math" alttext="\displaystyle=-7+2i." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mn>7</mn></mrow><mo>+</mo><mrow><mn>22</mn><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Sx3.SS2.p2" class="ltx_para">
+<p class="ltx_p">Our first result states that complex addition and complex multiplication have the familiar properties that we expect.</p>
+</div>
+</section>
+<section id="Sx3.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Properties of Complex Arithmetic</h3>
+
+<div id="Sx3.SS3.p1" class="ltx_para">
+<ul id="Sx3.I3" class="ltx_itemize">
+<li id="Sx3.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">commutativity</span> 
+<br class="ltx_break"><math id="Sx3.I3.i1.p1.m1" class="ltx_Math" alttext="\alpha+\beta=\beta+\alpha" display="inline"><mrow><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>+</mo><mi>α</mi></mrow></mrow></math> and <math id="Sx3.I3.i1.p1.m2" class="ltx_Math" alttext="\alpha\beta=\beta\alpha" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></math> for all <math id="Sx3.I3.i1.p1.m3" class="ltx_Math" alttext="\alpha,\beta\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">associativity</span> 
+<br class="ltx_break"><math id="Sx3.I3.i2.p1.m1" class="ltx_Math" alttext="(\alpha+\beta)+\lambda=\alpha+(\beta+\lambda)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>α</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>+</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Sx3.I3.i2.p1.m2" class="ltx_Math" alttext="(\alpha\beta)\lambda=\alpha(\beta\lambda)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>⁢</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="Sx3.I3.i2.p1.m3" class="ltx_Math" alttext="\alpha,\beta,\lambda\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>λ</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">identities</span> 
+<br class="ltx_break"><math id="Sx3.I3.i3.p1.m1" class="ltx_Math" alttext="\lambda+0=\lambda" display="inline"><mrow><mrow><mi>λ</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mi>λ</mi></mrow></math> and <math id="Sx3.I3.i3.p1.m2" class="ltx_Math" alttext="\lambda 1=\lambda" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mn>1</mn></mrow><mo>=</mo><mi>λ</mi></mrow></math> for all <math id="Sx3.I3.i3.p1.m3" class="ltx_Math" alttext="\lambda\in\mathbf{C}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">additive inverse</span> 
+<br class="ltx_break">For every <math id="Sx3.I3.i4.p1.m1" class="ltx_Math" alttext="\alpha\in\mathbf{C}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝐂</mi></mrow></math>, there exists a unique <math id="Sx3.I3.i4.p1.m2" class="ltx_Math" alttext="\beta\in\mathbf{C}" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> such that <math id="Sx3.I3.i4.p1.m3" class="ltx_Math" alttext="\alpha+\beta=0" display="inline"><mrow><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I3.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">multiplicative inverse</span> 
+<br class="ltx_break">For every <math id="Sx3.I3.i5.p1.m1" class="ltx_Math" alttext="\alpha\in\mathbf{C}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> with <math id="Sx3.I3.i5.p1.m2" class="ltx_Math" alttext="\alpha\neq 0" display="inline"><mrow><mi>α</mi><mo>≠</mo><mn>0</mn></mrow></math>, there exists a unique <math id="Sx3.I3.i5.p1.m3" class="ltx_Math" alttext="\beta\in\mathbf{C}" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> such that <math id="Sx3.I3.i5.p1.m4" class="ltx_Math" alttext="\alpha\beta=1" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx3.I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I3.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">distributive property</span> 
+<br class="ltx_break"><math id="Sx3.I3.i6.p1.m1" class="ltx_Math" alttext="\lambda(\alpha+\beta)=\lambda\alpha+\lambda\beta" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>α</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>β</mi></mrow></mrow></mrow></math> for all <math id="Sx3.I3.i6.p1.m2" class="ltx_Math" alttext="\lambda,\alpha,\beta\in\mathbf{C}" display="inline"><mrow><mrow><mi>λ</mi><mo>,</mo><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx3.SS3.p2" class="ltx_para">
+<p class="ltx_p">The properties above are proved using the familiar properties of real numbers and the definitions of complex addition and multiplication. The next example shows how commutativity of complex multiplication is proved. Proofs of the other properties above are left as exercises.</p>
+</div>
+</section>
+<section id="Sx3.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.4 </span>Example: Commutativity of Complex Multiplication</h3>
+
+<div id="Sx3.SS4.p1" class="ltx_para">
+<p class="ltx_p">To show that <math id="Sx3.SS4.p1.m1" class="ltx_Math" alttext="\alpha\beta=\beta\alpha" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></math> for all <math id="Sx3.SS4.p1.m2" class="ltx_Math" alttext="\alpha,\beta\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>, suppose</p>
+<table id="Sx3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex5.m1" class="ltx_Math" alttext="\alpha=a+bi\quad\text{ and }\quad\beta=c+di," display="block"><mrow><mrow><mrow><mi>α</mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mi>β</mi><mo>=</mo><mrow><mi>c</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="Sx3.SS4.p1.m3" class="ltx_Math" alttext="a,b,c,d\in\mathbf{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow></math>. Then the definition of multiplication of complex numbers shows that</p>
+<table id="Sx3.Ex6" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx3.Ex6X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex6X.m2" class="ltx_Math" alttext="\displaystyle\alpha\beta" display="inline"><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex6X.m3" class="ltx_Math" alttext="\displaystyle=(a+bi)(c+di)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex6Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex6Xa.m2" class="ltx_Math" alttext="\displaystyle=(ac-bd)+(ad+bc)i" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="Sx3.Ex7" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx3.Ex7X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex7X.m2" class="ltx_Math" alttext="\displaystyle\beta\alpha" display="inline"><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex7X.m3" class="ltx_Math" alttext="\displaystyle=(c+di)(a+bi)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx3.Ex7Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex7Xa.m2" class="ltx_Math" alttext="\displaystyle=(ca-db)+(cb+da)i." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mrow><mi>d</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>a</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The equations above and the commutativity of multiplication and addition of real numbers show that <math id="Sx3.SS4.p1.m4" class="ltx_Math" alttext="\alpha\beta=\beta\alpha" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></math>.</p>
+</div>
+<div id="Sx3.SS4.p2" class="ltx_para">
+<p class="ltx_p">Next, we define the additive and multiplicative inverses of complex numbers, and then use those inverses to define subtraction and division operations with complex numbers.</p>
+</div>
+</section>
+<section id="Sx3.SS5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.5 </span>Definition: <math id="Sx3.SS5.m1" class="ltx_Math" alttext="-\alpha" display="inline"><mrow><mo>−</mo><mi>α</mi></mrow></math>, subtraction, <math id="Sx3.SS5.m2" class="ltx_Math" alttext="1/\alpha" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>α</mi></mrow></math>, division</h3>
+
+<div id="Sx3.SS5.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SS5.p1.m1" class="ltx_Math" alttext="\alpha,\beta\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+<ul id="Sx3.I4" class="ltx_itemize">
+<li id="Sx3.I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx3.I4.i1.p1.m1" class="ltx_Math" alttext="-\alpha" display="inline"><mrow><mo>−</mo><mi>α</mi></mrow></math> denote the additive inverse of <math id="Sx3.I4.i1.p1.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>. Thus <math id="Sx3.I4.i1.p1.m3" class="ltx_Math" alttext="-\alpha" display="inline"><mrow><mo>−</mo><mi>α</mi></mrow></math> is the unique complex number such that</p>
+</div>
+</li>
+</ul>
+<table id="Sx3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex8.m1" class="ltx_Math" alttext="\alpha+(-\alpha)=0." display="block"><mrow><mrow><mrow><mi>α</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<ul id="Sx3.I5" class="ltx_itemize">
+<li id="Sx3.I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I5.i1.p1" class="ltx_para">
+<p class="ltx_p">Subtraction on <math id="Sx3.I5.i1.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> is defined by</p>
+</div>
+</li>
+</ul>
+<table id="Sx3.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex9.m1" class="ltx_Math" alttext="\beta-\alpha=\beta+(-\alpha)." display="block"><mrow><mrow><mrow><mi>β</mi><mo>−</mo><mi>α</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<ul id="Sx3.I6" class="ltx_itemize">
+<li id="Sx3.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I6.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="Sx3.I6.i1.p1.m1" class="ltx_Math" alttext="\alpha\neq 0" display="inline"><mrow><mi>α</mi><mo>≠</mo><mn>0</mn></mrow></math>, let <math id="Sx3.I6.i1.p1.m2" class="ltx_Math" alttext="1/\alpha" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>α</mi></mrow></math> and <math id="Sx3.I6.i1.p1.m3" class="ltx_Math" alttext="\frac{1}{\alpha}" display="inline"><mfrac><mn>1</mn><mi>α</mi></mfrac></math> denote the multiplicative inverse of <math id="Sx3.I6.i1.p1.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>. Thus <math id="Sx3.I6.i1.p1.m5" class="ltx_Math" alttext="1/\alpha" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>α</mi></mrow></math> is the unique complex number such that</p>
+</div>
+</li>
+</ul>
+<table id="Sx3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex10.m1" class="ltx_Math" alttext="\alpha(1/\alpha)=1." display="block"><mrow><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<ul id="Sx3.I7" class="ltx_itemize">
+<li id="Sx3.I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx3.I7.i1.p1" class="ltx_para">
+<p class="ltx_p">For <math id="Sx3.I7.i1.p1.m1" class="ltx_Math" alttext="\alpha\neq 0" display="inline"><mrow><mi>α</mi><mo>≠</mo><mn>0</mn></mrow></math>, division by <math id="Sx3.I7.i1.p1.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> is defined by</p>
+</div>
+</li>
+</ul>
+<table id="Sx3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex11.m1" class="ltx_Math" alttext="\beta/\alpha=\beta(1/\alpha)." display="block"><mrow><mrow><mrow><mi>β</mi><mo>/</mo><mi>α</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Sx3.SS5.p2" class="ltx_para">
+<p class="ltx_p">So that we can conveniently make definitions and prove theorems that apply to both real and complex numbers, we adopt the following notation.</p>
+</div>
+</section>
+<section id="Sx3.SS6" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.6 </span>Notation: F</h3>
+
+<div id="Sx3.SS6.p1" class="ltx_para">
+<p class="ltx_p">Throughout this book, <math id="Sx3.SS6.p1.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> stands for either <math id="Sx3.SS6.p1.m2" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> or <math id="Sx3.SS6.p1.m3" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>.</p>
+</div>
+<div id="Sx3.SS6.p2" class="ltx_para">
+<p class="ltx_p">Thus if we prove a theorem involving <math id="Sx3.SS6.p2.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>, we will know that it holds when <math id="Sx3.SS6.p2.m2" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is replaced with <math id="Sx3.SS6.p2.m3" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> and when <math id="Sx3.SS6.p2.m4" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is replaced with <math id="Sx3.SS6.p2.m5" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>.</p>
+</div>
+<div id="Sx3.SS6.p3" class="ltx_para">
+<p class="ltx_p">The letter <math id="Sx3.SS6.p3.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is used because <math id="Sx3.SS6.p3.m2" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> and <math id="Sx3.SS6.p3.m3" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> are examples of what are called fields.</p>
+</div>
+<div id="Sx3.SS6.p4" class="ltx_para">
+<p class="ltx_p">Elements of <math id="Sx3.SS6.p4.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> are called scalars. The word "scalar" (which is just a fancy word for "number") is often used when we want to emphasize that an object is a number, as opposed to a vector (vectors will be defined soon).</p>
+</div>
+<div id="Sx3.SS6.p5" class="ltx_para">
+<p class="ltx_p">For <math id="Sx3.SS6.p5.m1" class="ltx_Math" alttext="\alpha\in\mathbf{F}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> and <math id="Sx3.SS6.p5.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> a positive integer, we define <math id="Sx3.SS6.p5.m3" class="ltx_Math" alttext="\alpha^{m}" display="inline"><msup><mi>α</mi><mi>m</mi></msup></math> to denote the product of <math id="Sx3.SS6.p5.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> with itself <math id="Sx3.SS6.p5.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> times:</p>
+<table id="Sx3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex12.m1" class="ltx_Math" alttext="\alpha^{m}=\underbrace{\alpha\cdots\alpha}_{m\text{ times }}." display="block"><mrow><mrow><msup><mi>α</mi><mi>m</mi></msup><mo>=</mo><munder><munder accentunder="true"><mrow><mi>α</mi><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>α</mi></mrow><mo stretchy="true">⏟</mo></munder><mrow><mi>m</mi><mo>⁢</mo><mtext> times </mtext></mrow></munder></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This definition implies that</p>
+<table id="Sx3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex13.m1" class="ltx_Math" alttext="\left(\alpha^{m}\right)^{n}=\alpha^{mn}\quad\text{ and }\quad(\alpha\beta)^{m}%
+=\alpha^{m}\beta^{m}" display="block"><mrow><mrow><msup><mrow><mo>(</mo><msup><mi>α</mi><mi>m</mi></msup><mo>)</mo></mrow><mi>n</mi></msup><mo>=</mo><mrow><msup><mi>α</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msup><mspace style="width:1em;" width="1em"></mspace><mtext> and </mtext></mrow></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>=</mo><mrow><msup><mi>α</mi><mi>m</mi></msup><mo>⁢</mo><msup><mi>β</mi><mi>m</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Sx3.SS6.p5.m6" class="ltx_Math" alttext="\alpha,\beta\in\mathbf{F}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> and all positive integers <math id="Sx3.SS6.p5.m7" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Lists</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">Before defining <math id="Sx4.p1.m1" class="ltx_Math" alttext="\mathbf{R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math> and <math id="Sx4.p1.m2" class="ltx_Math" alttext="\mathbf{C}^{n}" display="inline"><msup><mi>𝐂</mi><mi>n</mi></msup></math>, we look at two important examples.</p>
+</div>
+<section id="Sx4.SS7" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.7 </span>Example: <math id="Sx4.SS7.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> and <math id="Sx4.SS7.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>
+</h3>
+
+<div id="Sx4.SS7.p1" class="ltx_para">
+<ul id="Sx4.I8" class="ltx_itemize">
+<li id="Sx4.I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx4.I8.i1.p1" class="ltx_para">
+<p class="ltx_p">The set <math id="Sx4.I8.i1.p1.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>, which you can think of as a plane, is the set of all ordered pairs of real numbers:</p>
+</div>
+</li>
+</ul>
+<table id="Sx4.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex14.m1" class="ltx_Math" alttext="\mathbf{R}^{2}=\{(x,y):x,y\in\mathbf{R}\}." display="block"><mrow><mrow><msup><mi>𝐑</mi><mn>2</mn></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo rspace="0.278em" stretchy="false">)</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<ul id="Sx4.I9" class="ltx_itemize">
+<li id="Sx4.I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx4.I9.i1.p1" class="ltx_para">
+<p class="ltx_p">The set <math id="Sx4.I9.i1.p1.m1" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>, which you can think of as ordinary space, is the set of all ordered triples of real numbers:</p>
+</div>
+</li>
+</ul>
+<table id="Sx4.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex15.m1" class="ltx_Math" alttext="\mathbf{R}^{3}=\{(x,y,z):x,y,z\in\mathbf{R}\}." display="block"><mrow><mrow><msup><mi>𝐑</mi><mn>3</mn></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo rspace="0.278em" stretchy="false">)</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Sx4.SS7.p2" class="ltx_para">
+<p class="ltx_p">To generalize <math id="Sx4.SS7.p2.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> and <math id="Sx4.SS7.p2.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math> to higher dimensions, we first need to discuss the concept of lists.</p>
+</div>
+</section>
+<section id="Sx4.SS8" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.8 </span>Definition: List, Length</h3>
+
+<div id="Sx4.SS8.p1" class="ltx_para">
+<ul id="Sx4.I10" class="ltx_itemize">
+<li id="Sx4.I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx4.I10.i1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx4.I10.i1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a nonnegative integer. A list of length <math id="Sx4.I10.i1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an ordered collection of <math id="Sx4.I10.i1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements (which might be numbers, other lists, or more abstract objects).</p>
+</div>
+</li>
+<li id="Sx4.I10.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx4.I10.i2.p1" class="ltx_para">
+<p class="ltx_p">Two lists are equal if and only if they have the same length and the same elements in the same order.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx4.SS8.p2" class="ltx_para">
+<p class="ltx_p">Lists are often written as elements separated by commas and surrounded by parentheses. Thus a list of length two is an ordered pair that might be written as <math id="Sx4.SS8.p2.m1" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>. A list of length three is an ordered triple that might be written as <math id="Sx4.SS8.p2.m2" class="ltx_Math" alttext="(x,y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math>. A list of length <math id="Sx4.SS8.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> might look like this:</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Many mathematicians call a list of length <math id="Sx4.SS8.p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> an <math id="Sx4.SS8.p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuple.</span></p>
+</blockquote>
+<table id="Sx4.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex16.m1" class="ltx_Math" alttext="\left(z_{1},\ldots,z_{n}\right)." display="block"><mrow><mrow><mo>(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>n</mi></msub><mo>)</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Sometimes we will use the word list without specifying its length. Remember, however, that by definition each list has a finite length that is a nonnegative integer. Thus an object that looks like <math id="Sx4.SS8.p2.m6" class="ltx_Math" alttext="(x_{1},x_{2},\ldots)" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></math>, which might be said to have infinite length, is not a list.</p>
+</div>
+<div id="Sx4.SS8.p3" class="ltx_para">
+<p class="ltx_p">A list of length 0 looks like this: <math id="Sx4.SS8.p3.m1" class="ltx_Math" alttext="()" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></math>. We consider such an object to be a list so that some of our theorems will not have trivial exceptions.</p>
+</div>
+<div id="Sx4.SS8.p4" class="ltx_para">
+<p class="ltx_p">Lists differ from finite sets in two ways: in lists, order matters and repetitions have meaning; in sets, order and repetitions are irrelevant.</p>
+</div>
+</section>
+<section id="Sx4.SS9" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.9 </span>Example: Lists Versus Sets</h3>
+
+<div id="Sx4.SS9.p1" class="ltx_para">
+<ul id="Sx4.I11" class="ltx_itemize">
+<li id="Sx4.I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx4.I11.i1.p1" class="ltx_para">
+<p class="ltx_p">The lists <math id="Sx4.I11.i1.p1.m1" class="ltx_Math" alttext="(3,5)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math> and <math id="Sx4.I11.i1.p1.m2" class="ltx_Math" alttext="(5,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> are not equal, but the sets <math id="Sx4.I11.i1.p1.m3" class="ltx_Math" alttext="\{3,5\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo stretchy="false">}</mo></mrow></math> and <math id="Sx4.I11.i1.p1.m4" class="ltx_Math" alttext="\{5,3\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>5</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></math> are equal.</p>
+</div>
+</li>
+<li id="Sx4.I11.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx4.I11.i2.p1" class="ltx_para">
+<p class="ltx_p">The lists <math id="Sx4.I11.i2.p1.m1" class="ltx_Math" alttext="(4,4)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math> and <math id="Sx4.I11.i2.p1.m2" class="ltx_Math" alttext="(4,4,4)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math> are not equal (they do not have the same length), although the sets <math id="Sx4.I11.i2.p1.m3" class="ltx_Math" alttext="\{4,4\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></math> and <math id="Sx4.I11.i2.p1.m4" class="ltx_Math" alttext="\{4,4,4\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></math> both equal the set <math id="Sx4.I11.i2.p1.m5" class="ltx_Math" alttext="\{4\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="Sx5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section"><math id="Sx5.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math></h2>
+
+<div id="Sx5.p1" class="ltx_para">
+<p class="ltx_p">To define the higher-dimensional analogues of <math id="Sx5.p1.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> and <math id="Sx5.p1.m2" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>, we will simply replace <math id="Sx5.p1.m3" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> with <math id="Sx5.p1.m4" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> (which equals <math id="Sx5.p1.m5" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> or <math id="Sx5.p1.m6" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> ) and replace the 2 or 3 with an arbitrary positive integer.</p>
+</div>
+<section id="Sx5.SS10" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.10 </span>Notation: <math id="Sx5.SS10.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+</h3>
+
+<div id="Sx5.SS10.p1" class="ltx_para">
+<p class="ltx_p">Fix a positive integer <math id="Sx5.SS10.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> for the rest of this chapter.</p>
+</div>
+</section>
+<section id="Sx5.SS11" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.11 </span>Definition: <math id="Sx5.SS11.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>, Coordinate</h3>
+
+<div id="Sx5.SS11.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.SS11.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is the set of all lists of length <math id="Sx5.SS11.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> of elements of <math id="Sx5.SS11.p1.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>:</p>
+<table id="Sx5.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex17.m1" class="ltx_Math" alttext="\mathbf{F}^{n}=\left\{\left(x_{1},\ldots,x_{n}\right):x_{k}\in\mathbf{F}\text{%
+ for }k=1,\ldots,n\right\}." display="block"><mrow><mrow><msup><mi>𝐅</mi><mi>n</mi></msup><mo>=</mo><mrow><mo>{</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo rspace="0.278em">)</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>∈</mo><mrow><mi>𝐅</mi><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">For <math id="Sx5.SS11.p1.m4" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math> and <math id="Sx5.SS11.p1.m5" class="ltx_Math" alttext="k\in\{1,\ldots,n\}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></math>, we say that <math id="Sx5.SS11.p1.m6" class="ltx_Math" alttext="x_{k}" display="inline"><msub><mi>x</mi><mi>k</mi></msub></math> is the <math id="Sx5.SS11.p1.m7" class="ltx_Math" alttext="k^{\text{th }}" display="inline"><msup><mi>k</mi><mtext>th </mtext></msup></math> coordinate of <math id="Sx5.SS11.p1.m8" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)" display="inline"><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></math>.</p>
+</div>
+<div id="Sx5.SS11.p2" class="ltx_para">
+<p class="ltx_p">If <math id="Sx5.SS11.p2.m1" class="ltx_Math" alttext="\mathbf{F}=\mathbf{R}" display="inline"><mrow><mi>𝐅</mi><mo>=</mo><mi>𝐑</mi></mrow></math> and <math id="Sx5.SS11.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> equals 2 or 3 , then the definition above of <math id="Sx5.SS11.p2.m3" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> agrees with our previous notions of <math id="Sx5.SS11.p2.m4" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> and <math id="Sx5.SS11.p2.m5" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS12" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.12 </span>Example: <math id="Sx5.SS12.m1" class="ltx_Math" alttext="\mathrm{C}^{4}" display="inline"><msup><mi mathvariant="normal">C</mi><mn>4</mn></msup></math>
+</h3>
+
+<div id="Sx5.SS12.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.SS12.p1.m1" class="ltx_Math" alttext="\mathbf{C}^{4}" display="inline"><msup><mi>𝐂</mi><mn>4</mn></msup></math> is the set of all lists of four complex numbers:</p>
+<table id="Sx5.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex18.m1" class="ltx_Math" alttext="\mathbf{C}^{4}=\left\{\left(z_{1},z_{2},z_{3},z_{4}\right):z_{1},z_{2},z_{3},z%
+_{4}\in\mathbf{C}\right\}." display="block"><mrow><mrow><msup><mi>𝐂</mi><mn>4</mn></msup><mo>=</mo><mrow><mo>{</mo><mrow><mo>(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><msub><mi>z</mi><mn>3</mn></msub><mo>,</mo><msub><mi>z</mi><mn>4</mn></msub><mo rspace="0.278em">)</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><msub><mi>z</mi><mn>3</mn></msub><mo>,</mo><msub><mi>z</mi><mn>4</mn></msub></mrow><mo>∈</mo><mi>𝐂</mi></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If <math id="Sx5.SS12.p1.m2" class="ltx_Math" alttext="n\geq 4" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>4</mn></mrow></math>, we cannot visualize <math id="Sx5.SS12.p1.m3" class="ltx_Math" alttext="\mathbf{R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math> as a physical object. Similarly, <math id="Sx5.SS12.p1.m4" class="ltx_Math" alttext="\mathbf{C}^{1}" display="inline"><msup><mi>𝐂</mi><mn>1</mn></msup></math> can be thought of as a plane, but for <math id="Sx5.SS12.p1.m5" class="ltx_Math" alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math>, the human brain cannot provide a full image of <math id="Sx5.SS12.p1.m6" class="ltx_Math" alttext="\mathbf{C}^{n}" display="inline"><msup><mi>𝐂</mi><mi>n</mi></msup></math>. However, even if <math id="Sx5.SS12.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is large, we can perform algebraic manipulations in <math id="Sx5.SS12.p1.m8" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> as easily as in <math id="Sx5.SS12.p1.m9" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> or <math id="Sx5.SS12.p1.m10" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math>. For example, addition in <math id="Sx5.SS12.p1.m11" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is defined as follows.</p>
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Read Flatland: A Romance of Many Dimensions, by Edwin A. Abbott, for an amusing account of how <math id="Sx5.SS12.p1.m12" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math> would be perceived by creatures living in <math id="Sx5.SS12.p1.m13" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>. This novel, published in 1884, may help you imagine a physical space of four or more dimensions.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="Sx5.SS13" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.13 </span>Definition: Addition in <math id="Sx5.SS13.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>
+</h3>
+
+<div id="Sx5.SS13.p1" class="ltx_para">
+<p class="ltx_p">Addition in <math id="Sx5.SS13.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is defined by adding corresponding coordinates:</p>
+<table id="Sx5.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex19.m1" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)+\left(y_{1},\ldots,y_{n}\right)=\left(x_{1}+y_%
+{1},\ldots,x_{n}+y_{n}\right)." display="block"><mrow><mrow><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Often the mathematics of <math id="Sx5.SS13.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> becomes cleaner if we use a single letter to denote a list of <math id="Sx5.SS13.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> numbers, without explicitly writing the coordinates. For example, the next result is stated with <math id="Sx5.SS13.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="Sx5.SS13.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in <math id="Sx5.SS13.p1.m6" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> even though the proof requires the more cumbersome notation of <math id="Sx5.SS13.p1.m7" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)" display="inline"><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></math> and <math id="Sx5.SS13.p1.m8" class="ltx_Math" alttext="\left(y_{1},\ldots,y_{n}\right)" display="inline"><mrow><mo>(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS14" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.14 </span>Commutativity of Addition in <math id="Sx5.SS14.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>
+</h3>
+
+<div id="Sx5.SS14.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx5.SS14.p1.m1" class="ltx_Math" alttext="x,y\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>, then <math id="Sx5.SS14.p1.m2" class="ltx_Math" alttext="x+y=y+x" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>y</mi><mo>+</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+<div id="Sx5.SS14.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof</span>: Suppose <math id="Sx5.SS14.p2.m1" class="ltx_Math" alttext="x=\left(x_{1},\ldots,x_{n}\right)\in\mathbf{F}^{n}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math> and <math id="Sx5.SS14.p2.m2" class="ltx_Math" alttext="y=\left(y_{1},\ldots,y_{n}\right)\in\mathbf{F}^{n}" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mo>(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>. Then</p>
+<table id="Sx5.Ex20" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Sx5.Ex20X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx5.Ex20X.m2" class="ltx_Math" alttext="\displaystyle x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex20X.m3" class="ltx_Math" alttext="\displaystyle=\left(x_{1},\ldots,x_{n}\right)+\left(y_{1},\ldots,y_{n}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx5.Ex20Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex20Xa.m2" class="ltx_Math" alttext="\displaystyle=\left(x_{1}+y_{1},\ldots,x_{n}+y_{n}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx5.Ex20Xb"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex20Xb.m2" class="ltx_Math" alttext="\displaystyle=\left(y_{1}+x_{1},\ldots,y_{n}+x_{n}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx5.Ex20Xc"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex20Xc.m2" class="ltx_Math" alttext="\displaystyle=\left(y_{1},\ldots,y_{n}\right)+\left(x_{1},\ldots,x_{n}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx5.Ex20Xd"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx5.Ex20Xd.m2" class="ltx_Math" alttext="\displaystyle=y+x," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>y</mi><mo>+</mo><mi>x</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the second and fourth equalities above hold because of the definition of addition in <math id="Sx5.SS14.p2.m3" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> and the third equality holds because of the usual commutativity of addition in <math id="Sx5.SS14.p2.m4" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.  <math id="Sx5.SS14.p2.m5" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="Sx5.SS14.p3" class="ltx_para">
+<p class="ltx_p">If a single letter is used to denote an element of <math id="Sx5.SS14.p3.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>, then the same letter with appropriate subscripts is often used when coordinates must be displayed. For example, if <math id="Sx5.SS14.p3.m2" class="ltx_Math" alttext="x\in\mathbf{F}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>, then letting <math id="Sx5.SS14.p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> equal <math id="Sx5.SS14.p3.m4" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)" display="inline"><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></math> is good notation, as shown in the proof above. Even better, work with just <math id="Sx5.SS14.p3.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and avoid explicit coordinates when possible.</p>
+</div>
+</section>
+<section id="Sx5.SS15" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.15 </span>Notation: 0</h3>
+
+<div id="Sx5.SS15.p1" class="ltx_para">
+<p class="ltx_p">Let 0 denote the list of length <math id="Sx5.SS15.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> whose coordinates are all 0:</p>
+<table id="Sx5.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex21.m1" class="ltx_Math" alttext="0=(0,\ldots,0)." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Here we are using the symbol 0 in two different ways—on the left side of the equation above, the symbol 0 denotes a list of length <math id="Sx5.SS15.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, which is an element of <math id="Sx5.SS15.p1.m3" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>, whereas on the right side, each 0 denotes a number. This potentially confusing practice actually causes no problems because the context should always make clear which 0 is intended.</p>
+</div>
+</section>
+<section id="Sx5.SS16" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.16 </span>Example: Context Determines Which 0 is Intended</h3>
+
+<div id="Sx5.SS16.p1" class="ltx_para">
+<p class="ltx_p">Consider the statement that 0 is an additive identity for <math id="Sx5.SS16.p1.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>:</p>
+<table id="Sx5.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex22.m1" class="ltx_Math" alttext="x+0=x\quad\text{ for all }x\in\mathbf{F}^{n}." display="block"><mrow><mrow><mrow><mrow><mi>x</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mi>x</mi></mrow><mspace style="width:1em;" width="1em"></mspace><mrow><mrow><mtext> for all </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Here the 0 above is the list defined in 1.18, not the number 0, because we have not defined the sum of an element of <math id="Sx5.SS16.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> (namely, <math id="Sx5.SS16.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>) and the number 0.</p>
+</div>
+<div id="Sx5.SS16.p2" class="ltx_para">
+<p class="ltx_p">A picture can aid our intuition. We will draw pictures in <math id="Sx5.SS16.p2.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> because we can sketch this space on two-dimensional surfaces such as paper and computer screens. A typical element of <math id="Sx5.SS16.p2.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> is a point <math id="Sx5.SS16.p2.m3" class="ltx_Math" alttext="v=(a,b)" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Sometimes we think of <math id="Sx5.SS16.p2.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> not as a point but as an arrow starting at the origin and ending at <math id="Sx5.SS16.p2.m5" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>, as shown here. When we think of an element of <math id="Sx5.SS16.p2.m6" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> as an arrow, we refer to it as a vector.</p>
+</div>
+<figure id="Sx5.F2" class="ltx_figure"><img src="images/ch1.jpg" id="Sx5.F2.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="667" height="304" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure"><span class="ltx_text" style="font-size:90%;">Figure 2</span>: </span><span class="ltx_text" style="font-size:90%;">Elements of <math id="Sx5.F2.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> can be thought of as points or as vectors.</span></figcaption>
+</figure>
+<div id="Sx5.SS16.p3" class="ltx_para">
+<p class="ltx_p">When we think of vectors in <math id="Sx5.SS16.p3.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> as arrows, we can move an arrow parallel to itself (not changing its length or direction) and still think of it as the same vector. With that viewpoint, you will often gain better understanding by dispensing with the coordinate axes and the explicit coordinates and just thinking of the vector, as shown in the figure here. The two arrows shown here have the same length and same direction, so we think of them as the same vector.</p>
+</div>
+<figure id="Sx5.F3" class="ltx_figure"><img src="images/980c34a9-a58b-4031-807a-5af074d42819-08.jpg" id="Sx5.F3.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="526" height="218" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure"><span class="ltx_text" style="font-size:90%;">Figure 3</span>: </span><span class="ltx_text" style="font-size:90%;">A vector.</span></figcaption>
+</figure>
+<div id="Sx5.SS16.p4" class="ltx_para">
+<p class="ltx_p">Whenever we use pictures in <math id="Sx5.SS16.p4.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> or use the somewhat vague language of points and vectors, remember that these are just aids to our understanding, not substitutes for the actual mathematics that we will develop. Although we cannot draw good pictures in high-dimensional spaces, the elements of these spaces are as rigorously defined as elements of <math id="Sx5.SS16.p4.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Sx5.SS16.p5" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Mathematical models of the economy can have thousands of variables, say <math id="Sx5.SS16.p5.m1" class="ltx_Math" alttext="x_{1},\ldots,x_{5000}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mn>5000</mn></msub></mrow></math>, which means that we must work in <math id="Sx5.SS16.p5.m2" class="ltx_Math" alttext="\mathbf{R}^{5000}" display="inline"><msup><mi>𝐑</mi><mn>5000</mn></msup></math>. Such a space cannot be dealt with geometrically. However, the algebraic approach works well. Thus our subject is called linear algebra.</span></p>
+</blockquote>
+</div>
+<div id="Sx5.SS16.p6" class="ltx_para">
+<p class="ltx_p">For example, <math id="Sx5.SS16.p6.m1" class="ltx_Math" alttext="(2,-3,17,\pi,\sqrt{2})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mn>17</mn><mo>,</mo><mi>π</mi><mo>,</mo><msqrt><mn>2</mn></msqrt><mo stretchy="false">)</mo></mrow></math> is an element of <math id="Sx5.SS16.p6.m2" class="ltx_Math" alttext="\mathbf{R}^{5}" display="inline"><msup><mi>𝐑</mi><mn>5</mn></msup></math>, and we may casually refer to it as a point in <math id="Sx5.SS16.p6.m3" class="ltx_Math" alttext="\mathbf{R}^{5}" display="inline"><msup><mi>𝐑</mi><mn>5</mn></msup></math> or a vector in <math id="Sx5.SS16.p6.m4" class="ltx_Math" alttext="\mathbf{R}^{5}" display="inline"><msup><mi>𝐑</mi><mn>5</mn></msup></math> without worrying about whether the geometry of <math id="Sx5.SS16.p6.m5" class="ltx_Math" alttext="\mathbf{R}^{5}" display="inline"><msup><mi>𝐑</mi><mn>5</mn></msup></math> has any physical meaning.</p>
+</div>
+<div id="Sx5.SS16.p7" class="ltx_para">
+<p class="ltx_p">Recall that we defined the sum of two elements of <math id="Sx5.SS16.p7.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> to be the element of <math id="Sx5.SS16.p7.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> obtained by adding corresponding coordinates; see 1.16. As we will now see, addition has a simple geometric interpretation in the special case of <math id="Sx5.SS16.p7.m3" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Sx5.SS16.p8" class="ltx_para">
+<p class="ltx_p">Suppose we have two vectors <math id="Sx5.SS16.p8.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="Sx5.SS16.p8.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> in <math id="Sx5.SS16.p8.m3" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> that we want to add. Move the vector <math id="Sx5.SS16.p8.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> parallel to itself so that its initial point coincides with the end point of the vector <math id="Sx5.SS16.p8.m5" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>, as shown here. The sum <math id="Sx5.SS16.p8.m6" class="ltx_Math" alttext="u+v" display="inline"><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow></math> then equals the vector whose initial point equals the initial point of <math id="Sx5.SS16.p8.m7" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and whose end point equals the end point of the vector <math id="Sx5.SS16.p8.m8" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, as shown here.</p>
+</div>
+<figure id="Sx5.F4" class="ltx_figure"><img src="images/980c34a9-a58b-4031-807a-5af074d42819-08(1).jpg" id="Sx5.F4.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="545" height="308" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure"><span class="ltx_text" style="font-size:90%;">Figure 4</span>: </span><span class="ltx_text" style="font-size:90%;">The sum of two vectors.</span></figcaption>
+</figure>
+<div id="Sx5.SS16.p9" class="ltx_para">
+<p class="ltx_p">In the next definition, the 0 on the right side of the displayed equation is the list <math id="Sx5.SS16.p9.m1" class="ltx_Math" alttext="0\in\mathbf{F}^{n}" display="inline"><mrow><mn>0</mn><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS17" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.17 </span>Definition: Additive Inverse in <math id="Sx5.SS17.m1" class="ltx_Math" alttext="\mathbf{F}^{n},-x" display="inline"><mrow><msup><mi>𝐅</mi><mi>n</mi></msup><mo>,</mo><mrow><mo>−</mo><mi>x</mi></mrow></mrow></math>
+</h3>
+
+<div id="Sx5.SS17.p1" class="ltx_para">
+<p class="ltx_p">For <math id="Sx5.SS17.p1.m1" class="ltx_Math" alttext="x\in\mathbf{F}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>, the additive inverse of <math id="Sx5.SS17.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, denoted by <math id="Sx5.SS17.p1.m3" class="ltx_Math" alttext="-x" display="inline"><mrow><mo>−</mo><mi>x</mi></mrow></math>, is the vector <math id="Sx5.SS17.p1.m4" class="ltx_Math" alttext="-x\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mo>−</mo><mi>x</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math> such that</p>
+<table id="Sx5.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex23.m1" class="ltx_Math" alttext="x+(-x)=0" display="block"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus if <math id="Sx5.SS17.p1.m5" class="ltx_Math" alttext="x=\left(x_{1},\ldots,x_{n}\right)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow></math>, then <math id="Sx5.SS17.p1.m6" class="ltx_Math" alttext="-x=\left(-x_{1},\ldots,-x_{n}\right)" display="inline"><mrow><mrow><mo>−</mo><mi>x</mi></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Sx5.SS17.p2" class="ltx_para">
+<p class="ltx_p">The additive inverse of a vector in <math id="Sx5.SS17.p2.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> is the vector with the same length but pointing in the opposite direction. The figure here illustrates this way of thinking about the additive inverse in <math id="Sx5.SS17.p2.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>. As you can see, the vector labeled <math id="Sx5.SS17.p2.m3" class="ltx_Math" alttext="-x" display="inline"><mrow><mo>−</mo><mi>x</mi></mrow></math> has the same length as the vector labeled <math id="Sx5.SS17.p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> but points in the opposite direction.</p>
+</div>
+<figure id="Sx5.F5" class="ltx_figure"><img src="images/980c34a9-a58b-4031-807a-5af074d42819-09.jpg" id="Sx5.F5.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="530" height="222" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure"><span class="ltx_text" style="font-size:90%;">Figure 5</span>: </span><span class="ltx_text" style="font-size:90%;">A vector and its additive inverse.</span></figcaption>
+</figure>
+<div id="Sx5.SS17.p3" class="ltx_para">
+<p class="ltx_p">Having dealt with addition in <math id="Sx5.SS17.p3.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>, we now turn to multiplication. We could define a multiplication in <math id="Sx5.SS17.p3.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> in a similar fashion, starting with two elements of <math id="Sx5.SS17.p3.m3" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> and getting another element of <math id="Sx5.SS17.p3.m4" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> by multiplying corresponding coordinates. Experience shows that this definition is not useful for our purposes. Another type of multiplication, called scalar multiplication, will be central to our subject. Specifically, we need to define what it means to multiply an element of <math id="Sx5.SS17.p3.m5" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> by an element of <math id="Sx5.SS17.p3.m6" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+</section>
+<section id="Sx5.SS18" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.18 </span>Definition: Scalar Multiplication in <math id="Sx5.SS18.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math>
+</h3>
+
+<div id="Sx5.SS18.p1" class="ltx_para">
+<p class="ltx_p">The product of a number <math id="Sx5.SS18.p1.m1" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> and a vector in <math id="Sx5.SS18.p1.m2" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> is computed by multiplying each coordinate of the vector by <math id="Sx5.SS18.p1.m3" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>:</p>
+<table id="Sx5.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex24.m1" class="ltx_Math" alttext="\lambda\left(x_{1},\ldots,x_{n}\right)=\left(\lambda x_{1},\ldots,\lambda x_{n%
+}\right);" display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>)</mo></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">here <math id="Sx5.SS18.p1.m4" class="ltx_Math" alttext="\lambda\in\mathbf{F}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> and <math id="Sx5.SS18.p1.m5" class="ltx_Math" alttext="\left(x_{1},\ldots,x_{n}\right)\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="Sx5.SS18.p2" class="ltx_para">
+<p class="ltx_p">Scalar multiplication has a nice geometric interpretation in <math id="Sx5.SS18.p2.m1" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math>. If <math id="Sx5.SS18.p2.m2" class="ltx_Math" alttext="\lambda&gt;0" display="inline"><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="Sx5.SS18.p2.m3" class="ltx_Math" alttext="x\in\mathbf{R}^{2}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐑</mi><mn>2</mn></msup></mrow></math>, then <math id="Sx5.SS18.p2.m4" class="ltx_Math" alttext="\lambda x" display="inline"><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></math> is the vector that points in the same direction as <math id="Sx5.SS18.p2.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and whose length is <math id="Sx5.SS18.p2.m6" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> times the length of <math id="Sx5.SS18.p2.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. In other words, to get <math id="Sx5.SS18.p2.m8" class="ltx_Math" alttext="\lambda x" display="inline"><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></math>, we shrink or stretch <math id="Sx5.SS18.p2.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> by a factor of <math id="Sx5.SS18.p2.m10" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>, depending on whether <math id="Sx5.SS18.p2.m11" class="ltx_Math" alttext="\lambda&lt;1" display="inline"><mrow><mi>λ</mi><mo>&lt;</mo><mn>1</mn></mrow></math> or <math id="Sx5.SS18.p2.m12" class="ltx_Math" alttext="\lambda&gt;1" display="inline"><mrow><mi>λ</mi><mo>&gt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="Sx5.SS18.p3" class="ltx_para">
+<p class="ltx_p">If <math id="Sx5.SS18.p3.m1" class="ltx_Math" alttext="\lambda&lt;0" display="inline"><mrow><mi>λ</mi><mo>&lt;</mo><mn>0</mn></mrow></math> and <math id="Sx5.SS18.p3.m2" class="ltx_Math" alttext="x\in\mathbf{R}^{2}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐑</mi><mn>2</mn></msup></mrow></math>, then <math id="Sx5.SS18.p3.m3" class="ltx_Math" alttext="\lambda x" display="inline"><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></math> is the vector that points in the direction opposite to that of <math id="Sx5.SS18.p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and whose length is <math id="Sx5.SS18.p3.m5" class="ltx_Math" alttext="|\lambda|" display="inline"><mrow><mo stretchy="false">|</mo><mi>λ</mi><mo stretchy="false">|</mo></mrow></math> times the length of <math id="Sx5.SS18.p3.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, as shown here.</p>
+</div>
+<figure id="Sx5.F6" class="ltx_figure">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_2">
+<div class="ltx_block ltx_figure_panel ltx_minipage ltx_align_center ltx_align_middle" style="width:113.9pt;">
+<img src="images/980c34a9-a58b-4031-807a-5af074d42819-09(1).jpg" id="Sx5.F6.g1" class="ltx_graphics ltx_centering ltx_img_portrait" width="83" height="171" alt="Refer to caption">
+</div>
+</div>
+<div class="ltx_flex_cell ltx_flex_size_2">
+<div class="ltx_block ltx_figure_panel ltx_minipage ltx_align_center ltx_align_middle" style="width:113.9pt;">
+<img src="images/ch1a.jpg" id="Sx5.F6.g2" class="ltx_graphics ltx_centering ltx_img_landscape" width="381" height="250" alt="Refer to caption">
+</div>
+</div>
+</div>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure"><span class="ltx_text" style="font-size:90%;">Figure 6</span>: </span><span class="ltx_text" style="font-size:90%;">Scalar multiplication.</span></figcaption>
+</figure>
+<div id="Sx5.SS18.p4" class="ltx_para">
+<blockquote class="ltx_quote ltx_displayquote">
+<p class="ltx_p"><span class="ltx_text ltx_inline-quote">Scalar multiplication in <math id="Sx5.SS18.p4.m1" class="ltx_Math" alttext="\mathbf{F}^{n}" display="inline"><msup><mi>𝐅</mi><mi>n</mi></msup></math> multiplies together a scalar and a vector, getting a vector. In contrast, the dot product in <math id="Sx5.SS18.p4.m2" class="ltx_Math" alttext="\mathbf{R}^{2}" display="inline"><msup><mi>𝐑</mi><mn>2</mn></msup></math> or <math id="Sx5.SS18.p4.m3" class="ltx_Math" alttext="\mathbf{R}^{3}" display="inline"><msup><mi>𝐑</mi><mn>3</mn></msup></math> multiplies together two vectors and gets a scalar. Generalizations of the dot product will become important in Chapter 6.</span></p>
+</blockquote>
+</div>
+</section>
+</section>
+<section id="Sx6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Digression on Fields</h2>
+
+<div id="Sx6.p1" class="ltx_para">
+<p class="ltx_p">A field is a set containing at least two distinct elements called 0 and 1, along with operations of addition and multiplication satisfying all properties listed in 1.3. Thus <math id="Sx6.p1.m1" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> and <math id="Sx6.p1.m2" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> are fields, as is the set of rational numbers along with the usual operations of addition and multiplication. Another example of a field is the set <math id="Sx6.p1.m3" class="ltx_Math" alttext="\{0,1\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math> with the usual operations of addition and multiplication except that <math id="Sx6.p1.m4" class="ltx_Math" alttext="1+1" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></math> is defined to equal 0.</p>
+</div>
+<div id="Sx6.p2" class="ltx_para">
+<p class="ltx_p">In this book we will not deal with fields other than <math id="Sx6.p2.m1" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> and <math id="Sx6.p2.m2" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>. However, many of the definitions, theorems, and proofs in linear algebra that work for the fields <math id="Sx6.p2.m3" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> and <math id="Sx6.p2.m4" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> also work without change for arbitrary fields. If you prefer to do so, throughout much of this book (except for Chapters 6 and 7, which deal with inner product spaces) you can think of <math id="Sx6.p2.m5" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> as denoting an arbitrary field instead of <math id="Sx6.p2.m6" class="ltx_Math" alttext="\mathbf{R}" display="inline"><mi>𝐑</mi></math> or <math id="Sx6.p2.m7" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>. For results (except in the inner product chapters) that have as a hypothesis that <math id="Sx6.p2.m8" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is <math id="Sx6.p2.m9" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>, you can probably replace that hypothesis with the hypothesis that <math id="Sx6.p2.m10" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is an algebraically closed field, which means that every nonconstant polynomial with coefficients in <math id="Sx6.p2.m11" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> has a zero. A few results, such as Exercise 13 in Section 1 C, require the hypothesis on <math id="Sx6.p2.m12" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> that <math id="Sx6.p2.m13" class="ltx_Math" alttext="1+1\neq 0" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Exercises 1A</h2>
+
+<div id="Sx7.p1" class="ltx_para">
+<ol id="Sx7.I12" class="ltx_enumerate">
+<li id="Sx7.I12.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="Sx7.I12.i1.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i1.p1.m1" class="ltx_Math" alttext="\alpha+\beta=\beta+\alpha" display="inline"><mrow><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>+</mo><mi>α</mi></mrow></mrow></math> for all <math id="Sx7.I12.i1.p1.m2" class="ltx_Math" alttext="\alpha,\beta\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="Sx7.I12.i2.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i2.p1.m1" class="ltx_Math" alttext="(\alpha+\beta)+\lambda=\alpha+(\beta+\lambda)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>α</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>+</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i2.p1.m2" class="ltx_Math" alttext="\alpha,\beta,\lambda\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>λ</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="Sx7.I12.i3.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i3.p1.m1" class="ltx_Math" alttext="(\alpha\beta)\lambda=\alpha(\beta\lambda)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>⁢</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i3.p1.m2" class="ltx_Math" alttext="\alpha,\beta,\lambda\in\mathbf{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>λ</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="Sx7.I12.i4.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i4.p1.m1" class="ltx_Math" alttext="\lambda(\alpha+\beta)=\lambda\alpha+\lambda\beta" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>α</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>β</mi></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i4.p1.m2" class="ltx_Math" alttext="\lambda,\alpha,\beta\in\mathbf{C}" display="inline"><mrow><mrow><mi>λ</mi><mo>,</mo><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐂</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="Sx7.I12.i5.p1" class="ltx_para">
+<p class="ltx_p">Show that for every <math id="Sx7.I12.i5.p1.m1" class="ltx_Math" alttext="\alpha\in\mathbf{C}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝐂</mi></mrow></math>, there exists a unique <math id="Sx7.I12.i5.p1.m2" class="ltx_Math" alttext="\beta\in\mathbf{C}" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> such that <math id="Sx7.I12.i5.p1.m3" class="ltx_Math" alttext="\alpha+\beta=0" display="inline"><mrow><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="Sx7.I12.i6.p1" class="ltx_para">
+<p class="ltx_p">Show that for every <math id="Sx7.I12.i6.p1.m1" class="ltx_Math" alttext="\alpha\in\mathbf{C}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> with <math id="Sx7.I12.i6.p1.m2" class="ltx_Math" alttext="\alpha\neq 0" display="inline"><mrow><mi>α</mi><mo>≠</mo><mn>0</mn></mrow></math>, there exists a unique <math id="Sx7.I12.i6.p1.m3" class="ltx_Math" alttext="\beta\in\mathbf{C}" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> such that <math id="Sx7.I12.i6.p1.m4" class="ltx_Math" alttext="\alpha\beta=1" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="Sx7.I12.i7.p1" class="ltx_para">
+<p class="ltx_p">Show that</p>
+<table id="Sx7.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex25.m1" class="ltx_Math" alttext="\frac{-1+\sqrt{3}i}{2}" display="block"><mfrac><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>+</mo><mrow><msqrt><mn>3</mn></msqrt><mo>⁢</mo><mi>i</mi></mrow></mrow><mn>2</mn></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is a cube root of 1 (meaning that its cube equals 1).</p>
+</div>
+</li>
+<li id="Sx7.I12.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span> 
+<div id="Sx7.I12.i8.p1" class="ltx_para">
+<p class="ltx_p">Find two distinct square roots of <math id="Sx7.I12.i8.p1.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">9.</span> 
+<div id="Sx7.I12.i9.p1" class="ltx_para">
+<p class="ltx_p">Find <math id="Sx7.I12.i9.p1.m1" class="ltx_Math" alttext="x\in\mathbf{R}^{4}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐑</mi><mn>4</mn></msup></mrow></math> such that</p>
+<table id="Sx7.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex26.m1" class="ltx_Math" alttext="(4,-3,1,7)+2x=(5,9,-6,8)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mn>1</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>9</mn><mo>,</mo><mrow><mo>−</mo><mn>6</mn></mrow><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx7.I12.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">10.</span> 
+<div id="Sx7.I12.i10.p1" class="ltx_para">
+<p class="ltx_p">Explain why there does not exist <math id="Sx7.I12.i10.p1.m1" class="ltx_Math" alttext="\lambda\in\mathbf{C}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐂</mi></mrow></math> such that</p>
+<table id="Sx7.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex27.m1" class="ltx_Math" alttext="\lambda(2-3i,5+4i,-6+7i)=(12-5i,7+22i,-32-9i)." display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mn>5</mn><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mrow><mo>−</mo><mn>6</mn></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mn>12</mn><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mn>7</mn><mo>+</mo><mrow><mn>22</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mrow><mo>−</mo><mn>32</mn></mrow><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</li>
+<li id="Sx7.I12.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">11.</span> 
+<div id="Sx7.I12.i11.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i11.p1.m1" class="ltx_Math" alttext="(x+y)+z=x+(y+z)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>z</mi></mrow><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i11.p1.m2" class="ltx_Math" alttext="x,y,z\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">12.</span> 
+<div id="Sx7.I12.i12.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i12.p1.m1" class="ltx_Math" alttext="(ab)x=a(bx)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i12.p1.m2" class="ltx_Math" alttext="x\in\mathbf{F}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math> and all <math id="Sx7.I12.i12.p1.m3" class="ltx_Math" alttext="a,b\in\mathbf{F}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">13.</span> 
+<div id="Sx7.I12.i13.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i13.p1.m1" class="ltx_Math" alttext="1x=x" display="inline"><mrow><mrow><mn>1</mn><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>x</mi></mrow></math> for all <math id="Sx7.I12.i13.p1.m2" class="ltx_Math" alttext="x\in\mathbf{F}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">14.</span> 
+<div id="Sx7.I12.i14.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i14.p1.m1" class="ltx_Math" alttext="\lambda(x+y)=\lambda x+\lambda y" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i14.p1.m2" class="ltx_Math" alttext="\lambda\in\mathbf{F}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>𝐅</mi></mrow></math> and all <math id="Sx7.I12.i14.p1.m3" class="ltx_Math" alttext="x,y\in\mathbf{F}^{n}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="Sx7.I12.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">15.</span> 
+<div id="Sx7.I12.i15.p1" class="ltx_para">
+<p class="ltx_p">Show that <math id="Sx7.I12.i15.p1.m1" class="ltx_Math" alttext="(a+b)x=ax+bx" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> for all <math id="Sx7.I12.i15.p1.m2" class="ltx_Math" alttext="a,b\in\mathbf{F}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>𝐅</mi></mrow></math> and all <math id="Sx7.I12.i15.p1.m3" class="ltx_Math" alttext="x\in\mathbf{F}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>𝐅</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx7.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p">“Can you do addition?” the White Queen asked. “What’s one and one and one and one and one and one and one and one and one and one?”
+<br class="ltx_break">“I don’t know,” said Alice. “I lost count.”
+<br class="ltx_break">— <em class="ltx_emph ltx_font_italic">Through the Looking Glass</em>, Lewis Carroll</p>
+</blockquote>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+</article>
+</div>
+<footer role="contentinfo" class="ltx_page_footer">
+<div class="ltx_page_logo"><a href="https://linear.axler.net/">Linear Algebra Done Right, 4th Edition</a> © 2024 by <a href="https://sheldonaxler.net/">Sheldon Axler</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons Logo" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NonCommercial" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div></footer>
+</div></footer>
+</div>
+</body>
+</html>
