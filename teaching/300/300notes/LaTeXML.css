@@ -51,6 +51,20 @@
     display: none; /* if LaTeXML doesn't already hide it */
   }
 }
+@media print {
+
+            /* Define the header and footer */
+            @page {
+                margin-top: 0.5cm;
+            }
+
+            header:after {
+                content: "© 2026 John Weeks";
+                display: block;
+                text-align: left;
+                font-size: 14px;
+            }
+        }
 /*======================================================================
   Document Structure; Titles & Frontmatter */
 
