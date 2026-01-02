@@ -47,3 +47,4 @@ visibility:hidden;
 <li><a href="7-2.html">Section 7-2: Equivalence Relations</a></li>
 <li><a href="7-3.html">Section 7-3: Partitions</a></li>
 </ul>
+</body>
