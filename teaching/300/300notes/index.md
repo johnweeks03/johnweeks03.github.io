@@ -23,6 +23,7 @@ visibility:hidden;
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
+<p>Note: All notes sections not yet covered in class are subject to change as the semester progresses.</p>
 <ul>
 <li><a href="0-1.html">Section 0-1: Before the First Proof</a></li>
 <li><a href="0-2.html">Section 0-2: A Taste of Number Theory</a></li>
