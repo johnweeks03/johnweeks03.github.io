@@ -23,7 +23,7 @@ visibility:hidden;
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
-<p>Here is <a href="philosophy">my teaching philosophy.</a></p>
+<h1><a href="philosophy">Teaching Philosophy</a></h1>
 <h1>Current Teaching and Resources</h1>
 
 <h2>MATH-300-901,902 - Introduction to Mathematical Logic and Sets</h2>
