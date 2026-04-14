@@ -52,11 +52,11 @@ I developed a <a href="300/300notes">set of notes</a> and developed a <a href="3
 
 <h2>Summer 2025 - MATH-409 Advanced Calculus</h2>
 
-<p>This was my first semester experiment with active learning strategies in the classroom. Students were constantly solving problems on the board and interacting with curated AI conversations. The students' overall sentiment was that AI was "kinda helpful," with which I concur. Here is <a href="/409/25mathfest_adventuresin409.pdf">a talk I gave at MathFest 2025</a> on the subject.</p>
+<p>This was my first semester experiment with active learning strategies in the classroom. Students were constantly solving problems on the board and interacting with curated AI conversations. The students' overall sentiment was that AI was "kinda helpful," with which I concur. Here is <a href="409/25mathfest_adventuresin409.pdf">a talk I gave at MathFest 2025</a> on the subject.</p>
 
 <h2>Summer 2025 - MATH-696 Mathematics Communication and Technology</h2>
 
-<p>This course trains Ph.D. students to become recitation teaching assistants in engineering calculus courses while also preparing them for any teaching-focused or client-facing component of their future vocation. This year I began discussing artificial intelligence in the classroom - its positives and its negatives. Here is <a href="/696/696project.pdf">a project where students teach their peers</a> as if they are recitation leaders in an engineering calculus course.</p>
+<p>This course trains Ph.D. students to become recitation teaching assistants in engineering calculus courses while also preparing them for any teaching-focused or client-facing component of their future vocation. This year I began discussing artificial intelligence in the classroom - its positives and its negatives. Here is <a href="696/696project.pdf">a project where students teach their peers</a> as if they are recitation leaders in an engineering calculus course.</p>
 
 <h2>Spring 2025 - MATH-304-507,508 Linear Algebra for Engineers</h2>
 
