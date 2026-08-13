@@ -41,7 +41,7 @@
 <table> 
 <tr><!-- Office --> 
 <th style="text-align: right">Office:</th> 
-<td>Blocker Building 353</td> 
+<td>Blocker Building 356C</td> 
 </tr> 
 <tr><!-- Obfuscate your e-mail address to reduce spam --> 
 <th style="text-align: right">E-mail:</th> 
