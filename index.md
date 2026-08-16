@@ -23,7 +23,7 @@
     <a href="/links/" class="menulink">Links</a>&nbsp;&nbsp;
   </div>
 
-<h2>Graduate Teaching Assistant Director and Instructional Assistant Professor</h2>
+<h2>Graduate Teaching Assistant Director and Instructional Associate Professor</h2>
 <h3><a href="https://math.tamu.edu/">Department of Mathematics</a> at <a href="https://tamu.edu/">Texas A&M University</a></h3> 
 <p>Hope you are well. I am a teacher at heart, consistenly pushing forward upon the challenge to be kind.</p>
 
