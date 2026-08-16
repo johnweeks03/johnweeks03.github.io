@@ -52,5 +52,9 @@
 <td><a href="johnweeks_cv.html">John Weeks CV</a></td> 
 <!-- <td><a href="misc/cv.pdf">John Weeks</a></td> --> 
 </tr> 
+<tr>
+<th style="tex-align: right">Calendar:</th>
+<td><a href="https://calendar.google.com/calendar/u/0/r?cid=andlZWtzMDNAdGFtdS5lZHU">Google</a></td>
+</tr>
 </table>
 </div> 
